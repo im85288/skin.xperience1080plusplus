@@ -10,6 +10,7 @@
         <color name="bluegrey">ffC6C6C8</color>
         <color name="darkgrey">FF2C2C2C</color>
         <color name="darkgrey2">FF666769</color>
+        
 <!-- Home Labels -->
         <color name="homelabelbig">FFFFFFFF</color>
         <color name="homelabelsmall">FF62BEFE</color>

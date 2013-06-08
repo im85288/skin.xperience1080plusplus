@@ -237,6 +237,12 @@
             <filename>OpenSansCond.ttf</filename>
             <size>75</size>
         </font>
+         <font>
+            <name>Font-Condensed-S75-B</name>
+            <filename>OpenSansCond.ttf</filename>
+            <size>75</size>
+            <style>bold</style>
+        </font>
         <font>
             <name>Font-Condensed-S80-B</name>
             <filename>OpenSansCond.ttf</filename>

@@ -62,12 +62,20 @@
                 <control type="radiobutton" id="2103">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
+                    <selected>!Skin.HasSetting(HomePictures)</selected>
+                    <onclick>Skin.ToggleSetting(HomePictures)</onclick>
+                    <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+                    <label>$LOCALIZE[1]</label>
+                </control>
+                <control type="radiobutton" id="2104">
+                    <width>1210</width>
+                    <include>SettingsDialogRadioButtonVars</include>
                     <selected>!Skin.HasSetting(HomeMusic)</selected>
                     <onclick>Skin.ToggleSetting(HomeMusic)</onclick>
                     <onclick>SetProperty(ReloadSkin,1,Home)</onclick>
                     <label>$LOCALIZE[2]</label>
                 </control>
-                <control type="radiobutton" id="2104">
+                <control type="radiobutton" id="2105">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>!Skin.HasSetting(HomePrograms)</selected>

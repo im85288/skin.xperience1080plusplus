@@ -1,8 +1,6 @@
-Xperience1080 ARCTIC
+Xperience1080ArcticPlusPlus
 ====================
 
-A modification of Black's xperience1080 skin.
-Modification by jurialmunkey.
-Inspired heavily by Hitcher's Alaska skins.
+A modification by im85288 of jurialmunkey's modification of Black's xperience1080 skin.
 
 

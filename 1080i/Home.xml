@@ -16,6 +16,7 @@
 	<onload condition="IsEmpty(Skin.String(appcolor.name)) | !SubString(Skin.String(appcolor.name),Tiles)">Skin.SetString(appcolor.name,Grey Tiles)</onload>
 	<onload condition="IsEmpty(Skin.String(homecolor.name)) | !SubString(Skin.String(homecolor.name),Tiles)">Skin.SetString(homecolor.name,Grey Tiles)</onload>
 	<onload condition="IsEmpty(Skin.String(pvrcolor.name)) | !SubString(Skin.String(pvrcolor.name),Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(pictures.name)) | !SubString(Skin.String(pictures.name),Tiles)">Skin.SetString(pictures.name,Grey Tiles)</onload>
 	<onload condition="IsEmpty(Skin.String(weathercolor.name)) | !SubString(Skin.String(weathercolor.name),Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onload>
     <onunload>CancelAlarm(HomeTileMove,true)</onunload>
     <onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>

@@ -263,6 +263,11 @@
 		<value>Grey Tiles</value>
     </variable>
     
+    <variable name="PicturesAddonTileColorVar">
+        <value condition="!Skin.HasSetting(AddonTilesColored)">$INFO[Skin.String(pictures.name)]</value>
+		<value>Grey Tiles</value>
+    </variable>
+    
     <include name="DialogHeaderMod">
     	<font>Font-Alaska-S34-L</font>
     	<textcolor>mod-infotags-d</textcolor>
