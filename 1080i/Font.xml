@@ -395,6 +395,17 @@
             <filename>alaska_cond.ttf</filename>
             <size>28</size>
         </font>
+         <font>
+            <name>Font-Alaska-S28-NC</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S28-NC-B</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>28</size>
+            <style>bold</style>
+        </font>
         <font>
             <name>Font-Alaska-S29-L</name>
             <filename>alaska_light.ttf</filename>
@@ -428,6 +439,21 @@
             <filename>alaska_black.ttf</filename>
             <size>29</size>
         </font>
+         <font>
+            <name>Font-Alaska-S30</name>
+            <filename>alaska_cond.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S30-L</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>30</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S30-BL</name>
+            <filename>alaska_black.ttf</filename>
+            <size>30</size>
+        </font>
         <font>
             <name>Font-Alaska-S31-B</name>
             <filename>alaska_cond.ttf</filename>
@@ -445,14 +471,62 @@
             <size>31</size>
         </font>
         <font>
+            <name>Font-Alaska-S31-NC</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>31</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S31-NC-B</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>31</size>
+            <style>bold</style>
+        </font>
+         <font>
+            <name>Font-Alaska-S32-L</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>32</size>
+        </font>
+        <font>
             <name>Font-Alaska-S32-BL</name>
             <filename>alaska_black.ttf</filename>
             <size>32</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S32-NC</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>32</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S32-NC-B</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>32</size>
+            <style>bold</style>
         </font>
 		<font>
             <name>Font-Alaska-S33</name>
             <filename>alaska_cond.ttf</filename>
             <size>33</size>
+        </font>
+         <font>
+            <name>Font-Alaska-S33-L</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>33</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S33-BL</name>
+            <filename>alaska_black.ttf</filename>
+            <size>33</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S33-NC</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>33</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S33-NC-B</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>33</size>
+            <style>bold</style>
         </font>
         <font>
             <name>Font-Alaska-S34-L</name>
@@ -463,6 +537,17 @@
             <name>Font-Alaska-S34-BL</name>
             <filename>alaska_black.ttf</filename>
             <size>34</size>
+        </font>
+         <font>
+            <name>Font-Alaska-S34-NC</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>34</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S34-NC-B</name>
+            <filename>alaska_nocaps.ttf</filename>
+            <size>34</size>
+            <style>bold</style>
         </font>
         <font>
             <name>Font-Alaska-S36-BL</name>
@@ -482,6 +567,16 @@
         <font>
             <name>Font-Alaska-S40</name>
             <filename>alaska_cond.ttf</filename>
+            <size>40</size>
+        </font>
+         <font>
+            <name>Font-Alaska-S40-L</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>40</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S40-BL</name>
+            <filename>alaska_black.ttf</filename>
             <size>40</size>
         </font>
         <font>

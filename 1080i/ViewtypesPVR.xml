@@ -302,7 +302,7 @@
 							<posy>0</posy>
 							<width>876</width>
 							<height>58</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-NC</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -316,7 +316,7 @@
 							<posy>0</posy>
 							<width>876</width>
 							<height>58</height>
-							<font>Font-Condensed-S34-B</font>
+							<font>Font-Alaska-S34-NC-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -330,7 +330,7 @@
 							<posy>42</posy>
 							<width>799</width>
 							<height>50</height>
-							<font>Font-Condensed-S28</font>
+							<font>Font-Alaska-S28-NC</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
@@ -344,7 +344,7 @@
 							<posy>42</posy>
 							<width>799</width>
 							<height>50</height>
-							<font>Font-Condensed-S28-B</font>
+							<font>Font-Alaska-S28-NC-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
@@ -358,7 +358,7 @@
 							<posy>0</posy>
 							<width>876</width>
 							<height>96</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-NC</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -510,7 +510,7 @@
 								<posy>0</posy>
 								<width>876</width>
 								<height>58</height>
-								<font>Font-Condensed-S34-B</font>
+								<font>Font-Alaska-S34-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>blue</textcolor>
@@ -524,7 +524,7 @@
 								<posy>0</posy>
 								<width>876</width>
 								<height>58</height>
-								<font>Font-Condensed-S34-B</font>
+								<font>Font-Alaska-S34-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>black</textcolor>
@@ -538,7 +538,7 @@
 								<posy>42</posy>
 								<width>799</width>
 								<height>50</height>
-								<font>Font-Condensed-S28-B</font>
+								<font>Font-Alaska-S28-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
 								<textcolor>blue</textcolor>
@@ -552,7 +552,7 @@
 								<posy>42</posy>
 								<width>799</width>
 								<height>50</height>
-								<font>Font-Condensed-S28-B</font>
+								<font>Font-Alaska-S28-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
 								<textcolor>black</textcolor>
@@ -566,7 +566,7 @@
 								<posy>0</posy>
 								<width>876</width>
 								<height>96</height>
-								<font>Font-Condensed-S34-B</font>
+								<font>Font-Alaska-S34-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>blue</textcolor>
@@ -718,7 +718,7 @@
 						<posx>30</posx>
 						<posy>30</posy>
 						<width>516</width>
-						<font>Font-Condensed-S40</font>
+						<font>Font-Alaska-S40-BL</font>
 						<label>$INFO[Container(12).ListItem.Title]</label>
 						<textcolor>black</textcolor>
 						<scroll>false</scroll>
@@ -812,7 +812,7 @@
 							<posx>30</posx>
 							<posy>566</posy>
 							<width>516</width>
-							<font>Font-Condensed-S30</font>
+							<font>Font-Alaska-S30-BL</font>
 							<label>$INFO[Container(12).ListItem.Genre]</label>
 							<textcolor>black</textcolor>
 							<scroll>false</scroll>
@@ -821,7 +821,7 @@
 							<posx>30</posx>
 							<posy>610</posy>
 							<width>516</width>
-							<font>Font-Condensed-S30</font>
+							<font>Font-Alaska-S30-BL</font>
 							<label>$INFO[Container(12).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(12).ListItem.NextStartTime, (,)]</label>
 							<textcolor>black</textcolor>
 							<scroll>false</scroll>
@@ -855,7 +855,7 @@
 					<posy>180</posy>
 					<width>200</width>
 					<height>30</height>
-					<font>Font-Condensed-S30</font>
+					<font>Font-Alaska-S30-BL</font>
 					<textcolor>black</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -925,7 +925,7 @@
 							<posy>0</posy>
 							<width>876</width>
 							<height>58</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-NC-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -939,7 +939,7 @@
 							<posy>42</posy>
 							<width>799</width>
 							<height>50</height>
-							<font>Font-Condensed-S28</font>
+							<font>Font-Alaska-S28-NC-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
@@ -953,7 +953,7 @@
 							<posy>0</posy>
 							<width>876</width>
 							<height>96</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-NC-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -1076,7 +1076,7 @@
 								<posy>0</posy>
 								<width>876</width>
 								<height>58</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S34-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>black</textcolor>
@@ -1090,7 +1090,7 @@
 								<posy>42</posy>
 								<width>799</width>
 								<height>50</height>
-								<font>Font-Condensed-S28</font>
+								<font>Font-Alaska-S28-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
 								<textcolor>black</textcolor>
@@ -1104,7 +1104,7 @@
 								<posy>0</posy>
 								<width>876</width>
 								<height>96</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S34-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>black</textcolor>
@@ -1312,7 +1312,7 @@
 						<posy>0</posy>
 						<width>375</width>
 						<height>80</height>
-						<font>Font-Alaska-S34-BL</font>
+						<font>Font-Alaska-S34-L</font>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 						<textcolor>black</textcolor>
@@ -1340,7 +1340,7 @@
 						<posy>0</posy>
 						<width>375</width>
 						<height>80</height>
-						<font>Font-Alaska-S34-BL</font>
+						<font>Font-Alaska-S34-L</font>
 						<align>right</align>
 						<label>$INFO[ListItem.ChannelNumber]</label>
 						<textcolor>black</textcolor>
@@ -1472,7 +1472,7 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-						<font>Font-Alaska-S34-BL</font>
+						<font>Font-Alaska-S34-L</font>
 							<aligny>center</aligny>
 						<textcolor>black</textcolor>
 						<selectedcolor>black</selectedcolor>
@@ -1486,7 +1486,7 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-						<font>Font-Alaska-S34-BL</font>
+						<font>Font-Alaska-S34-L</font>
 							<aligny>center</aligny>
 						<textcolor>black</textcolor>
 						<textoffsetx>11</textoffsetx>
@@ -2798,7 +2798,7 @@
 						<posx>30</posx>
 						<posy>543</posy>
 						<width>516</width>
-						<font>Font-Condensed-S30</font>
+						<font>Font-Alaska-S30-BL</font>
 						<label>$INFO[Container(13).ListItem.Genre]</label>
 						<textcolor>black</textcolor>
 						<scroll>false</scroll>
@@ -2876,7 +2876,7 @@
 							<posy>0</posy>
 							<width>822</width>
 							<height>75</height>
-							<font>Font-Condensed-S33</font>
+							<font>Font-Alaska-S33-NC</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -2889,7 +2889,7 @@
 							<posy>0</posy>
 							<width>822</width>
 							<height>75</height>
-							<font>Font-Condensed-S31</font>
+							<font>Font-Alaska-S31-NC</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Date]</label>
 							<textcolor>black</textcolor>
@@ -2953,7 +2953,7 @@
 								<posy>0</posy>
 								<width>822</width>
 								<height>75</height>
-								<font>Font-Condensed-S33</font>
+								<font>Font-Alaska-S33-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>eewhite</textcolor>
@@ -2967,7 +2967,7 @@
 								<posy>0</posy>
 								<width>822</width>
 								<height>75</height>
-								<font>Font-Condensed-S33</font>
+								<font>Font-Alaska-S33-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>black</textcolor>
@@ -2981,7 +2981,7 @@
 								<posy>0</posy>
 								<width>822</width>
 								<height>75</height>
-								<font>Font-Condensed-S31</font>
+								<font>Font-Alaska-S31-NC-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.Date]</label>
 								<textcolor>eewhite</textcolor>
@@ -2995,7 +2995,7 @@
 								<posy>0</posy>
 								<width>822</width>
 								<height>75</height>
-								<font>Font-Condensed-S31</font>
+								<font>Font-Alaska-S31-NC-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.Date]</label>
 								<textcolor>black</textcolor>

@@ -47,7 +47,7 @@
 					<height>38</height>
 					<align>left</align>
 					<label>$INFO[System.Time]</label>
-					<font>Font-Condensed-S36-B</font>
+					<font>Font-Alaska-S36-BL</font>
 					<textcolor>black</textcolor>
 					66000000
 				</control>
@@ -60,7 +60,7 @@
 					<align>center</align>
 					<textoffsetx>30</textoffsetx>
 					<label>$VAR[PVRChannelsOSDTitleLabel]</label>
-					<font>Font-Condensed-S34</font>
+					<font>Font-Alaska-S34-BL</font>
 					<textcolor>black</textcolor>
 					66000000
 				</control>
@@ -113,11 +113,11 @@
 						<!-- <control type="label"> <description>Label</description> <posx>133</posx> <posy>0</posy> <width>517</width> <height>58</height> <font>Font-Condensed-S34</font> <align>left</align> <label>$INFO[ListItem.Label]</label> <textcolor>99FFFFFF</textcolor> <selectedcolor>99FFFFFF</selectedcolor> <scroll>false</scroll> <visible>ListItem.HasEpg</visible> </control> -->
 						<control type="label">
 							<description>Label</description>
-							<posx>133</posx>
+							<posx>127</posx>
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S32-BL</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime]</label>
 							<textcolor>black</textcolor>
@@ -127,11 +127,11 @@
 						</control>
 						<control type="label">
 							<description>Label</description>
-							<posx>133</posx>
+							<posx>127</posx>
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S34-B</font>
+							<font>Font-Alaska-S32-BL</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime]</label>
 							<textcolor>black</textcolor>
@@ -145,7 +145,7 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S32-BL</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
@@ -159,7 +159,7 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S34-B</font>
+							<font>Font-Alaska-S32-BL</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
@@ -170,11 +170,11 @@
 						<!-- <control type="label"> <description>Title</description> <posx>210</posx> <posy>44</posy> <width>440</width> <height>50</height> <font>Font-Condensed-S28</font> <align>left</align> <label>$INFO[ListItem.Title]</label> <textcolor>77white</textcolor> <selectedcolor>77white</selectedcolor> <scroll>false</scroll> <visible>ListItem.HasEpg</visible> </control> -->
 						<control type="label">
 							<description>Label</description>
-							<posx>133</posx>
+							<posx>127</posx>
 							<posy>44</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S32-L</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextStartTime]</label>
 							<textcolor>darkgrey2</textcolor>
@@ -184,11 +184,11 @@
 						</control>
 						<control type="label">
 							<description>Label</description>
-							<posx>133</posx>
+							<posx>127</posx>
 							<posy>44</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S32-BL</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextStartTime]</label>
 							<textcolor>black</textcolor>
@@ -202,7 +202,7 @@
 							<posy>48</posy>
 							<width>440</width>
 							<height>50</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S32-NC</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextTitle]</label>
 							<textcolor>darkgrey2</textcolor>
@@ -216,7 +216,7 @@
 							<posy>48</posy>
 							<width>440</width>
 							<height>50</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S32-NC</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextTitle]</label>
 							<textcolor>black</textcolor>
@@ -226,11 +226,11 @@
 						</control>
 						<control type="label">
 							<description>Label</description>
-							<posx>133</posx>
+							<posx>127</posx>
 							<posy>0</posy>
 							<width>517</width>
 							<height>95</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S32-BL</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -361,11 +361,11 @@
 							<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(11)">Conditional</animation>
 							<control type="label">
 								<description>Label</description>
-								<posx>133</posx>
+								<posx>127</posx>
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S32-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
 								<textcolor>blue</textcolor>
@@ -375,11 +375,11 @@
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>133</posx>
+								<posx>127</posx>
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Condensed-S34-B</font>
+								<font>Font-Alaska-S32-BL</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
 								<textcolor>black</textcolor>
@@ -393,7 +393,7 @@
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S32-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
 								<textcolor>blue</textcolor>
@@ -407,7 +407,7 @@
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Condensed-S34-B</font>
+								<font>Font-Alaska-S32-BL</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
 								<textcolor>black</textcolor>
@@ -417,11 +417,11 @@
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>133</posx>
+								<posx>127</posx>
 								<posy>44</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S32-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextStartTime]</label>
 								<textcolor>bluegrey</textcolor>
@@ -431,11 +431,11 @@
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>133</posx>
+								<posx>127</posx>
 								<posy>44</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S32-BL</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextStartTime]</label>
 								<textcolor>black</textcolor>
@@ -449,7 +449,7 @@
 								<posy>48</posy>
 								<width>440</width>
 								<height>50</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S32-NC</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextTitle]</label>
 								<textcolor>bluegrey</textcolor>
@@ -463,7 +463,7 @@
 								<posy>48</posy>
 								<width>440</width>
 								<height>50</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S32-NC</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextTitle]</label>
 								<textcolor>black</textcolor>
@@ -473,15 +473,15 @@
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>133</posx>
+								<posx>127</posx>
 								<posy>0</posy>
 								<width>517</width>
 								<height>95</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S34-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>blue</textcolor>
+								<selectedcolor>blue</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasEpg</visible>
 							</control>
@@ -576,7 +576,7 @@
 						<posx>1060</posx>
 						<posy>325</posy>
 						<width>516</width>
-						<font>Font-Condensed-S34-B</font>
+						<font>Font-Alaska-S34-BL</font>
 						<label>$INFO[Container(11).ListItem.Title]</label>
 						<textcolor>black</textcolor>
 						<scroll>false</scroll>
@@ -617,7 +617,7 @@
 							<posx>1060</posx>
 							<posy>853</posy>
 							<width>520</width>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-BL</font>
 							<label>$INFO[Container(11).ListItem.Genre,[COLOR=greyblue]$LOCALIZE[135] [/COLOR],]</label>
 							<label>$INFO[Container(11).ListItem.ChannelName,[COLOR=greyblue]$LOCALIZE[19201] [/COLOR],]</label>
 							<textcolor>black</textcolor>
@@ -635,7 +635,7 @@
 							<label>$INFO[Container(11).ListItem.NextTitle,[COLOR=greyblue]$LOCALIZE[19031] [/COLOR],]$INFO[Container(11).ListItem.NextStartTime, [COLOR=greyblue]at [/COLOR],]</label>
 							<label>$INFO[Container(11).ListItem.Title,[COLOR=greyblue]$LOCALIZE[19030] [/COLOR],]$INFO[Container(11).ListItem.StartTime, [COLOR=greyblue]at [/COLOR],]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-BL</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>

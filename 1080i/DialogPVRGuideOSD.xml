@@ -47,7 +47,7 @@
 					<height>38</height>
 					<align>left</align>
 					<label>$INFO[System.Time]</label>
-					<font>Font-Condensed-S36-B</font>
+					<font>Font-Alaska-S36-BL</font>					
 					<textcolor>black</textcolor>
 					66000000
 				</control>
@@ -60,7 +60,7 @@
 					<align>center</align>
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[19222]$INFO[VideoPlayer.ChannelName, • ,]</label>
-					<font>Font-Condensed-S34</font>
+					<font>Font-Alaska-S34-BL</font>					
 					<textcolor>black</textcolor>
 					66000000
 				</control>
@@ -105,7 +105,7 @@
 							<posy>0</posy>
 							<width>560</width>
 							<height>45</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-BL</font>					
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -118,7 +118,7 @@
 							<posy>50</posy>
 							<width>560</width>
 							<height>45</height>
-							<font>Font-Condensed-S31</font>
+							<font>Font-Alaska-S31-L</font>					
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 							<textcolor>darkgrey2</textcolor>
@@ -185,7 +185,7 @@
 								<posy>0</posy>
 								<width>567</width>
 								<height>45</height>
-								<font>Font-Condensed-S34-B</font>
+								<font>Font-Alaska-S34-BL</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>black</textcolor>
@@ -199,7 +199,7 @@
 								<posy>0</posy>
 								<width>567</width>
 								<height>45</height>
-								<font>Font-Condensed-S34</font>
+								<font>Font-Alaska-S34-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>blue</textcolor>
@@ -213,7 +213,7 @@
 								<posy>50</posy>
 								<width>560</width>
 								<height>45</height>
-								<font>Font-Condensed-S31-B</font>
+								<font>Font-Alaska-S31-BL</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime,, → ]$INFO[ListItem.EndTime]</label>
 								<textcolor>black</textcolor>
@@ -226,7 +226,7 @@
 								<posy>50</posy>
 								<width>560</width>
 								<height>45</height>
-								<font>Font-Condensed-S31</font>
+								<font>Font-Alaska-S31-L</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime,, → ]$INFO[ListItem.EndTime]</label>
 								<textcolor>blue</textcolor>
@@ -268,7 +268,7 @@
 						<posx>860</posx>
 						<posy>325</posy>
 						<width>716</width>
-						<font>Font-Condensed-S34-B</font>
+						<font>Font-Alaska-S34-BL</font>
 						<label>$INFO[Container(11).ListItem.Title]</label>
 						<textcolor>black</textcolor>
 						<scroll>false</scroll>
@@ -277,7 +277,7 @@
 						<posx>860</posx>
 						<posy>380</posy>
 						<width>730</width>
-						<font>Font-Condensed-S30</font>
+						<font>Font-Alaska-S30-L</font>
 						<label>$INFO[Container(11).ListItem.StartTime,$LOCALIZE[142] ,]$INFO[Container(11).ListItem.EndTime, - ] ($INFO[Container(11).ListItem.StartDate])</label>
 						<textcolor>eewhite</textcolor>
 						<scroll>false</scroll>
@@ -319,7 +319,7 @@
 							<posx>860</posx>
 							<posy>910</posy>
 							<width>400</width>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-BL</font>
 							<label>$INFO[Container(11).ListItem.Genre]</label>
 							<textcolor>black</textcolor>
 							<scroll>false</scroll>
