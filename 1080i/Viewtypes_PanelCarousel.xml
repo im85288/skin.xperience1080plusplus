@@ -1,14 +1,14 @@
 <includes>
-<!-- =============== -->
-<!-- Panel (503)      -->
-<!-- =============== -->
-    <include name="Viewtype-PanelCarousel">
-        <control type="group">
-            <visible>Control.IsVisible(503) + !Window.IsActive(movieinformation)</visible>
-            <include>CommonViewAnimations</include>
-            <include>OptionsShutdownAnimation</include>
-            <control type="group">
-            	<posy>240</posy>
+	<!-- =============== -->
+	<!-- Panel (503) -->
+	<!-- =============== -->
+	<include name="Viewtype-PanelCarousel">
+		<control type="group">
+			<visible>Control.IsVisible(503) + !Window.IsActive(movieinformation)</visible>
+			<include>CommonViewAnimations</include>
+			<include>OptionsShutdownAnimation</include>
+			<control type="group">
+				<posy>240</posy>
 				<animation effect="fade" start="0" end="100" time="400" delay="600" reversible="false">Visible</animation>
 				<visible>!Container(503).OnNext + !Container(503).OnPrevious + !Container(503).Scrolling</visible>
 				<control type="image">
@@ -34,23 +34,23 @@
 					<colordiffuse>mod-infotags</colordiffuse>
 				</control>
 			</control>
-            <control type="wraplist" id="503">
+			<control type="wraplist" id="503">
 				<posx>0</posx>
 				<posy>180</posy>
 				<width>1920</width>
 				<height>722</height>
-                <scrolltime tween="cubic" easing="out">500</scrolltime>
-                <orientation>horizontal</orientation>
-                <viewtype label="Panel (Carousel)">list</viewtype>
-                <onup>503</onup>
-                <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-                <ondown condition="Skin.HasSetting(KioskMode)">503</ondown>
-                <onleft>503</onleft>
-                <onright>503</onright>
-                <preloaditems>2</preloaditems>
-                <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-                <itemlayout  width="1920" height="722">
-                	<control type="group">
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<orientation>horizontal</orientation>
+				<viewtype label="Panel (Carousel)">list</viewtype>
+				<onup>503</onup>
+				<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+				<ondown condition="Skin.HasSetting(KioskMode)">503</ondown>
+				<onleft>503</onleft>
+				<onright>503</onright>
+				<preloaditems>2</preloaditems>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+				<itemlayout width="1920" height="722">
+					<control type="group">
 						<posx>286</posx>
 						<animation type="Conditional" condition="true">
 							<effect type="zoom" start="100" end="50" time="0" center="auto" />
@@ -75,7 +75,7 @@
 								<aspect>keepaspect</aspect>
 								<texture>$INFO[ListItem.Overlay,overlays/aeon/,]</texture>
 								<visible>!IsEmpty(ListItem.Overlay)</visible>
-							</control> 
+							</control>
 							<!-- GLOSS AND BORDER OVERLAY -->
 							<control type="image">
 								<description>Gloss</description>
@@ -94,7 +94,7 @@
 								<height>484</height>
 								<texture border="25">views/newgloss/border.png</texture>
 								<aspectratio>stretch</aspectratio>
-							</control> 
+							</control>
 							<control type="group">
 								<posy>476</posy>
 								<control type="label">
@@ -109,7 +109,7 @@
 								</control>
 								<control type="textbox">
 									<posx>24</posx>
-									<posy>74</posy>
+									<posy>72</posy>
 									<width>790</width>
 									<height>140</height>
 									<label>$INFO[ListItem.Plot]</label>
@@ -117,6 +117,19 @@
 									<textcolor>mod-infotags</textcolor>
 									<align>justify</align>
 									<autoscroll delay="13000" time="3000" repeat="13000" />
+									<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+								</control>
+								<control type="textbox">
+									<posx>24</posx>
+									<posy>72</posy>
+									<width>790</width>
+									<height>140</height>
+									<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
+									<font>Font-Alaska-S25-NC</font>
+									<textcolor>mod-infotags</textcolor>
+									<align>justify</align>
+									<autoscroll delay="13000" time="3000" repeat="13000" />
+									<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 								</control>
 							</control>
 						</control>
@@ -129,7 +142,7 @@
 								<width>492</width>
 								<height>702</height>
 								<texture background="true" diffuse="views/newgloss/panel-bigposter-diffuse.png">$VAR[WallPoster]</texture>
-								<aspectratio>stretch</aspectratio>  
+								<aspectratio>stretch</aspectratio>
 								<visible>!Container.Content(episodes)</visible>
 							</control>
 							<!-- GLOSS AND BORDER OVERLAY -->
@@ -152,19 +165,19 @@
 								<texture border="25">views/newgloss/border.png</texture>
 								<aspectratio>stretch</aspectratio>
 								<visible>!Container.Content(episodes)</visible>
-							</control> 
+							</control>
 						</control>
 					</control>
-                </itemlayout>
-                <focusedlayout width="1920" height="722">
+				</itemlayout>
+				<focusedlayout width="1920" height="722">
 					<control type="group">
 						<animation effect="slide" start="0" end="280,32" condition="Container.Content(episodes)">Conditional</animation>
 						<animation type="Focus" condition="Container(503).OnNext | Container(503).OnPrevious">
-                            <effect type="zoom" start="50" end="100" time="350" tween="sine" easing="out" center="auto" />
-                        </animation>
-                        <animation type="Unfocus" condition="Container(503).OnNext | Container(503).OnPrevious">
-                            <effect type="zoom" start="100" end="50" time="250" tween="sine" easing="out" center="auto" />
-                        </animation>
+							<effect type="zoom" start="50" end="100" time="350" tween="sine" easing="out" center="auto" />
+						</animation>
+						<animation type="Unfocus" condition="Container(503).OnNext | Container(503).OnPrevious">
+							<effect type="zoom" start="100" end="50" time="250" tween="sine" easing="out" center="auto" />
+						</animation>
 						<posx>286</posx>
 						<control type="group">
 							<control type="image">
@@ -185,7 +198,7 @@
 								<aspect>keepaspect</aspect>
 								<texture>$INFO[ListItem.Overlay,overlays/aeon/,]</texture>
 								<visible>!IsEmpty(ListItem.Overlay)</visible>
-							</control> 
+							</control>
 							<!-- GLOSS AND BORDER OVERLAY -->
 							<control type="image">
 								<description>Gloss</description>
@@ -204,7 +217,7 @@
 								<height>484</height>
 								<texture border="25">views/newgloss/border.png</texture>
 								<aspectratio>stretch</aspectratio>
-							</control> 
+							</control>
 							<control type="group">
 								<posy>472</posy>
 								<control type="label">
@@ -240,7 +253,7 @@
 								<height>702</height>
 								<texture background="true" diffuse="views/newgloss/panel-bigposter-diffuse.png">$VAR[WallPoster]</texture>
 								<aspectratio>stretch</aspectratio>
-								<visible>!Container.Content(episodes)</visible> 
+								<visible>!Container.Content(episodes)</visible>
 							</control>
 							<!-- GLOSS AND BORDER OVERLAY -->
 							<control type="image">
@@ -251,7 +264,7 @@
 								<height>702</height>
 								<texture diffuse="views/newgloss/panel-bigposter-diffuse.png">views/newgloss/gloss.png</texture>
 								<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
-								<visible>!Container.Content(episodes)</visible> 
+								<visible>!Container.Content(episodes)</visible>
 							</control>
 							<control type="image">
 								<description>Border</description>
@@ -261,12 +274,12 @@
 								<height>722</height>
 								<texture border="25">views/newgloss/border.png</texture>
 								<aspectratio>stretch</aspectratio>
-								<visible>!Container.Content(episodes)</visible> 
-							</control> 
+								<visible>!Container.Content(episodes)</visible>
+							</control>
 						</control>
 					</control>
-                </focusedlayout>
-            </control>
-        </control>
-    </include>    
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
 </includes>

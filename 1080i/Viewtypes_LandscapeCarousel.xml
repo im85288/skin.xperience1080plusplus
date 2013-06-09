@@ -1,16 +1,16 @@
 <includes>
-<!-- ========================= -->
-<!-- Landscape Carousel (513)  -->
-<!-- ========================= -->
-    <include name="Viewtype-LandscapeCarousel">
-        <control type="group">
-            <visible>Control.IsVisible(513) + !Window.IsActive(movieinformation)</visible>
-            <include>CommonViewAnimations</include>
-            <include>OptionsShutdownAnimation</include>
+	<!-- ========================= -->
+	<!-- Landscape Carousel (513) -->
+	<!-- ========================= -->
+	<include name="Viewtype-LandscapeCarousel">
+		<control type="group">
+			<visible>Control.IsVisible(513) + !Window.IsActive(movieinformation)</visible>
+			<include>CommonViewAnimations</include>
+			<include>OptionsShutdownAnimation</include>
 			<posy>195</posy>
 			<posx>14</posx>
 			<control type="group">
-            	<posy>270</posy>
+				<posy>270</posy>
 				<control type="image">
 					<description>Left Arrow</description>
 					<posx>406</posx>
@@ -36,23 +36,23 @@
 					<visible>!Container(513).OnNext + !Container(513).OnPrevious + !Container(513).Scrolling + !IsEmpty(Container(513).ListItemNoWrap(1).Label)</visible>
 				</control>
 			</control>
-            <control type="fixedlist" id="513">
+			<control type="fixedlist" id="513">
 				<posx>-312</posx>
 				<posy>0</posy>
 				<width>2544</width>
 				<height>714</height>
-                <include>FullscreenDimensions</include>
-                <scrolltime tween="sine" easing="out">500</scrolltime>
-                <orientation>horizontal</orientation>
-                <viewtype label="Landscape (Carousel)">list</viewtype>
-                <onup>513</onup>
-                <ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
-                <ondown condition="Skin.HasSetting(KioskMode)">513</ondown>
-                <onleft>513</onleft>
-                <onright>513</onright>
-                <preloaditems>2</preloaditems>
-                <focusposition>1</focusposition>
-                <itemlayout width="848" height="714"> 
+				<include>FullscreenDimensions</include>
+				<scrolltime tween="sine" easing="out">500</scrolltime>
+				<orientation>horizontal</orientation>
+				<viewtype label="Landscape (Carousel)">list</viewtype>
+				<onup>513</onup>
+				<ondown condition="!Skin.HasSetting(KioskMode)">9010</ondown>
+				<ondown condition="Skin.HasSetting(KioskMode)">513</ondown>
+				<onleft>513</onleft>
+				<onright>513</onright>
+				<preloaditems>2</preloaditems>
+				<focusposition>1</focusposition>
+				<itemlayout width="848" height="714">
 					<control type="group">
 						<animation effect="zoom" start="100" end="50" time="0" condition="true" center="auto">Conditional</animation>
 						<control type="image">
@@ -72,7 +72,7 @@
 							<aspect>keepaspect</aspect>
 							<texture>$INFO[ListItem.Overlay,overlays/aeon/,]</texture>
 							<visible>!IsEmpty(ListItem.Overlay)</visible>
-						</control> 
+						</control>
 						<!-- GLOSS AND BORDER OVERLAY -->
 						<control type="image">
 							<description>Gloss</description>
@@ -93,8 +93,8 @@
 							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
-                </itemlayout>
-                <focusedlayout width="848" height="714">
+				</itemlayout>
+				<focusedlayout width="848" height="714">
 					<control type="group">
 						<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="zoom" start="50" end="100" time="350" tween="sine" easing="out" center="auto">Focus</animation>
 						<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="zoom" start="100" end="50" time="250" tween="sine" easing="out" center="auto">UnFocus</animation>
@@ -115,7 +115,7 @@
 							<aspect>keepaspect</aspect>
 							<texture>$INFO[ListItem.Overlay,overlays/aeon/,]</texture>
 							<visible>!IsEmpty(ListItem.Overlay)</visible>
-						</control> 
+						</control>
 						<!-- GLOSS AND BORDER OVERLAY -->
 						<control type="image">
 							<description>Gloss</description>
@@ -138,7 +138,7 @@
 						<control type="group">
 							<posy>474</posy>
 							<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="fade" start="0" end="100" time="350">Focus</animation>
-							<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="fade" start="100" end="0" time="250">UnFocus</animation>							
+							<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="fade" start="100" end="0" time="250">UnFocus</animation>
 							<control type="label">
 								<posx>28</posx>
 								<posy>30</posy>
@@ -159,11 +159,25 @@
 								<textcolor>mod-infotags</textcolor>
 								<align>justify</align>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
+								<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+							</control>
+							<control type="textbox">
+								<description>Plot</description>
+								<posx>28</posx>
+								<posy>72</posy>
+								<width>790</width>
+								<height>147</height>
+								<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
+								<align>justify</align>
+								<font>Font-Alaska-S25-NC</font>
+								<textcolor>mod-infotags</textcolor>
+								<autoscroll delay="13000" time="3000" repeat="13000" />
+								<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 							</control>
 						</control>
 					</control>
-                </focusedlayout>
-            </control>
-        </control>
-    </include>    
+				</focusedlayout>
+			</control>
+		</control>
+	</include>
 </includes>

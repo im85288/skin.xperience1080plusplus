@@ -170,6 +170,20 @@
                                 <textcolor>FF484848</textcolor>
                                 <autoscroll delay="13000" time="3000" repeat="13000" />
                                 <font>Font-Condensed-S25</font>
+                                <visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+                            </control>
+                            <control type="textbox">
+                                <description>Plot</description>
+                                <posx>0</posx>
+                                <posy>125</posy>
+                                <width>732</width>
+                                <height>145</height>
+                                <info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
+                                <align>justify</align>
+                                <textcolor>FF484848</textcolor>
+                                <autoscroll delay="13000" time="3000" repeat="13000" />
+                                <font>Font-Condensed-S25</font>
+                                <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
                             </control>
                         </control>
                     </control>
