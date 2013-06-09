@@ -569,8 +569,8 @@
 								<font>Font-Alaska-S34-NC-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>blue</textcolor>
-								<selectedcolor>blue</selectedcolor>
+								<textcolor>black</textcolor>
+								<selectedcolor>black</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasEpg</visible>
 							</control>
