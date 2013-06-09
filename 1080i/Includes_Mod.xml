@@ -264,7 +264,7 @@
     </variable>
     
     <variable name="PicturesAddonTileColorVar">
-        <value condition="!Skin.HasSetting(AddonTilesColored)">$INFO[Skin.String(pictures.name)]</value>
+        <value condition="!Skin.HasSetting(AddonTilesColored)">$INFO[Skin.String(picturescolor.name)]</value>
 		<value>Grey Tiles</value>
     </variable>
     

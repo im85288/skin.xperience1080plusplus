@@ -3249,7 +3249,7 @@
 									<width>283</width>
 									<height>283</height>
 									<texture border="5">views/newgloss/tile-283.png</texture>
-									<colordiffuse>$INFO[Skin.String(pictures.name)]</colordiffuse>
+									<colordiffuse>$INFO[Skin.String(picturescolor.name)]</colordiffuse>
 									<visible>ListItem.Property(colored)</visible>
 								</control>
 								<control type="image">
@@ -3326,7 +3326,7 @@
 										<width>283</width>
 										<height>283</height>
 										<texture border="5">views/newgloss/tile-283.png</texture>
-										<colordiffuse>$INFO[Skin.String(pictures.name)]</colordiffuse>
+										<colordiffuse>$INFO[Skin.String(picturescolor.name)]</colordiffuse>
 										<visible>ListItem.Property(colored)</visible>
 									</control>
 									<control type="image">

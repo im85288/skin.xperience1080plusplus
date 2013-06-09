@@ -52,6 +52,10 @@
         <color name="Purple Tiles">aa3a0079</color>
         <color name="Lime Tiles">aa7eb000</color>
         <color name="Grey Tiles">aa404040</color>
+        <color name="Orange Tiles">aafdc700</color>
+        <color name="Yellow Tiles">aaffff00</color>
+        <color name="Black Tiles">aa000000</color>
+        <color name="White Tiles">aaffffff</color>
         
 		<!-- WHITES AND BLACKS -->						
 		<color name="mod-black">ccffffff</color> 		
