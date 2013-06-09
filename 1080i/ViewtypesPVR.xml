@@ -212,7 +212,7 @@
 					<textcolor>black</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[Container(11).ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, → ,]</label>
+					<label>$INFO[Container(11).ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, - ,]</label>
 				</control>
 				<control type="image">
 					<description>Shadow</description>
@@ -1681,9 +1681,9 @@
 					<posy>0</posy>
 					<width>350</width>
 					<height>86</height>
-					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ]</label>
+					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S38-BL</font>
+					<font>Font-Alaska-S38</font>
 					<aligny>center</aligny>
 					<align>right</align>
 					<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
@@ -1693,9 +1693,9 @@
 					<posy>0</posy>
 					<width>350</width>
 					<height>86</height>
-					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ]</label>
+					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]</label>
 					<textcolor>eewhite</textcolor>
-					<font>Font-Alaska-S38-L</font>
+					<font>Font-Alaska-S38</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>

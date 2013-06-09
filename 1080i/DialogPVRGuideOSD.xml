@@ -118,7 +118,7 @@
 							<posy>50</posy>
 							<width>560</width>
 							<height>45</height>
-							<font>Font-Alaska-S31-L</font>					
+							<font>Font-Alaska-S31</font>					
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 							<textcolor>darkgrey2</textcolor>
@@ -213,9 +213,9 @@
 								<posy>50</posy>
 								<width>560</width>
 								<height>45</height>
-								<font>Font-Alaska-S31-BL</font>
+								<font>Font-Alaska-S31</font>
 								<align>left</align>
-								<label>$INFO[ListItem.StartTime,, → ]$INFO[ListItem.EndTime]</label>
+								<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 								<textcolor>black</textcolor>
 								<scroll>false</scroll>
 								<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
@@ -226,9 +226,9 @@
 								<posy>50</posy>
 								<width>560</width>
 								<height>45</height>
-								<font>Font-Alaska-S31-L</font>
+								<font>Font-Alaska-S31</font>
 								<align>left</align>
-								<label>$INFO[ListItem.StartTime,, → ]$INFO[ListItem.EndTime]</label>
+								<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 								<textcolor>blue</textcolor>
 								<scroll>false</scroll>
 								<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>

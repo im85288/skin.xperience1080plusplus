@@ -51,7 +51,7 @@
 				<height>44</height>
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
 				<textcolor>aawhite</textcolor>
-				<font>Font-Condensed-S36</font>
+				<font>Font-Alaska-S36-L</font>
 				<align>right</align>
 				<aligny>center</aligny>
 				<visible>IntegerGreaterThan(Player.ChapterCount,0)</visible>
@@ -86,7 +86,7 @@
 					<posy>-122</posy>
 					<width>80</width>
 					<height>58</height>
-					<font>Font-Condensed-S36</font>
+					<font>Font-Alaska-S36-L</font>
 					<label fallback="                 •••">$INFO[VideoPlayer.Rating, ,]</label>
 					<textcolor>eewhite</textcolor>
 					<scroll>false</scroll>
@@ -100,7 +100,7 @@
 				<height>56</height>
 				<label>$INFO[VideoPlayer.NextTitle]</label>
 				<textcolor>eewhite</textcolor>
-				<font>Font-Condensed-S45-B</font>
+				<font>Font-Alaska-S45-L</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
@@ -116,8 +116,8 @@
 				<width>300</width>
 				<height>38</height>
 				<align>right</align>
-				<label>$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, → ,]</label>
-				<font>Font-Condensed-S45</font>
+				<label>$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, - ,]</label>
+				<font>Font-Alaska-S45</font>
 				<textcolor>eewhite</textcolor>
 				<visible>!IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext)) + VideoPlayer.Content(LiveTV)
 				</visible>
@@ -129,7 +129,7 @@
 				<height>56</height>
 				<label>$VAR[OSDTitle]</label>
 				<textcolor>blue</textcolor>
-				<font>Font-Condensed-S45-B</font>
+				<font>Font-Alaska-S45-B</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
@@ -179,11 +179,11 @@
 			<control type="label">
 				<posx>900</posx>
 				<posy>948</posy>
-				<width>200</width>
+				<width>400</width>
 				<height>56</height>
 				<label>Press Down to Info</label>
 				<textcolor>darkgrey</textcolor>
-				<font>Font-Condensed-S28</font>
+				<font>Font-Alaska-S28-L</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
@@ -193,11 +193,11 @@
 			<control type="label">
 				<posx>900</posx>
 				<posy>950</posy>
-				<width>300</width>
+				<width>400</width>
 				<height>56</height>
 				<label>Press Down to Current</label>
 				<textcolor>darkgrey</textcolor>
-				<font>Font-Condensed-S28</font>
+				<font>Font-Alaska-S28-L</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<scroll>false</scroll>
@@ -210,7 +210,7 @@
 				<posy>1010</posy>
 				<width>1400</width>
 				<height>56</height>
-				<font>Font-Condensed-S35</font>
+				<font>Font-Alaska-S35-NC</font>
 				<align>left</align>
 				<aligny>center</aligny>
 				<label>$INFO[VideoPlayer.NextGenre,[COLOR=midgrey]$LOCALIZE[515] [/COLOR],]</label>
