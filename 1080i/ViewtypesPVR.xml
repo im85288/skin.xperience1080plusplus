@@ -1275,7 +1275,7 @@
 						<posy>1</posy>
 						<width>10</width>
 						<height>30</height>
-						<font>Font-Condensed-S30</font>
+						<font>Font-Alaska-S29</font>
 						<textcolor>eewhite</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -1312,7 +1312,7 @@
 						<posy>0</posy>
 						<width>375</width>
 						<height>80</height>
-						<font>Font-Condensed-S34</font>
+						<font>Font-Alaska-S34-BL</font>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 						<textcolor>black</textcolor>
@@ -1326,7 +1326,7 @@
 						<posy>0</posy>
 						<width>375</width>
 						<height>80</height>
-						<font>Font-Condensed-S34-B</font>
+						<font>Font-Alaska-S34-BL</font>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 						<textcolor>black</textcolor>
@@ -1340,7 +1340,7 @@
 						<posy>0</posy>
 						<width>375</width>
 						<height>80</height>
-						<font>Font-Condensed-S34</font>
+						<font>Font-Alaska-S34-BL</font>
 						<align>right</align>
 						<label>$INFO[ListItem.ChannelNumber]</label>
 						<textcolor>black</textcolor>
@@ -1354,7 +1354,7 @@
 						<posy>0</posy>
 						<width>375</width>
 						<height>80</height>
-						<font>Font-Condensed-S34-B</font>
+						<font>Font-Alaska-S34-BL</font>
 						<align>right</align>
 						<label>$INFO[ListItem.ChannelNumber]</label>
 						<textcolor>black</textcolor>
@@ -1395,7 +1395,7 @@
 							<posy>0</posy>
 							<width>375</width>
 							<height>80</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-BL</font>
 							<align>left</align>
 							<label>$INFO[ListItem.ChannelName]</label>
 							<textcolor>black</textcolor>
@@ -1409,7 +1409,7 @@
 							<posy>0</posy>
 							<width>375</width>
 							<height>80</height>
-							<font>Font-Condensed-S34-B</font>
+							<font>Font-Alaska-S34-BL</font>
 							<align>left</align>
 							<label>$INFO[ListItem.ChannelName]</label>
 							<textcolor>black</textcolor>
@@ -1423,7 +1423,7 @@
 							<posy>0</posy>
 							<width>375</width>
 							<height>80</height>
-							<font>Font-Condensed-S34</font>
+							<font>Font-Alaska-S34-BL</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
 							<textcolor>black</textcolor>
@@ -1437,7 +1437,7 @@
 							<posy>0</posy>
 							<width>375</width>
 							<height>80</height>
-							<font>Font-Condensed-S34-B</font>
+							<font>Font-Alaska-S34-BL</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
 							<textcolor>black</textcolor>
@@ -1472,8 +1472,8 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-						<font>Font-Condensed-S34</font>
-						<aligny>center</aligny>
+						<font>Font-Alaska-S34-BL</font>
+							<aligny>center</aligny>
 						<textcolor>black</textcolor>
 						<selectedcolor>black</selectedcolor>
 						<align>left</align>
@@ -1486,8 +1486,8 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-						<font>Font-Condensed-S34</font>
-						<aligny>center</aligny>
+						<font>Font-Alaska-S34-BL</font>
+							<aligny>center</aligny>
 						<textcolor>black</textcolor>
 						<textoffsetx>11</textoffsetx>
 						<selectedcolor>black</selectedcolor>
@@ -1569,8 +1569,8 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-						<font>Font-Condensed-S34-B</font>
-						<aligny>center</aligny>
+						<font>Font-Alaska-S34-BL</font>
+							<aligny>center</aligny>
 						<textcolor>black</textcolor>
 						<selectedcolor>black</selectedcolor>
 						<align>left</align>
@@ -1583,8 +1583,8 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-						<font>Font-Condensed-S34-B</font>
-						<aligny>center</aligny>
+						<font>Font-Alaska-S34-L</font>
+							<aligny>center</aligny>
 						<textcolor>eewhite</textcolor>
 						<selectedcolor>eewhite</selectedcolor>
 						<align>left</align>
@@ -1597,8 +1597,8 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-						<font>Font-Condensed-S34-B</font>
-						<aligny>center</aligny>
+						<font>Font-Alaska-S34-L</font>
+							<aligny>center</aligny>
 						<textcolor>eewhite</textcolor>
 						<textoffsetx>11</textoffsetx>
 						<selectedcolor>eewhite</selectedcolor>
@@ -1661,7 +1661,7 @@
 					<height>86</height>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Condensed-S38-B</font>
+					<font>Font-Alaska-S38-BL</font>
 					<aligny>center</aligny>
 					<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 				</control>
@@ -1672,7 +1672,7 @@
 					<height>86</height>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>eewhite</textcolor>
-					<font>Font-Condensed-S38-B</font>
+					<font>Font-Alaska-S38-L</font>
 					<aligny>center</aligny>
 					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 				</control>
@@ -1683,7 +1683,7 @@
 					<height>86</height>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Condensed-S38</font>
+					<font>Font-Alaska-S38-BL</font>
 					<aligny>center</aligny>
 					<align>right</align>
 					<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
@@ -1695,7 +1695,7 @@
 					<height>86</height>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ]</label>
 					<textcolor>eewhite</textcolor>
-					<font>Font-Condensed-S38-B</font>
+					<font>Font-Alaska-S38-L</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
@@ -1846,7 +1846,7 @@
 					<height>86</height>
 					<label>$INFO[ListItem.Title]</label>
 					<textcolor>eewhite</textcolor>
-					<font>Font-Condensed-S38</font>
+					<font>Font-Alaska-S38-L</font>
 					<aligny>center</aligny>
 					<align>center</align>
 					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
@@ -1858,7 +1858,7 @@
 					<height>86</height>
 					<label>$INFO[ListItem.Title]</label>
 					<textcolor>eewhite</textcolor>
-					<font>Font-Condensed-S38</font>
+					<font>Font-Alaska-S38-L</font>
 					<aligny>center</aligny>
 					<align>center</align>
 					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>

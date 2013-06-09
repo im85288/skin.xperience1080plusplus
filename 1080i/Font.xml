@@ -440,6 +440,11 @@
             <size>31</size>
         </font>
         <font>
+            <name>Font-Alaska-S31-L</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>31</size>
+        </font>
+        <font>
             <name>Font-Alaska-S32-BL</name>
             <filename>alaska_black.ttf</filename>
             <size>32</size>
@@ -463,6 +468,11 @@
             <name>Font-Alaska-S36-BL</name>
             <filename>alaska_black.ttf</filename>
             <size>36</size>
+        </font>
+         <font>
+            <name>Font-Alaska-S38-L</name>
+            <filename>alaska_regular.ttf</filename>
+            <size>38</size>
         </font>
         <font>
             <name>Font-Alaska-S38-BL</name>
@@ -503,6 +513,11 @@
             <name>Font-Alaska-S64-BL</name>
             <filename>alaska_black.ttf</filename>
             <size>64</size>
+        </font>
+        <font>
+            <name>Font-Alaska-S92-BL</name>
+            <filename>alaska_black.ttf</filename>
+            <size>92</size>
         </font>
         <font>
             <name>Font-Alaska-S100</name>
