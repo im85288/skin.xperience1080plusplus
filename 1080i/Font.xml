@@ -605,6 +605,12 @@
 			<size>38</size>
 		</font>
 		<font>
+			<name>Font-Alaska-S38-LB</name>
+			<filename>alaska_regular.ttf</filename>
+			<size>38</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>Font-Alaska-S38-BL</name>
 			<filename>alaska_black.ttf</filename>
 			<size>38</size>

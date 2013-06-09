@@ -1661,7 +1661,7 @@
 					<height>86</height>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S38-BL</font>
+					<font>Font-Alaska-S38-LB</font>
 					<aligny>center</aligny>
 					<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 				</control>
@@ -1672,7 +1672,7 @@
 					<height>86</height>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>eewhite</textcolor>
-					<font>Font-Alaska-S38-L</font>
+					<font>Font-Alaska-S38-LB</font>
 					<aligny>center</aligny>
 					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 				</control>
@@ -1734,7 +1734,7 @@
 					<posy>97</posy>
 					<width>1227</width>
 					<height>190</height>
-					<font>Font-Condensed-S34-B</font>
+					<font>Font-Condensed-S34</font>
 					<align>justify</align>
 					<textcolor>eewhite</textcolor>
 					<pagecontrol>60</pagecontrol>
@@ -1748,7 +1748,7 @@
 					<posy>97</posy>
 					<width>1227</width>
 					<height>190</height>
-					<font>Font-Condensed-S34-B</font>
+					<font>Font-Condensed-S34</font>
 					<align>justify</align>
 					<textcolor>eewhite</textcolor>
 					<pagecontrol>60</pagecontrol>
