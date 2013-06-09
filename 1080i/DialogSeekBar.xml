@@ -161,13 +161,13 @@
 						</control>
 						<control type="label">
 							<visible>[Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)] + !VideoPlayer.Content(LiveTV)</visible>
-							<posx>70</posx>
+							<posx>40</posx>
 							<posy>0</posy>
 							<width>360</width>
 							<height>25</height>
 							<label>$INFO[Player.Time(hh:mm:ss)]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34-NC</font>
+							<font>Font-Alaska-S34</font>
 							<align>left</align>
 						</control>
 						<control type="label">
@@ -178,7 +178,7 @@
 							<height>25</height>
 							<label>$INFO[System.Time(hh:mm)]$INFO[Player.FinishTime(hh:mm), / ,]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34-NC</font>
+							<font>Font-Alaska-S34</font>
 							<align>left</align>
 						</control>
 						<control type="label">
@@ -189,18 +189,18 @@
 							<height>25</height>
 							<label>$INFO[Player.Duration(hh:mm:ss)]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34-NC</font>
+							<font>Font-Alaska-S34</font>
 							<align>left</align>
 						</control>
 						<control type="label">
 							<visible>[Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
-							<posx>70</posx>
+							<posx>40</posx>
 							<posy>0</posy>
 							<width>360</width>
 							<height>25</height>
 							<label>$INFO[Player.Time(hh:mm:ss)]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34-NC</font>
+							<font>Font-Alaska-S34</font>
 							<align>left</align>
 						</control>
 						<control type="label">
@@ -211,7 +211,7 @@
 							<height>25</height>
 							<label>$INFO[Player.Duration(hh:mm:ss)]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34-NC</font>
+							<font>Font-Alaska-S34</font>
 							<align>left</align>
 						</control>
 						<control type="group">
@@ -226,7 +226,7 @@
 							</control>
 							<control type="label">
 								<posx>340</posx>
-								<posy>-1035</posy>
+								<posy>-1020</posy>
 								<width>420</width>
 								<height>38</height>
 								<align>center</align>
