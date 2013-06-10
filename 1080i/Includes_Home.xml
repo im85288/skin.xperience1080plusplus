@@ -3,111 +3,223 @@
 	<include name="shutdown-favs">
 		<control type="group" id="80">
 			<description>Home Buttons</description>
-			<control type="button" id="21">
-				<description>Shutdown Button</description>
-				<posx>72</posx>
-				<posy>950</posy>
-				<width>100</width>
-				<height>100</height>
-				<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
-				<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
-				<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
-				<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
-				<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
-				<onup condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">601</onup>
-				<onup condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">701</onup>
-				<onup condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">801</onup>
-				<onup condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">901</onup>
-				<onup condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1001</onup>
-				<ondown condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">125</ondown>
-				<ondown condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
-				<ondown condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">225</ondown>
-				<ondown condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">325</ondown>
-				<ondown condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">425</ondown>
-				<ondown condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">625</ondown>
-				<ondown condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">725</ondown>
-				<ondown condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">825</ondown>
-				<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">925</ondown>
-				<ondown condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1025</ondown>
-				<onup condition="Skin.HasSetting(ModAlternateHomeScreen)">525</onup>
-				<ondown condition="Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
-				<onleft>22</onleft>
-				<onright>22</onright>
-				<texturefocus>buttons/shutdown_fo.png</texturefocus>
-				<texturenofocus>buttons/shutdown_nofo.png</texturenofocus>
-				<onclick>ActivateWindow(ShutdownMenu)</onclick>
-				<include>Animation_ShutdownButton</include>
-				<include>homebuttonsanim</include>
-				<visible allowhiddenfocus="true">true</visible>
-				<colordiffuse>mod-infotags-a</colordiffuse>
+			<control type="group">
+				<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<control type="button" id="21">
+					<description>Shutdown Button</description>
+					<posx>72</posx>
+					<posy>950</posy>
+					<width>100</width>
+					<height>100</height>
+					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
+					<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
+					<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
+					<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
+					<onup condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">601</onup>
+					<onup condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">701</onup>
+					<onup condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">801</onup>
+					<onup condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">901</onup>
+					<onup condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1001</onup>
+					<ondown condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">125</ondown>
+					<ondown condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
+					<ondown condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">225</ondown>
+					<ondown condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">325</ondown>
+					<ondown condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">425</ondown>
+					<ondown condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">625</ondown>
+					<ondown condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">725</ondown>
+					<ondown condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">825</ondown>
+					<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">925</ondown>
+					<ondown condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1025</ondown>
+					<onup condition="Skin.HasSetting(ModAlternateHomeScreen)">525</onup>
+					<ondown condition="Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
+					<onleft>22</onleft>
+					<onright>22</onright>
+					<texturefocus>buttons/shutdown_fo.png</texturefocus>
+					<texturenofocus>buttons/shutdown_nofo.png</texturenofocus>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<include>Animation_ShutdownButton</include>
+					<include>homebuttonsanim</include>
+					<visible allowhiddenfocus="true">true</visible>
+					<colordiffuse>mod-infotags-a</colordiffuse>
+				</control>
+				<control type="label">
+					<description>Shutdown Label</description>
+					<posx>157</posx>
+					<posy>950</posy>
+					<width>180</width>
+					<height>100</height>
+					<label>$LOCALIZE[41507]</label>
+					<font>Font-Alaska-S29-BL</font>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+					<include>Animation_ShutdownButton</include>
+					<include>homebuttonsanim2</include>
+				</control>
+				<control type="button" id="22">
+					<description>Favourites Button</description>
+					<posx>277</posx>
+					<posy>950</posy>
+					<width>100</width>
+					<height>100</height>
+					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
+					<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
+					<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
+					<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
+					<onup condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">601</onup>
+					<onup condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">701</onup>
+					<onup condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">801</onup>
+					<onup condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">901</onup>
+					<onup condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1001</onup>
+					<ondown condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">125</ondown>
+					<ondown condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
+					<ondown condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">225</ondown>
+					<ondown condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">325</ondown>
+					<ondown condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">425</ondown>
+					<ondown condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">625</ondown>
+					<ondown condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">725</ondown>
+					<ondown condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">825</ondown>
+					<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">925</ondown>
+					<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">1025</ondown>
+					<onup condition="Skin.HasSetting(ModAlternateHomeScreen)">525</onup>
+					<ondown condition="Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
+					<onleft>21</onleft>
+					<onright>21</onright>
+					<texturefocus>buttons/favourites_fo.png</texturefocus>
+					<texturenofocus>buttons/favourites_nofo.png</texturenofocus>
+					<onclick>CancelAlarm(HomeTileMove,true)</onclick>
+					<onclick>CancelAlarm(HomeTileMoveTwo,true)</onclick>
+					<onclick>CancelAlarm(HomeTileMoveThree,true)</onclick>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<include>Animation_FavButton</include>
+					<include>homebuttonsanim3</include>
+					<visible allowhiddenfocus="true">!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
+					<colordiffuse>mod-infotags-a</colordiffuse>
+				</control>
+				<control type="label">
+					<description>Favourites Label</description>
+					<posx>362</posx>
+					<posy>950</posy>
+					<width>180</width>
+					<height>100</height>
+					<label>$LOCALIZE[1036]</label>
+					<font>Font-Alaska-S29-BL</font>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+					<include>Animation_FavButton</include>
+					<include>homebuttonsanim4</include>
+					<visible>!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
+				</control>
 			</control>
-			<control type="label">
-				<description>Shutdown Label</description>
-				<posx>157</posx>
-				<posy>950</posy>
-				<width>180</width>
-				<height>100</height>
-				<label>$LOCALIZE[41507]</label>
-				<font>Font-Alaska-S29-BL</font>
-				<textcolor>mod-infotags</textcolor>
-				<shadowcolor>mod-shadow</shadowcolor>
-				<include>Animation_ShutdownButton</include>
-				<include>homebuttonsanim2</include>
-			</control>
-			<control type="button" id="22">
-				<description>Favourites Button</description>
-				<posx>277</posx>
-				<posy>950</posy>
-				<width>100</width>
-				<height>100</height>
-				<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
-				<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
-				<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
-				<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
-				<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
-				<onup condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">601</onup>
-				<onup condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">701</onup>
-				<onup condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">801</onup>
-				<onup condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">901</onup>
-				<onup condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1001</onup>
-				<ondown condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">125</ondown>
-				<ondown condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
-				<ondown condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">225</ondown>
-				<ondown condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">325</ondown>
-				<ondown condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">425</ondown>
-				<ondown condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">625</ondown>
-				<ondown condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">725</ondown>
-				<ondown condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">825</ondown>
-				<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">925</ondown>
-				<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">1025</ondown>
-				<onup condition="Skin.HasSetting(ModAlternateHomeScreen)">525</onup>
-				<ondown condition="Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
-				<onleft>21</onleft>
-				<onright>21</onright>
-				<texturefocus>buttons/favourites_fo.png</texturefocus>
-				<texturenofocus>buttons/favourites_nofo.png</texturenofocus>
-				<onclick>CancelAlarm(HomeTileMove,true)</onclick>
-				<onclick>CancelAlarm(HomeTileMoveTwo,true)</onclick>
-				<onclick>CancelAlarm(HomeTileMoveThree,true)</onclick>
-				<onclick>ActivateWindow(Favourites)</onclick>
-				<include>Animation_FavButton</include>
-				<include>homebuttonsanim3</include>
-				<visible allowhiddenfocus="true">!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
-				<colordiffuse>mod-infotags-a</colordiffuse>
-			</control>
-			<control type="label">
-				<description>Favourites Label</description>
-				<posx>362</posx>
-				<posy>950</posy>
-				<width>180</width>
-				<height>100</height>
-				<label>$LOCALIZE[1036]</label>
-				<font>Font-Alaska-S29-BL</font>
-				<textcolor>mod-infotags</textcolor>
-				<shadowcolor>mod-shadow</shadowcolor>
-				<include>Animation_FavButton</include>
-				<include>homebuttonsanim4</include>
-				<visible>!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
+			<control type="group">
+				<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<control type="button" id="21">
+					<description>Shutdown Button</description>
+					<posx>72</posx>
+					<posy>950</posy>
+					<width>100</width>
+					<height>100</height>
+					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
+					<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
+					<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
+					<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
+					<onup condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">601</onup>
+					<onup condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">701</onup>
+					<onup condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">801</onup>
+					<onup condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">901</onup>
+					<onup condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1001</onup>
+					<ondown condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">125</ondown>
+					<ondown condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
+					<ondown condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">225</ondown>
+					<ondown condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">325</ondown>
+					<ondown condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">425</ondown>
+					<ondown condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">625</ondown>
+					<ondown condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">725</ondown>
+					<ondown condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">825</ondown>
+					<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">925</ondown>
+					<ondown condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1025</ondown>
+					<onup condition="Skin.HasSetting(ModAlternateHomeScreen)">525</onup>
+					<ondown condition="Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
+					<onleft>22</onleft>
+					<onright>22</onright>
+					<texturefocus>buttons/shutdown_fo.png</texturefocus>
+					<texturenofocus>buttons/shutdown_nofo.png</texturenofocus>
+					<onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<include>Animation_ShutdownButton</include>
+					<include>homebuttonsanim</include>
+					<visible allowhiddenfocus="true">true</visible>
+					<colordiffuse>eewhite</colordiffuse>
+				</control>
+				<control type="label">
+					<description>Shutdown Label</description>
+					<posx>157</posx>
+					<posy>950</posy>
+					<width>180</width>
+					<height>100</height>
+					<label>$LOCALIZE[41507]</label>
+					<font>Font-Alaska-S29-BL</font>
+					<textcolor>eewhite</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+					<include>Animation_ShutdownButton</include>
+					<include>homebuttonsanim2</include>
+				</control>
+				<control type="button" id="22">
+					<description>Favourites Button</description>
+					<posx>277</posx>
+					<posy>950</posy>
+					<width>100</width>
+					<height>100</height>
+					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
+					<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
+					<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
+					<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
+					<onup condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">601</onup>
+					<onup condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">701</onup>
+					<onup condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">801</onup>
+					<onup condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">901</onup>
+					<onup condition="Container(20).HasFocus(10) + !Skin.HasSetting(ModAlternateHomeScreen)">1001</onup>
+					<ondown condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">125</ondown>
+					<ondown condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
+					<ondown condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">225</ondown>
+					<ondown condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">325</ondown>
+					<ondown condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">425</ondown>
+					<ondown condition="Container(20).HasFocus(6) + !Skin.HasSetting(ModAlternateHomeScreen)">625</ondown>
+					<ondown condition="Container(20).HasFocus(7) + !Skin.HasSetting(ModAlternateHomeScreen)">725</ondown>
+					<ondown condition="Container(20).HasFocus(8) + !Skin.HasSetting(ModAlternateHomeScreen)">825</ondown>
+					<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">925</ondown>
+					<ondown condition="Container(20).HasFocus(9) + !Skin.HasSetting(ModAlternateHomeScreen)">1025</ondown>
+					<onup condition="Skin.HasSetting(ModAlternateHomeScreen)">525</onup>
+					<ondown condition="Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
+					<onleft>21</onleft>
+					<onright>21</onright>
+					<texturefocus>buttons/favourites_fo.png</texturefocus>
+					<texturenofocus>buttons/favourites_nofo.png</texturenofocus>
+					<onclick>CancelAlarm(HomeTileMove,true)</onclick>
+					<onclick>CancelAlarm(HomeTileMoveTwo,true)</onclick>
+					<onclick>CancelAlarm(HomeTileMoveThree,true)</onclick>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<include>Animation_FavButton</include>
+					<include>homebuttonsanim3</include>
+					<visible allowhiddenfocus="true">!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
+					<colordiffuse>eewhite</colordiffuse>
+				</control>
+				<control type="label">
+					<description>Favourites Label</description>
+					<posx>362</posx>
+					<posy>950</posy>
+					<width>180</width>
+					<height>100</height>
+					<label>$LOCALIZE[1036]</label>
+					<font>Font-Alaska-S29-BL</font>
+					<textcolor>eewhite</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+					<include>Animation_FavButton</include>
+					<include>homebuttonsanim4</include>
+					<visible>!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
+				</control>
 			</control>
 		</control>
 	</include>
@@ -138,6 +250,24 @@
 		<height>60</height>
 		<font>Font-Alaska-S36</font>
 		<textcolor>mod-infotags</textcolor>
+		<scroll>false</scroll>
+		<align>left</align>
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="250" delay="150" tween="sine" easing="inout" />
+			<effect type="slide" start="0,55" end="0,0" time="500" tween="cubic" easing="inout" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" start="100" end="0" time="250" tween="sine" easing="inout" />
+			<effect type="slide" start="0,0" end="0,-55" time="500" tween="cubic" easing="inout" />
+		</animation>
+	</include>
+	<include name="HomeProfileInfoLabelExtraFanart">
+		<posx>110</posx>
+		<posy>46</posy>
+		<width>600</width>
+		<height>60</height>
+		<font>Font-Alaska-S36</font>
+		<textcolor>eewhite</textcolor>
 		<scroll>false</scroll>
 		<align>left</align>
 		<animation type="Visible">
@@ -193,7 +323,7 @@
 			<posy>24</posy>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
-				<visible>!Skin.HasSetting(HideHomeProfileInfo)</visible>
+				<visible>!Skin.HasSetting(HideHomeProfileInfo) + !Skin.HasSetting(MoreBackgroundOpacity)</visible>
 				<animation type="Conditional" condition="System.HasMediaDVD">
 					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
 					<effect type="zoom" start="100" end="50" center="125,80" tween="sine" easing="inout" time="300" />
@@ -229,6 +359,77 @@
 				</control>
 				<control type="label">
 					<include>HomeProfileInfoLabel</include>
+					<label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
+					<visible>Container(30).HasFocus(4)</visible>
+				</control>
+				<control type="wraplist" id="30">
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>2</height>
+					<width>2</width>
+					<orientation>horizontal</orientation>
+					<focusposition>0</focusposition>
+					<scrolltime>0</scrolltime>
+					<viewtype>list</viewtype>
+					<itemlayout width="2" height="2" />
+					<focusedlayout width="2" height="2" />
+					<content>
+						<item id="1">
+							<label>-</label>
+							<onclick>noop</onclick>
+						</item>
+						<item id="2">
+							<label>-</label>
+							<onclick>noop</onclick>
+						</item>
+						<item id="3">
+							<label>-</label>
+							<onclick>noop</onclick>
+						</item>
+						<item id="4">
+							<label>-</label>
+							<onclick>noop</onclick>
+						</item>
+					</content>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!Skin.HasSetting(HideHomeProfileInfo) + Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<animation type="Conditional" condition="System.HasMediaDVD">
+					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
+					<effect type="zoom" start="100" end="50" center="125,80" tween="sine" easing="inout" time="300" />
+				</animation>
+				<control type="image">
+					<posx>25</posx>
+					<posy>46</posy>
+					<width>60</width>
+					<height>60</height>
+					<texture>$INFO[System.ProfileThumb]</texture>
+				</control>
+				<control type="image">
+					<posx>13</posx>
+					<posy>34</posy>
+					<width>84</width>
+					<height>84</height>
+					<texture>windows/home/ava-overlay.png</texture>
+				</control>
+				<control type="label">
+					<include>HomeProfileInfoLabelExtraFanart</include>
+					<label>[B]$INFO[System.ProfileName][/B]</label>
+					<visible>Container(30).HasFocus(1)</visible>
+				</control>
+				<control type="label">
+					<include>HomeProfileInfoLabelExtraFanart</include>
+					<label>$INFO[Window.Property(Movies.Count),, $LOCALIZE[342]]</label>
+					<visible>Container(30).HasFocus(2)</visible>
+				</control>
+				<control type="label">
+					<include>HomeProfileInfoLabelExtraFanart</include>
+					<label>$INFO[Window.Property(TVShows.Count),, $LOCALIZE[20343]]</label>
+					<visible>Container(30).HasFocus(3)</visible>
+				</control>
+				<control type="label">
+					<include>HomeProfileInfoLabelExtraFanart</include>
 					<label>$INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
 					<visible>Container(30).HasFocus(4)</visible>
 				</control>
@@ -336,9 +537,19 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<include>visiblehidefadeinfo</include>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(225) + Container(20).HasFocus(3)]">Conditional</animation>
-					<colordiffuse condition="!Skin.HasSetting(MoreBackgroundOpacity)">mod-infotags</colordiffuse>
-					<colordiffuse condition="2Skin.HasSetting(MoreBackgroundOpacity)">eewhite</colordiffuse>
-				
+					<colordiffuse>mod-infotags</colordiffuse>
+					<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<include>visiblehidefadeinfo</include>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(225) + Container(20).HasFocus(3)]">Conditional</animation>
+					<colordiffuse>eewhite</colordiffuse>
+					<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
 				</control>
 			</control>
 			<control type="label">
@@ -365,6 +576,17 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(325) + Container(20).HasFocus(4)]">Conditional</animation>
 					<colordiffuse>mod-infotags</colordiffuse>
+					<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(325) + Container(20).HasFocus(4)]">Conditional</animation>
+					<colordiffuse>eewhite</colordiffuse>
+					<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
 				</control>
 			</control>
 			<control type="label">
@@ -409,6 +631,17 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(425) + Container(20).HasFocus(5)]">Conditional</animation>
 					<colordiffuse>mod-infotags</colordiffuse>
+					<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(425) + Container(20).HasFocus(5)]">Conditional</animation>
+					<colordiffuse>eewhite</colordiffuse>
+					<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
 				</control>
 			</control>
 			<control type="label">
@@ -447,6 +680,19 @@
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8) | !Control.HasFocus(825)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(8)">Conditional</animation>
 				<colordiffuse>mod-infotags</colordiffuse>
+				<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			</control>
+			<control type="image">
+				<description>Settings</description>
+				<posx>0</posx>
+				<posy>12</posy>
+				<width>38</width>
+				<height>38</height>
+				<texture>windows/home/settings.png</texture>
+				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8) | !Control.HasFocus(825)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(8)">Conditional</animation>
+				<colordiffuse>eewhite</colordiffuse>
+				<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
 			</control>
 		</control>
 	</include>
