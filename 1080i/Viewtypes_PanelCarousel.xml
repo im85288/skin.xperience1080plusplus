@@ -34,7 +34,7 @@
 					<colordiffuse>mod-infotags</colordiffuse>
 				</control>
 			</control>
-			<control type="wraplist" id="503">
+            <control type="wraplist" id="503">
 				<posx>0</posx>
 				<posy>180</posy>
 				<width>1920</width>
@@ -48,9 +48,8 @@
 				<onleft>503</onleft>
 				<onright>503</onright>
 				<preloaditems>2</preloaditems>
-				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-				<itemlayout width="1920" height="722">
-					<control type="group">
+                <itemlayout  width="1920" height="722">
+                	<control type="group">
 						<posx>286</posx>
 						<animation type="Conditional" condition="true">
 							<effect type="zoom" start="100" end="50" time="0" center="auto" />
@@ -109,7 +108,7 @@
 								</control>
 								<control type="textbox">
 									<posx>24</posx>
-									<posy>72</posy>
+									<posy>74</posy>
 									<width>790</width>
 									<height>140</height>
 									<label>$INFO[ListItem.Plot]</label>
@@ -128,7 +127,7 @@
 									<font>Font-Alaska-S25-NC</font>
 									<textcolor>mod-infotags</textcolor>
 									<align>justify</align>
-									<autoscroll delay="13000" time="3000" repeat="13000" />
+									<autoscroll delay="5000" time="3000" repeat="5000" />
 									<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 								</control>
 							</control>

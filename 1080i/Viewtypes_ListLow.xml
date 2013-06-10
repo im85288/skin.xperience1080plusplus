@@ -315,7 +315,7 @@
 							<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 							<align>justify</align>
 							<textcolor>cceeeeee</textcolor>
-							<autoscroll delay="13000" time="3000" repeat="13000" />
+							<autoscroll delay="8000" time="3000" repeat="8000" />
 							<font>Font-Alaska-S25-NC</font>
 							<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 						</control>

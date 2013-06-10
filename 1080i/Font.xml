@@ -442,6 +442,12 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>Font-Alaska-S30-NC-B</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>30</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>Font-Alaska-S30-L</name>
 			<filename>alaska_regular.ttf</filename>
 			<size>30</size>
@@ -585,6 +591,11 @@
 			<style>bold</style>
 		</font>
 		<font>
+			<name>Font-Alaska-S36-NC</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
 			<name>Font-Alaska-S36-L</name>
 			<filename>alaska_regular.ttf</filename>
 			<size>36</size>
@@ -616,6 +627,11 @@
 			<size>38</size>
 		</font>
 		<font>
+			<name>Font-Alaska-S38-NC</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>38</size>
+		</font>
+		<font>
 			<name>Font-Alaska-S40</name>
 			<filename>alaska_cond.ttf</filename>
 			<size>40</size>
@@ -629,6 +645,16 @@
 			<name>Font-Alaska-S40-BL</name>
 			<filename>alaska_black.ttf</filename>
 			<size>40</size>
+		</font>
+		<font>
+			<name>Font-Alaska-S41-NC</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>41</size>
+		</font>
+			<font>
+			<name>Font-Alaska-S42-NC</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>42</size>
 		</font>
 		<font>
 			<name>Font-Alaska-S45</name>
@@ -668,6 +694,22 @@
 			<size>49</size>
 		</font>
 		<font>
+			<name>Font-Alaska-S49-BL</name>
+			<filename>alaska_black.ttf</filename>
+			<size>49</size>
+		</font>
+		<font>
+			<name>Font-Alaska-S49-L</name>
+			<filename>alaska_regular.ttf</filename>
+			<size>49</size>
+		</font>
+		<font>
+			<name>Font-Alaska-S50-B</name>
+			<filename>alaska_cond.ttf</filename>
+			<size>49</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>Font-Alaska-S50-BL</name>
 			<filename>alaska_black.ttf</filename>
 			<size>50</size>
@@ -687,6 +729,12 @@
 			<name>Font-Alaska-S52-BL</name>
 			<filename>alaska_black.ttf</filename>
 			<size>52</size>
+		</font>
+		<font>
+			<name>Font-Alaska-S52-LB</name>
+			<filename>alaska_regular.ttf</filename>
+			<size>52</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>Font-Alaska-S64-BL</name>

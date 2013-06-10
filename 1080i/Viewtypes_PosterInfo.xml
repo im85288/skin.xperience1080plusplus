@@ -111,7 +111,7 @@
 								<font>Font-Alaska-S25-NC</font>
 								<textcolor>mod-infotags</textcolor>
 								<align>justify</align>
-								<autoscroll delay="13000" time="3000" repeat="13000" />
+								<autoscroll delay="5000" time="3000" repeat="5000" />
 								<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 							</control>
 						</control>

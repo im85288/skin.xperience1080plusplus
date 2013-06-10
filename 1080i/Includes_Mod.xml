@@ -268,6 +268,11 @@
 		<value>Grey Tiles</value>
     </variable>
     
+    <variable name="ExtendPlotColor">
+        <value condition="!IsEmpty(Window.Property(ExtendPlot))">mod-infotags</value>
+		<value condition="IsEmpty(Window.Property(ExtendPlot))">bbwhite</value>
+    </variable>
+    
     <include name="DialogHeaderMod">
     	<font>Font-Alaska-S34-L</font>
     	<textcolor>mod-infotags-d</textcolor>
@@ -343,6 +348,17 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagHDSD]</texture>
 						<colordiffuse>mod-infotags-alt</colordiffuse>
+						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="image">
+						<posx>13</posx>
+						<posy>28</posy>
+						<width>82</width>
+						<height>38</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>flags/other/set-info.png</texture>
+						<colordiffuse>mod-infotags-alt</colordiffuse>
+						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
 					<control type="image">
 						<posx>100</posx>
@@ -361,6 +377,7 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$VAR[AeonFlagVideoCodec]</texture>
 						<colordiffuse>mod-infotags</colordiffuse>
+						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
 					<control type="image">
 						<posx>228</posx>
@@ -370,7 +387,21 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$VAR[AeonFlagAudioCodec]</texture>
 						<colordiffuse>mod-infotags</colordiffuse>
+						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
+					<control type="label">
+                        <posx>108</posx>
+						<posy>22</posy>
+						<width>220</width>
+						<height>52</height>
+                        <label>$LOCALIZE[20457]</label>
+                        <font>Font-Alaska-S25-BL</font>
+                        <textcolor>mod-infotags</textcolor>
+                        <scroll>false</scroll>
+                        <align>center</align>
+                        <wrapmultiline>false</wrapmultiline>
+                        <visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+                    </control>
                 </control>
                 <!-- RATING AND STUDIO -->
                 <control type="group">
