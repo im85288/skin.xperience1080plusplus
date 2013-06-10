@@ -652,7 +652,7 @@
 								<height>100</height>
 								<label>[UPPERCASE]$INFO[VideoPlayer.ChannelName, ,][/UPPERCASE]</label>
 								<textcolor>eewhite</textcolor>
-								<font>Font-Alaska-S40-L</font>
+								<font>Font-Alaska-S38-L</font>
 								<align>center</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>

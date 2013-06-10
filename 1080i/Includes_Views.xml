@@ -4,6 +4,7 @@
 	<include file="ViewtypesAddons.xml" />
 	<include file="ViewtypesPVR.xml" />
 	<include file="Viewtypes_List.xml" />
+	<include file="Viewtypes_InfoList.xml" />
 	<include file="Viewtypes_ListLow.xml" />
 	<include file="Viewtypes_ListInfo.xml" />
 	<include file="Viewtypes_LandscapeInfo.xml" />
@@ -19,6 +20,7 @@
 	<include file="Viewtypes_PosterClassic.xml" />
 	<include file="Viewtypes_PosterInfo.xml" />
 	<include file="Viewtypes_MusicList.xml" />
+	<include file="Viewtypes_MusicInfoList.xml" />
 	<include file="Viewtypes_MusicPanel.xml" />
 	<include file="Viewtypes_MusicPanelBig.xml" />
 	<include file="Viewtypes_MusicPanelFanart.xml" />
@@ -42,6 +44,7 @@
 		<include>Viewtype-LowList</include>             <!--id(511) -->
 		<include>Viewtype-LandscapeCarousel</include>   <!--id(513) -->
 		<include>Viewtype-Banner</include>              <!--id(60) -->
+		<include>Viewtype-InfoList</include>            <!--id(552) -->
 		<include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
 	</include>
 	<include name="MusicViews">
@@ -53,6 +56,7 @@
 		<include>Viewtype-MusicPanelBig</include>		<!-- (55) -->
 		<include>Viewtype-ClassicCoverView</include>	<!-- (56) -->
 		<include>Viewtype-CoverList</include>			<!-- (60) -->
+		<include>Viewtype-MusicInfoList</include>       <!-- (552) -->
 	</include>
 	<include name="MusicFileViews">
 		<include>Viewtype-MusicList</include>
@@ -576,5 +580,14 @@
 	<variable name="MovieRuntime">
 		<value condition="SubString(ListItem.Path,videodb://1/7/,left)">$INFO[Window(home).Property(Set.Movies.Runtime)]</value>
 		<value condition="!SubString(ListItem.Path,videodb://1/7/,left)">$INFO[ListItem.Duration]</value>
+	</variable>
+	<variable name="GlobalCaseVar">
+		<value condition="SubString(ListItem.Filename,.3D.)">3d.png</value>
+		<value>$INFO[ListItem.VideoResolution]p.png</value>
+	</variable>
+	<variable name="cdArtVar">
+		<value condition="!IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
+		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">cdart/bd.png</value>
+		<value condition="!IsEmpty(ListItem.VideoResolution)">cdart/default.png</value>
 	</variable>
 </includes>

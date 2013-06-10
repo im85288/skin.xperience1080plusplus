@@ -644,7 +644,8 @@
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),Yellow Tiles)">Skin.SetString(moviecolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),Black Tiles)">Skin.SetString(moviecolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),White Tiles)">Skin.SetString(moviecolor.name,Black Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,White Tiles)</onclick><label>$LOCALIZE[342]</label>
+						<onclick condition="stringcompare(Skin.String(moviecolor.name),Grey Tiles)">Skin.SetString(moviecolor.name,White Tiles)</onclick>
+						<label>$LOCALIZE[342]</label>
 						<label2>$INFO[Skin.String(moviecolor.name)]</label2>
 					</control>
 					<control type="button" id="10006">
@@ -668,7 +669,8 @@
 						<onclick condition="stringcompare(Skin.String(homecolor.name),Yellow Tiles)">Skin.SetString(homecolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(homecolor.name),Black Tiles)">Skin.SetString(homecolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(homecolor.name),White Tiles)">Skin.SetString(homecolor.name,Black Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,White Tiles)</onclick><label>$LOCALIZE[10000]</label>
+						<onclick condition="stringcompare(Skin.String(homecolor.name),Grey Tiles)">Skin.SetString(homecolor.name,White Tiles)</onclick>
+						<label>$LOCALIZE[10000]</label>
 						<label2>$INFO[Skin.String(homecolor.name)]</label2>
 					</control>
 					<control type="button" id="10007">
@@ -692,7 +694,8 @@
 						<onclick condition="stringcompare(Skin.String(appcolor.name),Yellow Tiles)">Skin.SetString(appcolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(appcolor.name),Black Tiles)">Skin.SetString(appcolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(appcolor.name),White Tiles)">Skin.SetString(appcolor.name,Black Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,White Tiles)</onclick><label>$LOCALIZE[10001]</label>
+						<onclick condition="stringcompare(Skin.String(appcolor.name),Grey Tiles)">Skin.SetString(appcolor.name,White Tiles)</onclick>
+						<label>$LOCALIZE[10001]</label>
 						<label2>$INFO[Skin.String(appcolor.name)]</label2>
 					</control>
 					<control type="button" id="10008">
@@ -716,7 +719,8 @@
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Yellow Tiles)">Skin.SetString(pvrcolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Black Tiles)">Skin.SetString(pvrcolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),White Tiles)">Skin.SetString(pvrcolor.name,Black Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,White Tiles)</onclick><label>$LOCALIZE[41220]</label>
+						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Grey Tiles)">Skin.SetString(pvrcolor.name,White Tiles)</onclick>
+						<label>$LOCALIZE[41220]</label>
 						<label2>$INFO[Skin.String(pvrcolor.name)]</label2>
 					</control>
 					<control type="button" id="10018">
@@ -765,7 +769,8 @@
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Yellow Tiles)">Skin.SetString(weathercolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Black Tiles)">Skin.SetString(weathercolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),White Tiles)">Skin.SetString(weathercolor.name,Black Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick><label>$LOCALIZE[24027]</label>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick>
+						<label>$LOCALIZE[24027]</label>
 						<label2>$INFO[Skin.String(weathercolor.name)]</label2>
 					</control>
 					<control type="button" id="10012">
@@ -844,6 +849,21 @@
 						<selected>Skin.HasSetting(ShowClearArt)</selected>
 						<onclick>Skin.ToggleSetting(ShowClearArt)</onclick>
 						<label>Show ClearArt/ClearLogo</label>
+					</control>
+					<control type="radiobutton" id="3012">
+						<width>1210</width>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<selected>Skin.HasSetting(ShowBoxes)</selected>
+						<onclick>Skin.ToggleSetting(ShowBoxes)</onclick>
+						<label>Show Boxes</label>
+					</control>
+					<control type="radiobutton" id="3013">
+						<width>1210</width>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<selected>Skin.HasSetting(ShowAlternateBoxes)</selected>
+						<onclick>Skin.ToggleSetting(ShowAlternateBoxes)</onclick>
+						<visible>Skin.HasSetting(ShowBoxes)</visible>
+						<label>Show Alternate Boxes</label>
 					</control>
 				</control>
 				<!-- OSD Settings -->
