@@ -132,7 +132,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
+				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
 			</control>
 			<control type="image">
 				<posx>1360</posx>
@@ -143,7 +143,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
+				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -399,7 +399,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) ] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
+				<visible>[[IsEmpty(Player.Art(tvhsow.clearart)) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt) ] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
 			</control>
 			<control type="image">
 				<posx>1360</posx>
@@ -410,7 +410,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
+				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
 			</control>
 			<control type="image">
 				<posx>1405</posx>
