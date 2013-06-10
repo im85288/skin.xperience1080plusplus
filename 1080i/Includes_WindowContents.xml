@@ -14,7 +14,9 @@
 	<!-- ================================================== -->
 	<variable name="FullscreenOverlay">
 		<value condition="Skin.HasSetting(MoreBackgroundOpacity)">windows/common/fanartoverlay.png</value>
-		<value condition="!Skin.HasSetting(MoreBackgroundOpacity)">windows/common/white.png</value>
+		<value condition="Skin.HasSetting(BackgroundOpacity)">windows/common/overlay2.png</value>
+		<value condition="Skin.HasSetting(LessBackgroundOpacity)">windows/common/overlay.png</value>
+		<value condition="!Skin.HasSetting(MoreBackgroundOpacity) | !Skin.HasSetting(BackgroundOpacity) | !Skin.HasSetting(LessBackgroundOpacity)">windows/common/white.png</value>
 	</variable>
 	<include name="CommonOverlay">
 		<control type="videowindow">

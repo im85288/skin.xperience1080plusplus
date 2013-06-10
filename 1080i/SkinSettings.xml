@@ -355,13 +355,37 @@
 						<onup>1013</onup>
 						<ondown>10032</ondown>
 					</control>
+					<control type="radiobutton" id="10034">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(BackgroundOpacity)</selected>
+						<onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
+						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
+						<onclick>Skin.Reset(LessBackgroundOpacity)</onclick>
+						<label>Show more fanart</label>
+						<onup>10033</onup>
+						<ondown>10032</ondown>
+					</control>
 					<control type="radiobutton" id="10032">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>
 						<selected>Skin.HasSetting(MoreBackgroundOpacity)</selected>
 						<onclick>Skin.ToggleSetting(MoreBackgroundOpacity)</onclick>
-						<label>Show more fanart</label>
-						<onup>10033</onup>
+						<onclick>Skin.Reset(LessBackgroundOpacity)</onclick>
+						<label>Show even more fanart</label>
+						<visible>Skin.HasSetting(BackgroundOpacity)</visible>
+						<onup>10032</onup>
+						<ondown>10040</ondown>
+					</control>
+					<control type="radiobutton" id="10040">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(LessBackgroundOpacity)</selected>
+						<onclick>Skin.ToggleSetting(LessBackgroundOpacity)</onclick>
+						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
+						<onclick>Skin.Reset(BackgroundOpacity)</onclick>
+						<label>Show less fanart</label>
+						<onup>10032</onup>
 						<ondown>1001</ondown>
 					</control>
 				</control>
