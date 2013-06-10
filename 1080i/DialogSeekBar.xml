@@ -115,6 +115,21 @@
 							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
 							<overlaytexture>-</overlaytexture>
 						</control>
+						<control type="progress">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1337</width>
+							<height>25</height>
+							<info>Player.ProgressCache</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<colordiffuse>black</colordiffuse>
+							<overlaytexture>-</overlaytexture>
+							<visible>!VideoPlayer.Content(episodes) + !VideoPlayer.Content(movies) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(musicvideos)</visible>
+						</control>
 						<control type="progress" id="23">
 							<posx>0</posx>
 							<posy>0</posy>
