@@ -362,7 +362,7 @@
 						<onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(LessBackgroundOpacity)</onclick>
-						<label>Show more fanart</label>
+						<label>Show more background</label>
 						<onup>10033</onup>
 						<ondown>10032</ondown>
 					</control>
@@ -372,7 +372,7 @@
 						<selected>Skin.HasSetting(MoreBackgroundOpacity)</selected>
 						<onclick>Skin.ToggleSetting(MoreBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(LessBackgroundOpacity)</onclick>
-						<label>Show even more fanart</label>
+						<label>Show even more background</label>
 						<visible>Skin.HasSetting(BackgroundOpacity)</visible>
 						<onup>10032</onup>
 						<ondown>10040</ondown>
@@ -384,7 +384,7 @@
 						<onclick>Skin.ToggleSetting(LessBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(BackgroundOpacity)</onclick>
-						<label>Show less fanart</label>
+						<label>Show less background</label>
 						<onup>10032</onup>
 						<ondown>1001</ondown>
 					</control>
