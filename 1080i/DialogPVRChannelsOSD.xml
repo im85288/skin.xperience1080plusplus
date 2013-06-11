@@ -94,7 +94,7 @@
 							<posy>0</posy>
 							<width>740</width>
 							<height>96</height>
-							<texture border="0,0,0,0">views/other/tvblue-focus.png</texture>
+							<texture border="5">views/other/focus-mod.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
@@ -144,7 +144,7 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Alaska-S32</font>
+							<font>Font-Alaska-S32-NC</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
@@ -342,7 +342,7 @@
 							<posy>0</posy>
 							<width>740</width>
 							<height>96</height>
-							<texture border="0,0,0,0">views/other/tvblue-focus.png</texture>
+							<texture border="4">views/other/focus-mod.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ListItem.IsPlaying</visible>
 						</control>

@@ -47,7 +47,7 @@
 					<height>38</height>
 					<align>left</align>
 					<label>$INFO[System.Time]</label>
-					<font>Font-Alaska-S36-BL</font>					
+					<font>Font-Alaska-S36-BL</font>
 					<textcolor>black</textcolor>
 					66000000
 				</control>
@@ -60,7 +60,7 @@
 					<align>center</align>
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[19222]$INFO[VideoPlayer.ChannelName, • ,]</label>
-					<font>Font-Alaska-S34-BL</font>					
+					<font>Font-Alaska-S34-BL</font>
 					<textcolor>black</textcolor>
 					66000000
 				</control>
@@ -95,7 +95,7 @@
 							<posy>0</posy>
 							<width>564</width>
 							<height>95</height>
-							<texture border="150,1,150,1">views/other/tvblue-focus.png</texture>
+							<texture border="5">views/other/focus-mod.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 						</control>
@@ -105,7 +105,7 @@
 							<posy>0</posy>
 							<width>560</width>
 							<height>45</height>
-							<font>Font-Alaska-S34-BL</font>					
+							<font>Font-Alaska-S34-L</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -118,10 +118,10 @@
 							<posy>50</posy>
 							<width>560</width>
 							<height>45</height>
-							<font>Font-Alaska-S31</font>					
+							<font>Font-Alaska-S31</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
-							<textcolor>darkgrey2</textcolor>
+							<textcolor>black</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="group">
@@ -173,7 +173,7 @@
 							<posy>0</posy>
 							<width>564</width>
 							<height>95</height>
-							<texture border="150,1,150,1">views/other/tvblue-focus.png</texture>
+							<texture border="4">views/other/focus-mod.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 						</control>
