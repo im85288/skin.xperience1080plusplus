@@ -656,7 +656,7 @@
 			<filename>alaska_nocaps.ttf</filename>
 			<size>41</size>
 		</font>
-			<font>
+		<font>
 			<name>Font-Alaska-S42-NC</name>
 			<filename>alaska_nocaps.ttf</filename>
 			<size>42</size>
@@ -709,6 +709,11 @@
 			<size>49</size>
 		</font>
 		<font>
+			<name>Font-Alaska-S49-NC</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>49</size>
+		</font>
+		<font>
 			<name>Font-Alaska-S50-B</name>
 			<filename>alaska_cond.ttf</filename>
 			<size>49</size>
@@ -727,6 +732,17 @@
 		<font>
 			<name>Font-Alaska-S50-LB</name>
 			<filename>alaska_regular.ttf</filename>
+			<size>50</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>Font-Alaska-S50-NC</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>Font-Alaska-S50-NC-B</name>
+			<filename>alaska_nocaps.ttf</filename>
 			<size>50</size>
 			<style>bold</style>
 		</font>
