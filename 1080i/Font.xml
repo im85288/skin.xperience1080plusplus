@@ -447,6 +447,11 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>Font-Alaska-S30-NC</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
 			<name>Font-Alaska-S30-NC-B</name>
 			<filename>alaska_nocaps.ttf</filename>
 			<size>30</size>
