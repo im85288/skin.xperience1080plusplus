@@ -395,7 +395,7 @@
 						<visible>!IsEmpty(ListItem.Rating) + Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="label">
-						<posx>550</posx>
+						<posx>553</posx>
 						<posy>587</posy>
 						<width>590</width>
 						<height>58</height>
@@ -470,7 +470,7 @@
 						<visible>!IsEmpty(ListItem.Rating) + !Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="label">
-						<posx>540</posx>
+						<posx>543</posx>
 						<posy>593</posy>
 						<width>590</width>
 						<height>58</height>
