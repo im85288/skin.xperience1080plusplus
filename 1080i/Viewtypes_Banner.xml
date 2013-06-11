@@ -129,7 +129,18 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
-							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) | [!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] | [Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))]</visible>
+							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) | [!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] | [Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>223</posx>
+							<posy>31</posy>
+							<width>705</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Font-Alaska-S32-L</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>center</align>
+							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) | [!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] | [Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
 							<posx>223</posx>
@@ -140,7 +151,18 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
-							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + ![!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] + ![Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))]</visible>
+							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + ![!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] + ![Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>223</posx>
+							<posy>13</posy>
+							<width>705</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Font-Alaska-S32-L</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>center</align>
+							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + ![!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] + ![Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
 							<posx>223</posx>
@@ -151,6 +173,18 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>223</posx>
+							<posy>51</posy>
+							<width>705</width>
+							<label>$VAR[BannerListInfoGenreTotalSeasons]</label>
+							<font>Font-Condensed-S28</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>center</align>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -167,6 +201,19 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>right</align>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>-40</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>96</height>
+							<label>$INFO[ListItem.Episode]</label>
+							<font>Font-Condensed-S80-B</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>right</align>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="image">
 							<posx>-19</posx>
@@ -185,7 +232,19 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png)</visible>
+							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<animation effect="slide" start="0" end="-40" condition="SubString(ListItem.Overlay,UnWatched)" time="0">Conditional</animation>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>33</posy>
+							<width>370</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Font-Alaska-S32-BL</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>left</align>
+							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 							<animation effect="slide" start="0" end="-40" condition="SubString(ListItem.Overlay,UnWatched)" time="0">Conditional</animation>
 						</control>
 						<control type="label">
@@ -197,7 +256,18 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png)</visible>
+							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>40</posx>
+							<posy>13</posy>
+							<width>480</width>
+							<label>$INFO[ListItem.Title]</label>
+							<font>Font-Alaska-S32-BL</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>left</align>
+							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -208,6 +278,18 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>51</posy>
+							<width>370</width>
+							<label>$INFO[ListItem.date,$LOCALIZE[41805]: ,]</label>
+							<font>Font-Condensed-S28</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>left</align>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -224,7 +306,19 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>right</align>
-							<visible>Container.Content(movies)</visible>
+							<visible>Container.Content(movies) + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>-40</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>96</height>
+							<label>$INFO[ListItem.Year]</label>
+							<font>Font-Condensed-S80-B</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>right</align>
+							<visible>Container.Content(movies) + Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="image">
 							<posx>-19</posx>
@@ -243,6 +337,19 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<animation effect="slide" start="0" end="-40" condition="SubString(ListItem.Overlay,UnWatched)" time="0">Conditional</animation>
+						</control>
+						<control type="label">
+							<posx>40</posx>
+							<posy>13</posy>
+							<width>480</width>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Font-Alaska-S32-BL</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>left</align>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 							<animation effect="slide" start="0" end="-40" condition="SubString(ListItem.Overlay,UnWatched)" time="0">Conditional</animation>
 						</control>
 						<control type="label">
@@ -254,6 +361,18 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>51</posy>
+							<width>470</width>
+							<label>$INFO[ListItem.Genre]</label>
+							<font>Font-Condensed-S28</font>
+							<textcolor>eewhite</textcolor>
+							<scroll>false</scroll>
+							<align>left</align>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 					</control>
 				</itemlayout>
