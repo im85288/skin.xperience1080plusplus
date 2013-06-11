@@ -5255,6 +5255,21 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>[UPPERCASE][B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)][/UPPERCASE]</label>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>574</posy>
+							<width>477</width>
+							<height>25</height>
+							<font>Font-Condensed-S20</font>
+							<shadowcolor>mod-shadow</shadowcolor>
+							<textcolor>eewhite</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>5</textoffsetx>
+							<label>[UPPERCASE][B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)][/UPPERCASE]</label>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 						</control>
 						<control type="group" id="7023">
 							<visible>!Weather.IsFetched</visible>
