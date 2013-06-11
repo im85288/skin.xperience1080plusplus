@@ -40,6 +40,19 @@
 					<font>Font-Alaska-S25-BL</font>
 					<label>$LOCALIZE[42130]</label>
 					<textcolor>mod-infotags</textcolor>
+					<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+				</control>
+				<control type="label">
+					<description>Category</description>
+					<posx>483</posx>
+					<posy>235</posy>
+					<height>40</height>
+					<width>338</width>
+					<align>right</align>
+					<font>Font-Alaska-S25-L</font>
+					<label>$LOCALIZE[42130]</label>
+					<textcolor>eewhite</textcolor>
+					<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) |Skin.HasSetting(BackgroundOpacity)</visible>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -171,6 +184,19 @@
 					<font>Font-Alaska-S25-BL</font>
 					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
 					<textcolor>mod-infotags</textcolor>
+					<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+				</control>
+				<control type="label">
+					<description>Category</description>
+					<posx>390</posx>
+					<posy>235</posy>
+					<height>40</height>
+					<width>338</width>
+					<align>left</align>
+					<font>Font-Alaska-S25-L</font>
+					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
+					<textcolor>eewhite</textcolor>
+					<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 				</control>
 				<!-- Panel -->
 				<control type="image">
