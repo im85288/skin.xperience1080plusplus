@@ -384,7 +384,7 @@
 						<onclick>Skin.ToggleSetting(LessBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(BackgroundOpacity)</onclick>
-						<label>Show less background</label>
+						<label>Show darker background</label>
 						<onup>10032</onup>
 						<ondown>1001</ondown>
 					</control>
