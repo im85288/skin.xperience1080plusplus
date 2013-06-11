@@ -31,7 +31,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>windows/common/showcase_floor3.png</texture>
 			<fadetime>900</fadetime>
-			<visible>!Control.IsVisible(505) + !Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>!Control.IsVisible(505) + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 			<colordiffuse>mod-black</colordiffuse>
 		</control>
 		<control type="image">
