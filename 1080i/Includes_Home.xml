@@ -680,7 +680,7 @@
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8) | !Control.HasFocus(825)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(8)">Conditional</animation>
 				<colordiffuse>mod-infotags</colordiffuse>
-				<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)  + !Skin.HasSetting(BackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 			</control>
 			<control type="image">
 				<description>Settings</description>
@@ -1183,6 +1183,21 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>[UPPERCASE]$VAR[SpotlightLabelVAR][/UPPERCASE]</label>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>576</posy>
+							<width>572</width>
+							<height>25</height>
+							<font>Font-Condensed-S20-B</font>
+							<shadowcolor>mod-shadow</shadowcolor>
+							<textcolor>eewhite</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>5</textoffsetx>
+							<label>[UPPERCASE]$VAR[SpotlightLabelVAR][/UPPERCASE]</label>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(5022)</visible>
@@ -1206,6 +1221,19 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
+								<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+							</control>
+							<control type="scrollbar" id="5024">
+								<description>Scrollbar</description>
+								<posx>471</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<orientation>horizontal</orientation>
+								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
+								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
+								<showonepage>false</showonepage>
+								<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 							</control>
 						</control>
 						<control type="image">
@@ -1376,6 +1404,21 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>[UPPERCASE]$VAR[OngoingTVShowsLabelVAR][/UPPERCASE]</label>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>576</posy>
+							<width>382</width>
+							<height>25</height>
+							<font>Font-Condensed-S20-B</font>
+							<shadowcolor>mod-shadow</shadowcolor>
+							<textcolor>eewhite</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>5</textoffsetx>
+							<label>[UPPERCASE]$VAR[OngoingTVShowsLabelVAR][/UPPERCASE]</label>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(5032)</visible>
@@ -1399,6 +1442,19 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
+								<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+							</control>
+							<control type="scrollbar" id="5034">
+								<description>Scrollbar</description>
+								<posx>281</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<orientation>horizontal</orientation>
+								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
+								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
+								<showonepage>false</showonepage>
+								<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 							</control>
 						</control>
 						<control type="image">
@@ -1839,6 +1895,21 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>[UPPERCASE]$VAR[NewMoviesLabelVAR][/UPPERCASE]</label>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>576</posy>
+							<width>382</width>
+							<height>25</height>
+							<font>Font-Condensed-S20-B</font>
+							<shadowcolor>mod-shadow</shadowcolor>
+							<textcolor>eewhite</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>5</textoffsetx>
+							<label>[UPPERCASE]$VAR[NewMoviesLabelVAR][/UPPERCASE]</label>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(2022)</visible>
@@ -1862,6 +1933,19 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
+								<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+							</control>
+							<control type="scrollbar" id="2024">
+								<description>Scrollbar</description>
+								<posx>281</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<orientation>horizontal</orientation>
+								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
+								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
+								<showonepage>false</showonepage>
+								<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 							</control>
 						</control>
 						<control type="image">
@@ -2581,6 +2665,21 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>[UPPERCASE]$VAR[NewShowsLabelVAR][/UPPERCASE]</label>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>576</posy>
+							<width>671</width>
+							<height>25</height>
+							<font>Font-Condensed-S20-B</font>
+							<shadowcolor>mod-shadow</shadowcolor>
+							<textcolor>eewhite</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>5</textoffsetx>
+							<label>[UPPERCASE]$VAR[NewShowsLabelVAR][/UPPERCASE]</label>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(3022)</visible>
@@ -2604,6 +2703,19 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
+								<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+							</control>
+							<control type="scrollbar" id="3024">
+								<description>Scrollbar</description>
+								<posx>570</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<orientation>horizontal</orientation>
+								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
+								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
+								<showonepage>false</showonepage>
+								<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 							</control>
 						</control>
 						<control type="image">
@@ -3901,6 +4013,21 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>[UPPERCASE]$VAR[FeaturedAlbumsLabelVAR][/UPPERCASE]</label>
+							<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>576</posy>
+							<width>477</width>
+							<height>25</height>
+							<font>Font-Condensed-S20-B</font>
+							<shadowcolor>mod-shadow</shadowcolor>
+							<textcolor>eewhite</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>5</textoffsetx>
+							<label>[UPPERCASE]$VAR[FeaturedAlbumsLabelVAR][/UPPERCASE]</label>
+							<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(4022)</visible>
@@ -3924,6 +4051,19 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
+								<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+							</control>
+							<control type="scrollbar" id="4024">
+								<description>Scrollbar</description>
+								<posx>471</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<orientation>horizontal</orientation>
+								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
+								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
+								<showonepage>false</showonepage>
+								<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 							</control>
 						</control>
 					</control>
