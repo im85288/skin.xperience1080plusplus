@@ -141,7 +141,7 @@
 	</include>
 	<include name="ViewHeaderItemPageInfo">
 		<control type="group">
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 			<control type="grouplist">
 				<posx>110</posx>
 				<posy>32</posy>
@@ -180,7 +180,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 			<control type="grouplist">
 				<posx>110</posx>
 				<posy>32</posy>
@@ -221,7 +221,7 @@
 	</include>
 	<include name="ViewHeaderSortLetter">
 		<control type="group">
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 			<posx>17</posx>
 			<posy>32</posy>
 			<visible>Container.Scrolling</visible>
@@ -254,7 +254,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 			<posx>17</posx>
 			<posy>32</posy>
 			<visible>Container.Scrolling</visible>
@@ -306,7 +306,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -356,7 +356,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -408,7 +408,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(musicinformation) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(musicinformation) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="image">
 				<include>ViewHeaderIconVars</include>
@@ -458,7 +458,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(musicinformation) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(musicinformation) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="image">
 				<include>ViewHeaderIconVars</include>
@@ -510,7 +510,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -550,7 +550,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -592,7 +592,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -632,7 +632,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -674,7 +674,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -714,7 +714,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -756,7 +756,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -824,7 +824,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -894,7 +894,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(musicinformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(musicinformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -921,7 +921,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(musicinformation) + !Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(musicinformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -950,7 +950,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !!Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !!Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -1002,7 +1002,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !!Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !!Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -1056,7 +1056,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -1180,7 +1180,7 @@
 		<control type="group">
 			<posx>75</posx>
 			<posy>26</posy>
-			<visible>Skin.HasSetting(MoreBackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -1304,7 +1304,7 @@
 	</include>
 	<include name="WeatherHeader">
 		<control type="group">
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(favourites)</visible>
@@ -1392,7 +1392,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(favourites)</visible>

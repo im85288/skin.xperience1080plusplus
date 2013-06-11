@@ -8,7 +8,7 @@
 				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
 			</animation>
 			<control type="group">
-				<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 				<animation effect="slide" end="-65" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="PVR.IsRecording | PVR.HasTimer">Conditional</animation>
 				<control type="image">
@@ -38,7 +38,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 				<animation effect="slide" end="-65" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="PVR.IsRecording | PVR.HasTimer">Conditional</animation>
 				<control type="image">
@@ -80,7 +80,7 @@
 				</animation>
 				<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
 				<control type="group">
-					<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
 					<animation effect="slide" start="0" end="35" time="300" tween="sine" easing="inout" condition="![PVR.IsRecording | PVR.HasTimer] + !Window.IsActive(mutebug)">Conditional</animation>
 					<control type="image">
@@ -103,7 +103,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
 					<animation effect="slide" start="0" end="35" time="300" tween="sine" easing="inout" condition="![PVR.IsRecording | PVR.HasTimer] + !Window.IsActive(mutebug)">Conditional</animation>
 					<control type="image">
@@ -133,7 +133,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture>aeonflags/posters/top250.png</texture>
 					<colordiffuse>mod-infotags</colordiffuse>
-					<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 				</control>
 				<control type="image">
 					<posx>640r</posx>
@@ -143,7 +143,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture>aeonflags/posters/top250.png</texture>
 					<colordiffuse>eewhite</colordiffuse>
-					<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 				</control>
 				<control type="label">
 					<posx>586r</posx>
@@ -155,7 +155,7 @@
 					<scroll>false</scroll>
 					<align>center</align>
 					<wrapmultiline>false</wrapmultiline>
-					<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 				</control>
 				<control type="label">
 					<posx>586r</posx>
@@ -167,7 +167,7 @@
 					<scroll>false</scroll>
 					<align>center</align>
 					<wrapmultiline>false</wrapmultiline>
-					<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -225,7 +225,7 @@
 	<!-- Options Button -->
 	<include name="Common-Options">
 		<control type="group">
-			<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 			<description>Options Buttons</description>
 			<include>Animation_OptionsButton</include>
 			<posx>276</posx>
@@ -248,7 +248,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 			<description>Options Buttons</description>
 			<include>Animation_OptionsButton</include>
 			<posx>276</posx>
@@ -300,7 +300,7 @@
 				<effect type="zoom" start="100" end="50" center="1745,100" tween="sine" easing="inout" time="300" />
 			</animation>
 			<control type="group">
-				<visible>!Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
 				<control type="label">
 					<description>Title label</description>
 					<posx>0</posx>
