@@ -269,7 +269,7 @@
 							<posy>6</posy>
 							<width>1018</width>
 							<height>80</height>
-							<texture border="150,1,150,1">views/other/tvblue-focus.png</texture>
+							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
 							<visible>ListItem.IsPlaying</visible>
@@ -472,7 +472,7 @@
 							<posy>6</posy>
 							<width>1018</width>
 							<height>80</height>
-							<texture border="150,1,150,1">views/other/tvblue-focus.png</texture>
+							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
 							<visible>ListItem.IsPlaying</visible>
@@ -1323,7 +1323,7 @@
 						<posy>0</posy>
 						<width>494</width>
 						<height>76</height>
-						<texture border="150,1,150,1">views/other/tvblue-focus.png</texture>
+						<texture border="5">views/other/focus-mod.png</texture>
 						<visible>ListItem.IsPlaying</visible>
 					</control>
 					<control type="image">
@@ -1404,7 +1404,7 @@
 						<posy>0</posy>
 						<width>494</width>
 						<height>76</height>
-						<texture border="150,1,150,1">views/other/tvblue-focus.png</texture>
+						<texture border="5">views/other/focus-mod.png</texture>
 						<visible>ListItem.IsPlaying</visible>
 					</control>
 					<control type="image">
@@ -1575,8 +1575,7 @@
 						<width>80</width>
 						<height>76</height>
 						<aspectratio>stretch</aspectratio>
-						<!-- <texture border="5">windows/pvr/epg-fo.png</texture> -->
-						<texture border="5">views/other/tvblue-focus.png</texture>
+						<texture border="5">views/other/focus-mod.png</texture>
 						<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 					</control>
 					<control type="image" id="2">
@@ -1678,7 +1677,7 @@
 					<posy>-10</posy>
 					<width>1310</width>
 					<height>310</height>
-					<texture border="4">views/list/panel/bluepanel.png</texture>
+					<texture border="4">views/other/focus-mod.png</texture>
 					<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 				</control>
 				<control type="image">
