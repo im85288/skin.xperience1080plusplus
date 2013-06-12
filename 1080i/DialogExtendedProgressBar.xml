@@ -52,6 +52,20 @@
                         <label>$INFO[Control.GetLabel(30)]</label>
                         <scroll>false</scroll>
                         <align>left</align>
+                        <visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+                    </control>
+                     <control type="label">
+                        <description>Header label</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width min="0" max="680">auto</width>
+                        <height>120</height>
+                        <font>Font-Alaska-S36-BL</font>
+                        <textcolor>eewhite</textcolor>
+                        <label>$INFO[Control.GetLabel(30)]</label>
+                        <scroll>false</scroll>
+                        <align>left</align>
+                        <visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
                     </control>
                     <control type="label">
                         <description>Header label</description>
@@ -64,6 +78,20 @@
                         <label>$INFO[Control.GetLabel(32),: ,%]</label>
                         <scroll>false</scroll>
                         <align>left</align>
+                        <visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+                    </control>
+                    <control type="label">
+                        <description>Header label</description>
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width min="0" max="120">auto</width>
+                        <height>120</height>
+                        <font>Font-Alaska-S36-BL</font>
+                        <textcolor>eewhte</textcolor>
+                        <label>$INFO[Control.GetLabel(32),: ,%]</label>
+                        <scroll>false</scroll>
+                        <align>left</align>
+                        <visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
                     </control>
                 </control>
                 <control type="label" id="30">
@@ -80,6 +108,19 @@
                     <textcolor>mod-infotags-l</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
+                    <visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+                </control>
+                 <control type="label" id="31">
+                    <description>Title label</description>
+                    <posx>0</posx>
+                    <posy>33</posy>
+                    <width>750</width>
+                    <height>120</height>
+                    <font>Font-Alaska-S28-L</font>
+                    <textcolor>eewhite</textcolor>
+                    <scroll>false</scroll>
+                    <align>right</align>
+                    <visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
                 </control>
                 <control type="progress" id="32">
     				<description>progress control</description>

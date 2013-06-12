@@ -63,6 +63,60 @@
 			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 		</control>
 	</include>
+	<include name="CommonOverlayHomeClassic">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + Skin.HasSetting(OSDVisualisation.Enabled) + Skin.HasSetting(HomeVisualisation.Enabled)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include>Animation_FanartFade</include>
+			<texture>windows/common/fanartoverlay.png</texture>
+			<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include>Animation_FanartFade</include>
+			<texture>windows/common/stage-dark-overlay.png</texture>
+			<visible>[Skin.HasSetting(BackgroundVideo) + Player.HasVideo] | Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include>Animation_FanartFade</include>
+			<texture>windows/common/back-vignette.png</texture>
+		</control>
+	</include>
+	<include name="CommonOverlayHomeHorizontal">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + Skin.HasSetting(OSDVisualisation.Enabled) + Skin.HasSetting(HomeVisualisation.Enabled)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include>Animation_FanartFade</include>
+			<texture>windows/common/fanartoverlay.png</texture>
+			<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | !Skin.HasSetting(HideHomeProfileInfo)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include>Animation_FanartFade</include>
+			<texture>windows/common/overlay2.png</texture>
+			<visible>Window.IsVisible(favourites) | Window.IsVisible(script-globalsearch-main.xml) | Window.IsVisible(script-globalsearch-infodialog.xml) | Control.HasFocus(82) | Control.HasFocus(83) | Control.HasFocus(84)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<include>Animation_FanartFade</include>
+			<texture>windows/common/back-vignette.png</texture>
+		</control>
+	</include>
 	<include name="CommonItemsHome">
 		<include>CommonContent</include>
 		<include>HomeCustomBackdrops</include>
@@ -72,6 +126,16 @@
 		<include>CommonContent</include>
 		<include>BackgroundFanart</include>
 		<include>CommonOverlay</include>
+	</include>
+	<include name="CommonItemsHomeClassic">
+		<include>CommonContent</include>
+		<include>HomeCustomBackdrops</include>
+		<include>CommonOverlayHomeClassic</include>
+	</include>
+	<include name="CommonItemsHomeHorizontal">
+		<include>CommonContent</include>
+		<include>HomeCustomBackdrops</include>
+		<include>CommonOverlayHomeHorizontal</include>
 	</include>
 	<include name="CommonItemsMusicOSD">
 		<include condition="Skin.HasSetting(OSDVisualisation.Enabled) + ![System.HasAddon(script.artistslideshow) + Skin.HasSetting(ArtistSlideShow.Enabled)]">OSDVisualisation</include>

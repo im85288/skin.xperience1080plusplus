@@ -36,7 +36,7 @@
 					<font>Font-Alaska-S25-BL</font>
 					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
 					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<control type="label">
 					<description>Category</description>
@@ -48,7 +48,7 @@
 					<font>Font-Alaska-S25-BL</font>
 					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
 					<textcolor>eewhite</textcolor>
-					<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) |Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -99,7 +99,7 @@
 					<font>Font-Alaska-S25-BL</font>
 					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
 					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<control type="label">
 					<description>Settings info</description>
@@ -111,7 +111,7 @@
 					<font>Font-Alaska-S25-BL</font>
 					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
 					<textcolor>eewhite</textcolor>
-					<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) |Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<!-- Panel -->
 				<control type="image">

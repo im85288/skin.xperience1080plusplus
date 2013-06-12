@@ -400,7 +400,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(MoreBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<control type="label">
 					<description>Title label</description>
 					<posx>0</posx>

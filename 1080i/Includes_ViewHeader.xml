@@ -1368,29 +1368,6 @@
 				</control>
 			</control>
 		</control>
-		<control type="group" id="102">
-			<posx>75</posx>
-			<posy>26</posy>
-			<include>BannerListInfoAnimation</include>
-			<visible>!Weather.IsFetched</visible>
-			<control type="image">
-				<posx>10</posx>
-				<posy>25</posy>
-				<width>100</width>
-				<height>100</height>
-				<texture>dialogs/extendedprogress/loading-back-busy.png</texture>
-				<aspectratio align="center">keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>10</posx>
-				<posy>25</posy>
-				<width>100</width>
-				<height>100</height>
-				<texture>dialogs/search/loading.png</texture>
-				<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="Control.IsVisible(102)">Conditional</animation>
-				<aspectratio align="center">keep</aspectratio>
-			</control>
-		</control>
 		<control type="group">
 			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 			<posx>75</posx>
