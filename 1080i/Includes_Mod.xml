@@ -285,7 +285,7 @@
 				<posx>100</posx>
 				<posy>950</posy>
 				<control type="group">
-					<visible>[Container.Content(Episodes) | Container.Content(Movies)] + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>[Container.Content(Episodes) | Container.Content(Movies)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<posx>210</posx>
 					<control type="image">
 						<posx>0</posx>
@@ -360,7 +360,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>[Container.Content(Episodes) | Container.Content(Movies)] + Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>[Container.Content(Episodes) | Container.Content(Movies)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<posx>210</posx>
 					<control type="image">
 						<posx>0</posx>
@@ -436,7 +436,7 @@
 				</control>
 				<!-- RATING AND STUDIO -->
 				<control type="group">
-					<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>22</posy>
@@ -475,7 +475,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>22</posy>
@@ -515,7 +515,7 @@
 				</control>
 				<!-- TV GENRES -->
 				<control type="group">
-					<visible>![Container.Content(Episodes) | Container.Content(Movies)] + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>![Container.Content(Episodes) | Container.Content(Movies)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<control type="image">
 						<posx>210</posx>
 						<posy>22</posy>
@@ -558,7 +558,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>![Container.Content(Episodes) | Container.Content(Movies)] + Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>![Container.Content(Episodes) | Container.Content(Movies)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<control type="image">
 						<posx>210</posx>
 						<posy>22</posy>
@@ -646,7 +646,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>StringCompare(Control.GetLabel(89456),blank.png) + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>StringCompare(Control.GetLabel(89456),blank.png) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<control type="label">
 					<posx>-5</posx>
@@ -660,12 +660,12 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>StringCompare(Control.GetLabel(89456),blank.png) + Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
+					<visible>StringCompare(Control.GetLabel(89456),blank.png) + Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 			</control>
 			<!-- LEFT SIDE -->
 			<control type="group">
-				<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<posx>100</posx>
 				<control type="image">
 					<posx>0</posx>
@@ -706,7 +706,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<posx>100</posx>
 				<control type="image">
 					<posx>0</posx>
