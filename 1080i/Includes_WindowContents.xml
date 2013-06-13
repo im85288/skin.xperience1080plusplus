@@ -53,7 +53,7 @@
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
 			<texture>$VAR[FullscreenOverlay]</texture>
-			<colordiffuse>mod-dimfanart</colordiffuse>
+			 <colordiffuse>mod-dimfanart</colordiffuse>
 			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 		</control>
 		<control type="image">

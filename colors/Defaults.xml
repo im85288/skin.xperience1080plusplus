@@ -57,10 +57,23 @@
         <color name="Black Tiles">aa000000</color>
         <color name="White Tiles">aaffffff</color>
         
+         <!-- TILE Borders -->
+        <color name="Blue TileBorder">aa005180</color>
+        <color name="Green TileBorder">aa007949</color>
+        <color name="Red TileBorder">aad02e49</color>
+        <color name="Pink TileBorder">aa790059</color>
+        <color name="Purple TileBorder">aa3a0079</color>
+        <color name="Lime TileBorder">aa7eb000</color>
+        <color name="Grey TileBorder">aa404040</color>
+        <color name="Orange TileBorder">aafdc700</color>
+        <color name="Yellow TileBorder">aaffff00</color>
+        <color name="Black TileBorder">aa000000</color>
+        <color name="White TileBorder">aaffffff</color>
+        
 		<!-- WHITES AND BLACKS -->						
-		<color name="mod-black">ccffffff</color> 		
-		<color name="mod-dimfanart">aaffffff</color> 	
-		<color name="mod-infotags">FF000000</color>
+		<color name="mod-black">ddeeeeee</color> 		
+		<color name="mod-dimfanart">aaeeeeee</color> 	
+		<color name="mod-infotags">ee404040</color>
 		<color name="mod-infotags-li">cc404040</color>		
 		<color name="mod-infotags-l">aa404040</color>
 		<color name="mod-infotags-vl">55404040</color>

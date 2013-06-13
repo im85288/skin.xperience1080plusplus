@@ -1535,6 +1535,7 @@
     <variable name="HomeTVShowTile1"><value condition="Skin.HasSetting(HomeTVShowTile1)">1</value></variable>
     <variable name="HomeTVShowTile2"><value condition="Skin.HasSetting(HomeTVShowTile2)">1</value></variable>
     <variable name="HomeMusicTile1"><value condition="Skin.HasSetting(HomeMusicTile1)">1</value></variable>
+    <variable name="HomeMusicTile2"><value condition="Skin.HasSetting(HomeMusicTile2)">1</value></variable>
     <variable name="HomeProgramTile1"><value condition="Skin.HasSetting(HomeProgramTile1)">1</value></variable>
     <variable name="HomeProgramTile2"><value condition="Skin.HasSetting(HomeProgramTile2)">1</value></variable>
     <variable name="HomeProgramTile3"><value condition="Skin.HasSetting(HomeProgramTile3)">1</value></variable>
@@ -4951,6 +4952,7 @@
                             <onclick>Skin.Reset(HomeMusicTile1.Path)</onclick>
                             <onclick>Skin.ToggleSetting(HomeMusicTile1)</onclick>
                             <property name="on">$VAR[HomeMusicTile1]</property>
+                            <visible>!Library.HasContent(musicvideos)</visible>
                         </item>
                         <item id="8">
                             <label>$LOCALIZE[41161] 2</label>
@@ -5060,7 +5062,7 @@
                 <control type="group">
                     <posx>558</posx>
                     <posy>360</posy>
-                    <visible>Container(3).HasFocus(8) + Skin.HasSetting(HomeMusicTile1)</visible>
+                    <visible>Container(3).HasFocus(8) + Skin.HasSetting(HomeMusicTile2)</visible>
                     <include>PanelDialogHomeMusicTile2</include>
                 </control>
                 <control type="group">

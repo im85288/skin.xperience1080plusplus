@@ -140,6 +140,11 @@
 							<label>Tile Colors</label>
 							<onclick>noop</onclick>
 						</item>
+						<item id="39">
+							<description>Home Tile Border Settings</description>
+							<label>Tile Border Colors</label>
+							<onclick>noop</onclick>
+						</item>
 						<item id="33">
 							<description>Media Settings</description>
 							<label>$LOCALIZE[41190]</label>
@@ -913,6 +918,241 @@
 						<onclick>Skin.SetString(moviecolor.name,Blue Tiles)</onclick>
 						<onclick>Skin.SetString(tvcolor.name,Green Tiles)</onclick>
 						<onclick>Skin.SetString(musiccolor.name,Red Tiles)</onclick>
+						<label>$LOCALIZE[409]</label>
+					</control>
+				</control>
+					<!-- =================== -->
+				<!-- Home Tile Border Settings -->
+				<!-- =================== -->
+				<control type="grouplist" id="5">
+					<onleft>30</onleft>
+					<include>SettingsCategoryGrouplistVars</include>
+					<visible>Container(30).HasFocus(39)</visible>
+					<control type="radiobutton" id="90002">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>!Skin.HasSetting(AddonTileBorderColored)</selected>
+						<onclick>Skin.ToggleSetting(AddonTileBorderColored)</onclick>
+						<label>Addon tiles border share color</label>
+					</control>
+					<control type="button" id="90003">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Grey TileBorder)">Skin.SetString(musicbordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Lime TileBorder)">Skin.SetString(musicbordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Green TileBorder)">Skin.SetString(musicbordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Blue TileBorder)">Skin.SetString(musicbordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Red TileBorder)">Skin.SetString(musicbordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Pink TileBorder)">Skin.SetString(musicbordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Purple TileBorder)">Skin.SetString(musicbordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Orange TileBorder)">Skin.SetString(musicbordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Yellow TileBorder)">Skin.SetString(musicbordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Black TileBorder)">Skin.SetString(musicbordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),White TileBorder)">Skin.SetString(musicbordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Grey TileBorder)">Skin.SetString(musicbordercolor.name,White TileBorder)</onclick>
+						<label>$LOCALIZE[2]</label>
+						<label2>$INFO[Skin.String(musicbordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90004">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Grey TileBorder)">Skin.SetString(tvbordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Lime TileBorder)">Skin.SetString(tvbordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Green TileBorder)">Skin.SetString(tvbordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Blue TileBorder)">Skin.SetString(tvbordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Red TileBorder)">Skin.SetString(tvbordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Pink TileBorder)">Skin.SetString(tvbordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Purple TileBorder)">Skin.SetString(tvbordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Orange TileBorder)">Skin.SetString(tvbordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Yellow TileBorder)">Skin.SetString(tvbordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Black TileBorder)">Skin.SetString(tvbordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),White TileBorder)">Skin.SetString(tvbordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Grey TileBorder)">Skin.SetString(tvbordercolor.name,White TileBorder)</onclick>
+						<label>$LOCALIZE[19020]</label>
+						<label2>$INFO[Skin.String(tvbordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90005">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Grey TileBorder)">Skin.SetString(moviebordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Lime TileBorder)">Skin.SetString(moviebordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Green TileBorder)">Skin.SetString(moviebordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Blue TileBorder)">Skin.SetString(moviebordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Red TileBorder)">Skin.SetString(moviebordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Pink TileBorder)">Skin.SetString(moviebordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Purple TileBorder)">Skin.SetString(moviebordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Orange TileBorder)">Skin.SetString(moviebordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Yellow TileBorder)">Skin.SetString(moviebordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Black TileBorder)">Skin.SetString(moviebordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),White TileBorder)">Skin.SetString(moviebordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Grey TileBorder)">Skin.SetString(moviebordercolor.name,White TileBorder)</onclick>
+						<label>$LOCALIZE[342]</label>
+						<label2>$INFO[Skin.String(moviebordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90006">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Grey TileBorder)">Skin.SetString(homebordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Lime TileBorder)">Skin.SetString(homebordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Green TileBorder)">Skin.SetString(homebordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Blue TileBorder)">Skin.SetString(homebordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Red TileBorder)">Skin.SetString(homebordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Pink TileBorder)">Skin.SetString(homebordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Purple TileBorder)">Skin.SetString(homebordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Orange TileBorder)">Skin.SetString(homebordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Yellow TileBorder)">Skin.SetString(homebordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Black TileBorder)">Skin.SetString(homebordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),White TileBorder)">Skin.SetString(homebordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Grey TileBorder)">Skin.SetString(homebordercolor.name,White TileBorder)</onclick>
+						<label>$LOCALIZE[10000]</label>
+						<label2>$INFO[Skin.String(homebordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90007">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Grey TileBorder)">Skin.SetString(appbordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Lime TileBorder)">Skin.SetString(appbordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Green TileBorder)">Skin.SetString(appbordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Blue TileBorder)">Skin.SetString(appbordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Red TileBorder)">Skin.SetString(appbordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Pink TileBorder)">Skin.SetString(appbordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Purple TileBorder)">Skin.SetString(appbordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Orange TileBorder)">Skin.SetString(appbordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Yellow TileBorder)">Skin.SetString(appbordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Black TileBorder)">Skin.SetString(appbordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),White TileBorder)">Skin.SetString(appbordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Grey TileBorder)">Skin.SetString(appbordercolor.name,White TileBorder)</onclick>
+						<label>$LOCALIZE[10001]</label>
+						<label2>$INFO[Skin.String(appbordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90008">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Grey TileBorder)">Skin.SetString(pvrbordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Lime TileBorder)">Skin.SetString(pvrbordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Green TileBorder)">Skin.SetString(pvrbordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Blue TileBorder)">Skin.SetString(pvrbordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Red TileBorder)">Skin.SetString(pvrbordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Pink TileBorder)">Skin.SetString(pvrbordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Purple TileBorder)">Skin.SetString(pvrbordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Orange TileBorder)">Skin.SetString(pvrbordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Yellow TileBorder)">Skin.SetString(pvrbordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Black TileBorder)">Skin.SetString(pvrbordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),White TileBorder)">Skin.SetString(pvrbordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Grey TileBorder)">Skin.SetString(pvrbordercolor.name,White TileBorder)</onclick>
+						<label>$LOCALIZE[41220]</label>
+						<label2>$INFO[Skin.String(pvrbordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90018">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Grey TileBorder)">Skin.SetString(picturesbordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Lime TileBorder)">Skin.SetString(picturesbordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Green TileBorder)">Skin.SetString(picturesbordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Blue TileBorder)">Skin.SetString(picturesbordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Red TileBorder)">Skin.SetString(picturesbordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Pink TileBorder)">Skin.SetString(picturesbordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Purple TileBorder)">Skin.SetString(picturesbordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Orange TileBorder)">Skin.SetString(picturesbordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Yellow TileBorder)">Skin.SetString(picturesbordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Black TileBorder)">Skin.SetString(picturesbordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),White TileBorder)">Skin.SetString(picturesbordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Grey TileBorder)">Skin.SetString(picturesbordercolor.name,White TileBorder)</onclick>
+						<label>$LOCALIZE[1213]</label>
+						<label2>$INFO[Skin.String(picturesbordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90009">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Grey TileBorder)">Skin.SetString(weatherbordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Lime TileBorder)">Skin.SetString(weatherbordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Green TileBorder)">Skin.SetString(weatherbordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Blue TileBorder)">Skin.SetString(weatherbordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Red TileBorder)">Skin.SetString(weatherbordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Pink TileBorder)">Skin.SetString(weatherbordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Purple TileBorder)">Skin.SetString(weatherbordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Orange TileBorder)">Skin.SetString(weatherbordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Yellow TileBorder)">Skin.SetString(weatherbordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Black TileBorder)">Skin.SetString(weatherbordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),White TileBorder)">Skin.SetString(weatherbordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Grey TileBorder)">Skin.SetString(weatherbordercolor.name,White TileBorder)</onclick>
+						<label>$LOCALIZE[24027]</label>
+						<label2>$INFO[Skin.String(weatherbordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90012">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick>Skin.SetString(appbordercolor.name,Grey TileBorder)</onclick>
+						<onclick>Skin.SetString(homebordercolor.name,Grey TileBorder)</onclick>
+						<onclick>Skin.SetString(weatherbordercolor.name,Grey TileBorder)</onclick>
+						<onclick>Skin.SetString(pvrbordercolor.name,Grey TileBorder)</onclick>
+						<onclick>Skin.SetString(picturesbordercolor.name,Grey TileBorder)</onclick>
+						<onclick>Skin.SetString(moviebordercolor.name,Blue TileBorder)</onclick>
+						<onclick>Skin.SetString(tvbordercolor.name,Green TileBorder)</onclick>
+						<onclick>Skin.SetString(musicbordercolor.name,Red TileBorder)</onclick>
 						<label>$LOCALIZE[409]</label>
 					</control>
 				</control>

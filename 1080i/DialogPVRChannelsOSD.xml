@@ -60,7 +60,7 @@
 					<align>center</align>
 					<textoffsetx>30</textoffsetx>
 					<label>$VAR[PVRChannelsOSDTitleLabel]</label>
-					<font>Font-Alaska-S34-BL</font>
+					<font>Font-Condensed-S34</font>
 					<textcolor>black</textcolor>
 				</control>
 				<control type="image">
@@ -116,7 +116,7 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Alaska-S32</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime]</label>
 							<textcolor>black</textcolor>
@@ -130,7 +130,7 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Alaska-S32</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime]</label>
 							<textcolor>black</textcolor>
@@ -144,7 +144,7 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Alaska-S32-NC</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
@@ -158,9 +158,9 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Alaska-S32-L</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
-							<label>$INFO[ListItem.Title]</label>
+							<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 							<textcolor>black</textcolor>
 							<selectedcolor>black</selectedcolor>
 							<scroll>false</scroll>
@@ -173,7 +173,7 @@
 							<posy>44</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Alaska-S32</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextStartTime]</label>
 							<textcolor>darkgrey2</textcolor>
@@ -187,7 +187,7 @@
 							<posy>44</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Alaska-S32</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextStartTime]</label>
 							<textcolor>black</textcolor>
@@ -201,7 +201,7 @@
 							<posy>48</posy>
 							<width>440</width>
 							<height>50</height>
-							<font>Font-Alaska-S32-NC</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextTitle]</label>
 							<textcolor>darkgrey2</textcolor>
@@ -215,7 +215,7 @@
 							<posy>48</posy>
 							<width>440</width>
 							<height>50</height>
-							<font>Font-Alaska-S32-NC</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextTitle]</label>
 							<textcolor>black</textcolor>
@@ -229,7 +229,7 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>95</height>
-							<font>Font-Alaska-S32</font>
+							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
@@ -364,7 +364,7 @@
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Alaska-S32</font>
+								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
 								<textcolor>eewhite</textcolor>
@@ -378,7 +378,7 @@
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Alaska-S32</font>
+								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
 								<textcolor>black</textcolor>
@@ -392,9 +392,9 @@
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Alaska-S32-L</font>
+								<font>Font-Condensed-S32</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Title]</label>
+								<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 								<textcolor>eewhite</textcolor>
 								<selectedcolor>eewhite</selectedcolor>
 								<scroll>false</scroll>
@@ -406,9 +406,9 @@
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Alaska-S32-LB</font>
+								<font>Font-Condensed-S32-B</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Title]</label>
+								<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
 								<textcolor>black</textcolor>
 								<selectedcolor>black</selectedcolor>
 								<scroll>false</scroll>
@@ -420,7 +420,7 @@
 								<posy>44</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Alaska-S32</font>
+								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextStartTime]</label>
 								<textcolor>bluegrey</textcolor>
@@ -434,7 +434,7 @@
 								<posy>44</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Alaska-S32</font>
+								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextStartTime]</label>
 								<textcolor>black</textcolor>
@@ -448,7 +448,7 @@
 								<posy>48</posy>
 								<width>440</width>
 								<height>50</height>
-								<font>Font-Alaska-S32-NC</font>
+								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextTitle]</label>
 								<textcolor>bluegrey</textcolor>
@@ -462,7 +462,7 @@
 								<posy>48</posy>
 								<width>440</width>
 								<height>50</height>
-								<font>Font-Alaska-S32-NC</font>
+								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextTitle]</label>
 								<textcolor>black</textcolor>
@@ -476,7 +476,7 @@
 								<posy>0</posy>
 								<width>517</width>
 								<height>95</height>
-								<font>Font-Alaska-S34-L</font>
+								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>eewhite</textcolor>
@@ -575,8 +575,8 @@
 						<posx>1060</posx>
 						<posy>325</posy>
 						<width>516</width>
-						<font>Font-Alaska-S34-BL</font>
-						<label>$INFO[Container(11).ListItem.Title]</label>
+						<font>Font-Condensed-S34-B</font>
+						<label>[UPPERCASE]$INFO[Container(11).ListItem.Title][/UPPERCASE]</label>
 						<textcolor>black</textcolor>
 						<scroll>false</scroll>
 					</control>
@@ -616,7 +616,7 @@
 							<posx>1060</posx>
 							<posy>853</posy>
 							<width>520</width>
-							<font>Font-Alaska-S34-NC</font>
+							<font>Font-Condensed-S34</font>
 							<label>$INFO[Container(11).ListItem.Genre,[COLOR=greyblue]$LOCALIZE[135] [/COLOR],]</label>
 							<label>$INFO[Container(11).ListItem.ChannelName,[COLOR=greyblue]$LOCALIZE[19201] [/COLOR],]</label>
 							<textcolor>black</textcolor>
@@ -634,7 +634,7 @@
 							<label>$INFO[Container(11).ListItem.NextTitle,[COLOR=greyblue]$LOCALIZE[19031] [/COLOR],]$INFO[Container(11).ListItem.NextStartTime, [COLOR=greyblue]at [/COLOR],]</label>
 							<label>$INFO[Container(11).ListItem.Title,[COLOR=greyblue]$LOCALIZE[19030] [/COLOR],]$INFO[Container(11).ListItem.StartTime, [COLOR=greyblue]at [/COLOR],]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34-NC</font>
+							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<aligny>center</aligny>
 							<animation effect="slide" end="0,0" time="300" tween="cubic" easing="inout" condition="!IsEmpty(Window.Property(ExtendPlot))">Conditional</animation>

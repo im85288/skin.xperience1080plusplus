@@ -18,6 +18,14 @@
 	<onload condition="IsEmpty(Skin.String(pvrcolor.name)) | !SubString(Skin.String(pvrcolor.name),Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onload>
 	<onload condition="IsEmpty(Skin.String(picturescolor.name)) | !SubString(Skin.String(picturescolor.name),Tiles)">Skin.SetString(picturescolor.name,Grey Tiles)</onload>
 	<onload condition="IsEmpty(Skin.String(weathercolor.name)) | !SubString(Skin.String(weathercolor.name),Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(musicbordercolor.name)) | !SubString(Skin.String(musicbordercolor.name),TileBorder)">Skin.SetString(musicbordercolor.name,Red TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(tvbordercolor.name)) | !SubString(Skin.String(tvbordercolor.name),TileBorder)">Skin.SetString(tvbordercolor.name,Green TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(moviebordercolor.name)) | !SubString(Skin.String(moviebordercolor.name),TileBorder)">Skin.SetString(moviebordercolor.name,Blue TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(appbordercolor.name)) | !SubString(Skin.String(appbordercolor.name),TileBorder)">Skin.SetString(appbordercolor.name,Grey TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(homebordercolor.name)) | !SubString(Skin.String(homebordercolor.name),TileBorder)">Skin.SetString(homebordercolor.name,Grey TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(pvrbordercolor.name)) | !SubString(Skin.String(pvrbordercolor.name),TileBorder)">Skin.SetString(pvrbordercolor.name,Grey TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(picturesbordercolor.name)) | !SubString(Skin.String(picturesbordercolor.name),TileBorder)">Skin.SetString(picturesbordercolor.name,Grey TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(weatherbordercolor.name)) | !SubString(Skin.String(weatherbordercolor.name),TileBorder)">Skin.SetString(weatherbordercolor.name,Grey TileBorder)</onload>
 	<onunload>CancelAlarm(HomeTileMove,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveThree,true)</onunload>

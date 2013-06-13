@@ -226,6 +226,36 @@
 		<value condition="!Skin.HasSetting(AddonTilesColored)">$INFO[Skin.String(picturescolor.name)]</value>
 		<value>Grey Tiles</value>
 	</variable>
+	
+	
+	<variable name="MovieAddonTileBorderColorVar">
+		<value condition="!Skin.HasSetting(AddonTileBorderColored)">$INFO[Skin.String(moviebordercolor.name)]</value>
+		<value>Grey TileBorder</value>
+	</variable>
+	<variable name="TvAddonTileBorderColorVar">
+		<value condition="!Skin.HasSetting(AddonTileBorderColored)">$INFO[Skin.String(tvbordercolor.name)]</value>
+		<value>Grey TileBorder</value>
+	</variable>
+	<variable name="MusicAddonTileBorderColorVar">
+		<value condition="!Skin.HasSetting(AddonTileBorderColored)">$INFO[Skin.String(musicbordercolor.name)]</value>
+		<value>Grey TileBorder</value>
+	</variable>
+	<variable name="WeatherAddonTileBorderColorVar">
+		<value condition="!Skin.HasSetting(AddonTileBorderColored)">$INFO[Skin.String(weatherbordercolor.name)]</value>
+		<value>Grey TileBorder</value>
+	</variable>
+	<variable name="AppAddonTileBorderColorVar">
+		<value condition="!Skin.HasSetting(AddonTileBorderColored)">$INFO[Skin.String(appbordercolor.name)]</value>
+		<value>Grey TileBorder</value>
+	</variable>
+	<variable name="PVRAddonTileBorderColorVar">
+		<value condition="!Skin.HasSetting(AddonTileBorderColored)">$INFO[Skin.String(pvrbordercolor.name)]</value>
+		<value>Grey TileBorder</value>
+	</variable>
+	<variable name="PicturesAddonTileBorderColorVar">
+		<value condition="!Skin.HasSetting(AddonTileBorderColored)">$INFO[Skin.String(picturesbordercolor.name)]</value>
+		<value>Grey TileBorder</value>
+	</variable>
 	<variable name="ExtendPlotColor">
 		<value condition="!IsEmpty(Window.Property(ExtendPlot))">mod-infotags</value>
 		<value condition="IsEmpty(Window.Property(ExtendPlot))">bbwhite</value>
