@@ -226,8 +226,6 @@
 		<value condition="!Skin.HasSetting(AddonTilesColored)">$INFO[Skin.String(picturescolor.name)]</value>
 		<value>Grey Tiles</value>
 	</variable>
-	
-	
 	<variable name="MovieAddonTileBorderColorVar">
 		<value condition="!Skin.HasSetting(AddonTileBorderColored)">$INFO[Skin.String(moviebordercolor.name)]</value>
 		<value>Grey TileBorder</value>
@@ -315,7 +313,7 @@
 				<posx>100</posx>
 				<posy>950</posy>
 				<control type="group">
-					<visible>[Container.Content(Episodes) | Container.Content(Movies)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>[Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					<posx>210</posx>
 					<control type="image">
 						<posx>0</posx>
@@ -389,84 +387,8 @@
 						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
 				</control>
-				<control type="group">
-					<visible>[Container.Content(Episodes) | Container.Content(Movies)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<posx>210</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>7</posx>
-						<posy>22</posy>
-						<width>92</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagHDSD]</texture>
-						<colordiffuse>eewhite</colordiffuse>
-						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-					<control type="image">
-						<posx>13</posx>
-						<posy>28</posy>
-						<width>82</width>
-						<height>38</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>flags/other/set-info.png</texture>
-						<colordiffuse>eewhite</colordiffuse>
-						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>22</posy>
-						<width>245</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>128</posx>
-						<posy>22</posy>
-						<width>90</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagVideoCodec]</texture>
-						<colordiffuse>eewhite</colordiffuse>
-						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-					<control type="image">
-						<posx>228</posx>
-						<posy>22</posy>
-						<width>90</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagAudioCodec]</texture>
-						<colordiffuse>eewhite</colordiffuse>
-						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-					<control type="label">
-						<posx>108</posx>
-						<posy>22</posy>
-						<width>220</width>
-						<height>52</height>
-						<label>$LOCALIZE[20457]</label>
-						<font>Font-Alaska-S25-BL</font>
-						<textcolor>eewhite</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
-						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-				</control>
 				<!-- RATING AND STUDIO -->
 				<control type="group">
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>22</posy>
@@ -504,48 +426,9 @@
 						<colordiffuse>mod-infotags</colordiffuse>
 					</control>
 				</control>
-				<control type="group">
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<control type="image">
-						<posx>0</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>7</posx>
-						<posy>22</posy>
-						<width>92</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagStudio]</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>22</posy>
-						<width>94</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagRating]</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-				</control>
 				<!-- TV GENRES -->
 				<control type="group">
-					<visible>![Container.Content(Episodes) | Container.Content(Movies)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>![Container.Content(Episodes) | Container.Content(Movies)]</visible>
 					<control type="image">
 						<posx>210</posx>
 						<posy>22</posy>
@@ -582,49 +465,6 @@
 						<label>$INFO[ListItem.Genre]</label>
 						<font>Font-Alaska-S25-BL</font>
 						<textcolor>mod-infotags</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
-					</control>
-				</control>
-				<control type="group">
-					<visible>![Container.Content(Episodes) | Container.Content(Movies)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<control type="image">
-						<posx>210</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-					<control type="label">
-						<posx>220</posx>
-						<posy>34</posy>
-						<width>85</width>
-						<label>Genre</label>
-						<font>Font-Alaska-S25-BL</font>
-						<textcolor>eewhite</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
-					</control>
-					<control type="image">
-						<posx>310</posx>
-						<posy>22</posy>
-						<width>245</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-					<control type="label">
-						<posx>328</posx>
-						<posy>34</posy>
-						<width>205</width>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>Font-Alaska-S25-BL</font>
-						<textcolor>eewhite</textcolor>
 						<scroll>false</scroll>
 						<align>center</align>
 						<wrapmultiline>false</wrapmultiline>
@@ -676,26 +516,11 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>StringCompare(Control.GetLabel(89456),blank.png) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
-				</control>
-				<control type="label">
-					<posx>-5</posx>
-					<posy>115r</posy>
-					<width>480</width>
-					<height>72</height>
-					<label>$VAR[MusicBottomClearLogoText]</label>
-					<font>Font-Alaska-S38-BL</font>
-					<textcolor>eewhite</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<wrapmultiline>true</wrapmultiline>
-					<visible>StringCompare(Control.GetLabel(89456),blank.png) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>StringCompare(Control.GetLabel(89456),blank.png)</visible>
 				</control>
 			</control>
 			<!-- LEFT SIDE -->
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<posx>100</posx>
 				<control type="image">
 					<posx>0</posx>
@@ -730,47 +555,6 @@
 					<label>$VAR[MusicBottomGenre]</label>
 					<font>Font-Alaska-S25-BL</font>
 					<textcolor>mod-infotags</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-					<wrapmultiline>false</wrapmultiline>
-				</control>
-			</control>
-			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
-				<posx>100</posx>
-				<control type="image">
-					<posx>0</posx>
-					<posy>972</posy>
-					<width>120</width>
-					<height>52</height>
-					<aspectratio>stretch</aspectratio>
-					<texture border="20,5,20,5">aeonflags/posters/left.png</texture>
-					<colordiffuse>eewhite</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>120</posx>
-					<posy>972</posy>
-					<width>435</width>
-					<height>52</height>
-					<aspectratio>stretch</aspectratio>
-					<texture border="20,5,20,5">aeonflags/posters/right.png</texture>
-					<colordiffuse>eewhite</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>10</posx>
-					<posy>975</posy>
-					<width>110</width>
-					<height>48</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
-				</control>
-				<control type="label">
-					<posx>137</posx>
-					<posy>984</posy>
-					<width>400</width>
-					<label>$VAR[MusicBottomGenre]</label>
-					<font>Font-Alaska-S25-BL</font>
-					<textcolor>eewhite</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<wrapmultiline>false</wrapmultiline>

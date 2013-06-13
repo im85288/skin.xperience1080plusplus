@@ -41,7 +41,6 @@
 					<include>Animation_ShutdownButton</include>
 					<include>homebuttonsanim</include>
 					<visible allowhiddenfocus="true">true</visible>
-					<colordiffuse>mod-infotags-a</colordiffuse>
 				</control>
 				<control type="label">
 					<description>Shutdown Label</description>
@@ -95,7 +94,6 @@
 					<include>Animation_FavButton</include>
 					<include>homebuttonsanim3</include>
 					<visible allowhiddenfocus="true">!Window.IsVisible(favourites) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-globalsearch-contextmenu.xml) + !Window.IsVisible(virtualkeyboard) + IsEmpty(Window.Property(HomeSearch)) + !Window.IsVisible(playercontrols)</visible>
-					<colordiffuse>mod-infotags-a</colordiffuse>
 				</control>
 				<control type="label">
 					<description>Favourites Label</description>
@@ -229,7 +227,6 @@
 		<font>Font-Condensed-S50</font>
 		<textcolor>mod-infotags</textcolor>
 		<focusedcolor>mod-infotags</focusedcolor>
-		<shadowcolor>mod-shadow</shadowcolor>
 		<align>left</align>
 		<aligny>top</aligny>
 	</include>
@@ -239,7 +236,6 @@
 		<font>Font-Condensed-S50</font>
 		<textcolor>eewhite</textcolor>
 		<focusedcolor>eewhite</focusedcolor>
-		<shadowcolor>mod-shadow</shadowcolor>
 		<align>left</align>
 		<aligny>top</aligny>
 	</include>
@@ -906,13 +902,6 @@
 								<texture border="5">views/newgloss/tile.png</texture>
 							</control>
 							<control type="image">
-								<posx>-10</posx>
-								<posy>213</posy>
-								<width>1269</width>
-								<height>146</height>
-								<texture border="25">views/newgloss/border.png</texture>
-							</control>
-							<control type="image">
 								<posx>1115</posx>
 								<posy>223</posy>
 								<width>126</width>
@@ -1087,11 +1076,11 @@
 							<onback>ActivateWindow(3003)</onback>
 						</control>
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>572</width>
-							<height>572</height>
-							<texture border="7">views/newgloss/tile.png</texture>
+							<posx>-5</posx>
+							<posy>-5</posy>
+							<width>582</width>
+							<height>582</height>
+							<texture border="7">windows/home/tile.png</texture>
 						</control>
 						<control type="wraplist" id="5022">
 							<posx>0</posx>
@@ -1125,28 +1114,12 @@
 							<fadetime>800</fadetime>
 						</control>
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>572</width>
-							<height>572</height>
-							<aspectratio scalediffuse="false" align="left" aligny="top">stretch</aspectratio>
-							<texture background="true" diffuse="views/newgloss/tile-572.png">views/newgloss/info-gloss.png</texture>
-						</control>
-						<control type="image">
 							<description>Title overlay</description>
 							<posx>0</posx>
 							<posy>508</posy>
 							<width>572</width>
 							<height>64</height>
 							<texture border="5">windows/home/tile-overlay-r.png</texture>
-						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>-10</posy>
-							<width>592</width>
-							<height>592</height>
-							<aspectratio>stretch</aspectratio>
-							<texture border="25">views/newgloss/border.png</texture>
 						</control>
 						<control type="group" id="5023">
 							<visible>!Control.IsVisible(5022)</visible>
@@ -1309,11 +1282,11 @@
 							<onback>ActivateWindow(3003)</onback>
 						</control>
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>382</width>
-							<height>572</height>
-							<texture border="7">views/newgloss/tile.png</texture>
+							<posx>-5</posx>
+							<posy>-5</posy>
+							<width>392</width>
+							<height>582</height>
+							<texture border="7">windows/home/tile.png</texture>
 						</control>
 						<control type="wraplist" id="5032">
 							<posx>0</posx>
@@ -1326,25 +1299,31 @@
 							<scrolltime tween="cubic" easing="out">800</scrolltime>
 							<orientation>horizontal</orientation>
 							<preloaditems>2</preloaditems>
-							<pagecontrol>5034</pagecontrol>
 							<visible allowhiddenfocus="true">IntegerGreaterThan(Container(5032).NumItems,0)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
 							<itemlayout width="382" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>382</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.ActualIcon]</texture>
+								</control>
 							</itemlayout>
 							<focusedlayout width="382" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>382</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png">$INFO[ListItem.ActualIcon]</texture>
+								</control>
 							</focusedlayout>
 							<content>
 								<include>HomeWidget.2</include>
 							</content>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>382</width>
-							<height>572</height>
-							<aspectratio scalediffuse="false">scale</aspectratio>
-							<texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png" diffuse="views/newgloss/tile-382-572.png">$INFO[Container(5032).ListItem.ActualIcon]</texture>
-							<fadetime>800</fadetime>
 						</control>
 						<control type="image">
 							<description>Title overlay</description>
@@ -1353,21 +1332,6 @@
 							<width>382</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>382</width>
-							<height>572</height>
-							<aspectratio scalediffuse="false" align="left" aligny="top">stretch</aspectratio>
-							<texture background="true" diffuse="views/newgloss/tile-382-572.png">views/newgloss/info-gloss.png</texture>
-						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>-10</posy>
-							<width>402</width>
-							<height>592</height>
-							<texture border="25">views/newgloss/border.png</texture>
 						</control>
 						<control type="group" id="5033">
 							<visible>!Control.IsVisible(5032)</visible>
@@ -1520,22 +1484,8 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -1544,13 +1494,6 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -1583,26 +1526,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -1611,13 +1540,6 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -1644,11 +1566,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -1675,11 +1597,11 @@
 						</content>
 					</control>
 					<control type="image">
-						<posx>279</posx>
-						<posy>-10</posy>
-						<width>592</width>
-						<height>592</height>
-						<texture border="40">views/newgloss/border-fo.png</texture>
+						<posx>268</posx>
+						<posy>-21</posy>
+						<width>614</width>
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
 						<animation type="Visible">
 							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -1690,11 +1612,11 @@
 						<visible>ControlGroup(502).HasFocus</visible>
 					</control>
 					<control type="image">
-						<posx>857</posx>
-						<posy>-10</posy>
-						<width>402</width>
-						<height>592</height>
-						<texture border="25">views/newgloss/border-fo.png</texture>
+						<posx>846</posx>
+						<posy>-21</posy>
+						<width>424</width>
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
 						<animation type="Visible">
 							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -1848,20 +1770,6 @@
 							<width>382</width>
 							<height>66</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>382</width>
-							<height>572</height>
-							<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>-10</posy>
-							<width>402</width>
-							<height>592</height>
-							<texture border="25">views/newgloss/border.png</texture>
 						</control>
 						<control type="group" id="2023">
 							<visible>!Control.IsVisible(2022)</visible>
@@ -2017,27 +1925,6 @@
 								</control>
 								<control type="image">
 									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
 									<posy>241</posy>
 									<width>283</width>
 									<height>66</height>
@@ -2088,33 +1975,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
 										<colordiffuse>$INFO[Skin.String(moviecolor.name)]</colordiffuse>
 										<texture border="7">views/newgloss/tile-283.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2162,11 +2028,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(moviebordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -2220,22 +2086,8 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[MovieAddonTileColorVar]</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2277,13 +2129,6 @@
 										<textoffsetx>20</textoffsetx>
 									</control>
 								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="289" height="289">
@@ -2296,26 +2141,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[MovieAddonTileColorVar]</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2367,18 +2198,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(moviebordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -2469,11 +2293,11 @@
 						</content>
 					</control>
 					<control type="image">
-						<posx>279</posx>
-						<posy>-10</posy>
-						<width>402</width>
-						<height>592</height>
-						<texture border="25">views/newgloss/border-fo.png</texture>
+						<posx>268</posx>
+						<posy>-21</posy>
+						<width>424</width>
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(moviebordercolor.name)]</colordiffuse>
 						<animation type="Visible">
 							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -2620,13 +2444,6 @@
 							<width>671</width>
 							<height>572</height>
 							<texture diffuse="views/newgloss/tile-671-572.png">views/newgloss/info-gloss.png</texture>
-						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>-10</posy>
-							<width>691</width>
-							<height>592</height>
-							<texture border="25">views/newgloss/border.png</texture>
 						</control>
 						<control type="image">
 							<description>Title overlay</description>
@@ -2792,27 +2609,6 @@
 								</control>
 								<control type="image">
 									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
 									<posy>241</posy>
 									<width>283</width>
 									<height>66</height>
@@ -2863,33 +2659,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
 										<colordiffuse>$INFO[Skin.String(tvcolor.name)]</colordiffuse>
 										<texture border="7">views/newgloss/tile-283.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2937,11 +2712,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(tvbordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -3002,22 +2777,8 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[TvAddonTileColorVar]</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3059,13 +2820,6 @@
 										<textoffsetx>20</textoffsetx>
 									</control>
 								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="289" height="289">
@@ -3078,26 +2832,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[TvAddonTileColorVar]</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3149,18 +2889,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(tvbordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -3211,11 +2944,11 @@
 						</content>
 					</control>
 					<control type="image">
-						<posx>279</posx>
-						<posy>-10</posy>
-						<width>691</width>
-						<height>592</height>
-						<texture border="40">views/newgloss/border-fo.png</texture>
+						<posx>268</posx>
+						<posy>-21</posy>
+						<width>713</width>
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(tvbordercolor.name)]</colordiffuse>
 						<animation type="Visible">
 							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -3329,7 +3062,7 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(pvrcolor.name)]</colordiffuse>
 									<visible>ListItem.Property(colored)</visible>
 								</control>
@@ -3338,23 +3071,9 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[PVRAddonTileColorVar]</colordiffuse>
 									<visible>!ListItem.Property(colored)</visible>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3363,13 +3082,6 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3402,36 +3114,22 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(pvrcolor.name)]</colordiffuse>
 										<visible>ListItem.Property(colored)</visible>
 									</control>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[PVRAddonTileColorVar]</colordiffuse>
 										<visible>!ListItem.Property(colored)</visible>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3440,13 +3138,6 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3473,11 +3164,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(pvrbordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -3665,7 +3356,7 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(picturescolor.name)]</colordiffuse>
 									<visible>ListItem.Property(colored)</visible>
 								</control>
@@ -3674,23 +3365,9 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[PicturesAddonTileColorVar]</colordiffuse>
 									<visible>!ListItem.Property(colored)</visible>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3699,13 +3376,6 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3738,36 +3408,22 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(picturescolor.name)]</colordiffuse>
 										<visible>ListItem.Property(colored)</visible>
 									</control>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[PicturesAddonTileColorVar]</colordiffuse>
 										<visible>!ListItem.Property(colored)</visible>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3776,13 +3432,6 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3809,11 +3458,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(picturesbordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -3982,13 +3631,6 @@
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>-10</posy>
-							<width>592</width>
-							<height>592</height>
-							<texture border="25">views/newgloss/border.png</texture>
-						</control>
 						<control type="group" id="4023">
 							<visible>!Control.IsVisible(4022)</visible>
 							<include>visiblehidefadeinfo</include>
@@ -4140,27 +3782,6 @@
 								</control>
 								<control type="image">
 									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
 									<posy>241</posy>
 									<width>283</width>
 									<height>66</height>
@@ -4220,27 +3841,6 @@
 									</control>
 									<control type="image">
 										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
 										<posy>241</posy>
 										<width>283</width>
 										<height>66</height>
@@ -4285,11 +3885,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(musicbordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -4338,22 +3938,8 @@
 								<posy>24</posy>
 								<width>283</width>
 								<height>283</height>
-								<texture border="5">views/newgloss/tile-283.png</texture>
+								<texture border="7">views/newgloss/tile-283.png</texture>
 								<colordiffuse>$VAR[MusicAddonTileColorVar]</colordiffuse>
-							</control>
-							<control type="image">
-								<posx>24</posx>
-								<posy>24</posy>
-								<width>283</width>
-								<height>283</height>
-								<texture border="7">views/newgloss/tile.png</texture>
-							</control>
-							<control type="image">
-								<posx>24</posx>
-								<posy>24</posy>
-								<width>283</width>
-								<height>283</height>
-								<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 							</control>
 							<control type="group">
 								<animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
@@ -4397,13 +3983,6 @@
 										<textoffsetx>20</textoffsetx>
 									</control>
 								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
 							</control>
 						</itemlayout>
 						<focusedlayout width="289" height="289">
@@ -4416,26 +3995,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[MusicAddonTileColorVar]</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 									</control>
 								</control>
 								<control type="group">
@@ -4495,18 +4060,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(musicbordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -4568,11 +4126,11 @@
 						</content>
 					</control>
 					<control type="image">
-						<posx>329</posx>
-						<posy>-10</posy>
-						<width>592</width>
-						<height>592</height>
-						<texture border="40">views/newgloss/border-fo.png</texture>
+						<posx>318</posx>
+						<posy>-21</posy>
+						<width>614</width>
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(musicbordercolor.name)]</colordiffuse>
 						<animation type="Visible">
 							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -4693,22 +4251,8 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4717,13 +4261,6 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4764,20 +4301,6 @@
 									<width>283</width>
 									<height>283</height>
 									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="27">views/newgloss/border.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4828,29 +4351,8 @@
 									<posy>24</posy>
 									<width>382</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>382</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>382</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>402</width>
-									<height>303</height>
-									<texture border="27">views/newgloss/border.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4894,36 +4396,22 @@
 									</animation>
 									<animation effect="slide" start="0" end="99" time="0" condition="!IsEmpty(ListItem.Property(custom))">Conditional</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[AppAddonTileColorVar]</colordiffuse>
 										<visible>!IsEmpty(ListItem.Property(custom))</visible>
 									</control>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
 										<visible>IsEmpty(ListItem.Property(custom))</visible>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4973,18 +4461,11 @@
 										</control>
 									</control>
 									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border.png</texture>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border-fo.png</texture>
+										<posx>3</posx>
+										<posy>3</posy>
+										<width>325</width>
+										<height>325</height>
+										<texture border="40">windows/home/tile-fo.png</texture>
 										<colordiffuse>$INFO[Skin.String(appbordercolor.name)]</colordiffuse>
 										<animation type="Focus">
 											<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -5003,33 +4484,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>382</width>
-										<height>283</height>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>392</width>
+										<height>293</height>
 										<texture border="5">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>382</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>382</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>402</width>
-										<height>303</height>
-										<texture border="27">views/newgloss/border.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -5064,11 +4524,11 @@
 										<textoffsetx>20</textoffsetx>
 									</control>
 									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>402</width>
-										<height>303</height>
-										<texture border="27">views/newgloss/border-fo.png</texture>
+										<posx>3</posx>
+										<posy>3</posy>
+										<width>325</width>
+										<height>325</height>
+										<texture border="40">windows/home/tile-fo.png</texture>
 										<colordiffuse>$INFO[Skin.String(appbordercolor.name)]</colordiffuse>
 										<animation type="Focus">
 											<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -5280,14 +4740,6 @@
 							<texture border="7">views/newgloss/tile.png</texture>
 							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched]</visible>
 						</control>
-						<control type="image">
-							<posx>-10</posx>
-							<posy>-10</posy>
-							<width>592</width>
-							<height>592</height>
-							<texture border="27">views/newgloss/border.png</texture>
-							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched]</visible>
-						</control>
 						<control type="label">
 							<posx>0</posx>
 							<posy>574</posy>
@@ -5374,20 +4826,6 @@
 								<aspectratio scalediffuse="false">scale</aspectratio>
 								<imagepath background="true" diffuse="views/newgloss/tile-572.png">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
 								<visible>Container(20).HasFocus(7)</visible>
-							</control>
-							<control type="image">
-								<posx>0</posx>
-								<posy>0</posy>
-								<width>572</width>
-								<height>572</height>
-								<texture diffuse="views/newgloss/tile-572.png">views/newgloss/info-gloss.png</texture>
-							</control>
-							<control type="image">
-								<posx>-10</posx>
-								<posy>-10</posy>
-								<width>592</width>
-								<height>592</height>
-								<texture border="27">views/newgloss/border.png</texture>
 							</control>
 							<control type="image">
 								<description>Title overlay</description>
@@ -5652,13 +5090,6 @@
 								<height>187</height>
 								<texture border="7">views/newgloss/tile.png</texture>
 							</control>
-							<control type="image">
-								<posx>-10</posx>
-								<posy>-10</posy>
-								<width>402</width>
-								<height>207</height>
-								<texture border="27">views/newgloss/border.png</texture>
-							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
 								<include>visiblehidefadeinfo</include>
@@ -5764,13 +5195,6 @@
 								<height>187</height>
 								<texture border="7">views/newgloss/tile.png</texture>
 							</control>
-							<control type="image">
-								<posx>-10</posx>
-								<posy>-10</posy>
-								<width>402</width>
-								<height>207</height>
-								<texture border="27">views/newgloss/border.png</texture>
-							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
 								<include>visiblehidefadeinfo</include>
@@ -5875,13 +5299,6 @@
 								<width>382</width>
 								<height>187</height>
 								<texture border="7">views/newgloss/tile.png</texture>
-							</control>
-							<control type="image">
-								<posx>-10</posx>
-								<posy>-10</posy>
-								<width>402</width>
-								<height>207</height>
-								<texture border="27">views/newgloss/border.png</texture>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -6002,22 +5419,8 @@
 									<posy>24</posy>
 									<width>283</width>
 									<height>283</height>
-									<texture border="5">views/newgloss/tile-283.png</texture>
+									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(weathercolor.name)]</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture border="5">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
-									<posy>24</posy>
-									<width>283</width>
-									<height>283</height>
-									<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -6026,13 +5429,6 @@
 									<height>66</height>
 									<texture border="5">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border.png</texture>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -6065,26 +5461,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile-283.png</texture>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(weathercolor.name)]</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture border="5">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>283</width>
-										<height>283</height>
-										<texture diffuse="views/newgloss/tile-283.png">views/newgloss/info-gloss.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -6093,13 +5475,6 @@
 										<height>66</height>
 										<texture border="5">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>303</width>
-										<height>303</height>
-										<texture border="25">views/newgloss/border.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -6126,11 +5501,11 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>303</width>
-									<height>303</height>
-									<texture border="25">views/newgloss/border-fo.png</texture>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>325</width>
+									<height>325</height>
+									<texture border="40">windows/home/tile-fo.png</texture>
 									<colordiffuse>$INFO[Skin.String(weatherbordercolor.name)]</colordiffuse>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
@@ -6225,20 +5600,6 @@
 								</control>
 								<control type="image">
 									<posx>24</posx>
-									<posy>24</posy>
-									<width>246</width>
-									<height>283</height>
-									<texture border="7">views/newgloss/tile.png</texture>
-								</control>
-								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>266</width>
-									<height>303</height>
-									<texture border="27">views/newgloss/border.png</texture>
-								</control>
-								<control type="image">
-									<posx>24</posx>
 									<posy>241</posy>
 									<width>246</width>
 									<height>66</height>
@@ -6276,26 +5637,12 @@
 										<effect type="fade" start="100" end="90" time="200" tween="sine" easing="out" />
 									</animation>
 									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>246</width>
-										<height>283</height>
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>256</width>
+										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>mod-infotags-l</colordiffuse>
-									</control>
-									<control type="image">
-										<posx>24</posx>
-										<posy>24</posy>
-										<width>246</width>
-										<height>283</height>
-										<texture border="7">views/newgloss/tile.png</texture>
-									</control>
-									<control type="image">
-										<posx>14</posx>
-										<posy>14</posy>
-										<width>266</width>
-										<height>303</height>
-										<texture border="27">views/newgloss/border.png</texture>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -6330,10 +5677,10 @@
 									</control>
 								</control>
 								<control type="image">
-									<posx>14</posx>
-									<posy>14</posy>
-									<width>266</width>
-									<height>303</height>
+									<posx>3</posx>
+									<posy>3</posy>
+									<width>288</width>
+									<height>325</height>
 									<texture border="25">views/newgloss/border-fo.png</texture>
 									<animation type="Focus">
 										<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />

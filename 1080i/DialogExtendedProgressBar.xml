@@ -61,7 +61,7 @@
                         <width min="0" max="680">auto</width>
                         <height>120</height>
                         <font>Font-Alaska-S36-BL</font>
-                        <textcolor>eewhite</textcolor>
+                        <textcolor>darkerbackground</textcolor>
                         <label>$INFO[Control.GetLabel(30)]</label>
                         <scroll>false</scroll>
                         <align>left</align>
@@ -87,7 +87,7 @@
                         <width min="0" max="120">auto</width>
                         <height>120</height>
                         <font>Font-Alaska-S36-BL</font>
-                        <textcolor>eewhte</textcolor>
+                        <textcolor>darkerbackground</textcolor>
                         <label>$INFO[Control.GetLabel(32),: ,%]</label>
                         <scroll>false</scroll>
                         <align>left</align>
@@ -117,7 +117,7 @@
                     <width>750</width>
                     <height>120</height>
                     <font>Font-Alaska-S28-L</font>
-                    <textcolor>eewhite</textcolor>
+                    <textcolor>darkerbackground</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                     <visible>Skin.HasSetting(LessBackgroundOpacity)</visible>

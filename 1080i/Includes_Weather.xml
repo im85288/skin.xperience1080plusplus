@@ -782,7 +782,6 @@
 			<visible>Weather.IsFetched + !IsEmpty(Window.Property(Today.IsFetched)) + !IsEmpty(Window(Weather).Property(Today.moonphase)) + !Window.IsActive(favourites)</visible>
 			<control type="group">
 				<control type="group">
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<control type="image">
 						<posx>0</posx>
 						<posy>32</posy>
@@ -810,39 +809,6 @@
 						<label>$INFO[Window(Weather).Property(Today.moonphase)]</label>
 						<font>Font-Alaska-S25-BL</font>
 						<textcolor>mod-infotags-l</textcolor>
-						<scroll>false</scroll>
-						<align>right</align>
-					</control>
-				</control>
-				<control type="group">
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<control type="image">
-						<posx>0</posx>
-						<posy>32</posy>
-						<width>85</width>
-						<height>85</height>
-						<texture>$VAR[WeatherMoonPhaseIcon]</texture>
-						<colordiffuse>eewhite</colordiffuse>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>500</width>
-						<height>120</height>
-						<label>$LOCALIZE[41693]</label>
-						<font>Font-Alaska-S34-BL</font>
-						<textcolor>eewhite</textcolor>
-						<scroll>false</scroll>
-						<align>right</align>
-					</control>
-					<control type="label">
-						<posx>0</posx>
-						<posy>33</posy>
-						<width>500</width>
-						<height>120</height>
-						<label>$INFO[Window(Weather).Property(Today.moonphase)]</label>
-						<font>Font-Alaska-S25-BL</font>
-						<textcolor>eewhite</textcolor>
 						<scroll>false</scroll>
 						<align>right</align>
 					</control>
@@ -909,24 +875,6 @@
 					<onup>9111</onup>
 					<ondown>9111</ondown>
 					<align>left</align>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(101)">Conditional</animation>
-				</control>
-				<control type="button" id="101">
-					<posx>142</posx>
-					<posy>-50</posy>
-					<width>300</width>
-					<height>40</height>
-					<label>$LOCALIZE[41694]</label>
-					<textcolor>eewhite</textcolor>
-					<focusedcolor>eewhite</focusedcolor>
-					<font>Font-Alaska-S32-BL</font>
-					<onright>201</onright>
-					<onleft>301</onleft>
-					<onup>9111</onup>
-					<ondown>9111</ondown>
-					<align>left</align>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(101)">Conditional</animation>
 				</control>
 				<control type="image">
@@ -1138,24 +1086,6 @@
 					<onup>9111</onup>
 					<ondown>210</ondown>
 					<align>left</align>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(201)">Conditional</animation>
-				</control>
-				<control type="button" id="201">
-					<posx>27</posx>
-					<posy>-50</posy>
-					<width>300</width>
-					<height>40</height>
-					<label>$LOCALIZE[41695]</label>
-					<textcolor>eewhite</textcolor>
-					<focusedcolor>eewhite</focusedcolor>
-					<font>Font-Alaska-S32-BL</font>
-					<onleft>101</onleft>
-					<onright>301</onright>
-					<onup>9111</onup>
-					<ondown>210</ondown>
-					<align>left</align>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(201)">Conditional</animation>
 				</control>
 				<control type="grouplist" id="210">
@@ -2921,24 +2851,6 @@
 					<onup>9111</onup>
 					<ondown>310</ondown>
 					<align>left</align>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(301)">Conditional</animation>
-				</control>
-				<control type="button" id="301">
-					<posx>27</posx>
-					<posy>-50</posy>
-					<width>300</width>
-					<height>40</height>
-					<label>$LOCALIZE[41696]</label>
-					<textcolor>eewhite</textcolor>
-					<focusedcolor>eewhite</focusedcolor>
-					<font>Font-Alaska-S32-BL</font>
-					<onleft>201</onleft>
-					<onright>101</onright>
-					<onup>9111</onup>
-					<ondown>310</ondown>
-					<align>left</align>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(301)">Conditional</animation>
 				</control>
 				<control type="image">

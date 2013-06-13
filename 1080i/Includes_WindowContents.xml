@@ -52,8 +52,47 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
+			<texture>windows/common/white.png</texture>
+			<colordiffuse>mod-notsodimfanart</colordiffuse>
+			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity) | Skin.HasSetting(LessBackgroundOpacity)</visible>
+		</control>
+	</include>
+	<include name="CommonOverlayHome">
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Skin.HasSetting(BackgroundVideo) + Player.HasVideo</visible>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>-2700</posy>
+			<width>1920</width>
+			<height>4120</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>windows/common/showcase_floor3.png</texture>
+			<fadetime>900</fadetime>
+			<visible>!Control.IsVisible(505) + !Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<colordiffuse>mod-black</colordiffuse>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>175r</posy>
+			<width>1920</width>
+			<height>175</height>
+			<texture border="10">osd/fullscreen/bar.png</texture>
+			<visible>Control.IsVisible(505)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<animation effect="fade" start="0" time="400">VisibleChange</animation>
 			<texture>$VAR[FullscreenOverlay]</texture>
-			 <colordiffuse>mod-dimfanart</colordiffuse>
+			<colordiffuse>mod-dimfanart</colordiffuse>
+			<visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<animation effect="fade" start="0" time="400">VisibleChange</animation>
+			<texture>$VAR[FullscreenOverlay]</texture>
+			<colordiffuse>mod-notsodimfanart</colordiffuse>
 			<visible>Skin.HasSetting(MoreBackgroundOpacity) | Skin.HasSetting(BackgroundOpacity)</visible>
 		</control>
 		<control type="image">
@@ -61,6 +100,7 @@
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
 			<texture>$VAR[FullscreenOverlay]</texture>
 			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<colordiffuse>black</colordiffuse>
 		</control>
 	</include>
 	<include name="CommonOverlayHomeClassic">
@@ -120,7 +160,7 @@
 	<include name="CommonItemsHome">
 		<include>CommonContent</include>
 		<include>HomeCustomBackdrops</include>
-		<include>CommonOverlay</include>
+		<include>CommonOverlayHome</include>
 	</include>
 	<include name="CommonItems">
 		<include>CommonContent</include>
