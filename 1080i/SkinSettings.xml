@@ -185,7 +185,7 @@
 					<posx>390</posx>
 					<posy>235</posy>
 					<height>40</height>
-					<width>338</width>
+					<width>450</width>
 					<align>left</align>
 					<font>Font-Alaska-S25-BL</font>
 					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
@@ -197,7 +197,7 @@
 					<posx>390</posx>
 					<posy>235</posy>
 					<height>40</height>
-					<width>338</width>
+					<width>450</width>
 					<align>left</align>
 					<font>Font-Alaska-S25-L</font>
 					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
