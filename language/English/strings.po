@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: Xperience1080
-# Addon id: skin.xperience1080
-# Addon Provider: `Black
+# Addon Name: Xperience1080++
+# Addon id: skin.xperience1080++
+# Addon Provider: `im85288
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Skins\n"
