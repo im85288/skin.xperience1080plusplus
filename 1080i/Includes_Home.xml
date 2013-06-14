@@ -4524,7 +4524,7 @@
 									<control type="image">
 										<posx>3</posx>
 										<posy>3</posy>
-										<width>325</width>
+										<width>424</width>
 										<height>325</height>
 										<texture border="40">windows/home/tile-fo.png</texture>
 										<colordiffuse>$INFO[Skin.String(appbordercolor.name)]</colordiffuse>
