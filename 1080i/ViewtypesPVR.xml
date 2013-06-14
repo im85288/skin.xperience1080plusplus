@@ -3,27 +3,21 @@
 		<control type="group" id="110">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
+			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<include>listEndAnimation</include>
 			<control type="group">
-				<visible>Control.IsVisible(11)</visible>
-				<animation type="WindowOpen">
+				<visible>Control.IsVisible(11) + !Window.IsActive(favourites)</visible>
+				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
 					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
+					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="175" />
 				</animation>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
-				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
-				<animation effect="slide" start="-75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(32) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(32) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(32) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(32) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
+				<include>PVRVisibleHiddenAnimation</include>
 				<control type="group">
 					<description>Channel Preview + Info</description>
 					<posx>1184</posx>
@@ -682,27 +676,21 @@
 		<control type="group" id="120">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
+			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<include>listEndAnimation</include>
 			<control type="group">
-				<visible>Control.IsVisible(12)</visible>
-				<animation type="WindowOpen">
+				<visible>Control.IsVisible(12) + !Window.IsActive(favourites)</visible>
+				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
 					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
+					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="175" />
 				</animation>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
-				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
-				<animation effect="slide" start="-75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(33) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(33) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(33) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(33) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
+				<include>PVRVisibleHiddenAnimation</include>
 				<control type="group">
 					<description>Channel Preview + Info</description>
 					<posx>1184</posx>
@@ -1214,26 +1202,20 @@
 		<control type="group" id="100">
 			<description>TV Guide Timeline</description>
 			<include>OptionsShutdownAnimation</include>
-			<visible>Control.IsVisible(10)</visible>
-			<animation type="WindowOpen">
+			<animation effect="slide" start="0" end="478" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<include>listEndAnimation</include>
+			<visible>Control.IsVisible(10) + !Window.IsActive(favourites)</visible>
+			<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 				<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
 				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
 				<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
 			</animation>
-			<animation type="WindowClose">
-				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-				<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+			<animation type="WindowOpen" condition="Control.IsVisible(9001)">
+				<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
+				<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" delay="105" />
 			</animation>
-			<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
-			<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
-			<animation effect="slide" start="-75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(31) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-			</animation>
-			<animation effect="slide" start="75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(31) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-			</animation>
-			<animation effect="slide" start="0" end="75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(31) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-			</animation>
-			<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(31) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-			</animation>
+			<include>PVRVisibleHiddenAnimation</include>
 			<control type="image">
 				<posx>10</posx>
 				<posy>480</posy>
@@ -1485,7 +1467,7 @@
 						<posy>0</posy>
 						<width>68</width>
 						<height>78</height>
-					<font>Font-Condensed-S34</font>
+						<font>Font-Condensed-S34</font>
 						<aligny>center</aligny>
 						<textcolor>black</textcolor>
 						<textoffsetx>11</textoffsetx>
@@ -1868,27 +1850,21 @@
 		<control type="group" id="150">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
+			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<include>listEndAnimation</include>
 			<control type="group">
-				<visible>Control.IsVisible(15) + Pvr.IsPlayingTv + IntegerGreaterThan(Container(15).NumItems,0)</visible>
-				<animation type="WindowOpen">
+				<visible>Control.IsVisible(15) + !Window.IsActive(favourites)</visible>
+				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
 					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
+					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="175" />
 				</animation>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
-				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
-				<animation effect="slide" start="-75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(31) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(31) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(31) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(31) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
+				<include>PVRVisibleHiddenAnimation</include>
 				<control type="group">
 					<description>Channel Preview + Info</description>
 					<posx>1184</posx>
@@ -2274,27 +2250,21 @@
 		<control type="group" id="160">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
+			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<include>listEndAnimation</include>
 			<control type="group">
-				<visible>Control.IsVisible(16)</visible>
-				<animation type="WindowOpen">
+				<visible>Control.IsVisible(16) + !Window.IsActive(favourites)</visible>
+				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
 					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
+					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="175" />
 				</animation>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
-				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
-				<animation effect="slide" start="-75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(31) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(31) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(31) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(31) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
+				<include>PVRVisibleHiddenAnimation</include>
 				<control type="group">
 					<description>Channel Preview + Info</description>
 					<posx>1184</posx>
@@ -2729,27 +2699,21 @@
 		<control type="group" id="130">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
+			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<include>listEndAnimation</include>
 			<control type="group">
-				<visible>Control.IsVisible(13)</visible>
-				<animation type="WindowOpen">
+				<visible>Control.IsVisible(13) + !Window.IsActive(favourites)</visible>
+				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
 					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
+					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="175" />
 				</animation>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
-				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
-				<animation effect="slide" start="-75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(34) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(34) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(34) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(34) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
+				<include>PVRVisibleHiddenAnimation</include>
 				<control type="group">
 					<description>Channel Preview + Info</description>
 					<posx>1184</posx>
@@ -3069,27 +3033,21 @@
 		<control type="group" id="140">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
+			<animation effect="slide" start="0" end="278" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<include>listEndAnimation</include>
 			<control type="group">
-				<visible>Control.IsVisible(14)</visible>
-				<animation type="WindowOpen">
+				<visible>Control.IsVisible(14) + !Window.IsActive(favourites)</visible>
+				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="600" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
 					<effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" />
 				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
+					<effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
-				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
-				<animation effect="slide" start="-75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(35) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(35) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(35) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(35) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
+				<include>PVRVisibleHiddenAnimation</include>
 				<control type="image">
 					<description>Shadow</description>
 					<posx>200</posx>
@@ -3332,27 +3290,21 @@
 		<control type="group" id="170">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
+			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<include>listEndAnimation</include>
 			<control type="group">
-				<visible>Control.IsVisible(17)</visible>
-				<animation type="WindowOpen">
-					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="600" />
-					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-					<effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" />
+				<visible>Control.IsVisible(17) + !Window.IsActive(favourites)</visible>
+				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
+					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
-				<animation type="WindowClose">
-					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-					<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
+					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
+					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="175" />
 				</animation>
-				<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
-				<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
-				<animation effect="slide" start="-75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(36) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="75" end="0" time="300" tween="quadratic" easing="out" condition="ControlGroup(9001).HasFocus(36) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(36) + !IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
-				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(36) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
-				</animation>
+				<include>PVRVisibleHiddenAnimation</include>
 				<control type="image">
 					<description>Shadow</description>
 					<posx>200</posx>

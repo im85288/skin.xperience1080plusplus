@@ -18,6 +18,7 @@
 		<shadowcolor>mod-shadow</shadowcolor>
 		<align>right</align>
 		<textoffsetx>85</textoffsetx>
+		<textwidth>300</textwidth>
 		<width>350</width>
 		<height>100</height>
 	</include>
