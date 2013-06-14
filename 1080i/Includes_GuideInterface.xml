@@ -179,7 +179,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<font>Font-Alaska-S41-NC</font>
+				<font>Font-Condensed-S41</font>
 				<align>left</align>
 			</control>
 		</itemlayout>
@@ -211,7 +211,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<font>Font-Alaska-S41-NC</font>
+				<font>Font-Condensed-S41</font>
 				<align>left</align>
 				<include>guidelistfocusanim</include>
 			</control>
@@ -326,7 +326,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<font>Font-Alaska-S41-NC</font>
+				<font>Font-Condensed-S41</font>
 				<align>left</align>
 			</control>
 		</itemlayout>
@@ -366,7 +366,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<font>Font-Alaska-S41-NC</font>
+				<font>Font-Condensed-S41</font>
 				<align>left</align>
 				<include>guidelistfocusanim</include>
 			</control>
@@ -467,7 +467,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<font>Font-Alaska-S38-NC</font>
+				<font>Font-Condensed-S38</font>
 				<align>left</align>
 			</control>
 			<control type="group">
@@ -488,7 +488,7 @@
 					<label>$INFO[ListItem.property(rating)]</label>
 					<textcolor>black</textcolor>
 					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Alaska-S30-NC-B</font>
+					<font>Font-Condensed-S30-B</font>
 					<align>right</align>
 				</control>
 			</control>
@@ -500,7 +500,7 @@
 				<label>$INFO[ListItem.property(year)]</label>
 				<textcolor>black</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<font>Font-Alaska-S30-NC-B</font>
+				<font>Font-Condensed-S30-B</font>
 				<align>right</align>
 				<visible>ControlGroup(9120).HasFocus(91203) | ControlGroup(9120).HasFocus(91204)</visible>
 			</control>
@@ -546,7 +546,7 @@
 					<height>66</height>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S38-NC</font>
+					<font>Font-Condensed-S38</font>
 					<align>left</align>
 				</control>
 				<control type="label">
@@ -556,7 +556,7 @@
 					<height>66</height>
 					<label>$INFO[ListItem.Label2]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S34-NC</font>
+					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<scroll>false</scroll>
 				</control>
@@ -574,7 +574,7 @@
 					<height>30</height>
 					<label>$INFO[ListItem.property(rating)]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S30-NC-B</font>
+					<font>Font-Condensed-S30-B</font>
 					<align>right</align>
 				</control>
 			</control>
@@ -598,7 +598,7 @@
 					<height>66</height>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S38-NC</font>
+					<font>Font-Condensed-S38</font>
 					<align>left</align>
 				</control>
 				<control type="label">
@@ -608,7 +608,7 @@
 					<height>66</height>
 					<label>$INFO[ListItem.Label2]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S34-NC</font>
+					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<scroll>false</scroll>
 				</control>
@@ -626,7 +626,7 @@
 					<height>30</height>
 					<label>$INFO[ListItem.property(rating)]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S30-NC-B</font>
+					<font>Font-Condensed-S30-B</font>
 					<align>right</align>
 				</control>
 			</control>
@@ -650,7 +650,7 @@
 					<height>66</height>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S38-NC</font>
+					<font>Font-Condensed-S38</font>
 					<align>left</align>
 				</control>
 				<control type="label">
@@ -660,7 +660,7 @@
 					<height>66</height>
 					<label>$INFO[ListItem.Label2]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S34-NC</font>
+					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<scroll>false</scroll>
 				</control>
@@ -671,7 +671,7 @@
 					<height>30</height>
 					<label>[B]$INFO[ListItem.property(year)][/B]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S30-NC-B</font>
+					<font>Font-Condensed-S30-B</font>
 					<align>right</align>
 				</control>
 			</control>
@@ -913,7 +913,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
 					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Alaska-S38-NC</font>
+					<font>Font-Condensed-S38</font>
 					<align>left</align>
 					<scroll>false</scroll>
 				</control>
@@ -925,7 +925,7 @@
 					<label>$INFO[ListItem.Label2]</label>
 					<textcolor>black</textcolor>
 					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Alaska-S34-NC-B</font>
+					 <font>Font-Condensed-S34-B</font>
 					<align>right</align>
 					<scroll>false</scroll>
 				</control>
@@ -946,7 +946,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
 					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Alaska-S38-NC</font>
+					<font>Font-Condensed-S38</font>
 					<align>left</align>
 					<scroll>false</scroll>
 				</control>
@@ -958,7 +958,7 @@
 					<label>$INFO[ListItem.Label2]</label>
 					<textcolor>black</textcolor>
 					<shadowcolor>22000000</shadowcolor>
-					<font>Font-Alaska-S34-NC-B</font>
+					 <font>Font-Condensed-S34-B</font>
 					<align>right</align>
 					<scroll>false</scroll>
 				</control>
@@ -1037,7 +1037,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<font>Font-Alaska-S34-NC</font>
+				<font>Font-Condensed-S34</font>
 				<align>left</align>
 				<scroll>false</scroll>
 			</control>
@@ -1049,7 +1049,7 @@
 				<label>$INFO[ListItem.Property(Duration)]</label>
 				<textcolor>black</textcolor>
 				<shadowcolor>22000000</shadowcolor>
-				<font>Font-Alaska-S30-NC-B</font>
+				<font>Font-Condensed-S30-B</font>
 				<align>right</align>
 				<scroll>false</scroll>
 			</control>
@@ -1093,7 +1093,7 @@
 					<height>66</height>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S38-NC</font>
+					<font>Font-Condensed-S38</font>
 					<align>left</align>
 				</control>
 				<control type="label">
@@ -1103,7 +1103,7 @@
 					<height>66</height>
 					<label>$INFO[ListItem.Label2]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S34-NC</font>
+					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<scroll>false</scroll>
 				</control>
@@ -1114,7 +1114,7 @@
 					<height>30</height>
 					<label>$INFO[ListItem.Property(Duration)]</label>
 					<textcolor>black</textcolor>
-					<font>Font-Alaska-S30-NC-B</font>
+					<font>Font-Condensed-S30-B</font>
 					<align>right</align>
 				</control>
 			</control>
@@ -1240,7 +1240,7 @@
 				<height>60</height>
 				<label>$LOCALIZE[41452]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S42-NC</font>
+				 <font>Font-Condensed-S42</font>
 				<align>center</align>
 			</control>
 		</control>
@@ -1372,7 +1372,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41440]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S36-NC</font>
+				 <font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1390,7 +1390,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41920]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S36-NC</font>
+				 <font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1408,7 +1408,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41441]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S36-NC</font>
+				 <font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1426,7 +1426,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41443]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S36-NC</font>
+				 <font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1445,7 +1445,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41444]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S36-NC</font>
+				 <font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1463,7 +1463,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41443]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S36-NC</font>
+				 <font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1481,7 +1481,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41441]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S36-NC</font>
+				 <font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1499,7 +1499,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41920]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S36-NC</font>
+				 <font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1560,7 +1560,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41441]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S45-NC</font>
+				 <font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1600,7 +1600,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41443]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S45-NC</font>
+				 <font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1640,7 +1640,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41920]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S45-NC</font>
+				 <font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1667,7 +1667,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41440]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S45-NC</font>
+				 <font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1694,7 +1694,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41444]</label>
 				<textcolor>black</textcolor>
-				<font>Font-Alaska-S45-NC</font>
+				 <font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1706,7 +1706,7 @@
 			<posy>241</posy>
 			<width>1700</width>
 			<label>[B]$INFO[System.Time][/B]</label>
-			<font>Font-Alaska-S34-NC</font>
+			<font>Font-Condensed-S34</font>
 			<textcolor>black</textcolor>
 			<align>right</align>
 			<scroll>false</scroll>
@@ -1717,7 +1717,7 @@
 			<posy>284</posy>
 			<height>30</height>
 			<width>640</width>
-			<font>Font-Alaska-S31-NC</font>
+			 <font>Font-Condensed-S31</font>
 			<urlset>1</urlset>
 			<textcolor>black</textcolor>
 			<shadowcolor>22000000</shadowcolor>

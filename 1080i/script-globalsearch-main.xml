@@ -41,7 +41,7 @@
                         <posy>0</posy>
                         <width>750</width>
                         <height>120</height>
-                        <font>Font-Alaska-S36-BL</font>
+                        <font>Font-Condensed-S36</font>
                         <textcolor>mod-infotags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
@@ -52,7 +52,7 @@
                         <posy>33</posy>
                         <width>750</width>
                         <height>120</height>
-                        <font>Font-Alaska-S28-L</font>
+                        <font>Font-Condensed-S28</font>
                         <textcolor>mod-infotags-l</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
@@ -155,7 +155,7 @@
                             <width min="50" max="750">auto</width>
                             <height>120</height>
                             <label>$LOCALIZE[283]: [B]$LOCALIZE[342][/B]</label>
-                            <font>Font-Alaska-S36-BL</font>
+                            <font>Font-Condensed-S36</font>
                             <textcolor>mod-infotags</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -169,7 +169,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(111).NumItems] $LOCALIZE[20338]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -179,7 +179,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(111).NumItems] $LOCALIZE[342]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -205,7 +205,7 @@
                             <width min="50" max="750">auto</width>
                             <height>120</height>
                             <label>$LOCALIZE[283]: [B]$LOCALIZE[20343][/B]</label>
-                            <font>Font-Alaska-S36-BL</font>
+                            <font>Font-Condensed-S36</font>
                             <textcolor>mod-infotags</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -219,7 +219,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(121).NumItems] $LOCALIZE[20364]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -229,7 +229,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(121).NumItems] $LOCALIZE[20343]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -255,7 +255,7 @@
                             <width min="50" max="750">auto</width>
                             <height>120</height>
                             <label>$LOCALIZE[283]: [B]$LOCALIZE[33054][/B]</label>
-                            <font>Font-Alaska-S36-BL</font>
+                            <font>Font-Condensed-S36</font>
                             <textcolor>mod-infotags</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -269,7 +269,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(131).NumItems] $LOCALIZE[20373]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -279,7 +279,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(131).NumItems] $LOCALIZE[33054]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -305,7 +305,7 @@
                             <width min="50" max="750">auto</width>
                             <height>120</height>
                             <label>$LOCALIZE[283]: [B]$LOCALIZE[20360][/B]</label>
-                            <font>Font-Alaska-S36-BL</font>
+                            <font>Font-Condensed-S36</font>
                             <textcolor>mod-infotags</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -319,7 +319,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(141).NumItems] $LOCALIZE[20359]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -329,7 +329,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(141).NumItems] $LOCALIZE[20360]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -355,7 +355,7 @@
                             <width min="50" max="750">auto</width>
                             <height>120</height>
                             <label>$LOCALIZE[283]: [B]$LOCALIZE[20389][/B]</label>
-                            <font>Font-Alaska-S36-BL</font>
+                            <font>Font-Condensed-S36</font>
                             <textcolor>mod-infotags</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -369,7 +369,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(151).NumItems] $LOCALIZE[20391]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -379,7 +379,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(151).NumItems] $LOCALIZE[20389]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -405,7 +405,7 @@
                             <width min="50" max="750">auto</width>
                             <height>120</height>
                             <label>$LOCALIZE[283]: [B]$LOCALIZE[133][/B]</label>
-                            <font>Font-Alaska-S36-BL</font>
+                            <font>Font-Condensed-S36</font>
                             <textcolor>mod-infotags</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -419,7 +419,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(161).NumItems] $LOCALIZE[557]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -429,7 +429,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(161).NumItems] $LOCALIZE[133]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -455,7 +455,7 @@
                             <width min="50" max="750">auto</width>
                             <height>120</height>
                             <label>$LOCALIZE[283]: [B]$LOCALIZE[132][/B]</label>
-                            <font>Font-Alaska-S36-BL</font>
+                            <font>Font-Condensed-S36</font>
                             <textcolor>mod-infotags</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -469,7 +469,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(171).NumItems] $LOCALIZE[558]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -479,7 +479,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(171).NumItems] $LOCALIZE[132]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -505,7 +505,7 @@
                             <width min="50" max="750">auto</width>
                             <height>120</height>
                             <label>$LOCALIZE[283]: [B]$LOCALIZE[134][/B]</label>
-                            <font>Font-Alaska-S36-BL</font>
+                            <font>Font-Condensed-S36</font>
                             <textcolor>mod-infotags</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -519,7 +519,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(181).NumItems] $LOCALIZE[179]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -529,7 +529,7 @@
                             <width min="50" max="400">auto</width>
                             <height>120</height>
                             <label>$INFO[Container(181).NumItems] $LOCALIZE[134]</label>
-                            <font>Font-Alaska-S28-L</font>
+                            <font>Font-Condensed-S28</font>
                             <textcolor>mod-infotags-l</textcolor>
                             <scroll>false</scroll>
                             <align>left</align>
@@ -597,7 +597,7 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -609,7 +609,7 @@
                                     <posy>529</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -673,7 +673,7 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -685,7 +685,7 @@
                                     <posy>529</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -786,7 +786,7 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -798,7 +798,7 @@
                                     <posy>529</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Studio), • ,]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -862,7 +862,7 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -874,7 +874,7 @@
                                     <posy>529</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year)]$INFO[ListItem.Property(Studio), • ,]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -975,7 +975,7 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -987,7 +987,7 @@
                                     <posy>529</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1045,7 +1045,7 @@
                                     <posy>493</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1057,7 +1057,7 @@
                                     <posy>529</posy>
                                     <width>280</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1150,7 +1150,7 @@
                                     <posy>283</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Property(Episode),,. ]$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1162,7 +1162,7 @@
                                     <posy>319</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1174,7 +1174,7 @@
                                     <posy>351</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Season),$LOCALIZE[20373] ,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1238,7 +1238,7 @@
                                     <posy>283</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Property(Episode),,. ]$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1250,7 +1250,7 @@
                                     <posy>319</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(TvShowTitle)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1262,7 +1262,7 @@
                                     <posy>351</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Season),$LOCALIZE[20373] ,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]$INFO[ListItem.Property(Rating), • ,]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1363,7 +1363,7 @@
                                     <posy>283</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1375,7 +1375,7 @@
                                     <posy>319</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year),,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1439,7 +1439,7 @@
                                     <posy>283</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1451,7 +1451,7 @@
                                     <posy>319</posy>
                                     <width>440</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year),,]$INFO[ListItem.Property(Duration), • , $LOCALIZE[12391]]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1552,7 +1552,7 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1564,7 +1564,7 @@
                                     <posy>429</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Artist_Genre)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1620,7 +1620,7 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1632,7 +1632,7 @@
                                     <posy>429</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Artist_Genre)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1725,7 +1725,7 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1737,7 +1737,7 @@
                                     <posy>429</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Genre)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1793,7 +1793,7 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1805,7 +1805,7 @@
                                     <posy>429</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Genre)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1898,7 +1898,7 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1910,7 +1910,7 @@
                                     <posy>429</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Album)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1922,7 +1922,7 @@
                                     <posy>461</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Artist)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1934,7 +1934,7 @@
                                     <posy>493</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -1990,7 +1990,7 @@
                                     <posy>393</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S29-BL</font>
+                                    <font>Font-Condensed-S29</font>
                                     <label>$INFO[ListItem.Label]</label>
                                     <textcolor>mod-infotags</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -2002,7 +2002,7 @@
                                     <posy>429</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Album)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -2014,7 +2014,7 @@
                                     <posy>461</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Artist)]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>
@@ -2026,7 +2026,7 @@
                                     <posy>493</posy>
                                     <width>340</width>
                                     <height>40</height>
-                                    <font>Font-Alaska-S28-L</font>
+                                    <font>Font-Condensed-S28</font>
                                     <label>$INFO[ListItem.Property(Year),, • ]$INFO[ListItem.Property(Duration),, $LOCALIZE[12391]]</label>
                                     <textcolor>mod-infotags-l</textcolor>
                                     <shadowcolor>mod-shadow</shadowcolor>

@@ -49,16 +49,6 @@
 						<colordiffuse>55ffffff</colordiffuse>
 					</control>
 					<control type="image">
-						<description>Border</description>
-						<posx>-4</posx>
-						<posy>-4</posy>
-						<width>512</width>
-						<height>127</height>
-						<texture border="25">views/newgloss/border.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>55ffffff</colordiffuse>
-					</control>
-					<control type="image">
 						<description>Banner</description>
 						<posx>6</posx>
 						<posy>6</posy>
@@ -89,15 +79,6 @@
 							<height>107</height>
 							<texture diffuse="views/newgloss/banner-diffuse.png">views/newgloss/info-gloss.png</texture>
 							<aspectratio align="left" aligny="top" scalediffuse="false">stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Border</description>
-							<posx>-4</posx>
-							<posy>-4</posy>
-							<width>512</width>
-							<height>127</height>
-							<texture border="25">views/newgloss/border.png</texture>
-							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
 				</focusedlayout>
@@ -133,15 +114,6 @@
 					<texture diffuse="views/newgloss/panel-fanart-diffuse.png">views/newgloss/info-gloss.png</texture>
 					<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
 				</control>
-				<control type="image">
-					<description>Border</description>
-					<posx>-4</posx>
-					<posy>-4</posy>
-					<width>848</width>
-					<height>484</height>
-					<texture border="25">views/newgloss/border.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
 				<control type="group">
 					<posy>472</posy>
 					<control type="label">
@@ -149,7 +121,7 @@
 						<posy>30</posy>
 						<width>790</width>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Font-Alaska-S32-BL</font>
+						<font>Font-Condensed-S32</font>
 						<textcolor>mod-infotags</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
@@ -160,7 +132,7 @@
 						<width>790</width>
 						<height>147</height>
 						<label>$INFO[ListItem.Plot]</label>
-						<font>Font-Alaska-S25-NC</font>
+						<font>Font-Condensed-S25</font>
 						<textcolor>mod-infotags</textcolor>
 						<align>justify</align>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
@@ -172,7 +144,7 @@
 						<width>790</width>
 						<height>147</height>
 						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
-						<font>Font-Alaska-S25-NC</font>
+						<font>Font-Condensed-S25</font>
 						<textcolor>mod-infotags</textcolor>
 						<align>justify</align>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
@@ -201,15 +173,6 @@
 					<height>702</height>
 					<texture diffuse="views/newgloss/panel-bigposter-diffuse.png">views/newgloss/gloss.png</texture>
 					<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
-				</control>
-				<control type="image">
-					<description>Border</description>
-					<posx>-10</posx>
-					<posy>-4</posy>
-					<width>512</width>
-					<height>722</height>
-					<texture border="25">views/newgloss/border.png</texture>
-					<aspectratio>stretch</aspectratio>
 				</control>
 			</control>
 		</control>

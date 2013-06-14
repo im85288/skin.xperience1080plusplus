@@ -30,7 +30,7 @@
 					<posy>0</posy>
 					<width>259</width>
 					<height>100</height>
-					<font>Font-Alaska-S52-BL</font>
+					<font>Font-Condensed-S52</font>
 					<textcolor>mod-infotags-l</textcolor>
 					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
@@ -55,7 +55,7 @@
 						<posy>0</posy>
 						<width min="100" max="259">auto</width>
 						<height>100</height>
-						<font>Font-Alaska-S52-BL</font>
+						<font>Font-Condensed-S52</font>
 						<textcolor>mod-infotags-d</textcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>

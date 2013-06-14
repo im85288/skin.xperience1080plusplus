@@ -36,7 +36,7 @@
                 <width>250</width>
                 <height>120</height>
                 <label>$LOCALIZE[42160]</label>
-                <font>Font-Alaska-S34-BL</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>mod-infotags</textcolor>
                 <scroll>false</scroll>
                 <align>left</align>
@@ -47,7 +47,7 @@
                 <width>250</width>
                 <height>120</height>
                 <label>$INFO[System.Date]</label>
-                <font>Font-Alaska-S28-L</font>
+                <font>Font-Condensed-S28</font>
                 <textcolor>mod-infotags-l</textcolor>
                 <scroll>false</scroll>
                 <align>left</align>
@@ -102,7 +102,7 @@
                                 <posy>287</posy>
                                 <width>440</width>
                                 <label>$VAR[TVGuideNextTitle2]</label>
-                                <font>Font-Alaska-S34-BL</font>
+                                <font>Font-Condensed-S34</font>
                                 <textcolor>mod-infotags</textcolor>
                                 <shadowcolor>mod-shadow</shadowcolor>
                                 <scroll>false</scroll>
@@ -113,7 +113,7 @@
                                 <posy>327</posy>
                                 <width>440</width>
                                 <label>$VAR[TVGuideShowName2]</label>
-                                <font>Font-Alaska-S32-BL</font>
+                                <font>Font-Condensed-S32</font>
                                 <textcolor>mod-infotags</textcolor>
                                 <shadowcolor>mod-shadow</shadowcolor>
                                 <scroll>false</scroll>
@@ -782,7 +782,7 @@
                     <width>300</width>
                     <height>100</height>
                     <label>$LOCALIZE[41600]</label>
-                    <font>Font-Alaska-S29-BL</font>
+                    <font>Font-Condensed-S29</font>
                     <textcolor>eewhite</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                 </control>

@@ -30,7 +30,7 @@
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[41507]</label>
-					<font>Font-Alaska-S29-BL</font>
+					<font>Font-Condensed-S29</font>
 					<textcolor>mod-infotags</textcolor>
 					<shadowcolor>mod-shadow</shadowcolor>
 					<include>Animation_ShutdownButton</include>
@@ -64,7 +64,7 @@
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[1036]</label>
-					<font>Font-Alaska-S29-BL</font>
+					<font>Font-Condensed-S29</font>
 					<textcolor>mod-infotags</textcolor>
 					<shadowcolor>mod-shadow</shadowcolor>
 					<include>Animation_FavButton</include>
@@ -99,7 +99,7 @@
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[41507]</label>
-					<font>Font-Alaska-S29-BL</font>
+					<font>Font-Condensed-S29</font>
 					<textcolor>eewhite</textcolor>
 					<shadowcolor>mod-shadow</shadowcolor>
 					<include>Animation_ShutdownButton</include>
@@ -133,7 +133,7 @@
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[1036]</label>
-					<font>Font-Alaska-S29-BL</font>
+					<font>Font-Condensed-S29</font>
 					<textcolor>eewhite</textcolor>
 					<shadowcolor>mod-shadow</shadowcolor>
 					<include>Animation_FavButton</include>

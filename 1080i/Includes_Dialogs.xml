@@ -1,6 +1,6 @@
 <includes>
 	<include name="DialogButtonDimensions">
-		<font>Font-Alaska-S25-L</font>
+		<font>Font-Condensed-S25</font>
 		<textcolor>mod-infotags-d</textcolor>
 		<focusedcolor>mod-infotags-d</focusedcolor>
 		<disabledcolor>mod-infotags-l</disabledcolor>
@@ -11,7 +11,7 @@
 		<height>100</height>
 	</include>
 	<include name="DialogButtonDimensionsRightAlign">
-		<font>Font-Alaska-S25-L</font>
+		<font>Font-Condensed-S25</font>
 		<textcolor>mod-infotags-d</textcolor>
 		<focusedcolor>mod-infotags-d</focusedcolor>
 		<disabledcolor>mod-infotags-l</disabledcolor>

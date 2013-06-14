@@ -259,13 +259,13 @@
 		<value condition="IsEmpty(Window.Property(ExtendPlot))">bbwhite</value>
 	</variable>
 	<include name="DialogHeaderMod">
-		<font>Font-Alaska-S34-L</font>
+		<font>Font-Condensed-S34</font>
 		<textcolor>mod-infotags-d</textcolor>
 	</include>
 	<!-- INCLUDES: Common Clearlogo and Ratings etc at bottom of screen -->
 	<include name="CommonClearLogoDetails">
 		<control type="group">
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>
@@ -300,7 +300,7 @@
 					<width>280</width>
 					<height>72</height>
 					<label>$VAR[BottomClearLogoText]</label>
-					<font>Font-Alaska-S38-BL</font>
+					<font>Font-Condensed-S38</font>
 					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
@@ -379,7 +379,7 @@
 						<width>220</width>
 						<height>52</height>
 						<label>$LOCALIZE[20457]</label>
-						<font>Font-Alaska-S25-BL</font>
+						<font>Font-Condensed-S25</font>
 						<textcolor>mod-infotags</textcolor>
 						<scroll>false</scroll>
 						<align>center</align>
@@ -443,7 +443,7 @@
 						<posy>34</posy>
 						<width>85</width>
 						<label>Genre</label>
-						<font>Font-Alaska-S25-BL</font>
+						<font>Font-Condensed-S25</font>
 						<textcolor>mod-infotags-alt</textcolor>
 						<scroll>false</scroll>
 						<align>center</align>
@@ -463,8 +463,204 @@
 						<posy>34</posy>
 						<width>205</width>
 						<label>$INFO[ListItem.Genre]</label>
-						<font>Font-Alaska-S25-BL</font>
+						<font>Font-Condensed-S25</font>
 						<textcolor>mod-infotags</textcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<wrapmultiline>false</wrapmultiline>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
+			</animation>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
+			</animation>
+			<control type="group">
+				<posx>760</posx>
+				<control type="image">
+					<posx>1</posx>
+					<posy>171r</posy>
+					<width>400</width>
+					<height>155</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture>$VAR[ClearLogosVar]</texture>
+					<colordiffuse>cc000000</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>172r</posy>
+					<width>400</width>
+					<height>155</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture>$VAR[ClearLogosVar]</texture>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>115r</posy>
+					<width>280</width>
+					<height>72</height>
+					<label>$VAR[BottomClearLogoText]</label>
+					<font>Font-Condensed-S38</font>
+					<textcolor>darkerbackground</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+					<aligny>center</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+				</control>
+			</control>
+			<control type="group">
+				<posx>100</posx>
+				<posy>950</posy>
+				<control type="group">
+					<visible>[Container.Content(Episodes) | Container.Content(Movies)]</visible>
+					<posx>210</posx>
+					<control type="image">
+						<posx>0</posx>
+						<posy>22</posy>
+						<width>100</width>
+						<height>52</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
+					</control>
+					<control type="image">
+						<posx>7</posx>
+						<posy>22</posy>
+						<width>92</width>
+						<height>52</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagHDSD]</texture>
+						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="image">
+						<posx>13</posx>
+						<posy>28</posy>
+						<width>82</width>
+						<height>38</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>flags/other/set-info.png</texture>
+						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>22</posy>
+						<width>245</width>
+						<height>52</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
+					</control>
+					<control type="image">
+						<posx>128</posx>
+						<posy>22</posy>
+						<width>90</width>
+						<height>52</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$VAR[AeonFlagVideoCodec]</texture>
+						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="image">
+						<posx>228</posx>
+						<posy>22</posy>
+						<width>90</width>
+						<height>52</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$VAR[AeonFlagAudioCodec]</texture>
+						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+					<control type="label">
+						<posx>108</posx>
+						<posy>22</posy>
+						<width>220</width>
+						<height>52</height>
+						<label>$LOCALIZE[20457]</label>
+						<font>Font-Condensed-S25</font>
+						<textcolor>darkerbackground</textcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<wrapmultiline>false</wrapmultiline>
+						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+					</control>
+				</control>
+				<!-- RATING AND STUDIO -->
+				<control type="group">
+					<control type="image">
+						<posx>0</posx>
+						<posy>22</posy>
+						<width>100</width>
+						<height>52</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
+					</control>
+					<control type="image">
+						<posx>7</posx>
+						<posy>22</posy>
+						<width>92</width>
+						<height>52</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagStudio]</texture>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>22</posy>
+						<width>100</width>
+						<height>52</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
+					</control>
+					<control type="image">
+						<posx>100</posx>
+						<posy>22</posy>
+						<width>94</width>
+						<height>52</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture>$VAR[AeonFlagRating]</texture>
+					</control>
+				</control>
+				<!-- TV GENRES -->
+				<control type="group">
+					<visible>![Container.Content(Episodes) | Container.Content(Movies)]</visible>
+					<control type="image">
+						<posx>210</posx>
+						<posy>22</posy>
+						<width>100</width>
+						<height>52</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
+					</control>
+					<control type="label">
+						<posx>220</posx>
+						<posy>34</posy>
+						<width>85</width>
+						<label>Genre</label>
+						<font>Font-Condensed-S25</font>
+						<textcolor>darkerbackground</textcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<wrapmultiline>false</wrapmultiline>
+					</control>
+					<control type="image">
+						<posx>310</posx>
+						<posy>22</posy>
+						<width>245</width>
+						<height>52</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
+					</control>
+					<control type="label">
+						<posx>328</posx>
+						<posy>34</posy>
+						<width>205</width>
+						<label>$INFO[ListItem.Genre]</label>
+						<font>Font-Condensed-S25</font>
+						<textcolor>darkerbackground</textcolor>
 						<scroll>false</scroll>
 						<align>center</align>
 						<wrapmultiline>false</wrapmultiline>
@@ -476,6 +672,7 @@
 	<!-- INCLUDES: MUSIC Common Clearlogo and Ratings etc at bottom of screen -->
 	<include name="MusicCommonClearLogoDetails">
 		<control type="group">
+			<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>
@@ -510,7 +707,7 @@
 					<width>480</width>
 					<height>72</height>
 					<label>$VAR[MusicBottomClearLogoText]</label>
-					<font>Font-Alaska-S38-BL</font>
+					<font>Font-Condensed-S38</font>
 					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
@@ -553,8 +750,93 @@
 					<posy>984</posy>
 					<width>400</width>
 					<label>$VAR[MusicBottomGenre]</label>
-					<font>Font-Alaska-S25-BL</font>
+					<font>Font-Condensed-S25</font>
 					<textcolor>mod-infotags</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+					<wrapmultiline>false</wrapmultiline>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<animation type="Visible" reversible="false">
+				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
+			</animation>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
+			</animation>
+			<control type="group">
+				<posx>732</posx>
+				<control type="image" id="89456">
+					<posx>91</posx>
+					<posy>127r</posy>
+					<width>280</width>
+					<height>92</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
+					<colordiffuse>ee000000</colordiffuse>
+				</control>
+				<control type="image" id="89456">
+					<posx>90</posx>
+					<posy>128r</posy>
+					<width>280</width>
+					<height>92</height>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
+				</control>
+				<control type="label">
+					<posx>-5</posx>
+					<posy>115r</posy>
+					<width>480</width>
+					<height>72</height>
+					<label>$VAR[MusicBottomClearLogoText]</label>
+					<font>Font-Condensed-S38</font>
+					<textcolor>darkerbackground</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+					<aligny>center</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<visible>StringCompare(Control.GetLabel(89456),blank.png)</visible>
+				</control>
+			</control>
+			<!-- LEFT SIDE -->
+			<control type="group">
+				<posx>100</posx>
+				<control type="image">
+					<posx>0</posx>
+					<posy>972</posy>
+					<width>120</width>
+					<height>52</height>
+					<aspectratio>stretch</aspectratio>
+					<texture border="20,5,20,5">aeonflags/posters/left.png</texture>
+				</control>
+				<control type="image">
+					<posx>120</posx>
+					<posy>972</posy>
+					<width>435</width>
+					<height>52</height>
+					<aspectratio>stretch</aspectratio>
+					<texture border="20,5,20,5">aeonflags/posters/right.png</texture>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>975</posy>
+					<width>110</width>
+					<height>48</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
+				</control>
+				<control type="label">
+					<posx>137</posx>
+					<posy>984</posy>
+					<width>400</width>
+					<label>$VAR[MusicBottomGenre]</label>
+					<font>Font-Condensed-S25</font>
+					<textcolor>darkerbackground</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<wrapmultiline>false</wrapmultiline>

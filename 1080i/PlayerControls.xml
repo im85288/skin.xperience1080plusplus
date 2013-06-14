@@ -308,7 +308,7 @@
                         <height>60</height>
                         <label fallback=" 0">$INFO[Window(Home).Property(Movies.Count)]</label>
                         <textcolor>black</textcolor>
-                        <font>Font-Alaska-S41-NC</font>
+                        <font>Font-Condensed-S41</font>
                         <align>right</align>
                     </control>
                     <control type="image">
@@ -331,7 +331,7 @@
                         <height>60</height>
                         <label fallback=" 0">$INFO[Window(Home).Property(TVShows.Count)]</label>
                         <textcolor>black</textcolor>
-                        <font>Font-Alaska-S41-NC</font>
+                        <font>Font-Condensed-S41</font>
                         <align>right</align>
                     </control>
                     <control type="image">
@@ -354,7 +354,7 @@
                         <height>60</height>
                         <label fallback=" 0">$INFO[Window(Home).Property(Music.SongsCount)]</label>
                         <textcolor>black</textcolor>
-                       <font>Font-Alaska-S41-NC</font>
+                       <font>Font-Condensed-S41</font>
                         <align>right</align>
                     </control>
                     <control type="image">

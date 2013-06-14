@@ -38,7 +38,7 @@
 					<height>40</height>
 					<width>338</width>
 					<align>right</align>
-					<font>Font-Alaska-S25-BL</font>
+					<font>Font-Condensed-S25</font>
 					<label>$LOCALIZE[42130]</label>
 					<textcolor>mod-infotags</textcolor>
 					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
@@ -50,20 +50,12 @@
 					<height>40</height>
 					<width>338</width>
 					<align>right</align>
-					<font>Font-Alaska-S25-L</font>
+					<font>Font-Condensed-S25</font>
 					<label>$LOCALIZE[42130]</label>
 					<textcolor>darkerbackground</textcolor>
 					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<!-- Panel -->
-				<control type="image">
-					<posx>160</posx>
-					<posy>262</posy>
-					<height>645</height>
-					<width>1601</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<animation effect="fade" end="100" start="0" time="300" delay="350">WindowOpen</animation>
-				</control>
 				<control type="image">
 					<posx>164</posx>
 					<posy>265</posy>
@@ -187,7 +179,7 @@
 					<height>40</height>
 					<width>450</width>
 					<align>left</align>
-					<font>Font-Alaska-S25-BL</font>
+					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
 					<textcolor>mod-infotags</textcolor>
 					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
@@ -199,7 +191,7 @@
 					<height>40</height>
 					<width>450</width>
 					<align>left</align>
-					<font>Font-Alaska-S25-L</font>
+					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
 					<textcolor>darkerbackground</textcolor>
 					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
@@ -385,28 +377,6 @@
 						<width>1210</width>
 						<include>SettingsCategoryDefaultButtonVars</include>
 						<onup>1013</onup>
-						<ondown>10032</ondown>
-					</control>
-					<control type="radiobutton" id="10034">
-						<width>1210</width>
-						<include>SettingsCategoryRadioButtonVars</include>
-						<selected>Skin.HasSetting(BackgroundOpacity)</selected>
-						<onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
-						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
-						<onclick>Skin.Reset(LessBackgroundOpacity)</onclick>
-						<label>Show more background</label>
-						<onup>10033</onup>
-						<ondown>10032</ondown>
-					</control>
-					<!-- <control type="radiobutton" id="10032"> <width>1210</width> <include>SettingsCategoryRadioButtonVars</include> <selected>Skin.HasSetting(MoreBackgroundOpacity)</selected> <onclick>Skin.ToggleSetting(MoreBackgroundOpacity)</onclick> <onclick>Skin.Reset(LessBackgroundOpacity)</onclick> <label>Show even more background</label> <visible>Skin.HasSetting(BackgroundOpacity)</visible> <onup>10032</onup> <ondown>10040</ondown> </control> -->
-					<control type="radiobutton" id="10040">
-						<width>1210</width>
-						<include>SettingsCategoryRadioButtonVars</include>
-						<selected>Skin.HasSetting(LessBackgroundOpacity)</selected>
-						<onclick>Skin.ToggleSetting(LessBackgroundOpacity)</onclick>
-						<onclick>Skin.Reset(BackgroundOpacity)</onclick>
-						<label>Show darker background on home screen</label>
-						<onup>10040</onup>
 						<ondown>1001</ondown>
 					</control>
 				</control>
@@ -517,6 +487,14 @@
 						<selected>!Skin.HasSetting(HideHomeProfileInfo)</selected>
 						<onclick>Skin.ToggleSetting(HideHomeProfileInfo)</onclick>
 						<label>$LOCALIZE[41134]</label>
+					</control>
+					<control type="radiobutton" id="2015">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(BlacksPrograms)</selected>
+						<onclick>Skin.ToggleSetting(BlacksPrograms)</onclick>
+						<visible>!Skin.HasSetting(HomePrograms)</visible>
+						<label>Show alternate apps layout</label>
 					</control>
 					<control type="radiobutton" id="2004">
 						<width>1210</width>
@@ -899,11 +877,38 @@
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Yellow Tiles)">Skin.SetString(weathercolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Black Tiles)">Skin.SetString(weathercolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),White Tiles)">Skin.SetString(weathercolor.name,Black Tiles)</onclick>
-						<onclick condition="stringcompare(Skin.String(weathercolorname),Cyan Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(weathercolor.name),Cyan Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Magenta Tiles)">Skin.SetString(weathercolor.name,Cyan Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Grey Tiles)">Skin.SetString(weathercolor.name,Magenta Tiles)</onclick>
 						<label>$LOCALIZE[24027]</label>
 						<label2>$INFO[Skin.String(weathercolor.name)]</label2>
+					</control>
+					<control type="button" id="10093">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Grey Tiles)">Skin.SetString(settingscolor.name,Magenta Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Lime Tiles)">Skin.SetString(settingscolor.name,Grey Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Green Tiles)">Skin.SetString(settingscolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Blue Tiles)">Skin.SetString(settingscolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Red Tiles)">Skin.SetString(settingscolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Pink Tiles)">Skin.SetString(settingscolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Purple Tiles)">Skin.SetString(settingscolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Orange Tiles)">Skin.SetString(settingscolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Yellow Tiles)">Skin.SetString(settingscolor.name,Orange Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Black Tiles)">Skin.SetString(settingscolor.name,Yellow Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),White Tiles)">Skin.SetString(settingscolor.name,Black Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Cyan Tiles)">Skin.SetString(settingscolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Magenta Tiles)">Skin.SetString(settingscolor.name,Cyan Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingscolor.name),Grey Tiles)">Skin.SetString(settingscolor.name,Magenta Tiles)</onclick>
+						<label>$LOCALIZE[5]</label>
+						<label2>$INFO[Skin.String(settingscolor.name)]</label2>
 					</control>
 					<control type="button" id="10012">
 						<posx>0</posx>
@@ -920,6 +925,7 @@
 						<onclick>Skin.SetString(weathercolor.name,Grey Tiles)</onclick>
 						<onclick>Skin.SetString(pvrcolor.name,Grey Tiles)</onclick>
 						<onclick>Skin.SetString(picturescolor.name,Grey Tiles)</onclick>
+						<onclick>Skin.SetString(settingscolor.name,Grey Tiles)</onclick>
 						<onclick>Skin.SetString(moviecolor.name,Blue Tiles)</onclick>
 						<onclick>Skin.SetString(tvcolor.name,Green Tiles)</onclick>
 						<onclick>Skin.SetString(musiccolor.name,Red Tiles)</onclick>
@@ -1156,6 +1162,33 @@
 						<label>$LOCALIZE[24027]</label>
 						<label2>$INFO[Skin.String(weatherbordercolor.name)]</label2>
 					</control>
+					<control type="button" id="90093">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include>SettingsCategoryDefaultButtonVars</include>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Grey TileBorder)">Skin.SetString(settingsbordercolor.name,Magenta TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Lime TileBorder)">Skin.SetString(settingsbordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Green TileBorder)">Skin.SetString(settingsbordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Blue TileBorder)">Skin.SetString(settingsbordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Red TileBorder)">Skin.SetString(settingsbordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Pink TileBorder)">Skin.SetString(settingsbordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Purple TileBorder)">Skin.SetString(settingsbordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Orange TileBorder)">Skin.SetString(settingsbordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Yellow TileBorder)">Skin.SetString(settingsbordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Black TileBorder)">Skin.SetString(settingsbordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),White TileBorder)">Skin.SetString(settingsbordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Cyan TileBorder)">Skin.SetString(settingsbordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Magenta TileBorder)">Skin.SetString(settingsbordercolor.name,Cyan TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Grey TileBorder)">Skin.SetString(settingsbordercolor.name,Magenta TileBorder)</onclick>
+						<label>$LOCALIZE[5]</label>
+						<label2>$INFO[Skin.String(settingsbordercolor.name)]</label2>
+					</control>
 					<control type="button" id="90012">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -1171,6 +1204,7 @@
 						<onclick>Skin.SetString(weatherbordercolor.name,Grey TileBorder)</onclick>
 						<onclick>Skin.SetString(pvrbordercolor.name,Grey TileBorder)</onclick>
 						<onclick>Skin.SetString(picturesbordercolor.name,Grey TileBorder)</onclick>
+						<onclick>Skin.SetString(settingsbordercolor.name,Grey TileBorder)</onclick>
 						<onclick>Skin.SetString(moviebordercolor.name,Blue TileBorder)</onclick>
 						<onclick>Skin.SetString(tvbordercolor.name,Green TileBorder)</onclick>
 						<onclick>Skin.SetString(musicbordercolor.name,Red TileBorder)</onclick>
@@ -1184,6 +1218,23 @@
 					<onleft>30</onleft>
 					<include>SettingsCategoryGrouplistVars</include>
 					<visible>Container(30).HasFocus(33)</visible>
+					<control type="radiobutton" id="3021">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(BackgroundOpacity)</selected>
+						<onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
+						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
+						<onclick>Skin.Reset(LessBackgroundOpacity)</onclick>
+						<label>Show whiter background</label>
+					</control>
+					<control type="radiobutton" id="3022">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(LessBackgroundOpacity)</selected>
+						<onclick>Skin.ToggleSetting(LessBackgroundOpacity)</onclick>
+						<onclick>Skin.Reset(BackgroundOpacity)</onclick>
+						<label>Show darker background</label>
+					</control>
 					<control type="radiobutton" id="3001">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>

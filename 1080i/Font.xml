@@ -1,6 +1,11 @@
 <fonts>
 	<fontset id="Default" unicode="true">
 		<font>
+			<name>Font-Condensed-S18</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
 			<name>Font-Condensed-S20</name>
 			<filename>OpenSansCond.ttf</filename>
 			<size>20</size>
@@ -57,6 +62,12 @@
 			<name>Font-Condensed-S28</name>
 			<filename>OpenSansCond.ttf</filename>
 			<size>28</size>
+		</font>
+		<font>
+			<name>Font-Condensed-S28-B</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>28</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>Font-Condensed-S29</name>
@@ -223,6 +234,11 @@
 			<style>bold</style>
 		</font>
 		<font>
+			<name>Font-Condensed-S52</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>52</size>
+		</font>
+		<font>
 			<name>Font-Condensed-S52-B</name>
 			<filename>OpenSansCond.ttf</filename>
 			<size>52</size>
@@ -237,6 +253,17 @@
 			<name>Font-Condensed-S60</name>
 			<filename>OpenSansCond.ttf</filename>
 			<size>60</size>
+		</font>
+		<font>
+			<name>Font-Condensed-S64</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>64</size>
+		</font>
+		<font>
+			<name>Font-Condensed-S64-B</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>64</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>Font-Condensed-S72</name>

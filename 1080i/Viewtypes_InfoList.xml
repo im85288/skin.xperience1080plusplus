@@ -324,7 +324,7 @@
 						<posx>30</posx>
 						<posy>603</posy>
 						<width>516</width>
-						<font>Font-Alaska-S32-NC</font>
+						<font>Font-Condensed-S32</font>
 						<label>$INFO[Container(552).ListItem.Duration,, $LOCALIZE[12391]]</label>
 						<textcolor>eewhite</textcolor>
 						<scroll>false</scroll>
@@ -334,7 +334,7 @@
 						<posx>30</posx>
 						<posy>603</posy>
 						<width>516</width>
-						<font>Font-Alaska-S32-NC</font>
+						<font>Font-Condensed-S32</font>
 						<label>$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
 						<textcolor>eewhite</textcolor>
 						<scroll>false</scroll>
@@ -399,7 +399,7 @@
 						<posy>587</posy>
 						<width>590</width>
 						<height>58</height>
-						<font>Font-Alaska-S32-NC-B</font>
+						<font>Font-Condensed-S32-B</font>
 						<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
 						<textcolor>eewhite</textcolor>
 						<scroll>false</scroll>
@@ -474,7 +474,7 @@
 						<posy>593</posy>
 						<width>590</width>
 						<height>58</height>
-						<font>Font-Alaska-S32-NC-B</font>
+						<font>Font-Condensed-S32-B</font>
 						<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
 						<textcolor>eewhite</textcolor>
 						<scroll>false</scroll>
@@ -553,7 +553,7 @@
 								<posy>0</posy>
 								<height>60</height>
 								<width>670</width>
-								<font>Font-Alaska-S29-NC</font>
+								<font>Font-Condensed-S29</font>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>mod-infotags</textcolor>
 								<scroll>false</scroll>
@@ -562,7 +562,7 @@
 								<posx>690</posx>
 								<width>670</width>
 								<height>58</height>
-								<font>Font-Alaska-S31-NC</font>
+								<font>Font-Condensed-S31</font>
 								<label>$INFO[ListItem.Label2]</label>
 								<textcolor>mod-infotags</textcolor>
 								<scroll>false</scroll>
@@ -572,7 +572,7 @@
 								<posx>603</posx>
 								<width>670</width>
 								<height>58</height>
-								<font>Font-Alaska-S31-NC</font>
+								<font>Font-Condensed-S31</font>
 								<label>$INFO[ListItem.Label2]</label>
 								<textcolor>mod-infotags</textcolor>
 								<scroll>false</scroll>
@@ -585,7 +585,7 @@
 								<posx>690</posx>
 								<width>590</width>
 								<height>58</height>
-								<font>Font-Alaska-S31-NC</font>
+								<font>Font-Condensed-S31</font>
 								<label fallback="•••">$INFO[ListItem.Rating]</label>
 								<textcolor>mod-infotags</textcolor>
 								<scroll>false</scroll>
@@ -616,7 +616,7 @@
 								<posy>0</posy>
 								<height>60</height>
 								<width>590</width>
-								<font>Font-Alaska-S29-NC</font>
+								<font>Font-Condensed-S29</font>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>mod-infotags</textcolor>
 								<scroll>false</scroll>
@@ -625,7 +625,7 @@
 								<posx>46</posx>
 								<width>100</width>
 								<height>58</height>
-								<font>Font-Alaska-S31-NC</font>
+								<font>Font-Condensed-S31</font>
 								<label fallback="••••">$INFO[ListItem.Year]</label>
 								<align>center</align>
 								<textcolor>mod-infotags</textcolor>
@@ -636,7 +636,7 @@
 								<posx>46</posx>
 								<width>100</width>
 								<height>58</height>
-								<font>Font-Alaska-S31-NC</font>
+								<font>Font-Condensed-S31</font>
 								<label fallback="••••">$INFO[Window(home).Property(Set.Movie.1.Year)]</label>
 								<align>center</align>
 								<textcolor>mod-infotags</textcolor>
@@ -647,7 +647,7 @@
 								<posx>690</posx>
 								<width>590</width>
 								<height>58</height>
-								<font>Font-Alaska-S31-NC</font>
+								<font>Font-Condensed-S31</font>
 								<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
 								<textcolor>mod-infotags</textcolor>
 								<scroll>false</scroll>
@@ -698,7 +698,7 @@
 									<posx>575</posx>
 									<width>59</width>
 									<height>60</height>
-									<font>Font-Alaska-S26-NC</font>
+									<font>Font-Condensed-S26</font>
 									<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 									<textcolor>mod-infotags</textcolor>
 									<align>center</align>
@@ -719,7 +719,7 @@
 								<posy>0</posy>
 								<height>60</height>
 								<width>560</width>
-								<font>Font-Alaska-S29-NC</font>
+								<font>Font-Condensed-S29</font>
 								<label>$INFO[ListItem.Label]</label>
 								<textcolor>mod-infotags</textcolor>
 								<scroll>false</scroll>
@@ -749,7 +749,7 @@
 									<posx>622</posx>
 									<width>59</width>
 									<height>60</height>
-									<font>Font-Alaska-S26-NC</font>
+									<font>Font-Condensed-S26</font>
 									<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 									<textcolor>mod-infotags</textcolor>
 									<align>center</align>
@@ -785,7 +785,7 @@
 									<posy>0</posy>
 									<height>60</height>
 									<width>670</width>
-									<font>Font-Alaska-S29-NC</font>
+									<font>Font-Condensed-S29</font>
 									<label>$INFO[ListItem.Label]</label>
 									<textcolor>mod-infotags</textcolor>
 								</control>
@@ -793,7 +793,7 @@
 									<posx>690</posx>
 									<width>670</width>
 									<height>58</height>
-									<font>Font-Alaska-S31-NC</font>
+									<font>Font-Condensed-S31</font>
 									<label>$INFO[ListItem.Label2]</label>
 									<textcolor>mod-infotags</textcolor>
 									<scroll>false</scroll>
@@ -804,7 +804,7 @@
 									<posx>603</posx>
 									<width>670</width>
 									<height>58</height>
-									<font>Font-Alaska-S31-NC</font>
+									<font>Font-Condensed-S31</font>
 									<label>$INFO[ListItem.Label2]</label>
 									<textcolor>mod-infotags</textcolor>
 									<scroll>false</scroll>
@@ -817,7 +817,7 @@
 									<posx>690</posx>
 									<width>590</width>
 									<height>58</height>
-									<font>Font-Alaska-S31-NC</font>
+									<font>Font-Condensed-S31</font>
 									<label fallback="•••">$INFO[ListItem.Rating]</label>
 									<textcolor>mod-infotags</textcolor>
 									<scroll>false</scroll>
@@ -887,7 +887,7 @@
 									<posy>0</posy>
 									<height>60</height>
 									<width>590</width>
-									<font>Font-Alaska-S29-NC</font>
+									<font>Font-Condensed-S29</font>
 									<label>$INFO[ListItem.Label]</label>
 									<textcolor>eewhite</textcolor>
 									<visible>Container.Content(Movies) | !Skin.HasSetting(ShowBanner)</visible>
@@ -896,7 +896,7 @@
 									<posx>46</posx>
 									<width>100</width>
 									<height>58</height>
-									<font>Font-Alaska-S31-NC</font>
+									<font>Font-Condensed-S31</font>
 									<label fallback="••••">$INFO[ListItem.Year]</label>
 									<align>center</align>
 									<textcolor>eewhite</textcolor>
@@ -907,7 +907,7 @@
 									<posx>46</posx>
 									<width>100</width>
 									<height>58</height>
-									<font>Font-Alaska-S31-NC</font>
+									<font>Font-Condensed-S31</font>
 									<label fallback="••••">$INFO[Window(home).Property(Set.Movie.1.Year)]</label>
 									<align>center</align>
 									<textcolor>eewhite</textcolor>
@@ -918,7 +918,7 @@
 									<posx>690</posx>
 									<width>590</width>
 									<height>58</height>
-									<font>Font-Alaska-S31-NC</font>
+									<font>Font-Condensed-S31</font>
 									<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
 									<textcolor>eewhite</textcolor>
 									<scroll>false</scroll>
@@ -969,7 +969,7 @@
 										<posx>575</posx>
 										<width>59</width>
 										<height>60</height>
-										<font>Font-Alaska-S26-NC</font>
+										<font>Font-Condensed-S26</font>
 										<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 										<textcolor>eewhite</textcolor>
 										<align>center</align>
@@ -1019,7 +1019,7 @@
 									<posy>0</posy>
 									<height>60</height>
 									<width>560</width>
-									<font>Font-Alaska-S29-NC</font>
+									<font>Font-Condensed-S29</font>
 									<label>$INFO[ListItem.Label]</label>
 									<textcolor>mod-infotags</textcolor>
 									<visible>Control.HasFocus(552) + !Skin.HasSetting(ShowBanner)</visible>
@@ -1049,7 +1049,7 @@
 										<posx>622</posx>
 										<width>59</width>
 										<height>60</height>
-										<font>Font-Alaska-S26-NC</font>
+										<font>Font-Condensed-S26</font>
 										<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 										<textcolor>mod-infotags</textcolor>
 										<align>center</align>

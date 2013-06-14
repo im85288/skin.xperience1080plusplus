@@ -47,24 +47,6 @@
 						<aspect>keepaspect</aspect>
 						<texture>$INFO[ListItem.Overlay,overlays/aeon/,]</texture>
 					</control>
-					<control type="image">
-						<description>Left Border</description>
-						<posx>31</posx>
-						<posy>25</posy>
-						<width>540</width>
-						<height>376</height>
-						<texture border="25">views/newgloss/border-left.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<description>Right Border</description>
-						<posx>571</posx>
-						<posy>25</posy>
-						<width>1080</width>
-						<height>376</height>
-						<texture border="25">views/newgloss/border-right-no.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
 					<control type="group">
 						<posx>600</posx>
 						<control type="image">
@@ -90,7 +72,7 @@
 							<posy>60</posy>
 							<width>740</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S38-BL</font>
+							<font>Font-Condensed-S38</font>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -101,7 +83,7 @@
 							<posy>60</posy>
 							<width>744</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S38-BL</font>
+							<font>Font-Condensed-S38</font>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -121,7 +103,7 @@
 							<posx>27</posx>
 							<posy>110</posy>
 							<width>750</width>
-							<font>Font-Alaska-S25-BL</font>
+							<font>Font-Condensed-S25</font>
 							<label>$INFO[ListItem.Rating,, • ]$INFO[ListItem.Year]$INFO[ListItem.Studio, • ,]</label>
 							<textcolor>mod-infotags-li</textcolor>
 							<align>left</align>
@@ -133,7 +115,7 @@
 							<posy>142</posy>
 							<width>777</width>
 							<label>$INFO[ListItem.Genre]</label>
-							<font>Font-Alaska-S25-BL</font>
+							<font>Font-Condensed-S25</font>
 							<textcolor>mod-infotags-li</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -221,16 +203,6 @@
 							<visible>!Skin.HasSetting(BannerPlexLogos)</visible>
 						</control>
 						<control type="image">
-							<description>Border</description>
-							<posx>-7</posx>
-							<posy>-7</posy>
-							<width>520</width>
-							<height>115</height>
-							<texture border="25">views/newgloss/border.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<visible>!Skin.HasSetting(BannerPlexLogos)</visible>
-						</control>
-						<control type="image">
 							<description>Banner Shadow</description>
 							<posx>4</posx>
 							<posy>4</posy>
@@ -260,28 +232,64 @@
 							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
 							<visible>!Container.Content(Seasons)</visible>
 							<colordiffuse>mod-infotags-a</colordiffuse>
+							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="image">
+							<posx>1278</posx>
+							<posy>23</posy>
+							<width>280</width>
+							<height>60</height>
+							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
+							<visible>!Container.Content(Seasons)</visible>
+							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
 							<description>Label</description>
 							<posx>527</posx>
 							<posy>20</posy>
 							<width>750</width>
-							<font>Font-Alaska-S34-BL</font>
+							<font>Font-Condensed-S34</font>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>mod-infotags-a</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<description>Label</description>
+							<posx>527</posx>
+							<posy>20</posy>
+							<width>750</width>
+							<font>Font-Condensed-S34</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>darkerbackground</textcolor>
+							<align>left</align>
+							<scroll>false</scroll>
+							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
 							<description>Rating / Year / Runtime Label</description>
 							<posx>527</posx>
 							<posy>54</posy>
 							<width>750</width>
-							<font>Font-Alaska-S25-BL</font>
+							<font>Font-Condensed-S25</font>
 							<label>$INFO[ListItem.Genre,, • ]$INFO[ListItem.Year]$INFO[ListItem.Studio, • ,]</label>
 							<textcolor>mod-infotags-a</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="label">
+							<description>Rating / Year / Runtime Label</description>
+							<posx>527</posx>
+							<posy>54</posy>
+							<width>750</width>
+							<font>Font-Condensed-S25</font>
+							<label>$INFO[ListItem.Genre,, • ]$INFO[ListItem.Year]$INFO[ListItem.Studio, • ,]</label>
+							<textcolor>darkerbackground</textcolor>
+							<align>left</align>
+							<scroll>false</scroll>
+							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="118">
@@ -317,16 +325,6 @@
 							<visible>!Skin.HasSetting(BannerPlexLogos)</visible>
 						</control>
 						<control type="image">
-							<description>Border</description>
-							<posx>-7</posx>
-							<posy>-7</posy>
-							<width>520</width>
-							<height>115</height>
-							<texture border="25">views/newgloss/border.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<visible>!Skin.HasSetting(BannerPlexLogos)</visible>
-						</control>
-						<control type="image">
 							<description>Banner</description>
 							<posx>4</posx>
 							<posy>4</posy>
@@ -355,28 +353,40 @@
 							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
 							<visible>!Container.Content(Seasons)</visible>
 							<colordiffuse>mod-infotags-d</colordiffuse>
+							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						</control>
+						<control type="image">
+							<posx>1278</posx>
+							<posy>23</posy>
+							<width>280</width>
+							<height>60</height>
+							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
+							<visible>!Container.Content(Seasons)</visible>
+							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
 							<description>Item Label</description>
 							<posx>527</posx>
 							<posy>20</posy>
 							<width>750</width>
-							<font>Font-Alaska-S34-BL</font>
+							<font>Font-Condensed-S34</font>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>mod-infotags-d</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
 							<description>Rating / Year / Runtime Label</description>
 							<posx>527</posx>
 							<posy>54</posy>
 							<width>750</width>
-							<font>Font-Alaska-S25-BL</font>
+							<font>Font-Condensed-S25</font>
 							<label>$INFO[ListItem.Genre,, • ]$INFO[ListItem.Year]$INFO[ListItem.Studio, • ,]</label>
-							<textcolor>mod-infotags</textcolor>
+							<textcolor>darkerbackground</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
+							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 					</focusedlayout>
 				</control>

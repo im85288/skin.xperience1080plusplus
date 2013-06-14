@@ -178,7 +178,7 @@
                     <width>300</width>
                     <height>100</height>
                     <label>$LOCALIZE[41600]</label>
-                    <font>Font-Alaska-S29-BL</font>
+                    <font>Font-Condensed-S29</font>
                     <textcolor>eewhite</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                 </control>
@@ -199,7 +199,7 @@
                     <width>300</width>
                     <height>100</height>
                     <label>$LOCALIZE[42021]</label>
-                    <font>Font-Alaska-S29-BL</font>
+                    <font>Font-Condensed-S29</font>
                     <textcolor>eewhite</textcolor>
                     <shadowcolor>22000000</shadowcolor>
                 </control>

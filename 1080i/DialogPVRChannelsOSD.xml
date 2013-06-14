@@ -47,7 +47,7 @@
 					<height>38</height>
 					<align>left</align>
 					<label>$INFO[System.Time]</label>
-					<font>Font-Alaska-S36-BL</font>
+					<font>Font-Condensed-S36</font>
 					<textcolor>black</textcolor>
 					66000000
 				</control>
@@ -243,7 +243,7 @@
 							<posy>0</posy>
 							<width>587</width>
 							<height>95</height>
-							<font>Font-Alaska-S50-L</font>
+							<font>Font-Condensed-S50</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
 							<textcolor>black</textcolor>
@@ -257,7 +257,7 @@
 							<posy>0</posy>
 							<width>587</width>
 							<height>95</height>
-							<font>Font-Alaska-S50-L</font>
+							<font>Font-Condensed-S50</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
 							<textcolor>black</textcolor>
@@ -271,7 +271,7 @@
 							<posy>0</posy>
 							<width>539</width>
 							<height>95</height>
-							<font>Font-Alaska-S50-L</font>
+							<font>Font-Condensed-S50</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
 							<textcolor>black</textcolor>
@@ -285,7 +285,7 @@
 							<posy>0</posy>
 							<width>539</width>
 							<height>95</height>
-							<font>Font-Alaska-S50-L</font>
+							<font>Font-Condensed-S50</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
 							<textcolor>black</textcolor>
@@ -367,8 +367,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>blue</textcolor>
+								<selectedcolor>blue</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -395,8 +395,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>blue</textcolor>
+								<selectedcolor>blue</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -490,11 +490,11 @@
 								<posy>0</posy>
 								<width>587</width>
 								<height>95</height>
-								<font>Font-Alaska-S50-L</font>
+								<font>Font-Condensed-S50</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>blue</textcolor>
+								<selectedcolor>blue</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.isPlaying</visible>
 							</control>
@@ -504,7 +504,7 @@
 								<posy>0</posy>
 								<width>587</width>
 								<height>95</height>
-								<font>Font-Alaska-S50-LB</font>
+								<font>Font-Condensed-S50-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
 								<textcolor>black</textcolor>
@@ -518,7 +518,7 @@
 								<posy>0</posy>
 								<width>539</width>
 								<height>95</height>
-								<font>Font-Alaska-S50-L</font>
+								<font>Font-Condensed-S50</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
 								<textcolor>eewhite</textcolor>
@@ -532,7 +532,7 @@
 								<posy>0</posy>
 								<width>539</width>
 								<height>95</height>
-								<font>Font-Alaska-S50-LB</font>
+								<font>Font-Condensed-S50-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
 								<textcolor>eewhite</textcolor>

@@ -182,7 +182,7 @@
 							<height>25</height>
 							<label>$INFO[Player.Time(hh:mm:ss)]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34</font>
+							<font>Font-Condensed-S34</font>
 							<align>left</align>
 						</control>
 						<control type="label">
@@ -193,7 +193,7 @@
 							<height>25</height>
 							<label>$INFO[System.Time(hh:mm)]$INFO[Player.FinishTime(hh:mm), / ,]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34</font>
+							<font>Font-Condensed-S34</font>
 							<align>left</align>
 						</control>
 						<control type="label">
@@ -204,7 +204,7 @@
 							<height>25</height>
 							<label>$INFO[Player.Duration(hh:mm:ss)]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34</font>
+							<font>Font-Condensed-S34</font>
 							<align>left</align>
 						</control>
 						<control type="label">
@@ -215,7 +215,7 @@
 							<height>25</height>
 							<label>$INFO[Player.Time(hh:mm:ss)]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34</font>
+							<font>Font-Condensed-S34</font>
 							<align>left</align>
 						</control>
 						<control type="label">
@@ -226,7 +226,7 @@
 							<height>25</height>
 							<label>$INFO[Player.Duration(hh:mm:ss)]</label>
 							<textcolor>black</textcolor>
-							<font>Font-Alaska-S34</font>
+							<font>Font-Condensed-S34</font>
 							<align>left</align>
 						</control>
 						<control type="group">
@@ -247,7 +247,7 @@
 								<align>center</align>
 								<aligny>top</aligny>
 								<label>$LOCALIZE[112]</label>
-								<font>Font-Alaska-S38-BL</font>
+								<font>Font-Condensed-S38</font>
 								<shadowcolor>88e5e5e5</shadowcolor>
 								<textcolor>black</textcolor>
 								<visible>Player.Paused</visible>
@@ -308,7 +308,7 @@
 									<height>42</height>
 									<align>right</align>
 									<label>$LOCALIZE[21396]: $INFO[Player.Chapter]$INFO[Player.ChapterCount, / ]</label>
-									<font>Font-Alaska-S38-L</font>
+									<font>Font-Condensed-S38</font>
 									<shadowcolor>88e5e5e5</shadowcolor>
 									<textcolor>black</textcolor>
 									<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
@@ -377,7 +377,7 @@
 								<height>56</height>
 								<label>[UPPERCASE]$INFO[VideoPlayer.Title][/UPPERCASE]</label>
 								<textcolor>black</textcolor>
-								<font>Font-Alaska-S50-BL</font>
+								<font>Font-Condensed-S50</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -416,7 +416,7 @@
 								<height>56</height>
 								<label>Press Up for Plot</label>
 								<textcolor>darkgrey</textcolor>
-								<font>Font-Alaska-S28-L</font>
+								<font>Font-Condensed-S28</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -436,7 +436,7 @@
 								<label>$INFO[VideoPlayer.Country,[COLOR=midgrey]$LOCALIZE[574] [/COLOR],]</label>
 								<label>$INFO[VideoPlayer.Year,[COLOR=midgrey]$LOCALIZE[562] [/COLOR],]</label>
 								<textcolor>blue</textcolor>
-								<font>Font-Alaska-S45-NC</font>
+								<font>Font-Condensed-S45</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -518,7 +518,7 @@
 									<height>42</height>
 									<align>right</align>
 									<label>$LOCALIZE[21396]: $INFO[Player.Chapter]$INFO[Player.ChapterCount, / ]</label>
-									<font>Font-Alaska-S38-L</font>
+									<font>Font-Condensed-S38</font>
 									<shadowcolor>88e5e5e5</shadowcolor>
 									<textcolor>black</textcolor>
 									<visible>player.chaptercount + ![Player.Forwarding | Player.Rewinding]</visible>
@@ -544,7 +544,7 @@
 								<height>56</height>
 								<label>$INFO[VideoPlayer.Title]</label>
 								<textcolor>black</textcolor>
-								<font>Font-Alaska-S50-BL</font>
+								<font>Font-Condensed-S50</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -567,7 +567,7 @@
 								<height>56</height>
 								<label>$INFO[VideoPlayer.TVShowTitle]</label>
 								<textcolor>black</textcolor>
-								<font>Font-Alaska-S45-L</font>
+								<font>Font-Condensed-S45</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -581,7 +581,7 @@
 								<height>56</height>
 								<label>Press Up for Plot</label>
 								<textcolor>darkgrey</textcolor>
-								<font>Font-Alaska-S28-L</font>
+								<font>Font-Condensed-S28</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -604,7 +604,7 @@
 								<label>$INFO[VideoPlayer.Year,[COLOR=midgrey]$LOCALIZE[562] [/COLOR],]</label>
 								<label>$INFO[VideoPlayer.PlotOutline,[COLOR=midgrey]$LOCALIZE[203] [/COLOR],]</label>
 								<textcolor>blue</textcolor>
-								<font>Font-Alaska-S45-NC</font>
+								<font>Font-Condensed-S45</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -667,7 +667,7 @@
 								<height>100</height>
 								<label>[UPPERCASE]$INFO[VideoPlayer.ChannelName, ,][/UPPERCASE]</label>
 								<textcolor>eewhite</textcolor>
-								<font>Font-Alaska-S38-L</font>
+								<font>Font-Condensed-S38</font>
 								<align>center</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -679,7 +679,7 @@
 								<height>100</height>
 								<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]</label>
 								<textcolor>eewhite</textcolor>
-								<font>Font-Alaska-S40-L</font>
+								<font>Font-Condensed-S40</font>
 								<align>center</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -693,7 +693,7 @@
 								<height>56</height>
 								<label>$INFO[VideoPlayer.Title]</label>
 								<textcolor>black</textcolor>
-								<font>Font-Alaska-S45-BL</font>
+								<font>Font-Condensed-S45</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -707,7 +707,7 @@
 								<height>56</height>
 								<label>$INFO[VideoPlayer.NextTitle]</label>
 								<textcolor>darkgrey2</textcolor>
-								<font>Font-Alaska-S45-L</font>
+								<font>Font-Condensed-S45</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -720,8 +720,8 @@
 								<width>300</width>
 								<height>38</height>
 								<align>right</align>
-								<label>$INFO[System.Time]$INFO[VideoPlayer.EndTime, - ,]</label>
-								<font>Font-Alaska-S45</font>
+								<label>$INFO[System.Time]$INFO[VideoPlayer.EndTime, → ,]</label>
+								<font>Font-Condensed-S45</font>
 								<textcolor>black</textcolor>
 								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible>
 							</control>
@@ -732,7 +732,7 @@
 								<height>56</height>
 								<label>Press Up for Next</label>
 								<textcolor>darkgrey</textcolor>
-								<font>Font-Alaska-S28-L</font>
+								<font>Font-Condensed-S28</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -745,7 +745,7 @@
 								<posy>345</posy>
 								<width>1400</width>
 								<height>56</height>
-								<font>Font-Alaska-S35-NC</font>
+								<font>Font-Condensed-S35</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<label>$INFO[VideoPlayer.Genre,[COLOR=midgrey]$LOCALIZE[515] [/COLOR],]</label>
@@ -776,8 +776,8 @@
 									<width>540</width>
 									<height>38</height>
 									<align>left</align>
-									<label>$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, - ,]</label>
-									<font>Font-Alaska-S45</font>
+									<label>$INFO[VideoPlayer.NextStartTime]$INFO[VideoPlayer.NextEndTime, → ,]</label>
+									<font>Font-Condensed-S45</font>
 									<textcolor>black</textcolor>
 									<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + !IsEmpty(Window(seekbar).Property(ShowNext))</visible>
 								</control>
@@ -872,7 +872,7 @@
 								<height>56</height>
 								<label>$INFO[VideoPlayer.Title]</label>
 								<textcolor>eewhite</textcolor>
-								<font>Font-Alaska-S50-L</font>
+								<font>Font-Condensed-S50</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
@@ -884,7 +884,7 @@
 								<height>44</height>
 								<label>$INFO[Player.FolderPath]</label>
 								<textcolor>eewhite</textcolor>
-								<font>Font-Alaska-S36-L</font>
+								<font>Font-Condensed-S36</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>

@@ -47,7 +47,7 @@
 					<height>38</height>
 					<align>left</align>
 					<label>$INFO[System.Time]</label>
-					<font>Font-Alaska-S36-BL</font>
+					<font>Font-Condensed-S36</font>
 					<textcolor>black</textcolor>
 					66000000
 				</control>

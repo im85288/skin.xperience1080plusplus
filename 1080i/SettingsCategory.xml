@@ -33,7 +33,7 @@
 					<height>40</height>
 					<width>338</width>
 					<align>right</align>
-					<font>Font-Alaska-S25-BL</font>
+					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
 					<textcolor>mod-infotags</textcolor>
 					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
@@ -45,20 +45,12 @@
 					<height>40</height>
 					<width>338</width>
 					<align>right</align>
-					<font>Font-Alaska-S25-BL</font>
+					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
 					<textcolor>eewhite</textcolor>
 					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<!-- Panel -->
-				<control type="image">
-					<posx>160</posx>
-					<posy>262</posy>
-					<height>645</height>
-					<width>1601</width>
-					<texture border="25">views/newgloss/border-glass.png</texture>
-					<animation effect="fade" end="100" start="0" time="300" delay="350">WindowOpen</animation>
-				</control>
 				<control type="image">
 					<posx>164</posx>
 					<posy>265</posy>
@@ -96,7 +88,7 @@
 					<height>40</height>
 					<width>338</width>
 					<align>left</align>
-					<font>Font-Alaska-S25-BL</font>
+					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
 					<textcolor>mod-infotags</textcolor>
 					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
@@ -108,7 +100,7 @@
 					<height>40</height>
 					<width>338</width>
 					<align>left</align>
-					<font>Font-Alaska-S25-BL</font>
+					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
 					<textcolor>eewhite</textcolor>
 					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>

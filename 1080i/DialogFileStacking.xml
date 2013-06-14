@@ -21,7 +21,7 @@
             <posx>791</posx>
             <posy>368</posy>
             <width>338</width>
-            <font>Font-Alaska-S28-L</font>
+           <font>Font-Condensed-S28</font>
             <label>$INFO[ListItem.Label]</label>
             <textcolor>mod-infotags</textcolor>
             <align>center</align>

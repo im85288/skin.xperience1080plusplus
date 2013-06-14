@@ -81,7 +81,7 @@
 							<posy>221</posy>
 							<width>350</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>ddwhite</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<scroll>false</scroll>
@@ -152,24 +152,6 @@
 							<height>210</height>
 							<texture diffuse="views/newgloss/landscape.png">views/newgloss/info-gloss.png</texture>
 							<aspectratio align="right" aligny="top" scalediffuse="false">keep</aspectratio>
-						</control>
-						<control type="image">
-							<description>Border Top</description>
-							<posx>-10</posx>
-							<posy>-10</posy>
-							<width>394</width>
-							<height>220</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Border Bottom</description>
-							<posx>-10</posx>
-							<posy>210</posy>
-							<width>394</width>
-							<height>271</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
 				</itemlayout>
@@ -246,7 +228,7 @@
 							<posy>221</posy>
 							<width>350</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>ddwhite</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<scroll>false</scroll>
@@ -317,24 +299,6 @@
 							<height>210</height>
 							<texture diffuse="views/newgloss/landscape.png">views/newgloss/info-gloss.png</texture>
 							<aspectratio align="right" aligny="top" scalediffuse="false">keep</aspectratio>
-						</control>
-						<control type="image">
-							<description>Border Top</description>
-							<posx>-10</posx>
-							<posy>-10</posy>
-							<width>394</width>
-							<height>220</height>
-							<texture border="25">views/newgloss/border-top.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Border Bottom</description>
-							<posx>-10</posx>
-							<posy>210</posy>
-							<width>394</width>
-							<height>271</height>
-							<texture border="25">views/newgloss/border-bottom-no.png</texture>
-							<aspectratio>stretch</aspectratio>
 						</control>
 					</control>
 				</focusedlayout>

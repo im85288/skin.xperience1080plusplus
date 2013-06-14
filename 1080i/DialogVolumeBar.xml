@@ -45,7 +45,7 @@
                         <width>750</width>
                         <height>100</height>
                         <label>$INFO[Player.Volume]</label>
-                        <font>Font-Alaska-S32-BL</font>
+                       <font>Font-Condensed-S32</font>
                         <textcolor>mod-infotags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
@@ -60,7 +60,7 @@
                         <width>750</width>
                         <height>100</height>
                         <label>$LOCALIZE[29802]</label>
-                        <font>Font-Alaska-S32-BL</font>
+                        <font>Font-Condensed-S32</font>
                         <textcolor>mod-infotags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>

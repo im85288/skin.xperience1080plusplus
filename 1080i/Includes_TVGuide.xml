@@ -333,7 +333,7 @@
         <width>490</width>
         <height>84</height>
         <align>left</align>
-        <font>Font-Alaska-S34-BL</font>
+        <font>Font-Condensed-S34</font>
         <textcolor>mod-infotags</textcolor>
         <disabledcolor>mod-infotags-l</disabledcolor>
         <shadowcolor>mod-shadow</shadowcolor>
@@ -373,7 +373,7 @@
                 <posy>287</posy>
                 <width>440</width>
                 <label>$INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
-                <font>Font-Alaska-S34-BL</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>mod-infotags</textcolor>
                 <shadowcolor>mod-shadow</shadowcolor>
                 <scroll>false</scroll>
@@ -384,7 +384,7 @@
                 <posy>327</posy>
                 <width>440</width>
                 <label>$INFO[ListItem.Label]$INFO[ListItem.Property(Premiered), (,)]</label>
-                <font>Font-Alaska-S28-L</font>
+                <font>Font-Condensed-S28</font>
                 <textcolor>mod-infotags</textcolor>
                 <shadowcolor>mod-shadow</shadowcolor>
                 <scroll>false</scroll>
@@ -403,7 +403,7 @@
                 <posy>401</posy>
                 <width>383</width>
                 <label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), $LOCALIZE[42162] ,]</label>
-                <font>Font-Alaska-S32-BL</font>
+                <font>Font-Condensed-S32</font>
                 <textcolor>mod-infotags</textcolor>
                 <shadowcolor>mod-shadow</shadowcolor>
                 <scroll>false</scroll>
@@ -469,7 +469,7 @@
                 <posy>287</posy>
                 <width>440</width>
                 <label>$INFO[ListItem.Property(NextNumber),, ]$INFO[ListItem.Property(NextTitle)]</label>
-                <font>Font-Alaska-S34-BL</font>
+                <font>Font-Condensed-S34</font>
                 <textcolor>mod-infotags</textcolor>
                 <shadowcolor>mod-shadow</shadowcolor>
                 <scroll>false</scroll>
@@ -480,7 +480,7 @@
                 <posy>327</posy>
                 <width>440</width>
                 <label>$INFO[ListItem.Label]$INFO[ListItem.Property(Premiered), (,)]</label>
-                <font>Font-Alaska-S28-L</font>
+                <font>Font-Condensed-S28</font>
                 <textcolor>mod-infotags</textcolor>
                 <shadowcolor>mod-shadow</shadowcolor>
                 <scroll>false</scroll>
@@ -499,7 +499,7 @@
                 <posy>401</posy>
                 <width>383</width>
                 <label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(Network), $LOCALIZE[42162] ,]</label>
-                <font>Font-Alaska-S32-BL</font>
+                <font>Font-Condensed-S32</font>
                 <textcolor>mod-infotags</textcolor>
                 <shadowcolor>mod-shadow</shadowcolor>
                 <scroll>false</scroll>
@@ -554,7 +554,7 @@
                         <width>500</width>
                         <height>120</height>
                         <label>$INFO[Window(Home).Property(NextAired.NextTitle)]</label>
-                        <font>Font-Alaska-S36-BL</font>
+                        <font>Font-Condensed-S36</font>
                         <textcolor>mod-infotags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
@@ -565,7 +565,7 @@
                         <width>500</width>
                         <height>120</height>
                         <label>$INFO[Window(Home).Property(NextAired.AirTime),, • ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
-                        <font>Font-Alaska-S28-L</font>
+                        <font>Font-Condensed-S28</font>
                         <textcolor>mod-infotags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
@@ -587,7 +587,7 @@
                         <width>500</width>
                         <height>120</height>
                         <label>$INFO[Window(Home).Property(NextAired.LatestTitle)]</label>
-                        <font>Font-Alaska-S36-BL</font>
+                        <font>Font-Condensed-S36</font>
                         <textcolor>mod-infotags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
@@ -598,7 +598,7 @@
                         <width>500</width>
                         <height>120</height>
                         <label>$INFO[Window(Home).Property(NextAired.Status),, • ]$INFO[Window(Home).Property(NextAired.LatestDate)]</label>
-                        <font>Font-Alaska-S28-L</font>
+                        <font>Font-Condensed-S28</font>
                         <textcolor>mod-infotags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>

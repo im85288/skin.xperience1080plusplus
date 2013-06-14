@@ -44,14 +44,6 @@
 					<texture diffuse="views/newgloss/banner-poster-diffuse.png">views/newgloss/gloss.png</texture>
 					<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
 				</control>
-				<control type="image">
-					<posx>-10</posx>
-					<posy>-10</posy>
-					<width>486</width>
-					<height>720</height>
-					<texture border="25">views/newgloss/border.png</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-				</control>
 			</control>
 			<control type="group">
 				<posx>535r</posx>
@@ -90,14 +82,6 @@
 					<texture diffuse="views/newgloss/banner-poster-diffuse.png">views/newgloss/gloss.png</texture>
 					<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
 				</control>
-				<control type="image">
-					<posx>-10</posx>
-					<posy>-10</posy>
-					<width>486</width>
-					<height>720</height>
-					<texture border="25">views/newgloss/border.png</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
-				</control>
 			</control>
 			<control type="fixedlist" id="60">
 				<posx>0</posx>
@@ -125,7 +109,7 @@
 							<posy>31</posy>
 							<width>705</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
@@ -136,7 +120,7 @@
 							<posy>31</posy>
 							<width>705</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-L</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>eewhite</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
@@ -147,7 +131,7 @@
 							<posy>13</posy>
 							<width>705</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
@@ -158,7 +142,7 @@
 							<posy>13</posy>
 							<width>705</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-L</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>eewhite</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
@@ -228,7 +212,7 @@
 							<posy>33</posy>
 							<width>370</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -240,7 +224,7 @@
 							<posy>33</posy>
 							<width>370</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -252,7 +236,7 @@
 							<posy>13</posy>
 							<width>480</width>
 							<label>$INFO[ListItem.Title]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -263,7 +247,7 @@
 							<posy>13</posy>
 							<width>480</width>
 							<label>$INFO[ListItem.Title]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -333,7 +317,7 @@
 							<posy>13</posy>
 							<width>480</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -345,7 +329,7 @@
 							<posy>13</posy>
 							<width>480</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -415,21 +399,12 @@
 							<texture diffuse="views/newgloss/banner-season-diffuse.png">views/newgloss/gloss.png</texture>
 							<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
 						</control>
-						<control type="image">
-							<description>Border</description>
-							<posx>25</posx>
-							<posy>25</posy>
-							<width>628</width>
-							<height>282</height>
-							<texture border="25">views/newgloss/border.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="label">
 							<posx>230</posx>
 							<posy>73</posy>
 							<width>520</width>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Font-Alaska-S32-BL</font>
+							<font>Font-Condensed-S32</font>
 							<textcolor>FF333333</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -517,24 +492,6 @@
 							<texture diffuse="views/newgloss/banner-episode-diffuse.png">views/newgloss/info-gloss.png</texture>
 							<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
 						</control>
-						<control type="image">
-							<description>Border Left</description>
-							<posx>25</posx>
-							<posy>25</posy>
-							<width>476</width>
-							<height>282</height>
-							<texture border="25">views/newgloss/border-left.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="image">
-							<description>Border Right</description>
-							<posx>501</posx>
-							<posy>25</posy>
-							<width>786</width>
-							<height>282</height>
-							<texture border="25">views/newgloss/border-right-no.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
 						<control type="group">
 							<posy>55</posy>
 							<posx>519</posx>
@@ -543,7 +500,7 @@
 								<posy>2</posy>
 								<width>690</width>
 								<label>$INFO[ListItem.Label]</label>
-								<font>Font-Alaska-S32-BL</font>
+								<font>Font-Condensed-S32</font>
 								<textcolor>FF333333</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -562,7 +519,7 @@
 								<posy>45</posy>
 								<width>670</width>
 								<label>$INFO[ListItem.Rating,, • ]$INFO[ListItem.date,$LOCALIZE[41805]: ,]</label>
-								<font>Font-Alaska-S28-L</font>
+								<font>Font-Condensed-S28</font>
 								<textcolor>FF484848</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -574,7 +531,7 @@
 								<posy>45</posy>
 								<width>670</width>
 								<label>$INFO[ListItem.Rating,, • ]$INFO[ListItem.Genre]</label>
-								<font>Font-Alaska-S28-L</font>
+								<font>Font-Condensed-S28</font>
 								<textcolor>FF484848</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>

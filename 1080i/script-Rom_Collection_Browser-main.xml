@@ -90,7 +90,7 @@
 				<width>230</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Property(maxplayers)]  Player</label>
-				<font>Font-Alaska-S32-BL</font>
+				<font>Font-Condensed-S32</font>
 				<textcolor>mod-infotags</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -146,7 +146,7 @@
 								<posy>13</posy>
 								<width>690</width>
 								<label>$INFO[ListItem.Label]</label>
-								<font>Font-Alaska-S32-BL</font>
+								<font>Font-Condensed-S32</font>
 								<textcolor>mod-infotags</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -156,7 +156,7 @@
 								<posy>51</posy>
 								<width>690</width>
 								<label>$INFO[ListItem.Property(console)]</label>
-								<font>Font-Alaska-S25-BL</font>
+								<font>Font-Condensed-S25</font>
 								<textcolor>mod-infotags-l</textcolor>
 								<scroll>false</scroll>
 								<align>left</align>
@@ -205,7 +205,7 @@
 									<posy>0</posy>
 									<width>690</width>
 									<label>$INFO[ListItem.Label]</label>
-									<font>Font-Alaska-S32-BL</font>
+									<font>Font-Condensed-S32</font>
 									<textcolor>FF333333</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
@@ -215,7 +215,7 @@
 									<posy>37</posy>
 									<width>690</width>
 									<label>$INFO[ListItem.Property(console)]</label>
-									<font>Font-Alaska-S25-BL</font>
+									<font>Font-Condensed-S25</font>
 									<textcolor>FF484848</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
@@ -225,7 +225,7 @@
 									<posy>62</posy>
 									<width>690</width>
 									<label>$INFO[ListItem.Property(publisher)] $INFO[ListItem.Property(year)]</label>
-									<font>Font-Alaska-S25-BL</font>
+									<font>Font-Condensed-S25</font>
 									<textcolor>FF484848</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
@@ -240,7 +240,7 @@
 									<align>justify</align>
 									<textcolor>FF484848</textcolor>
 									<autoscroll delay="13000" time="3000" repeat="13000" />
-									<font>Font-Alaska-S25-NC</font>
+									<font>Font-Condensed-S25</font>
 								</control>
 							</control>
 						</control>
@@ -378,7 +378,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S45-BL</font>
+								<font>Font-Condensed-S45</font>
 								<textcolor>mod-infotags</textcolor>
 								<info>ListItem.Label</info>
 								<scroll>false</scroll>
@@ -390,7 +390,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>mod-infotags-l</textcolor>
 								<label>$INFO[ListItem.Property(Publisher),,  •  ]$INFO[ListItem.Property(Genre)]</label>
 								<scroll>false</scroll>
@@ -401,7 +401,7 @@
 								<width>900</width>
 								<height>150</height>
 								<align>justify</align>
-								<font>Font-Alaska-S25-NC</font>
+								<font>Font-Condensed-S25</font>
 								<textcolor>mod-infotags</textcolor>
 								<label>$INFO[ListItem.Property(Plot)]</label>
 								<scroll>false</scroll>
@@ -442,7 +442,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S45-BL</font>
+								<font>Font-Condensed-S45</font>
 								<textcolor>mod-infotags</textcolor>
 								<info>ListItem.Label</info>
 								<scroll>false</scroll>
@@ -454,7 +454,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>mod-infotags-l</textcolor>
 								<label>$INFO[ListItem.Property(Publisher),,  •  ]$INFO[ListItem.Property(Genre),,  •  ]$INFO[ListItem.Property(console)]</label>
 								<scroll>false</scroll>
@@ -465,7 +465,7 @@
 								<width>900</width>
 								<height>150</height>
 								<align>justify</align>
-								<font>Font-Alaska-S25-NC</font>
+								<font>Font-Condensed-S25</font>
 								<textcolor>mod-infotags</textcolor>
 								<label>$INFO[ListItem.Property(Plot)]</label>
 								<scroll>false</scroll>
@@ -531,7 +531,7 @@
 						<width>300</width>
 						<align>left</align>
 						<label>$ADDON[script.games.rom.collection.browser 50006]</label>
-						<font>Font-Alaska-S45-BL</font>
+						<font>Font-Condensed-S45</font>
 						<textcolor>ffffffff</textcolor>
 						<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(500)">Conditional</animation>
 					</control>
@@ -555,7 +555,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="true">Conditional</animation>
@@ -570,7 +570,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>								
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(500)">Conditional</animation>
@@ -590,7 +590,7 @@
 						<width>300</width>
 						<align>left</align>
 						<label>$ADDON[script.games.rom.collection.browser 50001]</label>
-						<font>Font-Alaska-S45-BL</font>
+						<font>Font-Condensed-S45</font>
 						<textcolor>ffffffff</textcolor>
 						<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(600)">Conditional</animation>
 					</control>
@@ -614,7 +614,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="true">Conditional</animation>
@@ -629,7 +629,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(600)">Conditional</animation>
@@ -649,7 +649,7 @@
 						<width>300</width>
 						<align>left</align>
 						<label>$ADDON[script.games.rom.collection.browser 50000]</label>
-						<font>Font-Alaska-S45-BL</font>
+						<font>Font-Condensed-S45</font>
 						<textcolor>ffffffff</textcolor>
 						<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(700)">Conditional</animation>
 					</control>
@@ -673,7 +673,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="true">Conditional</animation>
@@ -688,7 +688,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>								
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(700)">Conditional</animation>
@@ -708,7 +708,7 @@
 						<width>300</width>
 						<align>left</align>
 						<label>$ADDON[script.games.rom.collection.browser 50002]</label>
-						<font>Font-Alaska-S45-BL</font>
+						<font>Font-Condensed-S45</font>
 						<textcolor>ffffffff</textcolor>
 						<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(800)">Conditional</animation>
 					</control>
@@ -732,7 +732,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="true">Conditional</animation>
@@ -747,7 +747,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>								
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(800)">Conditional</animation>
@@ -767,7 +767,7 @@
 						<width>300</width>
 						<align>left</align>
 						<label>$ADDON[script.games.rom.collection.browser 50007]</label>
-						<font>Font-Alaska-S45-BL</font>
+						<font>Font-Condensed-S45</font>
 						<textcolor>ffffffff</textcolor>
 						<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(900)">Conditional</animation>
 					</control>
@@ -791,7 +791,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="true">Conditional</animation>
@@ -806,7 +806,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>								
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(900)">Conditional</animation>
@@ -826,7 +826,7 @@
 						<width>300</width>
 						<align>left</align>
 						<label>Viewtype</label>
-						<font>Font-Alaska-S45-BL</font>
+						<font>Font-Condensed-S45</font>
 						<textcolor>ffffffff</textcolor>
 						<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(4900)">Conditional</animation>
 					</control>
@@ -850,7 +850,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="true">Conditional</animation>
@@ -865,7 +865,7 @@
 								<height>45</height>
 								<align>left</align>
 								<aligny>center</aligny>
-								<font>Font-Alaska-S29-BL</font>
+								<font>Font-Condensed-S29</font>
 								<textcolor>ffffffff</textcolor>								
 								<info>ListItem.Label</info>
 								<animation effect="fade" start="100" end="65" time="100" condition="!Control.HasFocus(4900)">Conditional</animation>

@@ -29,7 +29,7 @@
 					<width>180</width>
 					<height>100</height>
 					<label>$INFO[System.Time]</label>
-					<font>Font-Alaska-S29-BL</font>
+					<font>Font-Condensed-S29</font>
 					<textcolor>mod-infotags</textcolor>
 					<shadowcolor>mod-shadow</shadowcolor>
 					<align>right</align>
@@ -59,7 +59,7 @@
 					<width>180</width>
 					<height>100</height>
 					<label>$INFO[System.Time]</label>
-					<font>Font-Alaska-S29-BL</font>
+					<font>Font-Condensed-S29</font>
 					<textcolor>eewhite</textcolor>
 					<shadowcolor>mod-shadow</shadowcolor>
 					<align>right</align>
@@ -78,7 +78,7 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
 				</animation>
-				<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+				<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) + [!Skin.HasSetting(LessBackgroundOpacity)]</visible>
 				<control type="group">
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
 					<animation effect="slide" start="0" end="35" time="300" tween="sine" easing="inout" condition="![PVR.IsRecording | PVR.HasTimer] + !Window.IsActive(mutebug)">Conditional</animation>
@@ -115,8 +115,59 @@
 					<posy>984</posy>
 					<width>75</width>
 					<label>$VAR[SeasonalYear]</label>
-					<font>Font-Alaska-S25-BL</font>
+					<font>Font-Condensed-S25</font>
 					<textcolor>mod-infotags</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+					<wrapmultiline>false</wrapmultiline>
+				</control>
+			</control>
+			<control type="group">
+				<animation type="Visible" reversible="false">
+					<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
+				</animation>
+				<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
+				</animation>
+				<animation type="WindowClose" reversible="false">
+					<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
+				</animation>
+				<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) + [Skin.HasSetting(LessBackgroundOpacity)]</visible>
+				<control type="group">
+					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
+					<animation effect="slide" start="0" end="35" time="300" tween="sine" easing="inout" condition="![PVR.IsRecording | PVR.HasTimer] + !Window.IsActive(mutebug)">Conditional</animation>
+					<control type="image">
+						<posx>501r</posx>
+						<posy>966</posy>
+						<width>150</width>
+						<height>64</height>
+						<aspectratio align="right" aligny="top">keep</aspectratio>
+						<texture fallback="aeonflags/music/rating/rating0.png">$INFO[ListItem.StarRating,aeonflags/music/rating/,]</texture>
+					</control>
+					<control type="image">
+						<posx>495r</posx>
+						<posy>972</posy>
+						<width>141</width>
+						<height>52</height>
+						<aspectratio>stretch</aspectratio>
+						<texture>aeonflags/posters/imdb.png</texture>
+					</control>
+				</control>
+				<control type="image">
+					<posx>640r</posx>
+					<posy>972</posy>
+					<width>141</width>
+					<height>52</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>aeonflags/posters/top250.png</texture>
+				</control>
+				<control type="label">
+					<posx>586r</posx>
+					<posy>984</posy>
+					<width>75</width>
+					<label>$VAR[SeasonalYear]</label>
+					<font>Font-Condensed-S25</font>
+					<textcolor>darkerbackground</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<wrapmultiline>false</wrapmultiline>
@@ -150,8 +201,18 @@
 				<texture>windows/pvr/timer.png</texture>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<include>visiblehidefadeinfo</include>
-				<visible>!PVR.IsRecording + PVR.HasTimer</visible>
+				<visible>!PVR.IsRecording + PVR.HasTimer + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<colordiffuse>mod-infotags</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>174r</posx>
+				<posy>950</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>windows/pvr/timer.png</texture>
+				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
+				<include>visiblehidefadeinfo</include>
+				<visible>!PVR.IsRecording + PVR.HasTimer + Skin.HasSetting(LessBackgroundOpacity)</visible>
 			</control>
 			<control type="image">
 				<description>Mute</description>
@@ -161,8 +222,18 @@
 				<height>100</height>
 				<texture>overlays/volume/muted.png</texture>
 				<include>visiblehidefadeinfo</include>
-				<visible>Window.IsActive(mutebug)</visible>
+				<visible>Window.IsActive(mutebug) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<colordiffuse>mod-infotags-d</colordiffuse>
+			</control>
+			<control type="image">
+				<description>Mute</description>
+				<posx>174r</posx>
+				<posy>950</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>overlays/volume/muted.png</texture>
+				<include>visiblehidefadeinfo</include>
+				<visible>Window.IsActive(mutebug) + Skin.HasSetting(LessBackgroundOpacity)</visible>
 			</control>
 		</control>
 	</include>
@@ -177,6 +248,7 @@
 	<!-- Options Button -->
 	<include name="Common-Options">
 		<control type="group">
+			<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 			<description>Options Buttons</description>
 			<include>Animation_OptionsButton</include>
 			<posx>276</posx>
@@ -198,7 +270,28 @@
 				<colordiffuse>mod-infotags</colordiffuse>
 			</control>
 		</control>
-		
+		<control type="group">
+			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<description>Options Buttons</description>
+			<include>Animation_OptionsButton</include>
+			<posx>276</posx>
+			<posy>950</posy>
+			<animation effect="slide" start="0" end="-204" time="0" condition="Skin.HasSetting(HideShutdownButton)">Conditional</animation>
+			<control type="button" id="9010">
+				<description>Options Button</description>
+				<width>100</width>
+				<height>100</height>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onfocus>SetFocus(9111)</onfocus>
+				<!--<visible allowhiddenfocus="true">!Skin.HasSetting(HideOptionsButton)</visible> -->
+				<visible allowhiddenfocus="true">false</visible>
+			</control>
+		</control>
 	</include>
 	<!-- Shutdown Label -->
 	<include name="Common-ShutdownLabel">
@@ -237,7 +330,7 @@
 					<width>771</width>
 					<height>120</height>
 					<label>$VAR[NowPlayingTitle]</label>
-					<font>Font-Alaska-S36-BL</font>
+					<font>Font-Condensed-S36</font>
 					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
@@ -250,7 +343,7 @@
 					<width>771</width>
 					<height>120</height>
 					<label>$VAR[NowPlayingSubTitle]</label>
-					<font>Font-Alaska-S28-L</font>
+					<font>Font-Condensed-S28</font>
 					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
@@ -337,7 +430,7 @@
 					<width>771</width>
 					<height>120</height>
 					<label>$VAR[NowPlayingTitle]</label>
-					<font>Font-Alaska-S36-BL</font>
+					<font>Font-Condensed-S36</font>
 					<textcolor>eewhite</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
@@ -350,7 +443,7 @@
 					<width>771</width>
 					<height>120</height>
 					<label>$VAR[NowPlayingSubTitle]</label>
-					<font>Font-Alaska-S28-L</font>
+					<font>Font-Condensed-S28</font>
 					<textcolor>eewhite</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
