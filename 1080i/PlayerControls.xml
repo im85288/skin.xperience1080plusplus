@@ -307,7 +307,7 @@
                         <width>100</width>
                         <height>60</height>
                         <label fallback=" 0">$INFO[Window(Home).Property(Movies.Count)]</label>
-                        <textcolor>black</textcolor>
+                        <textcolor>eewhite</textcolor>
                         <font>Font-Condensed-S41</font>
                         <align>right</align>
                     </control>
@@ -317,7 +317,7 @@
                         <width>50</width>
                         <height>50</height>
                         <texture>osd/media-guide/settings/video.png</texture>
-                        <colordiffuse>black</colordiffuse>
+                        <colordiffuse>eewhite</colordiffuse>
                     </control>
                 </control>
                 
@@ -330,7 +330,7 @@
                         <width>100</width>
                         <height>60</height>
                         <label fallback=" 0">$INFO[Window(Home).Property(TVShows.Count)]</label>
-                        <textcolor>black</textcolor>
+                        <textcolor>eewhite</textcolor>
                         <font>Font-Condensed-S41</font>
                         <align>right</align>
                     </control>
@@ -340,7 +340,7 @@
                         <width>50</width>
                         <height>50</height>
                         <texture>osd/media-guide/settings/tvshows.png</texture>
-                        <colordiffuse>black</colordiffuse>
+                        <colordiffuse>eewhite</colordiffuse>
                     </control>
                 </control>
                 
@@ -353,7 +353,7 @@
                         <width>100</width>
                         <height>60</height>
                         <label fallback=" 0">$INFO[Window(Home).Property(Music.SongsCount)]</label>
-                        <textcolor>black</textcolor>
+                        <textcolor>eewhite</textcolor>
                        <font>Font-Condensed-S41</font>
                         <align>right</align>
                     </control>
@@ -363,7 +363,7 @@
                         <width>50</width>
                         <height>50</height>
                         <texture>osd/media-guide/settings/music.png</texture>
-                        <colordiffuse>black</colordiffuse>
+                        <colordiffuse>eewhite</colordiffuse>
                     </control>
                 </control>
             </control>

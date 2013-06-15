@@ -177,7 +177,7 @@
 				<width>698</width>
 				<height>66</height>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>black</textcolor>
+				<textcolor>eewhite</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<font>Font-Condensed-S41</font>
 				<align>left</align>
@@ -210,7 +210,6 @@
 				<height>66</height>
 				<label>$INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
-				<shadowcolor>22000000</shadowcolor>
 				<font>Font-Condensed-S41</font>
 				<align>left</align>
 				<include>guidelistfocusanim</include>
@@ -316,7 +315,7 @@
 				<width>50</width>
 				<height>50</height>
 				<texture>$INFO[ListItem.Icon]</texture>
-				<colordiffuse>black</colordiffuse>
+				<colordiffuse>eewhite</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>26</posx>
@@ -324,7 +323,7 @@
 				<width>698</width>
 				<height>66</height>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>black</textcolor>
+				<textcolor>eewhite</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<font>Font-Condensed-S41</font>
 				<align>left</align>
@@ -465,7 +464,7 @@
 				<width>698</width>
 				<height>66</height>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>black</textcolor>
+				<textcolor>eewhite</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<font>Font-Condensed-S38</font>
 				<align>left</align>
@@ -478,7 +477,7 @@
 					<width>105</width>
 					<height>105</height>
 					<texture>views/thumb/other/star_nofo.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>eewhite</colordiffuse>
 				</control>
 				<control type="label">
 					<posx>680</posx>
@@ -486,7 +485,7 @@
 					<width>55</width>
 					<height>66</height>
 					<label>$INFO[ListItem.property(rating)]</label>
-					<textcolor>black</textcolor>
+					<textcolor>eewhite</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 					<font>Font-Condensed-S30-B</font>
 					<align>right</align>
@@ -498,7 +497,7 @@
 				<width>75</width>
 				<height>66</height>
 				<label>$INFO[ListItem.property(year)]</label>
-				<textcolor>black</textcolor>
+				<textcolor>eewhite</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<font>Font-Condensed-S30-B</font>
 				<align>right</align>
@@ -911,7 +910,7 @@
 					<width>691</width>
 					<height>66</height>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>black</textcolor>
+					<textcolor>eewhite</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 					<font>Font-Condensed-S38</font>
 					<align>left</align>
@@ -923,9 +922,9 @@
 					<width>691</width>
 					<height>66</height>
 					<label>$INFO[ListItem.Label2]</label>
-					<textcolor>black</textcolor>
+					<textcolor>eewhite</textcolor>
 					<shadowcolor>22000000</shadowcolor>
-					 <font>Font-Condensed-S34-B</font>
+					<font>Font-Condensed-S34-B</font>
 					<align>right</align>
 					<scroll>false</scroll>
 				</control>
@@ -958,7 +957,7 @@
 					<label>$INFO[ListItem.Label2]</label>
 					<textcolor>black</textcolor>
 					<shadowcolor>22000000</shadowcolor>
-					 <font>Font-Condensed-S34-B</font>
+					<font>Font-Condensed-S34-B</font>
 					<align>right</align>
 					<scroll>false</scroll>
 				</control>
@@ -1027,7 +1026,7 @@
 				<width>50</width>
 				<height>50</height>
 				<texture>$INFO[ListItem.ActualIcon]</texture>
-				<colordiffuse>black</colordiffuse>
+				<colordiffuse>eewhite</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>70</posx>
@@ -1035,7 +1034,7 @@
 				<width>654</width>
 				<height>66</height>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>black</textcolor>
+				<textcolor>ewhite</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<font>Font-Condensed-S34</font>
 				<align>left</align>
@@ -1047,7 +1046,7 @@
 				<width>654</width>
 				<height>66</height>
 				<label>$INFO[ListItem.Property(Duration)]</label>
-				<textcolor>black</textcolor>
+				<textcolor>eewhite</textcolor>
 				<shadowcolor>22000000</shadowcolor>
 				<font>Font-Condensed-S30-B</font>
 				<align>right</align>
@@ -1231,7 +1230,7 @@
 				<width>633</width>
 				<height>437</height>
 				<texture>osd/media-guide/no-movies-music.png</texture>
-				<colordiffuse>black</colordiffuse>
+				<colordiffuse>eewhitw</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>0</posx>
@@ -1239,8 +1238,8 @@
 				<width>750</width>
 				<height>60</height>
 				<label>$LOCALIZE[41452]</label>
-				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S42</font>
+				<textcolor>eewhite</textcolor>
+				<font>Font-Condensed-S42</font>
 				<align>center</align>
 			</control>
 		</control>
@@ -1285,7 +1284,7 @@
 				<width>100</width>
 				<height>100</height>
 				<texture>$INFO[ListItem.Label,osd/media-guide/buttons/,-nf.png]</texture>
-				<colordiffuse>black</colordiffuse>
+				<colordiffuse>eewhite</colordiffuse>
 			</control>
 		</itemlayout>
 		<focusedlayout height="100" width="50">
@@ -1372,7 +1371,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41440]</label>
 				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S36</font>
+				<font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1390,7 +1389,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41920]</label>
 				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S36</font>
+				<font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1408,7 +1407,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41441]</label>
 				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S36</font>
+				<font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1426,7 +1425,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41443]</label>
 				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S36</font>
+				<font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1445,7 +1444,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41444]</label>
 				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S36</font>
+				<font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1463,7 +1462,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41443]</label>
 				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S36</font>
+				<font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1481,7 +1480,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41441]</label>
 				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S36</font>
+				<font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1499,7 +1498,7 @@
 				<height>50</height>
 				<label>$LOCALIZE[41920]</label>
 				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S36</font>
+				<font>Font-Condensed-S36</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1511,6 +1510,7 @@
 			<width>896</width>
 			<height>568</height>
 			<texture border="132,25,25,25">views/newgloss/whitepanel-15.png</texture>
+			<colordiffuse>mod-infotags</colordiffuse>
 		</control>
 		<control type="image">
 			<posx>539</posx>
@@ -1559,8 +1559,8 @@
 				<width>350</width>
 				<height>50</height>
 				<label>$LOCALIZE[41441]</label>
-				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S45</font>
+				<textcolor>eewhite</textcolor>
+				<font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1599,8 +1599,8 @@
 				<width>350</width>
 				<height>50</height>
 				<label>$LOCALIZE[41443]</label>
-				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S45</font>
+				<textcolor>eewhite</textcolor>
+				<font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1639,8 +1639,8 @@
 				<width>350</width>
 				<height>50</height>
 				<label>$LOCALIZE[41920]</label>
-				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S45</font>
+				<textcolor>eewhite</textcolor>
+				<font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1666,8 +1666,8 @@
 				<width>350</width>
 				<height>50</height>
 				<label>$LOCALIZE[41440]</label>
-				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S45</font>
+				<textcolor>eewhite</textcolor>
+				<font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1693,8 +1693,8 @@
 				<width>350</width>
 				<height>50</height>
 				<label>$LOCALIZE[41444]</label>
-				<textcolor>black</textcolor>
-				 <font>Font-Condensed-S45</font>
+				<textcolor>eewhite</textcolor>
+				<font>Font-Condensed-S45</font>
 				<align>center</align>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowOpen</animation>
 				<animation effect="rotate" start="0" end="-90" center="auto" time="0">WindowClose</animation>
@@ -1717,7 +1717,7 @@
 			<posy>284</posy>
 			<height>30</height>
 			<width>640</width>
-			 <font>Font-Condensed-S31</font>
+			<font>Font-Condensed-S31</font>
 			<urlset>1</urlset>
 			<textcolor>black</textcolor>
 			<shadowcolor>22000000</shadowcolor>
