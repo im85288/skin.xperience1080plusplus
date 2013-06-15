@@ -25,7 +25,7 @@
 					<control type="image">
 						<posx>13</posx>
 						<posy>-20</posy>
-						<height>726</height>
+						<height>716</height>
 						<width>590</width>
 						<texture border="35">views/newgloss/whitepanel-15.png</texture>
 					</control>
@@ -192,10 +192,23 @@
 					<width>300</width>
 					<height>30</height>
 					<font>Font-Condensed-S29</font>
-					<textcolor>black</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[Container.NumItems,, $LOCALIZE[19019]]</label>
+					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				</control>
+				<control type="label">
+					<posx>150</posx>
+					<posy>172</posy>
+					<width>300</width>
+					<height>30</height>
+					<font>Font-Condensed-S29</font>
+					<textcolor>darkerbackground</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container.NumItems,, $LOCALIZE[19019]]</label>
+					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<control type="label">
 					<posx>1010</posx>
@@ -203,9 +216,22 @@
 					<width>200</width>
 					<height>30</height>
 					<font>Font-Condensed-S29</font>
-					<textcolor>black</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
+					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<label>$INFO[Container(11).ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, → ,]</label>
+				</control>
+					<control type="label">
+					<posx>1010</posx>
+					<posy>172</posy>
+					<width>200</width>
+					<height>30</height>
+					<font>Font-Condensed-S29</font>
+					<textcolor>darkerbackground</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<label>$INFO[Container(11).ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, → ,]</label>
 				</control>
 				<control type="image">
