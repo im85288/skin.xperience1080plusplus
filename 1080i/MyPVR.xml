@@ -37,11 +37,25 @@
 					<width>200</width>
 					<height>30</height>
 					<font>Font-Condensed-S30-B</font>
-					<textcolor>99FFFFFF</textcolor>
-					<shadowcolor>55000000</shadowcolor>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[33061]</label>
+					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				</control>
+				<control type="label">
+					<posx>18</posx>
+					<posy>-38</posy>
+					<width>200</width>
+					<height>30</height>
+					<font>Font-Condensed-S30-B</font>
+					<textcolor>darkerbackground</textcolor>
+					<shadowcolor>darkerbackground</shadowcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[33061]</label>
+					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<control type="image">
 					<description>Panel</description>

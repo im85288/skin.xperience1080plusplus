@@ -28,7 +28,21 @@
 				<textcolor>mod-infotags</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
-				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog)</visible>
+				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<include>visiblehidefadeinfo</include>
+			</control>
+			<control type="label">
+				<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="150" easing="in">WindowOpen</animation>
+				<posx>118</posx>
+				<posy>51</posy>
+				<width>1684</width>
+				<height>100</height>
+				<label>$LOCALIZE[24000]: $INFO[ListItem.Property(Addon.Name)]</label>
+				<font>Font-Condensed-S64</font>
+				<textcolor>darkerbackground</textcolor>
+				<align>left</align>
+				<scroll>false</scroll>
+				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) + Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<include>visiblehidefadeinfo</include>
 			</control>
 			<control type="label">
@@ -42,7 +56,21 @@
 				<textcolor>mod-infotags</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
-				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)</visible>
+				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<include>visiblehidefadeinfo</include>
+			</control>
+			<control type="label">
+				<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="150" easing="in">WindowOpen</animation>
+				<posx>118</posx>
+				<posy>51</posy>
+				<width>932</width>
+				<height>100</height>
+				<label>$LOCALIZE[24000]: $INFO[ListItem.Property(Addon.Name)]</label>
+				<font>Font-Condensed-S64</font>
+				<textcolor>darkerbackground</textcolor>
+				<align>left</align>
+				<scroll>false</scroll>
+				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<include>visiblehidefadeinfo</include>
 			</control>
 			<control type="grouplist">
@@ -61,6 +89,20 @@
 					<label>$LOCALIZE[42131]</label>
 					<font>Font-Condensed-S38</font>
 					<textcolor>mod-infotags</textcolor>
+					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<align>left</align>
+					<scroll>false</scroll>
+					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Window.IsActive(textviewer)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>118</posx>
+					<posy>0</posy>
+					<height>60</height>
+					<width min="50" max="450">auto</width>
+					<label>$LOCALIZE[42131]</label>
+					<font>Font-Condensed-S38</font>
+					<textcolor>darkerbackground</textcolor>
+					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Window.IsActive(textviewer)">Conditional</animation>
@@ -77,7 +119,20 @@
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="!Window.IsActive(textviewer)">Conditional</animation>
-					<visible>Control.IsEnabled(10)</visible>
+					<visible>Control.IsEnabled(10) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				</control>
+				<control type="label">
+					<posx>118</posx>
+					<posy>0</posy>
+					<height>60</height>
+					<width min="50" max="450">auto</width>
+					<label>24036</label>
+					<font>Font-Condensed-S38</font>
+					<textcolor>darkerbackground</textcolor>
+					<align>left</align>
+					<scroll>false</scroll>
+					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="!Window.IsActive(textviewer)">Conditional</animation>
+					<visible>Control.IsEnabled(10) + Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 			</control>
 			<!-- Plot Stuff -->
@@ -224,6 +279,7 @@
 				</control>
 				<!-- Info -->
 				<control type="group">
+					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 					<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="150" easing="in">WindowOpen</animation>
 					<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
@@ -241,7 +297,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>[B]$LOCALIZE[146][/B]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -249,7 +305,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label fallback="416">$INFO[ListItem.Property(Addon.Type)]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -266,7 +322,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>[B]$LOCALIZE[21863]:[/B]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -276,7 +332,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label fallback="416">$INFO[ListItem.Property(Addon.Creator)]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -291,7 +347,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>[B]$LOCALIZE[24051][/B]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -299,7 +355,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label fallback="416">$INFO[ListItem.Property(Addon.Version)]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -314,7 +370,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>[B]$LOCALIZE[20037]:[/B]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -322,7 +378,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label fallback="416">$INFO[ListItem.Property(Addon.Summary)]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>no</scroll>
 						</control>
 					</control>
@@ -338,7 +394,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>[B]$LOCALIZE[21821][/B]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="textbox" id="400">
@@ -351,7 +407,7 @@
 							<include condition="!IsEmpty(ListItem.Property(Addon.Disclaimer)) + !IsEmpty(ListItem.Property(Addon.broken))">AddonDescHeight_3</include>
 							<font>Font-Condensed-S40</font>
 							<align>justify</align>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<label fallback="">$INFO[ListItem.Property(Addon.Description)]</label>
 							<autoscroll time="2000" delay="10000" repeat="10000" />
 							<visible>!IsEmpty(ListItem.Property(Addon.Description))</visible>
@@ -363,7 +419,7 @@
 							<font>Font-Condensed-S40</font>
 							<align>left</align>
 							<label>$LOCALIZE[42132]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<visible>IsEmpty(ListItem.Property(Addon.Description))</visible>
 						</control>
@@ -390,7 +446,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>[B]$LOCALIZE[24052][/B]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -400,7 +456,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -425,7 +481,7 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>[B]$LOCALIZE[24096][/B]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -435,7 +491,226 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(Addon.broken)]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
+							<scroll>false</scroll>
+						</control>
+					</control>
+				</control>
+				<!-- Info -->
+				<control type="group">
+					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="150" easing="in">WindowOpen</animation>
+					<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
+					<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
+					<posx>575</posx>
+					<posy>246</posy>
+					<width>1150</width>
+					<height>700</height>
+					<control type="grouplist">
+						<!-- Type -->
+						<width>1240</width>
+						<height>50</height>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<width min="140" max="200">auto</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>[B]$LOCALIZE[146][/B]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<width>1100</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label fallback="416">$INFO[ListItem.Property(Addon.Type)]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+					</control>
+					<control type="grouplist">
+						<!-- Author -->
+						<width>1240</width>
+						<height>50</height>
+						<posy>50</posy>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width min="140" max="200">auto</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>[B]$LOCALIZE[21863]:[/B]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<posx>110</posx>
+							<posy>0</posy>
+							<width>1100</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label fallback="416">$INFO[ListItem.Property(Addon.Creator)]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+					</control>
+					<control type="grouplist">
+						<!-- Version -->
+						<width>1240</width>
+						<height>50</height>
+						<posy>100</posy>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<width min="140" max="200">auto</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>[B]$LOCALIZE[24051][/B]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<width>1100</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label fallback="416">$INFO[ListItem.Property(Addon.Version)]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+					</control>
+					<control type="grouplist">
+						<!-- Summary -->
+						<width>1240</width>
+						<height>50</height>
+						<posy>150</posy>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<width min="140" max="200">auto</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>[B]$LOCALIZE[20037]:[/B]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<width>1100</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label fallback="416">$INFO[ListItem.Property(Addon.Summary)]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>no</scroll>
+						</control>
+					</control>
+					<control type="group">
+						<!-- Description -->
+						<width>1240</width>
+						<height>50</height>
+						<posy>225</posy>
+						<orientation>horizontal</orientation>
+						<control type="label">
+							<posy>0</posy>
+							<width>1240</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>[B]$LOCALIZE[21821][/B]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox" id="400">
+							<description>Description</description>
+							<posx>0</posx>
+							<posy>50</posy>
+							<width>1240</width>
+							<include condition="IsEmpty(ListItem.Property(Addon.Disclaimer)) + IsEmpty(ListItem.Property(Addon.broken))">AddonDescHeight_1</include>
+							<include condition="[!IsEmpty(ListItem.Property(Addon.Disclaimer)) + IsEmpty(ListItem.Property(Addon.broken))] | IsEmpty(ListItem.Property(Addon.Disclaimer)) + !IsEmpty(ListItem.Property(Addon.broken))">AddonDescHeight_2</include>
+							<include condition="!IsEmpty(ListItem.Property(Addon.Disclaimer)) + !IsEmpty(ListItem.Property(Addon.broken))">AddonDescHeight_3</include>
+							<font>Font-Condensed-S40</font>
+							<align>justify</align>
+							<textcolor>darkerbackground</textcolor>
+							<label fallback="">$INFO[ListItem.Property(Addon.Description)]</label>
+							<autoscroll time="2000" delay="10000" repeat="10000" />
+							<visible>!IsEmpty(ListItem.Property(Addon.Description))</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>50</posy>
+							<width>1240</width>
+							<font>Font-Condensed-S40</font>
+							<align>left</align>
+							<label>$LOCALIZE[42132]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+							<visible>IsEmpty(ListItem.Property(Addon.Description))</visible>
+						</control>
+					</control>
+					<control type="group">
+						<!-- Disclaimer -->
+						<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
+						<animation effect="slide" end="0,100" time="0" condition="IsEmpty(ListItem.Property(Addon.broken))">Conditional</animation>
+						<width>1240</width>
+						<height>50</height>
+						<posy>470</posy>
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<posx>-6</posx>
+							<posy>0</posy>
+							<width>84</width>
+							<height>84</height>
+							<texture>dialogs/addon-info/disclaimer.png</texture>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>5</posy>
+							<width>1150</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>[B]$LOCALIZE[24052][/B]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>46</posy>
+							<width>1150</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Property(Addon.Disclaimer)]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+					</control>
+					<control type="group">
+						<!-- Disclaimer -->
+						<visible>!IsEmpty(ListItem.Property(Addon.broken))</visible>
+						<width>1150</width>
+						<height>50</height>
+						<posy>570</posy>
+						<orientation>horizontal</orientation>
+						<control type="image">
+							<posx>-6</posx>
+							<posy>0</posy>
+							<width>84</width>
+							<height>84</height>
+							<texture>dialogs/addon-info/broken.png</texture>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>5</posy>
+							<width>1150</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>[B]$LOCALIZE[24096][/B]</label>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>46</posy>
+							<width>1150</width>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Property(Addon.broken)]</label>
+							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
