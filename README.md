@@ -1,6 +1,6 @@
 Xperience1080ArcticPlusPlus
 ====================
 
-A modification by im85288 of jurialmunkey's modification of Black's xperience1080 skin.
+A modification by im85288 of many of the versions of Xperience1080 plus additional features
 
 
