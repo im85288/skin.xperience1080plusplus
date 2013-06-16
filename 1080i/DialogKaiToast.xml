@@ -43,7 +43,7 @@
                     <height>120</height>
                     <label>$INFO[Control.GetLabel(402)]</label>
                     <font>Font-Condensed-S28</font>
-                    <textcolor>mod-infotags-l</textcolor>
+                    <textcolor>mod-infotags</textcolor>
                     <scroll>false</scroll>
                     <align>right</align>
                 </control>
@@ -110,7 +110,7 @@
 				<height>34</height>
 				<font>Font-Condensed-S34</font>
 				<align>right</align>
-				<textcolor>mod-infotags-alt</textcolor>
+				<textcolor>mod-infotags</textcolor>
 				<label>$INFO[Control.GetLabel(401)]</label>
 				<scroll>false</scroll>
 				<animation effect="slide" end="0,14" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(402))">Conditional</animation>
@@ -122,7 +122,7 @@
 				<height>34</height>
 				<font>Font-Condensed-S28</font>
 				<align>right</align>
-				<textcolor>mod-infotags-alt</textcolor>
+				<textcolor>mod-infotags</textcolor>
 				<label>$INFO[Control.GetLabel(402)]</label>
 				<scroll>false</scroll>
 			</control>
