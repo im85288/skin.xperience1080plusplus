@@ -1235,6 +1235,13 @@
 						<onclick>Skin.Reset(BackgroundOpacity)</onclick>
 						<label>Show darker background</label>
 					</control>
+					<control type="radiobutton" id="3023">
+						<width>1210</width>
+						<include>SettingsCategoryRadioButtonVars</include>
+						<selected>Skin.HasSetting(ColourScrollbar)</selected>
+						<onclick>Skin.ToggleSetting(ColourScrollbar)</onclick>
+						<label>Use tile/border colours for progress indicator on home screen</label>
+					</control>
 					<control type="radiobutton" id="3001">
 						<width>1210</width>
 						<include>SettingsCategoryRadioButtonVars</include>

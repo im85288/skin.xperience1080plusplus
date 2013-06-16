@@ -1210,6 +1210,17 @@
 								<height>6</height>
 								<texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
 								<colordiffuse>55FFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
+							</control>
+							<control type="image">
+								<description>Scrollbar background</description>
+								<posx>471</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<texture border="6,0,6,0">views/other/scrollbar-whitesq.png</texture>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
 							</control>
 							<control type="scrollbar" id="5024">
 								<description>Scrollbar</description>
@@ -1221,7 +1232,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
 							</control>
 							<control type="scrollbar" id="5024">
 								<description>Scrollbar</description>
@@ -1233,7 +1244,8 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
 							</control>
 						</control>
 						<control type="image">
@@ -1422,6 +1434,17 @@
 								<height>6</height>
 								<texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
 								<colordiffuse>55FFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
+							</control>
+							<control type="image">
+								<description>Scrollbar background</description>
+								<posx>281</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<texture border="6,0,6,0">views/other/scrollbar-whitesq.png</texture>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
 							</control>
 							<control type="scrollbar" id="5034">
 								<description>Scrollbar</description>
@@ -1433,7 +1456,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
 							</control>
 							<control type="scrollbar" id="5034">
 								<description>Scrollbar</description>
@@ -1445,7 +1468,8 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
 							</control>
 						</control>
 						<control type="image">
@@ -1860,6 +1884,17 @@
 								<height>6</height>
 								<texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
 								<colordiffuse>55FFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
+							</control>
+							<control type="image">
+								<description>Scrollbar background</description>
+								<posx>281</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<texture border="6,0,6,0">views/other/scrollbar-whitesq.png</texture>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(moviescolor.name)]</colordiffuse>
 							</control>
 							<control type="scrollbar" id="2024">
 								<description>Scrollbar</description>
@@ -1871,7 +1906,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
 							</control>
 							<control type="scrollbar" id="2024">
 								<description>Scrollbar</description>
@@ -1883,7 +1918,8 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(moviesbordercolor.name)]</colordiffuse>
 							</control>
 						</control>
 						<control type="image">
@@ -2542,6 +2578,17 @@
 								<height>6</height>
 								<texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
 								<colordiffuse>55FFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
+							</control>
+							<control type="image">
+								<description>Scrollbar background</description>
+								<posx>570</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<texture border="6,0,6,0">views/other/scrollbar-whitesq.png</texture>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(tvcolor.name)]</colordiffuse>
 							</control>
 							<control type="scrollbar" id="3024">
 								<description>Scrollbar</description>
@@ -2553,7 +2600,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
 							</control>
 							<control type="scrollbar" id="3024">
 								<description>Scrollbar</description>
@@ -2565,7 +2612,8 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(tvbordercolor.name)]</colordiffuse>
 							</control>
 						</control>
 						<control type="image">
@@ -3720,6 +3768,17 @@
 								<height>6</height>
 								<texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
 								<colordiffuse>55FFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
+							</control>
+							<control type="image">
+								<description>Scrollbar background</description>
+								<posx>471</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<texture border="6,0,6,0">views/other/scrollbar-whitesq.png</texture>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(musiccolor.name)]</colordiffuse>
 							</control>
 							<control type="scrollbar" id="4024">
 								<description>Scrollbar</description>
@@ -3731,7 +3790,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
 							</control>
 							<control type="scrollbar" id="4024">
 								<description>Scrollbar</description>
@@ -3743,7 +3802,8 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(musicbordercolor.name)]</colordiffuse>
 							</control>
 						</control>
 					</control>
