@@ -265,7 +265,7 @@
 	<!-- INCLUDES: Common Clearlogo and Ratings etc at bottom of screen -->
 	<include name="CommonClearLogoDetails">
 		<control type="group">
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>
@@ -473,7 +473,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>

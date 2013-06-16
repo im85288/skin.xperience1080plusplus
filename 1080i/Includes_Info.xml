@@ -78,7 +78,7 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
 				</animation>
-				<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) + [!Skin.HasSetting(LessBackgroundOpacity)]</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<control type="group">
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
 					<animation effect="slide" start="0" end="35" time="300" tween="sine" easing="inout" condition="![PVR.IsRecording | PVR.HasTimer] + !Window.IsActive(mutebug)">Conditional</animation>
@@ -132,7 +132,7 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
 				</animation>
-				<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) + [Skin.HasSetting(LessBackgroundOpacity)]</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
 				<control type="group">
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
 					<animation effect="slide" start="0" end="35" time="300" tween="sine" easing="inout" condition="![PVR.IsRecording | PVR.HasTimer] + !Window.IsActive(mutebug)">Conditional</animation>
