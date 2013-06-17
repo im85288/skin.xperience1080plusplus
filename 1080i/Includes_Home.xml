@@ -1,5 +1,5 @@
 <includes>
-	<!--Home shutdown-favs Buttons -->
+	<!--Home shutdown-favs Buttons note alternate home screen not used..remove!!-->
 	<include name="shutdown-favs">
 		<control type="group" id="80">
 			<description>Home Buttons</description>
