@@ -21,6 +21,16 @@
 				<height>670</height>
 				<texture border="29">dialogs/dialogWindow.png</texture>
 				<aspectratio>stretch</aspectratio>
+				<visible>!Skin.HasSetting(DarkerPanels)</visible>
+			</control>
+			<control type="image">
+				<posx>250</posx>
+				<posy>300</posy>
+				<height>670</height>
+				<width>800</width>
+				<texture border="29">dialogs/dialogWindow.png</texture>
+				<visible>Skin.HasSetting(DarkerPanels)</visible>
+				<colordiffuse>black</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>1030</posx>
@@ -48,7 +58,7 @@
 					<align>left</align>
 					<label>$INFO[System.Time]</label>
 					<font>Font-Condensed-S36</font>
-					<textcolor>black</textcolor>
+					<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 					66000000
 				</control>
 				<control type="label">
@@ -61,7 +71,7 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$VAR[PVRChannelsOSDTitleLabel]</label>
 					<font>Font-Condensed-S34</font>
-					<textcolor>black</textcolor>
+					<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 				</control>
 				<control type="image">
 					<posx>250</posx>
@@ -119,8 +129,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 						</control>
@@ -133,8 +143,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -147,8 +157,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 						</control>
@@ -161,8 +171,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -190,8 +200,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextStartTime]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -218,8 +228,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextTitle]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -246,8 +256,8 @@
 							<font>Font-Condensed-S50</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.HasTimer + !ListItem.IsRecording + ListItem.IsPlaying</visible>
 						</control>
@@ -260,8 +270,8 @@
 							<font>Font-Condensed-S50</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.IsPlaying</visible>
 						</control>
@@ -274,8 +284,8 @@
 							<font>Font-Condensed-S50</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 						</control>
@@ -288,8 +298,8 @@
 							<font>Font-Condensed-S50</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasTimer | ListItem.IsRecording + ListItem.IsPlaying</visible>
 						</control>
@@ -335,7 +345,16 @@
 							<height>96</height>
 							<texture border="0,0,0,0">views/other/black-focus.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<visible>!ListItem.IsPlaying</visible>
+							<visible>!ListItem.IsPlaying + !Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>740</width>
+							<height>96</height>
+							<texture border="0,0,0,0">views/other/white-focus.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>!ListItem.IsPlaying + Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -367,8 +386,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
-								<textcolor>blue</textcolor>
-								<selectedcolor>blue</selectedcolor>
+								<textcolor>mod-infotags</textcolor>
+								<selectedcolor>mod-infotags</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -395,8 +414,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
-								<textcolor>blue</textcolor>
-								<selectedcolor>blue</selectedcolor>
+								<textcolor>mod-infotags</textcolor>
+								<selectedcolor>mod-infotags</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -423,8 +442,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextStartTime]</label>
-								<textcolor>bluegrey</textcolor>
-								<selectedcolor>bluegrey</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundPvrBluegreyColourVars]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundPvrBluegreyColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -451,8 +470,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextTitle]</label>
-								<textcolor>bluegrey</textcolor>
-								<selectedcolor>bluegrey</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundPvrBluegreyColourVars]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundPvrBluegreyColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -493,8 +512,8 @@
 								<font>Font-Condensed-S50</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>blue</textcolor>
-								<selectedcolor>blue</selectedcolor>
+								<textcolor>mod-infotags</textcolor>
+								<selectedcolor>mod-infotags</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.isPlaying</visible>
 							</control>

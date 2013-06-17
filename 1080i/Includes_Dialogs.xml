@@ -95,6 +95,14 @@
 	<include name="ArtDialogShadowWidthBanner">
 		<width>1771</width>
 	</include>
+	<variable name="DarkerBackgroundDialogsMainTextColourVars">
+		<value condition="!Skin.HasSetting(DarkerPanels)">FF585858</value>
+		<value condition="Skin.HasSetting(DarkerPanels)">darkerbackground</value>
+	</variable>
+	<variable name="DarkerBackgroundDialogsDisabledTextColourVars">
+		<value condition="!Skin.HasSetting(DarkerPanels)">FF585858</value>
+		<value condition="Skin.HasSetting(DarkerPanels)">lightgrey</value>
+	</variable>
 	<!-- DialogAddonSettings -->
 	<include name="DialogAddonSettings">
 		<control type="group">
@@ -586,6 +594,7 @@
 					<width>712</width>
 					<height>548</height>
 					<texture border="39">dialogs/default/bg.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>638</posx>
@@ -593,6 +602,16 @@
 					<width>644</width>
 					<height>481</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>604</posx>
+					<posy>266</posy>
+					<height>548</height>
+					<width>712</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -603,6 +622,7 @@
 					<width>1146</width>
 					<height>548</height>
 					<texture border="39">dialogs/default/bg.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>421</posx>
@@ -610,6 +630,16 @@
 					<width>644</width>
 					<height>481</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>387</posx>
+					<posy>266</posy>
+					<height>548</height>
+					<width>1146</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>1079</posx>
@@ -643,8 +673,8 @@
 					<label>[COLOR=FF787878]$LOCALIZE[21863][/COLOR]</label>
 					<label2>$INFO[Container(6).ListItem.Property(Addon.Creator)]</label2>
 					<font>Font-Condensed-S29</font>
-					<textcolor>FF585858</textcolor>
-					<disabledcolor>FF585858</disabledcolor>
+					<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+					<disabledcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</disabledcolor>
 					<enable>false</enable>
 				</control>
 			</control>
@@ -679,8 +709,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FF585858</textcolor>
-							<selectedcolor>FF585858</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+							<disabledcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</disabledcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -692,8 +722,8 @@
 							<font>Font-Condensed-S29</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>FF585858</textcolor>
-							<selectedcolor>FF585858</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Label2)</visible>
 						</control>
@@ -709,8 +739,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FF585858</textcolor>
-							<selectedcolor>FF585858</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -722,8 +752,8 @@
 							<font>Font-Condensed-S29</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>FF585858</textcolor>
-							<selectedcolor>FF585858</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Label2)</visible>
 						</control>
@@ -760,8 +790,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>FF585858</textcolor>
-								<selectedcolor>FF585858</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -773,8 +803,8 @@
 								<font>Font-Condensed-S29</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>FF585858</textcolor>
-								<selectedcolor>FF585858</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.Label2)</visible>
 							</control>
@@ -790,8 +820,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>FF585858</textcolor>
-								<selectedcolor>FF585858</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -803,8 +833,8 @@
 								<font>Font-Condensed-S29</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>FF585858</textcolor>
-								<selectedcolor>FF585858</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.Label2)</visible>
 							</control>
@@ -931,7 +961,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<selectedcolor>DialogSelected</selectedcolor>
-						<textcolor>FF585858</textcolor>
+						<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -944,7 +974,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<selectedcolor>DialogSelected</selectedcolor>
-						<textcolor>FF585858</textcolor>
+						<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 				</itemlayout>
@@ -974,7 +1004,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>DialogSelected</selectedcolor>
-							<textcolor>FF585858</textcolor>
+							<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -987,7 +1017,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<selectedcolor>DialogSelected</selectedcolor>
-							<textcolor>FF585858</textcolor>
+							<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -2105,6 +2135,16 @@
 					<width>1030</width>
 					<height>548</height>
 					<texture border="39">dialogs/default/bg.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>445</posx>
+					<posy>266</posy>
+					<width>1030</width>
+					<height>548</height>
+					<texture border="39">dialogs/default/bg.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>479</posx>
@@ -2112,6 +2152,7 @@
 					<width>644</width>
 					<height>481</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>1122</posx>
@@ -2119,6 +2160,15 @@
 					<width>319</width>
 					<height>481</height>
 					<texture border="5">dialogs/default/inner-dark.png</texture>
+				</control>
+				<control type="image">
+					<posx>479</posx>
+					<posy>300</posy>
+					<height>481</height>
+					<width>644</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="label" id="411">
 					<description>Heading</description>
@@ -2185,6 +2235,21 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>FF585858</textcolor>
+							<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							<scroll>false</scroll>
+							<animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
+						</control>
+						<control type="label">
+							<posx>70</posx>
+							<posy>0</posy>
+							<width>574</width>
+							<height>60</height>
+							<info>ListItem.Label</info>
+							<font>Font-Condensed-S32</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>darkerbackground</textcolor>
+							<visible>Skin.HasSetting(DarkerPanels)</visible>
 							<scroll>false</scroll>
 							<animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
 						</control>
@@ -2293,6 +2358,20 @@
 							<aligny>center</aligny>
 							<textcolor>FF585858</textcolor>
 							<scroll>false</scroll>
+							<visible>!Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="label">
+							<posx>70</posx>
+							<posy>0</posy>
+							<width>574</width>
+							<height>60</height>
+							<info>ListItem.Label</info>
+							<font>Font-Condensed-S32</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>darkerbackground</textcolor>
+							<scroll>false</scroll>
+							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60">

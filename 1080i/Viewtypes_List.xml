@@ -13,6 +13,16 @@
 				<height>727</height>
 				<width>1450</width>
 				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<visible>!Skin.HasSetting(DarkerPanels)</visible>
+			</control>
+			<control type="image">
+				<posx>235</posx>
+				<posy>176</posy>
+				<height>727</height>
+				<width>1450</width>
+				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>black</colordiffuse>
+				<visible>Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
 				<description>Shadow</description>
@@ -64,8 +74,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>mod-infotags</textcolor>
-						<selectedcolor>mod-infotags</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 						<scroll>false</scroll>
 						<animation effect="slide" end="-20" time="0" condition="Container.Content(genres)">Conditional</animation>
 					</control>
@@ -78,8 +88,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>mod-infotags-l</textcolor>
-						<selectedcolor>mod-infotags-l</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Overlay) + IsEmpty(ListItem.Rating)</visible>
 					</control>
@@ -92,8 +102,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>mod-infotags-l</textcolor>
-						<selectedcolor>mod-infotags-l</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]-l</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]-l</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Overlay) | !IsEmpty(ListItem.Rating)</visible>
 						<animation effect="slide" end="55" time="0" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
@@ -116,9 +126,9 @@
 						<height>100</height>
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
-						<label fallback="[COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating]</label>
-						<textcolor>mod-infotags-l</textcolor>
-						<selectedcolor>mod-infotags-l</selectedcolor>
+						<label fallback="[COLOR=$VAR[DarkerBackgroundViewsMainTextColourVars]]0.0[/COLOR]">$INFO[ListItem.Rating]</label>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Rating)</visible>
 					</control>
@@ -177,8 +187,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<selectedcolor>mod-infotags</selectedcolor>
-						<textcolor>mod-infotags</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -190,8 +200,8 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Year]$INFO[ListItem.Genre, • ,]</label>
-						<selectedcolor>mod-infotags-l</selectedcolor>
-						<textcolor>mod-infotags-l</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
@@ -201,7 +211,7 @@
 						<width>140</width>
 						<height>100</height>
 						<texture>$VAR[ListHDSDFlag]</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars]</colordiffuse>
 						<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
@@ -212,7 +222,7 @@
 						<height>100</height>
 						<texture>flags/other/set-default.png</texture>
 						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-						<colordiffuse>mod-infotags-l</colordiffuse>
+						<colordiffuse>$VAR[DarkerBackgroundViewsMainTextColourVars]</colordiffuse>
 					</control>
 					<control type="image">
 						<description>Watched/unwatched overlay</description>
@@ -229,9 +239,9 @@
 						<height>100</height>
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
-						<label fallback="                 [COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating, ,]</label>
-						<selectedcolor>mod-infotags-l</selectedcolor>
-						<textcolor>mod-infotags-l</textcolor>
+						<label fallback="                 [COLOR=$VAR[DarkerBackgroundViewsMainTextColourVars]]0.0[/COLOR]">$INFO[ListItem.Rating, ,]</label>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -263,7 +273,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -275,7 +285,7 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Studio,, • ]$INFO[ListItem.Genre]</label>
-						<textcolor>mod-infotags-l</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
@@ -293,8 +303,8 @@
 						<height>100</height>
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
-						<label fallback="                 [COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating, ,]</label>
-						<textcolor>mod-infotags-l</textcolor>
+						<label fallback="                 [COLOR=$VAR[DarkerBackgroundViewsMainTextColourVars]]0.0[/COLOR]">$INFO[ListItem.Rating, ,]</label>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -306,7 +316,7 @@
 							<width>64</width>
 							<height>41</height>
 							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>mod-infotags-l</colordiffuse>
+							<colordiffuse>$VAR[DarkerBackgroundViewsMainTextColourVars]</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>1244</posx>
@@ -315,7 +325,7 @@
 							<height>42</height>
 							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 							<font>Font-Condensed-S30-B</font>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 							<scroll>no</scroll>
 							<align>center</align>
 						</control>
@@ -348,7 +358,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -360,7 +370,7 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Studio]</label>
-						<textcolor>mod-infotags-l</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
@@ -379,7 +389,7 @@
 							<width>64</width>
 							<height>41</height>
 							<texture>views/list/other/unwatched.png</texture>
-							<colordiffuse>mod-infotags-l</colordiffuse>
+							<colordiffuse>$VAR[DarkerBackgroundViewsMainTextColourVars]</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>1314</posx>
@@ -388,7 +398,7 @@
 							<height>42</height>
 							<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
 							<font>Font-Condensed-S30-B</font>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 							<scroll>no</scroll>
 							<align>center</align>
 						</control>
@@ -431,8 +441,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<selectedcolor>mod-infotags</selectedcolor>
-						<textcolor>mod-infotags</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -444,8 +454,8 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</label>
-						<selectedcolor>mod-infotags-l</selectedcolor>
-						<textcolor>mod-infotags-l</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
@@ -455,7 +465,7 @@
 						<width>140</width>
 						<height>100</height>
 						<texture>$VAR[ListHDSDFlag]</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars]</colordiffuse>
 						<visible>!IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
@@ -473,9 +483,9 @@
 						<height>100</height>
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
-						<label fallback="                 [COLOR=mod-infotags-l]0.0[/COLOR]">$INFO[ListItem.Rating, ,]</label>
-						<selectedcolor>mod-infotags-l</selectedcolor>
-						<textcolor>mod-infotags-l</textcolor>
+						<label fallback="                 [COLOR=$VAR[DarkerBackgroundViewsMainTextColourVars]]0.0[/COLOR]">$INFO[ListItem.Rating, ,]</label>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>

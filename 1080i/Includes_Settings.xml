@@ -13,6 +13,14 @@
 			<effect type="zoom" end="86.9565217" time="225" tween="sine" delay="100" easing="out" center="auto" />
 		</animation>
 	</include>
+	<variable name="DarkerBackgroundMainTextColourVars">
+		<value condition="!Skin.HasSetting(DarkerPanels)">mod-infotags-l</value>
+		<value condition="Skin.HasSetting(DarkerPanels)">darkerbackground</value>
+	</variable>
+	<variable name="DarkerBackgroundDisabledTextColourVars">
+		<value condition="!Skin.HasSetting(DarkerPanels)">mod-infotags-vl</value>
+		<value condition="Skin.HasSetting(DarkerPanels)">lightgrey</value>
+	</variable>
 	<include name="SettingsButtonBackground">
 		<control type="image">
 			<posx>24</posx>
@@ -90,6 +98,19 @@
 		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
 	</include>
+	<include name="SettingsCategoryButtonVarsDarkerBackground">
+		<height>77</height>
+		<width>338</width>
+		<align>right</align>
+		<aligny>center</aligny>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkerbackground</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+	</include>
 	<include name="SettingsCategoryDefaultButtonVars">
 		<height>77</height>
 		<align>left</align>
@@ -103,6 +124,19 @@
 		<font>Font-Condensed-S30-B</font>
 		<textoffsetx>35</textoffsetx>
 	</include>
+	<include name="SettingsCategoryDefaultButtonVarsDarkerBackground">
+		<height>77</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<selectedcolor>white</selectedcolor>
+		<disabledcolor>darkerbackground</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+	</include>
 	<include name="SettingsCategoryRadioButtonVars">
 		<height>77</height>
 		<radioposx>1087</radioposx>
@@ -111,8 +145,21 @@
 		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
 		<textcolor>mod-infotags-l</textcolor>
-		<focusedcolor>white</focusedcolor>
+		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>mod-infotags-vl</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+	</include>
+	<include name="SettingsCategoryRadioButtonVarsDarkerBackground">
+		<height>77</height>
+		<radioposx>1087</radioposx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>darkerbackground</focusedcolor>
+		<disabledcolor>darkerbackground</disabledcolor>
 		<font>Font-Condensed-S30-B</font>
 		<textoffsetx>35</textoffsetx>
 	</include>
@@ -139,6 +186,22 @@
 		<font>Font-Condensed-S32</font>
 		<textcolor>FF585858</textcolor>
 		<focusedcolor>eewhite</focusedcolor>
+		<disabledcolor>77585858</disabledcolor>
+		<shadowcolor>20FFFFFF</shadowcolor>
+		<textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
+		<textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
+		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+	</include>
+	<include name="SettingsDialogRadioButtonVarsDarkerBackground">
+		<width>644</width>
+		<height>60</height>
+		<align>left</align>
+		<textoffsetx>20</textoffsetx>
+		<radioposx>534</radioposx>
+		<font>Font-Condensed-S32</font>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>black</focusedcolor>
 		<disabledcolor>77585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
 		<textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
@@ -173,6 +236,19 @@
 		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
+	<include name="SettingsCustomDialogButtonVarsDarkerBackground">
+		<width>532</width>
+		<height>60</height>
+		<align>left</align>
+		<textoffsetx>20</textoffsetx>
+		<font>Font-Condensed-S32</font>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>eewhite</focusedcolor>
+		<disabledcolor>77585858</disabledcolor>
+		<shadowcolor>20FFFFFF</shadowcolor>
+		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+	</include>
 	<include name="SettingsCustomDialogRadioButtonVars">
 		<width>532</width>
 		<height>60</height>
@@ -181,6 +257,22 @@
 		<radioposx>422</radioposx>
 		<font>Font-Condensed-S32</font>
 		<textcolor>FF585858</textcolor>
+		<focusedcolor>eewhite</focusedcolor>
+		<disabledcolor>77585858</disabledcolor>
+		<shadowcolor>20FFFFFF</shadowcolor>
+		<textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
+		<textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
+		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+	</include>
+	<include name="SettingsCustomDialogRadioButtonVarsDarkerBackground">
+		<width>532</width>
+		<height>60</height>
+		<align>left</align>
+		<textoffsetx>20</textoffsetx>
+		<radioposx>422</radioposx>
+		<font>Font-Condensed-S32</font>
+		<textcolor>darkerbackground</textcolor>
 		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>77585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
@@ -208,6 +300,25 @@
 		<shadowcolor>20FFFFFF</shadowcolor>
 		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
 	</include>
+	<include name="SettingsBackgroundDialogButtonVarsDarkerBackground">
+		<posx>559</posx>
+		<posy>667</posy>
+		<width>804</width>
+		<height>60</height>
+		<onup>3</onup>
+		<ondown>3</ondown>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<align>left</align>
+		<label>$LOCALIZE[573]</label>
+		<textoffsetx>20</textoffsetx>
+		<font>Font-Condensed-S32</font>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>eewhite</focusedcolor>
+		<disabledcolor>77585858</disabledcolor>
+		<shadowcolor>20FFFFFF</shadowcolor>
+		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+	</include>
 	<include name="SettingsBackgroundDialogRadioButtonVars">
 		<width>258</width>
 		<height>60</height>
@@ -217,6 +328,23 @@
 		<radioposx>-30</radioposx>
 		<font>Font-Condensed-S32</font>
 		<textcolor>FF585858</textcolor>
+		<focusedcolor>eewhite</focusedcolor>
+		<disabledcolor>FF585858</disabledcolor>
+		<shadowcolor>20FFFFFF</shadowcolor>
+		<textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+		<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
+	</include>
+	<include name="SettingsBackgroundDialogRadioButtonVarsDarkerBackground">
+		<width>258</width>
+		<height>60</height>
+		<align>left</align>
+		<textwidth>200</textwidth>
+		<textoffsetx>60</textoffsetx>
+		<radioposx>-30</radioposx>
+		<font>Font-Condensed-S32</font>
+		<textcolor>darkerbackground</textcolor>
 		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>FF585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
@@ -267,13 +395,15 @@
 		<control type="grouplist" id="3">
 			<include>SettingsBackgroundDialogGroupListVars</include>
 			<control type="radiobutton" id="2101">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41251]</label>
 				<enable>false</enable>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2102">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(GlobalBackdropSingle))</selected>
 				<onclick>Skin.Reset(GlobalBackdropMulti)</onclick>
 				<onclick>Skin.SetString(GlobalBackdropSingle,special://skin/extras/backgrounds/01.jpg)</onclick>
@@ -281,7 +411,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2103">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(GlobalBackdropMulti))</selected>
 				<onclick>Skin.Reset(GlobalBackdropSingle)</onclick>
 				<onclick>Skin.SetString(GlobalBackdropMulti,special://skin/extras/backgrounds/)</onclick>
@@ -290,14 +421,16 @@
 			</control>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(GlobalBackdropSingle)]</label2>
 			<onclick>Skin.SetImage(GlobalBackdropSingle)</onclick>
 			<visible>IsEmpty(Skin.String(GlobalBackdropMulti))</visible>
 			<enable>!IsEmpty(Skin.String(GlobalBackdropSingle))</enable>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(GlobalBackdropMulti)]</label2>
 			<onclick>Skin.SetPath(GlobalBackdropMulti)</onclick>
 			<visible>!IsEmpty(Skin.String(GlobalBackdropMulti))</visible>
@@ -328,7 +461,8 @@
 		<control type="grouplist" id="3">
 			<include>SettingsBackgroundDialogGroupListVars</include>
 			<control type="radiobutton" id="2101">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41251]</label>
 				<selected>IsEmpty(Skin.String(HomeSettingsSingleImage)) + IsEmpty(Skin.String(HomeSettingsMultiImage))</selected>
 				<onclick>Skin.Reset(HomeSettingsSingleImage)</onclick>
@@ -336,7 +470,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2102">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeSettingsSingleImage))</selected>
 				<onclick>Skin.Reset(HomeSettingsMultiImage)</onclick>
 				<onclick>Skin.SetString(HomeSettingsSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
@@ -344,7 +479,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2103">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeSettingsMultiImage))</selected>
 				<onclick>Skin.Reset(HomeSettingsSingleImage)</onclick>
 				<onclick>Skin.SetString(HomeSettingsMultiImage,special://skin/extras/backgrounds/)</onclick>
@@ -353,14 +489,16 @@
 			</control>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeSettingsSingleImage)]</label2>
 			<onclick>Skin.SetImage(HomeSettingsSingleImage)</onclick>
 			<visible>IsEmpty(Skin.String(HomeSettingsMultiImage))</visible>
 			<enable>!IsEmpty(Skin.String(HomeSettingsSingleImage))</enable>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeSettingsMultiImage)]</label2>
 			<onclick>Skin.SetPath(HomeSettingsMultiImage)</onclick>
 			<visible>!IsEmpty(Skin.String(HomeSettingsMultiImage))</visible>
@@ -391,7 +529,8 @@
 		<control type="grouplist" id="3">
 			<include>SettingsBackgroundDialogGroupListVars</include>
 			<control type="radiobutton" id="2101">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41251]</label>
 				<selected>IsEmpty(Skin.String(HomeMoviesSingleImage)) + IsEmpty(Skin.String(HomeMoviesMultiImage))</selected>
 				<onclick>Skin.Reset(HomeMoviesSingleImage)</onclick>
@@ -399,7 +538,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2102">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeMoviesSingleImage))</selected>
 				<onclick>Skin.Reset(HomeMoviesMultiImage)</onclick>
 				<onclick>Skin.SetString(HomeMoviesSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
@@ -407,7 +547,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2103">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeMoviesMultiImage))</selected>
 				<onclick>Skin.Reset(HomeMoviesSingleImage)</onclick>
 				<onclick>Skin.SetString(HomeMoviesMultiImage,special://skin/extras/backgrounds/)</onclick>
@@ -416,14 +557,16 @@
 			</control>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeMoviesSingleImage)]</label2>
 			<onclick>Skin.SetImage(HomeMoviesSingleImage)</onclick>
 			<visible>IsEmpty(Skin.String(HomeMoviesMultiImage))</visible>
 			<enable>!IsEmpty(Skin.String(HomeMoviesSingleImage))</enable>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeMoviesMultiImage)]</label2>
 			<onclick>Skin.SetPath(HomeMoviesMultiImage)</onclick>
 			<visible>!IsEmpty(Skin.String(HomeMoviesMultiImage))</visible>
@@ -454,7 +597,8 @@
 		<control type="grouplist" id="3">
 			<include>SettingsBackgroundDialogGroupListVars</include>
 			<control type="radiobutton" id="2101">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41251]</label>
 				<selected>IsEmpty(Skin.String(HomeTVShowsSingleImage)) + IsEmpty(Skin.String(HomeTVShowsMultiImage))</selected>
 				<onclick>Skin.Reset(HomeTVShowsSingleImage)</onclick>
@@ -462,7 +606,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2102">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeTVShowsSingleImage))</selected>
 				<onclick>Skin.Reset(HomeTVShowsMultiImage)</onclick>
 				<onclick>Skin.SetString(HomeTVShowsSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
@@ -470,7 +615,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2103">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeTVShowsMultiImage))</selected>
 				<onclick>Skin.Reset(HomeTVShowsSingleImage)</onclick>
 				<onclick>Skin.SetString(HomeTVShowsMultiImage,special://skin/extras/backgrounds/)</onclick>
@@ -479,14 +625,16 @@
 			</control>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeTVShowsSingleImage)]</label2>
 			<onclick>Skin.SetImage(HomeTVShowsSingleImage)</onclick>
 			<visible>IsEmpty(Skin.String(HomeTVShowsMultiImage))</visible>
 			<enable>!IsEmpty(Skin.String(HomeTVShowsSingleImage))</enable>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeTVShowsMultiImage)]</label2>
 			<onclick>Skin.SetPath(HomeTVShowsMultiImage)</onclick>
 			<visible>!IsEmpty(Skin.String(HomeTVShowsMultiImage))</visible>
@@ -517,7 +665,8 @@
 		<control type="grouplist" id="3">
 			<include>SettingsBackgroundDialogGroupListVars</include>
 			<control type="radiobutton" id="2101">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41251]</label>
 				<selected>IsEmpty(Skin.String(HomeMusicSingleImage)) + IsEmpty(Skin.String(HomeMusicMultiImage))</selected>
 				<onclick>Skin.Reset(HomeMusicSingleImage)</onclick>
@@ -525,7 +674,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2102">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeMusicSingleImage))</selected>
 				<onclick>Skin.Reset(HomeMusicMultiImage)</onclick>
 				<onclick>Skin.SetString(HomeMusicSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
@@ -533,7 +683,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2103">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeMusicMultiImage))</selected>
 				<onclick>Skin.Reset(HomeMusicSingleImage)</onclick>
 				<onclick>Skin.SetString(HomeMusicMultiImage,special://skin/extras/backgrounds/)</onclick>
@@ -542,14 +693,16 @@
 			</control>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeMusicSingleImage)]</label2>
 			<onclick>Skin.SetImage(HomeMusicSingleImage)</onclick>
 			<visible>IsEmpty(Skin.String(HomeMusicMultiImage))</visible>
 			<enable>!IsEmpty(Skin.String(HomeMusicSingleImage))</enable>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeMusicMultiImage)]</label2>
 			<onclick>Skin.SetPath(HomeMusicMultiImage)</onclick>
 			<visible>!IsEmpty(Skin.String(HomeMusicMultiImage))</visible>
@@ -580,7 +733,8 @@
 		<control type="grouplist" id="3">
 			<include>SettingsBackgroundDialogGroupListVars</include>
 			<control type="radiobutton" id="2101">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41251]</label>
 				<selected>IsEmpty(Skin.String(HomeProgramsSingleImage)) + IsEmpty(Skin.String(HomeProgramsMultiImage))</selected>
 				<onclick>Skin.Reset(HomeProgramsSingleImage)</onclick>
@@ -588,7 +742,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2102">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeProgramsSingleImage))</selected>
 				<onclick>Skin.Reset(HomeProgramsMultiImage)</onclick>
 				<onclick>Skin.SetString(HomeProgramsSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
@@ -596,7 +751,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2103">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeProgramsMultiImage))</selected>
 				<onclick>Skin.Reset(HomeProgramsSingleImage)</onclick>
 				<onclick>Skin.SetString(HomeProgramsMultiImage,special://skin/extras/backgrounds/)</onclick>
@@ -605,14 +761,16 @@
 			</control>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeProgramsSingleImage)]</label2>
 			<onclick>Skin.SetImage(HomeProgramsSingleImage)</onclick>
 			<visible>IsEmpty(Skin.String(HomeProgramsMultiImage))</visible>
 			<enable>!IsEmpty(Skin.String(HomeProgramsSingleImage))</enable>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeProgramsMultiImage)]</label2>
 			<onclick>Skin.SetPath(HomeProgramsMultiImage)</onclick>
 			<visible>!IsEmpty(Skin.String(HomeProgramsMultiImage))</visible>
@@ -648,7 +806,8 @@
 		<control type="grouplist" id="3">
 			<include>SettingsBackgroundDialogGroupListVars</include>
 			<control type="radiobutton" id="2101">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41251]</label>
 				<selected>IsEmpty(Skin.String(HomeWeatherSingleImage)) + IsEmpty(Skin.String(HomeWeatherMultiImage)) + !Skin.HasSetting(ShowWeatherFanartHome)</selected>
 				<onclick>Skin.Reset(HomeWeatherSingleImage)</onclick>
@@ -656,7 +815,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2101)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2102">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeWeatherSingleImage))</selected>
 				<onclick>Skin.Reset(HomeWeatherMultiImage)</onclick>
 				<onclick>Skin.SetString(HomeWeatherSingleImage,special://skin/extras/backgrounds/01.jpg)</onclick>
@@ -664,7 +824,8 @@
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2102)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2103">
-				<include>SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 				<selected>!IsEmpty(Skin.String(HomeWeatherMultiImage))</selected>
 				<onclick>Skin.Reset(HomeWeatherSingleImage)</onclick>
 				<onclick>Skin.Reset(HomeWeatherSingleImage)</onclick>
@@ -674,14 +835,16 @@
 			</control>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeWeatherSingleImage)]</label2>
 			<onclick>Skin.SetImage(HomeWeatherSingleImage)</onclick>
 			<visible>IsEmpty(Skin.String(HomeWeatherMultiImage))</visible>
 			<enable>!IsEmpty(Skin.String(HomeWeatherSingleImage))</enable>
 		</control>
 		<control type="button" id="4">
-			<include>SettingsBackgroundDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogButtonVarsDarkerBackground</include>
 			<label2>$INFO[Skin.String(HomeWeatherMultiImage)]</label2>
 			<onclick>Skin.SetPath(HomeWeatherMultiImage)</onclick>
 			<visible>!IsEmpty(Skin.String(HomeWeatherMultiImage))</visible>
@@ -726,6 +889,7 @@
 					<width>872</width>
 					<height>428</height>
 					<texture border="39">dialogs/default/bg.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>558</posx>
@@ -733,6 +897,7 @@
 					<width>532</width>
 					<height>361</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>1104</posx>
@@ -740,6 +905,16 @@
 					<width>258</width>
 					<height>361</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>558</posx>
+					<posy>360</posy>
+					<height>361</height>
+					<width>790</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>1105</posx>
@@ -766,7 +941,8 @@
 					<scrolltime>0</scrolltime>
 					<orientation>vertical</orientation>
 					<control type="radiobutton" id="2101">
-						<include>SettingsBackgroundDialogRadioButtonVars</include>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 						<label>$LOCALIZE[41137] 1</label>
 						<onclick>Skin.SetString(CustomHomePanel1.Type,0)</onclick>
 						<onclick>Skin.SetString(CustomHomePanel1.TypeName,$LOCALIZE[41145])</onclick>
@@ -776,7 +952,8 @@
 						<selected>Skin.HasSetting(CustomHomePanel1)</selected>
 					</control>
 					<control type="radiobutton" id="2102">
-						<include>SettingsBackgroundDialogRadioButtonVars</include>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 						<label>$LOCALIZE[41137] 2</label>
 						<onclick>Skin.SetString(CustomHomePanel2.Type,0)</onclick>
 						<onclick>Skin.SetString(CustomHomePanel2.TypeName,$LOCALIZE[41145])</onclick>
@@ -786,7 +963,8 @@
 						<selected>Skin.HasSetting(CustomHomePanel2)</selected>
 					</control>
 					<control type="radiobutton" id="2103">
-						<include>SettingsBackgroundDialogRadioButtonVars</include>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 						<label>$LOCALIZE[41137] 3</label>
 						<onclick>Skin.SetString(CustomHomePanel3.Type,0)</onclick>
 						<onclick>Skin.SetString(CustomHomePanel3.TypeName,$LOCALIZE[41145])</onclick>
@@ -796,7 +974,8 @@
 						<selected>Skin.HasSetting(CustomHomePanel3)</selected>
 					</control>
 					<control type="radiobutton" id="2104">
-						<include>SettingsBackgroundDialogRadioButtonVars</include>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
 						<label>$LOCALIZE[41137] 4</label>
 						<onclick>Skin.SetString(CustomHomePanel4.Type,0)</onclick>
 						<onclick>Skin.SetString(CustomHomePanel4.TypeName,$LOCALIZE[41145])</onclick>
@@ -823,7 +1002,8 @@
 						<scrolltime>0</scrolltime>
 						<orientation>vertical</orientation>
 						<control type="button" id="2141">
-							<include>SettingsCustomDialogButtonVars</include>
+							<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+							<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 							<label>$LOCALIZE[41138]</label>
 							<label2>$INFO[Skin.String(CustomHomePanel1.Label)]</label2>
 							<onclick>Skin.SetString(CustomHomePanel1.Label)</onclick>
@@ -942,7 +1122,8 @@
 						<onright>3</onright>
 						<onup>2405</onup>
 						<ondown>2141</ondown>
-						<include>SettingsCustomDialogButtonVars</include>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 						<label>$LOCALIZE[41142]</label>
 						<label2>$INFO[Skin.String(CustomHomePanel1.Path)]</label2>
 						<onclick condition="stringcompare(Skin.String(CustomHomePanel1.Type),0)">Skin.SetAddon(CustomHomePanel1.Path,xbmc.addon.video)</onclick>
@@ -972,7 +1153,8 @@
 						<scrolltime>0</scrolltime>
 						<orientation>vertical</orientation>
 						<control type="button" id="2141">
-							<include>SettingsCustomDialogButtonVars</include>
+							<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+							<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 							<label>$LOCALIZE[41138]</label>
 							<label2>$INFO[Skin.String(CustomHomePanel2.Label)]</label2>
 							<onclick>Skin.SetString(CustomHomePanel2.Label)</onclick>
@@ -1091,7 +1273,8 @@
 						<onright>3</onright>
 						<onup>2405</onup>
 						<ondown>2141</ondown>
-						<include>SettingsCustomDialogButtonVars</include>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 						<label>$LOCALIZE[41142]</label>
 						<label2>$INFO[Skin.String(CustomHomePanel2.Path)]</label2>
 						<onclick condition="stringcompare(Skin.String(CustomHomePanel2.Type),0)">Skin.SetAddon(CustomHomePanel2.Path,xbmc.addon.video)</onclick>
@@ -1121,7 +1304,8 @@
 						<scrolltime>0</scrolltime>
 						<orientation>vertical</orientation>
 						<control type="button" id="2141">
-							<include>SettingsCustomDialogButtonVars</include>
+							<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+							<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 							<label>$LOCALIZE[41138]</label>
 							<label2>$INFO[Skin.String(CustomHomePanel3.Label)]</label2>
 							<onclick>Skin.SetString(CustomHomePanel3.Label)</onclick>
@@ -1240,7 +1424,8 @@
 						<onright>3</onright>
 						<onup>2405</onup>
 						<ondown>2141</ondown>
-						<include>SettingsCustomDialogButtonVars</include>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 						<label>$LOCALIZE[41142]</label>
 						<label2>$INFO[Skin.String(CustomHomePanel3.Path)]</label2>
 						<onclick condition="stringcompare(Skin.String(CustomHomePanel3.Type),0)">Skin.SetAddon(CustomHomePanel3.Path,xbmc.addon.video)</onclick>
@@ -1270,7 +1455,8 @@
 						<scrolltime>0</scrolltime>
 						<orientation>vertical</orientation>
 						<control type="button" id="2141">
-							<include>SettingsCustomDialogButtonVars</include>
+							<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+							<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 							<label>$LOCALIZE[41138]</label>
 							<label2>$INFO[Skin.String(CustomHomePanel4.Label)]</label2>
 							<onclick>Skin.SetString(CustomHomePanel4.Label)</onclick>
@@ -1389,7 +1575,8 @@
 						<onright>3</onright>
 						<onup>2405</onup>
 						<ondown>2141</ondown>
-						<include>SettingsCustomDialogButtonVars</include>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 						<label>$LOCALIZE[41142]</label>
 						<label2>$INFO[Skin.String(CustomHomePanel4.Path)]</label2>
 						<onclick condition="stringcompare(Skin.String(CustomHomePanel4.Type),0)">Skin.SetAddon(CustomHomePanel4.Path,xbmc.addon.video)</onclick>
@@ -1494,26 +1681,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeVideoTile1.Label)]</label2>
 				<onclick>Skin.SetString(HomeVideoTile1.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeVideoTile1.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeVideoTile1.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeVideoTile1.ShowLabel))">Skin.SetString(HomeVideoTile1.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeVideoTile1.ShowLabel))">Skin.Reset(HomeVideoTile1.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeVideoTile1.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeVideoTile1.Animate))">Skin.SetString(HomeVideoTile1.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeVideoTile1.Animate))">Skin.Reset(HomeVideoTile1.Animate)</onclick>
@@ -1634,7 +1825,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeVideoTile1.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeVideoTile1.Type),0)|stringcompare(Skin.String(HomeVideoTile1.Type),1)|stringcompare(Skin.String(HomeVideoTile1.Type),2)|stringcompare(Skin.String(HomeVideoTile1.Type),3)">SetProperty(Property,HomeVideoTile1,selectdialog)</onclick>
@@ -1662,26 +1854,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeVideoTile2.Label)]</label2>
 				<onclick>Skin.SetString(HomeVideoTile2.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeVideoTile2.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeVideoTile2.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeVideoTile2.ShowLabel))">Skin.SetString(HomeVideoTile2.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeVideoTile2.ShowLabel))">Skin.Reset(HomeVideoTile2.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeVideoTile2.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeVideoTile2.Animate))">Skin.SetString(HomeVideoTile2.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeVideoTile2.Animate))">Skin.Reset(HomeVideoTile2.Animate)</onclick>
@@ -1802,7 +1998,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeVideoTile2.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeVideoTile2.Type),0)|stringcompare(Skin.String(HomeVideoTile2.Type),1)|stringcompare(Skin.String(HomeVideoTile2.Type),2)|stringcompare(Skin.String(HomeVideoTile2.Type),3)">SetProperty(Property,HomeVideoTile2,selectdialog)</onclick>
@@ -1830,26 +2027,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeVideoTile3.Label)]</label2>
 				<onclick>Skin.SetString(HomeVideoTile3.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeVideoTile3.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeVideoTile3.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeVideoTile3.ShowLabel))">Skin.SetString(HomeVideoTile3.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeVideoTile3.ShowLabel))">Skin.Reset(HomeVideoTile3.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeVideoTile3.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeVideoTile3.Animate))">Skin.SetString(HomeVideoTile3.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeVideoTile3.Animate))">Skin.Reset(HomeVideoTile3.Animate)</onclick>
@@ -1970,7 +2171,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeVideoTile3.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeVideoTile3.Type),0)|stringcompare(Skin.String(HomeVideoTile3.Type),1)|stringcompare(Skin.String(HomeVideoTile3.Type),2)|stringcompare(Skin.String(HomeVideoTile3.Type),3)">SetProperty(Property,HomeVideoTile3,selectdialog)</onclick>
@@ -1998,26 +2200,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeVideoTile4.Label)]</label2>
 				<onclick>Skin.SetString(HomeVideoTile4.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeVideoTile4.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeVideoTile4.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeVideoTile4.ShowLabel))">Skin.SetString(HomeVideoTile4.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeVideoTile4.ShowLabel))">Skin.Reset(HomeVideoTile4.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeVideoTile4.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeVideoTile4.Animate))">Skin.SetString(HomeVideoTile4.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeVideoTile4.Animate))">Skin.Reset(HomeVideoTile4.Animate)</onclick>
@@ -2138,7 +2344,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeVideoTile4.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeVideoTile4.Type),0)|stringcompare(Skin.String(HomeVideoTile4.Type),1)|stringcompare(Skin.String(HomeVideoTile4.Type),2)|stringcompare(Skin.String(HomeVideoTile4.Type),3)">SetProperty(Property,HomeVideoTile4,selectdialog)</onclick>
@@ -2166,26 +2373,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeTVShowTile1.Label)]</label2>
 				<onclick>Skin.SetString(HomeTVShowTile1.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeTVShowTile1.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeTVShowTile1.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeTVShowTile1.ShowLabel))">Skin.SetString(HomeTVShowTile1.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeTVShowTile1.ShowLabel))">Skin.Reset(HomeTVShowTile1.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeTVShowTile1.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeTVShowTile1.Animate))">Skin.SetString(HomeTVShowTile1.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeTVShowTile1.Animate))">Skin.Reset(HomeTVShowTile1.Animate)</onclick>
@@ -2306,7 +2517,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeTVShowTile1.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeTVShowTile1.Type),0)|stringcompare(Skin.String(HomeTVShowTile1.Type),1)|stringcompare(Skin.String(HomeTVShowTile1.Type),2)|stringcompare(Skin.String(HomeTVShowTile1.Type),3)">SetProperty(Property,HomeTVShowTile1,selectdialog)</onclick>
@@ -2334,26 +2546,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeTVShowTile2.Label)]</label2>
 				<onclick>Skin.SetString(HomeTVShowTile2.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeTVShowTile2.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeTVShowTile2.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeTVShowTile2.ShowLabel))">Skin.SetString(HomeTVShowTile2.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeTVShowTile2.ShowLabel))">Skin.Reset(HomeTVShowTile2.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeTVShowTile2.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeTVShowTile2.Animate))">Skin.SetString(HomeTVShowTile2.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeTVShowTile2.Animate))">Skin.Reset(HomeTVShowTile2.Animate)</onclick>
@@ -2474,7 +2690,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeTVShowTile2.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeTVShowTile2.Type),0)|stringcompare(Skin.String(HomeTVShowTile2.Type),1)|stringcompare(Skin.String(HomeTVShowTile2.Type),2)|stringcompare(Skin.String(HomeTVShowTile2.Type),3)">SetProperty(Property,HomeTVShowTile2,selectdialog)</onclick>
@@ -2502,26 +2719,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeMusicTile1.Label)]</label2>
 				<onclick>Skin.SetString(HomeMusicTile1.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeMusicTile1.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeMusicTile1.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeMusicTile1.ShowLabel))">Skin.SetString(HomeMusicTile1.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeMusicTile1.ShowLabel))">Skin.Reset(HomeMusicTile1.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeMusicTile1.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeMusicTile1.Animate))">Skin.SetString(HomeMusicTile1.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeMusicTile1.Animate))">Skin.Reset(HomeMusicTile1.Animate)</onclick>
@@ -2642,7 +2863,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeMusicTile1.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeMusicTile1.Type),0)|stringcompare(Skin.String(HomeMusicTile1.Type),1)|stringcompare(Skin.String(HomeMusicTile1.Type),2)|stringcompare(Skin.String(HomeMusicTile1.Type),3)">SetProperty(Property,HomeMusicTile1,selectdialog)</onclick>
@@ -2670,26 +2892,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeMusicTile2.Label)]</label2>
 				<onclick>Skin.SetString(HomeMusicTile2.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeMusicTile2.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeMusicTile2.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeMusicTile2.ShowLabel))">Skin.SetString(HomeMusicTile2.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeMusicTile2.ShowLabel))">Skin.Reset(HomeMusicTile2.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeMusicTile2.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeMusicTile2.Animate))">Skin.SetString(HomeMusicTile2.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeMusicTile2.Animate))">Skin.Reset(HomeMusicTile2.Animate)</onclick>
@@ -2810,7 +3036,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeMusicTile2.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeMusicTile2.Type),0)|stringcompare(Skin.String(HomeMusicTile2.Type),1)|stringcompare(Skin.String(HomeMusicTile2.Type),2)|stringcompare(Skin.String(HomeMusicTile2.Type),3)">SetProperty(Property,HomeMusicTile2,selectdialog)</onclick>
@@ -2838,26 +3065,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile1.Label)]</label2>
 				<onclick>Skin.SetString(HomeProgramTile1.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile1.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeProgramTile1.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile1.ShowLabel))">Skin.SetString(HomeProgramTile1.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile1.ShowLabel))">Skin.Reset(HomeProgramTile1.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeProgramTile1.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile1.Animate))">Skin.SetString(HomeProgramTile1.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile1.Animate))">Skin.Reset(HomeProgramTile1.Animate)</onclick>
@@ -2978,7 +3209,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeProgramTile1.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeProgramTile1.Type),0)|stringcompare(Skin.String(HomeProgramTile1.Type),1)|stringcompare(Skin.String(HomeProgramTile1.Type),2)|stringcompare(Skin.String(HomeProgramTile1.Type),3)">SetProperty(Property,HomeProgramTile1,selectdialog)</onclick>
@@ -3006,26 +3238,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile2.Label)]</label2>
 				<onclick>Skin.SetString(HomeProgramTile2.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile2.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeProgramTile2.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile2.ShowLabel))">Skin.SetString(HomeProgramTile2.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile2.ShowLabel))">Skin.Reset(HomeProgramTile2.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeProgramTile2.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile2.Animate))">Skin.SetString(HomeProgramTile2.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile2.Animate))">Skin.Reset(HomeProgramTile2.Animate)</onclick>
@@ -3146,7 +3382,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeProgramTile2.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeProgramTile2.Type),0)|stringcompare(Skin.String(HomeProgramTile2.Type),1)|stringcompare(Skin.String(HomeProgramTile2.Type),2)|stringcompare(Skin.String(HomeProgramTile2.Type),3)">SetProperty(Property,HomeProgramTile2,selectdialog)</onclick>
@@ -3174,26 +3411,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile3.Label)]</label2>
 				<onclick>Skin.SetString(HomeProgramTile3.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile3.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeProgramTile3.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.ShowLabel))">Skin.SetString(HomeProgramTile3.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile3.ShowLabel))">Skin.Reset(HomeProgramTile3.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeProgramTile3.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile3.Animate))">Skin.SetString(HomeProgramTile3.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile3.Animate))">Skin.Reset(HomeProgramTile3.Animate)</onclick>
@@ -3314,7 +3555,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeProgramTile3.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeProgramTile3.Type),0)|stringcompare(Skin.String(HomeProgramTile3.Type),1)|stringcompare(Skin.String(HomeProgramTile3.Type),2)|stringcompare(Skin.String(HomeProgramTile3.Type),3)">SetProperty(Property,HomeProgramTile3,selectdialog)</onclick>
@@ -3342,26 +3584,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile4.Label)]</label2>
 				<onclick>Skin.SetString(HomeProgramTile4.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile4.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeProgramTile4.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile4.ShowLabel))">Skin.SetString(HomeProgramTile4.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile4.ShowLabel))">Skin.Reset(HomeProgramTile4.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeProgramTile4.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile4.Animate))">Skin.SetString(HomeProgramTile4.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile4.Animate))">Skin.Reset(HomeProgramTile4.Animate)</onclick>
@@ -3482,7 +3728,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeProgramTile4.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeProgramTile4.Type),0)|stringcompare(Skin.String(HomeProgramTile4.Type),1)|stringcompare(Skin.String(HomeProgramTile4.Type),2)|stringcompare(Skin.String(HomeProgramTile4.Type),3)">SetProperty(Property,HomeProgramTile4,selectdialog)</onclick>
@@ -3510,26 +3757,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile5.Label)]</label2>
 				<onclick>Skin.SetString(HomeProgramTile5.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile5.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeProgramTile5.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile5.ShowLabel))">Skin.SetString(HomeProgramTile5.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile5.ShowLabel))">Skin.Reset(HomeProgramTile5.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeProgramTile5.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile5.Animate))">Skin.SetString(HomeProgramTile5.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile5.Animate))">Skin.Reset(HomeProgramTile5.Animate)</onclick>
@@ -3641,7 +3892,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeProgramTile5.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeProgramTile5.Type),0)|stringcompare(Skin.String(HomeProgramTile5.Type),1)|stringcompare(Skin.String(HomeProgramTile5.Type),2)|stringcompare(Skin.String(HomeProgramTile5.Type),3)">SetProperty(Property,HomeProgramTile5,selectdialog)</onclick>
@@ -3669,26 +3921,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile6.Label)]</label2>
 				<onclick>Skin.SetString(HomeProgramTile6.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile6.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeProgramTile6.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile6.ShowLabel))">Skin.SetString(HomeProgramTile6.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile6.ShowLabel))">Skin.Reset(HomeProgramTile6.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeProgramTile6.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile6.Animate))">Skin.SetString(HomeProgramTile6.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile6.Animate))">Skin.Reset(HomeProgramTile6.Animate)</onclick>
@@ -3800,7 +4056,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeProgramTile6.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeProgramTile6.Type),0)|stringcompare(Skin.String(HomeProgramTile6.Type),1)|stringcompare(Skin.String(HomeProgramTile6.Type),2)|stringcompare(Skin.String(HomeProgramTile6.Type),3)">SetProperty(Property,HomeProgramTile6,selectdialog)</onclick>
@@ -3828,26 +4085,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile7.Label)]</label2>
 				<onclick>Skin.SetString(HomeProgramTile7.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile7.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeProgramTile7.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile7.ShowLabel))">Skin.SetString(HomeProgramTile7.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile7.ShowLabel))">Skin.Reset(HomeProgramTile7.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeProgramTile7.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile7.Animate))">Skin.SetString(HomeProgramTile7.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile7.Animate))">Skin.Reset(HomeProgramTile7.Animate)</onclick>
@@ -3959,7 +4220,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeProgramTile7.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeProgramTile7.Type),0)|stringcompare(Skin.String(HomeProgramTile7.Type),1)|stringcompare(Skin.String(HomeProgramTile7.Type),2)|stringcompare(Skin.String(HomeProgramTile7.Type),3)">SetProperty(Property,HomeProgramTile7,selectdialog)</onclick>
@@ -3987,26 +4249,30 @@
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
 			<control type="button" id="2141">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41138]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile8.Label)]</label2>
 				<onclick>Skin.SetString(HomeProgramTile8.Label)</onclick>
 			</control>
 			<control type="button" id="2142">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41139]</label>
 				<label2>$INFO[Skin.String(HomeProgramTile8.Icon)]</label2>
 				<onclick>Skin.SetImage(HomeProgramTile8.Icon)</onclick>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41156]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile8.ShowLabel))">Skin.SetString(HomeProgramTile8.ShowLabel,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile8.ShowLabel))">Skin.Reset(HomeProgramTile8.ShowLabel)</onclick>
 				<selected>!IsEmpty(Skin.String(HomeProgramTile8.ShowLabel))</selected>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41160]</label>
 				<onclick condition="IsEmpty(Skin.String(HomeProgramTile8.Animate))">Skin.SetString(HomeProgramTile8.Animate,on)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(HomeProgramTile8.Animate))">Skin.Reset(HomeProgramTile8.Animate)</onclick>
@@ -4118,7 +4384,8 @@
 			<onright>3</onright>
 			<onup>2405</onup>
 			<ondown>2141</ondown>
-			<include>SettingsCustomDialogButtonVars</include>
+			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 			<label>$LOCALIZE[41142]</label>
 			<label2>$INFO[Skin.String(HomeProgramTile8.Path)]</label2>
 			<onclick condition="stringcompare(Skin.String(HomeProgramTile8.Type),0)|stringcompare(Skin.String(HomeProgramTile8.Type),1)|stringcompare(Skin.String(HomeProgramTile8.Type),2)|stringcompare(Skin.String(HomeProgramTile8.Type),3)">SetProperty(Property,HomeProgramTile8,selectdialog)</onclick>
@@ -4244,7 +4511,20 @@
 					<textcolor>FF585858</textcolor>
 					<label>$LOCALIZE[41162]</label>
 					<label2>$INFO[Skin.String(HomeWidget.1.TypeName)]</label2>
-					<visible>!ControlGroup(2141).HasFocus</visible>
+					<visible>!ControlGroup(2141).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.1.TypeName)]</label2>
+					<visible>!ControlGroup(2141).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="button">
 					<posx>0</posx>
@@ -4338,7 +4618,22 @@
 					<disabledcolor>77585858</disabledcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(HomeWidget.1.SubTypeName)]</label2>
-					<visible>!ControlGroup(2142).HasFocus</visible>
+					<visible>!ControlGroup(2142).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
+					<enable>stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems)</enable>
+				</control>
+					<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<disabledcolor>darkerbackground</disabledcolor>
+					<label>$LOCALIZE[41141]</label>
+					<label2>$INFO[Skin.String(HomeWidget.1.SubTypeName)]</label2>
+					<visible>!ControlGroup(2142).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
 					<enable>stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems)</enable>
 				</control>
 				<control type="button">
@@ -4356,7 +4651,8 @@
 				</control>
 			</control>
 			<control type="button" id="2143">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[559]</label>
 				<label2>$INFO[Skin.String(HomeWidget.1.Playlist)]</label2>
 				<onclick condition="!stringcompare(Skin.String(HomeWidget.1.SubType),Music)">Skin.SetFile(HomeWidget.1.Playlist,.xsp,special://profile/playlists/video/)</onclick>
@@ -4365,7 +4661,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41164]</label>
 				<onclick condition="!stringcompare(Skin.String(HomeWidget.1.Method),Random)">Skin.SetString(HomeWidget.1.Method,Random)</onclick>
 				<onclick condition="stringcompare(Skin.String(HomeWidget.1.Method),Random)">Skin.SetString(HomeWidget.1.Method,Playlist)</onclick>
@@ -4374,7 +4671,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41165]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.1.UnWatched),True)">Skin.SetString(HomeWidget.1.UnWatched,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.1.UnWatched),True)">Skin.SetString(HomeWidget.1.UnWatched,False)</onclick>
@@ -4383,7 +4681,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2405">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41166]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.1.Resume),True)">Skin.SetString(HomeWidget.1.Resume,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.1.Resume),True)">Skin.SetString(HomeWidget.1.Resume,False)</onclick>
@@ -4504,7 +4803,20 @@
 					<textcolor>FF585858</textcolor>
 					<label>$LOCALIZE[41162]</label>
 					<label2>$INFO[Skin.String(HomeWidget.2.TypeName)]</label2>
-					<visible>!ControlGroup(2141).HasFocus</visible>
+					<visible>!ControlGroup(2141).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+					<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.2.TypeName)]</label2>
+					<visible>!ControlGroup(2141).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="button">
 					<posx>0</posx>
@@ -4594,7 +4906,22 @@
 					<disabledcolor>77585858</disabledcolor>
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(HomeWidget.2.SubTypeName)]</label2>
-					<visible>!ControlGroup(2142).HasFocus</visible>
+					<visible>!ControlGroup(2142).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
+					<enable>stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems)</enable>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<disabledcolor>darkerbackground</disabledcolor>
+					<label>$LOCALIZE[41141]</label>
+					<label2>$INFO[Skin.String(HomeWidget.2.SubTypeName)]</label2>
+					<visible>!ControlGroup(2142).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
 					<enable>stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems)</enable>
 				</control>
 				<control type="button">
@@ -4612,7 +4939,8 @@
 				</control>
 			</control>
 			<control type="button" id="2143">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[559]</label>
 				<label2>$INFO[Skin.String(HomeWidget.2.Playlist)]</label2>
 				<onclick>Skin.SetFile(HomeWidget.2.Playlist,.xsp,special://profile/playlists/video/)</onclick>
@@ -4620,7 +4948,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41164]</label>
 				<onclick condition="!stringcompare(Skin.String(HomeWidget.2.Method),Random)">Skin.SetString(HomeWidget.2.Method,Random)</onclick>
 				<onclick condition="stringcompare(Skin.String(HomeWidget.2.Method),Random)">Skin.SetString(HomeWidget.2.Method,Playlist)</onclick>
@@ -4629,7 +4958,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41165]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.2.UnWatched),True)">Skin.SetString(HomeWidget.2.UnWatched,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.2.UnWatched),True)">Skin.SetString(HomeWidget.2.UnWatched,False)</onclick>
@@ -4638,7 +4968,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2405">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41166]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.2.Resume),True)">Skin.SetString(HomeWidget.2.Resume,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.2.Resume),True)">Skin.SetString(HomeWidget.2.Resume,False)</onclick>
@@ -4756,7 +5087,20 @@
 					<textcolor>FF585858</textcolor>
 					<label>$LOCALIZE[41162]</label>
 					<label2>$INFO[Skin.String(HomeWidget.3.TypeName)]</label2>
-					<visible>!ControlGroup(2141).HasFocus</visible>
+					<visible>!ControlGroup(2141).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.3.TypeName)]</label2>
+					<visible>!ControlGroup(2141).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="button">
 					<posx>0</posx>
@@ -4818,10 +5162,27 @@
 					<label>$LOCALIZE[41141]</label>
 					<label2 fallback="41550">$INFO[Skin.String(HomeWidget.3.SubTypeName)]</label2>
 					<enable>false</enable>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+					<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<disabledcolor>darkerbackground</disabledcolor>
+					<label>$LOCALIZE[41141]</label>
+					<label2 fallback="41550">$INFO[Skin.String(HomeWidget.3.SubTypeName)]</label2>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 			</control>
 			<control type="button" id="2143">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[559]</label>
 				<label2>$INFO[Skin.String(HomeWidget.3.Playlist)]</label2>
 				<onclick>Skin.SetFile(HomeWidget.3.Playlist,.xsp,special://profile/playlists/video/)</onclick>
@@ -4829,7 +5190,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.3.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41164]</label>
 				<onclick condition="!stringcompare(Skin.String(HomeWidget.3.Method),Random)">Skin.SetString(HomeWidget.3.Method,Random)</onclick>
 				<onclick condition="stringcompare(Skin.String(HomeWidget.3.Method),Random)">Skin.SetString(HomeWidget.3.Method,Playlist)</onclick>
@@ -4838,7 +5200,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.3.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41165]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.3.UnWatched),True)">Skin.SetString(HomeWidget.3.UnWatched,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.3.UnWatched),True)">Skin.SetString(HomeWidget.3.UnWatched,False)</onclick>
@@ -4847,7 +5210,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.3.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2405">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41166]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.3.Resume),True)">Skin.SetString(HomeWidget.3.Resume,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.3.Resume),True)">Skin.SetString(HomeWidget.3.Resume,False)</onclick>
@@ -4949,7 +5313,20 @@
 					<textcolor>FF585858</textcolor>
 					<label>$LOCALIZE[41162]</label>
 					<label2>$INFO[Skin.String(HomeWidget.4.TypeName)]</label2>
-					<visible>!ControlGroup(2141).HasFocus</visible>
+					<visible>!ControlGroup(2141).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+					<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.4.TypeName)]</label2>
+					<visible>!ControlGroup(2141).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="button">
 					<posx>0</posx>
@@ -5011,10 +5388,27 @@
 					<label>$LOCALIZE[41141]</label>
 					<label2 fallback="41550">$INFO[Skin.String(HomeWidget.4.SubTypeName)]</label2>
 					<enable>false</enable>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<disabledcolor>darkerbackground</disabledcolor>
+					<label>$LOCALIZE[41141]</label>
+					<label2 fallback="41550">$INFO[Skin.String(HomeWidget.4.SubTypeName)]</label2>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 			</control>
 			<control type="button" id="2143">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[559]</label>
 				<label2>$INFO[Skin.String(HomeWidget.4.Playlist)]</label2>
 				<onclick>Skin.SetFile(HomeWidget.4.Playlist,.xsp,special://profile/playlists/video/)</onclick>
@@ -5022,7 +5416,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.4.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41164]</label>
 				<onclick condition="!stringcompare(Skin.String(HomeWidget.4.Method),Random)">Skin.SetString(HomeWidget.4.Method,Random)</onclick>
 				<onclick condition="stringcompare(Skin.String(HomeWidget.4.Method),Random)">Skin.SetString(HomeWidget.4.Method,Playlist)</onclick>
@@ -5031,7 +5426,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.4.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41165]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.4.UnWatched),True)">Skin.SetString(HomeWidget.4.UnWatched,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.4.UnWatched),True)">Skin.SetString(HomeWidget.4.UnWatched,False)</onclick>
@@ -5040,7 +5436,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.4.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2405">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41166]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.4.Resume),True)">Skin.SetString(HomeWidget.4.Resume,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.4.Resume),True)">Skin.SetString(HomeWidget.4.Resume,False)</onclick>
@@ -5142,7 +5539,20 @@
 					<textcolor>FF585858</textcolor>
 					<label>$LOCALIZE[41162]</label>
 					<label2>$INFO[Skin.String(HomeWidget.5.TypeName)]</label2>
-					<visible>!ControlGroup(2141).HasFocus</visible>
+					<visible>!ControlGroup(2141).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+					<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<label>$LOCALIZE[41162]</label>
+					<label2>$INFO[Skin.String(HomeWidget.5.TypeName)]</label2>
+					<visible>!ControlGroup(2141).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="button">
 					<posx>0</posx>
@@ -5204,10 +5614,27 @@
 					<label>$LOCALIZE[41141]</label>
 					<label2>$INFO[Skin.String(HomeWidget.5.SubTypeName)]</label2>
 					<enable>false</enable>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="button">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>455</width>
+					<height>60</height>
+					<align>left</align>
+					<textoffsetx>20</textoffsetx>
+					<font>Font-Condensed-S30</font>
+					<textcolor>darkerbackground</textcolor>
+					<disabledcolor>darkerbackground</disabledcolor>
+					<label>$LOCALIZE[41141]</label>
+					<label2>$INFO[Skin.String(HomeWidget.5.SubTypeName)]</label2>
+					<enable>false</enable>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 			</control>
 			<control type="button" id="2143">
-				<include>SettingsCustomDialogButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[559]</label>
 				<label2>$INFO[Skin.String(HomeWidget.5.Playlist)]</label2>
 				<onclick>Skin.SetFile(HomeWidget.5.Playlist,.xsp,special://profile/playlists/music/)</onclick>
@@ -5215,7 +5642,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2403">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41164]</label>
 				<onclick condition="!stringcompare(Skin.String(HomeWidget.5.Method),Random)">Skin.SetString(HomeWidget.5.Method,Random)</onclick>
 				<onclick condition="stringcompare(Skin.String(HomeWidget.5.Method),Random)">Skin.SetString(HomeWidget.5.Method,Playlist)</onclick>
@@ -5224,7 +5652,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2404">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41165]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.5.UnWatched),True)">Skin.SetString(HomeWidget.5.UnWatched,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.5.UnWatched),True)">Skin.SetString(HomeWidget.5.UnWatched,False)</onclick>
@@ -5233,7 +5662,8 @@
 				<animation effect="fade" start="100" end="50" time="0" condition="!stringcompare(Skin.String(HomeWidget.5.Type),script.randomandlastitems)">Conditional</animation>
 			</control>
 			<control type="radiobutton" id="2405">
-				<include>SettingsCustomDialogRadioButtonVars</include>
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsCustomDialogRadioButtonVarsDarkerBackground</include>
 				<label>$LOCALIZE[41166]</label>
 				<onclick condition="!substring(Skin.String(HomeWidget.5.Resume),True)">Skin.SetString(HomeWidget.5.Resume,True)</onclick>
 				<onclick condition="substring(Skin.String(HomeWidget.5.Resume),True)">Skin.SetString(HomeWidget.5.Resume,False)</onclick>
@@ -5278,6 +5708,7 @@
 					<width>872</width>
 					<height>428</height>
 					<texture border="39">dialogs/default/bg.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>558</posx>
@@ -5285,6 +5716,7 @@
 					<width>532</width>
 					<height>361</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>1104</posx>
@@ -5292,6 +5724,16 @@
 					<width>258</width>
 					<height>361</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>524</posx>
+					<posy>326</posy>
+					<height>428</height>
+					<width>872</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="list" id="3">
 					<posx>1104</posx>
@@ -5321,6 +5763,18 @@
 							<textcolor>FF585858</textcolor>
 							<shadowcolor>20FFFFFF</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="label">
+							<posx>60</posx>
+							<width>188</width>
+							<height>60</height>
+							<align>left</align>
+							<font>Font-Condensed-S30</font>
+							<textcolor>darkerbackground</textcolor>
+							<shadowcolor>20FFFFFF</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
 							<posx>-30</posx>
@@ -5748,6 +6202,7 @@
 					<width>872</width>
 					<height>428</height>
 					<texture border="39">dialogs/default/bg.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>558</posx>
@@ -5755,6 +6210,7 @@
 					<width>532</width>
 					<height>361</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>1104</posx>
@@ -5762,6 +6218,16 @@
 					<width>258</width>
 					<height>361</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>524</posx>
+					<posy>326</posy>
+					<height>428</height>
+					<width>872</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="list" id="3">
 					<posx>1104</posx>
@@ -5791,6 +6257,18 @@
 							<textcolor>FF585858</textcolor>
 							<shadowcolor>20FFFFFF</shadowcolor>
 							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="label">
+							<posx>20</posx>
+							<width>218</width>
+							<height>60</height>
+							<align>left</align>
+							<font>Font-Condensed-S30</font>
+							<textcolor>darkerbackground</textcolor>
+							<shadowcolor>20FFFFFF</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout width="257" height="60">
@@ -5936,6 +6414,7 @@
 					<width>600</width>
 					<height>428</height>
 					<texture border="39">dialogs/default/bg.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>694</posx>
@@ -5943,6 +6422,16 @@
 					<width>532</width>
 					<height>361</height>
 					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>660</posx>
+					<posy>326</posy>
+					<height>428</height>
+					<width>600</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="group">
 					<posx>694</posx>
