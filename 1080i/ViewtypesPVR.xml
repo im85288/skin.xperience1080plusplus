@@ -205,7 +205,7 @@
 					<textcolor>mod-infotags</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[Container.NumItems,, $LOCALIZE[19019]]</label>
+					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
 					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 				</control>
 				<control type="label">
@@ -217,32 +217,8 @@
 					<textcolor>darkerbackground</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[Container.NumItems,, $LOCALIZE[19019]]</label>
+					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
 					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
-				</control>
-				<control type="label">
-					<posx>1010</posx>
-					<posy>172</posy>
-					<width>200</width>
-					<height>30</height>
-					<font>Font-Condensed-S29</font>
-					<textcolor>mod-infotags</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<label>$INFO[Container(11).ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, → ,]</label>
-				</control>
-				<control type="label">
-					<posx>1010</posx>
-					<posy>172</posy>
-					<width>200</width>
-					<height>30</height>
-					<font>Font-Condensed-S29</font>
-					<textcolor>darkerbackground</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
-					<label>$INFO[Container(11).ListItem.StartTime]$INFO[Container(11).ListItem.EndTime, → ,]</label>
 				</control>
 				<control type="image">
 					<description>Shadow</description>
@@ -284,14 +260,14 @@
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<itemlayout height="96">
 						<control type="image">
-							<posx>0</posx>
+							<posx>50</posx>
 							<posy>0</posy>
 							<width>1022</width>
 							<height>97</height>
 							<texture border="90,3,90,3">views/list/other/separator.png</texture>
 						</control>
 						<control type="image">
-							<posx>0</posx>
+							<posx>50</posx>
 							<posy>6</posy>
 							<width>1018</width>
 							<height>80</height>
@@ -301,15 +277,43 @@
 							<visible>ListItem.IsPlaying</visible>
 						</control>
 						<control type="image">
-							<posx>3</posx>
+							<posx>53</posx>
 							<posy>-10</posy>
 							<width>100</width>
 							<height>100</height>
 							<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
+						<control type="label">
+							<description>Label</description>
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>100</width>
+							<height>58</height>
+							<font>Font-Condensed-S32</font>
+							<align>left</align>
+							<label>$INFO[ListItem.ChannelNumber]</label>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<scroll>false</scroll>
+							<visible>!ListItem.IsPlaying</visible>
+						</control>
+						<control type="label">
+							<description>Label</description>
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>100</width>
+							<height>58</height>
+							<font>Font-Condensed-S32</font>
+							<align>left</align>
+							<label>$INFO[ListItem.ChannelNumber]</label>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<scroll>false</scroll>
+							<visible>ListItem.IsPlaying</visible>
+						</control>
 						<control type="progress">
-							<posx>124</posx>
+							<posx>174</posx>
 							<posy>58</posy>
 							<width>67</width>
 							<height>19</height>
@@ -323,7 +327,7 @@
 							<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 						</control>
 						<control type="progress">
-							<posx>124</posx>
+							<posx>174</posx>
 							<posy>58</posy>
 							<width>67</width>
 							<height>19</height>
@@ -338,7 +342,7 @@
 						</control>
 						<control type="label">
 							<description>Label</description>
-							<posx>126</posx>
+							<posx>176</posx>
 							<posy>0</posy>
 							<width>876</width>
 							<height>58</height>
@@ -352,7 +356,7 @@
 						</control>
 						<control type="label">
 							<description>Label</description>
-							<posx>126</posx>
+							<posx>176</posx>
 							<posy>0</posy>
 							<width>876</width>
 							<height>58</height>
@@ -366,7 +370,7 @@
 						</control>
 						<control type="label">
 							<description>Title</description>
-							<posx>203</posx>
+							<posx>253</posx>
 							<posy>42</posy>
 							<width>799</width>
 							<height>50</height>
@@ -380,7 +384,7 @@
 						</control>
 						<control type="label">
 							<description>Title</description>
-							<posx>203</posx>
+							<posx>253</posx>
 							<posy>42</posy>
 							<width>799</width>
 							<height>50</height>
@@ -394,7 +398,7 @@
 						</control>
 						<control type="label">
 							<description>Label</description>
-							<posx>126</posx>
+							<posx>176</posx>
 							<posy>0</posy>
 							<width>876</width>
 							<height>96</height>
@@ -412,9 +416,9 @@
 							<posy>0</posy>
 							<width>946</width>
 							<height>96</height>
-							<font>Font-Condensed-S75</font>
+							<font>Font-Condensed-S30</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
 							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
@@ -426,9 +430,9 @@
 							<posy>0</posy>
 							<width>946</width>
 							<height>96</height>
-							<font>Font-Condensed-S75-B</font>
+							<font>Font-Condensed-S30-B</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
 							<textcolor>mod-infotags</textcolor>
 							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
@@ -440,9 +444,9 @@
 							<posy>0</posy>
 							<width>900</width>
 							<height>96</height>
-							<font>Font-Condensed-S75</font>
+							<font>Font-Condensed-S30</font>
 							<align>right</align>
-							<label>$INFO[ListItem.ChannelNumber]</label>
+							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
 							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
@@ -477,14 +481,14 @@
 					</itemlayout>
 					<focusedlayout height="96">
 						<control type="image">
-							<posx>0</posx>
+							<posx>50</posx>
 							<posy>0</posy>
 							<width>1022</width>
 							<height>97</height>
 							<texture border="90,3,90,3">views/list/other/separator.png</texture>
 						</control>
 						<control type="image">
-							<posx>-3</posx>
+							<posx>47</posx>
 							<posy>6</posy>
 							<width>1018</width>
 							<height>80</height>
@@ -494,7 +498,7 @@
 							<visible>!ListItem.IsPlaying + !Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
-							<posx>-3</posx>
+							<posx>47</posx>
 							<posy>6</posy>
 							<width>1018</width>
 							<height>80</height>
@@ -504,7 +508,7 @@
 							<visible>!ListItem.IsPlaying + Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
-							<posx>0</posx>
+							<posx>50</posx>
 							<posy>6</posy>
 							<width>1018</width>
 							<height>80</height>
@@ -514,12 +518,40 @@
 							<visible>ListItem.IsPlaying</visible>
 						</control>
 						<control type="image">
-							<posx>3</posx>
+							<posx>53</posx>
 							<posy>-10</posy>
 							<width>100</width>
 							<height>100</height>
 							<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
 							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<description>Label</description>
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>100</width>
+							<height>58</height>
+							<font>Font-Condensed-S32</font>
+							<align>left</align>
+							<label>$INFO[ListItem.ChannelNumber]</label>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<scroll>false</scroll>
+							<visible>!ListItem.IsPlaying</visible>
+						</control>
+						<control type="label">
+							<description>Label</description>
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>100</width>
+							<height>58</height>
+							<font>Font-Condensed-S32</font>
+							<align>left</align>
+							<label>$INFO[ListItem.ChannelNumber]</label>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<scroll>false</scroll>
+							<visible>ListItem.IsPlaying</visible>
 						</control>
 						<control type="group">
 							<animation type="Focus" condition="Container(11).OnNext | Container(11).OnPrevious" reversible="false">
@@ -527,7 +559,7 @@
 							</animation>
 							<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(11)">Conditional</animation>
 							<control type="progress">
-								<posx>124</posx>
+								<posx>174</posx>
 								<posy>58</posy>
 								<width>67</width>
 								<height>19</height>
@@ -541,7 +573,7 @@
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
 							<control type="progress">
-								<posx>124</posx>
+								<posx>174</posx>
 								<posy>58</posy>
 								<width>67</width>
 								<height>19</height>
@@ -556,7 +588,7 @@
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>126</posx>
+								<posx>176</posx>
 								<posy>0</posy>
 								<width>876</width>
 								<height>58</height>
@@ -570,7 +602,7 @@
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>126</posx>
+								<posx>176</posx>
 								<posy>0</posy>
 								<width>876</width>
 								<height>58</height>
@@ -584,7 +616,7 @@
 							</control>
 							<control type="label">
 								<description>Title</description>
-								<posx>203</posx>
+								<posx>253</posx>
 								<posy>42</posy>
 								<width>799</width>
 								<height>50</height>
@@ -598,7 +630,7 @@
 							</control>
 							<control type="label">
 								<description>Title</description>
-								<posx>203</posx>
+								<posx>253</posx>
 								<posy>42</posy>
 								<width>799</width>
 								<height>50</height>
@@ -612,7 +644,7 @@
 							</control>
 							<control type="label">
 								<description>Label</description>
-								<posx>126</posx>
+								<posx>176</posx>
 								<posy>0</posy>
 								<width>876</width>
 								<height>96</height>
@@ -630,9 +662,9 @@
 								<posy>0</posy>
 								<width>946</width>
 								<height>96</height>
-								<font>Font-Condensed-S75-B</font>
+								<font>Font-Condensed-S30-B</font>
 								<align>right</align>
-								<label>$INFO[ListItem.ChannelNumber]</label>
+								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
 								<textcolor>mod-infotags</textcolor>
 								<selectedcolor>mod-infotags</selectedcolor>
 								<scroll>false</scroll>
@@ -644,9 +676,9 @@
 								<posy>0</posy>
 								<width>946</width>
 								<height>96</height>
-								<font>Font-Condensed-S75-B</font>
+								<font>Font-Condensed-S30-B</font>
 								<align>right</align>
-								<label>$INFO[ListItem.ChannelNumber]</label>
+								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
 								<textcolor>black</textcolor>
 								<selectedcolor>black</selectedcolor>
 								<scroll>false</scroll>
@@ -658,9 +690,9 @@
 								<posy>0</posy>
 								<width>900</width>
 								<height>96</height>
-								<font>Font-Condensed-S75-B</font>
+								<font>Font-Condensed-S30-B</font>
 								<align>right</align>
-								<label>$INFO[ListItem.ChannelNumber]</label>
+								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
 								<textcolor>mod-infotags</textcolor>
 								<selectedcolor>mod-infotags</selectedcolor>
 								<scroll>false</scroll>
