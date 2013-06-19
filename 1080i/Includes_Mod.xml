@@ -530,6 +530,7 @@
 						<height>52</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
+						<colordiffuse>mod-infotags</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>7</posx>
@@ -598,6 +599,7 @@
 						<height>52</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
+						<colordiffuse>mod-infotags</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>7</posx>
