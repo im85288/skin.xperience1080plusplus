@@ -13,6 +13,16 @@
 				<height>727</height>
 				<width>1450</width>
 				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<visible>!Skin.HasSetting(DarkerPanels)</visible>
+			</control>
+			<control type="image">
+				<posx>235</posx>
+				<posy>176</posy>
+				<height>727</height>
+				<width>1450</width>
+				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>black</colordiffuse>
+				<visible>Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
 				<description>Shadow</description>
@@ -55,8 +65,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>mod-infotags</textcolor>
-						<selectedcolor>mod-infotags</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -68,8 +78,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>mod-infotags-l</textcolor>
-						<selectedcolor>mod-infotags-l</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
@@ -99,8 +109,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<selectedcolor>mod-infotags</selectedcolor>
-						<textcolor>mod-infotags</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Studio) | !IsEmpty(ListItem.Genre)</visible>
 					</control>
@@ -113,8 +123,8 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Genre]$INFO[ListItem.Studio, • ,]</label>
-						<selectedcolor>mod-infotags-l</selectedcolor>
-						<textcolor>mod-infotags-l</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
@@ -126,8 +136,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>mod-infotags</textcolor>
-						<selectedcolor>mod-infotags</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Studio) + IsEmpty(ListItem.Genre)</visible>
 					</control>
@@ -140,8 +150,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Year]</label>
-						<textcolor>mod-infotags-l</textcolor>
-						<selectedcolor>mod-infotags-l</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
