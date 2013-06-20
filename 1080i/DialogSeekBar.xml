@@ -241,7 +241,7 @@
 							</control>
 							<control type="label">
 								<posx>340</posx>
-								<posy>-1020</posy>
+								<posy>-1033</posy>
 								<width>420</width>
 								<height>38</height>
 								<align>center</align>
