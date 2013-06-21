@@ -386,8 +386,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -400,8 +400,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 							</control>
@@ -414,8 +414,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -428,8 +428,8 @@
 								<font>Font-Condensed-S32-B</font>
 								<align>left</align>
 								<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 							</control>
@@ -456,8 +456,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextStartTime]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 							</control>
@@ -484,8 +484,8 @@
 								<font>Font-Condensed-S32</font>
 								<align>left</align>
 								<label>$INFO[ListItem.NextTitle]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 							</control>
@@ -498,8 +498,8 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasEpg</visible>
 							</control>
@@ -512,8 +512,8 @@
 								<font>Font-Condensed-S50</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.isPlaying</visible>
 							</control>
@@ -526,8 +526,8 @@
 								<font>Font-Condensed-S50-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasTimer + !ListItem.IsRecording + ListItem.isPlaying</visible>
 							</control>
@@ -540,8 +540,8 @@
 								<font>Font-Condensed-S50</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 							</control>
@@ -554,8 +554,8 @@
 								<font>Font-Condensed-S50-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasTimer | ListItem.IsRecording + ListItem.IsPlaying</visible>
 							</control>
