@@ -1955,7 +1955,7 @@
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
 								<visible>Skin.HasSetting(ColourScrollbar)</visible>
-								<colordiffuse>$INFO[Skin.String(moviesbordercolor.name)]</colordiffuse>
+								<colordiffuse>$INFO[Skin.String(moviebordercolor.name)]</colordiffuse>
 							</control>
 						</control>
 						<control type="image">
