@@ -46,6 +46,16 @@
 				<width>764</width>
 				<height>520</height>
 				<texture border="4">views/list/panel/blackpanel.png</texture>
+				<visible>!Skin.HasSetting(DarkerPanels)</visible>
+			</control>
+			<control type="image">
+				<posx>838</posx>
+				<posy>365</posy>
+				<height>530</height>
+				<width>784</width>
+				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>black</colordiffuse>
+				<visible>Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="group">
 				<include>visiblehidefadeinfo</include>
@@ -331,7 +341,7 @@
 							<midtexture>windows/pvr/progress-mid-wide.png</midtexture>
 							<righttexture>windows/pvr/progress-leftright.png</righttexture>
 							<info>Container(11).ListItem.Progress</info>
-							<colordiffuse>black</colordiffuse>
+							<colordiffuse>darkerbackground</colordiffuse>
 							<visible>StringCompare(VideoPlayer.StartTime,Container(11).ListItem.StartTime)</visible>
 						</control>
 						<control type="label">
