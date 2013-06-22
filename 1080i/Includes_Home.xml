@@ -1918,7 +1918,7 @@
 								<height>6</height>
 								<texture border="6,0,6,0">views/other/scrollbar-whitesq.png</texture>
 								<visible>Skin.HasSetting(ColourScrollbar)</visible>
-								<colordiffuse>$INFO[Skin.String(moviescolor.name)]</colordiffuse>
+								<colordiffuse>$INFO[Skin.String(moviecolor.name)]</colordiffuse>
 							</control>
 							<control type="scrollbar" id="2024">
 								<description>Scrollbar</description>
