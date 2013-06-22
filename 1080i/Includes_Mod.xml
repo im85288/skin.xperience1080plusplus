@@ -643,7 +643,7 @@
 						<width>85</width>
 						<label>Genre</label>
 						<font>Font-Condensed-S25</font>
-						<textcolor>darkerbackground</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<scroll>false</scroll>
 						<align>center</align>
 						<wrapmultiline>false</wrapmultiline>
