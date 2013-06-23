@@ -25,7 +25,7 @@
 				<control type="label">
 					<description>Clock label</description>
 					<posx>165r</posx>
-					<posy>1000</posy>
+					<posy>973</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$INFO[System.Time]</label>
@@ -54,7 +54,7 @@
 				<control type="label">
 					<description>Clock label</description>
 					<posx>165r</posx>
-					<posy>1000</posy>
+					<posy>973</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$INFO[System.Time]</label>

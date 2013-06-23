@@ -45,7 +45,7 @@
 				<control type="label">
 					<description>Shutdown Label</description>
 					<posx>157</posx>
-					<posy>1000</posy>
+					<posy>970</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[41507]</label>
@@ -98,7 +98,7 @@
 				<control type="label">
 					<description>Favourites Label</description>
 					<posx>362</posx>
-					<posy>1000</posy>
+					<posy>970</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[1036]</label>
@@ -153,7 +153,7 @@
 				<control type="label">
 					<description>Shutdown Label</description>
 					<posx>157</posx>
-					<posy>1000</posy>
+					<posy>970</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[41507]</label>
@@ -206,7 +206,7 @@
 				<control type="label">
 					<description>Favourites Label</description>
 					<posx>362</posx>
-					<posy>1000</posy>
+					<posy>970</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[1036]</label>
