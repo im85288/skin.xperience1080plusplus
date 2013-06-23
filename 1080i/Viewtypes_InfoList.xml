@@ -278,7 +278,6 @@
 							<width>608</width>
 							<height>300</height>
 							<texture>views/newgloss/whitepanel-15.png</texture>
-							<colordiffuse>eewhite</colordiffuse>
 							<visible>[!IsEmpty(Container(552).ListItem.Art(fanart)) | !IsEmpty(Container(552).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://1/7,left)] + !Skin.HasSetting(DarkerPanels)</visible>
 							<include>visiblehidefadeinfo</include>
 						</control>
@@ -288,7 +287,7 @@
 							<width>608</width>
 							<height>300</height>
 							<texture>views/newgloss/whitepanel-15.png</texture>
-							<colordiffuse>black</colordiffuse>
+							<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 							<visible>[!IsEmpty(Container(552).ListItem.Art(fanart)) | !IsEmpty(Container(552).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://1/7,left)] + Skin.HasSetting(DarkerPanels)</visible>
 							<include>visiblehidefadeinfo</include>
 						</control>
@@ -406,7 +405,7 @@
 					</control>
 					<control type="label">
 						<posx>553</posx>
-						<posy>587</posy>
+						<posy>592</posy>
 						<width>590</width>
 						<height>58</height>
 						<font>Font-Condensed-S32-B</font>
