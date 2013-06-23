@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.xperience1080arctic++" version="2.1.0" name="Xperience1080Arctic++" provider-name="im85288">
+<addon id="skin.xperience1080++" version="2.1.0" name="Xperience1080A++" provider-name="im85288">
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0" />
 		<import addon="service.skin.widgets" version="0.0.25" />
@@ -16,8 +16,8 @@
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">im85288's mod of jurialmunkey's mod of Black's xperience1080 skin</summary>
-		<description lang="en">im85288's mod of jurialmunkey's mod of Black's xperience1080 skin. Takes a lot of influence from Hitcher's Alaska skins</description>
+		<summary lang="en">im85288's mod of various xperience1080 skins</summary>
+		<description lang="en">im85288's mod of various xperience1080 skins.</description>
 		<disclaimer lang="de">Nur kompatibel mit XBMC 12.x "Frodo".</disclaimer>
 		<disclaimer lang="el">Συμβατό μόνο με την έκδοση XBMC 12.x "Frodo".</disclaimer>
 		<disclaimer lang="en">Compatible with XBMC 12.x "Frodo" only.</disclaimer>
