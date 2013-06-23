@@ -28,6 +28,7 @@
 	<onload condition="IsEmpty(Skin.String(picturesbordercolor.name)) | !SubString(Skin.String(picturesbordercolor.name),TileBorder)">Skin.SetString(picturesbordercolor.name,Grey TileBorder)</onload>
 	<onload condition="IsEmpty(Skin.String(settingsbordercolor.name)) | !SubString(Skin.String(settingsbordercolor.name),TileBorder)">Skin.SetString(settingsbordercolor.name,Grey TileBorder)</onload>
 	<onload condition="IsEmpty(Skin.String(weatherbordercolor.name)) | !SubString(Skin.String(weatherbordercolor.name),TileBorder)">Skin.SetString(weatherbordercolor.name,Grey TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(panelcolor.name)) | !SubString(Skin.String(panelcolor.name),Panel)">Skin.SetString(panelcolor.name,Black Panel)</onload>
 	<onunload>CancelAlarm(HomeTileMove,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveThree,true)</onunload>

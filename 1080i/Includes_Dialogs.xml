@@ -610,7 +610,7 @@
 					<height>548</height>
 					<width>712</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 			</control>
@@ -638,7 +638,7 @@
 					<height>548</height>
 					<width>1146</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -2143,7 +2143,7 @@
 					<width>1030</width>
 					<height>548</height>
 					<texture border="39">dialogs/default/bg.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -2167,7 +2167,7 @@
 					<height>481</height>
 					<width>644</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="label" id="411">

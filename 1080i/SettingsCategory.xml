@@ -65,7 +65,7 @@
 					<height>638</height>
 					<width>370</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<!-- Side Buttons -->
@@ -130,7 +130,7 @@
 					<height>638</height>
 					<width>1243</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -198,9 +198,9 @@
 			<aligny>center</aligny>
 			<texturefocus border="5">views/other/focus-mod.png</texturefocus>
 			<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
-			<textcolor>$VAR[DarkerBackgroundMainTextColourVars]</textcolor>
+			<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<disabledcolor>$VAR[DarkerBackgroundDisabledTextColourVars]</disabledcolor>
+			<disabledcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</disabledcolor>
 			<font>Font-Condensed-S30-B</font>
 			<textoffsetx>35</textoffsetx>
 		</control>

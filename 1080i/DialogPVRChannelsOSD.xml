@@ -30,7 +30,7 @@
 				<width>800</width>
 				<texture border="29">dialogs/dialogWindow.png</texture>
 				<visible>Skin.HasSetting(DarkerPanels)</visible>
-				<colordiffuse>black</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>1030</posx>
@@ -54,7 +54,7 @@
 				<height>420</height>
 				<width>584</width>
 				<texture border="35">views/newgloss/whitepanel-15.png</texture>
-				<colordiffuse>black</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 				<visible>Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="group">
@@ -196,8 +196,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextStartTime]</label>
-							<textcolor>darkgrey2</textcolor>
-							<selectedcolor>darkgrey2</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 						</control>
@@ -224,8 +224,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextTitle]</label>
-							<textcolor>darkgrey2</textcolor>
-							<selectedcolor>darkgrey2</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 						</control>
@@ -252,8 +252,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>black</textcolor>
-							<selectedcolor>black</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.HasEpg</visible>
 						</control>

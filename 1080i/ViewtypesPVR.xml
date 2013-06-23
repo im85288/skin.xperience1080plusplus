@@ -36,7 +36,7 @@
 						<height>716</height>
 						<width>590</width>
 						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<colordiffuse>black</colordiffuse>
+						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="label">
@@ -242,7 +242,7 @@
 					<height>716</height>
 					<width>1130</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="list" id="11">
@@ -811,7 +811,7 @@
 						<height>716</height>
 						<width>593</width>
 						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<colordiffuse>black</colordiffuse>
+						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="label">
@@ -983,7 +983,7 @@
 					<height>716</height>
 					<width>1060</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="list" id="12">
@@ -1352,22 +1352,42 @@
 				<height>515</height>
 				<width>544</width>
 				<texture border="35">views/newgloss/whitepanel-15.png</texture>
-				<colordiffuse>black</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 				<visible>Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
-				<posx>28</posx>
+				<posx>12</posx>
 				<posy>455</posy>
-				<width>504</width>
+				<width>537</width>
 				<height>40</height>
-				<texture border="4">views/list/panel/blackpanel.png</texture>
+				<texture border="4">views/newgloss/whitepanel-15.png</texture>
+				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
-				<posx>534</posx>
+				<posx>12</posx>
 				<posy>455</posy>
-				<width>1351</width>
+				<width>537</width>
 				<height>40</height>
-				<texture border="4">views/list/panel/blackpanel.png</texture>
+				<texture border="4">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+				<visible>Skin.HasSetting(DarkerPanels)</visible>
+			</control>
+			<control type="image">
+				<posx>505</posx>
+				<posy>455</posy>
+				<width>1415</width>
+				<height>40</height>
+				<texture border="4">views/newgloss/whitepanel-15.png</texture>
+				<visible>!Skin.HasSetting(DarkerPanels)</visible>
+			</control>
+			<control type="image">
+				<posx>505</posx>
+				<posy>455</posy>
+				<width>1415</width>
+				<height>40</height>
+				<texture border="4">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+				<visible>Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="epggrid" id="10">
 				<description>EPG Grid</description>
@@ -1390,10 +1410,23 @@
 						<width>10</width>
 						<height>30</height>
 						<font>Font-Condensed-S29</font>
-						<textcolor>eewhite</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
+						<visible>!Skin.HasSetting(DarkerPanels)</visible>
+					</control>
+					<control type="label" id="2">
+						<posx>15</posx>
+						<posy>1</posy>
+						<width>10</width>
+						<height>30</height>
+						<font>Font-Condensed-S29</font>
+						<textcolor>darkerbackground</textcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 				</rulerlayout>
 				<channellayout height="80" width="505">
@@ -1579,7 +1612,7 @@
 						<aspectratio>stretch</aspectratio>
 						<!-- <texture border="5">windows/pvr/epg-fo.png</texture> -->
 						<texture>dialogs/epgdialogWindow.png</texture>
-						<colordiffuse>black</colordiffuse>
+						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="image" id="2">
@@ -1666,7 +1699,7 @@
 						<aspectratio>stretch</aspectratio>
 						<!-- <texture border="5">windows/pvr/epg-fo.png</texture> -->
 						<texture>dialogs/epgdialogWindow.png</texture>
-						<colordiffuse>black</colordiffuse>
+						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="image" id="2">
@@ -1821,12 +1854,21 @@
 					<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>-10</posy>
-					<width>1310</width>
-					<height>310</height>
-					<texture border="4">views/list/panel/blackpanel.png</texture>
-					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
+					<posx>-36</posx>
+					<posy>-20</posy>
+					<width>1380</width>
+					<height>329</height>
+					<texture border="4">views/newgloss/whitepanel-15.png</texture>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>-36</posx>
+					<posy>-20</posy>
+					<width>1380</width>
+					<height>329</height>
+					<texture border="4">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -1845,10 +1887,21 @@
 					<width>900</width>
 					<height>86</height>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<font>Font-Condensed-S38</font>
 					<aligny>center</aligny>
-					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="label">
+					<posx>20</posx>
+					<posy>0</posy>
+					<width>900</width>
+					<height>86</height>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>darkerbackground</textcolor>
+					<font>Font-Condensed-S38</font>
+					<aligny>center</aligny>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="label">
 					<posx>1270</posx>
@@ -1868,11 +1921,23 @@
 					<width>350</width>
 					<height>86</height>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<font>Font-Condensed-S38</font>
 					<align>right</align>
 					<aligny>center</aligny>
-					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="label">
+					<posx>1270</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>86</height>
+					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ]</label>
+					<textcolor>darkerbackground</textcolor>
+					<font>Font-Condensed-S38</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="textbox">
 					<description>Plot value</description>
@@ -1910,11 +1975,11 @@
 					<height>190</height>
 					<font>Font-Condensed-S34</font>
 					<align>justify</align>
-					<textcolor>eewhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<pagecontrol>60</pagecontrol>
 					<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
 					<label fallback="161">$INFO[ListItem.Plot]</label>
-					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !IsEmpty(ListItem.Plot)</visible>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !IsEmpty(ListItem.Plot) + !Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="textbox">
 					<description>Plot value</description>
@@ -1924,11 +1989,39 @@
 					<height>190</height>
 					<font>Font-Condensed-S34</font>
 					<align>justify</align>
-					<textcolor>eewhite</textcolor>
+					<textcolor>darkerbackground</textcolor>
+					<pagecontrol>60</pagecontrol>
+					<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+					<label fallback="161">$INFO[ListItem.Plot]</label>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !IsEmpty(ListItem.Plot) + Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="textbox">
+					<description>Plot value</description>
+					<posx>20</posx>
+					<posy>97</posy>
+					<width>1227</width>
+					<height>190</height>
+					<font>Font-Condensed-S34</font>
+					<align>justify</align>
+					<textcolor>mod-infotags</textcolor>
 					<pagecontrol>60</pagecontrol>
 					<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
 					<label fallback="161">$INFO[ListItem.PlotOutline]</label>
-					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + IsEmpty(ListItem.Plot)</visible>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + IsEmpty(ListItem.Plot) + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="textbox">
+					<description>Plot value</description>
+					<posx>20</posx>
+					<posy>97</posy>
+					<width>1227</width>
+					<height>190</height>
+					<font>Font-Condensed-S34</font>
+					<align>justify</align>
+					<textcolor>darkerbackground</textcolor>
+					<pagecontrol>60</pagecontrol>
+					<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
+					<label fallback="161">$INFO[ListItem.PlotOutline]</label>
+					<visible>!StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + IsEmpty(ListItem.Plot) + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="progress">
 					<posx>20</posx>
@@ -1945,11 +2038,21 @@
 					<visible>StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
 				</control>
 				<control type="image">
-					<posx>1315</posx>
-					<posy>-10</posy>
-					<width>540</width>
-					<height>310</height>
-					<texture border="4">views/list/panel/blackpanel.png</texture>
+					<posx>1300</posx>
+					<posy>-20</posy>
+					<width>570</width>
+					<height>329</height>
+					<texture border="4">views/newgloss/whitepanel-15.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>1300</posx>
+					<posy>-20</posy>
+					<width>570</width>
+					<height>329</height>
+					<texture border="4">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="videowindow">
 					<description>video</description>
@@ -1974,10 +2077,22 @@
 					<height>86</height>
 					<label>$INFO[VideoPlayer.ChannelName]</label>
 					<!-- <textcolor>ffe8b854</textcolor> -->
-					<textcolor>eewhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<font>Font-Condensed-S38</font>
 					<aligny>center</aligny>
-					<visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
+					<visible>Player.HasVideo + Pvr.IsPlayingTv + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="label">
+					<posx>1430</posx>
+					<posy>-25</posy>
+					<width>350</width>
+					<height>86</height>
+					<label>$INFO[VideoPlayer.ChannelName]</label>
+					<!-- <textcolor>ffe8b854</textcolor> -->
+					<textcolor>darkerbackground</textcolor>
+					<font>Font-Condensed-S38</font>
+					<aligny>center</aligny>
+					<visible>Player.HasVideo + Pvr.IsPlayingTv + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="label">
 					<posx>1330</posx>
@@ -1985,11 +2100,11 @@
 					<width>500</width>
 					<height>86</height>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<font>Font-Condensed-S38</font>
 					<aligny>center</aligny>
 					<align>center</align>
-					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="label">
 					<posx>1330</posx>
@@ -1997,11 +2112,35 @@
 					<width>500</width>
 					<height>86</height>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>darkerbackground</textcolor>
 					<font>Font-Condensed-S38</font>
 					<aligny>center</aligny>
 					<align>center</align>
-					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="label">
+					<posx>1330</posx>
+					<posy>-10</posy>
+					<width>500</width>
+					<height>86</height>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<textcolor>mod-infotags</textcolor>
+					<font>Font-Condensed-S38</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="label">
+					<posx>1330</posx>
+					<posy>-10</posy>
+					<width>500</width>
+					<height>86</height>
+					<label>$INFO[ListItem.ChannelName]</label>
+					<textcolor>darkerbackground</textcolor>
+					<font>Font-Condensed-S38</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<posx>1440</posx>
@@ -2019,11 +2158,23 @@
 					<width>500</width>
 					<height>86</height>
 					<label>$INFO[ListItem.Title]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<font>Font-Condensed-S38</font>
 					<aligny>center</aligny>
 					<align>center</align>
-					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="label">
+					<posx>1330</posx>
+					<posy>220</posy>
+					<width>500</width>
+					<height>86</height>
+					<label>$INFO[ListItem.Title]</label>
+					<textcolor>darkerbackground</textcolor>
+					<font>Font-Condensed-S38</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="label">
 					<posx>1330</posx>
@@ -2031,11 +2182,23 @@
 					<width>500</width>
 					<height>86</height>
 					<label>$INFO[ListItem.Title]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<font>Font-Condensed-S38</font>
 					<aligny>center</aligny>
 					<align>center</align>
-					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime)</visible>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + !Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="label">
+					<posx>1330</posx>
+					<posy>225</posy>
+					<width>500</width>
+					<height>86</height>
+					<label>$INFO[ListItem.Title]</label>
+					<textcolor>darkerbackground</textcolor>
+					<font>Font-Condensed-S38</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv + !StringCompare(Container(10).ListItem.StartTime,ListItem.StartTime) + Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 			</control>
 		</control>
@@ -2926,7 +3089,7 @@
 						<height>634</height>
 						<width>590</width>
 						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<colordiffuse>black</colordiffuse>
+						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="label">
@@ -3014,7 +3177,7 @@
 					<height>640</height>
 					<width>1065</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="list" id="13">
@@ -3284,7 +3447,7 @@
 					<height>716</height>
 					<width>1344</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="list" id="14">
@@ -3551,7 +3714,7 @@
 					<height>716</height>
 					<width>1344</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>black</colordiffuse>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="list" id="17">

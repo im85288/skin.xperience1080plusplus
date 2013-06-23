@@ -81,4 +81,20 @@
 	<color name="mod-shadow">55ffffff</color>
 	<color name="darkerbackground">eeffffff</color>
 	<color name="mod-notsodimfanart">99eeeeee</color>
+	
+	<!-- Panel Colours -->
+	<color name="Blue Panel">aa005180</color>
+	<color name="Green Panel">aa007949</color>
+	<color name="Red Panel">aad02e49</color>
+	<color name="Pink Panel">aa790059</color>
+	<color name="Purple Panel">aa3a0079</color>
+	<color name="Lime Panel">aa7eb000</color>
+	<color name="Grey Panel">aa404040</color>
+	<color name="Orange Panel">aafdc700</color>
+	<color name="Yellow Panel">aafffe00</color>
+	<color name="Black Panel">aa000000</color>
+	<color name="Solid Black Panel">ff000000</color>
+	<color name="White Panel">aaffffff</color>
+	<color name="Cyan Panel">aa008dcc</color>
+	<color name="Magenta Panel">aab41363</color>
 </colors>

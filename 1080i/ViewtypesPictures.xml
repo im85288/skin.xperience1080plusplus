@@ -21,7 +21,7 @@
 				<height>701</height>
 				<width>1464</width>
 				<texture border="5">views/newgloss/whitepanel-15.png</texture>
-				<colordiffuse>black</colordiffuse>
+				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 				<visible>Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">

@@ -492,8 +492,20 @@
         <font>Font-Condensed-S40</font>
         <textoffsetx>110</textoffsetx>
         <textwidth>318</textwidth>
-        <textcolor>99FFFFFF</textcolor>
-        <focusedcolor>eewhite</focusedcolor>
+        <textcolor>mod-infotags</textcolor>
+        <focusedcolor>mod-infotags</focusedcolor>
+        <align>left</align>
+        <animation effect="fade" start="64.435" end="100" time="300" tween="sine" easing="inout" reversible="false">Focus</animation>
+    </include>
+    <include name="PVRMenuButtonVarsDarkerPanels">
+        <posx>0</posx>
+        <width>458</width>
+        <height>112</height>
+        <font>Font-Condensed-S40</font>
+        <textoffsetx>110</textoffsetx>
+        <textwidth>318</textwidth>
+        <textcolor>darkerbackground</textcolor>
+        <focusedcolor>darkerbackground</focusedcolor>
         <align>left</align>
         <animation effect="fade" start="64.435" end="100" time="300" tween="sine" easing="inout" reversible="false">Focus</animation>
     </include>
