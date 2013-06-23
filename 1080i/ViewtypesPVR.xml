@@ -569,7 +569,7 @@
 								<midtexture>windows/pvr/progress-mid.png</midtexture>
 								<righttexture>windows/pvr/progress-leftright.png</righttexture>
 								<info>ListItem.Progress</info>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>$VAR[PVRFocusedTextColourVars]</colordiffuse>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
 							<control type="progress">
@@ -595,8 +595,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -623,8 +623,8 @@
 								<font>Font-Condensed-S28-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -654,7 +654,21 @@
 								<textcolor>black</textcolor>
 								<selectedcolor>black</selectedcolor>
 								<scroll>false</scroll>
-								<visible>!ListItem.HasEpg</visible>
+								<visible>!ListItem.HasEpg + ListItem.IsPlaying</visible>
+							</control>
+							<control type="label">
+								<description>Label</description>
+								<posx>176</posx>
+								<posy>0</posy>
+								<width>876</width>
+								<height>96</height>
+								<font>Font-Condensed-S34-B</font>
+								<align>left</align>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<scroll>false</scroll>
+								<visible>!ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
 							<control type="label">
 								<description>Label</description>
@@ -665,8 +679,8 @@
 								<font>Font-Condensed-S30-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.IsPlaying</visible>
 							</control>
@@ -693,8 +707,8 @@
 								<font>Font-Condensed-S30-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-								<textcolor>mod-infotags</textcolor>
-								<selectedcolor>mod-infotags</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 							</control>
