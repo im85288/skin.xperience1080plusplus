@@ -49,6 +49,7 @@
 	<color name="Orange Tiles">aafdc700</color>
 	<color name="Yellow Tiles">aafffe00</color>
 	<color name="Black Tiles">aa000000</color>
+	<color name="Solid Black Tiles">ff000000</color>
 	<color name="White Tiles">aaffffff</color>
 	<color name="Cyan Tiles">aa008dcc</color>
 	<color name="Magenta Tiles">aab41363</color>
@@ -63,6 +64,7 @@
 	<color name="Orange TileBorder">aafdc700</color>
 	<color name="Yellow TileBorder">aafffe00</color>
 	<color name="Black TileBorder">aa000000</color>
+	<color name="Solid Black TileBorder">ff000000</color>
 	<color name="White TileBorder">aaffffff</color>
 	<color name="Cyan TileBorder">aa008dcc</color>
 	<color name="Magenta TileBorder">aab41363</color>
