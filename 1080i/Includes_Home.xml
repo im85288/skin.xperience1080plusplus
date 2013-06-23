@@ -8,7 +8,7 @@
 				<control type="button" id="21">
 					<description>Shutdown Button</description>
 					<posx>72</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
 					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
@@ -45,7 +45,7 @@
 				<control type="label">
 					<description>Shutdown Label</description>
 					<posx>157</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[41507]</label>
@@ -58,7 +58,7 @@
 				<control type="button" id="22">
 					<description>Favourites Button</description>
 					<posx>277</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
 					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
@@ -98,7 +98,7 @@
 				<control type="label">
 					<description>Favourites Label</description>
 					<posx>362</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[1036]</label>
@@ -115,7 +115,7 @@
 				<control type="button" id="21">
 					<description>Shutdown Button</description>
 					<posx>72</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
 					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
@@ -153,7 +153,7 @@
 				<control type="label">
 					<description>Shutdown Label</description>
 					<posx>157</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[41507]</label>
@@ -165,7 +165,7 @@
 				<control type="button" id="22">
 					<description>Favourites Button</description>
 					<posx>277</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
 					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
@@ -206,7 +206,7 @@
 				<control type="label">
 					<description>Favourites Label</description>
 					<posx>362</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$LOCALIZE[1036]</label>

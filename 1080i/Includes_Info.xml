@@ -14,7 +14,7 @@
 				<control type="image">
 					<description>Small weather</description>
 					<posx>174r</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
 					<texture>weather/small/$INFO[Weather.FanartCode].png</texture>
@@ -25,13 +25,12 @@
 				<control type="label">
 					<description>Clock label</description>
 					<posx>165r</posx>
-					<posy>953</posy>
+					<posy>973</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$INFO[System.Time]</label>
 					<font>Font-Condensed-S29</font>
 					<textcolor>mod-infotags</textcolor>
-					<shadowcolor>mod-shadow</shadowcolor>
 					<align>right</align>
 					<scroll>false</scroll>
 					<animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
@@ -44,7 +43,7 @@
 				<control type="image">
 					<description>Small weather</description>
 					<posx>174r</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
 					<texture>weather/small/$INFO[Weather.FanartCode].png</texture>
@@ -55,7 +54,7 @@
 				<control type="label">
 					<description>Clock label</description>
 					<posx>165r</posx>
-					<posy>953</posy>
+					<posy>973</posy>
 					<width>180</width>
 					<height>100</height>
 					<label>$INFO[System.Time]</label>
