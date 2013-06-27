@@ -99,4 +99,6 @@
 	<color name="White Panel">aaffffff</color>
 	<color name="Cyan Panel">aa008dcc</color>
 	<color name="Magenta Panel">aab41363</color>
+	
+	<color name="imdb">fff3ce13</color>
 </colors>

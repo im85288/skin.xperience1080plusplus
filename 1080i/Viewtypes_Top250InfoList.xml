@@ -189,7 +189,7 @@
 					<width>141</width>
 					<height>52</height>
 					<texture>views/other/top250.png</texture>
-					<colordiffuse>ffe8b854</colordiffuse>
+					<colordiffuse>imdb</colordiffuse>
 					<visible>!substring(ListItem.Path,videodb://1/7,left) + [!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart))]</visible>
 					<include>visiblehidefadeinfo</include>
 				</control>
@@ -201,7 +201,7 @@
 					<font>Font-Condensed-S42-B</font>
 					<label fallback="••••">$INFO[ListItem.Top250]</label>
 					<align>center</align>
-					<textcolor>ffe8b854</textcolor>
+					<textcolor>imdb</textcolor>
 					<scroll>false</scroll>
 					<visible>!substring(ListItem.Path,videodb://1/7,left) + [!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart))]</visible>
 				</control>
@@ -267,7 +267,6 @@
 						<width>508</width>
 						<height>100</height>
 						<texture>views/other/IMDb.png</texture>
-						<!-- <colordiffuse>DF222222</colordiffuse> -->
 						<visible>!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://1/7,left)</visible>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -378,7 +377,7 @@
 						<width>516</width>
 						<font>Font-Condensed-S32</font>
 						<label>$INFO[Container(652).ListItem.Duration,, $LOCALIZE[12391]]</label>
-						<textcolor>ffe8b854</textcolor>
+						<textcolor>imdb</textcolor>
 						<scroll>false</scroll>
 						<visible>Container.Content(movies)</visible>
 					</control>
@@ -388,7 +387,7 @@
 						<width>516</width>
 						<font>Font-Condensed-S32</font>
 						<label>$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
-						<textcolor>ffe8b854</textcolor>
+						<textcolor>imdb</textcolor>
 						<scroll>false</scroll>
 						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
@@ -417,7 +416,7 @@
 						<height>58</height>
 						<font>Font-Condensed-S32-B</font>
 						<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
-						<textcolor>ffe8b854</textcolor>
+						<textcolor>imdb</textcolor>
 						<scroll>false</scroll>
 						<align>right</align>
 						<visible>!IsEmpty(ListItem.Rating) + Container.Content(movies)</visible>
@@ -525,7 +524,7 @@
 								<width>60</width>
 								<height>60</height>
 								<aspect>keepaspect</aspect>
-								<texture>$VAR[InfoListOverlay]</texture>
+								<texture>$VAR[Top250InfoListOverlay]</texture>
 								<visible>!IsEmpty(ListItem.Overlay)</visible>
 							</control>
 						</itemlayout>
@@ -552,7 +551,8 @@
 								<posy>0</posy>
 								<width>690</width>
 								<height>59</height>
-								<texture border="5">views/other/focus-mod.png</texture>
+								<texture border="5">views/other/white-focus-mod.png</texture>
+								<colordiffuse>imdb</colordiffuse>
 								<include>defaultfocusanim</include>
 								<include>visiblehidefadeinfo</include>
 								<visible>Container.Content(Movies) | !Skin.HasSetting(ShowBanner)</visible>
@@ -569,7 +569,7 @@
 									<width>590</width>
 									<font>Font-Condensed-S29</font>
 									<label>$INFO[ListItem.Label]</label>
-									<textcolor>eewhite</textcolor>
+									<textcolor>mod-infotags</textcolor>
 									<visible>Container.Content(Movies) | !Skin.HasSetting(ShowBanner)</visible>
 								</control>
 								<control type="label">
@@ -579,7 +579,7 @@
 									<font>Font-Condensed-S31</font>
 									<label fallback="••••">$INFO[ListItem.Top250]</label>
 									<align>center</align>
-									<textcolor>eewhite</textcolor>
+									<textcolor>mod-infotags</textcolor>
 									<scroll>false</scroll>
 									<visible>!Skin.HasSetting(ShowBanner) | [Container.Content(Movies)]</visible>
 								</control>
@@ -589,7 +589,7 @@
 									<height>58</height>
 									<font>Font-Condensed-S31</font>
 									<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
-									<textcolor>eewhite</textcolor>
+									<textcolor>mod-infotags</textcolor>
 									<scroll>false</scroll>
 									<align>right</align>
 									<visible>[Container.Content(Movies) | !Skin.HasSetting(ShowBanner)]</visible>
@@ -600,7 +600,7 @@
 									<width>60</width>
 									<height>60</height>
 									<aspect>keepaspect</aspect>
-									<texture>$VAR[InfoListOverlay]</texture>
+									<texture>$VAR[Top250InfoListOverlay]</texture>
 									<visible>!IsEmpty(ListItem.Overlay)</visible>
 								</control>
 							</control>
