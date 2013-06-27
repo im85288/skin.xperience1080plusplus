@@ -17,9 +17,21 @@
 			<style>bold</style>
 		</font>
 		<font>
+			<name>Font-Condensed-S21-B</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>21</size>
+			<style>bold</style>
+		</font>
+		<font>
 			<name>Font-Condensed-S22</name>
 			<filename>OpenSansCond.ttf</filename>
 			<size>22</size>
+		</font>
+		<font>
+			<name>Font-Condensed-S22-B</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>22</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>Font-Condensed-S23</name>

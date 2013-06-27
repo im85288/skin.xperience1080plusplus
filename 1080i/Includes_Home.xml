@@ -1176,13 +1176,13 @@
 							<posy>576</posy>
 							<width>572</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
 							<textcolor>mod-infotags</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[SpotlightLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[SpotlightLabelVAR]</label>
 							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
@@ -1190,13 +1190,13 @@
 							<posy>576</posy>
 							<width>572</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
-							<textcolor>eewhite</textcolor>
+							<textcolor>darkerbackground</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[SpotlightLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[SpotlightLabelVAR]</label>
 							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="group">
@@ -1412,13 +1412,13 @@
 							<posy>576</posy>
 							<width>382</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
 							<textcolor>mod-infotags</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[OngoingTVShowsLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[OngoingTVShowsLabelVAR]</label>
 							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
@@ -1426,13 +1426,13 @@
 							<posy>576</posy>
 							<width>382</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
-							<textcolor>eewhite</textcolor>
+							<textcolor>darkerbackground</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[OngoingTVShowsLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[OngoingTVShowsLabelVAR]</label>
 							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="group">
@@ -1874,13 +1874,13 @@
 							<posy>576</posy>
 							<width>382</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
 							<textcolor>mod-infotags</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[NewMoviesLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[NewMoviesLabelVAR]</label>
 							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
@@ -1888,13 +1888,13 @@
 							<posy>576</posy>
 							<width>382</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
 							<textcolor>eewhite</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[NewMoviesLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[NewMoviesLabelVAR]</label>
 							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="group">
@@ -2580,13 +2580,13 @@
 							<posy>576</posy>
 							<width>671</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
 							<textcolor>mod-infotags</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[NewShowsLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[NewShowsLabelVAR]</label>
 							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
@@ -2594,13 +2594,13 @@
 							<posy>576</posy>
 							<width>671</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
-							<textcolor>eewhite</textcolor>
+							<textcolor>darkerbackground</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[NewShowsLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[NewShowsLabelVAR]</label>
 							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="group">
@@ -3782,13 +3782,13 @@
 							<posy>576</posy>
 							<width>477</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
 							<textcolor>mod-infotags</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[FeaturedAlbumsLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[FeaturedAlbumsLabelVAR]</label>
 							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
@@ -3796,13 +3796,13 @@
 							<posy>576</posy>
 							<width>477</width>
 							<height>25</height>
-							<font>Font-Condensed-S20-B</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
 							<textcolor>eewhite</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE]$VAR[FeaturedAlbumsLabelVAR][/UPPERCASE]</label>
+							<label>$VAR[FeaturedAlbumsLabelVAR]</label>
 							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="group">
@@ -5378,13 +5378,13 @@
 							<posy>574</posy>
 							<width>477</width>
 							<height>25</height>
-							<font>Font-Condensed-S20</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
 							<textcolor>mod-infotags</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE][B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)][/UPPERCASE]</label>
+							<label>[B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)]</label>
 							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="label">
@@ -5392,13 +5392,13 @@
 							<posy>574</posy>
 							<width>477</width>
 							<height>25</height>
-							<font>Font-Condensed-S20</font>
+							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
-							<textcolor>eewhite</textcolor>
+							<textcolor>darkerbackground</textcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
-							<label>[UPPERCASE][B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)][/UPPERCASE]</label>
+							<label>[B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)]</label>
 							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
 						</control>
 						<control type="group" id="7023">
