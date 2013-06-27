@@ -5,6 +5,7 @@
 	<include file="ViewtypesPVR.xml" />
 	<include file="Viewtypes_List.xml" />
 	<include file="Viewtypes_InfoList.xml" />
+	<include file="Viewtypes_Top250InfoList.xml" />
 	<include file="Viewtypes_ListLow.xml" />
 	<include file="Viewtypes_ListInfo.xml" />
 	<include file="Viewtypes_LandscapeInfo.xml" />
@@ -45,6 +46,7 @@
 		<include>Viewtype-LandscapeCarousel</include>   <!--id(513) -->
 		<include>Viewtype-Banner</include>              <!--id(60) -->
 		<include>Viewtype-InfoList</include>            <!--id(552) -->
+		<include>Viewtype-Top250InfoList</include>            <!--id(652) -->
 		<include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
 	</include>
 	<include name="MusicViews">
@@ -616,5 +618,10 @@
 		<value condition="!IsEmpty(ListItem.Art(discart))">$INFO[ListItem.Art(discart)]</value>
 		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">cdart/bd.png</value>
 		<value condition="!IsEmpty(ListItem.VideoResolution)">cdart/default.png</value>
+	</variable>
+	<variable name="TVShowClearArtVar">
+		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Art(tvshow.clearart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 </includes>
