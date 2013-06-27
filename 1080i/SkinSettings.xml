@@ -135,7 +135,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>white</textcolor>
+							<textcolor>eewhite</textcolor>
 							<font>Font-Condensed-S30-B</font>
 							<textoffsetx>35</textoffsetx>
 							<visible>!Skin.HasSetting(DarkerPanels)</visible>
@@ -400,10 +400,10 @@
 							<aligny>center</aligny>
 							<textoffsetx>35</textoffsetx>
 							<font>Font-Condensed-S30-B</font>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<label>$LOCALIZE[20304]</label>
 							<label2>$INFO[Skin.String(rss.setting)]</label2>
-							<visible>!ControlGroup(1007).HasFocus</visible>
+							<visible>!ControlGroup(1007).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="button">
 							<posx>0</posx>
@@ -414,7 +414,21 @@
 							<aligny>center</aligny>
 							<textoffsetx>35</textoffsetx>
 							<font>Font-Condensed-S30-B</font>
-							<textcolor>white</textcolor>
+							<textcolor>darkerbackground</textcolor>
+							<label>$LOCALIZE[20304]</label>
+							<label2>$INFO[Skin.String(rss.setting)]</label2>
+							<visible>!ControlGroup(1007).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="button">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1120</width>
+							<height>77</height>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>35</textoffsetx>
+							<font>Font-Condensed-S30-B</font>
+							<textcolor>eewhite</textcolor>
 							<label>$LOCALIZE[20304]</label>
 							<label2>$INFO[Skin.String(rss.setting)]</label2>
 							<visible>ControlGroup(1007).HasFocus</visible>

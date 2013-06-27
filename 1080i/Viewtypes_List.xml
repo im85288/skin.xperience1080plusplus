@@ -102,8 +102,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]-l</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]-l</selectedcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Overlay) | !IsEmpty(ListItem.Rating)</visible>
 						<animation effect="slide" end="55" time="0" condition="IsEmpty(ListItem.Overlay)">Conditional</animation>
