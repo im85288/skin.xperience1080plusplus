@@ -1,5 +1,5 @@
 <includes>
-	<!--Home shutdown-favs Buttons note alternate home screen not used..remove!!-->
+	<!--Home shutdown-favs Buttons note alternate home screen not used..remove!! -->
 	<include name="shutdown-favs">
 		<control type="group" id="80">
 			<description>Home Buttons</description>
@@ -693,6 +693,7 @@
 				<label>$LOCALIZE[8]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(7) | !Control.HasFocus(725)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(20).HasFocus(7)">Conditional</animation>
+				<visible>!Skin.HasSetting(HomeWeather)</visible>
 			</control>
 			<control type="image">
 				<description>Settings</description>
@@ -5283,6 +5284,7 @@
 				<width>2320</width>
 				<height>780</height>
 				<description>Weather</description>
+				<visible>!Skin.HasSetting(HomeWeather)</visible>
 				<control type="button" id="725">
 					<onleft>CancelAlarm(HomeTileMove,true)</onleft>
 					<onleft>CancelAlarm(HomeTileMoveTwo,true)</onleft>

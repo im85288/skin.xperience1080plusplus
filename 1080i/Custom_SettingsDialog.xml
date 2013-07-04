@@ -96,6 +96,15 @@
 					<onclick>SetProperty(ReloadSkin,1,Home)</onclick>
 					<label>$LOCALIZE[41504]</label>
 				</control>
+				<control type="radiobutton" id="2106">
+					<width>1210</width>
+					<include condition="!Skin.HasSetting(DarkerPanels)">SettingsDialogRadioButtonVars</include>
+					<include condition="Skin.HasSetting(DarkerPanels)">SettingsDialogRadioButtonVarsDarkerBackground</include>
+					<selected>!Skin.HasSetting(HomeWeather)</selected>
+					<onclick>Skin.ToggleSetting(HomeWeather)</onclick>
+					<onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+					<label>$LOCALIZE[8]</label>
+				</control>
 			</control>
 			<control type="grouplist" id="3">
 				<include>SettingsDialogGrouplistVars</include>
