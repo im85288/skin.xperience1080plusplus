@@ -323,7 +323,7 @@
 									<posx>7</posx>
 									<width>196</width>
 									<height>323</height>
-									<texture border="4">views/list/panel/blackpanel.png</texture>
+									<texture border="4">views/list/panel/solidblackpanel.png</texture>
 								</control>
 								<!--<control type="image"> <posy>0</posy> <visible>!IsEmpty(VideoPlayer.VideoCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoCodec,flagsosd/video/,.png]</texture> </control> <control type="image"> <posy>56</posy> <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible> <visible>!IsEmpty(VideoPlayer.Plot) 
 									+ !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoResolution,flagsosd/res/,.png]</texture> </control> <control type="image"> <posy>112</posy> <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> 
@@ -390,7 +390,7 @@
 								<posx>315</posx>
 								<width>1392</width>
 								<height>85</height>
-								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
 								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
 							</control>
 							<control type="fadelabel">
@@ -459,7 +459,7 @@
 									<posx>7</posx>
 									<width>196</width>
 									<height>323</height>
-									<texture border="4">views/list/panel/blackpanel.png</texture>
+									<texture border="4">views/list/panel/solidblackpanel.png</texture>
 								</control>
 								<!--<control type="image"> <posy>0</posy> <visible>!IsEmpty(VideoPlayer.VideoCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoCodec,flagsosd/video/,.png]</texture> </control> <control type="image"> <posy>56</posy> <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible> <visible>!IsEmpty(VideoPlayer.Plot) 
 									+ !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoResolution,flagsosd/res/,.png]</texture> </control> <control type="image"> <posy>112</posy> <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> 
@@ -557,7 +557,7 @@
 								<posx>315</posx>
 								<width>1392</width>
 								<height>85</height>
-								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
 								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
 							</control>
 							<control type="label">
@@ -624,21 +624,21 @@
 								<posy>74</posy>
 								<width>277</width>
 								<height>325</height>
-								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
 							</control>
 							<control type="image">
 								<posx>289</posx>
 								<posy>352</posy>
 								<width>1418</width>
 								<height>46</height>
-								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
 							</control>
 							<control type="image">
 								<posx>289</posx>
 								<posy>140</posy>
 								<width>1418</width>
 								<height>155</height>
-								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
 								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
 							</control>
 							<control type="image">
@@ -646,7 +646,7 @@
 								<posy>74</posy>
 								<width>1418</width>
 								<height>70</height>
-								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
 								<visible>!IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
 							</control>
 							<control type="image">
@@ -816,7 +816,7 @@
 									<posx>7</posx>
 									<width>196</width>
 									<height>323</height>
-									<texture border="4">views/list/panel/blackpanel.png</texture>
+									<texture border="4">views/list/panel/solidblackpanel.png</texture>
 								</control>
 								<!--<control type="image"> <posy>0</posy> <visible>!IsEmpty(VideoPlayer.VideoCodec)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoCodec,flagsosd/video/,.png]</texture> </control> <control type="image"> <posy>56</posy> <visible>!IsEmpty(VideoPlayer.VideoResolution)</visible> <visible>!IsEmpty(VideoPlayer.Plot) 
 									+ !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> <height>56</height> <colordiffuse>bbwhite</colordiffuse> <texture>$INFO[VideoPlayer.VideoResolution,flagsosd/res/,.png]</texture> </control> <control type="image"> <posy>112</posy> <visible>!IsEmpty(VideoPlayer.VideoAspect)</visible> <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible> <include>visiblehidefadeinfo</include> <width>97</width> 
