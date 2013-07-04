@@ -28,7 +28,7 @@
 				<textcolor>mod-infotags</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
-				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) + !Skin.HasSetting(UseWhiteText)</visible>
 				<include>visiblehidefadeinfo</include>
 			</control>
 			<control type="label">
@@ -42,7 +42,7 @@
 				<textcolor>darkerbackground</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
-				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) + Skin.HasSetting(UseWhiteText)</visible>
 				<include>visiblehidefadeinfo</include>
 			</control>
 			<control type="label">
@@ -56,7 +56,7 @@
 				<textcolor>mod-infotags</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
-				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + !Skin.HasSetting(UseWhiteText)</visible>
 				<include>visiblehidefadeinfo</include>
 			</control>
 			<control type="label">
@@ -70,7 +70,7 @@
 				<textcolor>darkerbackground</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
-				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + Skin.HasSetting(UseWhiteText)</visible>
 				<include>visiblehidefadeinfo</include>
 			</control>
 			<control type="grouplist">
@@ -89,7 +89,7 @@
 					<label>$LOCALIZE[42131]</label>
 					<font>Font-Condensed-S38</font>
 					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Window.IsActive(textviewer)">Conditional</animation>
@@ -102,7 +102,7 @@
 					<label>$LOCALIZE[42131]</label>
 					<font>Font-Condensed-S38</font>
 					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Window.IsActive(textviewer)">Conditional</animation>
@@ -119,7 +119,7 @@
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="!Window.IsActive(textviewer)">Conditional</animation>
-					<visible>Control.IsEnabled(10) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Control.IsEnabled(10) + !Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label">
 					<posx>118</posx>
@@ -132,7 +132,7 @@
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="!Window.IsActive(textviewer)">Conditional</animation>
-					<visible>Control.IsEnabled(10) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Control.IsEnabled(10) + Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 			</control>
 			<!-- Plot Stuff -->
@@ -279,7 +279,7 @@
 				</control>
 				<!-- Info -->
 				<control type="group">
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="150" easing="in">WindowOpen</animation>
 					<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
@@ -498,7 +498,7 @@
 				</control>
 				<!-- Info -->
 				<control type="group">
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 					<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="150" easing="in">WindowOpen</animation>
 					<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>

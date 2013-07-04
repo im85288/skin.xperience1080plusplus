@@ -101,4 +101,21 @@
 	<color name="Magenta Panel">aab41363</color>
 	
 	<color name="imdb">fff3ce13</color>
+	
+	<!-- Background Colours -->
+	<color name="Blue Background">ff005180</color>
+	<color name="Green Background">ff007949</color>
+	<color name="Red Background">ffd02e49</color>
+	<color name="Pink Background">ff790059</color>
+	<color name="Purple Background">ff3a0079</color>
+	<color name="Lime Background">ff7eb000</color>
+	<color name="Grey Background">ff404040</color>
+	<color name="Orange Background">fffdc700</color>
+	<color name="Yellow Background">fffffe00</color>
+	<color name="Black Background">ff000000</color>
+	<color name="White Background">ffffffff</color>
+	<color name="Cyan Background">ff008dcc</color>
+	<color name="Magenta Background">ffb41363</color>
+	<color name="Imdb Background">fff3ce13</color>
+	
 </colors>

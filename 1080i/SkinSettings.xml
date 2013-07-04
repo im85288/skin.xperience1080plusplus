@@ -41,7 +41,7 @@
 					<font>Font-Condensed-S25</font>
 					<label>$LOCALIZE[42130]</label>
 					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label">
 					<description>Category</description>
@@ -53,7 +53,7 @@
 					<font>Font-Condensed-S25</font>
 					<label>$LOCALIZE[42130]</label>
 					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -180,6 +180,11 @@
 							<label>Panel Colors</label>
 							<onclick>noop</onclick>
 						</item>
+						<item id="48">
+							<description>Backgrounf Colour Settings</description>
+							<label>Background Colors</label>
+							<onclick>noop</onclick>
+						</item>
 						<item id="33">
 							<description>Media Settings</description>
 							<label>$LOCALIZE[41190]</label>
@@ -225,7 +230,7 @@
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
 					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label">
 					<description>Category</description>
@@ -237,7 +242,7 @@
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
 					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -773,7 +778,6 @@
 						<onclick condition="stringcompare(Skin.String(musiccolor.name),Yellow Tiles)">Skin.SetString(musiccolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(musiccolor.name),Black Tiles)">Skin.SetString(musiccolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(musiccolor.name),Solid Black Tiles)">Skin.SetString(musiccolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(musiccolor.name),White Tiles)">Skin.SetString(musiccolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(musiccolor.name),Cyan Tiles)">Skin.SetString(musiccolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(musiccolor.name),Magenta Tiles)">Skin.SetString(musiccolor.name,Cyan Tiles)</onclick>
@@ -803,7 +807,6 @@
 						<onclick condition="stringcompare(Skin.String(tvcolor.name),Yellow Tiles)">Skin.SetString(tvcolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(tvcolor.name),Black Tiles)">Skin.SetString(tvcolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(tvcolor.name),Solid Black Tiles)">Skin.SetString(tvcolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(tvcolor.name),White Tiles)">Skin.SetString(tvcolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(tvcolor.name),Cyan Tiles)">Skin.SetString(tvcolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(tvcolor.name),Magenta Tiles)">Skin.SetString(tvcolor.name,Cyan Tiles)</onclick>
@@ -833,7 +836,6 @@
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),Yellow Tiles)">Skin.SetString(moviecolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),Black Tiles)">Skin.SetString(moviecolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),Solid Black Tiles)">Skin.SetString(moviecolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),White Tiles)">Skin.SetString(moviecolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),Cyan Tiles)">Skin.SetString(moviecolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviecolor.name),Magenta Tiles)">Skin.SetString(moviecolor.name,Cyan Tiles)</onclick>
@@ -863,7 +865,6 @@
 						<onclick condition="stringcompare(Skin.String(homecolor.name),Yellow Tiles)">Skin.SetString(homecolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(homecolor.name),Black Tiles)">Skin.SetString(homecolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(homecolor.name),Solid Black Tiles)">Skin.SetString(homecolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(homecolor.name),White Tiles)">Skin.SetString(homecolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(homecolor.name),Cyan Tiles)">Skin.SetString(homecolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(homecolor.name),Magenta Tiles)">Skin.SetString(homecolor.name,Cyan Tiles)</onclick>
@@ -893,7 +894,6 @@
 						<onclick condition="stringcompare(Skin.String(appcolor.name),Yellow Tiles)">Skin.SetString(appcolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(appcolor.name),Black Tiles)">Skin.SetString(appcolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(appcolor.name),Solid Black Tiles)">Skin.SetString(appcolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(appcolor.name),White Tiles)">Skin.SetString(appcolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(appcolor.name),Cyan Tiles)">Skin.SetString(appcolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(appcolor.name),Magenta Tiles)">Skin.SetString(appcolor.name,Cyan Tiles)</onclick>
@@ -923,7 +923,6 @@
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Yellow Tiles)">Skin.SetString(pvrcolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Black Tiles)">Skin.SetString(pvrcolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Solid Black Tiles)">Skin.SetString(pvrcolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),White Tiles)">Skin.SetString(pvrcolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Cyan Tiles)">Skin.SetString(pvrcolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrcolor.name),Magenta Tiles)">Skin.SetString(pvrcolor.name,Cyan Tiles)</onclick>
@@ -953,7 +952,6 @@
 						<onclick condition="stringcompare(Skin.String(picturescolor.name),Yellow Tiles)">Skin.SetString(picturescolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(picturescolor.name),Black Tiles)">Skin.SetString(picturescolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(picturescolor.name),Solid Black Tiles)">Skin.SetString(picturescolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(picturescolor.name),White Tiles)">Skin.SetString(picturescolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(picturescolor.name),Cyan Tiles)">Skin.SetString(picturescolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(picturescolor.name),Magenta Tiles)">Skin.SetString(picturescolor.name,Cyan Tiles)</onclick>
@@ -983,7 +981,6 @@
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Yellow Tiles)">Skin.SetString(weathercolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Black Tiles)">Skin.SetString(weathercolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Solid Black Tiles)">Skin.SetString(weathercolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),White Tiles)">Skin.SetString(weathercolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Cyan Tiles)">Skin.SetString(weathercolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(weathercolor.name),Magenta Tiles)">Skin.SetString(weathercolor.name,Cyan Tiles)</onclick>
@@ -1013,7 +1010,6 @@
 						<onclick condition="stringcompare(Skin.String(settingscolor.name),Yellow Tiles)">Skin.SetString(settingscolor.name,Orange Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(settingscolor.name),Black Tiles)">Skin.SetString(settingscolor.name,Yellow Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(settingscolor.name),Solid Black Tiles)">Skin.SetString(settingscolor.name,Black Tiles)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(settingscolor.name),White Tiles)">Skin.SetString(settingscolor.name,Solid Black Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(settingscolor.name),Cyan Tiles)">Skin.SetString(settingscolor.name,White Tiles)</onclick>
 						<onclick condition="stringcompare(Skin.String(settingscolor.name),Magenta Tiles)">Skin.SetString(settingscolor.name,Cyan Tiles)</onclick>
@@ -1081,7 +1077,6 @@
 						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Yellow TileBorder)">Skin.SetString(musicbordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Black TileBorder)">Skin.SetString(musicbordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Solid Black TileBorder)">Skin.SetString(musicbordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),White TileBorder)">Skin.SetString(musicbordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Cyan TileBorder)">Skin.SetString(musicbordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(musicbordercolor.name),Magenta TileBorder)">Skin.SetString(musicbordercolor.name,Cyan TileBorder)</onclick>
@@ -1111,7 +1106,6 @@
 						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Yellow TileBorder)">Skin.SetString(tvbordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Black TileBorder)">Skin.SetString(tvbordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Solid Black TileBorder)">Skin.SetString(tvbordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),White TileBorder)">Skin.SetString(tvbordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Cyan TileBorder)">Skin.SetString(tvbordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(tvbordercolor.name),Magenta TileBorder)">Skin.SetString(tvbordercolor.name,Cyan TileBorder)</onclick>
@@ -1141,7 +1135,6 @@
 						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Yellow TileBorder)">Skin.SetString(moviebordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Black TileBorder)">Skin.SetString(moviebordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Solid Black TileBorder)">Skin.SetString(moviebordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),White TileBorder)">Skin.SetString(moviebordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Cyan TileBorder)">Skin.SetString(moviebordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(moviebordercolor.name),Magenta TileBorder)">Skin.SetString(moviebordercolor.name,Cyan TileBorder)</onclick>
@@ -1171,7 +1164,6 @@
 						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Yellow TileBorder)">Skin.SetString(homebordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Black TileBorder)">Skin.SetString(homebordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Solid Black TileBorder)">Skin.SetString(homebordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(homebordercolor.name),White TileBorder)">Skin.SetString(homebordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Cyan TileBorder)">Skin.SetString(homebordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(homebordercolor.name),Magenta TileBorder)">Skin.SetString(homebordercolor.name,Cyan TileBorder)</onclick>
@@ -1201,7 +1193,6 @@
 						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Yellow TileBorder)">Skin.SetString(appbordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Black TileBorder)">Skin.SetString(appbordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Solid Black TileBorder)">Skin.SetString(appbordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(appbordercolor.name),White TileBorder)">Skin.SetString(appbordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Cyan TileBorder)">Skin.SetString(appbordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(appbordercolor.name),Magenta TileBorder)">Skin.SetString(appbordercolor.name,Cyan TileBorder)</onclick>
@@ -1231,7 +1222,6 @@
 						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Yellow TileBorder)">Skin.SetString(pvrbordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Black TileBorder)">Skin.SetString(pvrbordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Solid Black TileBorder)">Skin.SetString(pvrbordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),White TileBorder)">Skin.SetString(pvrbordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Cyan TileBorder)">Skin.SetString(pvrbordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(pvrbordercolor.name),Magenta TileBorder)">Skin.SetString(pvrbordercolor.name,Cyan TileBorder)</onclick>
@@ -1261,7 +1251,6 @@
 						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Yellow TileBorder)">Skin.SetString(picturesbordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Black TileBorder)">Skin.SetString(picturesbordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Solid Black TileBorder)">Skin.SetString(picturesbordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),White TileBorder)">Skin.SetString(picturesbordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Cyan TileBorder)">Skin.SetString(picturesbordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(picturesbordercolor.name),Magenta TileBorder)">Skin.SetString(picturesbordercolor.name,Cyan TileBorder)</onclick>
@@ -1291,7 +1280,6 @@
 						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Yellow TileBorder)">Skin.SetString(weatherbordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Black TileBorder)">Skin.SetString(weatherbordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Solid Black TileBorder)">Skin.SetString(weatherbordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),White TileBorder)">Skin.SetString(weatherbordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Cyan TileBorder)">Skin.SetString(weatherbordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(weatherbordercolor.name),Magenta TileBorder)">Skin.SetString(weatherbordercolor.name,Cyan TileBorder)</onclick>
@@ -1321,7 +1309,6 @@
 						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Yellow TileBorder)">Skin.SetString(settingsbordercolor.name,Orange TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Black TileBorder)">Skin.SetString(settingsbordercolor.name,Yellow TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Solid Black TileBorder)">Skin.SetString(settingsbordercolor.name,Black TileBorder)</onclick>
-						
 						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),White TileBorder)">Skin.SetString(settingsbordercolor.name,Solid Black TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Cyan TileBorder)">Skin.SetString(settingsbordercolor.name,White TileBorder)</onclick>
 						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Magenta TileBorder)">Skin.SetString(settingsbordercolor.name,Cyan TileBorder)</onclick>
@@ -1414,6 +1401,67 @@
 						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 				</control>
+				<!-- =================== -->
+				<!-- Background Colour Settings -->
+				<!-- =================== -->
+				<control type="grouplist" id="5">
+					<onleft>30</onleft>
+					<include>SettingsCategoryGrouplistVars</include>
+					<visible>Container(30).HasFocus(48)</visible>
+					<control type="radiobutton" id="80002">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
+						<selected>Skin.HasSetting(ColourBackground)</selected>
+						<onclick>Skin.ToggleSetting(ColourBackground)</onclick>
+						<label>Tint default and show less backgrounds</label>
+					</control>
+					<control type="button" id="80003">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Grey Background)">Skin.SetString(backgroundcolor.name,Magenta Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Lime Background)">Skin.SetString(backgroundcolor.name,Grey Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Green Background)">Skin.SetString(backgroundcolor.name,Lime Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Blue Background)">Skin.SetString(backgroundcolor.name,Green Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Red Background)">Skin.SetString(backgroundcolor.name,Blue Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Pink Background)">Skin.SetString(backgroundcolor.name,Red Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Purple Background)">Skin.SetString(backgroundcolor.name,Pink Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Orange Background)">Skin.SetString(backgroundcolor.name,Purple Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Yellow Background)">Skin.SetString(backgroundcolor.name,Orange Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Black Background)">Skin.SetString(backgroundcolor.name,Yellow Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Imdb Background)">Skin.SetString(backgroundcolor.name,Black Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),White Background)">Skin.SetString(backgroundcolor.name,Imdb Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Cyan Background)">Skin.SetString(backgroundcolor.name,White Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Magenta Background)">Skin.SetString(backgroundcolor.name,Cyan Background)</onclick>
+						<onclick condition="stringcompare(Skin.String(backgroundcolor.name),Grey Background)">Skin.SetString(backgroundcolor.name,Magenta Background)</onclick>
+						<label>Background Colour</label>
+						<label2>$INFO[Skin.String(backgroundcolor.name)]</label2>
+						<visible>Skin.HasSetting(ColourBackground)</visible>
+					</control>
+					<control type="button" id="80012">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<onclick>Skin.SetString(backgroundcolor.name,Black Background)</onclick>
+						<label>$LOCALIZE[409]</label>
+						<visible>Skin.HasSetting(ColourBackground)</visible>
+					</control>
+				</control>
 				<!-- ============== -->
 				<!-- View Settings -->
 				<!-- ============== -->
@@ -1429,7 +1477,7 @@
 						<onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(LessBackgroundOpacity)</onclick>
-						<label>Show whiter background</label>
+						<label>Show more background</label>
 					</control>
 					<control type="radiobutton" id="3022">
 						<width>1210</width>
@@ -1438,7 +1486,15 @@
 						<selected>Skin.HasSetting(LessBackgroundOpacity)</selected>
 						<onclick>Skin.ToggleSetting(LessBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(BackgroundOpacity)</onclick>
-						<label>Show darker background</label>
+						<label>Show less background</label>
+					</control>
+					<control type="radiobutton" id="3092">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
+						<selected>Skin.HasSetting(UseWhiteText)</selected>
+						<onclick>Skin.ToggleSetting(UseWhiteText)</onclick>
+						<label>Use white text</label>
 					</control>
 					<control type="radiobutton" id="3023">
 						<width>1210</width>

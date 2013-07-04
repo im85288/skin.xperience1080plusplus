@@ -232,8 +232,8 @@
 		<value condition="Skin.HasSetting(DarkerPanels)">darkgrey</value>
 	</variable>
 	<variable name="BackgroundViewsMainListTextColourVars">
-		<value condition="!Skin.HasSetting(LessBackgroundOpacity)">mod-infotags</value>
-		<value condition="Skin.HasSetting(LessBackgroundOpacity)">darkerbackground</value>
+		<value condition="!Skin.HasSetting(UseWhiteText)">mod-infotags</value>
+		<value condition="Skin.HasSetting(UseWhiteText)">darkerbackground</value>
 	</variable>
 	<variable name="PVRFocusedTextColourVars">
 		<value condition="!Skin.HasSetting(DarkerPanels)">darkerbackground</value>

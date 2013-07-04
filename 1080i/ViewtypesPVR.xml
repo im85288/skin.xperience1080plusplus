@@ -206,7 +206,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label">
 					<posx>150</posx>
@@ -218,7 +218,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow</description>

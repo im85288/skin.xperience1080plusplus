@@ -48,7 +48,7 @@
 				<focusedlayout height="1" width="1" />
 			</control>
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in" condition="!Window.IsActive(movieinformation) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))">WindowOpen</animation>
 				<!-- Title Label -->
 				<control type="label">
@@ -143,7 +143,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 				<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in" condition="!Window.IsActive(movieinformation) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent))">WindowOpen</animation>
 				<!-- Title Label -->
 				<control type="label">
@@ -365,7 +365,7 @@
 				</control>
 				<!-- Info -->
 				<control type="group">
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					<posx>575</posx>
 					<posy>245</posy>
 					<width>1240</width>
@@ -564,7 +564,7 @@
 				</control>
 				<!-- Info -->
 				<control type="group">
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 					<posx>575</posx>
 					<posy>245</posy>
 					<width>1240</width>
@@ -828,7 +828,7 @@
 							<height>28</height>
 							<texture>views/other/isInLibrary.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>!IsEmpty(ListItem.Property(LibraryHasMovie))  + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!IsEmpty(ListItem.Property(LibraryHasMovie))  + !Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -836,7 +836,7 @@
 							<width>23</width>
 							<height>28</height>
 							<texture>views/other/isInLibrary.png</texture>
-							<visible>!IsEmpty(ListItem.Property(LibraryHasMovie))  + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!IsEmpty(ListItem.Property(LibraryHasMovie))  + Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>35</posx>
@@ -850,7 +850,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>35</posx>
@@ -864,7 +864,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60">
@@ -875,7 +875,7 @@
 							<height>28</height>
 							<texture>views/other/isInLibrary.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>!IsEmpty(ListItem.Property(LibraryHasMovie)) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!IsEmpty(ListItem.Property(LibraryHasMovie)) + !Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -883,7 +883,7 @@
 							<width>23</width>
 							<height>28</height>
 							<texture>views/other/isInLibrary.png</texture>
-							<visible>!IsEmpty(ListItem.Property(LibraryHasMovie)) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!IsEmpty(ListItem.Property(LibraryHasMovie)) + Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>35</posx>
@@ -897,7 +897,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>35</posx>
@@ -911,7 +911,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</focusedlayout>
 				</control>

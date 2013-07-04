@@ -67,7 +67,7 @@
 				<preloaditems>2</preloaditems>
 				<itemlayout height="112" condition="!Container.Content(Songs) + !Window.IsVisible(MusicPlaylist)">
 					<control type="group">
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						<posx>746</posx>
 						<control type="image">
 							<posx>-263</posx>
@@ -124,7 +124,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Skin.HasSetting(UseWhiteText)</visible>
 						<posx>746</posx>
 						<control type="image">
 							<posx>-263</posx>
@@ -182,7 +182,7 @@
 				</itemlayout>
 				<itemlayout height="112" condition="Container.Content(Songs) | Window.IsVisible(MusicPlaylist)">
 					<control type="group">
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						<posx>747</posx>
 						<control type="label">
 							<posx>-40</posx>
@@ -240,7 +240,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Skin.HasSetting(UseWhiteText)</visible>
 						<posx>747</posx>
 						<control type="label">
 							<posx>-40</posx>

@@ -4,7 +4,7 @@
 		<control type="group" id="80">
 			<description>Home Buttons</description>
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				<control type="button" id="21">
 					<description>Shutdown Button</description>
 					<posx>72</posx>
@@ -111,7 +111,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 				<control type="button" id="21">
 					<description>Shutdown Button</description>
 					<posx>72</posx>
@@ -317,7 +317,7 @@
 			<posy>24</posy>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
-				<visible>!Skin.HasSetting(HideHomeProfileInfo) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(HideHomeProfileInfo) + !Skin.HasSetting(UseWhiteText)</visible>
 				<animation type="Conditional" condition="System.HasMediaDVD">
 					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
 					<effect type="zoom" start="100" end="50" center="125,80" tween="sine" easing="inout" time="300" />
@@ -388,7 +388,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!Skin.HasSetting(HideHomeProfileInfo) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(HideHomeProfileInfo) + Skin.HasSetting(UseWhiteText)</visible>
 				<animation type="Conditional" condition="System.HasMediaDVD">
 					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
 					<effect type="zoom" start="100" end="50" center="125,80" tween="sine" easing="inout" time="300" />
@@ -524,7 +524,7 @@
 					<include>visiblehidefadeinfo</include>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(525) + Container(20).HasFocus(2)]">Conditional</animation>
 					<colordiffuse>mod-infotags</colordiffuse>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="image">
 					<posx>-25</posx>
@@ -535,13 +535,13 @@
 					<include>visiblehidefadeinfo</include>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(525) + Container(20).HasFocus(2)]">Conditional</animation>
 					<colordiffuse>eewhite</colordiffuse>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 			</control>
 			<control type="label">
 				<description>Home</description>
-				<include condition="!Skin.HasSetting(LessBackgroundOpacity)">HomeLabel</include>
-				<include condition="Skin.HasSetting(LessBackgroundOpacity)">HomeLabelExtraFanart</include>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
 				<label>$VAR[HomeDVDLabel]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2) | !Control.HasFocus(525)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(20).HasFocus(2)">Conditional</animation>
@@ -562,7 +562,7 @@
 					<include>visiblehidefadeinfo</include>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(225) + Container(20).HasFocus(3)]">Conditional</animation>
 					<colordiffuse>mod-infotags</colordiffuse>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="image">
 					<posx>-25</posx>
@@ -573,13 +573,13 @@
 					<include>visiblehidefadeinfo</include>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(225) + Container(20).HasFocus(3)]">Conditional</animation>
 					<colordiffuse>eewhite</colordiffuse>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 			</control>
 			<control type="label">
 				<description>Movies</description>
-				<include condition="!Skin.HasSetting(LessBackgroundOpacity)">HomeLabel</include>
-				<include condition="Skin.HasSetting(LessBackgroundOpacity)">HomeLabelExtraFanart</include>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
 				<label>$LOCALIZE[342]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3) | !Control.HasFocus(225)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(20).HasFocus(3)">Conditional</animation>
@@ -600,7 +600,7 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(325) + Container(20).HasFocus(4)]">Conditional</animation>
 					<colordiffuse>mod-infotags</colordiffuse>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="image">
 					<posx>-25</posx>
@@ -610,13 +610,13 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(325) + Container(20).HasFocus(4)]">Conditional</animation>
 					<colordiffuse>eewhite</colordiffuse>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 			</control>
 			<control type="label">
 				<description>TV Shows</description>
-				<include condition="!Skin.HasSetting(LessBackgroundOpacity)">HomeLabel</include>
-				<include condition="Skin.HasSetting(LessBackgroundOpacity)">HomeLabelExtraFanart</include>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
 				<label>$LOCALIZE[20343]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(4) | !Control.HasFocus(325)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(20).HasFocus(4)">Conditional</animation>
@@ -624,8 +624,8 @@
 			</control>
 			<control type="label">
 				<description>Live TV</description>
-				<include condition="!Skin.HasSetting(LessBackgroundOpacity)">HomeLabel</include>
-				<include condition="Skin.HasSetting(LessBackgroundOpacity)">HomeLabelExtraFanart</include>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
 				<label>$LOCALIZE[41220]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(9) | !Control.HasFocus(925)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(20).HasFocus(9)">Conditional</animation>
@@ -633,8 +633,8 @@
 			</control>
 			<control type="label">
 				<description>Pictures</description>
-				<include condition="!Skin.HasSetting(LessBackgroundOpacity)">HomeLabel</include>
-				<include condition="Skin.HasSetting(LessBackgroundOpacity)">HomeLabelExtraFanart</include>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
 				<label>$LOCALIZE[1]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(10) | !Control.HasFocus(1025)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(20).HasFocus(10)">Conditional</animation>
@@ -655,7 +655,7 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(425) + Container(20).HasFocus(5)]">Conditional</animation>
 					<colordiffuse>mod-infotags</colordiffuse>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="image">
 					<posx>-25</posx>
@@ -665,13 +665,13 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(425) + Container(20).HasFocus(5)]">Conditional</animation>
 					<colordiffuse>eewhite</colordiffuse>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<include condition="!Skin.HasSetting(LessBackgroundOpacity)">HomeLabel</include>
-				<include condition="Skin.HasSetting(LessBackgroundOpacity)">HomeLabelExtraFanart</include>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
 				<label>$LOCALIZE[2]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(5) | !Control.HasFocus(425)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(20).HasFocus(5)">Conditional</animation>
@@ -679,8 +679,8 @@
 			</control>
 			<control type="label">
 				<description>Applications</description>
-				<include condition="!Skin.HasSetting(LessBackgroundOpacity)">HomeLabel</include>
-				<include condition="Skin.HasSetting(LessBackgroundOpacity)">HomeLabelExtraFanart</include>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
 				<label>$LOCALIZE[41504]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(6) | !Control.HasFocus(625)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(20).HasFocus(6)">Conditional</animation>
@@ -688,8 +688,8 @@
 			</control>
 			<control type="label">
 				<description>Weather</description>
-				<include condition="!Skin.HasSetting(LessBackgroundOpacity)">HomeLabel</include>
-				<include condition="Skin.HasSetting(LessBackgroundOpacity)">HomeLabelExtraFanart</include>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
 				<label>$LOCALIZE[8]</label>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(7) | !Control.HasFocus(725)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(20).HasFocus(7)">Conditional</animation>
@@ -704,7 +704,7 @@
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8) | !Control.HasFocus(825)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(8)">Conditional</animation>
 				<colordiffuse>mod-infotags</colordiffuse>
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="image">
 				<description>Settings</description>
@@ -716,7 +716,7 @@
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8) | !Control.HasFocus(825)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(8)">Conditional</animation>
 				<colordiffuse>eewhite</colordiffuse>
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 		</control>
 	</include>
@@ -1183,7 +1183,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[SpotlightLabelVAR]</label>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -1197,7 +1197,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[SpotlightLabelVAR]</label>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(5022)</visible>
@@ -1232,7 +1232,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="5024">
 								<description>Scrollbar</description>
@@ -1244,7 +1244,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="5024">
 								<description>Scrollbar</description>
@@ -1419,7 +1419,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[OngoingTVShowsLabelVAR]</label>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -1433,7 +1433,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[OngoingTVShowsLabelVAR]</label>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(5032)</visible>
@@ -1468,7 +1468,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="5034">
 								<description>Scrollbar</description>
@@ -1480,7 +1480,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="5034">
 								<description>Scrollbar</description>
@@ -1881,7 +1881,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[NewMoviesLabelVAR]</label>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -1895,7 +1895,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[NewMoviesLabelVAR]</label>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(2022)</visible>
@@ -1930,7 +1930,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="2024">
 								<description>Scrollbar</description>
@@ -1942,7 +1942,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="2024">
 								<description>Scrollbar</description>
@@ -2587,7 +2587,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[NewShowsLabelVAR]</label>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -2601,7 +2601,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[NewShowsLabelVAR]</label>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(3022)</visible>
@@ -2636,7 +2636,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="3024">
 								<description>Scrollbar</description>
@@ -2648,7 +2648,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="3024">
 								<description>Scrollbar</description>
@@ -3789,7 +3789,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[FeaturedAlbumsLabelVAR]</label>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -3803,7 +3803,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>$VAR[FeaturedAlbumsLabelVAR]</label>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="group">
 							<visible>Control.IsVisible(4022)</visible>
@@ -3838,7 +3838,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="4024">
 								<description>Scrollbar</description>
@@ -3850,7 +3850,7 @@
 								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
 								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
 								<showonepage>false</showonepage>
-								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="scrollbar" id="4024">
 								<description>Scrollbar</description>
@@ -5385,7 +5385,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>[B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)]</label>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -5399,7 +5399,7 @@
 							<aligny>center</aligny>
 							<textoffsetx>5</textoffsetx>
 							<label>[B]$INFO[Window(Weather).Property(WeatherProvider),$LOCALIZE[21870]: ,][/B]$INFO[Window(Weather).Property(Updated), (,)]</label>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="group" id="7023">
 							<visible>!Weather.IsFetched</visible>

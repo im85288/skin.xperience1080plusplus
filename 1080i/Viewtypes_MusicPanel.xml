@@ -137,7 +137,7 @@
 					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
-					<visible>Container.Content(Albums) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Container.Content(Albums) + !Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label">
 					<posx>24</posx>
@@ -148,7 +148,7 @@
 					<textcolor>darkerbackground</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
-					<visible>Container.Content(Albums) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Container.Content(Albums) + Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label">
 					<posx>24</posx>
@@ -159,7 +159,7 @@
 					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
-					<visible>!Container.Content(Albums) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Container.Content(Albums) + !Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label">
 					<posx>24</posx>
@@ -170,7 +170,7 @@
 					<textcolor>darkerbackground</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
-					<visible>!Container.Content(Albums) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Container.Content(Albums) + Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="group">
 					<visible>![Container(51).OnNext | Container(51).OnPrevious] + Container.Content(Albums)</visible>
@@ -188,7 +188,7 @@
 						<font>Font-Condensed-S25</font>
 						<scroll>false</scroll>
 						<wrapmultiline>false</wrapmultiline>
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="label">
 						<description>Tracks</description>
@@ -203,7 +203,7 @@
 						<font>Font-Condensed-S25</font>
 						<scroll>false</scroll>
 						<wrapmultiline>false</wrapmultiline>
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="label">
 						<description>Tracks Right</description>
@@ -218,7 +218,7 @@
 						<font>Font-Condensed-S25</font>
 						<scroll>false</scroll>
 						<wrapmultiline>false</wrapmultiline>
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="label">
 						<description>Tracks Right</description>
@@ -233,7 +233,7 @@
 						<font>Font-Condensed-S25</font>
 						<scroll>false</scroll>
 						<wrapmultiline>false</wrapmultiline>
-						<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="textbox">
 						<description>Plot</description>
@@ -245,7 +245,7 @@
 						<align>justify</align>
 						<textcolor>mod-infotags-l</textcolor>
 						<font>Font-Condensed-S25</font>
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="textbox">
 						<description>Plot</description>
@@ -257,7 +257,7 @@
 						<align>justify</align>
 						<textcolor>darkerbackground</textcolor>
 						<font>Font-Condensed-S25</font>
-						<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 				</control>
 				<control type="textbox">
@@ -270,7 +270,7 @@
 					<textcolor>mod-infotags-l</textcolor>
 					<align>justify</align>
 					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>!IsEmpty(ListItem.Property(Artist_Description)) + Container.Content(Artists) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!IsEmpty(ListItem.Property(Artist_Description)) + Container.Content(Artists) + !Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="textbox">
 					<posx>24</posx>
@@ -282,7 +282,7 @@
 					<textcolor>darkerbackground</textcolor>
 					<align>justify</align>
 					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>!IsEmpty(ListItem.Property(Artist_Description)) + Container.Content(Artists) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!IsEmpty(ListItem.Property(Artist_Description)) + Container.Content(Artists) + Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -295,7 +295,7 @@
 				<aspectratio>keep</aspectratio>
 				<animation effect="slide" end="42, 305" time="400" condition="true">Conditional</animation>
 				<colordiffuse>mod-infotags</colordiffuse>
-				<visible>IntegerGreaterThan(Container(51).NumItems,8) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>IntegerGreaterThan(Container(51).NumItems,8) + !Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 				<control type="image">
 				<description>Right Arrow</description>
@@ -306,7 +306,7 @@
 				<texture background="true">dialogs/shutdown/right.png</texture>
 				<aspectratio>keep</aspectratio>
 				<animation effect="slide" end="42, 305" time="400" condition="true">Conditional</animation>
-				<visible>IntegerGreaterThan(Container(51).NumItems,8) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>IntegerGreaterThan(Container(51).NumItems,8) + Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<!--Scrollbar -->
 			<control type="group">

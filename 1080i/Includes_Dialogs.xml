@@ -1629,7 +1629,7 @@
 	</include>
 	<include name="DialogTextViewerAddonInfo">
 		<control type="group">
-			<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			<include>FullscreenDimensions</include>
 			<animation type="WindowOpen">
 				<effect type="slide" start="1920" end="0" time="600" delay="0" tween="sine" easing="inout" />
@@ -1671,7 +1671,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<visible>Skin.HasSetting(UseWhiteText)</visible>
 			<include>FullscreenDimensions</include>
 			<animation type="WindowOpen">
 				<effect type="slide" start="1920" end="0" time="600" delay="0" tween="sine" easing="inout" />

@@ -52,7 +52,7 @@
 						<label>$INFO[Control.GetLabel(30)]</label>
 						<scroll>false</scroll>
 						<align>left</align>
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="label">
 						<description>Header label</description>
@@ -65,7 +65,7 @@
 						<label>$INFO[Control.GetLabel(30)]</label>
 						<scroll>false</scroll>
 						<align>left</align>
-						<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="label">
 						<description>Header label</description>
@@ -78,7 +78,7 @@
 						<label>$INFO[Control.GetLabel(32),: ,%]</label>
 						<scroll>false</scroll>
 						<align>left</align>
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="label">
 						<description>Header label</description>
@@ -91,7 +91,7 @@
 						<label>$INFO[Control.GetLabel(32),: ,%]</label>
 						<scroll>false</scroll>
 						<align>left</align>
-						<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 				</control>
 				<control type="label" id="30">
@@ -105,10 +105,10 @@
 					<width>750</width>
 					<height>120</height>
 					<font>Font-Condensed-S28</font>
-					<textcolor>mod-infotags-l</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
-					<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label" id="31">
 					<description>Title label</description>
@@ -120,7 +120,7 @@
 					<textcolor>darkerbackground</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
-					<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="progress" id="32">
 					<description>progress control</description>

@@ -30,7 +30,7 @@
 		</control>
 		<!-- Movies, TVShows, Seasons, Episodes -->
 		<control type="group">
-			<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1920</width>
@@ -860,7 +860,7 @@
 		
 		<!-- Movies, TVShows, Seasons, Episodes -->
 		<control type="group">
-			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<visible>Skin.HasSetting(UseWhiteText)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1920</width>

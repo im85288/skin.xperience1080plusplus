@@ -19,7 +19,7 @@
         </control>
         <include>CommonOverlay</include>
         <control type="group">
-        	<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+        	<visible>!Skin.HasSetting(UseWhiteText)</visible>
             <posx>75</posx>
             <posy>26</posy>
             <include>BannerListInfoAnimation</include>
@@ -55,7 +55,7 @@
             </control>
         </control>
          <control type="group">
-        	<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+        	<visible>Skin.HasSetting(UseWhiteText)</visible>
             <posx>75</posx>
             <posy>26</posy>
             <include>BannerListInfoAnimation</include>
@@ -143,7 +143,7 @@
                                 <shadowcolor>mod-shadow</shadowcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
-                                <visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+                                <visible>!Skin.HasSetting(UseWhiteText)</visible>
                             </control>
                             <control type="label">
                                 <posx>20</posx>
@@ -154,7 +154,7 @@
                                 <textcolor>darkerbackground</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
-                                <visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+                                <visible>Skin.HasSetting(UseWhiteText)</visible>
                             </control>
                             <control type="label">
                                 <posx>20</posx>
@@ -166,7 +166,7 @@
                                 <shadowcolor>mod-shadow</shadowcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
-                                <visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+                                <visible>!Skin.HasSetting(UseWhiteText)</visible>
                             </control>
                              <control type="label">
                                 <posx>20</posx>
@@ -177,7 +177,7 @@
                                 <textcolor>darkerbackground</textcolor>
                                 <scroll>false</scroll>
                                 <align>left</align>
-                                <visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+                                <visible>Skin.HasSetting(UseWhiteText)</visible>
                             </control>
                             <control type="image">
                                 <posx>14</posx>

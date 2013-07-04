@@ -113,7 +113,7 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
-							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) | [!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] | [Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) | [!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] | [Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + !Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>223</posx>
@@ -124,7 +124,7 @@
 							<textcolor>eewhite</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
-							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) | [!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] | [Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) | [!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] | [Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>223</posx>
@@ -135,7 +135,7 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
-							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + ![!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] + ![Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + ![!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] + ![Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + !Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>223</posx>
@@ -146,7 +146,7 @@
 							<textcolor>eewhite</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
-							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + ![!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] + ![Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + ![!Container.Content(Seasons) + IsEmpty(ListItem.Genre)] + ![Container.Content(Seasons) + IsEmpty(ListItem.Property(TotalEpisodes))] + Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>223</posx>
@@ -157,7 +157,7 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>223</posx>
@@ -168,7 +168,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>center</align>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -185,7 +185,7 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>right</align>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>-40</posx>
@@ -197,7 +197,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>right</align>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="image">
 							<posx>-19</posx>
@@ -216,7 +216,7 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + !Skin.HasSetting(UseWhiteText)</visible>
 							<animation effect="slide" start="0" end="-40" condition="SubString(ListItem.Overlay,UnWatched)" time="0">Conditional</animation>
 						</control>
 						<control type="label">
@@ -228,7 +228,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + Skin.HasSetting(UseWhiteText)</visible>
 							<animation effect="slide" start="0" end="-40" condition="SubString(ListItem.Overlay,UnWatched)" time="0">Conditional</animation>
 						</control>
 						<control type="label">
@@ -240,7 +240,7 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + !Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>40</posx>
@@ -251,7 +251,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!stringcompare(ListItem.ActualIcon,DefaultFolderBack.png) + Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -262,7 +262,7 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -273,7 +273,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 				</itemlayout>
@@ -290,7 +290,7 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>right</align>
-							<visible>Container.Content(movies) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Container.Content(movies) + !Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>-40</posx>
@@ -302,7 +302,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>right</align>
-							<visible>Container.Content(movies) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Container.Content(movies) + Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="image">
 							<posx>-19</posx>
@@ -321,7 +321,7 @@
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 							<animation effect="slide" start="0" end="-40" condition="SubString(ListItem.Overlay,UnWatched)" time="0">Conditional</animation>
 						</control>
 						<control type="label">
@@ -333,7 +333,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 							<animation effect="slide" start="0" end="-40" condition="SubString(ListItem.Overlay,UnWatched)" time="0">Conditional</animation>
 						</control>
 						<control type="label">
@@ -345,7 +345,7 @@
 							<textcolor>mod-infotags-l</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -356,7 +356,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 				</itemlayout>

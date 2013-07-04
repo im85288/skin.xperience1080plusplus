@@ -232,7 +232,7 @@
 							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
 							<visible>!Container.Content(Seasons)</visible>
 							<colordiffuse>mod-infotags-a</colordiffuse>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="image">
 							<posx>1278</posx>
@@ -241,7 +241,7 @@
 							<height>60</height>
 							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
 							<visible>!Container.Content(Seasons)</visible>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<description>Label</description>
@@ -253,7 +253,7 @@
 							<textcolor>mod-infotags-a</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<description>Label</description>
@@ -265,7 +265,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<description>Rating / Year / Runtime Label</description>
@@ -277,7 +277,7 @@
 							<textcolor>mod-infotags-a</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<description>Rating / Year / Runtime Label</description>
@@ -289,7 +289,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="118">
@@ -353,7 +353,7 @@
 							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
 							<visible>!Container.Content(Seasons)</visible>
 							<colordiffuse>mod-infotags-d</colordiffuse>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="image">
 							<posx>1278</posx>
@@ -362,7 +362,7 @@
 							<height>60</height>
 							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
 							<visible>!Container.Content(Seasons)</visible>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<description>Item Label</description>
@@ -374,7 +374,7 @@
 							<textcolor>mod-infotags-d</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<description>Rating / Year / Runtime Label</description>
@@ -386,7 +386,7 @@
 							<textcolor>darkerbackground</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</focusedlayout>
 				</control>

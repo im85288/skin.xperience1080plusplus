@@ -4,7 +4,7 @@
 		<control type="group" id="80">
 			<description>Home Buttons</description>
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				<control type="button" id="21">
 					<description>Shutdown Button</description>
 					<posx>72</posx>
@@ -73,7 +73,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 				<control type="button" id="21">
 					<description>Shutdown Button</description>
 					<posx>72</posx>

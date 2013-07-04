@@ -14,7 +14,7 @@
 	<!-- ================================================== -->
 	<variable name="FullscreenOverlay">
 		<value condition="Skin.HasSetting(MoreBackgroundOpacity)">windows/common/fanartwhite.png</value>
-		<value condition="Skin.HasSetting(BackgroundOpacity)">windows/common/white.png</value>
+		<value condition="Skin.HasSetting(BackgroundOpacity)">windows/common/lessfanartwhite.png</value>
 		<value condition="Skin.HasSetting(LessBackgroundOpacity)">windows/common/lessfanartwhite.png</value>
 		<value condition="!Skin.HasSetting(MoreBackgroundOpacity) | !Skin.HasSetting(BackgroundOpacity) | !Skin.HasSetting(LessBackgroundOpacity)">windows/common/white.png</value>
 	</variable>
@@ -25,17 +25,6 @@
 		</control>
 		<control type="image">
 			<posx>0</posx>
-			<posy>-2700</posy>
-			<width>1920</width>
-			<height>4120</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>windows/common/showcase_floor3.png</texture>
-			<fadetime>900</fadetime>
-			<visible>!Control.IsVisible(505) + Skin.HasSetting(BackgroundOpacity)</visible>
-			<colordiffuse>mod-black</colordiffuse>
-		</control>
-		<control type="image">
-			<posx>0</posx>
 			<posy>175r</posy>
 			<width>1920</width>
 			<height>175</height>
@@ -46,22 +35,33 @@
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
 			<texture>$VAR[FullscreenOverlay]</texture>
-			<colordiffuse>mod-dimfanart</colordiffuse>
 			<visible>Skin.HasSetting(BackgroundOpacity)</visible>
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
-			<texture>$VAR[FullscreenOverlay]</texture>
-			<colordiffuse>mod-notsodimfanart</colordiffuse>
-			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<texture>windows/common/overlay2.png</texture>
+			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(ColourBackground)</visible>
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
-			<texture>$VAR[FullscreenOverlay]</texture>
-			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
-			<colordiffuse>black</colordiffuse>
+			<texture>windows/common/overlay2.png</texture>
+			<colordiffuse>$INFO[Skin.String(backgroundcolor.name)]</colordiffuse>
+			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + Skin.HasSetting(ColourBackground)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<animation effect="fade" start="0" time="400">VisibleChange</animation>
+			<texture>windows/common/overlay.png</texture>
+			<visible>Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(ColourBackground)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<animation effect="fade" start="0" time="400">VisibleChange</animation>
+			<texture>windows/common/overlay.png</texture>
+			<visible>Skin.HasSetting(LessBackgroundOpacity) + Skin.HasSetting(ColourBackground)</visible>
+			<colordiffuse>$INFO[Skin.String(backgroundcolor.name)]</colordiffuse>
 		</control>
 	</include>
 	<include name="CommonOverlayHome">
@@ -71,17 +71,6 @@
 		</control>
 		<control type="image">
 			<posx>0</posx>
-			<posy>-2700</posy>
-			<width>1920</width>
-			<height>4120</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>windows/common/showcase_floor3.png</texture>
-			<fadetime>900</fadetime>
-			<visible>!Control.IsVisible(505) + Skin.HasSetting(BackgroundOpacity)</visible>
-			<colordiffuse>mod-black</colordiffuse>
-		</control>
-		<control type="image">
-			<posx>0</posx>
 			<posy>175r</posy>
 			<width>1920</width>
 			<height>175</height>
@@ -92,22 +81,33 @@
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
 			<texture>$VAR[FullscreenOverlay]</texture>
-			<colordiffuse>mod-dimfanart</colordiffuse>
+			<visible>Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(ColourBackground)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<animation effect="fade" start="0" time="400">VisibleChange</animation>
+			<texture>$VAR[FullscreenOverlay]</texture>
 			<visible>Skin.HasSetting(BackgroundOpacity)</visible>
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
-			<texture>$VAR[FullscreenOverlay]</texture>
-			<colordiffuse>mod-notsodimfanart</colordiffuse>
-			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<texture>windows/common/overlay2.png</texture>
+			<colordiffuse>$INFO[Skin.String(backgroundcolor.name)]</colordiffuse>
+			<visible>!Skin.HasSetting(BackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + Skin.HasSetting(ColourBackground)</visible>
 		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="0" time="400">VisibleChange</animation>
-			<texture>$VAR[FullscreenOverlay]</texture>
-			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
-			<colordiffuse>black</colordiffuse>
+			<texture>windows/common/overlay.png</texture>
+			<visible>Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(ColourBackground)</visible>
+		</control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<animation effect="fade" start="0" time="400">VisibleChange</animation>
+			<texture>windows/common/overlay.png</texture>
+			<visible>Skin.HasSetting(LessBackgroundOpacity) + Skin.HasSetting(ColourBackground)</visible>
+			<colordiffuse>$INFO[Skin.String(backgroundcolor.name)]</colordiffuse>
 		</control>
 	</include>
 	<include name="CommonOverlayHomeClassic">
@@ -485,30 +485,30 @@
 		<textwidth>300</textwidth>
 		<scroll>false</scroll>
 	</include>
-	 <include name="PVRMenuButtonVars">
-        <posx>0</posx>
-        <width>458</width>
-        <height>112</height>
-        <font>Font-Condensed-S40</font>
-        <textoffsetx>110</textoffsetx>
-        <textwidth>318</textwidth>
-        <textcolor>mod-infotags</textcolor>
-        <focusedcolor>mod-infotags</focusedcolor>
-        <align>left</align>
-        <animation effect="fade" start="64.435" end="100" time="300" tween="sine" easing="inout" reversible="false">Focus</animation>
-    </include>
-    <include name="PVRMenuButtonVarsDarkerPanels">
-        <posx>0</posx>
-        <width>458</width>
-        <height>112</height>
-        <font>Font-Condensed-S40</font>
-        <textoffsetx>110</textoffsetx>
-        <textwidth>318</textwidth>
-        <textcolor>darkerbackground</textcolor>
-        <focusedcolor>darkerbackground</focusedcolor>
-        <align>left</align>
-        <animation effect="fade" start="64.435" end="100" time="300" tween="sine" easing="inout" reversible="false">Focus</animation>
-    </include>
+	<include name="PVRMenuButtonVars">
+		<posx>0</posx>
+		<width>458</width>
+		<height>112</height>
+		<font>Font-Condensed-S40</font>
+		<textoffsetx>110</textoffsetx>
+		<textwidth>318</textwidth>
+		<textcolor>mod-infotags</textcolor>
+		<focusedcolor>mod-infotags</focusedcolor>
+		<align>left</align>
+		<animation effect="fade" start="64.435" end="100" time="300" tween="sine" easing="inout" reversible="false">Focus</animation>
+	</include>
+	<include name="PVRMenuButtonVarsDarkerPanels">
+		<posx>0</posx>
+		<width>458</width>
+		<height>112</height>
+		<font>Font-Condensed-S40</font>
+		<textoffsetx>110</textoffsetx>
+		<textwidth>318</textwidth>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>darkerbackground</focusedcolor>
+		<align>left</align>
+		<animation effect="fade" start="64.435" end="100" time="300" tween="sine" easing="inout" reversible="false">Focus</animation>
+	</include>
 	<include name="AddonDescHeight_1">
 		<height>330</height>
 	</include>

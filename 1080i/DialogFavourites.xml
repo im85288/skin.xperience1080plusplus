@@ -12,7 +12,7 @@
 				!Window.IsActive(3003) + !Window.IsActive(3004) + !Window.IsActive(3005) + !Window.IsActive(3006)
 			</visible>
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				<posx>75</posx>
 				<posy>26</posy>
 				<animation type="WindowOpen" reversible="false">
@@ -113,7 +113,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 				<posx>75</posx>
 				<posy>26</posy>
 				<animation type="WindowOpen" reversible="false">

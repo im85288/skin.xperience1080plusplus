@@ -10,7 +10,7 @@
 			<posy>195</posy>
 			<posx>14</posx>
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				<posy>270</posy>
 				<control type="image">
 					<description>Left Arrow</description>
@@ -38,7 +38,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 				<posy>270</posy>
 				<control type="image">
 					<description>Left Arrow</description>
@@ -145,7 +145,7 @@
 							<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
 						</control>
 						<control type="group">
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 							<posy>474</posy>
 							<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="fade" start="0" end="100" time="350">Focus</animation>
 							<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="fade" start="100" end="0" time="250">UnFocus</animation>
@@ -186,7 +186,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 							<posy>474</posy>
 							<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="fade" start="0" end="100" time="350">Focus</animation>
 							<animation condition="Container(513).OnNext | Container(513).OnPrevious" effect="fade" start="100" end="0" time="250">UnFocus</animation>

@@ -8,7 +8,7 @@
 				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
 			</animation>
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				<animation effect="slide" end="-65" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="PVR.IsRecording | PVR.HasTimer">Conditional</animation>
 				<control type="image">
@@ -37,7 +37,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 				<animation effect="slide" end="-65" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="PVR.IsRecording | PVR.HasTimer">Conditional</animation>
 				<control type="image">
@@ -77,7 +77,7 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
 				</animation>
-				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + !Skin.HasSetting(UseWhiteText)</visible>
 				<control type="group">
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
 					<animation effect="slide" start="0" end="35" time="300" tween="sine" easing="inout" condition="![PVR.IsRecording | PVR.HasTimer] + !Window.IsActive(mutebug)">Conditional</animation>
@@ -131,7 +131,7 @@
 				<animation type="WindowClose" reversible="false">
 					<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
 				</animation>
-				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + Skin.HasSetting(UseWhiteText)</visible>
 				<control type="group">
 					<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug) + [PVR.IsRecording | PVR.HasTimer]">Conditional</animation>
 					<animation effect="slide" start="0" end="35" time="300" tween="sine" easing="inout" condition="![PVR.IsRecording | PVR.HasTimer] + !Window.IsActive(mutebug)">Conditional</animation>
@@ -178,14 +178,14 @@
 				<include>visiblehidefadeinfo</include>
 				<control type="image">
 					<posx>174r</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
 					<texture>windows/pvr/recording-info.png</texture>
 				</control>
 				<control type="image">
 					<posx>174r</posx>
-					<posy>950</posy>
+					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
 					<texture>windows/pvr/recording-info-pulse.png</texture>
@@ -194,45 +194,45 @@
 			</control>
 			<control type="image">
 				<posx>174r</posx>
-				<posy>950</posy>
+				<posy>970</posy>
 				<width>100</width>
 				<height>100</height>
 				<texture>windows/pvr/timer.png</texture>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<include>visiblehidefadeinfo</include>
-				<visible>!PVR.IsRecording + PVR.HasTimer + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!PVR.IsRecording + PVR.HasTimer + !Skin.HasSetting(UseWhiteText)</visible>
 				<colordiffuse>mod-infotags</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>174r</posx>
-				<posy>950</posy>
+				<posy>970</posy>
 				<width>100</width>
 				<height>100</height>
 				<texture>windows/pvr/timer.png</texture>
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="Window.IsActive(mutebug)">Conditional</animation>
 				<include>visiblehidefadeinfo</include>
-				<visible>!PVR.IsRecording + PVR.HasTimer + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!PVR.IsRecording + PVR.HasTimer + Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="image">
 				<description>Mute</description>
 				<posx>174r</posx>
-				<posy>950</posy>
+				<posy>970</posy>
 				<width>100</width>
 				<height>100</height>
 				<texture>overlays/volume/muted.png</texture>
 				<include>visiblehidefadeinfo</include>
-				<visible>Window.IsActive(mutebug) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Window.IsActive(mutebug) + !Skin.HasSetting(UseWhiteText)</visible>
 				<colordiffuse>mod-infotags-d</colordiffuse>
 			</control>
 			<control type="image">
 				<description>Mute</description>
 				<posx>174r</posx>
-				<posy>950</posy>
+				<posy>970</posy>
 				<width>100</width>
 				<height>100</height>
 				<texture>overlays/volume/muted.png</texture>
 				<include>visiblehidefadeinfo</include>
-				<visible>Window.IsActive(mutebug) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Window.IsActive(mutebug) + Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 		</control>
 	</include>
@@ -247,11 +247,11 @@
 	<!-- Options Button -->
 	<include name="Common-Options">
 		<control type="group">
-			<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			<description>Options Buttons</description>
 			<include>Animation_OptionsButton</include>
 			<posx>276</posx>
-			<posy>950</posy>
+			<posy>970</posy>
 			<animation effect="slide" start="0" end="-204" time="0" condition="Skin.HasSetting(HideShutdownButton)">Conditional</animation>
 			<control type="button" id="9010">
 				<description>Options Button</description>
@@ -270,11 +270,11 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+			<visible>Skin.HasSetting(UseWhiteText)</visible>
 			<description>Options Buttons</description>
 			<include>Animation_OptionsButton</include>
 			<posx>276</posx>
-			<posy>950</posy>
+			<posy>970</posy>
 			<animation effect="slide" start="0" end="-204" time="0" condition="Skin.HasSetting(HideShutdownButton)">Conditional</animation>
 			<control type="button" id="9010">
 				<description>Options Button</description>
@@ -321,7 +321,7 @@
 				<effect type="zoom" start="100" end="50" center="1745,100" tween="sine" easing="inout" time="300" />
 			</animation>
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				<control type="label">
 					<description>Title label</description>
 					<posx>0</posx>
@@ -421,7 +421,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 				<control type="label">
 					<description>Title label</description>
 					<posx>0</posx>

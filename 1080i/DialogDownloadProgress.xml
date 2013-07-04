@@ -26,7 +26,7 @@
 				<height>120</height>
 				<label>font=Font-Condensed-S36,textColor=mod-infotags,alignment=right+centery</label>
 				<scroll>false</scroll>
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="label" id="2002">
 				<description>Header label</description>
@@ -36,7 +36,7 @@
 				<height>120</height>
 				<label>font=Font-Condensed-S36,textColor=darkerbackground,alignment=right+centery</label>
 				<scroll>false</scroll>
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="label" id="2003">
 				<description>Title label</description>
@@ -46,7 +46,7 @@
 				<height>120</height>
 				<label>font=Font-Condensed-S28,textColor=mod-infotags,alignment=right+centery</label>
 				<scroll>false</scroll>
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="label" id="2003">
 				<description>Title label</description>
@@ -56,7 +56,7 @@
 				<height>120</height>
 				<label>font=Font-Condensed-S28,textColor=darkerbackground,alignment=right+centery</label>
 				<scroll>false</scroll>
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="progress" id="2004">
 				<visible>false</visible>

@@ -76,7 +76,7 @@
 			</control>
 			<!-- Title Label -->
 			<control type="group">
-				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) +!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) +!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) +!Skin.HasSetting(UseWhiteText)</visible>
 				<include>visiblehidefadeinfo</include>
 				<!-- Title Label -->
 				<control type="label">
@@ -109,7 +109,7 @@
 			</control>
 			<!-- Title Label -->
 			<control type="group">
-				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) +!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog) +!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + Skin.HasSetting(UseWhiteText)</visible>
 				<include>visiblehidefadeinfo</include>
 				<!-- Title Label -->
 				<control type="label">
@@ -142,7 +142,7 @@
 			</control>
 			<!-- Title Label -->
 			<control type="group">
-				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Skin.HasSetting(UseWhiteText)</visible>
 				<include>visiblehidefadeinfo</include>
 				<!-- Title Label -->
 				<control type="label">
@@ -201,7 +201,7 @@
 			</control>
 			<!-- Title Label -->
 			<control type="group">
-				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + Skin.HasSetting(UseWhiteText)</visible>
 				<include>visiblehidefadeinfo</include>
 				<!-- Title Label -->
 				<control type="label">
@@ -260,7 +260,7 @@
 			</control>
 			<!-- Studio / Rating -->
 			<control type="group">
-				<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				<animation type="Conditional" condition="!Control.HasFocus(9337) + Player.HasMedia | Window.IsActive(busydialog) | Window.IsActive(volumebar) | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)">
 					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
 					<effect type="zoom" start="100" end="50" center="1765,101" tween="sine" easing="inout" time="300" />
@@ -293,7 +293,7 @@
 			</control>
 			<!-- Studio / Rating -->
 			<control type="group">
-				<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Skin.HasSetting(UseWhiteText)</visible>
 				<animation type="Conditional" condition="!Control.HasFocus(9337) + Player.HasMedia | Window.IsActive(busydialog) | Window.IsActive(volumebar) | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)">
 					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
 					<effect type="zoom" start="100" end="50" center="1765,101" tween="sine" easing="inout" time="300" />
@@ -325,7 +325,7 @@
 			</control>
 			<!-- Plot / Cast / Fanart Labels -->
 			<control type="grouplist">
-				<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Skin.HasSetting(UseWhiteText)</visible>
 				<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 				<animation type="Conditional" condition="Control.HasFocus(1110) | Control.HasFocus(9337) | Window.IsActive(3004)">
 					<effect type="slide" start="0" end="510" time="400" delay="0" tween="sine" easing="inout" />
@@ -400,7 +400,7 @@
 			</control>
 			<!-- Plot / Cast / Fanart Labels -->
 			<control type="grouplist">
-				<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + Skin.HasSetting(UseWhiteText)</visible>
 				<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 				<animation type="Conditional" condition="Control.HasFocus(1110) | Control.HasFocus(9337) | Window.IsActive(3004)">
 					<effect type="slide" start="0" end="510" time="400" delay="0" tween="sine" easing="inout" />
@@ -839,7 +839,7 @@
 							<label>$VAR[VideoInfoTitleLabel]</label>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
-							<visible>!Container.Content(episodes) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Container.Content(episodes) + !Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<width min="0" max="1044">auto</width>
@@ -849,7 +849,7 @@
 							<label>$VAR[VideoInfoTitleLabel]</label>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
-							<visible>!Container.Content(episodes) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Container.Content(episodes) + Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<width min="0" max="1044">auto</width>
@@ -859,7 +859,7 @@
 							<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</label>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
-							<visible>Container.Content(episodes) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Container.Content(episodes) + !Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<width min="0" max="1044">auto</width>
@@ -869,7 +869,7 @@
 							<label>$INFO[ListItem.Season,,x]$INFO[ListItem.Episode,,. ]$INFO[ListItem.Title]</label>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
-							<visible>Container.Content(episodes) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Container.Content(episodes) + Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -887,7 +887,7 @@
 							<label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ★ ,]</label>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>8</posx>
@@ -899,7 +899,7 @@
 							<label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ★ ,]</label>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -917,7 +917,7 @@
 							<label>$INFO[ListItem.Premiered,$LOCALIZE[41314],]</label>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>8</posx>
@@ -929,7 +929,7 @@
 							<label>$INFO[ListItem.Premiered,$LOCALIZE[41314],]</label>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -947,7 +947,7 @@
 							<label>$INFO[ListItem.Artist]</label>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>8</posx>
@@ -959,7 +959,7 @@
 							<label>$INFO[ListItem.Artist]</label>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -977,7 +977,7 @@
 							<label>$INFO[ListItem.Album]</label>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>8</posx>
@@ -989,14 +989,14 @@
 							<label>$INFO[ListItem.Album]</label>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 					<control type="group">
 						<!-- Genre -->
 						<width>1044</width>
 						<height>40</height>
-						<visible>!IsEmpty(ListItem.Genre) + !Container.Content(tvshows) + !Container.Content(musicvideos) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!IsEmpty(ListItem.Genre) + !Container.Content(tvshows) + !Container.Content(musicvideos) + !Skin.HasSetting(UseWhiteText)</visible>
 						<control type="image">
 							<posx>0</posx>
 							<posy>-6</posy>
@@ -1021,7 +1021,7 @@
 						<!-- Genre -->
 						<width>1044</width>
 						<height>40</height>
-						<visible>!IsEmpty(ListItem.Genre) + !Container.Content(tvshows) + !Container.Content(musicvideos) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!IsEmpty(ListItem.Genre) + !Container.Content(tvshows) + !Container.Content(musicvideos) + Skin.HasSetting(UseWhiteText)</visible>
 						<control type="image">
 							<posx>0</posx>
 							<posy>-6</posy>
@@ -1045,7 +1045,7 @@
 						<!-- Genre -->
 						<width>1044</width>
 						<height>40</height>
-						<visible>!IsEmpty(ListItem.Genre) + [Container.Content(tvshows) | Container.Content(musicvideos)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!IsEmpty(ListItem.Genre) + [Container.Content(tvshows) | Container.Content(musicvideos)] + !Skin.HasSetting(UseWhiteText)</visible>
 						<control type="label">
 							<posx>8</posx>
 							<posy>0</posy>
@@ -1062,7 +1062,7 @@
 						<!-- Genre -->
 						<width>1044</width>
 						<height>40</height>
-						<visible>!IsEmpty(ListItem.Genre) + [Container.Content(tvshows) | Container.Content(musicvideos)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!IsEmpty(ListItem.Genre) + [Container.Content(tvshows) | Container.Content(musicvideos)] + Skin.HasSetting(UseWhiteText)</visible>
 						<control type="label">
 							<posx>8</posx>
 							<posy>0</posy>
@@ -1090,7 +1090,7 @@
 							<label>$INFO[Window(Home).Property(NextAired.Status)]</label>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>8</posx>
@@ -1102,7 +1102,7 @@
 							<label>$INFO[Window(Home).Property(NextAired.Status)]</label>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -1120,7 +1120,7 @@
 							<label>$INFO[Window(Home).Property(NextAired.NextNumber),→ ,]$INFO[Window(Home).Property(NextAired.NextTitle), ,]$INFO[Window(Home).Property(NextAired.NextDate), (,)]</label>
 							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<posx>8</posx>
@@ -1132,14 +1132,14 @@
 							<label>$INFO[Window(Home).Property(NextAired.NextNumber),→ ,]$INFO[Window(Home).Property(NextAired.NextTitle), ,]$INFO[Window(Home).Property(NextAired.NextDate), (,)]</label>
 							<textcolor>darkerbackground</textcolor>
 							<scroll>false</scroll>
-							<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</control>
 					<control type="group">
 						<!-- Director -->
 						<width>1044</width>
 						<height>40</height>
-						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Director) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Director) + !Skin.HasSetting(UseWhiteText)</visible>
 						<control type="image">
 							<posx>0</posx>
 							<posy>-6</posy>
@@ -1173,7 +1173,7 @@
 						<!-- Director -->
 						<width>1044</width>
 						<height>40</height>
-						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Director) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Director) + Skin.HasSetting(UseWhiteText)</visible>
 						<control type="image">
 							<posx>0</posx>
 							<posy>-6</posy>
@@ -1206,7 +1206,7 @@
 						<!-- Writer -->
 						<width>1044</width>
 						<height>59</height>
-						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Writer) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Writer) + !Skin.HasSetting(UseWhiteText)</visible>
 						<control type="image">
 							<posx>0</posx>
 							<posy>-5</posy>
@@ -1231,7 +1231,7 @@
 						<!-- Writer -->
 						<width>1044</width>
 						<height>59</height>
-						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Writer) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.Writer) + Skin.HasSetting(UseWhiteText)</visible>
 						<control type="image">
 							<posx>0</posx>
 							<posy>-5</posy>
@@ -1254,7 +1254,7 @@
 					<control type="grouplist">
 						<width>1044</width>
 						<height>40</height>
-						<visible>Container.Content(TVShows) + ![IsEmpty(ListItem.Property(TotalSeasons)) + IsEmpty(ListItem.Property(TotalEpisodes)) + IsEmpty(ListItem.Property(unWatchedepisodes)) + !IntegerGreaterThan(ListItem.Property(unWatchedepisodes),0)] + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Container.Content(TVShows) + ![IsEmpty(ListItem.Property(TotalSeasons)) + IsEmpty(ListItem.Property(TotalEpisodes)) + IsEmpty(ListItem.Property(unWatchedepisodes)) + !IntegerGreaterThan(ListItem.Property(unWatchedepisodes),0)] + !Skin.HasSetting(UseWhiteText)</visible>
 						<!-- Episodes -->
 						<orientation>horizontal</orientation>
 						<itemgap>0</itemgap>
@@ -1297,7 +1297,7 @@
 					<control type="grouplist">
 						<width>1044</width>
 						<height>40</height>
-						<visible>Container.Content(TVShows) + ![IsEmpty(ListItem.Property(TotalSeasons)) + IsEmpty(ListItem.Property(TotalEpisodes)) + IsEmpty(ListItem.Property(unWatchedepisodes)) + !IntegerGreaterThan(ListItem.Property(unWatchedepisodes),0)] + Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Container.Content(TVShows) + ![IsEmpty(ListItem.Property(TotalSeasons)) + IsEmpty(ListItem.Property(TotalEpisodes)) + IsEmpty(ListItem.Property(unWatchedepisodes)) + !IntegerGreaterThan(ListItem.Property(unWatchedepisodes),0)] + Skin.HasSetting(UseWhiteText)</visible>
 						<!-- Episodes -->
 						<orientation>horizontal</orientation>
 						<itemgap>0</itemgap>
@@ -1358,7 +1358,7 @@
 						<font>Font-Condensed-S40</font>
 						<autoscroll time="2000" delay="10000" repeat="10000">Window.IsActive(movieinformation) + !Control.HasFocus(70) + [Control.HasFocus(9333) | Control.HasFocus(71) | ControlGroup(9336).HasFocus] + !Window.IsActive(3004)</autoscroll>
 						<pagecontrol>70</pagecontrol>
-						<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="textbox">
 						<posx>0</posx>
@@ -1371,7 +1371,7 @@
 						<font>Font-Condensed-S40</font>
 						<autoscroll time="2000" delay="10000" repeat="10000">Window.IsActive(movieinformation) + !Control.HasFocus(70) + [Control.HasFocus(9333) | Control.HasFocus(71) | ControlGroup(9336).HasFocus] + !Window.IsActive(3004)</autoscroll>
 						<pagecontrol>70</pagecontrol>
-						<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<!-- Scrollbar -->
 					<control type="image">
@@ -1451,7 +1451,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
-								<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="label">
 								<posx>0</posx>
@@ -1465,7 +1465,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<scroll>false</scroll>
-								<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout height="60">
@@ -1479,7 +1479,7 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<visible>!Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>!Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="label">
 								<posx>0</posx>
@@ -1491,7 +1491,7 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<visible>Skin.HasSetting(LessBackgroundOpacity)</visible>
+								<visible>Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 						</focusedlayout>
 					</control>
@@ -1551,7 +1551,7 @@
 			</control>
 			<!-- Poster -->
 			<control type="group">
-				<visible>Control.HasFocus(1110) | Control.HasFocus(9337) + !Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Control.HasFocus(1110) | Control.HasFocus(9337) + !Skin.HasSetting(UseWhiteText)</visible>
 				<animation type="Visible">
 					<effect type="fade" start="50" end="100" time="400" tween="sine" easing="inout" />
 					<effect type="slide" start="-650" end="0" time="400" tween="sine" easing="inout" />
@@ -1631,7 +1631,7 @@
 			</control>
 			<!-- Poster -->
 			<control type="group">
-				<visible>Control.HasFocus(1110) | Control.HasFocus(9337) + Skin.HasSetting(LessBackgroundOpacity)</visible>
+				<visible>Control.HasFocus(1110) | Control.HasFocus(9337) + Skin.HasSetting(UseWhiteText)</visible>
 				<animation type="Visible">
 					<effect type="fade" start="50" end="100" time="400" tween="sine" easing="inout" />
 					<effect type="slide" start="-650" end="0" time="400" tween="sine" easing="inout" />
