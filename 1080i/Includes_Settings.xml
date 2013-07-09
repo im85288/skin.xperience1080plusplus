@@ -85,6 +85,18 @@
 		<font>Font-Condensed-S30</font>
 		<textoffsetx>35</textoffsetx>
 	</include>
+	<include name="SettingsSystemInfoLabelDarkerBackground">
+		<width>1210</width>
+		<height>45</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>darkerbackground</focusedcolor>
+		<selectedcolor>darkerbackground</selectedcolor>
+		<disabledcolor>darkerbackground</disabledcolor>
+		<font>Font-Condensed-S30</font>
+		<textoffsetx>35</textoffsetx>
+	</include>
 	<include name="SettingsCategoryButtonVars">
 		<height>77</height>
 		<width>338</width>

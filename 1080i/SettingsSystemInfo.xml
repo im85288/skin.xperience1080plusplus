@@ -38,7 +38,7 @@
 					<align>right</align>
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>darkerbackground</textcolor>
 					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<!-- Panel -->
@@ -48,6 +48,16 @@
 					<height>638</height>
 					<width>370</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>164</posx>
+					<posy>265</posy>
+					<height>638</height>
+					<width>370</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<!-- Side Buttons -->
 				<control type="grouplist" id="20">
@@ -68,7 +78,8 @@
 						<label>20037</label>
 						<width>338</width>
 						<height>77</height>
-						<include>SettingsCategoryDefaultButtonVars</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[20037])</onfocus>
 					</control>
 					<control type="button" id="94">
@@ -76,7 +87,8 @@
 						<label>13277</label>
 						<width>338</width>
 						<height>77</height>
-						<include>SettingsCategoryDefaultButtonVars</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[13277])</onfocus>
 					</control>
 					<control type="button" id="96">
@@ -84,7 +96,8 @@
 						<label>13279</label>
 						<width>338</width>
 						<height>77</height>
-						<include>SettingsCategoryDefaultButtonVars</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[13279])</onfocus>
 					</control>
 					<control type="button" id="97">
@@ -92,7 +105,8 @@
 						<label>13280</label>
 						<width>338</width>
 						<height>77</height>
-						<include>SettingsCategoryDefaultButtonVars</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[13280])</onfocus>
 					</control>
 					<control type="button" id="98">
@@ -100,7 +114,8 @@
 						<label>13281</label>
 						<width>338</width>
 						<height>77</height>
-						<include>SettingsCategoryDefaultButtonVars</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[13281])</onfocus>
 					</control>
 					<control type="button" id="99">
@@ -108,7 +123,8 @@
 						<label>19191</label>
 						<width>338</width>
 						<height>77</height>
-						<include>SettingsCategoryDefaultButtonVars</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[19191])</onfocus>
 					</control>
 				</control>
@@ -141,7 +157,7 @@
 					<align>left</align>
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$INFO[Window.Property(CurrentButtonLabel)][/UPPERCASE]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>darkerbackground</textcolor>
 					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<!-- Panel -->
@@ -151,6 +167,16 @@
 					<height>638</height>
 					<width>1243</width>
 					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>339</posx>
+					<posy>265</posy>
+					<height>638</height>
+					<width>1243</width>
+					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
 					<description>Shadow</description>
@@ -174,28 +200,36 @@
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>vertical</orientation>
 					<control type="button" id="2">
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="button" id="3">
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="button" id="4">
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="button" id="5">
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="button" id="6">
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="button" id="7">
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="button" id="8">
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="button" id="9">
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<!--<control type="button" id="10"> <include>SettingsSystemInfoLabel</include> </control> <control type="button" id="11"> <include>SettingsSystemInfoLabel</include> </control> -->
 				</control>
@@ -214,21 +248,53 @@
 					<height>100</height>
 					<texture>windows/settings/xbmc-logo.png</texture>
 					<colordiffuse>mod-infotags-l</colordiffuse>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
+				</control>
+				<control type="image">
+					<posx>1220</posx>
+					<posy>767</posy>
+					<width>336</width>
+					<height>100</height>
+					<texture>windows/settings/xbmc-logo.png</texture>
+					<colordiffuse>darkerbackground</colordiffuse>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="group">
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					<posx>355</posx>
 					<posy>769</posy>
 					<control type="label" id="1">
 						<posy>0</posy>
 						<label>$INFO[System.BuildVersion,$LOCALIZE[144] ,]</label>
 						<textcolor>mod-infotags</textcolor>
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="label" id="1">
 						<posy>45</posy>
 						<label>$INFO[System.BuildDate,$LOCALIZE[552]: ,]</label>
 						<textcolor>mod-infotags</textcolor>
-						<include>SettingsSystemInfoLabel</include>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<posx>355</posx>
+					<posy>769</posy>
+					<control type="label" id="1">
+						<posy>0</posy>
+						<label>$INFO[System.BuildVersion,$LOCALIZE[144] ,]</label>
+						<textcolor>darkerbackground</textcolor>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
+					</control>
+					<control type="label" id="1">
+						<posy>45</posy>
+						<label>$INFO[System.BuildDate,$LOCALIZE[552]: ,]</label>
+						<textcolor>darkerbackground</textcolor>
+						<include condition="!Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabel</include>
+						<include condition="Skin.HasSetting(UseWhiteText)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 				</control>
 			</control>

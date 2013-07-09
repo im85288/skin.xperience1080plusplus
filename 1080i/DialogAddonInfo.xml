@@ -164,6 +164,16 @@
 					<height>688</height>
 					<texture border="5">views/newgloss/whitepanel.png</texture>
 					<colordiffuse>mod-infotags</colordiffuse>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>100</posx>
+					<posy>220</posy>
+					<width>440</width>
+					<height>688</height>
+					<texture border="5">views/newgloss/whitepanel.png</texture>
+					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+					<visible>Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<!-- Icon -->
 				<control type="image">

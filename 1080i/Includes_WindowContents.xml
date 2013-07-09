@@ -485,6 +485,20 @@
 		<textwidth>300</textwidth>
 		<scroll>false</scroll>
 	</include>
+	<include name="optionsbuttonsdimensionsdarkerbackground">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>404</width>
+		<height>57</height>
+		<font>Font-Condensed-S34</font>
+		<align>left</align>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>darkerbackground</focusedcolor>
+		<disabledcolor>darkerbackground</disabledcolor>
+		<textoffsetx>75</textoffsetx>
+		<textwidth>300</textwidth>
+		<scroll>false</scroll>
+	</include>
 	<include name="PVRMenuButtonVars">
 		<posx>0</posx>
 		<width>458</width>

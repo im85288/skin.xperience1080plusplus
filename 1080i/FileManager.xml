@@ -71,7 +71,7 @@
 						<width>666</width>
 						<align>left</align>
 						<font>Font-Condensed-S29</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>darkerbackground</textcolor>
 						<animation effect="slide" start="0" end="50" time="200" tween="sine" easing="inout" condition="!stringcompare(Control.GetLabel(101),$LOCALIZE[20108])">Conditional</animation>
 					</control>
 					<control type="group">
@@ -82,7 +82,7 @@
 							<width>612</width>
 							<align>left</align>
 							<font>Font-Condensed-S25</font>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>darkerbackground</textcolor>
 						</control>
 						<control type="label">
 							<description>Page Label</description>
@@ -92,7 +92,7 @@
 							<align>right</align>
 							<font>Font-Condensed-S25</font>
 							<label>$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>darkerbackground</textcolor>
 						</control>
 					</control>
 					<control type="image">
@@ -108,7 +108,16 @@
 						<width>756</width>
 						<height>604</height>
 						<texture border="5">views/newgloss/whitepanel.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<visible>!Skin.HasSetting(DarkerPanels)</visible>
+					</control>
+					<control type="image">
+						<posx>-2</posx>
+						<posy>-3</posy>
+						<width>756</width>
+						<height>604</height>
+						<texture border="5">views/newgloss/whitepanel.png</texture>
+						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="list" id="20">
 						<description>Left File List</description>
@@ -140,9 +149,19 @@
 								<width>752</width>
 								<height>60</height>
 								<texture>selected.png</texture>
+								<colordiffuse>mod-infotags</colordiffuse>
+								<aspectratio aligny="top">keep</aspectratio>
+								<visible>ListItem.IsSelected + !Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>1</posy>
+								<width>752</width>
+								<height>60</height>
+								<texture>selected.png</texture>
 								<colordiffuse>08FFFFFF</colordiffuse>
 								<aspectratio aligny="top">keep</aspectratio>
-								<visible>ListItem.IsSelected</visible>
+								<visible>ListItem.IsSelected + Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
 								<posx>5</posx>
@@ -151,6 +170,17 @@
 								<height>60</height>
 								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
 								<aspectratio>keep</aspectratio>
+								<colordiffuse>mod-infotags</colordiffuse>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>60</width>
+								<height>60</height>
+								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="label">
 								<posx>70</posx>
@@ -161,10 +191,26 @@
 								<font>Font-Condensed-S30</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>77white</textcolor>
+								<textcolor>mod-infotags</textcolor>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="label">
+								<posx>70</posx>
+								<posy>0</posy>
+								<width>662</width>
+								<height>59</height>
+								<info>ListItem.Label</info>
+								<font>Font-Condensed-S30</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>darkerbackground</textcolor>
+								<selectedcolor>SelectedGreen</selectedcolor>
+								<shadowcolor>22000000</shadowcolor>
+								<scroll>false</scroll>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="label">
 								<posx>732</posx>
@@ -175,10 +221,26 @@
 								<font>Font-Condensed-S27</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>77white</textcolor>
+								<textcolor>mod-infotags</textcolor>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="label">
+								<posx>732</posx>
+								<posy>0</posy>
+								<width>662</width>
+								<height>59</height>
+								<info>ListItem.Label2</info>
+								<font>Font-Condensed-S27</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>darkerbackground</textcolor>
+								<selectedcolor>SelectedGreen</selectedcolor>
+								<shadowcolor>22000000</shadowcolor>
+								<scroll>false</scroll>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout height="60">
@@ -201,16 +263,26 @@
 								<width>752</width>
 								<height>60</height>
 								<texture>selected.png</texture>
+								<colordiffuse>mod-infotags</colordiffuse>
+								<aspectratio aligny="top">keep</aspectratio>
+								<visible>ListItem.IsSelected + !Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>1</posy>
+								<width>752</width>
+								<height>60</height>
+								<texture>selected.png</texture>
 								<colordiffuse>08FFFFFF</colordiffuse>
 								<aspectratio aligny="top">keep</aspectratio>
-								<visible>ListItem.IsSelected</visible>
+								<visible>ListItem.IsSelected + Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
 								<posy>0</posy>
 								<width>752</width>
 								<height>59</height>
-								<texture border="150,1,150,1">views/other/focus.png</texture>
+								<texture border="5">views/other/focus-mod.png</texture>
 								<animation type="Focus" condition="Container(20).OnNext" reversible="false">
 									<effect type="slide" start="0,-60" end="0,0" time="300" tween="back" easing="out" />
 								</animation>
@@ -227,6 +299,17 @@
 								<height>60</height>
 								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
 								<aspectratio>keep</aspectratio>
+								<colordiffuse>mod-infotags</colordiffuse>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>60</width>
+								<height>60</height>
+								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="label">
 								<posx>70</posx>
@@ -237,10 +320,30 @@
 								<font>Font-Condensed-S30</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>eewhite</textcolor>
+								<textcolor>mod-infotags</textcolor>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+								<animation type="Focus" condition="[Container(20).OnNext | Container(20).OnPrevious] + !Container(20).ListItem.IsSelected" reversible="false">
+									<effect type="fade" start="50" end="100" time="500" tween="sine" easing="inout" />
+								</animation>
+								<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(20) + !ListItem.IsSelected">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>70</posx>
+								<posy>0</posy>
+								<width>662</width>
+								<height>59</height>
+								<info>ListItem.Label</info>
+								<font>Font-Condensed-S30</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>darkerbackground</textcolor>
+								<selectedcolor>SelectedGreen</selectedcolor>
+								<shadowcolor>22000000</shadowcolor>
+								<scroll>false</scroll>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 								<animation type="Focus" condition="[Container(20).OnNext | Container(20).OnPrevious] + !Container(20).ListItem.IsSelected" reversible="false">
 									<effect type="fade" start="50" end="100" time="500" tween="sine" easing="inout" />
 								</animation>
@@ -255,9 +358,29 @@
 								<font>Font-Condensed-S27</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>eewhite</textcolor>
+								<textcolor>mod-infotags</textcolor>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+								<scroll>false</scroll>
+								<animation type="Focus" condition="[Container(20).OnNext | Container(20).OnPrevious] + !Container(20).ListItem.IsSelected" reversible="false">
+									<effect type="fade" start="50" end="100" time="500" tween="sine" easing="inout" />
+								</animation>
+								<animation effect="fade" start="100" end="50" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(20) + !Container(20).ListItem.IsSelected">Conditional</animation>
+							</control>
+							<control type="label">
+								<posx>732</posx>
+								<posy>0</posy>
+								<width>662</width>
+								<height>59</height>
+								<info>ListItem.Label2</info>
+								<font>Font-Condensed-S27</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>darkerbackground</textcolor>
+								<selectedcolor>SelectedGreen</selectedcolor>
+								<shadowcolor>22000000</shadowcolor>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 								<scroll>false</scroll>
 								<animation type="Focus" condition="[Container(20).OnNext | Container(20).OnPrevious] + !Container(20).ListItem.IsSelected" reversible="false">
 									<effect type="fade" start="50" end="100" time="500" tween="sine" easing="inout" />
@@ -348,7 +471,7 @@
 						<width>666</width>
 						<align>left</align>
 						<font>Font-Condensed-S29</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>darkerbackground</textcolor>
 						<animation effect="slide" start="0" end="50" time="200" tween="sine" easing="inout" condition="!stringcompare(Control.GetLabel(102),$LOCALIZE[20108])">Conditional</animation>
 					</control>
 					<control type="group">
@@ -359,7 +482,7 @@
 							<width>612</width>
 							<align>left</align>
 							<font>Font-Condensed-S25</font>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>darkerbackground</textcolor>
 						</control>
 						<control type="label">
 							<description>Page Label</description>
@@ -369,7 +492,7 @@
 							<align>right</align>
 							<font>Font-Condensed-S25</font>
 							<label>$INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>darkerbackground</textcolor>
 						</control>
 					</control>
 					<control type="image">
@@ -385,7 +508,16 @@
 						<width>756</width>
 						<height>604</height>
 						<texture border="5">views/newgloss/whitepanel.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<visible>!Skin.HasSetting(DarkerPanels)</visible>
+					</control>
+					<control type="image">
+						<posx>-2</posx>
+						<posy>-3</posy>
+						<width>756</width>
+						<height>604</height>
+						<texture border="5">views/newgloss/whitepanel.png</texture>
+						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
+						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="list" id="21">
 						<description>Right File List</description>
@@ -418,6 +550,17 @@
 								<height>60</height>
 								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
 								<aspectratio>keep</aspectratio>
+								<colordiffuse>mod-infotags</colordiffuse>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>60</width>
+								<height>60</height>
+								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
 								<posx>723</posx>
@@ -425,7 +568,16 @@
 								<width>39</width>
 								<height>39</height>
 								<texture>windows/filemanager/selected.png</texture>
-								<visible>ListItem.IsSelected</visible>
+								<colordiffuse>mod-infotags</colordiffuse>
+								<visible>ListItem.IsSelected + !Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="image">
+								<posx>723</posx>
+								<posy>-10</posy>
+								<width>39</width>
+								<height>39</height>
+								<texture>windows/filemanager/selected.png</texture>
+								<visible>ListItem.IsSelected + Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="label">
 								<posx>70</posx>
@@ -436,10 +588,26 @@
 								<font>Font-Condensed-S30</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>77white</textcolor>
+								<textcolor>mod-infotags</textcolor>
 								<selectedcolor>77white</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="label">
+								<posx>70</posx>
+								<posy>0</posy>
+								<width>662</width>
+								<height>60</height>
+								<info>ListItem.Label</info>
+								<font>Font-Condensed-S30</font>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>darkerbackground</textcolor>
+								<selectedcolor>77white</selectedcolor>
+								<shadowcolor>22000000</shadowcolor>
+								<scroll>false</scroll>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="label">
 								<posx>732</posx>
@@ -450,10 +618,26 @@
 								<font>Font-Condensed-S27</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>77white</textcolor>
+								<textcolor>mod-infotags</textcolor>
 								<selectedcolor>77white</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="label">
+								<posx>732</posx>
+								<posy>0</posy>
+								<width>662</width>
+								<height>60</height>
+								<info>ListItem.Label2</info>
+								<font>Font-Condensed-S27</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>darkerbackground</textcolor>
+								<selectedcolor>77white</selectedcolor>
+								<shadowcolor>22000000</shadowcolor>
+								<scroll>false</scroll>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 						</itemlayout>
 						<focusedlayout height="60">
@@ -475,7 +659,7 @@
 								<posy>0</posy>
 								<width>752</width>
 								<height>59</height>
-								<texture border="150,1,150,1">views/other/focus.png</texture>
+								<texture border="5">views/other/focus-mod.png</texture>
 								<animation type="Focus" condition="Container(21).OnNext" reversible="false">
 									<effect type="slide" start="0,-60" end="0,0" time="300" tween="back" easing="out" />
 								</animation>
@@ -491,7 +675,16 @@
 								<width>39</width>
 								<height>39</height>
 								<texture>windows/filemanager/selected.png</texture>
-								<visible>ListItem.IsSelected</visible>
+								<colordiffuse>mod-infotags</colordiffuse>
+								<visible>ListItem.IsSelected + !Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="image">
+								<posx>723</posx>
+								<posy>-10</posy>
+								<width>39</width>
+								<height>39</height>
+								<texture>windows/filemanager/selected.png</texture>
+								<visible>ListItem.IsSelected + Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
 								<posx>5</posx>
@@ -500,6 +693,17 @@
 								<height>60</height>
 								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
 								<aspectratio>keep</aspectratio>
+								<colordiffuse>mod-infotags</colordiffuse>
+								<visible>!Skin.HasSetting(DarkerPanels)</visible>
+							</control>
+							<control type="image">
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>60</width>
+								<height>60</height>
+								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
+								<aspectratio>keep</aspectratio>
+								<visible>Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="group">
 								<animation type="Focus" condition="Container(21).OnNext | Container(21).OnPrevious" reversible="false">
@@ -515,10 +719,26 @@
 									<font>Font-Condensed-S30</font>
 									<align>left</align>
 									<aligny>center</aligny>
-									<textcolor>eewhite</textcolor>
+									<textcolor>mod-infotags</textcolor>
 									<selectedcolor>eewhite</selectedcolor>
 									<shadowcolor>22000000</shadowcolor>
 									<scroll>false</scroll>
+									<visible>!Skin.HasSetting(DarkerPanels)</visible>
+								</control>
+								<control type="label">
+									<posx>70</posx>
+									<posy>0</posy>
+									<width>662</width>
+									<height>60</height>
+									<info>ListItem.Label</info>
+									<font>Font-Condensed-S30</font>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>darkerbackground</textcolor>
+									<selectedcolor>eewhite</selectedcolor>
+									<shadowcolor>22000000</shadowcolor>
+									<scroll>false</scroll>
+									<visible>Skin.HasSetting(DarkerPanels)</visible>
 								</control>
 								<control type="label">
 									<posx>732</posx>
@@ -529,10 +749,26 @@
 									<font>Font-Condensed-S27</font>
 									<align>right</align>
 									<aligny>center</aligny>
-									<textcolor>eewhite</textcolor>
+									<textcolor>mod-infotags</textcolor>
 									<selectedcolor>eewhite</selectedcolor>
 									<shadowcolor>22000000</shadowcolor>
 									<scroll>false</scroll>
+									<visible>!Skin.HasSetting(DarkerPanels)</visible>
+								</control>
+								<control type="label">
+									<posx>732</posx>
+									<posy>0</posy>
+									<width>662</width>
+									<height>60</height>
+									<info>ListItem.Label2</info>
+									<font>Font-Condensed-S27</font>
+									<align>right</align>
+									<aligny>center</aligny>
+									<textcolor>darkerbackground</textcolor>
+									<selectedcolor>eewhite</selectedcolor>
+									<shadowcolor>22000000</shadowcolor>
+									<scroll>false</scroll>
+									<visible>Skin.HasSetting(DarkerPanels)</visible>
 								</control>
 							</control>
 						</focusedlayout>
