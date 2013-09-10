@@ -50,7 +50,7 @@
 						<width>790</width>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font-Condensed-S32</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -61,7 +61,7 @@
 						<height>147</height>
 						<label>$INFO[ListItem.Plot]</label>
 						<font>Font-Condensed-S25</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<align>justify</align>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
 						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
@@ -73,7 +73,7 @@
 						<height>147</height>
 						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 						<font>Font-Condensed-S25</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 						<align>justify</align>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
 						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
