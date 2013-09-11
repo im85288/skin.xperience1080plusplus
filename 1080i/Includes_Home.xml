@@ -505,7 +505,7 @@
 				<texture>windows/home/search.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1) | !Control.HasFocus(125)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(1)">Conditional</animation>
-				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(UseWhiteText)</visible>
+				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + !Skin.HasSetting(UseWhiteText)</visible>
 				<colordiffuse>mod-infotags</colordiffuse>
 			</control>
 			<control type="image">
@@ -517,7 +517,7 @@
 				<texture>windows/home/search.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1) | !Control.HasFocus(125)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(1)">Conditional</animation>
-				<visible>System.HasAddon(script.globalsearch) + Skin.HasSetting(UseWhiteText)</visible>
+				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) +  Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="group">
 				<posx>0</posx>

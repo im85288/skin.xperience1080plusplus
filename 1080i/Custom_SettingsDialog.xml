@@ -105,6 +105,16 @@
 					<onclick>SetProperty(ReloadSkin,1,Home)</onclick>
 					<label>$LOCALIZE[8]</label>
 				</control>
+				<control type="radiobutton" id="2107">
+					<width>1210</width>
+					<include condition="!Skin.HasSetting(DarkerPanels)">SettingsDialogRadioButtonVars</include>
+					<include condition="Skin.HasSetting(DarkerPanels)">SettingsDialogRadioButtonVarsDarkerBackground</include>
+					<selected>!Skin.HasSetting(HomeSearch)</selected>
+					<onclick>Skin.ToggleSetting(HomeSearch)</onclick>
+					<onclick>SetProperty(ReloadSkin,1,Home)</onclick>
+					<visible>System.HasAddon(script.globalsearch)</visible>
+					<label>Search</label>
+				</control>
 			</control>
 			<control type="grouplist" id="3">
 				<include>SettingsDialogGrouplistVars</include>
