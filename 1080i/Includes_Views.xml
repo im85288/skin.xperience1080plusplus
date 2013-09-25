@@ -579,12 +579,12 @@
 		<value>$INFO[ListItem.Label2]$INFO[ListItem.Rating, ★ ,]</value>
 	</variable>
 	<variable name="InfoListInfo">
-		<value condition="Container.Content(Movies)">$INFO[Container(52).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value>$INFO[Container(52).ListItem.Studio]</value>
+		<value condition="Container.Content(Movies)">$INFO[Container(552).ListItem.Duration,, $LOCALIZE[12391]]</value>
+		<value>$INFO[Container(552).ListItem.Studio]</value>
 	</variable>
 	<variable name="InfoListSubInfo">
-		<value condition="Container.Content(Episodes)">$INFO[Container(52).ListItem.Date,$LOCALIZE[41805]: ,]</value>
-		<value>$INFO[Container(52).ListItem.Genre]</value>
+		<value condition="Container.Content(Episodes)">$INFO[Container(552).ListItem.Date,$LOCALIZE[41805]: ,]</value>
+		<value>$INFO[Container(552).ListItem.Genre]</value>
 	</variable>
 	<variable name="CastLabel">
 		<value condition="Container.Content(musicvideos)">$LOCALIZE[133]</value>
