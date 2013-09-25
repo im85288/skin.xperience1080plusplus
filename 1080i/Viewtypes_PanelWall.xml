@@ -88,7 +88,7 @@
 				<include>FullscreenDimensions</include>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<pagecontrol>70</pagecontrol>
-				<orientation>horizontal</orientation>
+				<orientation>vertical</orientation>
 				<viewtype label="Panel (Wall)">list</viewtype>
 				<onup>510</onup>
 				<ondown>70</ondown>
@@ -128,16 +128,7 @@
 						<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
 						<colordiffuse>55ffffff</colordiffuse>
 					</control>
-					<control type="image">
-						<description>Poster</description>
-						<posx>6</posx>
-						<posy>6</posy>
-						<width>156</width>
-						<height>226</height>
-						<texture border="5">views/newgloss/whitepanel.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<colordiffuse>55ffffff</colordiffuse>
-					</control>
+					
 				</itemlayout>
 				<focusedlayout width="168" height="238">
 					<control type="group">
