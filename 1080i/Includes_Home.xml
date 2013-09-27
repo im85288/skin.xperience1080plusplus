@@ -6740,6 +6740,7 @@
 								<width>382</width>
 								<height>187</height>
 								<texture border="7">views/newgloss/tile.png</texture>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -6855,6 +6856,7 @@
 								<width>382</width>
 								<height>187</height>
 								<texture border="7">views/newgloss/tile.png</texture>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
@@ -6970,6 +6972,7 @@
 								<width>382</width>
 								<height>187</height>
 								<texture border="7">views/newgloss/tile.png</texture>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="group">
 								<visible>Weather.IsFetched</visible>
