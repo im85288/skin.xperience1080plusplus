@@ -517,7 +517,7 @@
 				<texture>windows/home/search.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1) | !Control.HasFocus(125)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(1)">Conditional</animation>
-				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) +  Skin.HasSetting(UseWhiteText)</visible>
+				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="group">
 				<posx>0</posx>
@@ -1180,8 +1180,38 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
-							<visible>Control.IsVisible(5022)</visible>
+							<visible>Control.IsVisible(5022) + !Skin.HasSetting(UseCurvedTiles)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>532</width>
+							<height>64</height>
+							<label>$INFO[Container(5022).ListItem.Label]</label>
+							<label2>$INFO[Container(5022).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>aawhite</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(5022) + Skin.HasSetting(UseCurvedTiles) + !ControlGroup(502).HasFocus</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>532</width>
+							<height>64</height>
+							<label>$INFO[Container(5022).ListItem.Label]</label>
+							<label2>$INFO[Container(5022).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>blue</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(5022) + Skin.HasSetting(UseCurvedTiles) + ControlGroup(502).HasFocus</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -1416,8 +1446,38 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
-							<visible>Control.IsVisible(5032)</visible>
+							<visible>Control.IsVisible(5032) + !Skin.HasSetting(UseCurvedTiles)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>342</width>
+							<height>64</height>
+							<label>$INFO[Container(5032).ListItem.Label]</label>
+							<label2>$INFO[Container(5032).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>aawhite</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(5032) + Skin.HasSetting(UseCurvedTiles) + !ControlGroup(503).HasFocus</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>342</width>
+							<height>64</height>
+							<label>$INFO[Container(5032).ListItem.Label]</label>
+							<label2>$INFO[Container(5032).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>blue</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(5032) + Skin.HasSetting(UseCurvedTiles) + ControlGroup(503).HasFocus</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -1544,6 +1604,16 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -1552,6 +1622,16 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>23</posx>
+									<posy>241</posy>
+									<width>285</width>
+									<height>66</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -1571,6 +1651,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</itemlayout>
@@ -1590,6 +1684,16 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -1598,6 +1702,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>18</posx>
+										<posy>247</posy>
+										<width>295</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -1621,6 +1735,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>246</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="image">
@@ -1636,6 +1764,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -1667,7 +1796,7 @@
 						<animation type="Hidden">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<visible>ControlGroup(502).HasFocus</visible>
+						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles)</visible>
 					</control>
 					<control type="image">
 						<posx>846</posx>
@@ -1682,7 +1811,7 @@
 						<animation type="Hidden">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<visible>ControlGroup(503).HasFocus</visible>
+						<visible>ControlGroup(503).HasFocus + !Skin.HasSetting(UseCurvedTiles)</visible>
 					</control>
 				</control>
 			</control>
@@ -1878,8 +2007,37 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
-							<visible>Control.IsVisible(2022)</visible>
-							<include>visiblehidefadeinfodelayvisible</include>
+							<visible>Control.IsVisible(2022) + !Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>342</width>
+							<height>64</height>
+							<label>$INFO[Container(2022).ListItem.Label]</label>
+							<label2>$INFO[Container(2022).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>aawhite</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(2022) + Skin.HasSetting(UseCurvedTiles) + !ControlGroup(202).HasFocus</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>342</width>
+							<height>64</height>
+							<label>$INFO[Container(2022).ListItem.Label]</label>
+							<label2>$INFO[Container(2022).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>blue</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(2022) + Skin.HasSetting(UseCurvedTiles) + ControlGroup(202).HasFocus</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -2004,6 +2162,16 @@
 									<height>283</height>
 									<colordiffuse>$INFO[Skin.String(moviecolor.name)]</colordiffuse>
 									<texture border="7">views/newgloss/tile-283.png</texture>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<colordiffuse>$INFO[Skin.String(moviecolor.name)]</colordiffuse>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2012,6 +2180,16 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>23</posx>
+									<posy>241</posy>
+									<width>285</width>
+									<height>66</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2031,6 +2209,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="label">
 									<posx>307</posx>
@@ -2063,6 +2255,16 @@
 										<height>293</height>
 										<colordiffuse>$INFO[Skin.String(moviecolor.name)]</colordiffuse>
 										<texture border="7">views/newgloss/tile-283.png</texture>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<colordiffuse>$INFO[Skin.String(moviecolor.name)]</colordiffuse>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2071,6 +2273,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>18</posx>
+										<posy>247</posy>
+										<width>295</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2094,6 +2306,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>246</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="label">
 										<posx>307</posx>
@@ -2106,7 +2332,20 @@
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
-										<visible>!IsEmpty(ListItem.Label2)</visible>
+										<visible>!IsEmpty(ListItem.Label2) + !Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>307</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label2]</label>
+										<font>Font-Condensed-S31-B</font>
+										<textcolor>blue</textcolor>
+										<align>right</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>!IsEmpty(ListItem.Label2) + Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="image">
@@ -2122,6 +2361,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -2170,6 +2410,16 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[MovieAddonTileColorVar]</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$VAR[MovieAddonTileColorVar]</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2197,6 +2447,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>23</posx>
+										<posy>241</posy>
+										<width>285</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-nofo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -2209,6 +2469,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>aawhite</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 							</control>
@@ -2229,6 +2503,16 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[MovieAddonTileColorVar]</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$VAR[MovieAddonTileColorVar]</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2264,6 +2548,16 @@
 											<height>66</height>
 											<texture border="7">windows/home/tile-overlay-r.png</texture>
 											<colordiffuse>99FFFFFF</colordiffuse>
+											<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+										</control>
+										<control type="image">
+											<posx>18</posx>
+											<posy>247</posy>
+											<width>295</width>
+											<height>66</height>
+											<texture>windows/home/tilerounded-fo.png</texture>
+											<colordiffuse>black</colordiffuse>
+											<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -2276,6 +2570,20 @@
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
+											<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+										</control>
+										<control type="label">
+											<posx>24</posx>
+											<posy>241</posy>
+											<width>283</width>
+											<height>66</height>
+											<label>$INFO[ListItem.Label]</label>
+											<font>Font-Condensed-S33</font>
+											<textcolor>blue</textcolor>
+											<align>left</align>
+											<aligny>center</aligny>
+											<textoffsetx>20</textoffsetx>
+											<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 										</control>
 									</control>
 								</control>
@@ -2292,6 +2600,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -2387,7 +2696,7 @@
 						<animation type="Hidden">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<visible>ControlGroup(202).HasFocus</visible>
+						<visible>ControlGroup(202).HasFocus + !Skin.HasSetting(UseCurvedTiles)</visible>
 					</control>
 				</control>
 			</control>
@@ -2584,8 +2893,37 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
-							<visible>Control.IsVisible(3022)</visible>
-							<include>visiblehidefadeinfodelayvisible</include>
+							<visible>Control.IsVisible(3022) + !Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>631</width>
+							<height>64</height>
+							<label>$INFO[Container(3022).ListItem.Label]</label>
+							<label2>$INFO[Container(3022).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>aawhite</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(3022) + Skin.HasSetting(UseCurvedTiles) + !ControlGroup(302).HasFocus</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>631</width>
+							<height>64</height>
+							<label>$INFO[Container(3022).ListItem.Label]</label>
+							<label2>$INFO[Container(3022).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>blue</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(3022) + Skin.HasSetting(UseCurvedTiles) + ControlGroup(302).HasFocus</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -2712,6 +3050,16 @@
 									<height>283</height>
 									<colordiffuse>$INFO[Skin.String(tvcolor.name)]</colordiffuse>
 									<texture border="7">views/newgloss/tile-283.png</texture>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<colordiffuse>$INFO[Skin.String(tvcolor.name)]</colordiffuse>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2720,6 +3068,16 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>23</posx>
+									<posy>241</posy>
+									<width>285</width>
+									<height>66</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2739,6 +3097,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="label">
 									<posx>307</posx>
@@ -2771,6 +3143,16 @@
 										<height>293</height>
 										<colordiffuse>$INFO[Skin.String(tvcolor.name)]</colordiffuse>
 										<texture border="7">views/newgloss/tile-283.png</texture>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<colordiffuse>$INFO[Skin.String(tvcolor.name)]</colordiffuse>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2779,6 +3161,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>18</posx>
+										<posy>247</posy>
+										<width>295</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2802,6 +3194,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>24</posx>
+										<posy>241</posy>
+										<width>246</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="label">
 										<posx>307</posx>
@@ -2814,7 +3220,20 @@
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
-										<visible>!IsEmpty(ListItem.Label2)</visible>
+										<visible>!IsEmpty(ListItem.Label2) + !Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>307</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label2]</label>
+										<font>Font-Condensed-S31-B</font>
+										<textcolor>blue</textcolor>
+										<align>right</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>!IsEmpty(ListItem.Label2) + Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="image">
@@ -2830,6 +3249,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -2885,6 +3305,16 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[TvAddonTileColorVar]</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$VAR[TvAddonTileColorVar]</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -2912,6 +3342,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>23</posx>
+										<posy>241</posy>
+										<width>285</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-nofo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -2924,6 +3364,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>aawhite</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 							</control>
@@ -2944,6 +3398,16 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[TvAddonTileColorVar]</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$VAR[TvAddonTileColorVar]</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -2979,6 +3443,16 @@
 											<height>66</height>
 											<texture border="7">windows/home/tile-overlay-r.png</texture>
 											<colordiffuse>99FFFFFF</colordiffuse>
+											<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+										</control>
+										<control type="image">
+											<posx>18</posx>
+											<posy>247</posy>
+											<width>295</width>
+											<height>66</height>
+											<texture>windows/home/tilerounded-fo.png</texture>
+											<colordiffuse>black</colordiffuse>
+											<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -2991,6 +3465,20 @@
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
+											<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+										</control>
+										<control type="label">
+											<posx>28</posx>
+											<posy>241</posy>
+											<width>283</width>
+											<height>66</height>
+											<label>$INFO[ListItem.Label]</label>
+											<font>Font-Condensed-S33</font>
+											<textcolor>blue</textcolor>
+											<align>left</align>
+											<aligny>center</aligny>
+											<textoffsetx>20</textoffsetx>
+											<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 										</control>
 									</control>
 								</control>
@@ -3007,6 +3495,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -3062,7 +3551,7 @@
 						<animation type="Hidden">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<visible>ControlGroup(302).HasFocus</visible>
+						<visible>ControlGroup(302).HasFocus + !Skin.HasSetting(UseCurvedTiles)</visible>
 					</control>
 				</control>
 			</control>
@@ -3170,7 +3659,7 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(pvrcolor.name)]</colordiffuse>
-									<visible>ListItem.Property(colored)</visible>
+									<visible>ListItem.Property(colored) + !Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3179,7 +3668,25 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[PVRAddonTileColorVar]</colordiffuse>
-									<visible>!ListItem.Property(colored)</visible>
+									<visible>!ListItem.Property(colored) + !Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$INFO[Skin.String(pvrcolor.name)]</colordiffuse>
+									<visible>ListItem.Property(colored) + Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$VAR[PVRAddonTileColorVar]</colordiffuse>
+									<visible>!ListItem.Property(colored) + Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3188,6 +3695,16 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>23</posx>
+									<posy>241</posy>
+									<width>285</width>
+									<height>66</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3207,6 +3724,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</itemlayout>
@@ -3226,7 +3757,7 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(pvrcolor.name)]</colordiffuse>
-										<visible>ListItem.Property(colored)</visible>
+										<visible>ListItem.Property(colored) + !Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>19</posx>
@@ -3235,7 +3766,25 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[PVRAddonTileColorVar]</colordiffuse>
-										<visible>!ListItem.Property(colored)</visible>
+										<visible>!ListItem.Property(colored) + !Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$INFO[Skin.String(pvrcolor.name)]</colordiffuse>
+										<visible>ListItem.Property(colored) + Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$VAR[PVRAddonTileColorVar]</colordiffuse>
+										<visible>!ListItem.Property(colored) + Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3244,6 +3793,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>18</posx>
+										<posy>241</posy>
+										<width>295</width>
+										<height>72</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3267,6 +3826,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>246</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="image">
@@ -3282,6 +3855,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -3464,7 +4038,7 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(picturescolor.name)]</colordiffuse>
-									<visible>ListItem.Property(colored)</visible>
+									<visible>ListItem.Property(colored) + !Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3473,7 +4047,25 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[PicturesAddonTileColorVar]</colordiffuse>
-									<visible>!ListItem.Property(colored)</visible>
+									<visible>!ListItem.Property(colored) + !Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$INFO[Skin.String(picturescolor.name)]</colordiffuse>
+									<visible>ListItem.Property(colored) + Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$VAR[PicturesAddonTileColorVar]</colordiffuse>
+									<visible>!ListItem.Property(colored) + Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3482,6 +4074,16 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>23</posx>
+									<posy>241</posy>
+									<width>285</width>
+									<height>66</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3501,6 +4103,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</itemlayout>
@@ -3520,7 +4136,7 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(picturescolor.name)]</colordiffuse>
-										<visible>ListItem.Property(colored)</visible>
+										<visible>ListItem.Property(colored) + !Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>19</posx>
@@ -3529,7 +4145,25 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[PicturesAddonTileColorVar]</colordiffuse>
-										<visible>!ListItem.Property(colored)</visible>
+										<visible>!ListItem.Property(colored) + !Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$INFO[Skin.String(picturescolor.name)]</colordiffuse>
+										<visible>ListItem.Property(colored) + Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$VAR[PicturesAddonTileColorVar]</colordiffuse>
+										<visible>!ListItem.Property(colored) + Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3538,6 +4172,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>18</posx>
+										<posy>247</posy>
+										<width>295</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3561,6 +4205,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>246</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="image">
@@ -3576,6 +4234,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -3786,8 +4445,37 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
-							<visible>Control.IsVisible(4022)</visible>
-							<include>visiblehidefadeinfodelayvisible</include>
+							<visible>Control.IsVisible(4022) + !Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>532</width>
+							<height>64</height>
+							<label>[B]$INFO[Container(4022).ListItem.Label][/B]</label>
+							<label2>$INFO[Container(4022).ListItem.Label2]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>aawhite</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(4022) + Skin.HasSetting(UseCurvedTiles) + !ControlGroup(402).HasFocus</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>532</width>
+							<height>64</height>
+							<label>[B]$INFO[Container(4022).ListItem.Label][/B]</label>
+							<label2>$INFO[Container(4022).ListItem.Label2]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>blue</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(4022) + Skin.HasSetting(UseCurvedTiles) + ControlGroup(402).HasFocus</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -3909,6 +4597,16 @@
 									<height>283</height>
 									<colordiffuse>$INFO[Skin.String(musiccolor.name)]</colordiffuse>
 									<texture border="7">views/newgloss/tile-283.png</texture>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<colordiffuse>$INFO[Skin.String(musiccolor.name)]</colordiffuse>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3917,6 +4615,16 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>23</posx>
+									<posy>241</posy>
+									<width>285</width>
+									<height>66</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -3936,6 +4644,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="label">
 									<posx>307</posx>
@@ -3968,6 +4690,16 @@
 										<height>283</height>
 										<colordiffuse>$INFO[Skin.String(musiccolor.name)]</colordiffuse>
 										<texture border="7">views/newgloss/tile-283.png</texture>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>24</posx>
+										<posy>24</posy>
+										<width>283</width>
+										<height>283</height>
+										<colordiffuse>$INFO[Skin.String(musiccolor.name)]</colordiffuse>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3976,6 +4708,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>24</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>72</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -3999,6 +4741,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>246</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="label">
 										<posx>307</posx>
@@ -4011,7 +4767,20 @@
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
-										<visible>!IsEmpty(ListItem.Label2)</visible>
+										<visible>!IsEmpty(ListItem.Label2) + !Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>307</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label2]</label>
+										<font>Font-Condensed-S31-B</font>
+										<textcolor>blue</textcolor>
+										<align>right</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>!IsEmpty(ListItem.Label2) + Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="image">
@@ -4027,6 +4796,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -4070,6 +4840,16 @@
 								<height>283</height>
 								<texture border="7">views/newgloss/tile-283.png</texture>
 								<colordiffuse>$VAR[MusicAddonTileColorVar]</colordiffuse>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>24</posx>
+								<posy>24</posy>
+								<width>283</width>
+								<height>283</height>
+								<texture border="7">views/newgloss/tilerounded-283.png</texture>
+								<colordiffuse>$VAR[MusicAddonTileColorVar]</colordiffuse>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="group">
 								<animation effect="fade" end="90" time="0" condition="true">Conditional</animation>
@@ -4099,6 +4879,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>23</posx>
+										<posy>241</posy>
+										<width>285</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-nofo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -4111,6 +4901,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>aawhite</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 							</control>
@@ -4131,6 +4935,16 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[MusicAddonTileColorVar]</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$VAR[MusicAddonTileColorVar]</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="group">
@@ -4174,6 +4988,16 @@
 											<height>66</height>
 											<texture border="7">windows/home/tile-overlay-r.png</texture>
 											<colordiffuse>99FFFFFF</colordiffuse>
+											<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+										</control>
+										<control type="image">
+											<posx>18</posx>
+											<posy>247</posy>
+											<width>295</width>
+											<height>66</height>
+											<texture>windows/home/tilerounded-fo.png</texture>
+											<colordiffuse>black</colordiffuse>
+											<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -4186,6 +5010,20 @@
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
+											<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+										</control>
+										<control type="label">
+											<posx>28</posx>
+											<posy>241</posy>
+											<width>283</width>
+											<height>66</height>
+											<label>$INFO[ListItem.Label]</label>
+											<font>Font-Condensed-S33</font>
+											<textcolor>blue</textcolor>
+											<align>left</align>
+											<aligny>center</aligny>
+											<textoffsetx>20</textoffsetx>
+											<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 										</control>
 									</control>
 								</control>
@@ -4202,6 +5040,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -4268,7 +5107,7 @@
 						<animation type="Hidden">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<visible>ControlGroup(402).HasFocus</visible>
+						<visible>ControlGroup(402).HasFocus + !Skin.HasSetting(UseCurvedTiles)</visible>
 					</control>
 				</control>
 			</control>
@@ -4383,6 +5222,16 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4391,6 +5240,16 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>23</posx>
+									<posy>241</posy>
+									<width>285</width>
+									<height>66</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4411,6 +5270,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 							<control type="group">
@@ -4424,6 +5297,16 @@
 									<height>283</height>
 									<texture border="5">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$VAR[AppAddonTileColorVar]</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="5">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$VAR[AppAddonTileColorVar]</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4431,6 +5314,7 @@
 									<width>283</width>
 									<height>283</height>
 									<texture border="7">views/newgloss/tile.png</texture>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -4458,6 +5342,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>23</posx>
+										<posy>241</posy>
+										<width>285</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-nofo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="label">
 										<posx>24</posx>
@@ -4470,6 +5364,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>283</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>aawhite</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 							</control>
@@ -4492,7 +5400,7 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$VAR[AppAddonTileColorVar]</colordiffuse>
-										<visible>!IsEmpty(ListItem.Property(custom))</visible>
+										<visible>!IsEmpty(ListItem.Property(custom)) + !Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>19</posx>
@@ -4501,7 +5409,25 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
-										<visible>IsEmpty(ListItem.Property(custom))</visible>
+										<visible>IsEmpty(ListItem.Property(custom)) + !Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$VAR[AppAddonTileColorVar]</colordiffuse>
+										<visible>!IsEmpty(ListItem.Property(custom)) + Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
+										<visible>IsEmpty(ListItem.Property(custom)) + Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4536,6 +5462,16 @@
 											<height>66</height>
 											<texture border="7">windows/home/tile-overlay-r.png</texture>
 											<colordiffuse>99FFFFFF</colordiffuse>
+											<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+										</control>
+										<control type="image">
+											<posx>18</posx>
+											<posy>247</posy>
+											<width>295</width>
+											<height>66</height>
+											<texture>windows/home/tilerounded-fo.png</texture>
+											<colordiffuse>black</colordiffuse>
+											<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 										</control>
 										<control type="label">
 											<posx>24</posx>
@@ -4548,6 +5484,20 @@
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
+											<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+										</control>
+										<control type="label">
+											<posx>24</posx>
+											<posy>241</posy>
+											<width>283</width>
+											<height>66</height>
+											<label>$INFO[ListItem.Label]</label>
+											<font>Font-Condensed-S33</font>
+											<textcolor>blue</textcolor>
+											<align>left</align>
+											<aligny>center</aligny>
+											<textoffsetx>20</textoffsetx>
+											<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 										</control>
 									</control>
 									<control type="image">
@@ -4563,6 +5513,7 @@
 										<animation type="Unfocus">
 											<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 										</animation>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="group">
@@ -4580,6 +5531,16 @@
 										<height>293</height>
 										<texture border="5">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>392</width>
+										<height>293</height>
+										<texture border="5">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$INFO[Skin.String(appcolor.name)]</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4588,6 +5549,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>18</posx>
+										<posy>247</posy>
+										<width>394</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -4612,6 +5583,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>382</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>3</posx>
@@ -4626,6 +5611,7 @@
 										<animation type="Unfocus">
 											<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 										</animation>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 							</control>
@@ -5376,7 +6362,16 @@
 							<height>572</height>
 							<texture border="7">views/newgloss/tile-283.png</texture>
 							<colordiffuse>$VAR[WeatherAddonTileColorVar]</colordiffuse>
-							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched]</visible>
+							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched] + !Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>572</width>
+							<height>572</height>
+							<texture border="7">views/newgloss/tilerounded-283.png</texture>
+							<colordiffuse>$VAR[WeatherAddonTileColorVar]</colordiffuse>
+							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched] + Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -5384,7 +6379,7 @@
 							<width>572</width>
 							<height>572</height>
 							<texture border="7">views/newgloss/tile.png</texture>
-							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched]</visible>
+							<visible>![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir)) + Weather.IsFetched] + !Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="label">
 							<posx>0</posx>
@@ -5728,6 +6723,16 @@
 								<height>187</height>
 								<texture border="7">views/newgloss/tile-283.png</texture>
 								<colordiffuse>$VAR[WeatherAddonTileColorVar]</colordiffuse>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>382</width>
+								<height>187</height>
+								<texture border="7">views/newgloss/tilerounded-283.png</texture>
+								<colordiffuse>$VAR[WeatherAddonTileColorVar]</colordiffuse>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -5833,6 +6838,16 @@
 								<height>187</height>
 								<texture border="7">views/newgloss/tile-283.png</texture>
 								<colordiffuse>$VAR[WeatherAddonTileColorVar]</colordiffuse>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>382</width>
+								<height>187</height>
+								<texture border="7">views/newgloss/tilerounded-283.png</texture>
+								<colordiffuse>$VAR[WeatherAddonTileColorVar]</colordiffuse>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -5938,6 +6953,16 @@
 								<height>187</height>
 								<texture border="7">views/newgloss/tile-283.png</texture>
 								<colordiffuse>$VAR[WeatherAddonTileColorVar]</colordiffuse>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>382</width>
+								<height>187</height>
+								<texture border="7">views/newgloss/tilerounded-283.png</texture>
+								<colordiffuse>$VAR[WeatherAddonTileColorVar]</colordiffuse>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -6067,6 +7092,16 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(weathercolor.name)]</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>283</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$INFO[Skin.String(weathercolor.name)]</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -6075,6 +7110,16 @@
 									<height>66</height>
 									<texture border="5">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>23</posx>
+									<posy>241</posy>
+									<width>285</width>
+									<height>66</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -6094,6 +7139,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>283</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</itemlayout>
@@ -6113,6 +7172,16 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(weathercolor.name)]</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>293</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$INFO[Skin.String(weathercolor.name)]</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -6121,6 +7190,16 @@
 										<height>66</height>
 										<texture border="5">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>18</posx>
+										<posy>247</posy>
+										<width>295</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -6144,6 +7223,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>28</posx>
+										<posy>241</posy>
+										<width>246</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="image">
@@ -6159,6 +7252,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</focusedlayout>
@@ -6243,6 +7337,16 @@
 									<height>283</height>
 									<texture border="7">views/newgloss/tile-283.png</texture>
 									<colordiffuse>$INFO[Skin.String(settingscolor.name)]</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>24</posy>
+									<width>246</width>
+									<height>283</height>
+									<texture border="7">views/newgloss/tilerounded-283.png</texture>
+									<colordiffuse>$INFO[Skin.String(settingscolor.name)]</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>24</posx>
@@ -6251,6 +7355,16 @@
 									<height>66</height>
 									<texture border="7">windows/home/tile-overlay-r.png</texture>
 									<colordiffuse>99FFFFFF</colordiffuse>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="image">
+									<posx>24</posx>
+									<posy>247</posy>
+									<width>246</width>
+									<height>60</height>
+									<texture>windows/home/tilerounded-nofo.png</texture>
+									<colordiffuse>black</colordiffuse>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 								<control type="image">
 									<posx>5</posx>
@@ -6270,6 +7384,20 @@
 									<align>left</align>
 									<aligny>center</aligny>
 									<textoffsetx>20</textoffsetx>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+								</control>
+								<control type="label">
+									<posx>28</posx>
+									<posy>241</posy>
+									<width>246</width>
+									<height>66</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font-Condensed-S33</font>
+									<textcolor>aawhite</textcolor>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textoffsetx>20</textoffsetx>
+									<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 								</control>
 							</control>
 						</itemlayout>
@@ -6289,6 +7417,16 @@
 										<height>293</height>
 										<texture border="7">views/newgloss/tile-283.png</texture>
 										<colordiffuse>$INFO[Skin.String(settingscolor.name)]</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>19</posx>
+										<posy>19</posy>
+										<width>256</width>
+										<height>293</height>
+										<texture border="7">views/newgloss/tilerounded-283.png</texture>
+										<colordiffuse>$INFO[Skin.String(settingscolor.name)]</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>24</posx>
@@ -6297,6 +7435,16 @@
 										<height>66</height>
 										<texture border="7">windows/home/tile-overlay-r.png</texture>
 										<colordiffuse>99FFFFFF</colordiffuse>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="image">
+										<posx>18</posx>
+										<posy>247</posy>
+										<width>258</width>
+										<height>66</height>
+										<texture>windows/home/tilerounded-fo.png</texture>
+										<colordiffuse>black</colordiffuse>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 									<control type="image">
 										<posx>5</posx>
@@ -6320,6 +7468,20 @@
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
+										<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+									</control>
+									<control type="label">
+										<posx>24</posx>
+										<posy>241</posy>
+										<width>246</width>
+										<height>66</height>
+										<label>$INFO[ListItem.Label]</label>
+										<font>Font-Condensed-S33</font>
+										<textcolor>blue</textcolor>
+										<align>left</align>
+										<aligny>center</aligny>
+										<textoffsetx>20</textoffsetx>
+										<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 									</control>
 								</control>
 								<control type="image">
@@ -6334,6 +7496,7 @@
 									<animation type="Unfocus">
 										<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 									</animation>
+									<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 									<colordiffuse>$INFO[Skin.String(settingsbordercolor.name)]</colordiffuse>
 								</control>
 							</control>

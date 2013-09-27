@@ -565,6 +565,15 @@
 						<label>$LOCALIZE[41140]</label>
 						<visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
 					</control>
+					<control type="radiobutton" id="2016">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
+						<selected>Skin.HasSetting(UseCurvedTiles)</selected>
+						<onclick>Skin.ToggleSetting(UseCurvedTiles)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<label>Use curved tiles</label>
+					</control>
 					<control type="radiobutton" id="2003">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
