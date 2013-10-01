@@ -752,7 +752,7 @@
 							<onclick>SetProperty(ChooseArt,1,3004)</onclick>
 							<onclick>SendClick(2003,10)</onclick>
 							<visible>Container.Content(musicvideos)</visible>
-						</item>
+						</item> 
 						<item id="4">
 							<description>Get theme</description>
 							<label>$LOCALIZE[41333]</label>
