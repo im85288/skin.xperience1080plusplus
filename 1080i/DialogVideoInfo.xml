@@ -3,6 +3,7 @@
 	<onload condition="System.HasAddon(script.videolanguage) + !Container.Content(musicvideos)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
 	<onload>SetProperty(fanart_image,$INFO[ListItem.Art(fanart)],home)</onload>
 	<onload condition="Skin.HasSetting(MovieInformation.PlayTrailer)">AlarmClock(PlayTrailer,PlayMedia($INFO[ListItem.Trailer],false,1),00:01,silent)</onload>
+	<onload condition="System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	<onunload>ClearProperty(fanart_image,home)</onunload>
 	<onload>SetProperty(extrafanart,.)</onload>
 	<onload>SetProperty(extrafanartshows,.)</onload>
@@ -757,6 +758,12 @@
 							<label>$LOCALIZE[41333]</label>
 							<onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 							<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + System.HasAddon(script.tvtunes)</visible>
+						</item>
+						<item id="4">
+							<description>Get theme</description>
+							<label>$LOCALIZE[41333]</label>
+							<onclick>RunScript(script.tvtunes,mode=solo&amp;name=$INFO[Listitem.Title]&amp;path=$INFO[ListItem.FilenameAndPath])</onclick>
+							<visible>Container.Content(movies) + System.HasAddon(script.tvtunes)</visible>
 						</item>
 						<item id="5">
 							<label>$LOCALIZE[41307]</label>
