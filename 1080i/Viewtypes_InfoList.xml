@@ -44,7 +44,7 @@
 					<height>650</height>
 					<texture background="true">$VAR[PosterViewPosterAlt]</texture>
 					<fadetime>500</fadetime>
-					<aspectratio>scale</aspectratio>
+					<aspectratio>keep</aspectratio>
 					<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
 				</control>
 				<control type="image">
@@ -1076,9 +1076,9 @@
 								<texture border="90,3,90,3">views/list/other/separator.png</texture>
 							</control>
 							<control type="image">
-								<posx>0</posx>
+								<posx>3</posx>
 								<posy>0</posy>
-								<width>710</width>
+								<width>702</width>
 								<height>59</height>
 								<texture border="5">views/other/focus-mod.png</texture>
 								<include>listfocusanim</include>
@@ -1158,9 +1158,9 @@
 								<texture border="90,3,90,3">views/list/other/separator.png</texture>
 							</control>
 							<control type="image">
-								<posx>0</posx>
+								<posx>3</posx>
 								<posy>0</posy>
-								<width>710</width>
+								<width>702</width>
 								<height>59</height>
 								<texture border="5">views/other/focus-mod.png</texture>
 								<include>listfocusanim</include>
