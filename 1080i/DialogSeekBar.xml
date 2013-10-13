@@ -674,7 +674,7 @@
 							</control>
 							<control type="label">
 								<posx>5</posx>
-								<posy>280</posy>
+								<posy>320</posy>
 								<width>280</width>
 								<height>100</height>
 								<label>$INFO[VideoPlayer.ChannelNumber,$LOCALIZE[19029] ,]</label>
