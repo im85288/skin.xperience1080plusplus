@@ -50,9 +50,21 @@
 						<width>790</width>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font-Condensed-S32</font>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
+						<visible>!Skin.HasSetting(UseWhiteText)</visible>
+					</control>
+					<control type="label">
+						<posx>24</posx>
+						<posy>30</posy>
+						<width>790</width>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Font-Condensed-S32</font>
+						<textcolor>darkerbackground</textcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="textbox">
 						<posx>24</posx>
@@ -61,10 +73,22 @@
 						<height>147</height>
 						<label>$INFO[ListItem.Plot]</label>
 						<font>Font-Condensed-S25</font>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<align>justify</align>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
-						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>!substring(ListItem.Path,videodb://1/7,left) + !Skin.HasSetting(UseWhiteText)</visible>
+					</control>
+					<control type="textbox">
+						<posx>24</posx>
+						<posy>72</posy>
+						<width>790</width>
+						<height>147</height>
+						<label>$INFO[ListItem.Plot]</label>
+						<font>Font-Condensed-S25</font>
+						<textcolor>darkerbackground</textcolor>
+						<align>justify</align>
+						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<visible>!substring(ListItem.Path,videodb://1/7,left) + Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="textbox">
 						<posx>24</posx>
@@ -73,10 +97,22 @@
 						<height>147</height>
 						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 						<font>Font-Condensed-S25</font>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>mod-infotags</textcolor>
 						<align>justify</align>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
-						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>substring(ListItem.Path,videodb://1/7,left) + !Skin.HasSetting(UseWhiteText)</visible>
+					</control>
+					<control type="textbox">
+						<posx>24</posx>
+						<posy>72</posy>
+						<width>790</width>
+						<height>147</height>
+						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
+						<font>Font-Condensed-S25</font>
+						<textcolor>darkerbackground</textcolor>
+						<align>justify</align>
+						<autoscroll delay="13000" time="3000" repeat="13000" />
+						<visible>substring(ListItem.Path,videodb://1/7,left) + Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 				</control>
 			</control>
