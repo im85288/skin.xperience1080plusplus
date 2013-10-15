@@ -181,7 +181,7 @@
 							<onclick>noop</onclick>
 						</item>
 						<item id="48">
-							<description>Backgrounf Colour Settings</description>
+							<description>Background Colour Settings</description>
 							<label>Background Colors</label>
 							<onclick>noop</onclick>
 						</item>
@@ -204,6 +204,12 @@
 							<description>Guide menu Settings</description>
 							<label>$LOCALIZE[41460]</label>
 							<onclick>noop</onclick>
+						</item>
+						<item id="47">
+							<description>Live tv Settings</description>
+							<label>$LOCALIZE[41220]</label>
+							<onclick>noop</onclick>
+							<visible>System.GetBool(pvrmanager.enabled)</visible>
 						</item>
 						<item id="38">
 							<description>Add-on Settings</description>
@@ -1851,6 +1857,22 @@
 						<label> • $LOCALIZE[41276]</label>
 						<label2>$INFO[Skin.String(Guide.Custom4.Label)]</label2>
 						<visible>Skin.HasSetting(Guide.Custom4)</visible>
+					</control>
+				</control>
+				<!-- ================ -->
+				<!-- Live tv Settings -->
+				<!-- ================ -->
+				<control type="grouplist" id="5">
+					<onleft>30</onleft>
+					<include>SettingsCategoryGrouplistVars</include>
+					<visible>Container(30).HasFocus(47)</visible>
+					<control type="radiobutton" id="10001">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<selected>Skin.HasSetting(EPGGenreColors.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(EPGGenreColors.Enabled)</onclick>
+						<label>$LOCALIZE[41221]</label>
 					</control>
 				</control>
 				<!-- =============== -->
