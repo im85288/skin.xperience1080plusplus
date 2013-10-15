@@ -150,11 +150,11 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S32</font>
+							<font>Font-Condensed-S32-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>mod-infotags</textcolor>
+							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -178,11 +178,11 @@
 							<posy>0</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S32</font>
+							<font>Font-Condensed-S32-B</font>
 							<align>left</align>
 							<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>mod-infotags</textcolor>
+							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -207,11 +207,11 @@
 							<posy>44</posy>
 							<width>517</width>
 							<height>58</height>
-							<font>Font-Condensed-S32</font>
+							<font>Font-Condensed-S32-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextStartTime]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>mod-infotags</textcolor>
+							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -235,11 +235,11 @@
 							<posy>48</posy>
 							<width>440</width>
 							<height>50</height>
-							<font>Font-Condensed-S32</font>
+							<font>Font-Condensed-S32-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.NextTitle]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>mod-infotags</textcolor>
+							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -263,11 +263,11 @@
 							<posy>0</posy>
 							<width>587</width>
 							<height>95</height>
-							<font>Font-Condensed-S50</font>
+							<font>Font-Condensed-S50-B</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>mod-infotags</textcolor>
+							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.HasTimer + !ListItem.IsRecording + ListItem.IsPlaying</visible>
 						</control>
@@ -305,11 +305,11 @@
 							<posy>0</posy>
 							<width>539</width>
 							<height>95</height>
-							<font>Font-Condensed-S50</font>
+							<font>Font-Condensed-S50-B</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>mod-infotags</textcolor>
+							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasTimer | ListItem.IsRecording + ListItem.IsPlaying</visible>
 						</control>
@@ -407,7 +407,7 @@
 								<posy>0</posy>
 								<width>517</width>
 								<height>58</height>
-								<font>Font-Condensed-S32</font>
+								<font>Font-Condensed-S32-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime]</label>
 								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
