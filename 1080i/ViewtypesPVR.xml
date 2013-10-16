@@ -1590,7 +1590,7 @@
 						<width>98</width>
 						<height>80</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="12" fallback="windows/pvr/genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/genres/,.png]</texture>
+						<texture border="12" fallback="windows/pvr/genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/genres/,-fo.png]</texture>
 						<visible>Skin.HasSetting(EPGGenreColors.Enabled)</visible>
 					</control>
 					<control type="label" id="1">
