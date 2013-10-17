@@ -278,9 +278,9 @@
 						</control>
 						<control type="image">
 							<posx>53</posx>
-							<posy>-10</posy>
+							<posy>2</posy>
 							<width>100</width>
-							<height>100</height>
+							<height>88</height>
 							<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
@@ -519,9 +519,9 @@
 						</control>
 						<control type="image">
 							<posx>53</posx>
-							<posy>-10</posy>
+							<posy>2</posy>
 							<width>100</width>
-							<height>100</height>
+							<height>88</height>
 							<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>

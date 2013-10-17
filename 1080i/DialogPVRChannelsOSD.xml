@@ -94,7 +94,7 @@
 					<posx>280</posx>
 					<posy>360</posy>
 					<width>740</width>
-					<height>580</height>
+					<height>570</height>
 					<onleft>PreviousChannelGroup</onleft>
 					<onright>60</onright>
 					<onup>11</onup>
