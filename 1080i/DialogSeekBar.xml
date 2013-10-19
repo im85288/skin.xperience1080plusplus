@@ -720,7 +720,7 @@
 								<width>300</width>
 								<height>38</height>
 								<align>right</align>
-								<label>$INFO[System.Time]$INFO[VideoPlayer.EndTime, → ,]</label>
+								<label>$INFO[VideoPlayer.StartTime]$INFO[VideoPlayer.EndTime, → ,]</label>
 								<font>Font-Condensed-S45</font>
 								<textcolor>black</textcolor>
 								<visible>IsEmpty(Window(seekbar).Property(ExtendPlot)) + IsEmpty(Window(seekbar).Property(ShowNext))</visible>
