@@ -1559,14 +1559,6 @@
 						<onclick>Skin.ToggleSetting(PreferLandscapeArt)</onclick>
 						<label>Prefer Landscape Art when available</label>
 					</control>
-					<control type="radiobutton" id="3006">
-						<width>1210</width>
-						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
-						<selected>Skin.HasSetting(EPGGenreColors.Enabled)</selected>
-						<onclick>Skin.ToggleSetting(EPGGenreColors.Enabled)</onclick>
-						<label>$LOCALIZE[41221]</label>
-					</control>
 					<control type="radiobutton" id="3007">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
