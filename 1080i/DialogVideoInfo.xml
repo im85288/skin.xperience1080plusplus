@@ -3,7 +3,7 @@
 	<onload condition="System.HasAddon(script.videolanguage) + !Container.Content(musicvideos)">RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
 	<onload>SetProperty(fanart_image,$INFO[ListItem.Art(fanart)],home)</onload>
 	<onload condition="Skin.HasSetting(MovieInformation.PlayTrailer)">AlarmClock(PlayTrailer,PlayMedia($INFO[ListItem.Trailer],false,1),00:01,silent)</onload>
-	<onload condition="System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
+	<onload condition="System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
 	<onunload>ClearProperty(fanart_image,home)</onunload>
 	<onload>SetProperty(extrafanart,.)</onload>
 	<onload>SetProperty(extrafanartshows,.)</onload>
@@ -326,7 +326,7 @@
 			</control>
 			<!-- Plot / Cast / Fanart Labels -->
 			<control type="grouplist">
-				<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml)  + !Window.IsActive(DialogSelect.xml) +  !Skin.HasSetting(UseWhiteText)</visible>
+				<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + !Window.IsActive(DialogSelect.xml) + !Skin.HasSetting(UseWhiteText)</visible>
 				<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 				<animation type="Conditional" condition="Control.HasFocus(1110) | Control.HasFocus(9337) | Window.IsActive(3004)">
 					<effect type="slide" start="0" end="510" time="400" delay="0" tween="sine" easing="inout" />
@@ -477,7 +477,7 @@
 			<!-- Info Stuff -->
 			<control type="group">
 				<include>FullscreenDimensions</include>
-			<!--  	<visible allowhiddenfocus="true">Control.HasFocus(9333) | Control.HasFocus(9335) | Control.HasFocus(9337) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110) | Control.HasFocus(70) | Control.HasFocus(71) | [!IsEmpty(Window(3004).Property(ChooseArt)) + [Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml)]]</visible> -->
+				<!-- <visible allowhiddenfocus="true">Control.HasFocus(9333) | Control.HasFocus(9335) | Control.HasFocus(9337) | Control.HasFocus(1101) | Control.HasFocus(1104) | Control.HasFocus(1105) | Control.HasFocus(1110) | Control.HasFocus(70) | Control.HasFocus(71) | [!IsEmpty(Window(3004).Property(ChooseArt)) + [Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml)]]</visible> -->
 				<visible> [!Window.IsActive(DialogSelect.xml) + !Window.IsActive(filebrowser)]</visible>
 				<include>listEndAnimation</include>
 				<animation type="Visible">
@@ -757,14 +757,16 @@
 						<item id="4">
 							<description>Get theme</description>
 							<label>$LOCALIZE[41333]</label>
-							<onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
-							<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + System.HasAddon(script.tvtunes)</visible>
+							<onclick>XBMC.RunScript(script.tvtunes, mode=solo&amp;name=$INFO[Listitem.Title]&amp;path=$INFO[ListItem.FilenameAndPath])</onclick>
+							<visible>[Container.Content(TVShows) | Container.Content(Seasons)] + System.HasAddon(script.tvtunes) + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))
+							</visible>
 						</item>
 						<item id="4">
 							<description>Get theme</description>
 							<label>$LOCALIZE[41333]</label>
-							<onclick>RunScript(script.tvtunes,mode=solo&amp;name=$INFO[Listitem.Title]&amp;path=$INFO[ListItem.FilenameAndPath])</onclick>
-							<visible>Container.Content(movies) + System.HasAddon(script.tvtunes)</visible>
+							<onclick>XBMC.RunScript(script.tvtunes, mode=solo&amp;path=$INFO[ListItem.FilenameAndPath]&amp;name=$INFO[ListItem.TVShowTitle])</onclick>
+							<visible>Container.Content(movies) + System.HasAddon(script.tvtunes) + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))
+							</visible>
 						</item>
 						<item id="5">
 							<label>$LOCALIZE[41307]</label>
