@@ -30,19 +30,8 @@
 				<width>442</width>
 				<texture>dialogs/shutdown/shutdown.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
-			<control type="image">
-				<description>background image</description>
-				<posx>63</posx>
-				<posy>0</posy>
-				<height>540</height>
-				<width>442</width>
-				<aspectratio>stretch</aspectratio>
-				<texture border="5">views/newgloss/whitepanel.png</texture>
-				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-				<visible>Skin.HasSetting(DarkerPanels)</visible>
-			</control>
+			
 			<control type="grouplist" id="9000">
 				<posx>82</posx>
 				<posy>47</posy>
@@ -57,8 +46,7 @@
 				<ondown>9000</ondown>
 				<control type="togglebutton" id="1">
 					<description>Master mode button</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[41360]</label>
 					<altlabel>$LOCALIZE[41361]</altlabel>
 					<onclick>xbmc.mastermode</onclick>
@@ -71,8 +59,7 @@
 				</control>
 				<control type="button" id="2">
 					<description>System Info button</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[130]</label>
 					<include>GuideDialogClose</include>
 					<onclick>ActivateWindow(systeminfo)</onclick>
@@ -82,8 +69,7 @@
 				</control>
 				<control type="button" id="3">
 					<description>FileManger button</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[7]</label>
 					<include>GuideDialogClose</include>
 					<onclick>ActivateWindow(filemanager)</onclick>
@@ -93,8 +79,7 @@
 				</control>
 				<control type="button" id="5">
 					<description>Quit XBMC button</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[13012]</label>
 					<onclick>XBMC.Quit()</onclick>
 					<texturefocus border="70,2,2,2">dialogs/options/buttons/quit-fo.png</texturefocus>
@@ -103,8 +88,7 @@
 				</control>
 				<control type="button" id="6">
 					<description>Restart PC button</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[13013]</label>
 					<onclick>XBMC.Reset()</onclick>
 					<texturefocus border="70,2,2,2">dialogs/options/buttons/reboot-fo.png</texturefocus>
@@ -117,8 +101,7 @@
 					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					<control type="button" id="30">
 						<description>Powerdown button</description>
-						<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+						<include>optionsbuttonsdimensions</include>
 						<label>$LOCALIZE[13016]</label>
 						<onclick condition="System.CanPowerDown">XBMC.Powerdown()</onclick>
 						<onclick condition="!System.CanPowerDown">XBMC.Shutdown()</onclick>
@@ -132,8 +115,7 @@
 					</control>
 					<control type="button" id="31">
 						<description>Custom Shutdown button</description>
-						<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+						<include>optionsbuttonsdimensions</include>
 						<label>20150</label>
 						<onclick>AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
 						<onleft>30</onleft>
@@ -145,8 +127,7 @@
 					</control>
 					<control type="button" id="32">
 						<description>Cancel Shutdown button</description>
-						<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+						<include>optionsbuttonsdimensions</include>
 						<label>20151</label>
 						<onclick>CancelAlarm(shutdowntimer)</onclick>
 						<onleft>31</onleft>
@@ -185,8 +166,7 @@
 				</control>
 				<control type="button" id="8">
 					<description>Suspend Computer button</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[13011]</label>
 					<onclick>XBMC.Suspend()</onclick>
 					<texturefocus border="70,2,2,2">dialogs/options/buttons/sushib-fo.png</texturefocus>
@@ -195,8 +175,7 @@
 				</control>
 				<control type="button" id="9">
 					<description>Hibernate Computer button</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[13010]</label>
 					<onclick>XBMC.Hibernate()</onclick>
 					<texturefocus border="70,2,2,2">dialogs/options/buttons/sushib-fo.png</texturefocus>
@@ -205,8 +184,7 @@
 				</control>
 				<control type="button" id="10">
 					<description>Eject button</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[13391]</label>
 					<onclick>EjectTray</onclick>
 					<texturefocus border="70,2,2,2">dialogs/options/buttons/eject-fo.png</texturefocus>
@@ -215,8 +193,7 @@
 				</control>
 				<control type="button" id="11">
 					<description>Profile Log Off button (German)</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$INFO[system.profilename] $LOCALIZE[41351]</label>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>system.logoff</onclick>
@@ -226,8 +203,7 @@
 				</control>
 				<control type="button" id="12">
 					<description>Profile Log Off button (Other Languages)</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[41351] $INFO[system.profilename]</label>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>system.logoff</onclick>
@@ -237,8 +213,7 @@
 				</control>
 				<control type="button" id="13">
 					<description>Inhibit idle shutdown</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[13017]</label>
 					<onclick>XBMC.InhibitIdleShutdown(true)</onclick>
 					<texturefocus border="70,2,2,2">dialogs/options/buttons/shutdown-fo.png</texturefocus>
@@ -247,8 +222,7 @@
 				</control>
 				<control type="button" id="14">
 					<description>Allow idle shutdown</description>
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[13018]</label>
 					<onclick>XBMC.InhibitIdleShutdown(false)</onclick>
 					<texturefocus border="70,2,2,2">dialogs/options/buttons/shutdown-fo.png</texturefocus>
@@ -256,8 +230,7 @@
 					<visible>System.HasShutdown + System.IsInhibit</visible>
 				</control>
 				<control type="button" id="15">
-					<include condition="!Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensions</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">optionsbuttonsdimensionsdarkerbackground</include>
+					<include>optionsbuttonsdimensions</include>
 					<label>$LOCALIZE[41352]</label>
 					<onclick>dialog.close(all,true)</onclick>
 					<onclick>ReloadSkin</onclick>
@@ -272,7 +245,7 @@
 					<posy>433</posy>
 					<width>100</width>
 					<height>100</height>
-					<texture>buttons/shutdown_nofo.png</texture>
+					<texture>dialogs/options/buttons/shutdown_nofo.png</texture>
 				</control>
 				<control type="label">
 					<posx>157</posx>
@@ -280,7 +253,7 @@
 					<width>300</width>
 					<height>100</height>
 					<label>$LOCALIZE[41507]</label>
-					<font>Font-Condensed-S29</font>
+					<font>Font-Condensed-S34-B</font>
 					<textcolor>eewhite</textcolor>
 					<shadowcolor>22000000</shadowcolor>
 				</control>

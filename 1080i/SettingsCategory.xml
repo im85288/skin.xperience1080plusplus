@@ -214,6 +214,22 @@
 			<disabledcolor>$VAR[DarkerBackgroundDisabledTextColourVars]</disabledcolor>
 			<font>Font-Condensed-S30-B</font>
 			<textoffsetx>35</textoffsetx>
+			<visible>!Skin.HasSetting(DarkerPanels)</visible>
+		</control>
+		<control type="spincontrolex" id="9">
+			<description>Default Spin Control</description>
+			<height>77</height>
+			<spinposx>20</spinposx>
+			<align>left</align>
+			<aligny>center</aligny>
+			<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+			<texturenofocus border="90,3,90,3">views/list/other/separator3.png</texturenofocus>
+			<textcolor>$VAR[DarkerBackgroundMainTextColourVars]</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<disabledcolor>$VAR[DarkerBackgroundDisabledTextColourVars]</disabledcolor>
+			<font>Font-Condensed-S30-B</font>
+			<textoffsetx>35</textoffsetx>
+			<visible>Skin.HasSetting(DarkerPanels)</visible>
 		</control>
 		<control type="button" id="10">
 			<description>Default Category Button</description>

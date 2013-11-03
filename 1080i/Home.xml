@@ -2,32 +2,39 @@
 	<defaultcontrol>525</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
+	<onload condition="System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,skin)</onload>
+	<onload condition="System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,shelf)</onload>
+	<onload condition="System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,channelShelf)</onload>
 	<onload condition="!Skin.HasSetting(Skin.Initialization)">SetProperty(Skin.Initialization,1,startup)</onload>
 	<onload condition="!Skin.HasSetting(Skin.Initialization) | IsEmpty(Window(startup).Property(Started))">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
 	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(3) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(4) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(11) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(10) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onload>	
 	<onload condition="Container(20).HasFocus(5) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onload>
 	<onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
-	<onload condition="IsEmpty(Skin.String(musiccolor.name)) | !SubString(Skin.String(musiccolor.name),Tiles)">Skin.SetString(musiccolor.name,Red Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(tvcolor.name)) | !SubString(Skin.String(tvcolor.name),Tiles)">Skin.SetString(tvcolor.name,Green Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(moviecolor.name)) | !SubString(Skin.String(moviecolor.name),Tiles)">Skin.SetString(moviecolor.name,Blue Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(appcolor.name)) | !SubString(Skin.String(appcolor.name),Tiles)">Skin.SetString(appcolor.name,Grey Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(homecolor.name)) | !SubString(Skin.String(homecolor.name),Tiles)">Skin.SetString(homecolor.name,Grey Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(pvrcolor.name)) | !SubString(Skin.String(pvrcolor.name),Tiles)">Skin.SetString(pvrcolor.name,Grey Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(picturescolor.name)) | !SubString(Skin.String(picturescolor.name),Tiles)">Skin.SetString(picturescolor.name,Grey Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(settingscolor.name)) | !SubString(Skin.String(settingscolor.name),Tiles)">Skin.SetString(settingscolor.name,Grey Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(weathercolor.name)) | !SubString(Skin.String(weathercolor.name),Tiles)">Skin.SetString(weathercolor.name,Grey Tiles)</onload>
-	<onload condition="IsEmpty(Skin.String(musicbordercolor.name)) | !SubString(Skin.String(musicbordercolor.name),TileBorder)">Skin.SetString(musicbordercolor.name,Red TileBorder)</onload>
-	<onload condition="IsEmpty(Skin.String(tvbordercolor.name)) | !SubString(Skin.String(tvbordercolor.name),TileBorder)">Skin.SetString(tvbordercolor.name,Green TileBorder)</onload>
-	<onload condition="IsEmpty(Skin.String(moviebordercolor.name)) | !SubString(Skin.String(moviebordercolor.name),TileBorder)">Skin.SetString(moviebordercolor.name,Blue TileBorder)</onload>
-	<onload condition="IsEmpty(Skin.String(appbordercolor.name)) | !SubString(Skin.String(appbordercolor.name),TileBorder)">Skin.SetString(appbordercolor.name,Grey TileBorder)</onload>
-	<onload condition="IsEmpty(Skin.String(homebordercolor.name)) | !SubString(Skin.String(homebordercolor.name),TileBorder)">Skin.SetString(homebordercolor.name,Grey TileBorder)</onload>
-	<onload condition="IsEmpty(Skin.String(pvrbordercolor.name)) | !SubString(Skin.String(pvrbordercolor.name),TileBorder)">Skin.SetString(pvrbordercolor.name,Grey TileBorder)</onload>
-	<onload condition="IsEmpty(Skin.String(picturesbordercolor.name)) | !SubString(Skin.String(picturesbordercolor.name),TileBorder)">Skin.SetString(picturesbordercolor.name,Grey TileBorder)</onload>
-	<onload condition="IsEmpty(Skin.String(settingsbordercolor.name)) | !SubString(Skin.String(settingsbordercolor.name),TileBorder)">Skin.SetString(settingsbordercolor.name,Grey TileBorder)</onload>
-	<onload condition="IsEmpty(Skin.String(weatherbordercolor.name)) | !SubString(Skin.String(weatherbordercolor.name),TileBorder)">Skin.SetString(weatherbordercolor.name,Grey TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(musiccolor.name)) | !SubString(Skin.String(musiccolor.name),Tiles)">Skin.SetString(musiccolor.name,Yellow Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(tvcolor.name)) | !SubString(Skin.String(tvcolor.name),Tiles)">Skin.SetString(tvcolor.name,Magenta Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(moviecolor.name)) | !SubString(Skin.String(moviecolor.name),Tiles)">Skin.SetString(moviecolor.name,Cyan Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(appcolor.name)) | !SubString(Skin.String(appcolor.name),Tiles)">Skin.SetString(appcolor.name,Solid Black Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(homecolor.name)) | !SubString(Skin.String(homecolor.name),Tiles)">Skin.SetString(homecolor.name,Purple Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(pvrcolor.name)) | !SubString(Skin.String(pvrcolor.name),Tiles)">Skin.SetString(pvrcolor.name,Green Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(picturescolor.name)) | !SubString(Skin.String(picturescolor.name),Tiles)">Skin.SetString(picturescolor.name,Orange Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(settingscolor.name)) | !SubString(Skin.String(settingscolor.name),Tiles)">Skin.SetString(settingscolor.name,Purple Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(weathercolor.name)) | !SubString(Skin.String(weathercolor.name),Tiles)">Skin.SetString(weathercolor.name,Lime Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(channelscolor.name)) | !SubString(Skin.String(channelscolor.name),Tiles)">Skin.SetString(channelscolor.name,Red Tiles)</onload>
+	<onload condition="IsEmpty(Skin.String(musicbordercolor.name)) | !SubString(Skin.String(musicbordercolor.name),TileBorder)">Skin.SetString(musicbordercolor.name,Green TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(tvbordercolor.name)) | !SubString(Skin.String(tvbordercolor.name),TileBorder)">Skin.SetString(tvbordercolor.name,Blue TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(moviebordercolor.name)) | !SubString(Skin.String(moviebordercolor.name),TileBorder)">Skin.SetString(moviebordercolor.name,Red TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(appbordercolor.name)) | !SubString(Skin.String(appbordercolor.name),TileBorder)">Skin.SetString(appbordercolor.name,Orange TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(homebordercolor.name)) | !SubString(Skin.String(homebordercolor.name),TileBorder)">Skin.SetString(homebordercolor.name,Cyan TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(pvrbordercolor.name)) | !SubString(Skin.String(pvrbordercolor.name),TileBorder)">Skin.SetString(pvrbordercolor.name,Magenta TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(picturesbordercolor.name)) | !SubString(Skin.String(picturesbordercolor.name),TileBorder)">Skin.SetString(picturesbordercolor.name,Yellow TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(settingsbordercolor.name)) | !SubString(Skin.String(settingsbordercolor.name),TileBorder)">Skin.SetString(settingsbordercolor.name,Lime TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(weatherbordercolor.name)) | !SubString(Skin.String(weatherbordercolor.name),TileBorder)">Skin.SetString(weatherbordercolor.name,Purple TileBorder)</onload>
+	<onload condition="IsEmpty(Skin.String(channelsbordercolor.name)) | !SubString(Skin.String(channelsbordercolor.name),TileBorder)">Skin.SetString(channelsbordercolor.name,Solid Black TileBorder)</onload>
 	<onload condition="IsEmpty(Skin.String(panelcolor.name)) | !SubString(Skin.String(panelcolor.name),Panel)">Skin.SetString(panelcolor.name,Black Panel)</onload>
 	<onload condition="IsEmpty(Skin.String(backgroundcolor.name)) | !SubString(Skin.String(backgroundcolor.name),Background)">Skin.SetString(backgroundcolor.name,Black Background)</onload>
 	<onunload>CancelAlarm(HomeTileMove,true)</onunload>
@@ -49,6 +56,7 @@
 		<include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuTVShows</include>
 		<include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuMusic</include>
 		<include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuLiveTV</include>
+		<include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuPhotos</include>
 		<include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeSubMenuSettings</include>
 		<include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeWraplist</include>
 		<include condition="stringcompare(Skin.String(HomeScreen),classic)">HomeWraplistAnimation</include>

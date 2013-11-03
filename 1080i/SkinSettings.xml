@@ -90,6 +90,15 @@
 							<width>338</width>
 							<height>77</height>
 							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<visible>!Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>338</width>
+							<height>77</height>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
+							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="label">
 							<posx>338</posx>
@@ -336,6 +345,16 @@
 							<height>77</height>
 							<texture border="90,3,90,3">views/list/other/separator.png</texture>
 							<visible>!ControlGroup(1007).HasFocus</visible>
+							<visible>!Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
+							<visible>!ControlGroup(1007).HasFocus</visible>
+							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -483,6 +502,16 @@
 							<height>77</height>
 							<texture border="90,3,90,3">views/list/other/separator.png</texture>
 							<visible>!ControlGroup(2006).HasFocus</visible>
+							<visible>!Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
+							<visible>!ControlGroup(2006).HasFocus</visible>
+							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -633,6 +662,16 @@
 							<height>77</height>
 							<texture border="90,3,90,3">views/list/other/separator.png</texture>
 							<visible>!ControlGroup(2007).HasFocus</visible>
+							<visible>!Skin.HasSetting(DarkerPanels)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>1210</width>
+							<height>77</height>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
+							<visible>!ControlGroup(2007).HasFocus</visible>
+							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -1032,6 +1071,35 @@
 						<label>$LOCALIZE[5]</label>
 						<label2>$INFO[Skin.String(settingscolor.name)]</label2>
 					</control>
+					<control type="button" id="10095">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Grey Tiles)">Skin.SetString(channelscolor.name,Magenta Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Lime Tiles)">Skin.SetString(channelscolor.name,Grey Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Green Tiles)">Skin.SetString(channelscolor.name,Lime Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Blue Tiles)">Skin.SetString(channelscolor.name,Green Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Red Tiles)">Skin.SetString(channelscolor.name,Blue Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Pink Tiles)">Skin.SetString(channelscolor.name,Red Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Purple Tiles)">Skin.SetString(channelscolor.name,Pink Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Orange Tiles)">Skin.SetString(channelscolor.name,Purple Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Yellow Tiles)">Skin.SetString(channelscolor.name,Orange Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Black Tiles)">Skin.SetString(channelscolor.name,Yellow Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Solid Black Tiles)">Skin.SetString(channelscolor.name,Black Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),White Tiles)">Skin.SetString(channelscolor.name,Solid Black Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Cyan Tiles)">Skin.SetString(channelscolor.name,White Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Magenta Tiles)">Skin.SetString(channelscolor.name,Cyan Tiles)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelscolor.name),Grey Tiles)">Skin.SetString(channelscolor.name,Magenta Tiles)</onclick>
+						<label>$LOCALIZE[19019]</label>
+						<label2>$INFO[Skin.String(channelscolor.name)]</label2>
+					</control>
 					<control type="button" id="10012">
 						<posx>0</posx>
 						<posy>0</posy>
@@ -1043,15 +1111,16 @@
 						<font>Font-Condensed-S30-B</font>
 						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
 						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
-						<onclick>Skin.SetString(appcolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(homecolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(weathercolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(pvrcolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(picturescolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(settingscolor.name,Grey Tiles)</onclick>
-						<onclick>Skin.SetString(moviecolor.name,Blue Tiles)</onclick>
-						<onclick>Skin.SetString(tvcolor.name,Green Tiles)</onclick>
-						<onclick>Skin.SetString(musiccolor.name,Red Tiles)</onclick>
+						<onclick>Skin.SetString(appcolor.name,Solid Black Tiles)</onclick>
+						<onclick>Skin.SetString(homecolor.name,Purple Tiles)</onclick>
+						<onclick>Skin.SetString(weathercolor.name,Lime Tiles)</onclick>
+						<onclick>Skin.SetString(pvrcolor.name,Green Tiles)</onclick>
+						<onclick>Skin.SetString(picturescolor.name,Orange Tiles)</onclick>
+						<onclick>Skin.SetString(settingscolor.name,Purple Tiles)</onclick>
+						<onclick>Skin.SetString(moviecolor.name,Cyan Tiles)</onclick>
+						<onclick>Skin.SetString(tvcolor.name,Magenta Tiles)</onclick>
+						<onclick>Skin.SetString(musiccolor.name,Yellow Tiles)</onclick>
+						<onclick>Skin.SetString(channelscolor.name,Red Tiles)</onclick>
 						<label>$LOCALIZE[409]</label>
 					</control>
 				</control>
@@ -1330,6 +1399,35 @@
 						<onclick condition="stringcompare(Skin.String(settingsbordercolor.name),Grey TileBorder)">Skin.SetString(settingsbordercolor.name,Magenta TileBorder)</onclick>
 						<label>$LOCALIZE[5]</label>
 						<label2>$INFO[Skin.String(settingsbordercolor.name)]</label2>
+					</control>
+					<control type="button" id="90095">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1210</width>
+						<height>77</height>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textoffsetx>35</textoffsetx>
+						<font>Font-Condensed-S30-B</font>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Grey TileBorder)">Skin.SetString(channelsbordercolor.name,Magenta TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Lime TileBorder)">Skin.SetString(channelsbordercolor.name,Grey TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Green TileBorder)">Skin.SetString(channelsbordercolor.name,Lime TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Blue TileBorder)">Skin.SetString(channelsbordercolor.name,Green TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Red TileBorder)">Skin.SetString(channelsbordercolor.name,Blue TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Pink TileBorder)">Skin.SetString(channelsbordercolor.name,Red TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Purple TileBorder)">Skin.SetString(channelsbordercolor.name,Pink TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Orange TileBorder)">Skin.SetString(channelsbordercolor.name,Purple TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Yellow TileBorder)">Skin.SetString(channelsbordercolor.name,Orange TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Black TileBorder)">Skin.SetString(channelsbordercolor.name,Yellow TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Solid Black TileBorder)">Skin.SetString(channelsbordercolor.name,Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),White TileBorder)">Skin.SetString(channelsbordercolor.name,Solid Black TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Cyan TileBorder)">Skin.SetString(channelsbordercolor.name,White TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Magenta TileBorder)">Skin.SetString(channelsbordercolor.name,Cyan TileBorder)</onclick>
+						<onclick condition="stringcompare(Skin.String(channelsbordercolor.name),Grey TileBorder)">Skin.SetString(channelsbordercolor.name,Magenta TileBorder)</onclick>
+						<label>$LOCALIZE[19019]</label>
+						<label2>$INFO[Skin.String(channelsbordercolor.name)]</label2>
 					</control>
 					<control type="button" id="90012">
 						<posx>0</posx>
@@ -1706,6 +1804,36 @@
 						<onclick>ClearProperty(CustomDialogType)</onclick>
 						<onclick>ClearProperty(CustomDialog)</onclick>
 						<onclick>SetProperty(Dialog,$LOCALIZE[20343])</onclick>
+						<onclick>ActivateWindow(3002)</onclick>
+					</control>
+					<control type="button" id="5011">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<label>$LOCALIZE[19019]</label>
+						<onclick>ClearProperty(CustomDialogType)</onclick>
+						<onclick>ClearProperty(CustomDialog)</onclick>
+						<onclick>SetProperty(Dialog,$LOCALIZE[19019])</onclick>
+						<onclick>ActivateWindow(3002)</onclick>
+					</control>
+					<control type="button" id="5012">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<label>$LOCALIZE[41220]</label>
+						<onclick>ClearProperty(CustomDialogType)</onclick>
+						<onclick>ClearProperty(CustomDialog)</onclick>
+						<onclick>SetProperty(Dialog,$LOCALIZE[41220])</onclick>
+						<onclick>ActivateWindow(3002)</onclick>
+					</control>
+					<control type="button" id="5013">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<label>$LOCALIZE[1213]</label>
+						<onclick>ClearProperty(CustomDialogType)</onclick>
+						<onclick>ClearProperty(CustomDialog)</onclick>
+						<onclick>SetProperty(Dialog,$LOCALIZE[1213])</onclick>
 						<onclick>ActivateWindow(3002)</onclick>
 					</control>
 					<control type="button" id="5006">

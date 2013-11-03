@@ -220,23 +220,138 @@
 				<label>$LOCALIZE[41445]</label>
 				<include>GuideDialogClose</include>
 				<onclick>ActivateWindow(videos,movietitles,return)</onclick>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="0">
+				<label>$LOCALIZE[41445]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.0.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.0.type),movie)</visible>
+			</item>
+			<item id="0">
+				<label>$LOCALIZE[41445]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.1.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.1.type),movie)</visible>
+			</item>
+			<item id="0">
+				<label>$LOCALIZE[41445]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.2.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.2.type),movie)</visible>
+			</item>
+			<item id="0">
+				<label>$LOCALIZE[41445]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.3.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.3.type),movie)</visible>
 			</item>
 			<item id="1">
 				<label>$LOCALIZE[41446]</label>
 				<include>GuideDialogClose</include>
 				<onclick>ActivateWindow(videos,tvshowtitles,return)</onclick>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="1">
+				<label>$LOCALIZE[41446]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.0.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.0.type),show)</visible>
+			</item>
+			<item id="1">
+				<label>$LOCALIZE[41446]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.1.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.1.type),show)</visible>
+			</item>
+			<item id="1">
+				<label>$LOCALIZE[41446]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.2.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.2.type),show)</visible>
+			</item>
+			<item id="1">
+				<label>$LOCALIZE[41446]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.3.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.3.type),show)</visible>
 			</item>
 			<item id="2">
 				<label>$LOCALIZE[41447]</label>
 				<include>GuideDialogClose</include>
 				<onclick condition="IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary)</onclick>
 				<onclick condition="!IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="2">
+				<label>$LOCALIZE[41447]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.0.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.0.type),artist)</visible>
+			</item>
+			<item id="2">
+				<label>$LOCALIZE[41447]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.1.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.1.type),artist)</visible>
+			</item>
+			<item id="2">
+				<label>$LOCALIZE[41447]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.2.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.2.type),artist)</visible>
+			</item>
+			<item id="2">
+				<label>$LOCALIZE[41447]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.3.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.3.type),artist)</visible>
 			</item>
 			<item id="3">
 				<label>$LOCALIZE[41448]</label>
 				<include>GuideDialogClose</include>
 				<onclick>ActivateWindow(pictures)</onclick>
-				<visible>!Skin.HasSetting(Guide.Custom1) + IsEmpty(Skin.String(Guide.Custom1.Path))</visible>
+				<visible>!Skin.HasSetting(Guide.Custom1) + IsEmpty(Skin.String(Guide.Custom1.Path)) + !Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="3">
+				<label>Photos</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.0.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.0.type),photo)</visible>
+			</item>
+			<item id="3">
+				<label>Photos</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.1.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.1.type),photo)</visible>
+			</item>
+			<item id="3">
+				<label>Photos</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.2.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.2.type),photo)</visible>
+			</item>
+			<item id="3">
+				<label>Photos</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.3.path)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.3.type),photo)</visible>
 			</item>
 			<item id="4">
 				<label>$INFO[Skin.String(Guide.Custom1.Label)]</label>
@@ -267,6 +382,35 @@
 				<include>GuideDialogClose</include>
 				<onclick>ActivateWindow(videos,RecentlyAddedMovies,return)</onclick>
 				<visible>!Skin.HasSetting(Guide.Custom3) + IsEmpty(Skin.String(Guide.Custom3.Path))</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="7">
+				<label>$LOCALIZE[41450]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.0.recent)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.0.type),movie)</visible>
+			</item>
+			<item id="7">
+				<label>$LOCALIZE[41450]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.1.recent)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.1.type),movie)</visible>
+			</item>
+			<item id="7">
+				<label>$LOCALIZE[41450]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.2.recent)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.2.type),movie)</visible>
+			</item>
+			<item id="7">
+				<label>$LOCALIZE[41450]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.3.recent)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.3.type),movie)</visible>
 			</item>
 			<item id="8">
 				<label>$INFO[Skin.String(Guide.Custom3.Label)]</label>
@@ -282,6 +426,35 @@
 				<include>GuideDialogClose</include>
 				<onclick>ActivateWindow(videos,RecentlyAddedEpisodes,return)</onclick>
 				<visible>!Skin.HasSetting(Guide.Custom4) + IsEmpty(Skin.String(Guide.Custom4.Path))</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="9">
+				<label>$LOCALIZE[41451]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.0.recent)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.0.type),show)</visible>
+			</item>
+			<item id="9">
+				<label>$LOCALIZE[41451]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.1.recent)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.1.type),show)</visible>
+			</item>
+			<item id="9">
+				<label>$LOCALIZE[41451]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.2.recent)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.2.type),show)</visible>
+			</item>
+			<item id="9">
+				<label>$LOCALIZE[41451]</label>
+				<include>GuideDialogClose</include>
+				<onclick>$INFO[Window(Home).Property(plexbmc.3.recent)]</onclick>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+				<visible>substring(Window(Home).Property(plexbmc.3.type),show)</visible>
 			</item>
 			<item id="10">
 				<label>$INFO[Skin.String(Guide.Custom4.Label)]</label>
@@ -684,6 +857,7 @@
 				<label2>$INFO[Window(home).Property(LatestMovie.1.Year),, • ]$INFO[Window(home).Property(LatestMovie.1.RunningTime),, $LOCALIZE[12391]]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestMovie.1.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestMovie.1.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="2">
 				<onclick>PreviousMenu</onclick>
@@ -693,6 +867,7 @@
 				<label2>$INFO[Window(home).Property(LatestMovie.2.Year),, • ]$INFO[Window(home).Property(LatestMovie.2.RunningTime),, $LOCALIZE[12391]]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestMovie.2.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestMovie.2.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="3">
 				<onclick>PreviousMenu</onclick>
@@ -702,6 +877,7 @@
 				<label2>$INFO[Window(home).Property(LatestMovie.3.Year),, • ]$INFO[Window(home).Property(LatestMovie.3.RunningTime),, $LOCALIZE[12391]]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestMovie.3.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestMovie.3.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="4">
 				<onclick>PreviousMenu</onclick>
@@ -711,6 +887,7 @@
 				<label2>$INFO[Window(home).Property(LatestMovie.4.Year),, • ]$INFO[Window(home).Property(LatestMovie.4.RunningTime),, $LOCALIZE[12391]]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestMovie.4.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestMovie.4.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="5">
 				<onclick>PreviousMenu</onclick>
@@ -720,6 +897,7 @@
 				<label2>$INFO[Window(home).Property(LatestMovie.5.Year),, • ]$INFO[Window(home).Property(LatestMovie.5.RunningTime),, $LOCALIZE[12391]]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestMovie.5.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestMovie.5.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="6">
 				<onclick>PreviousMenu</onclick>
@@ -729,6 +907,67 @@
 				<label2>$INFO[Window(home).Property(LatestMovie.6.Year),, • ]$INFO[Window(home).Property(LatestMovie.6.RunningTime),, $LOCALIZE[12391]]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestMovie.6.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestMovie.6.Title)) + !ControlGroup(9120).HasFocus(91202) + !ControlGroup(9120).HasFocus(91203) + !ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="1">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.1.Path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestMovie.1.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestMovie.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestMovie.1.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.1.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestMovie.1.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="2">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.2.Path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestMovie.2.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestMovie.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestMovie.2.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.2.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestMovie.2.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="3">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.3.Path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestMovie.3.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestMovie.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestMovie.3.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.3.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestMovie.3.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="4">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.4.Path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestMovie.4.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestMovie.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestMovie.4.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.4.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestMovie.4.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="5">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.5.Path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestMovie.5.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestMovie.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestMovie.5.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.5.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestMovie.5.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="6">
+				<onclick>PreviousMenu</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.6.Path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestMovie.6.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestMovie.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestMovie.6.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestMovie.6.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestMovie.6.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="7">
 				<onclick>PreviousMenu</onclick>
@@ -738,6 +977,7 @@
 				<label2>$INFO[Window(home).Property(LatestEpisode.1.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestEpisode.1.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestEpisode.1.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="8">
 				<onclick>PreviousMenu</onclick>
@@ -747,6 +987,7 @@
 				<label2>$INFO[Window(home).Property(LatestEpisode.2.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestEpisode.2.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestEpisode.2.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="9">
 				<onclick>PreviousMenu</onclick>
@@ -756,6 +997,7 @@
 				<label2>$INFO[Window(home).Property(LatestEpisode.3.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestEpisode.3.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestEpisode.3.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="10">
 				<onclick>PreviousMenu</onclick>
@@ -765,6 +1007,7 @@
 				<label2>$INFO[Window(home).Property(LatestEpisode.4.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestEpisode.4.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestEpisode.4.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="11">
 				<onclick>PreviousMenu</onclick>
@@ -774,6 +1017,7 @@
 				<label2>$INFO[Window(home).Property(LatestEpisode.5.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestEpisode.5.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestEpisode.5.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="12">
 				<onclick>PreviousMenu</onclick>
@@ -783,6 +1027,67 @@
 				<label2>$INFO[Window(home).Property(LatestEpisode.6.ShowTitle)]</label2>
 				<property name="rating">$INFO[Window(home).Property(LatestEpisode.6.Rating)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestEpisode.6.ShowTitle)) + ControlGroup(9120).HasFocus(91202)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="7">
+				<onclick>PreviousMenu</onclick>
+				<onclick>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.ShowTitle)] $INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.EpisodeSeason), • ]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestEpisode.1.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestEpisode.1.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="8">
+				<onclick>PreviousMenu</onclick>
+				<onclick>INFO[Window(Home).Property(Plexbmc.LatestEpisode.2.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.2.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.2.ShowTitle)] $INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.EpisodeSeason), • ]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.2.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestEpisode.2.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestEpisode.2.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="9">
+				<onclick>PreviousMenu</onclick>
+				<onclick>INFO[Window(Home).Property(Plexbmc.LatestEpisode.3.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.3.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.3.ShowTitle)] $INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.EpisodeSeason), • ]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.3.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestEpisode.3.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestEpisode.3.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="10">
+				<onclick>PreviousMenu</onclick>
+				<onclick>INFO[Window(Home).Property(Plexbmc.LatestEpisode.4.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.4.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.4.ShowTitle)] $INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.EpisodeSeason), • ]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.4.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestEpisode.4.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestEpisode.4.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="11">
+				<onclick>PreviousMenu</onclick>
+				<onclick>INFO[Window(Home).Property(Plexbmc.LatestEpisode.5.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.5.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.5.ShowTitle)] $INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.EpisodeSeason), • ]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.5.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestEpisode.5.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestEpisode.5.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="12">
+				<onclick>PreviousMenu</onclick>
+				<onclick>INFO[Window(Home).Property(Plexbmc.LatestEpisode.6.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.6.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.6.ShowTitle)] $INFO[Window(Home).Property(Plexbmc.LatestEpisode.1.EpisodeSeason), • ]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestEpisode.6.Rating)]</label2>
+				<property name="Play">PlayMedia($ESCINFO[Window(Home).Property(Plexbmc.LatestEpisode.6.Path)])</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestEpisode.6.Path))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="13">
 				<onclick>PlayList.Clear</onclick>
@@ -792,6 +1097,7 @@
 				<label2>$INFO[Window(home).Property(LatestAlbum.1.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestAlbum.1.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestAlbum.1.Title)) + ControlGroup(9120).HasFocus(91203)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="14">
 				<onclick>PlayList.Clear</onclick>
@@ -801,6 +1107,7 @@
 				<label2>$INFO[Window(home).Property(LatestAlbum.2.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestAlbum.2.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestAlbum.2.Title)) + ControlGroup(9120).HasFocus(91203)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="15">
 				<onclick>PlayList.Clear</onclick>
@@ -810,6 +1117,7 @@
 				<label2>$INFO[Window(home).Property(LatestAlbum.3.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestAlbum.3.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestAlbum.3.Title)) + ControlGroup(9120).HasFocus(91203)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="16">
 				<onclick>PlayList.Clear</onclick>
@@ -818,6 +1126,7 @@
 				<label>$INFO[Window(home).Property(LatestAlbum.4.Title)]</label>
 				<label2>$INFO[Window(home).Property(LatestAlbum.4.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestAlbum.4.Year)]</property>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 				<visible>!IsEmpty(Window(home).Property(LatestAlbum.4.Title)) + ControlGroup(9120).HasFocus(91203)</visible>
 			</item>
 			<item id="17">
@@ -828,6 +1137,7 @@
 				<label2>$INFO[Window(home).Property(LatestAlbum.5.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestAlbum.5.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestAlbum.5.Title)) + ControlGroup(9120).HasFocus(91203)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="18">
 				<onclick>PlayList.Clear</onclick>
@@ -837,6 +1147,73 @@
 				<label2>$INFO[Window(home).Property(LatestAlbum.6.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestAlbum.6.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestAlbum.6.Title)) + ControlGroup(9120).HasFocus(91203)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="13">
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PreviousMenu</onclick>
+				<onclick>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.1.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.1.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.1.Artist)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.1.Title)]</label2>
+				<property name="year">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.1.Year)]</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.1.Title))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="14">
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PreviousMenu</onclick>
+				<onclick>INFO[Window(Home).Property(Plexbmc.LatestAlbum.2.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.2.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.2.Artist)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.2.Title)]</label2>
+				<property name="year">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.2.Year)]</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.2.Title))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="15">
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PreviousMenu</onclick>
+				<onclick>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.3.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.3.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.3.Artist)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.3.Title)]</label2>
+				<property name="year">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.3.Year)]</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.3.Title))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="16">
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PreviousMenu</onclick>
+				<onclick>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.4.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.4.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.4.Artist)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.4.Title)]</label2>
+				<property name="year">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.4.Year)]</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.4.Title))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="17">
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PreviousMenu</onclick>
+				<onclick>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.5.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.5.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.5.Artist)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.5.Title)]</label2>
+				<property name="year">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.5.Year)]</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.5.Title))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
+			</item>
+			<item id="18">
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PreviousMenu</onclick>
+				<onclick>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.6.Path)]</onclick>
+				<thumb>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.6.LargeThumb)]</thumb>
+				<label>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.6.Artist)]</label>
+				<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.6.Title)]</label2>
+				<property name="year">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.6.Year)]</property>
+				<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.6.Title))</visible>
+				<visible>Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="19">
 				<onclick>PlayMedia($INFO[Window(home).Property(LatestSong.1.Path)])</onclick>
@@ -845,6 +1222,7 @@
 				<label2>$INFO[Window(home).Property(LatestSong.1.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestSong.1.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestSong.1.Title)) + ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="20">
 				<onclick>PlayMedia($INFO[Window(home).Property(LatestSong.2.Path)])</onclick>
@@ -853,6 +1231,7 @@
 				<label2>$INFO[Window(home).Property(LatestSong.2.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestSong.2.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestSong.2.Title)) + ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="21">
 				<onclick>PlayMedia($INFO[Window(home).Property(LatestSong.3.Path)])</onclick>
@@ -861,6 +1240,7 @@
 				<label2>$INFO[Window(home).Property(LatestSong.3.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestSong.3.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestSong.3.Title)) + ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="22">
 				<onclick>PlayMedia($INFO[Window(home).Property(LatestSong.4.Path)])</onclick>
@@ -869,6 +1249,7 @@
 				<label2>$INFO[Window(home).Property(LatestSong.4.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestSong.4.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestSong.4.Title)) + ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="23">
 				<onclick>PlayMedia($INFO[Window(home).Property(LatestSong.5.Path)])</onclick>
@@ -877,6 +1258,7 @@
 				<label2>$INFO[Window(home).Property(LatestSong.5.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestSong.5.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestSong.5.Title)) + ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 			<item id="24">
 				<onclick>PlayMedia($INFO[Window(home).Property(LatestSong.6.Path)])</onclick>
@@ -885,6 +1267,7 @@
 				<label2>$INFO[Window(home).Property(LatestSong.6.Artist)]</label2>
 				<property name="year">$INFO[Window(home).Property(LatestSong.6.Year)]</property>
 				<visible>!IsEmpty(Window(home).Property(LatestSong.6.Title)) + ControlGroup(9120).HasFocus(91204)</visible>
+				<visible>!Skin.HasSetting(plexbmc)</visible>
 			</item>
 		</content>
 	</include>

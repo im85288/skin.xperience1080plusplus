@@ -8,8 +8,8 @@
 		<control type="group" id="63">
 			<visible>!Window.IsActive(movieinformation) + !Window.IsActive(musicinformation) + !Window.IsActive(songinformation) + !Window.IsActive(addoninformation) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(fullscreenvideo) + !Window.IsActive(visualisation) + !Window.IsActive(13000) + !Window.IsActive(selectdialog) + !Window.IsActive(filebrowser) + !Window.IsActive(yesnodialog) + !Window.IsActive(progressdialog) + !Window.IsActive(virtualkeyboard) +
 				!Window.IsActive(contextmenu) + !Window.IsActive(numericinput) + !Window.IsActive(playercontrols) + !Window.IsActive(networksetup) + !Window.IsActive(mediasource) + !Window.IsActive(locksettings) + !Window.IsActive(contentsettings) + !Window.IsActive(visualisation) + !Window.IsActive(smartplaylisteditor) + !Window.IsActive(pictureinfo) + !Window.IsActive(visualisation) + !Window.IsActive(addonsettings) + !Window.IsActive(sliderdialog) + !Window.IsActive(textviewer) +
-				!Window.IsActive(peripherals) + !Window.IsActive(mediafilter) + !Window.IsActive(pvrguideinfo) + !Window.IsActive(pvrrecordinginfo) + !Window.IsActive(pvrtimersetting) + !Window.IsActive(pvrgroupmanager) + !Window.IsActive(pvrchannelmanager) + !Window.IsActive(pvrguidesearch) + !Window.IsActive(okdialog) + !Window.IsActive(filestackingdialog) + !Window.IsActive(1122) + !Window.IsActive(3020) + !Window.IsActive(3021) + !Window.IsActive(3022) + !Window.IsActive(3001) + !Window.IsActive(3002) +
-				!Window.IsActive(3003) + !Window.IsActive(3004) + !Window.IsActive(3005) + !Window.IsActive(3006)
+				!Window.IsActive(peripherals) + !Window.IsActive(mediafilter) + !Window.IsActive(pvrguideinfo) + !Window.IsActive(pvrrecordinginfo) + !Window.IsActive(pvrtimersetting) + !Window.IsActive(pvrgroupmanager) + !Window.IsActive(pvrchannelmanager) + !Window.IsActive(pvrguidesearch) + !Window.IsActive(okdialog) + !Window.IsActive(filestackingdialog) + !Window.IsActive(1122) + !Window.IsActive(3020) + !Window.IsActive(3021) + !Window.IsActive(3022) + !Window.IsActive(3025) + !Window.IsActive(3001) +
+				!Window.IsActive(3002) + !Window.IsActive(3003) + !Window.IsActive(3004) + !Window.IsActive(3005) + !Window.IsActive(3006)
 			</visible>
 			<control type="group">
 				<visible>!Skin.HasSetting(UseWhiteText)</visible>
@@ -250,8 +250,18 @@
 								<posy>10</posy>
 								<width>283</width>
 								<height>283</height>
-								<texture border="5">views/newgloss/tile-283.png</texture>
+								<texture border="7">views/newgloss/tile-283.png</texture>
 								<colordiffuse>mod-infotags-l</colordiffuse>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>10</posy>
+								<width>283</width>
+								<height>283</height>
+								<texture border="7">views/newgloss/tilerounded-283.png</texture>
+								<colordiffuse>mod-infotags-l</colordiffuse>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>10</posx>
@@ -259,6 +269,7 @@
 								<width>283</width>
 								<height>283</height>
 								<texture border="7">views/newgloss/tile.png</texture>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>10</posx>
@@ -281,6 +292,16 @@
 								<height>66</height>
 								<texture border="7">windows/home/tile-overlay-r.png</texture>
 								<colordiffuse>99FFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>233</posy>
+								<width>283</width>
+								<height>66</height>
+								<texture>windows/home/tilerounded-fo.png</texture>
+								<colordiffuse>black</colordiffuse>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="label">
 								<posx>10</posx>
@@ -305,6 +326,16 @@
 								<height>283</height>
 								<texture border="5">views/newgloss/tile-283.png</texture>
 								<colordiffuse>mod-infotags-l</colordiffuse>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>10</posy>
+								<width>283</width>
+								<height>283</height>
+								<texture border="5">views/newgloss/tilerounded-283.png</texture>
+								<colordiffuse>mod-infotags-l</colordiffuse>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>10</posx>
@@ -312,6 +343,7 @@
 								<width>283</width>
 								<height>283</height>
 								<texture border="7">views/newgloss/tile.png</texture>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>10</posx>
@@ -334,6 +366,16 @@
 								<height>66</height>
 								<texture border="7">windows/home/tile-overlay-r.png</texture>
 								<colordiffuse>99FFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>233</posy>
+								<width>283</width>
+								<height>66</height>
+								<texture>windows/home/tilerounded-fo.png</texture>
+								<colordiffuse>black</colordiffuse>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="image">
 								<posx>0</posx>
@@ -341,6 +383,7 @@
 								<width>303</width>
 								<height>303</height>
 								<texture border="25">views/newgloss/border-fo.png</texture>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="label">
 								<posx>10</posx>
@@ -353,6 +396,20 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textoffsetx>20</textoffsetx>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>227</posy>
+								<width>283</width>
+								<height>66</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Font-Condensed-S33</font>
+								<textcolor>blue</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textoffsetx>20</textoffsetx>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 						</control>
 					</focusedlayout>

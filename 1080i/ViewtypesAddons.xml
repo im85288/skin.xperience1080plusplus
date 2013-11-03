@@ -55,6 +55,16 @@
 						<width>1420</width>
 						<height>101</height>
 						<texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+						<visible>!Skin.HasSetting(DarkerPanels)</visible>
+					</control>
+					<control type="image">
+						<description>List separator</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1420</width>
+						<height>101</height>
+						<texture border="90,3,90,3">views/list/other/separator3.png</texture>
+						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="label">
 						<description>Label</description>
@@ -111,6 +121,16 @@
 						<width>1420</width>
 						<height>101</height>
 						<texture border="90,3,90,3">views/list/other/separator-l.png</texture>
+						<visible>!Skin.HasSetting(DarkerPanels)</visible>
+					</control>
+					<control type="image">
+						<description>List separator</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1420</width>
+						<height>101</height>
+						<texture border="90,3,90,3">views/list/other/separator3.png</texture>
+						<visible>Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
