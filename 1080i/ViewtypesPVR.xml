@@ -2922,9 +2922,9 @@
 							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
-							<posx>20</posx>
+							<posx>42</posx>
 							<posy>10</posy>
-							<width>98</width>
+							<width>78</width>
 							<height>55</height>
 							<texture background="true">$VAR[PvrRecordingsIconSmall]</texture>
 							<aspectratio>scale</aspectratio>

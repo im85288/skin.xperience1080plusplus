@@ -462,8 +462,8 @@
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
 	<variable name="PvrRecordingsIcon">
-		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
-		<value>$INFO[ListItem.ActualIcon,views/fallbacks/,/landscape.png]</value>
+		<value condition="!IsEmpty(Container(13).ListItem.Thumb)">$INFO[Container(13).ListItem.Thumb]</value>
+		<value>$INFO[Container(13).ListItem.ActualIcon,views/fallbacks/,/landscape.png]</value>
 	</variable>
 	<variable name="PvrRecordingsIconSmall">
 		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
