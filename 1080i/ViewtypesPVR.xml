@@ -3,7 +3,7 @@
 		<control type="group" id="110">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
-			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0" end="495" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 			<include>listEndAnimation</include>
 			<control type="group">
 				<visible>Control.IsVisible(11) + !Window.IsActive(favourites)</visible>
@@ -20,24 +20,14 @@
 				<include>PVRVisibleHiddenAnimation</include>
 				<control type="group">
 					<description>Channel Preview + Info</description>
-					<posx>1184</posx>
-					<posy>218</posy>
+					<posx>1200</posx>
+					<posy>173</posy>
 					<control type="image">
-						<posx>13</posx>
-						<posy>-20</posy>
-						<height>716</height>
+						<posx>8</posx>
+						<posy>-18</posy>
+						<height>842</height>
 						<width>590</width>
-						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<visible>!Skin.HasSetting(DarkerPanels)</visible>
-					</control>
-					<control type="image">
-						<posx>13</posx>
-						<posy>-20</posy>
-						<height>716</height>
-						<width>590</width>
-						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-						<visible>Skin.HasSetting(DarkerPanels)</visible>
+						<texture border="4">views/list/panel/solidblackpanel.png</texture>
 					</control>
 					<control type="label">
 						<posx>50</posx>
@@ -45,7 +35,7 @@
 						<width>516</width>
 						<font>Font-Condensed-S38</font>
 						<label>$INFO[Container(11).ListItem.Title]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 						<scroll>true</scroll>
 						<scrollspeed>30</scrollspeed>
 					</control>
@@ -57,10 +47,10 @@
 							<posx>50</posx>
 							<posy>82</posy>
 							<width>516</width>
-							<height>416</height>
+							<height>516</height>
 							<info>Container(11).ListItem.Plot</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<autoscroll delay="6000" time="3000" repeat="6000">!Control.HasFocus(71)</autoscroll>
 							<font>Font-Condensed-S34</font>
@@ -71,10 +61,10 @@
 							<posx>50</posx>
 							<posy>82</posy>
 							<width>516</width>
-							<height>416</height>
+							<height>516</height>
 							<info>Container(11).ListItem.PlotOutline</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<autoscroll delay="6000" time="3000" repeat="6000">!Control.HasFocus(71)</autoscroll>
 							<font>Font-Condensed-S34</font>
@@ -85,10 +75,10 @@
 							<posx>50</posx>
 							<posy>390</posy>
 							<width>516</width>
-							<height>122</height>
+							<height>222</height>
 							<info>Container(11).ListItem.Plot</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<autoscroll delay="6000" time="3000" repeat="6000">!Control.HasFocus(71)</autoscroll>
 							<font>Font-Condensed-S28</font>
@@ -99,10 +89,10 @@
 							<posx>50</posx>
 							<posy>390</posy>
 							<width>516</width>
-							<height>122</height>
+							<height>222</height>
 							<info>Container(11).ListItem.PlotOutline</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<autoscroll delay="6000" time="3000" repeat="6000">!Control.HasFocus(71)</autoscroll>
 							<font>Font-Condensed-S28</font>
@@ -142,7 +132,7 @@
 						<visible>Container(11).ListItem.HasEpg</visible>
 						<control type="progress">
 							<posx>49</posx>
-							<posy>525</posy>
+							<posy>625</posy>
 							<width>518</width>
 							<height>19</height>
 							<reveal>true</reveal>
@@ -151,24 +141,24 @@
 							<midtexture>windows/pvr/progress-mid-wide.png</midtexture>
 							<righttexture>windows/pvr/progress-leftright.png</righttexture>
 							<info>Container(11).ListItem.Progress</info>
-							<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars]</colordiffuse>
+							<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>50</posx>
-							<posy>566</posy>
+							<posy>666</posy>
 							<width>516</width>
 							<font>Font-Condensed-S30</font>
 							<label>$INFO[Container(11).ListItem.Genre]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
 							<posx>50</posx>
-							<posy>610</posy>
+							<posy>710</posy>
 							<width>516</width>
 							<font>Font-Condensed-S30</font>
 							<label>$INFO[Container(11).ListItem.NextTitle,[COLOR=darkgrey]$LOCALIZE[19031] [/COLOR],]$INFO[Container(11).ListItem.NextStartTime, [COLOR=darkgrey]at [/COLOR],]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<scroll>true</scroll>
 							<scollspeed>45</scollspeed>
 						</control>
@@ -229,27 +219,25 @@
 					<texture>windows/home/item-shadow.png</texture>
 				</control>
 				<control type="image">
-					<posx>68</posx>
-					<posy>198</posy>
-					<height>716</height>
-					<width>1130</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+					<description>Shadow</description>
+					<posx>50</posx>
+					<posy>870</posy>
+					<width>1820</width>
+					<height>150</height>
+					<texture>windows/home/item-shadow.png</texture>
 				</control>
 				<control type="image">
-					<posx>68</posx>
-					<posy>198</posy>
-					<height>716</height>
-					<width>1130</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-					<visible>Skin.HasSetting(DarkerPanels)</visible>
+					<posx>33</posx>
+					<posy>155</posy>
+					<width>1165</width>
+					<height>842</height>
+					<texture border="4">views/list/panel/solidblackpanel.png</texture>
 				</control>
 				<control type="list" id="11">
-					<posx>135</posx>
-					<posy>218</posy>
-					<width>1022</width>
-					<height>672</height>
+					<posx>50</posx>
+					<posy>173</posy>
+					<width>1100</width>
+					<height>770</height>
 					<pagecontrol>70</pagecontrol>
 					<onleft>9001</onleft>
 					<onright>70</onright>
@@ -262,14 +250,14 @@
 						<control type="image">
 							<posx>50</posx>
 							<posy>0</posy>
-							<width>1022</width>
+							<width>1100</width>
 							<height>97</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="image">
 							<posx>50</posx>
 							<posy>6</posy>
-							<width>1018</width>
+							<width>1100</width>
 							<height>80</height>
 							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
@@ -293,8 +281,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -307,8 +295,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
@@ -323,7 +311,7 @@
 							<midtexture>windows/pvr/progress-mid.png</midtexture>
 							<righttexture>windows/pvr/progress-leftright.png</righttexture>
 							<info>ListItem.Progress</info>
-							<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars]</colordiffuse>
+							<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</colordiffuse>
 							<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 						</control>
 						<control type="progress">
@@ -349,8 +337,8 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 						</control>
@@ -377,8 +365,8 @@
 							<font>Font-Condensed-S28</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 						</control>
@@ -405,8 +393,8 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.HasEpg</visible>
 						</control>
@@ -419,8 +407,8 @@
 							<font>Font-Condensed-S30</font>
 							<align>right</align>
 							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.IsPlaying</visible>
 						</control>
@@ -447,8 +435,8 @@
 							<font>Font-Condensed-S30</font>
 							<align>right</align>
 							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 						</control>
@@ -483,34 +471,24 @@
 						<control type="image">
 							<posx>50</posx>
 							<posy>0</posy>
-							<width>1022</width>
+							<width>1100</width>
 							<height>97</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="image">
 							<posx>47</posx>
 							<posy>6</posy>
-							<width>1018</width>
-							<height>80</height>
-							<texture border="150,1,150,1">views/other/black-focus.png</texture>
-							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
-							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!ListItem.IsPlaying + !Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="image">
-							<posx>47</posx>
-							<posy>6</posy>
-							<width>1018</width>
+							<width>1100</width>
 							<height>80</height>
 							<texture border="150,1,150,1">views/other/white-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!ListItem.IsPlaying + Skin.HasSetting(DarkerPanels)</visible>
+							<visible>!ListItem.IsPlaying</visible>
 						</control>
 						<control type="image">
 							<posx>50</posx>
 							<posy>6</posy>
-							<width>1018</width>
+							<width>1100</width>
 							<height>80</height>
 							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
@@ -534,8 +512,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -548,8 +526,8 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.IsPlaying</visible>
 						</control>
@@ -569,7 +547,7 @@
 								<midtexture>windows/pvr/progress-mid.png</midtexture>
 								<righttexture>windows/pvr/progress-leftright.png</righttexture>
 								<info>ListItem.Progress</info>
-								<colordiffuse>$VAR[PVRFocusedTextColourVars]</colordiffuse>
+								<colordiffuse>$VAR[PVRFocusedTextColourVars2]</colordiffuse>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
 							<control type="progress">
@@ -595,8 +573,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -623,8 +601,8 @@
 								<font>Font-Condensed-S28-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -665,8 +643,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasEpg + !ListItem.IsPlaying</visible>
 							</control>
@@ -679,8 +657,8 @@
 								<font>Font-Condensed-S30-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasTimer + !ListItem.IsRecording + !ListItem.IsPlaying</visible>
 							</control>
@@ -707,8 +685,8 @@
 								<font>Font-Condensed-S30-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 							</control>
@@ -778,7 +756,7 @@
 		<control type="group" id="120">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
-			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0" end="495" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 			<include>listEndAnimation</include>
 			<control type="group">
 				<visible>Control.IsVisible(12) + !Window.IsActive(favourites)</visible>
@@ -796,23 +774,13 @@
 				<control type="group">
 					<description>Channel Preview + Info</description>
 					<posx>1184</posx>
-					<posy>218</posy>
+					<posy>173</posy>
 					<control type="image">
 						<posx>8</posx>
-						<posy>-8</posy>
-						<height>716</height>
-						<width>593</width>
-						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<visible>!Skin.HasSetting(DarkerPanels)</visible>
-					</control>
-					<control type="image">
-						<posx>8</posx>
-						<posy>-8</posy>
-						<height>716</height>
-						<width>593</width>
-						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-						<visible>Skin.HasSetting(DarkerPanels)</visible>
+						<posy>-18</posy>
+						<height>842</height>
+						<width>590</width>
+						<texture border="4">views/list/panel/solidblackpanel.png</texture>
 					</control>
 					<control type="label">
 						<posx>40</posx>
@@ -820,7 +788,7 @@
 						<width>516</width>
 						<font>Font-Condensed-S40</font>
 						<label>$INFO[Container(12).ListItem.Title]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="group">
@@ -831,10 +799,10 @@
 							<posx>40</posx>
 							<posy>82</posy>
 							<width>516</width>
-							<height>416</height>
+							<height>516</height>
 							<info>Container(12).ListItem.Plot</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 							<font>Font-Condensed-S34</font>
@@ -845,10 +813,10 @@
 							<posx>40</posx>
 							<posy>82</posy>
 							<width>516</width>
-							<height>416</height>
+							<height>516</height>
 							<info>Container(12).ListItem.PlotOutline</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 							<font>Font-Condensed-S34</font>
@@ -859,10 +827,10 @@
 							<posx>40</posx>
 							<posy>390</posy>
 							<width>516</width>
-							<height>122</height>
+							<height>222</height>
 							<info>Container(12).ListItem.Plot</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 							<font>Font-Condensed-S28</font>
@@ -873,10 +841,10 @@
 							<posx>40</posx>
 							<posy>390</posy>
 							<width>516</width>
-							<height>122</height>
+							<height>222</height>
 							<info>Container(12).ListItem.PlotOutline</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 							<font>Font-Condensed-S28</font>
@@ -897,7 +865,7 @@
 						<visible>Container(12).ListItem.HasEpg</visible>
 						<control type="progress">
 							<posx>39</posx>
-							<posy>526</posy>
+							<posy>626</posy>
 							<width>518</width>
 							<height>19</height>
 							<reveal>true</reveal>
@@ -906,24 +874,24 @@
 							<midtexture>windows/pvr/progress-mid-wide.png</midtexture>
 							<righttexture>windows/pvr/progress-leftright.png</righttexture>
 							<info>Container(12).ListItem.Progress</info>
-							<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars]</colordiffuse>
+							<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</colordiffuse>
 						</control>
 						<control type="label">
 							<posx>40</posx>
-							<posy>566</posy>
+							<posy>666</posy>
 							<width>516</width>
 							<font>Font-Condensed-S30</font>
 							<label>$INFO[Container(12).ListItem.Genre]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
 							<posx>40</posx>
-							<posy>610</posy>
+							<posy>710</posy>
 							<width>516</width>
 							<font>Font-Condensed-S30</font>
 							<label>$INFO[Container(12).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(12).ListItem.NextStartTime, (,)]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -956,7 +924,7 @@
 					<width>200</width>
 					<height>30</height>
 					<font>Font-Condensed-S30</font>
-					<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+					<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$VAR[TVNumItemsLabel]</label>
@@ -964,33 +932,23 @@
 				<control type="image">
 					<description>Shadow</description>
 					<posx>50</posx>
-					<posy>883</posy>
+					<posy>870</posy>
 					<width>1820</width>
 					<height>150</height>
 					<texture>windows/home/item-shadow.png</texture>
 				</control>
 				<control type="image">
-					<posx>118</posx>
-					<posy>210</posy>
-					<height>716</height>
-					<width>1060</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<visible>!Skin.HasSetting(DarkerPanels)</visible>
-				</control>
-				<control type="image">
-					<posx>118</posx>
-					<posy>210</posy>
-					<height>716</height>
-					<width>1060</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-					<visible>Skin.HasSetting(DarkerPanels)</visible>
+					<posx>33</posx>
+					<posy>155</posy>
+					<width>1145</width>
+					<height>842</height>
+					<texture border="4">views/list/panel/solidblackpanel.png</texture>
 				</control>
 				<control type="list" id="12">
-					<posx>130</posx>
-					<posy>218</posy>
-					<width>1022</width>
-					<height>672</height>
+					<posx>50</posx>
+					<posy>173</posy>
+					<width>1100</width>
+					<height>800</height>
 					<pagecontrol>70</pagecontrol>
 					<onleft>9001</onleft>
 					<onright>70</onright>
@@ -1003,14 +961,14 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1022</width>
+							<width>1110</width>
 							<height>97</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="image">
 							<posx>0</posx>
 							<posy>6</posy>
-							<width>1018</width>
+							<width>1140</width>
 							<height>80</height>
 							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
@@ -1036,7 +994,7 @@
 							<midtexture>windows/pvr/progress-mid.png</midtexture>
 							<righttexture>windows/pvr/progress-leftright.png</righttexture>
 							<info>ListItem.Progress</info>
-							<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars]</colordiffuse>
+							<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</colordiffuse>
 							<visible>ListItem.HasEpg</visible>
 						</control>
 						<control type="label">
@@ -1048,8 +1006,8 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg</visible>
 						</control>
@@ -1062,8 +1020,8 @@
 							<font>Font-Condensed-S28-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg</visible>
 						</control>
@@ -1090,8 +1048,8 @@
 							<font>Font-Condensed-S75</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
@@ -1104,8 +1062,8 @@
 							<font>Font-Condensed-S75</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelNumber]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 						</control>
@@ -1148,34 +1106,24 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1022</width>
+							<width>1100</width>
 							<height>97</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>6</posy>
-							<width>1018</width>
-							<height>80</height>
-							<texture border="150,1,150,1">views/other/black-focus.png</texture>
-							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
-							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!ListItem.IsPlaying + !Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="image">
-							<posx>-3</posx>
-							<posy>6</posy>
-							<width>1018</width>
+							<width>1100</width>
 							<height>80</height>
 							<texture border="150,1,150,1">views/other/white-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!ListItem.IsPlaying + Skin.HasSetting(DarkerPanels)</visible>
+							<visible>!ListItem.IsPlaying</visible>
 						</control>
 						<control type="image">
 							<posx>-3</posx>
 							<posy>6</posy>
-							<width>1018</width>
+							<width>1100</width>
 							<height>80</height>
 							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
@@ -1206,7 +1154,7 @@
 								<midtexture>windows/pvr/progress-mid.png</midtexture>
 								<righttexture>windows/pvr/progress-leftright.png</righttexture>
 								<info>ListItem.Progress</info>
-								<colordiffuse>$VAR[PVRFocusedTextColourVars]</colordiffuse>
+								<colordiffuse>$VAR[PVRFocusedTextColourVars2]</colordiffuse>
 								<visible>ListItem.HasEpg</visible>
 							</control>
 							<control type="label">
@@ -1218,8 +1166,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg</visible>
 							</control>
@@ -1232,8 +1180,8 @@
 								<font>Font-Condensed-S28-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg</visible>
 							</control>
@@ -1246,8 +1194,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasEpg</visible>
 							</control>
@@ -1260,8 +1208,8 @@
 								<font>Font-Condensed-S75</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasTimer + !ListItem.IsRecording</visible>
 							</control>
@@ -1274,8 +1222,8 @@
 								<font>Font-Condensed-S75</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelNumber]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
 							</control>
@@ -1353,7 +1301,7 @@
 		<control type="group" id="100">
 			<description>TV Guide Timeline</description>
 			<include>OptionsShutdownAnimation</include>
-			<animation effect="slide" start="0" end="478" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0" end="495" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 			<include>listEndAnimation</include>
 			<visible>Control.IsVisible(10) + !Window.IsActive(favourites)</visible>
 			<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
@@ -1416,7 +1364,7 @@
 						<posy>0</posy>
 						<width>500</width>
 						<height>81</height>
-						<texture border="90,3,90,3">views/list/other/separator.png</texture>
+						<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1507,7 +1455,7 @@
 						<posy>0</posy>
 						<width>500</width>
 						<height>81</height>
-						<texture border="90,3,90,3">views/list/other/separator.png</texture>
+						<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1718,8 +1666,8 @@
 						<height>78</height>
 						<font>Font-Condensed-S34-B</font>
 						<aligny>center</aligny>
-						<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-						<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+						<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+						<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 						<shadowcolor>44000000</shadowcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
@@ -1734,8 +1682,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<aligny>center</aligny>
 						<textoffsetx>11</textoffsetx>
-						<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-						<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+						<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+						<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 						<shadowcolor>22000000</shadowcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
@@ -2695,41 +2643,31 @@
 		<control type="group" id="130">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
-			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0" end="495" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 			<include>listEndAnimation</include>
 			<control type="group">
 				<visible>Control.IsVisible(13) + !Window.IsActive(favourites)</visible>
 				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
 				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
-					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="175" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" delay="175" />
 				</animation>
 				<include>PVRVisibleHiddenAnimation</include>
 				<control type="group">
 					<description>Channel Preview + Info</description>
-					<posx>1184</posx>
-					<posy>277</posy>
+					<posx>1210</posx>
+					<posy>173</posy>
 					<control type="image">
 						<posx>13</posx>
 						<posy>-18</posy>
-						<height>634</height>
+						<height>842</height>
 						<width>590</width>
-						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<visible>!Skin.HasSetting(DarkerPanels)</visible>
-					</control>
-					<control type="image">
-						<posx>13</posx>
-						<posy>-18</posy>
-						<height>634</height>
-						<width>590</width>
-						<texture border="35">views/newgloss/whitepanel-15.png</texture>
-						<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-						<visible>Skin.HasSetting(DarkerPanels)</visible>
+						<texture border="4">views/list/panel/solidblackpanel.png</texture>
 					</control>
 					<control type="label">
 						<posx>40</posx>
@@ -2737,7 +2675,7 @@
 						<width>516</width>
 						<font>Font-Condensed-S40</font>
 						<label>$INFO[Container(13).ListItem.Title]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="textbox">
@@ -2745,10 +2683,10 @@
 						<posx>40</posx>
 						<posy>380</posy>
 						<width>516</width>
-						<height>150</height>
+						<height>250</height>
 						<info>Container(13).ListItem.Plot</info>
 						<align>justify</align>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 						<pagecontrol>71</pagecontrol>
 						<autoscroll delay="13000" time="3000" repeat="13000">!Control.HasFocus(71)</autoscroll>
 						<font>Font-Condensed-S28</font>
@@ -2764,11 +2702,11 @@
 					</control>
 					<control type="label">
 						<posx>40</posx>
-						<posy>543</posy>
+						<posy>643</posy>
 						<width>516</width>
 						<font>Font-Condensed-S30</font>
 						<label>$INFO[Container(13).ListItem.Genre]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 						<scroll>false</scroll>
 					</control>
 				</control>
@@ -2778,7 +2716,7 @@
 				<animation type="WindowOpen">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-					<effect type="zoom" start="90" end="100" center="661,438" tween="cubic" easing="out" time="400" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
 				</animation>
 				<animation type="WindowClose">
 					<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
@@ -2803,27 +2741,17 @@
 					<texture>windows/home/item-shadow.png</texture>
 				</control>
 				<control type="image">
-					<posx>140</posx>
-					<posy>257</posy>
-					<height>640</height>
-					<width>1065</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<visible>!Skin.HasSetting(DarkerPanels)</visible>
-				</control>
-				<control type="image">
-					<posx>140</posx>
-					<posy>257</posy>
-					<height>640</height>
-					<width>1065</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-					<visible>Skin.HasSetting(DarkerPanels)</visible>
+					<posx>33</posx>
+					<posy>155</posy>
+					<width>1172</width>
+					<height>842</height>
+					<texture border="4">views/list/panel/solidblackpanel.png</texture>
 				</control>
 				<control type="list" id="13">
-					<posx>140</posx>
-					<posy>277</posy>
-					<width>1022</width>
-					<height>600</height>
+					<posx>50</posx>
+					<posy>175</posy>
+					<width>1122</width>
+					<height>820</height>
 					<pagecontrol>70</pagecontrol>
 					<onleft>9001</onleft>
 					<onright>70</onright>
@@ -2836,9 +2764,9 @@
 						<control type="image">
 							<posx>30</posx>
 							<posy>0</posy>
-							<width>990</width>
+							<width>1122</width>
 							<height>76</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="image">
 							<posx>42</posx>
@@ -2857,8 +2785,8 @@
 							<font>Font-Condensed-S33</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -2870,8 +2798,8 @@
 							<font>Font-Condensed-S31</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Date]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="image">
@@ -2906,20 +2834,9 @@
 							<posy>2</posy>
 							<width>990</width>
 							<height>68</height>
-							<texture border="150,1,150,1">views/other/black-focus.png</texture>
-							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
-							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="image">
-							<posx>27</posx>
-							<posy>2</posy>
-							<width>990</width>
-							<height>68</height>
 							<texture border="150,1,150,1">views/other/white-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="image">
 							<posx>42</posx>
@@ -2943,8 +2860,8 @@
 								<font>Font-Condensed-S33-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>Control.HasFocus(13)</visible>
 							</control>
@@ -2957,8 +2874,8 @@
 								<font>Font-Condensed-S33-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!Control.HasFocus(13)</visible>
 							</control>
@@ -2971,8 +2888,8 @@
 								<font>Font-Condensed-S31-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.Date]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>Control.HasFocus(13)</visible>
 							</control>
@@ -2985,8 +2902,8 @@
 								<font>Font-Condensed-S31-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.Date]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!Control.HasFocus(13)</visible>
 							</control>
@@ -3058,50 +2975,100 @@
 		<control type="group" id="140">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
-			<animation effect="slide" start="0" end="278" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0" end="495" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 			<include>listEndAnimation</include>
 			<control type="group">
 				<visible>Control.IsVisible(14) + !Window.IsActive(favourites)</visible>
 				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="600" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-					<effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" />
 				</animation>
 				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-					<effect type="zoom" start="90" end="100" center="960,438" tween="cubic" easing="out" time="400" delay="105" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
 				<include>PVRVisibleHiddenAnimation</include>
 				<control type="image">
 					<description>Shadow</description>
-					<posx>200</posx>
+					<posx>50</posx>
 					<posy>870</posy>
-					<width>1520</width>
+					<width>1820</width>
 					<height>150</height>
 					<texture>windows/home/item-shadow.png</texture>
 				</control>
 				<control type="image">
-					<posx>287</posx>
-					<posy>257</posy>
-					<height>716</height>
-					<width>1344</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+					<posx>33</posx>
+					<posy>155</posy>
+					<width>1860</width>
+					<height>842</height>
+					<texture border="4">views/list/panel/solidblackpanel.png</texture>
+				</control>
+				<control type="label">
+					<description>Channel header label</description>
+					<posx>65</posx>
+					<posy>175</posy>
+					<width>220</width>
+					<height>20</height>
+					<font>Font-Condensed-S35</font>
+					<textcolor>eewhite</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>19029</label>
+				</control>
+				<control type="label">
+					<description>Title header label</description>
+					<posx>270</posx>
+					<posy>175</posy>
+					<width>300</width>
+					<height>20</height>
+					<font>Font-Condensed-S35</font>
+					<textcolor>eewhite</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>369</label>
+				</control>
+				<control type="label">
+					<description>Schedule Time header label</description>
+					<posx>800</posx>
+					<posy>175</posy>
+					<width>300</width>
+					<height>20</height>
+					<font>Font-Condensed-S35</font>
+					<textcolor>eewhite</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Scheduled Time</label>
+				</control>
+				<control type="label">
+					<description>Status header label</description>
+					<posx>1635</posx>
+					<posy>175</posy>
+					<width>150</width>
+					<height>20</height>
+					<font>Font-Condensed-S35</font>
+					<textcolor>eewhite</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>126</label>
 				</control>
 				<control type="image">
-					<posx>287</posx>
-					<posy>257</posy>
-					<height>716</height>
-					<width>1344</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-					<visible>Skin.HasSetting(DarkerPanels)</visible>
+					<description>separator image</description>
+					<posx>50</posx>
+					<posy>205</posy>
+					<width>1750</width>
+					<height>1</height>
+					<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 				</control>
 				<control type="list" id="14">
-					<posx>300</posx>
-					<posy>277</posy>
-					<width>1320</width>
+					<posx>50</posx>
+					<posy>215</posy>
+					<width>1750</width>
 					<height>600</height>
 					<pagecontrol>70</pagecontrol>
 					<onleft>9001</onleft>
@@ -3115,45 +3082,62 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1320</width>
+							<width>1750</width>
 							<height>76</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
-						</control>
-						<control type="label">
-							<description>Title</description>
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>1210</width>
-							<height>74</height>
-							<font>Font-Condensed-S35</font>
-							<align>left</align>
-							<label>$INFO[ListItem.Date] [COLOR=blue]$INFO[ListItem.Label][/COLOR]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
-							<scroll>false</scroll>
-						</control>
-						<control type="label">
-							<description>Label</description>
-							<posx>1230</posx>
-							<posy>0</posy>
-							<width>925</width>
-							<height>74</height>
-							<font>Font-Condensed-S35</font>
-							<align>right</align>
-							<label>$INFO[ListItem.ChannelName]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
-							<scroll>false</scroll>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="image">
-							<posx>1214</posx>
+							<posx>10</posx>
+							<posy>8</posy>
+							<width>70</width>
+							<height>60</height>
+							<texture border="1">$INFO[ListItem.Icon]</texture>
+							<visible>!IsEmpty(ListItem.Date)</visible>
+						</control>
+						<control type="label">
+							<posx>85</posx>
+							<posy>15</posy>
+							<width>220</width>
+							<height>40</height>
+							<font>Font-Condensed-S35</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.ChannelName</info>
+						</control>
+						<control type="label">
+							<posx>345</posx>
+							<posy>15</posy>
+							<width>430</width>
+							<height>40</height>
+							<font>Font-Condensed-S35</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="label">
+							<posx>805</posx>
+							<posy>15</posy>
+							<width>800</width>
+							<height>40</height>
+							<font>Font-Condensed-S35</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.Date</info>
+						</control>
+						<!-- <control type="label"> <description>Title</description> <posx>10</posx> <posy>0</posy> <width>1210</width> <height>74</height> <font>Font-Condensed-S35</font> <align>left</align> <label>$INFO[ListItem.Date] [COLOR=blue]$INFO[ListItem.Label][/COLOR]</label> <textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor> <selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor> <scroll>false</scroll> </control> <control type="label"> <description>Label</description> 
+							<posx>1630</posx> <posy>0</posy> <width>925</width> <height>74</height> <font>Font-Condensed-S35</font> <align>right</align> <label>$INFO[ListItem.ChannelName]</label> <textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor> <selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor> <scroll>false</scroll> </control> -->
+						<control type="image">
+							<posx>1614</posx>
 							<posy>0</posy>
 							<width>120</width>
 							<height>75</height>
 							<texture>$VAR[TVTimerRadioButtonTexture]</texture>
 						</control>
 						<control type="image">
-							<posx>1291</posx>
+							<posx>1691</posx>
 							<posy>-10</posy>
 							<width>39</width>
 							<height>39</height>
@@ -3165,86 +3149,78 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1320</width>
+							<width>1750</width>
 							<height>76</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="image">
 							<posx>7</posx>
 							<posy>2</posy>
-							<width>1305</width>
-							<height>68</height>
-							<texture border="150,1,150,1">views/other/black-focus.png</texture>
-							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
-							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="image">
-							<posx>7</posx>
-							<posy>2</posy>
-							<width>1305</width>
+							<width>1750</width>
 							<height>68</height>
 							<texture border="150,1,150,1">views/other/white-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 						<control type="group">
 							<animation type="Focus" condition="Container(14).OnNext | Container(14).OnPrevious" reversible="false">
 								<effect type="fade" start="64" end="100" time="500" tween="sine" easing="inout" />
 							</animation>
 							<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(14)">Conditional</animation>
-							<control type="label">
-								<description>Title</description>
+							<control type="image">
 								<posx>10</posx>
-								<posy>0</posy>
-								<width>1210</width>
-								<height>74</height>
+								<posy>8</posy>
+								<width>70</width>
+								<height>60</height>
+								<texture border="1">$INFO[ListItem.Icon]</texture>
+								<visible>!IsEmpty(ListItem.Date)</visible>
+							</control>
+							<control type="label">
+								<posx>85</posx>
+								<posy>15</posy>
+								<width>220</width>
+								<height>40</height>
 								<font>Font-Condensed-S35</font>
 								<align>left</align>
-								<label>$INFO[ListItem.Date] [COLOR=blue]$INFO[ListItem.Label][/COLOR]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
-								<scroll>false</scroll>
+								<aligny>center</aligny>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
+								<info>ListItem.ChannelName</info>
 							</control>
 							<control type="label">
-								<description>Label</description>
-								<posx>1230</posx>
-								<posy>0</posy>
-								<width>925</width>
-								<height>74</height>
+								<posx>345</posx>
+								<posy>15</posy>
+								<width>430</width>
+								<height>40</height>
 								<font>Font-Condensed-S35</font>
-								<align>right</align>
-								<label>$INFO[ListItem.ChannelName]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
-								<scroll>false</scroll>
-								<visible>Control.HasFocus(14)</visible>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
+								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
-								<description>Label</description>
-								<posx>1230</posx>
-								<posy>0</posy>
-								<width>925</width>
-								<height>74</height>
+								<posx>805</posx>
+								<posy>15</posy>
+								<width>800</width>
+								<height>40</height>
 								<font>Font-Condensed-S35</font>
-								<align>right</align>
-								<label>$INFO[ListItem.ChannelName]</label>
-								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
-								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
-								<scroll>false</scroll>
-								<visible>!Control.HasFocus(14)</visible>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
+								<info>ListItem.Date</info>
 							</control>
 						</control>
 						<control type="image">
-							<posx>1214</posx>
+							<posx>1614</posx>
 							<posy>0</posy>
 							<width>120</width>
 							<height>75</height>
 							<texture>$VAR[TVTimerRadioButtonTexture]</texture>
 						</control>
 						<control type="image">
-							<posx>1291</posx>
+							<posx>1691</posx>
 							<posy>-10</posy>
 							<width>39</width>
 							<height>39</height>
@@ -3255,7 +3231,7 @@
 				</control>
 				<control type="scrollbar" id="70">
 					<description>Scrollbar</description>
-					<posx>1614</posx>
+					<posx>1814</posx>
 					<posy>277</posy>
 					<width>6</width>
 					<height>600</height>
@@ -3268,6 +3244,36 @@
 					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772) + !Control.HasFocus(70)">Conditional</animation>
 					<visible>Control.IsVisible(14)</visible>
 				</control>
+				<control type="image">
+					<description>separator image</description>
+					<posx>50</posx>
+					<posy>932</posy>
+					<width>1750</width>
+					<height>1</height>
+					<texture border="90,3,90,3">views/list/other/separator3.png</texture>
+				</control>
+				<control type="image">
+					<posx>60</posx>
+					<posy>935</posy>
+					<width>70</width>
+					<height>60</height>
+					<texture border="1">$INFO[Pvr.NextRecordingChannelIcon]</texture>
+					<visible>PVR.HasTimer</visible>
+				</control>
+				<control type="label">
+					<description>Next timer date</description>
+					<posx>135</posx>
+					<posy>950</posy>
+					<width>1010</width>
+					<height>30</height>
+					<font>Font-Condensed-S35</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>true</scroll>
+					<textcolor>eewhite</textcolor>
+					<label>$INFO[PVR.NextTimer]</label>
+					<visible>PVR.HasTimer</visible>
+				</control>
 			</control>
 		</control>
 	</include>
@@ -3275,51 +3281,41 @@
 		<control type="group" id="170">
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
-			<animation effect="slide" start="0" end="428" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0" end="495" time="400" tween="sine" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
 			<include>listEndAnimation</include>
 			<control type="group">
 				<visible>Control.IsVisible(17) + !Window.IsActive(favourites)</visible>
 				<animation type="WindowOpen" condition="!Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" delay="105" />
 				</animation>
 				<animation type="WindowOpen" condition="Control.IsVisible(9001)">
 					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
-					<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="175" />
+					<effect type="zoom" start="90" end="100" center="1027,438" tween="cubic" easing="out" time="400" delay="175" />
 				</animation>
 				<include>PVRVisibleHiddenAnimation</include>
 				<control type="image">
 					<description>Shadow</description>
-					<posx>200</posx>
+					<posx>50</posx>
 					<posy>870</posy>
-					<width>1520</width>
+					<width>1820</width>
 					<height>150</height>
 					<texture>windows/home/item-shadow.png</texture>
 				</control>
 				<control type="image">
-					<posx>287</posx>
-					<posy>257</posy>
-					<height>716</height>
-					<width>1344</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<visible>!Skin.HasSetting(DarkerPanels)</visible>
-				</control>
-				<control type="image">
-					<posx>287</posx>
-					<posy>257</posy>
-					<height>716</height>
-					<width>1344</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-					<visible>Skin.HasSetting(DarkerPanels)</visible>
+					<posx>33</posx>
+					<posy>155</posy>
+					<width>1860</width>
+					<height>842</height>
+					<texture border="4">views/list/panel/solidblackpanel.png</texture>
 				</control>
 				<control type="list" id="17">
-					<posx>300</posx>
-					<posy>277</posy>
-					<width>1320</width>
-					<height>600</height>
+					<posx>50</posx>
+					<posy>175</posy>
+					<width>1750</width>
+					<height>820</height>
 					<pagecontrol>70</pagecontrol>
 					<onleft>9001</onleft>
 					<onright>70</onright>
@@ -3332,9 +3328,9 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1320</width>
+							<width>1750</width>
 							<height>76</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="label">
 							<description>Title</description>
@@ -3345,8 +3341,8 @@
 							<font>Font-Condensed-S35</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Date]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -3358,8 +3354,8 @@
 							<font>Font-Condensed-S33</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<animation effect="slide" end="-265" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
 						</control>
@@ -3372,8 +3368,8 @@
 							<font>Font-Condensed-S35</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelName]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.IsRecording + !ListItem.HasTimer</visible>
 						</control>
@@ -3386,8 +3382,8 @@
 							<font>Font-Condensed-S35</font>
 							<align>right</align>
 							<label>$INFO[ListItem.ChannelName]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.IsRecording | ListItem.HasTimer</visible>
 						</control>
@@ -3430,9 +3426,9 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>1320</width>
+							<width>1750</width>
 							<height>76</height>
-							<texture border="90,3,90,3">views/list/other/separator.png</texture>
+							<texture border="90,3,90,3">views/list/other/separator3.png</texture>
 						</control>
 						<control type="image">
 							<posx>27</posx>
@@ -3473,8 +3469,8 @@
 								<font>Font-Condensed-S35</font>
 								<align>right</align>
 								<label>$INFO[ListItem.Date]</label>
-								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-								<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!Control.HasFocus(17)</visible>
 							</control>
@@ -3502,8 +3498,8 @@
 								<font>Font-Condensed-S33</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-								<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!Control.HasFocus(17)</visible>
 								<animation effect="slide" end="-265" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
@@ -3531,8 +3527,8 @@
 								<font>Font-Condensed-S35</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-								<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.IsRecording + !ListItem.HasTimer + !Control.HasFocus(17)</visible>
 							</control>
@@ -3559,8 +3555,8 @@
 								<font>Font-Condensed-S35</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-								<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.IsRecording | ListItem.HasTimer + !Control.HasFocus(17)</visible>
 							</control>

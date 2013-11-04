@@ -231,6 +231,9 @@
 		<value condition="!Skin.HasSetting(DarkerPanels)">mod-infotags</value>
 		<value condition="Skin.HasSetting(DarkerPanels)">darkerbackground</value>
 	</variable>
+	<variable name="DarkerBackgroundViewsMainListTextColourVars2">
+		<value>darkerbackground</value>
+	</variable>
 	<variable name="DarkerBackgroundPvrBluegreyColourVars">
 		<value condition="!Skin.HasSetting(DarkerPanels)">bluegrey</value>
 		<value condition="Skin.HasSetting(DarkerPanels)">darkgrey</value>
@@ -246,6 +249,9 @@
 	<variable name="PVRFocusedTextColourVars">
 		<value condition="!Skin.HasSetting(DarkerPanels)">darkerbackground</value>
 		<value condition="Skin.HasSetting(DarkerPanels)">mod-infotags</value>
+	</variable>
+	<variable name="PVRFocusedTextColourVars2">
+		<value>mod-infotags</value>
 	</variable>
 	<!-- Thumbnails -->
 	<variable name="DefaultListPoster">
@@ -462,11 +468,11 @@
 		<value>$INFO[ListItem.Thumb]</value>
 	</variable>
 	<variable name="PvrRecordingsIcon">
-		<value condition="!IsEmpty(Container(13).ListItem.Thumb)">$INFO[Container(13).ListItem.Thumb]</value>
+		<value condition="!IsEmpty(Container(13).ListItem.Icon)">$INFO[Container(13).ListItem.Icon]</value>
 		<value>$INFO[Container(13).ListItem.ActualIcon,views/fallbacks/,/landscape.png]</value>
 	</variable>
 	<variable name="PvrRecordingsIconSmall">
-		<value condition="!IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+		<value condition="!IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
 		<value>$INFO[ListItem.ActualIcon,views/fallbacks/,/landscape-small.png]</value>
 	</variable>
 	<!-- Info -->

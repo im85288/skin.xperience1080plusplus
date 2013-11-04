@@ -309,215 +309,395 @@
 		<value condition="Player.HasAudio + !Pvr.IsPlayingRadio">$INFO[MusicPlayer.Artist]</value>
 		<value condition="Player.HasAudio + Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelName]</value>
 	</variable>
+	<variable name="NowPlayingThumb">
+		<value condition="Player.HasVideo + VideoPlayer.Content(episodes)">$INFO[Player.Art(fanart)]</value>
+		<value condition="Player.HasVideo">$INFO[Player.Art(thumb)]</value>
+	</variable>
 	<include name="Common-NowPlaying">
 		<control type="group">
 			<posx>1741</posx>
 			<posy>26</posy>
 			<include>BannerListInfoAnimation</include>
-			<visible>Player.HasMedia + IsEmpty(Window(videos).property(TvTunesIsAlive)) + !Window.IsActive(visualisation)</visible>
-			<animation effect="slide" end="-76" time="300" tween="sine" easing="inout" condition="Window.IsActive(busydialog)">Conditional</animation>
-			<animation type="Conditional" condition="Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(volumebar)">
-				<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
-				<effect type="zoom" start="100" end="50" center="1745,100" tween="sine" easing="inout" time="300" />
-			</animation>
 			<control type="group">
-				<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				<control type="label">
-					<description>Title label</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>771</width>
-					<height>120</height>
-					<label>$VAR[NowPlayingTitle]</label>
-					<font>Font-Condensed-S36</font>
-					<textcolor>mod-infotags</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-					<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
+				<visible>Player.HasMedia + IsEmpty(Window(videos).property(TvTunesIsAlive)) + !Window.IsActive(visualisation)</visible>
+				<animation effect="slide" end="-76" time="300" tween="sine" easing="inout" condition="Window.IsActive(busydialog)">Conditional</animation>
+				<animation type="Conditional" condition="Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(volumebar)">
+					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
+					<effect type="zoom" start="100" end="50" center="1745,100" tween="sine" easing="inout" time="300" />
+				</animation>
+				<control type="group">
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
+					<control type="label">
+						<description>Title label</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>771</width>
+						<height>120</height>
+						<label>$VAR[NowPlayingTitle]</label>
+						<font>Font-Condensed-S36</font>
+						<textcolor>mod-infotags</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+						<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
+					</control>
+					<control type="label" id="934">
+						<description>Sub label</description>
+						<posx>0</posx>
+						<posy>32</posy>
+						<width>771</width>
+						<height>120</height>
+						<label>$VAR[NowPlayingSubTitle]</label>
+						<font>Font-Condensed-S28</font>
+						<textcolor>mod-infotags</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>15</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture background="true" fallback="cdart/vinyl.png">$INFO[Player.FolderPath,,cdart.png]</texture>
+						<animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
+						<visible>[Player.HasAudio + Skin.HasSetting(CDArt.Enabled)]</visible>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>45</posy>
+						<width>80</width>
+						<height>60</height>
+						<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$INFO[Player.Art(thumb)]</texture>
+						<aspectratio>stretch</aspectratio>
+						<align>right</align>
+						<aligny>top</aligny>
+						<visible>!Player.HasVideo</visible>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>45</posy>
+						<width>80</width>
+						<height>60</height>
+						<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$VAR[NowPlayingThumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<align>right</align>
+						<aligny>top</aligny>
+						<visible>Player.HasVideo</visible>
+					</control>
+					<control type="image">
+						<description>Now Playing - Paused</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>overlays/nowplaying/pause.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+							<effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+							<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
+						</animation>
+						<visible>Player.Paused</visible>
+					</control>
+					<control type="image">
+						<description>Now Playing - Play</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>overlays/nowplaying/play.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+							<effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+							<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
+						</animation>
+						<visible>!Player.Paused</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>dialogs/extendedprogress/loading-back.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="progress" id="933">
+						<texturebg>-</texturebg>
+						<lefttexture>-</lefttexture>
+						<midtexture>-</midtexture>
+						<righttexture>-</righttexture>
+						<info>Player.Progress</info>
+						<visible>false</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>$INFO[Control.GetLabel(933),overlays/nowplaying/progress/p,.png]</texture>
+						<visible>!IsEmpty(Player.Duration)</visible>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="image">
+						<description>Loading indicator</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>dialogs/search/loading.png</texture>
+						<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!Player.Paused">Conditional</animation>
+						<visible>IsEmpty(Player.Duration)</visible>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
 				</control>
-				<control type="label" id="934">
-					<description>Sub label</description>
-					<posx>0</posx>
-					<posy>32</posy>
-					<width>771</width>
-					<height>120</height>
-					<label>$VAR[NowPlayingSubTitle]</label>
-					<font>Font-Condensed-S28</font>
-					<textcolor>mod-infotags</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="image">
-					<description>Now Playing - Paused</description>
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>overlays/nowplaying/pause.png</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-						<effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-						<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
-					</animation>
-					<visible>Player.Paused</visible>
-				</control>
-				<control type="image">
-					<description>Now Playing - Play</description>
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>overlays/nowplaying/play.png</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-						<effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-						<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
-					</animation>
-					<visible>!Player.Paused</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>dialogs/extendedprogress/loading-back.png</texture>
-					<aspectratio align="center">keep</aspectratio>
-				</control>
-				<control type="progress" id="933">
-					<texturebg>-</texturebg>
-					<lefttexture>-</lefttexture>
-					<midtexture>-</midtexture>
-					<righttexture>-</righttexture>
-					<info>Player.Progress</info>
-					<visible>false</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>$INFO[Control.GetLabel(933),overlays/nowplaying/progress/p,.png]</texture>
-					<visible>!IsEmpty(Player.Duration)</visible>
-					<aspectratio align="center">keep</aspectratio>
-				</control>
-				<control type="image">
-					<description>Loading indicator</description>
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>dialogs/search/loading.png</texture>
-					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!Player.Paused">Conditional</animation>
-					<visible>IsEmpty(Player.Duration)</visible>
-					<aspectratio align="center">keep</aspectratio>
+				<control type="group">
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<control type="label">
+						<description>Title label</description>
+						<posx>-80</posx>
+						<posy>0</posy>
+						<width>771</width>
+						<height>120</height>
+						<label>$VAR[NowPlayingTitle]</label>
+						<font>Font-Condensed-S36</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+						<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
+					</control>
+					<control type="label" id="934">
+						<description>Sub label</description>
+						<posx>-80</posx>
+						<posy>32</posy>
+						<width>771</width>
+						<height>120</height>
+						<label>$VAR[NowPlayingSubTitle]</label>
+						<font>Font-Condensed-S28</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>15</posy>
+						<width>80</width>
+						<height>80</height>
+						<texture background="true" fallback="cdart/vinyl.png">$INFO[Player.FolderPath,,cdart.png]</texture>
+						<animation effect="rotate" center="auto" start="360" end="0" time="2500" loop="true" condition="!Player.Paused">Conditional</animation>
+						<visible>[Player.HasAudio + Skin.HasSetting(CDArt.Enabled)]</visible>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>45</posy>
+						<width>80</width>
+						<height>60</height>
+						<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$INFO[Player.Art(thumb)]</texture>
+						<aspectratio>stretch</aspectratio>
+						<align>right</align>
+						<aligny>top</aligny>
+						<visible>!Player.HasVideo</visible>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>45</posy>
+						<width>80</width>
+						<height>60</height>
+						<texture background="true" fallback="views/fallbacks/DefaultAudio.png/square-small.png">$VAR[NowPlayingThumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						<align>right</align>
+						<aligny>top</aligny>
+						<visible>Player.HasVideo</visible>
+					</control>
+					<control type="image">
+						<description>Now Playing - Paused</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>overlays/nowplaying/pause.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+							<effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+							<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
+						</animation>
+						<visible>Player.Paused</visible>
+					</control>
+					<control type="image">
+						<description>Now Playing - Play</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>overlays/nowplaying/play.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+							<effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+							<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
+						</animation>
+						<visible>!Player.Paused</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>dialogs/extendedprogress/loading-back.png</texture>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="progress" id="933">
+						<texturebg>-</texturebg>
+						<lefttexture>-</lefttexture>
+						<midtexture>-</midtexture>
+						<righttexture>-</righttexture>
+						<info>Player.Progress</info>
+						<visible>false</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>$INFO[Control.GetLabel(933),overlays/nowplaying/progress/p,.png]</texture>
+						<visible>!IsEmpty(Player.Duration)</visible>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
+					<control type="image">
+						<description>Loading indicator</description>
+						<posx>0</posx>
+						<posy>25</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>dialogs/search/loading.png</texture>
+						<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!Player.Paused">Conditional</animation>
+						<visible>IsEmpty(Player.Duration)</visible>
+						<aspectratio align="center">keep</aspectratio>
+					</control>
 				</control>
 			</control>
 			<control type="group">
-				<visible>Skin.HasSetting(UseWhiteText)</visible>
-				<control type="label">
-					<description>Title label</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>771</width>
-					<height>120</height>
-					<label>$VAR[NowPlayingTitle]</label>
-					<font>Font-Condensed-S36</font>
-					<textcolor>eewhite</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-					<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
+				<visible>PVR.HasTimer + !Player.HasMedia + Container(20).HasFocus(9)</visible>
+				<animation effect="slide" end="-76" time="300" tween="sine" easing="inout" condition="Window.IsActive(busydialog)">Conditional</animation>
+				<animation type="Conditional" condition="Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(volumebar)">
+					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
+					<effect type="zoom" start="100" end="50" center="1745,100" tween="sine" easing="inout" time="300" />
+				</animation>
+				<control type="group">
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
+					<control type="label">
+						<description>Title label</description>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>771</width>
+						<height>120</height>
+						<label>$INFO[PVR.NextTimer]</label>
+						<font>Font-Condensed-S36</font>
+						<textcolor>mod-infotags</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+						<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>45</posy>
+						<width>80</width>
+						<height>60</height>
+						<texture border="1">$INFO[Pvr.NextRecordingChannelIcon]</texture>
+						<aspectratio>stretch</aspectratio>
+						<align>right</align>
+						<aligny>top</aligny>
+					</control>
 				</control>
-				<control type="label" id="934">
-					<description>Sub label</description>
-					<posx>0</posx>
-					<posy>32</posy>
-					<width>771</width>
-					<height>120</height>
-					<label>$VAR[NowPlayingSubTitle]</label>
-					<font>Font-Condensed-S28</font>
-					<textcolor>eewhite</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="image">
-					<description>Now Playing - Paused</description>
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>overlays/nowplaying/pause.png</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-						<effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-						<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
-					</animation>
-					<visible>Player.Paused</visible>
-				</control>
-				<control type="image">
-					<description>Now Playing - Play</description>
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>overlays/nowplaying/play.png</texture>
-					<aspectratio align="center">keep</aspectratio>
-					<animation type="Visible">
-						<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-						<effect type="zoom" start="50" end="100" center="50,77" tween="sine" easing="inout" time="300" />
-					</animation>
-					<animation type="Hidden">
-						<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
-						<effect type="zoom" start="100" end="50" center="50,77" tween="sine" easing="inout" time="300" />
-					</animation>
-					<visible>!Player.Paused</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>dialogs/extendedprogress/loading-back.png</texture>
-					<aspectratio align="center">keep</aspectratio>
-				</control>
-				<control type="progress" id="933">
-					<texturebg>-</texturebg>
-					<lefttexture>-</lefttexture>
-					<midtexture>-</midtexture>
-					<righttexture>-</righttexture>
-					<info>Player.Progress</info>
-					<visible>false</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>$INFO[Control.GetLabel(933),overlays/nowplaying/progress/p,.png]</texture>
-					<visible>!IsEmpty(Player.Duration)</visible>
-					<aspectratio align="center">keep</aspectratio>
-				</control>
-				<control type="image">
-					<description>Loading indicator</description>
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>dialogs/search/loading.png</texture>
-					<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="!Player.Paused">Conditional</animation>
-					<visible>IsEmpty(Player.Duration)</visible>
-					<aspectratio align="center">keep</aspectratio>
+				<control type="group">
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<control type="label">
+						<description>Title label</description>
+						<posx>-80</posx>
+						<posy>-30</posy>
+						<width>771</width>
+						<height>120</height>
+						<label>Currently Recording: $INFO[PVR.NowRecordingTitle]</label>
+						<font>Font-Condensed-S36</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+						<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
+						<visible>PVR.HasNonRecordingTimer</visible>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>15</posy>
+						<width>80</width>
+						<height>60</height>
+						<texture border="1">$INFO[Pvr.NowRecordingChannelIcon]</texture>
+						<aspectratio>stretch</aspectratio>
+						<align>right</align>
+						<aligny>top</aligny>
+						<visible>PVR.HasNonRecordingTimer</visible>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>-80</posx>
+						<posy>0</posy>
+						<width>771</width>
+						<height>120</height>
+						<label>$INFO[PVR.NextTimer]</label>
+						<font>Font-Condensed-S36</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+						<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
+						<visible>!PVR.HasNonRecordingTimer</visible>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>45</posy>
+						<width>80</width>
+						<height>60</height>
+						<texture border="1">$INFO[Pvr.NextRecordingChannelIcon]</texture>
+						<aspectratio>stretch</aspectratio>
+						<align>right</align>
+						<aligny>top</aligny>
+						<visible>!PVR.HasNonRecordingTimer</visible>
+					</control>
+					<control type="label">
+						<description>Title label</description>
+						<posx>-80</posx>
+						<posy>60</posy>
+						<width>771</width>
+						<height>120</height>
+						<label>$INFO[PVR.NextTimer]</label>
+						<font>Font-Condensed-S36</font>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<align>right</align>
+						<animation effect="slide" end="0,16" time="300" tween="sine" easing="inout" condition="IsEmpty(Control.GetLabel(934))">Conditional</animation>
+						<visible>PVR.HasNonRecordingTimer</visible>
+					</control>
+					<control type="image">
+						<posx>-65</posx>
+						<posy>105</posy>
+						<width>80</width>
+						<height>60</height>
+						<texture border="1">$INFO[Pvr.NextRecordingChannelIcon]</texture>
+						<aspectratio>stretch</aspectratio>
+						<align>right</align>
+						<aligny>top</aligny>
+						<visible>PVR.HasNonRecordingTimer</visible>
+					</control>
 				</control>
 			</control>
 		</control>

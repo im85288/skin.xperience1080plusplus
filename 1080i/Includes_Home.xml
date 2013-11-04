@@ -690,11 +690,11 @@
 				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
 				<effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
 			</animation>
-			<animation type="Conditional" condition="!Window.IsActive(3020) + !Window.IsActive(3021) + !Window.IsActive(3022) + !Window.IsActive(3023) + !Window.IsActive(3025)">
+			<animation type="Conditional" condition="!Window.IsActive(3020) + !Window.IsActive(3021) + !Window.IsActive(3022) + !Window.IsActive(3023) + !Window.IsActive(3025) + !Window.IsActive(3026)">
 				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="100,229,1720,1" end="100,170,1720,70" tween="sine" easing="out" time="200" />
 			</animation>
-			<animation type="Conditional" condition="Window.IsActive(3020) | Window.IsActive(3021) | Window.IsActive(3022) | Window.IsActive(3023) | Window.IsActive(3025)">
+			<animation type="Conditional" condition="Window.IsActive(3020) | Window.IsActive(3021) | Window.IsActive(3022) | Window.IsActive(3023) | Window.IsActive(3025) | Window.IsActive(3026)">
 				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="100,170,1720,70" end="100,229,1720,1" tween="sine" easing="out" time="200" />
 			</animation>
@@ -716,7 +716,7 @@
 				<texture>windows/home/search.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1) | !Control.HasFocus(125)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(1)">Conditional</animation>
-				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + !Skin.HasSetting(UseWhiteText)  + !Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + !Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(UseCurvedTiles)</visible>
 				<colordiffuse>mod-infotags</colordiffuse>
 			</control>
 			<control type="image">
@@ -728,7 +728,7 @@
 				<texture>windows/home/search.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1) | !Control.HasFocus(125)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(1)">Conditional</animation>
-				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + Skin.HasSetting(UseWhiteText)  + !Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(UseCurvedTiles)</visible>
 			</control>
 			<control type="image">
 				<description>Search</description>
@@ -739,7 +739,7 @@
 				<texture>windows/home/search.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1) | !Control.HasFocus(125)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(1)">Conditional</animation>
-				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + Skin.HasSetting(UseWhiteText)  + Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + Skin.HasSetting(UseWhiteText) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>![Container(20).HasFocus(1) + Control.HasFocus(125)]</visible>
 			</control>
 			<control type="image">
@@ -751,7 +751,7 @@
 				<texture>windows/home/search.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1) | !Control.HasFocus(125)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(1)">Conditional</animation>
-				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + !Skin.HasSetting(UseWhiteText)  + Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + !Skin.HasSetting(UseWhiteText) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>![Container(20).HasFocus(1) + Control.HasFocus(125)]</visible>
 				<colordiffuse>mod-infotags</colordiffuse>
 			</control>
@@ -1355,6 +1355,64 @@
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(20).HasFocus(7)">Conditional</animation>
 				<visible>!Skin.HasSetting(HomeWeather) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>[Container(20).HasFocus(7) + Control.HasFocus(725)]</visible>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>-50</width>
+				<height>100</height>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="65,50" condition="!Control.HasFocus(825)">Conditional</animation>
+				<visible>System.HasAddon(service.openelec.settings)</visible>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(825) + Container(20).HasFocus(8)]">Conditional</animation>
+					<colordiffuse>mod-infotags</colordiffuse>
+					<visible>!Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(UseCurvedTiles)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(825) + Container(20).HasFocus(8)]">Conditional</animation>
+					<colordiffuse>eewhite</colordiffuse>
+					<visible>Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(UseCurvedTiles)</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(825) + Container(20).HasFocus(8)]">Conditional</animation>
+					<colordiffuse>mod-infotags</colordiffuse>
+					<visible>Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(UseWhiteText) + ![Control.HasFocus(825) + Container(20).HasFocus(8)]</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(825) + Container(20).HasFocus(8)]">Conditional</animation>
+					<colordiffuse>eewhite</colordiffuse>
+					<visible>Skin.HasSetting(UseCurvedTiles) + Skin.HasSetting(UseWhiteText) + ![Control.HasFocus(825) + Container(20).HasFocus(8)]</visible>
+				</control>
+				<control type="image">
+					<posx>-25</posx>
+					<posy>13</posy>
+					<width>19</width>
+					<height>38</height>
+					<texture>windows/home/submenu-arrow.png</texture>
+					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(825) + Container(20).HasFocus(8)]">Conditional</animation>
+					<colordiffuse>blue</colordiffuse>
+					<visible>Skin.HasSetting(UseCurvedTiles) + [Control.HasFocus(825) + Container(20).HasFocus(8)]</visible>
+				</control>
 			</control>
 			<control type="image">
 				<description>Settings</description>
@@ -9427,7 +9485,8 @@
 					<onleft>725</onleft>
 					<onright condition="!Window.IsVisible(3009)">SetProperty(BounceRight,1,Home)</onright>
 					<onclick>ActivateWindow(4)</onclick>
-					<onup>80</onup>
+					<onup condition="!System.HasAddon(service.openelec.settings)">80</onup>
+					<onup condition="System.HasAddon(service.openelec.settings)">ActivateWindow(3026)</onup>
 					<ondown>801</ondown>
 				</control>
 				<control type="group" id="850">

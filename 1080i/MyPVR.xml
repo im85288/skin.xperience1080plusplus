@@ -41,7 +41,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[33061]</label>
-					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="label">
 					<posx>18</posx>
@@ -53,26 +53,14 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[33061]</label>
-					<visible>Skin.HasSetting(DarkerPanels)</visible>
+					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="image">
-					<description>Panel</description>
 					<posx>-2</posx>
 					<posy>-3</posy>
 					<width>420</width>
 					<height>676</height>
-					<texture border="3">views/newgloss/whitepanel-15.png</texture>
-					<visible>!Skin.HasSetting(DarkerPanels)</visible>
-				</control>
-				<control type="image">
-					<description>Panel</description>
-					<posx>-2</posx>
-					<posy>-3</posy>
-					<width>420</width>
-					<height>676</height>
-					<texture border="3">views/newgloss/whitepanel-15.png</texture>
-					<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-					<visible>Skin.HasSetting(DarkerPanels)</visible>
+					<texture border="4">views/list/panel/solidblackpanel.png</texture>
 				</control>
 				<control type="image">
 					<description>Shadow</description>
@@ -110,8 +98,7 @@
 				<control type="button" id="32">
 					<description>TV Channels</description>
 					<posy>0</posy>
-					<include condition="!Skin.HasSetting(DarkerPanels)">PVRMenuButtonVars</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">PVRMenuButtonVarsDarkerPanels</include>
+					<include>PVRMenuButtonVarsDarkerPanels</include>
 					<texturefocus>windows/pvr/icons/channels-fo.png</texturefocus>
 					<texturenofocus>windows/pvr/icons/channels-nf.png</texturenofocus>
 					<label>$LOCALIZE[19023]</label>
@@ -125,8 +112,7 @@
 				<control type="button" id="33">
 					<description>Radio Channels</description>
 					<posy>112</posy>
-					<include condition="!Skin.HasSetting(DarkerPanels)">PVRMenuButtonVars</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">PVRMenuButtonVarsDarkerPanels</include>
+					<include>PVRMenuButtonVarsDarkerPanels</include>
 					<texturefocus>windows/pvr/icons/radio-fo.png</texturefocus>
 					<texturenofocus>windows/pvr/icons/radio-nf.png</texturenofocus>
 					<label>$LOCALIZE[19024]</label>
@@ -140,8 +126,7 @@
 				<control type="button" id="31">
 					<description>TV Guide</description>
 					<posy>224</posy>
-					<include condition="!Skin.HasSetting(DarkerPanels)">PVRMenuButtonVars</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">PVRMenuButtonVarsDarkerPanels</include>
+					<include>PVRMenuButtonVarsDarkerPanels</include>
 					<texturefocus>windows/pvr/icons/epg-fo.png</texturefocus>
 					<texturenofocus>windows/pvr/icons/epg-nf.png</texturenofocus>
 					<label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
@@ -158,8 +143,7 @@
 				<control type="button" id="34">
 					<description>Recordings</description>
 					<posy>336</posy>
-					<include condition="!Skin.HasSetting(DarkerPanels)">PVRMenuButtonVars</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">PVRMenuButtonVarsDarkerPanels</include>
+					<include>PVRMenuButtonVarsDarkerPanels</include>
 					<texturefocus>windows/pvr/icons/recordings-fo.png</texturefocus>
 					<texturenofocus>windows/pvr/icons/recordings-nf.png</texturenofocus>
 					<label>$LOCALIZE[19163]</label>
@@ -173,8 +157,7 @@
 				<control type="button" id="35">
 					<description>Timers</description>
 					<posy>448</posy>
-					<include condition="!Skin.HasSetting(DarkerPanels)">PVRMenuButtonVars</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">PVRMenuButtonVarsDarkerPanels</include>
+					<include>PVRMenuButtonVarsDarkerPanels</include>
 					<texturefocus>windows/pvr/icons/timers-fo.png</texturefocus>
 					<texturenofocus>windows/pvr/icons/timers-nf.png</texturenofocus>
 					<label>$LOCALIZE[19040]</label>
@@ -188,8 +171,7 @@
 				<control type="button" id="36">
 					<description>Search</description>
 					<posy>560</posy>
-					<include condition="!Skin.HasSetting(DarkerPanels)">PVRMenuButtonVars</include>
-					<include condition="Skin.HasSetting(DarkerPanels)">PVRMenuButtonVarsDarkerPanels</include>
+					<include>PVRMenuButtonVarsDarkerPanels</include>
 					<texturefocus>windows/pvr/icons/search-fo.png</texturefocus>
 					<texturenofocus>windows/pvr/icons/search-nf.png</texturenofocus>
 					<label>$LOCALIZE[137]</label>
