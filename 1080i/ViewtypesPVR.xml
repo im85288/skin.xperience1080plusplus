@@ -305,7 +305,7 @@
 							<width>100</width>
 							<height>88</height>
 							<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
-							<aspectratio>keep</aspectratio>
+							<aspectratio scalediffuse="false">keep</aspectratio>
 						</control>
 						<control type="label">
 							<description>Label</description>
@@ -555,7 +555,7 @@
 							<width>100</width>
 							<height>88</height>
 							<texture background="true" fallback="windows/pvr/defaultchannel.png">$VAR[PvrListIcon]</texture>
-							<aspectratio>keep</aspectratio>
+							<aspectratio scalediffuse="false">keep</aspectratio>
 						</control>
 						<control type="label">
 							<description>Label</description>
