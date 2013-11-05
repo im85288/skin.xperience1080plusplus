@@ -24,9 +24,9 @@
 					<posy>173</posy>
 					<control type="image">
 						<posx>8</posx>
-						<posy>-18</posy>
+						<posy>-28</posy>
 						<height>842</height>
-						<width>590</width>
+						<width>600</width>
 						<texture border="4">views/newgloss/whitepanel-15a.png</texture>
 						<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 					</control>
@@ -196,8 +196,8 @@
 				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(32) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
 				</animation>
 				<control type="label">
-					<posx>150</posx>
-					<posy>172</posy>
+					<posx>140</posx>
+					<posy>135</posy>
 					<width>300</width>
 					<height>30</height>
 					<font>Font-Condensed-S29</font>
@@ -205,11 +205,23 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
+					<visible>!Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="label">
-					<posx>150</posx>
-					<posy>172</posy>
+					<posx>140</posx>
+					<posy>127</posy>
+					<width>300</width>
+					<height>30</height>
+					<font>Font-Condensed-S29</font>
+					<textcolor>mod-infotags</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
+					<visible>!Skin.HasSetting(UseWhiteText) + Skin.HasSetting(LiveTVBlack)</visible>
+				</control>
+				<control type="label">
+					<posx>140</posx>
+					<posy>135</posy>
 					<width>300</width>
 					<height>30</height>
 					<font>Font-Condensed-S29</font>
@@ -217,13 +229,25 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<visible>Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(LiveTVBlack)</visible>
+				</control>
+				<control type="label">
+					<posx>140</posx>
+					<posy>127</posy>
+					<width>300</width>
+					<height>30</height>
+					<font>Font-Condensed-S29</font>
+					<textcolor>darkerbackground</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
+					<visible>Skin.HasSetting(UseWhiteText) + Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="image">
 					<posx>8</posx>
-					<posy>155</posy>
+					<posy>145</posy>
 					<width>1200</width>
-					<height>842</height>
+					<height>852</height>
 					<texture border="4">views/newgloss/whitepanel-15a.png</texture>
 					<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
