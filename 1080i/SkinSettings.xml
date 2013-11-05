@@ -1994,6 +1994,14 @@
 						<onclick>Skin.ToggleSetting(EPGGenreColors.Enabled)</onclick>
 						<label>$LOCALIZE[41221]</label>
 					</control>
+					<control type="radiobutton" id="10002">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<selected>Skin.HasSetting(LiveTVBlack)</selected>
+						<onclick>Skin.ToggleSetting(LiveTVBlack)</onclick>
+						<label>Use dark background</label>
+					</control>
 				</control>
 				<!-- =============== -->
 				<!-- Add-on Settings -->

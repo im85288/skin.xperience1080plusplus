@@ -232,7 +232,8 @@
 		<value condition="Skin.HasSetting(DarkerPanels)">darkerbackground</value>
 	</variable>
 	<variable name="DarkerBackgroundViewsMainListTextColourVars2">
-		<value>darkerbackground</value>
+		<value condition="!Skin.HasSetting(LiveTVBlack)">mod-infotags</value>
+		<value condition="Skin.HasSetting(LiveTVBlack)">darkerbackground</value>
 	</variable>
 	<variable name="DarkerBackgroundPvrBluegreyColourVars">
 		<value condition="!Skin.HasSetting(DarkerPanels)">bluegrey</value>
@@ -251,7 +252,8 @@
 		<value condition="Skin.HasSetting(DarkerPanels)">mod-infotags</value>
 	</variable>
 	<variable name="PVRFocusedTextColourVars2">
-		<value>mod-infotags</value>
+		<value condition="!Skin.HasSetting(LiveTVBlack)">darkerbackground</value>
+		<value condition="Skin.HasSetting(LiveTVBlack)">mod-infotags</value>
 	</variable>
 	<!-- Thumbnails -->
 	<variable name="DefaultListPoster">
