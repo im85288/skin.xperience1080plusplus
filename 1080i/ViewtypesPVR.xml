@@ -196,7 +196,7 @@
 				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(32) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
 				</animation>
 				<control type="label">
-					<posx>140</posx>
+					<posx>880</posx>
 					<posy>135</posy>
 					<width>300</width>
 					<height>30</height>
@@ -208,7 +208,7 @@
 					<visible>!Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="label">
-					<posx>140</posx>
+					<posx>900</posx>
 					<posy>127</posy>
 					<width>300</width>
 					<height>30</height>
@@ -220,7 +220,7 @@
 					<visible>!Skin.HasSetting(UseWhiteText) + Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="label">
-					<posx>140</posx>
+					<posx>880</posx>
 					<posy>135</posy>
 					<width>300</width>
 					<height>30</height>
@@ -232,7 +232,7 @@
 					<visible>Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="label">
-					<posx>140</posx>
+					<posx>900</posx>
 					<posy>127</posy>
 					<width>300</width>
 					<height>30</height>

@@ -6383,7 +6383,22 @@
 						<animation type="Hidden">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<visible>ControlGroup(1002).HasFocus + !Skin.HasSetting(UseCurvedTiles)</visible>
+						<visible>ControlGroup(1002).HasFocus + !Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(plexbmc)</visible>
+					</control>
+					<control type="image">
+						<posx>368</posx>
+						<posy>-21</posy>
+						<width>806</width>
+						<height>610</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
+						<colordiffuse>$INFO[Skin.String(picturesbordercolor.name)]</colordiffuse>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+						</animation>
+						<visible>ControlGroup(1002).HasFocus + !Skin.HasSetting(UseCurvedTiles) + Skin.HasSetting(plexbmc)</visible>
 					</control>
 				</control>
 			</control>
