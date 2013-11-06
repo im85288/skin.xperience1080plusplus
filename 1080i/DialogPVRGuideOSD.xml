@@ -20,17 +20,7 @@
 				<width>600</width>
 				<height>670</height>
 				<texture border="29">dialogs/dialogWindow.png</texture>
-				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>250</posx>
-				<posy>300</posy>
-				<height>670</height>
-				<width>800</width>
-				<texture border="29">dialogs/dialogWindow.png</texture>
-				<visible>Skin.HasSetting(DarkerPanels)</visible>
-				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>830</posx>
@@ -46,16 +36,15 @@
 				<width>764</width>
 				<height>520</height>
 				<texture border="4">views/list/panel/blackpanel.png</texture>
-				<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 			</control>
 			<control type="image">
 				<posx>838</posx>
 				<posy>365</posy>
 				<height>530</height>
 				<width>784</width>
-				<texture border="35">views/newgloss/whitepanel-15.png</texture>
-				<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-				<visible>Skin.HasSetting(DarkerPanels)</visible>
+				<texture border="4">views/list/panel/solidblackpanel.png</texture>
+				<visible>Skin.HasSetting(LiveTVBlack)</visible>
 			</control>
 			<control type="group">
 				<include>visiblehidefadeinfo</include>
@@ -113,9 +102,9 @@
 						<control type="image">
 							<posx>10</posx>
 							<posy>0</posy>
-							<width>564</width>
+							<width>567</width>
 							<height>95</height>
-							<texture border="5">views/other/focus-mod.png</texture>
+							<texture border="150,1,150,1">views/other/black-focus.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 						</control>
@@ -131,6 +120,21 @@
 							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
+							<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
+						</control>
+						<control type="label">
+							<description>Label</description>
+							<posx>30</posx>
+							<posy>0</posy>
+							<width>560</width>
+							<height>45</height>
+							<font>Font-Condensed-S34</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>darkerbackground</textcolor>
+							<selectedcolor>darkerbackground</selectedcolor>
+							<scroll>false</scroll>
+							<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 						</control>
 						<control type="label">
 							<description>Label</description>
@@ -142,6 +146,20 @@
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
 							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Label</description>
+							<posx>30</posx>
+							<posy>50</posy>
+							<width>560</width>
+							<height>45</height>
+							<font>Font-Condensed-S31</font>
+							<align>left</align>
+							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
+							<textcolor>darkerbackground</textcolor>
+							<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 							<scroll>false</scroll>
 						</control>
 						<control type="group">
@@ -186,16 +204,7 @@
 							<height>95</height>
 							<texture border="150,1,150,1">views/other/black-focus.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime) + !Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="image">
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>567</width>
-							<height>95</height>
-							<texture border="150,1,150,1">views/other/white-focus.png</texture>
-							<aspectratio>stretch</aspectratio>
-							<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime) + Skin.HasSetting(DarkerPanels)</visible>
+							<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 						</control>
 						<control type="image">
 							<posx>10</posx>
@@ -204,7 +213,7 @@
 							<height>95</height>
 							<texture border="4">views/other/focus-mod.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
+							<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 						</control>
 						<control type="group">
 							<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(11)">Conditional</animation>
@@ -217,8 +226,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>darkerbackground</textcolor>
+								<selectedcolor>darkerbackground</selectedcolor>
 								<scroll>false</scroll>
 								<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 							</control>
@@ -231,8 +240,8 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>$VAR[DarkerBackgroundPvrBlueColourVars]</textcolor>
-								<selectedcolor>$VAR[DarkerBackgroundPvrBlueColourVars]</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 							</control>
@@ -245,7 +254,7 @@
 								<font>Font-Condensed-S31</font>
 								<align>left</align>
 								<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
-								<textcolor>black</textcolor>
+								<textcolor>darkerbackground</textcolor>
 								<scroll>false</scroll>
 								<visible>StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 							</control>

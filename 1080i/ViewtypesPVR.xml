@@ -166,7 +166,7 @@
 							<posy>710</posy>
 							<width>516</width>
 							<font>Font-Condensed-S30</font>
-							<label>$INFO[Container(11).ListItem.NextTitle,[COLOR=darkgrey]$LOCALIZE[19031] [/COLOR],]$INFO[Container(11).ListItem.NextStartTime, [COLOR=darkgrey]at [/COLOR],]</label>
+							<label>$INFO[Container(11).ListItem.NextTitle,$LOCALIZE[19031]: ,]$INFO[Container(11).ListItem.NextStartTime, (,)]</label>
 							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars2]</textcolor>
 							<scroll>true</scroll>
 							<scollspeed>45</scollspeed>
@@ -196,50 +196,46 @@
 				<animation effect="slide" start="0" end="-75" time="300" tween="quadratic" easing="out" condition="!ControlGroup(9001).HasFocus(32) + IsEmpty(Window.property(Movement))" reversible="false">Conditional
 				</animation>
 				<control type="label">
-					<posx>880</posx>
+					<posx>1200</posx>
 					<posy>135</posy>
-					<width>300</width>
+					<width>500</width>
 					<height>30</height>
 					<font>Font-Condensed-S29</font>
 					<textcolor>mod-infotags</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
+					<align>right</align>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
 					<visible>!Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="label">
-					<posx>900</posx>
+					<posx>1190</posx>
 					<posy>127</posy>
-					<width>300</width>
+					<width>500</width>
 					<height>30</height>
 					<font>Font-Condensed-S29</font>
 					<textcolor>mod-infotags</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
+					<align>right</align>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
 					<visible>!Skin.HasSetting(UseWhiteText) + Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="label">
-					<posx>880</posx>
+					<posx>1200</posx>
 					<posy>135</posy>
-					<width>300</width>
+					<width>500</width>
 					<height>30</height>
 					<font>Font-Condensed-S29</font>
 					<textcolor>darkerbackground</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
+					<align>right</align>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
 					<visible>Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="label">
-					<posx>900</posx>
+					<posx>1190</posx>
 					<posy>127</posy>
-					<width>300</width>
+					<width>500</width>
 					<height>30</height>
 					<font>Font-Condensed-S29</font>
 					<textcolor>darkerbackground</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
+					<align>right</align>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
 					<visible>Skin.HasSetting(UseWhiteText) + Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
@@ -290,14 +286,24 @@
 							<visible>Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
-							<posx>50</posx>
+							<posx>47</posx>
 							<posy>6</posy>
 							<width>1100</width>
 							<height>80</height>
-							<texture border="5">views/other/focus-mod.png</texture>
+							<texture border="150,1,150,1">views/other/black-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>ListItem.IsPlaying</visible>
+							<visible>ListItem.IsPlaying + !Skin.HasSetting(LiveTVBlack)</visible>
+						</control>
+						<control type="image">
+							<posx>47</posx>
+							<posy>6</posy>
+							<width>1100</width>
+							<height>80</height>
+							<texture border="150,1,150,1">views/other/white-focus.png</texture>
+							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
+							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
+							<visible>ListItem.IsPlaying + Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
 							<posx>53</posx>
@@ -360,7 +366,7 @@
 							<midtexture>windows/pvr/progress-mid.png</midtexture>
 							<righttexture>windows/pvr/progress-leftright.png</righttexture>
 							<info>ListItem.Progress</info>
-							<colordiffuse>mod-infotags</colordiffuse>
+							<colordiffuse>$VAR[PVRFocusedTextColourVars2]</colordiffuse>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
@@ -386,8 +392,8 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>mod-infotags</textcolor>
-							<selectedcolor>mod-infotags</selectedcolor>
+							<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -414,8 +420,8 @@
 							<font>Font-Condensed-S28-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Title]</label>
-							<textcolor>mod-infotags</textcolor>
-							<selectedcolor>mod-infotags</selectedcolor>
+							<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 						</control>
@@ -456,8 +462,8 @@
 							<font>Font-Condensed-S30-B</font>
 							<align>right</align>
 							<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-							<textcolor>mod-infotags</textcolor>
-							<selectedcolor>mod-infotags</selectedcolor>
+							<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+							<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!ListItem.HasTimer + !ListItem.IsRecording + ListItem.IsPlaying</visible>
 						</control>
@@ -527,7 +533,7 @@
 							<texture border="150,1,150,1">views/other/black-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!ListItem.IsPlaying + !Skin.HasSetting(LiveTVBlack)</visible>
+							<visible>ListItem.IsPlaying + !Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
 							<posx>47</posx>
@@ -537,7 +543,7 @@
 							<texture border="150,1,150,1">views/other/white-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!ListItem.IsPlaying + Skin.HasSetting(LiveTVBlack)</visible>
+							<visible>ListItem.IsPlaying + Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
 							<posx>50</posx>
@@ -547,7 +553,7 @@
 							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>ListItem.IsPlaying</visible>
+							<visible>!ListItem.IsPlaying</visible>
 						</control>
 						<control type="image">
 							<posx>53</posx>
@@ -615,7 +621,7 @@
 								<midtexture>windows/pvr/progress-mid.png</midtexture>
 								<righttexture>windows/pvr/progress-leftright.png</righttexture>
 								<info>ListItem.Progress</info>
-								<colordiffuse>black</colordiffuse>
+								<colordiffuse>$VAR[PVRFocusedTextColourVars2]</colordiffuse>
 								<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 							</control>
 							<control type="label">
@@ -641,8 +647,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 							</control>
@@ -669,8 +675,8 @@
 								<font>Font-Condensed-S28-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Title]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.HasEpg + ListItem.IsPlaying</visible>
 							</control>
@@ -683,8 +689,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasEpg + ListItem.IsPlaying</visible>
 							</control>
@@ -725,8 +731,8 @@
 								<font>Font-Condensed-S30-B</font>
 								<align>right</align>
 								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, → ,]</label>
-								<textcolor>black</textcolor>
-								<selectedcolor>black</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.HasTimer + !ListItem.IsRecording + ListItem.IsPlaying</visible>
 							</control>
@@ -1039,14 +1045,24 @@
 							<visible>Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
-							<posx>0</posx>
+							<posx>-3</posx>
 							<posy>6</posy>
-							<width>1140</width>
+							<width>1100</width>
 							<height>80</height>
-							<texture border="5">views/other/focus-mod.png</texture>
+							<texture border="150,1,150,1">views/other/black-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>ListItem.IsPlaying</visible>
+							<visible>ListItem.IsPlaying + !Skin.HasSetting(LiveTVBlack)</visible>
+						</control>
+						<control type="image">
+							<posx>-3</posx>
+							<posy>6</posy>
+							<width>1100</width>
+							<height>80</height>
+							<texture border="150,1,150,1">views/other/white-focus.png</texture>
+							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
+							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
+							<visible>ListItem.IsPlaying + Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
 							<posx>20</posx>
@@ -1200,7 +1216,7 @@
 							<texture border="150,1,150,1">views/other/black-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!ListItem.IsPlaying + !Skin.HasSetting(LiveTVBlack)</visible>
+							<visible>ListItem.IsPlaying + !Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
 							<posx>-3</posx>
@@ -1210,7 +1226,7 @@
 							<texture border="150,1,150,1">views/other/white-focus.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!ListItem.IsPlaying + Skin.HasSetting(LiveTVBlack)</visible>
+							<visible>ListItem.IsPlaying + Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
 							<posx>-3</posx>
@@ -1220,7 +1236,7 @@
 							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>ListItem.IsPlaying</visible>
+							<visible>!ListItem.IsPlaying</visible>
 						</control>
 						<control type="image">
 							<posx>20</posx>
@@ -1515,8 +1531,16 @@
 						<posy>1</posy>
 						<width>500</width>
 						<height>79</height>
-						<texture border="4">views/other/focus-mod.png</texture>
-						<visible>ListItem.IsPlaying</visible>
+						<texture border="4">views/other/black-focus.png</texture>
+						<visible>ListItem.IsPlaying + !Skin.HasSetting(LiveTVBlack)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>1</posy>
+						<width>500</width>
+						<height>79</height>
+						<texture border="4">views/other/white-focus.png</texture>
+						<visible>ListItem.IsPlaying + Skin.HasSetting(LiveTVBlack)</visible>
 					</control>
 					<control type="image">
 						<posx>20</posx>
@@ -1549,8 +1573,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
-						<textcolor>mod-infotags</textcolor>
-						<selectedcolor>mod-infotags</selectedcolor>
+						<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+						<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>ListItem.IsPlaying</visible>
 					</control>
@@ -1577,8 +1601,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.ChannelNumber]</label>
-						<textcolor>mod-infotags</textcolor>
-						<selectedcolor>mod-infotags</selectedcolor>
+						<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+						<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>ListItem.IsPlaying</visible>
 					</control>
@@ -1606,7 +1630,7 @@
 						<width>500</width>
 						<height>79</height>
 						<texture border="4">views/other/black-focus.png</texture>
-						<visible>[ListItem.IsSelected | !ListItem.IsPlaying] + !Skin.HasSetting(LiveTVBlack)</visible>
+						<visible>ListItem.IsPlaying + !Skin.HasSetting(LiveTVBlack)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1614,7 +1638,7 @@
 						<width>500</width>
 						<height>79</height>
 						<texture border="4">views/other/white-focus.png</texture>
-						<visible>[ListItem.IsSelected | !ListItem.IsPlaying] + Skin.HasSetting(LiveTVBlack)</visible>
+						<visible>ListItem.IsPlaying + Skin.HasSetting(LiveTVBlack)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1622,7 +1646,7 @@
 						<width>500</width>
 						<height>79</height>
 						<texture border="4">views/other/focus-mod.png</texture>
-						<visible>ListItem.IsPlaying</visible>
+						<visible>!ListItem.IsPlaying</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -1665,8 +1689,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
-						<textcolor>mod-infotags</textcolor>
-						<selectedcolor>mod-infotags</selectedcolor>
+						<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+						<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>ListItem.IsPlaying</visible>
 						<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(10) + ![ListItem.IsSelected | ListItem.IsPlaying]">Conditional</animation>
@@ -1695,8 +1719,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.ChannelNumber]</label>
-						<textcolor>mod-infotags</textcolor>
-						<selectedcolor>mod-infotags</selectedcolor>
+						<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+						<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 						<scroll>false</scroll>
 						<visible>ListItem.IsPlaying</visible>
 						<animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(10) + ![ListItem.IsSelected | ListItem.IsPlaying]">Conditional</animation>
@@ -3014,20 +3038,9 @@
 							<posy>2</posy>
 							<width>1122</width>
 							<height>62</height>
-							<texture border="150,1,150,1">views/other/black-focus.png</texture>
+							<texture border="4">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!Skin.HasSetting(LiveTVBlack)</visible>
-						</control>
-						<control type="image">
-							<posx>27</posx>
-							<posy>2</posy>
-							<width>1122</width>
-							<height>62</height>
-							<texture border="150,1,150,1">views/other/white-focus.png</texture>
-							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
-							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="image">
 							<posx>42</posx>
@@ -3371,20 +3384,9 @@
 							<posy>2</posy>
 							<width>1750</width>
 							<height>68</height>
-							<texture border="150,1,150,1">views/other/black-focus.png</texture>
+							<texture border="4">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>!Skin.HasSetting(LiveTVBlack)</visible>
-						</control>
-						<control type="image">
-							<posx>7</posx>
-							<posy>2</posy>
-							<width>1750</width>
-							<height>68</height>
-							<texture border="150,1,150,1">views/other/white-focus.png</texture>
-							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
-							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="group">
 							<animation type="Focus" condition="Container(14).OnNext | Container(14).OnPrevious" reversible="false">
@@ -3686,26 +3688,13 @@
 						<control type="image">
 							<posx>27</posx>
 							<posy>2</posy>
-							<width>1270</width>
+							<width>1750</width>
 							<height>68</height>
 							<!-- <aspectratio>stretch</aspectratio> -->
-							<texture border="150,1,150,1">views/other/black-focus.png</texture>
+							<texture border="4">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="2,68" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="2,-68" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
 							<visible>Control.HasFocus(17)</visible>
-							<visible>!Skin.HasSetting(LiveTVBlack)</visible>
-						</control>
-						<control type="image">
-							<posx>27</posx>
-							<posy>2</posy>
-							<width>1270</width>
-							<height>68</height>
-							<!-- <aspectratio>stretch</aspectratio> -->
-							<texture border="150,1,150,1">views/other/white-focus.png</texture>
-							<animation effect="slide" start="2,68" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
-							<animation effect="slide" start="2,-68" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
-							<visible>Control.HasFocus(17)</visible>
-							<visible>Skin.HasSetting(LiveTVBlack)</visible>
 						</control>
 						<control type="group">
 							<animation type="Focus" condition="Container(17).OnNext | Container(17).OnPrevious" reversible="false">
@@ -3721,8 +3710,8 @@
 								<font>Font-Condensed-S35</font>
 								<align>right</align>
 								<label>$INFO[ListItem.Date]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>Control.HasFocus(17)</visible>
 							</control>
@@ -3749,8 +3738,8 @@
 								<font>Font-Condensed-S33</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>Control.HasFocus(17)</visible>
 								<animation effect="slide" end="-265" time="0" condition="IsEmpty(ListItem.Date)">Conditional</animation>
@@ -3779,8 +3768,8 @@
 								<font>Font-Condensed-S35</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!ListItem.IsRecording + !ListItem.HasTimer + Control.HasFocus(17)</visible>
 							</control>
@@ -3807,8 +3796,8 @@
 								<font>Font-Condensed-S35</font>
 								<align>right</align>
 								<label>$INFO[ListItem.ChannelName]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								<textcolor>$VAR[PVRFocusedTextColourVars2]</textcolor>
+								<selectedcolor>$VAR[PVRFocusedTextColourVars2]</selectedcolor>
 								<scroll>false</scroll>
 								<visible>ListItem.IsRecording | ListItem.HasTimer + Control.HasFocus(17)</visible>
 							</control>
