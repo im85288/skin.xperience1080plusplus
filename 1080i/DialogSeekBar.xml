@@ -365,7 +365,7 @@
 								<posy>-97</posy>
 								<width>320</width>
 								<height>500</height>
-								<texture background="true" fallback="views/fallbacks/DefaultAudio.png/medium.png">$INFO[Player.Art(thumb)]</texture>
+								<texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[Player.Art(thumb)]</texture>
 								<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
 								<bordersize>5</bordersize>
 								<aspectratio>scale</aspectratio>
@@ -530,10 +530,22 @@
 									<posy>-94</posy>
 									<width>320</width>
 									<height>500</height>
-									<texture background="true" fallback="views/fallbacks/DefaultAudio.png/medium.png">$INFO[Player.Art(tvshow.poster)]</texture>
+									<texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[Player.Art(tvshow.poster)]</texture>
 									<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
 									<bordersize>5</bordersize>
 									<aspectratio>scale</aspectratio>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>-94</posy>
+									<width>320</width>
+									<height>500</height>
+									<texture background="true" fallback="views/fallbacks/DefaultVideo.png/medium.png">$INFO[Player.Art(thumb)]</texture>
+									<bordertexture flipy="true" border="2">views/list/panel/panel2.png</bordertexture>
+									<bordersize>5</bordersize>
+									<aspectratio>scale</aspectratio>
+									<visible>Skin.HasSetting(plexbmc)</visible>
 								</control>
 							</control>
 							<!--<control type="image"> <posx>10</posx> <posy>125</posy> <width>361</width> <height>140</height> <texture background="true">$INFO[Player.Art(tvshow.clearlogo)]</texture> <aspectratio>stretch</aspectratio> <visible>stringcompare(Skin.String(OSDTVShowsImage),clearlogo) + !IsEmpty(Player.Art(tvshow.clearlogo))</visible> </control> -->
