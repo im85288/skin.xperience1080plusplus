@@ -1930,6 +1930,81 @@
 					<height>290</height>
 					<visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
 				</control>
+				
+				<control type="wraplist" id="7891">
+					<posx>1205</posx>
+					<posy>-20</posy>
+					<width>616</width>
+					<height>290</height>
+					<viewtype label="List">List</viewtype>
+					<scrolltime tween="cubic" easing="out">300</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<visible allowhiddenfocus="true">IntegerGreaterThan(Container(7891).NumItems,0)</visible>
+					<include>visiblehidefadeinfodelayvisible</include>
+					<itemlayout width="616" height="290">
+					</itemlayout>
+					<focusedlayout width="616" height="290">
+					</focusedlayout>
+					<content>
+						<include>PvrWidget.1.TrendingShows</include>
+					</content>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="image">
+					<posx>1205</posx>
+					<posy>-20</posy>
+					<width>616</width>
+					<height>290</height>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<texture background="true">$INFO[Container(7891).ListItem.ActualIcon]</texture>
+					<fadetime>800</fadetime>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="image">
+					<description>Title overlay</description>
+					<posx>1205</posx>
+					<posy>206</posy>
+					<width>616</width>
+					<height>64</height>
+					<texture border="7">windows/home/tile-overlay-r.png</texture>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="button">
+					<description>Title label</description>
+					<posx>1225</posx>
+					<posy>206</posy>
+					<width>596</width>
+					<height>64</height>
+					<label>$INFO[Container(7891).ListItem.Label]</label>
+					<label2>$INFO[Container(7891).ListItem.Label2, ★ ,]</label2>
+					<font>Font-Condensed-S29-B</font>
+					<disabledcolor>aawhite</disabledcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<enable>false</enable>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="image">
+					<posx>1205</posx>
+					<posy>-20</posy>
+					<width>616</width>
+					<height>40</height>
+					<texture border="0">windows/common/black_content2.png</texture>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="label">
+					<posx>1205</posx>
+					<posy>-45</posy>
+					<width>616</width>
+					<height>86</height>
+					<label>Trending Shows</label>
+					<textcolor>eewhite</textcolor>
+					<font>Font-Condensed-S38</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
 				<control type="label">
 					<posx>200</posx>
 					<posy>-20</posy>

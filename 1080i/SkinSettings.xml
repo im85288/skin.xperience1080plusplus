@@ -609,6 +609,23 @@
 						<onclick>ReloadSkin()</onclick>
 						<label>Use curved tiles</label>
 					</control>
+					<control type="radiobutton" id="2017">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
+						<selected>Skin.HasSetting(plexUseXbmcMusicLibrary)</selected>
+						<onclick>Skin.ToggleSetting(plexUseXbmcMusicLibrary)</onclick>
+						<label>Plex - Use Xbmc Music Library</label>
+						<visibile>Skin.HasSetting(plexbmc)</visibile>
+					</control>
+					<control type="radiobutton" id="2018">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
+						<selected>Skin.HasSetting(ShowLargerSpotlight)</selected>
+						<onclick>Skin.ToggleSetting(ShowLargerSpotlight)</onclick>
+						<label>Show larger spotlight in Home</label>
+					</control>
 					<control type="radiobutton" id="2003">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>

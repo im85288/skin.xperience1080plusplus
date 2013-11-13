@@ -3457,7 +3457,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.1.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.1.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.1.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="2">
 			<onclick>noop</onclick>
@@ -3467,7 +3467,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.2.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.2.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.2.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="3">
 			<onclick>noop</onclick>
@@ -3477,7 +3477,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.3.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.3.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.3.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="4">
 			<onclick>noop</onclick>
@@ -3487,7 +3487,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.4.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.4.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.4.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="5">
 			<onclick>noop</onclick>
@@ -3497,7 +3497,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.5.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.5.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.5.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="6">
 			<onclick>noop</onclick>
@@ -3507,7 +3507,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.6.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.6.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.6.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="7">
 			<onclick>noop</onclick>
@@ -3517,7 +3517,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.7.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.7.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.7.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="8">
 			<onclick>noop</onclick>
@@ -3527,7 +3527,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.8.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.8.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.8.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="9">
 			<onclick>noop</onclick>
@@ -3537,7 +3537,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.9.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.9.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.9.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="10">
 			<onclick>noop</onclick>
@@ -3547,7 +3547,7 @@
 			<property name="year">$INFO[Window.Property(RandomAlbum.10.Year)]</property>
 			<property name="Play">$INFO[Window.Property(RandomAlbum.10.Play)]</property>
 			<visible>!IsEmpty(Window.Property(RandomAlbum.10.Play))</visible>
-			<visible>!Skin.HasSetting(plexbmc)</visible>
+			<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] </visible>
 		</item>
 		<item id="11">
 			<onclick>noop</onclick>
@@ -3557,7 +3557,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.1.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.1.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.1.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="12">
 			<onclick>noop</onclick>
@@ -3566,7 +3566,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.2.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.2.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.2.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="13">
 			<onclick>noop</onclick>
@@ -3575,7 +3575,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.3.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.3.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.3.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="14">
 			<onclick>noop</onclick>
@@ -3584,7 +3584,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.4.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.4.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.4.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="15">
 			<onclick>noop</onclick>
@@ -3593,7 +3593,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.5.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.5.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.5.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="16">
 			<onclick>noop</onclick>
@@ -3602,7 +3602,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.6.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.6.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.6.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="17">
 			<onclick>noop</onclick>
@@ -3611,7 +3611,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.7.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.7.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.7.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="18">
 			<onclick>noop</onclick>
@@ -3620,7 +3620,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.8.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.8.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.8.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="19">
 			<onclick>noop</onclick>
@@ -3629,7 +3629,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.9.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.9.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.9.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 		<item id="20">
 			<onclick>noop</onclick>
@@ -3638,7 +3638,7 @@
 			<label2>$INFO[Window(Home).Property(Plexbmc.LatestAlbum.10.Title)]</label2>
 			<property name="Play">$INFO[Window(Home).Property(Plexbmc.LatestAlbum.10.Path)]</property>
 			<visible>!IsEmpty(Window(Home).Property(Plexbmc.LatestAlbum.10.Title))</visible>
-			<visible>Skin.HasSetting(plexbmc)</visible>
+			<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 		</item>
 	</include>
 	<include name="HomeWidget.5.Widgets.Recent">

@@ -1,6 +1,7 @@
 <window id="600">
 	<defaultcontrol>32</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=trendingshows)</onload>
 	<controls>
 		<include>CommonPVRItems</include>
 		<include>PVRHeader</include>
