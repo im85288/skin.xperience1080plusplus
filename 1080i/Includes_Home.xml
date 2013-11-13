@@ -2873,9 +2873,9 @@
 						</content>
 					</control>
 					<control type="image">
-						<posx>268</posx>
+						<posx>268</posx> 
 						<posy>-21</posy>
-						<width>614</width>
+						<width>614</width> 
 						<height>614</height>
 						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
@@ -2885,7 +2885,22 @@
 						<animation type="Hidden">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles)</visible>
+						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(ShowLargerSpotlight)</visible>
+					</control>
+					<control type="image">
+						<posx>-121</posx> 
+						<posy>-21</posy>
+						<width>1003</width> 
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
+						<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+						</animation>
+						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles) + Skin.HasSetting(ShowLargerSpotlight)</visible>
 					</control>
 					<control type="image">
 						<posx>846</posx>
