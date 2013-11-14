@@ -1877,21 +1877,48 @@
 							<visible allowhiddenfocus="true">IntegerGreaterThan(Container(5022).NumItems,0)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
 							<itemlayout width="572" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>572</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>572</width>
+									<height>572</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(plexbmc)</visible>
+								</control>
 							</itemlayout>
 							<focusedlayout width="572" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>572</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>572</width>
+									<height>572</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(plexbmc)</visible>
+								</control>
 							</focusedlayout>
 							<content>
 								<include>HomeWidget.1</include>
 							</content>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>572</width>
-							<height>572</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture background="true" diffuse="views/newgloss/tile-572.png">$INFO[Container(5022).ListItem.Icon]</texture>
-							<fadetime>800</fadetime>
 						</control>
 						<control type="image">
 							<description>Title overlay</description>
@@ -2133,22 +2160,49 @@
 							<pagecontrol>5024</pagecontrol>
 							<visible allowhiddenfocus="true">IntegerGreaterThan(Container(50222).NumItems,0)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
-							<itemlayout width="572" height="572">
+							<itemlayout width="961" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>961</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>961</width>
+									<height>572</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(plexbmc)</visible>
+								</control>
 							</itemlayout>
-							<focusedlayout width="572" height="572">
+							<focusedlayout width="961" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>961</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>961</width>
+									<height>572</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(plexbmc)</visible>
+								</control>
 							</focusedlayout>
 							<content>
 								<include>HomeWidget.1</include>
 							</content>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>961</width>
-							<height>572</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture background="true" diffuse="views/newgloss/tile-572.png">$INFO[Container(50222).ListItem.Icon]</texture>
-							<fadetime>800</fadetime>
 						</control>
 						<control type="image">
 							<description>Title overlay</description>
@@ -2873,9 +2927,9 @@
 						</content>
 					</control>
 					<control type="image">
-						<posx>268</posx> 
+						<posx>268</posx>
 						<posy>-21</posy>
-						<width>614</width> 
+						<width>614</width>
 						<height>614</height>
 						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
@@ -2888,9 +2942,9 @@
 						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(ShowLargerSpotlight)</visible>
 					</control>
 					<control type="image">
-						<posx>-121</posx> 
+						<posx>-121</posx>
 						<posy>-21</posy>
-						<width>1003</width> 
+						<width>1003</width>
 						<height>614</height>
 						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
@@ -3978,9 +4032,20 @@
 							<posy>0</posy>
 							<width>671</width>
 							<height>572</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" diffuse="views/newgloss/tile-671-572.png">$INFO[Container(3022).ListItem.ActualIcon]</texture>
+							<fadetime>800</fadetime>
+							<visible>!Skin.HasSetting(plexbmc)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>671</width>
+							<height>572</height>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<texture background="true" diffuse="views/newgloss/tile-671-572.png">$INFO[Container(3022).ListItem.ActualIcon]</texture>
 							<fadetime>800</fadetime>
+							<visible>Skin.HasSetting(plexbmc)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -8800,7 +8865,7 @@
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
-						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft condition="!Skin.HasSetting(HomePrograms)">625</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">425</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePictures)">1025</onleft>
