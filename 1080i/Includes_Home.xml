@@ -2113,12 +2113,12 @@
 					<control type="group" id="502">
 						<visible>Skin.HasSetting(ShowLargerSpotlight)</visible>
 						<description>Spotlight (random items)</description>
-						<posx>-100</posx>
+						<posx>-24</posx>
 						<posy>0</posy>
 						<control type="button" id="5021">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>961</width>
+							<width>885</width>
 							<height>572</height>
 							<onfocus>CancelAlarm(HomeTileMove,true)</onfocus>
 							<onfocus>CancelAlarm(HomeTileMoveTwo,true)</onfocus>
@@ -2142,14 +2142,14 @@
 						<control type="image">
 							<posx>-5</posx>
 							<posy>-5</posy>
-							<width>971</width>
+							<width>895</width>
 							<height>582</height>
 							<texture border="7">windows/home/tile.png</texture>
 						</control>
 						<control type="wraplist" id="50222">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>961</width>
+							<width>885</width>
 							<height>572</height>
 							<onup>525</onup>
 							<ondown>80</ondown>
@@ -2160,11 +2160,11 @@
 							<pagecontrol>5024</pagecontrol>
 							<visible allowhiddenfocus="true">IntegerGreaterThan(Container(50222).NumItems,0)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
-							<itemlayout width="961" height="572">
+							<itemlayout width="885" height="572">
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>961</width>
+									<width>885</width>
 									<height>572</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -2173,18 +2173,18 @@
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>961</width>
+									<width>885</width>
 									<height>572</height>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
 									<visible>Skin.HasSetting(plexbmc)</visible>
 								</control>
 							</itemlayout>
-							<focusedlayout width="961" height="572">
+							<focusedlayout width="885" height="572">
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>961</width>
+									<width>885</width>
 									<height>572</height>
 									<aspectratio>scale</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -2193,7 +2193,7 @@
 								<control type="image">
 									<posx>0</posx>
 									<posy>0</posy>
-									<width>961</width>
+									<width>885</width>
 									<height>572</height>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 									<texture background="true">$INFO[ListItem.Icon]</texture>
@@ -2208,7 +2208,7 @@
 							<description>Title overlay</description>
 							<posx>0</posx>
 							<posy>508</posy>
-							<width>961</width>
+							<width>885</width>
 							<height>64</height>
 							<texture border="5">windows/home/tile-overlay-r.png</texture>
 						</control>
@@ -2238,7 +2238,7 @@
 								<description>Loading label</description>
 								<posx>20</posx>
 								<posy>508</posy>
-								<width>921</width>
+								<width>845</width>
 								<height>64</height>
 								<label>$LOCALIZE[41564] "$VAR[SpotlightLabelVAR]"...</label>
 								<font>Font-Condensed-S29-B</font>
@@ -2252,7 +2252,7 @@
 							<description>Title label</description>
 							<posx>20</posx>
 							<posy>508</posy>
-							<width>921</width>
+							<width>845</width>
 							<height>64</height>
 							<label>$INFO[Container(50222).ListItem.Label]</label>
 							<label2>$INFO[Container(50222).ListItem.Label2, ★ ,]</label2>
@@ -2268,7 +2268,7 @@
 							<description>Title label</description>
 							<posx>20</posx>
 							<posy>508</posy>
-							<width>921</width>
+							<width>845</width>
 							<height>64</height>
 							<label>$INFO[Container(50222).ListItem.Label]</label>
 							<label2>$INFO[Container(50222).ListItem.Label2, ★ ,]</label2>
@@ -2283,7 +2283,7 @@
 							<description>Title label</description>
 							<posx>20</posx>
 							<posy>508</posy>
-							<width>921</width>
+							<width>845</width>
 							<height>64</height>
 							<label>$INFO[Container(50222).ListItem.Label]</label>
 							<label2>$INFO[Container(50222).ListItem.Label2, ★ ,]</label2>
@@ -2297,7 +2297,7 @@
 						<control type="label">
 							<posx>0</posx>
 							<posy>576</posy>
-							<width>961</width>
+							<width>885</width>
 							<height>25</height>
 							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
@@ -2311,7 +2311,7 @@
 						<control type="label">
 							<posx>0</posx>
 							<posy>576</posy>
-							<width>961</width>
+							<width>885</width>
 							<height>25</height>
 							<font>Font-Condensed-S21-B</font>
 							<shadowcolor>mod-shadow</shadowcolor>
@@ -2327,7 +2327,7 @@
 							<include>visiblehidefadeinfodelayvisible</include>
 							<control type="image">
 								<description>Scrollbar background</description>
-								<posx>861</posx>
+								<posx>785</posx>
 								<posy>585</posy>
 								<width>96</width>
 								<height>6</height>
@@ -2337,7 +2337,7 @@
 							</control>
 							<control type="image">
 								<description>Scrollbar background</description>
-								<posx>861</posx>
+								<posx>785</posx>
 								<posy>585</posy>
 								<width>96</width>
 								<height>6</height>
@@ -2347,7 +2347,7 @@
 							</control>
 							<control type="scrollbar" id="5024">
 								<description>Scrollbar</description>
-								<posx>861</posx>
+								<posx>785</posx>
 								<posy>585</posy>
 								<width>96</width>
 								<height>6</height>
@@ -2359,7 +2359,7 @@
 							</control>
 							<control type="scrollbar" id="5024">
 								<description>Scrollbar</description>
-								<posx>861</posx>
+								<posx>785</posx>
 								<posy>585</posy>
 								<width>96</width>
 								<height>6</height>
@@ -2371,7 +2371,7 @@
 							</control>
 							<control type="scrollbar" id="5024">
 								<description>Scrollbar</description>
-								<posx>861</posx>
+								<posx>785</posx>
 								<posy>585</posy>
 								<width>96</width>
 								<height>6</height>
@@ -2386,7 +2386,7 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>961</width>
+							<width>885</width>
 							<height>572</height>
 							<texture border="1">windows/common/black.png</texture>
 							<visible>Window.IsActive(contextmenu) + Control.HasFocus(5021)</visible>
@@ -2942,9 +2942,9 @@
 						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(ShowLargerSpotlight)</visible>
 					</control>
 					<control type="image">
-						<posx>-121</posx>
+						<posx>-46</posx>
 						<posy>-21</posy>
-						<width>1003</width>
+						<width>928</width>
 						<height>614</height>
 						<texture border="40">windows/home/tile-fo.png</texture>
 						<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
