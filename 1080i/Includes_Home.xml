@@ -1773,7 +1773,7 @@
 					<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)  + Skin.HasSetting(plexbmc)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)  + !Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomePictures)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
-					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
+					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 					<onright>Control.Move(20,1)</onright>
 					<onright condition="!Skin.HasSetting(HomeMovies)">225</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">325</onright>
@@ -1929,7 +1929,7 @@
 							<texture border="5">windows/home/tile-overlay-r.png</texture>
 						</control>
 						<control type="group" id="5023">
-							<visible>!Control.IsVisible(5022)</visible>
+							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
 							<include>visiblehidefadeinfo</include>
 							<control type="image">
 								<description>Loading Back</description>
@@ -2213,7 +2213,8 @@
 							<texture border="5">windows/home/tile-overlay-r.png</texture>
 						</control>
 						<control type="group" id="5023">
-							<visible>!Control.IsVisible(50222)</visible>
+							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
+							</visible>
 							<include>visiblehidefadeinfo</include>
 							<control type="image">
 								<description>Loading Back</description>
@@ -2414,7 +2415,7 @@
 							<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)  + Skin.HasSetting(plexbmc)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)  + !Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomePictures)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
-							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
+							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 							<onright condition="!Skin.HasSetting(HomeMovies)">201</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">301</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows) + Skin.HasSetting(plexbmc)">1101</onright>
@@ -2482,7 +2483,8 @@
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
 						</control>
 						<control type="group" id="5033">
-							<visible>!Control.IsVisible(5032)</visible>
+							<visible>!Control.IsVisible(5032) + [[stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget2.Loaded))] | [!stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
+							</visible>
 							<include>visiblehidefadeinfo</include>
 							<control type="image">
 								<description>Loading Back</description>

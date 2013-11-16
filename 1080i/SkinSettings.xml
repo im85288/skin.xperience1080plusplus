@@ -1603,9 +1603,8 @@
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
 						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
-						<selected>Skin.HasSetting(BackgroundOpacity)</selected>
-						<onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
-						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
+						<selected>Skin.HasSetting(MoreBackgroundOpacity)</selected>
+						<onclick>Skin.ToggleSetting(MoreBackgroundOpacity)</onclick>
 						<onclick>Skin.Reset(LessBackgroundOpacity)</onclick>
 						<label>Show more background</label>
 					</control>
@@ -1615,7 +1614,7 @@
 						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
 						<selected>Skin.HasSetting(LessBackgroundOpacity)</selected>
 						<onclick>Skin.ToggleSetting(LessBackgroundOpacity)</onclick>
-						<onclick>Skin.Reset(BackgroundOpacity)</onclick>
+						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
 						<label>Show less background</label>
 					</control>
 					<control type="radiobutton" id="3092">

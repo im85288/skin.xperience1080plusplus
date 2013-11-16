@@ -39,10 +39,10 @@
 				<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 			</control>
 			<control type="image">
-				<posx>1038</posx>
+				<posx>1048</posx>
 				<posy>370</posy>
 				<height>420</height>
-				<width>584</width>
+				<width>564</width>
 				<texture border="4">views/list/panel/solidblackpanel.png</texture>
 				<visible>Skin.HasSetting(LiveTVBlack)</visible>
 			</control>
