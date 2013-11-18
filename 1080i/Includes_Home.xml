@@ -1929,7 +1929,8 @@
 							<texture border="5">windows/home/tile-overlay-r.png</texture>
 						</control>
 						<control type="group" id="5023">
-							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]</visible>
+							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
+							</visible>
 							<include>visiblehidefadeinfo</include>
 							<control type="image">
 								<description>Loading Back</description>
@@ -2448,6 +2449,7 @@
 							<scrolltime tween="cubic" easing="out">800</scrolltime>
 							<orientation>horizontal</orientation>
 							<preloaditems>2</preloaditems>
+							<pagecontrol>5034</pagecontrol>
 							<visible allowhiddenfocus="true">IntegerGreaterThan(Container(5032).NumItems,0)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
 							<itemlayout width="382" height="572">
@@ -3115,6 +3117,17 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png" diffuse="views/newgloss/tile-382-572.png">$INFO[Container(2022).ListItem.ActualIcon]</texture>
 							<fadetime>800</fadetime>
+							<visible>!Skin.HasSetting(plexbmc)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>382</width>
+							<height>572</height>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png" diffuse="views/newgloss/tile-382-572.png">$INFO[Container(2022).ListItem.ActualIcon]</texture>
+							<fadetime>800</fadetime>
+							<visible>Skin.HasSetting(plexbmc)</visible>
 						</control>
 						<control type="image">
 							<description>Title overlay</description>
