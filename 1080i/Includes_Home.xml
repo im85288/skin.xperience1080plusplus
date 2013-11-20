@@ -1927,6 +1927,16 @@
 							<width>572</width>
 							<height>64</height>
 							<texture border="5">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>572</width>
+							<height>64</height>
+							<texture border="5">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="5023">
 							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
@@ -2212,6 +2222,16 @@
 							<width>885</width>
 							<height>64</height>
 							<texture border="5">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>885</width>
+							<height>64</height>
+							<texture border="5">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="5023">
 							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
@@ -2483,6 +2503,16 @@
 							<width>382</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>382</width>
+							<height>64</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="5033">
 							<visible>!Control.IsVisible(5032) + [[stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget2.Loaded))] | [!stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
@@ -3136,6 +3166,16 @@
 							<width>382</width>
 							<height>66</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>506</posy>
+							<width>382</width>
+							<height>66</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="2023">
 							<visible>!Control.IsVisible(2022)</visible>
@@ -4076,6 +4116,16 @@
 							<width>671</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>671</width>
+							<height>64</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="3023">
 							<visible>!Control.IsVisible(3022)</visible>
@@ -4999,6 +5049,16 @@
 							<width>671</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>671</width>
+							<height>64</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="11023">
 							<visible>!Control.IsVisible(11022)</visible>
@@ -6238,6 +6298,16 @@
 								<width>772</width>
 								<height>64</height>
 								<texture border="7">windows/home/tile-overlay-r.png</texture>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<description>Title overlay</description>
+								<posx>0</posx>
+								<posy>508</posy>
+								<width>772</width>
+								<height>64</height>
+								<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="group" id="10023">
 								<visible>!Control.IsVisible(10022)</visible>
@@ -6443,7 +6513,13 @@
 						<onleft condition="!System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">201</onleft>
 						<onleft condition="!System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">503</onleft>
 						<onup>1025</onup>
-						<onright>1002</onright>
+						<onright condition="Skin.HasSetting(plexbmc)">1002</onright>
+						<onright condition="!Skin.HasSetting(plexbmc)">CancelAlarm(HomeTileMoveTwo,true)</onright>
+						<onright condition="!Skin.HasSetting(plexbmc)">Control.Move(20,1)</onright>
+						<onright condition="!Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
+						<onright condition="!Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomeMusic)">401</onright>
+						<onright condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">601</onright>
+						<onright condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)">701</onright>
 						<ondown>80</ondown>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
@@ -6927,6 +7003,16 @@
 							<width>572</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>572</width>
+							<height>64</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="4023">
 							<visible>!Control.IsVisible(4022)</visible>
