@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.xperience1080plusplus" version="2.3.3" name="Xperience1080++" provider-name="im85288">
+<addon id="skin.xperience1080plusplus" version="2.3.4" name="Xperience1080++" provider-name="im85288">
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0" />
 		<import addon="service.skin.widgets" version="0.0.25" />
