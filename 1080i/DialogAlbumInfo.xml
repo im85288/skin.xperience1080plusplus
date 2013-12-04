@@ -26,7 +26,7 @@
 				<height>100</height>
 				<label>$INFO[ListItem.Artist]</label>
 				<font>Font-Condensed-S64</font>
-				<textcolor>mod-infotags</textcolor>
+				<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<visible>Container.Content(artists) + !Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog)</visible>
@@ -40,7 +40,7 @@
 				<height>100</height>
 				<label>$INFO[ListItem.Artist]</label>
 				<font>Font-Condensed-S64</font>
-				<textcolor>mod-infotags</textcolor>
+				<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<visible>Container.Content(artists) + [Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
@@ -55,7 +55,7 @@
 				<height>100</height>
 				<label>$INFO[ListItem.Album]</label>
 				<font>Font-Condensed-S64</font>
-				<textcolor>mod-infotags</textcolor>
+				<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<visible>Container.Content(albums) + !Player.HasMedia + !Window.IsActive(infodialog) + !Window.IsActive(extendedprogressdialog)</visible>
@@ -69,7 +69,7 @@
 				<height>100</height>
 				<label>$INFO[ListItem.Album]</label>
 				<font>Font-Condensed-S64</font>
-				<textcolor>mod-infotags</textcolor>
+				<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<visible>Container.Content(albums) + [Player.HasMedia | Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog)]</visible>
@@ -106,7 +106,7 @@
 					<height>60</height>
 					<label>$LOCALIZE[41324]</label>
 					<font>Font-Condensed-S38</font>
-					<textcolor>mod-infotags</textcolor>
+					<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(9334) | Control.HasFocus(50) | [!IsEmpty(Window(3004).Property(ChooseArt)) + [Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml)]]">Conditional</animation>
@@ -120,7 +120,7 @@
 					<height>60</height>
 					<label>$LOCALIZE[41304]</label>
 					<font>Font-Condensed-S38</font>
-					<textcolor>mod-infotags</textcolor>
+					<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(70) | Control.HasFocus(9333) | Control.HasFocus(9335)">Conditional</animation>
@@ -134,7 +134,7 @@
 					<height>60</height>
 					<label>$LOCALIZE[41325]</label>
 					<font>Font-Condensed-S38</font>
-					<textcolor>mod-infotags</textcolor>
+					<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition=" Control.HasFocus(9334) | Control.HasFocus(50) | [!IsEmpty(Window(3004).Property(ChooseArt)) + [Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml)]]">Conditional</animation>
@@ -148,7 +148,7 @@
 					<height>60</height>
 					<label>$LOCALIZE[41303]</label>
 					<font>Font-Condensed-S38</font>
-					<textcolor>mod-infotags</textcolor>
+					<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 					<align>left</align>
 					<scroll>false</scroll>
 					<animation effect="fade" start="100" end="50" time="200" tween="sine" easing="inout" condition="Control.HasFocus(70) | Control.HasFocus(9333) | Control.HasFocus(9335)">Conditional</animation>
@@ -242,7 +242,7 @@
 							<posy>0</posy>
 							<width>440</width>
 							<height>81</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="0,82" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
 							<animation effect="slide" start="0,-82" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
 							<include>visiblehidefadeinfo</include>
@@ -311,7 +311,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[557]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -319,7 +319,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Artist]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -337,7 +337,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[21893]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -347,7 +347,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Property(Artist_Born)]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -365,7 +365,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[21894]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -375,7 +375,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Property(Artist_Formed)]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -390,7 +390,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[515]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -398,7 +398,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Genre]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>no</scroll>
 							</control>
 						</control>
@@ -413,7 +413,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[176]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -421,7 +421,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Property(Artist_Style)]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -437,7 +437,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[21887][/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="textbox">
@@ -448,7 +448,7 @@
 								<height>330</height>
 								<font>Font-Condensed-S40</font>
 								<align>justify</align>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<pagecontrol>70</pagecontrol>
 								<autoscroll time="2000" delay="10000" repeat="10000">!Control.HasFocus(70)</autoscroll>
 								<label>$INFO[ListItem.Property(Artist_Description)]</label>
@@ -461,7 +461,7 @@
 								<font>Font-Condensed-S40</font>
 								<align>left</align>
 								<label>$LOCALIZE[547]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 								<visible>IsEmpty(ListItem.Property(Artist_Description))</visible>
 							</control>
@@ -479,7 +479,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[558]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -487,7 +487,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Album]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -504,7 +504,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[557]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -514,7 +514,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Artist]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -529,7 +529,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[562]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -537,7 +537,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Year]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -552,7 +552,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[515]:[/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -560,7 +560,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label fallback="416">$INFO[ListItem.Genre]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>no</scroll>
 							</control>
 						</control>
@@ -576,7 +576,7 @@
 								<font>Font-Condensed-S34</font>
 								<align>left</align>
 								<label>[B]$LOCALIZE[183][/B]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="textbox">
@@ -587,7 +587,7 @@
 								<height>330</height>
 								<font>Font-Condensed-S40</font>
 								<align>justify</align>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<pagecontrol>70</pagecontrol>
 								<autoscroll time="2000" delay="10000" repeat="10000">!Control.HasFocus(70)</autoscroll>
 								<label>$INFO[ListItem.Property(Album_Description)]</label>
@@ -600,7 +600,7 @@
 								<font>Font-Condensed-S40</font>
 								<align>left</align>
 								<label>$LOCALIZE[414]</label>
-								<textcolor>mod-infotags-l</textcolor>
+								<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 								<scroll>false</scroll>
 								<visible>IsEmpty(ListItem.Property(Album_Description))</visible>
 							</control>
@@ -669,8 +669,8 @@
 							<height>60</height>
 							<label>$VAR[ArtistInfoDiscography]</label>
 							<font>Font-Condensed-S34</font>
-							<textcolor>mod-infotags-l</textcolor>
-							<selectedcolor>mod-infotags</selectedcolor>
+							<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[BackgroundViewsMainListTextColourVars]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>no</scroll>
@@ -685,8 +685,8 @@
 							<height>60</height>
 							<label>$VAR[AlbumInfoTracks]</label>
 							<font>Font-Condensed-S34</font>
-							<textcolor>mod-infotags-l</textcolor>
-							<selectedcolor>mod-infotags</selectedcolor>
+							<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[BackgroundViewsMainListTextColourVars]</selectedcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<scroll>no</scroll>
@@ -699,9 +699,9 @@
 							<width>980</width>
 							<height>60</height>
 							<label>$VAR[ArtistInfoDiscography]</label>
-							<textcolor>mod-infotags</textcolor>
-							<selectedcolor>mod-infotags</selectedcolor>
-							<font>Font-Condensed-S34</font>
+							<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[BackgroundViewsMainListTextColourVars]</selectedcolor>
+							<font>Font-Condensed-S36-B</font>
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>
@@ -716,9 +716,9 @@
 							<width>980</width>
 							<height>60</height>
 							<label>$VAR[AlbumInfoTracks]</label>
-							<textcolor>mod-infotags</textcolor>
-							<selectedcolor>mod-infotags</selectedcolor>
-							<font>Font-Condensed-S34</font>
+							<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
+							<selectedcolor>$VAR[BackgroundViewsMainListTextColourVars]</selectedcolor>
+							<font>Font-Condensed-S36-B</font>
 							<align>left</align>
 							<aligny>center</aligny>
 						</control>

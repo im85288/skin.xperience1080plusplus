@@ -53,9 +53,24 @@
 							<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
 							<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
 							<overlaytexture>-</overlaytexture>
-							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)]
-							</visible>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)]</visible>
 							<colordiffuse>black</colordiffuse>
+							<visible>!Skin.HasSetting(ColourProgressBar)</visible>
+						</control>
+						<control type="progress">
+							<posx>70</posx>
+							<posy>-40</posy>
+							<width>1250</width>
+							<height>25</height>
+							<info>Player.CacheLevel</info>
+							<texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
+							<midtexture border="1">osd/fullscreen/progress/cache-mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)]</visible>
+							<colordiffuse>$VAR[ProgressBarColour]</colordiffuse>
+							<visible>Skin.HasSetting(ColourProgressBar)</visible>
 						</control>
 						<control type="progress">
 							<posx>180</posx>
@@ -71,6 +86,23 @@
 							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]
 							</visible>
 							<colordiffuse>black</colordiffuse>
+							<visible>!Skin.HasSetting(ColourProgressBar)</visible>
+						</control>
+							<control type="progress">
+							<posx>180</posx>
+							<posy>0</posy>
+							<width>1010</width>
+							<height>25</height>
+							<info>Player.CacheLevel</info>
+							<texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
+							<midtexture border="1">osd/fullscreen/progress/cache-mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/cache-left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/cache-right.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]
+							</visible>
+							<colordiffuse>$VAR[ProgressBarColour]</colordiffuse>
+							<visible>Skin.HasSetting(ColourProgressBar)</visible>
 						</control>
 						<control type="progress">
 							<posx>0</posx>
@@ -93,12 +125,29 @@
 							<info>Player.ProgressCache</info>
 							<reveal>true</reveal>
 							<texturebg>osd/fullscreen/progress/back.png</texturebg>
-							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
-							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
-							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
 							<colordiffuse>black</colordiffuse>
 							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)]</visible>
 							<overlaytexture>-</overlaytexture>
+							<visible>!Skin.HasSetting(ColourProgressBar)</visible>
+						</control>
+						<control type="progress">
+							<posx>70</posx>
+							<posy>-40</posy>
+							<width>1250</width>
+							<height>25</height>
+							<info>Player.ProgressCache</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
+							<colordiffuse>$VAR[ProgressBarColour]</colordiffuse>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)]</visible>
+							<overlaytexture>-</overlaytexture>
+							<visible>Skin.HasSetting(ColourProgressBar)</visible>
 						</control>
 						<control type="progress">
 							<posx>180</posx>
@@ -108,12 +157,29 @@
 							<info>Player.ProgressCache</info>
 							<reveal>true</reveal>
 							<texturebg>osd/fullscreen/progress/back.png</texturebg>
-							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
-							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
-							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
 							<colordiffuse>black</colordiffuse>
 							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
 							<overlaytexture>-</overlaytexture>
+							<visible>!Skin.HasSetting(ColourProgressBar)</visible>
+						</control>
+						<control type="progress">
+							<posx>180</posx>
+							<posy>0</posy>
+							<width>1010</width>
+							<height>25</height>
+							<info>Player.ProgressCache</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
+							<colordiffuse>$VAR[ProgressBarColour]</colordiffuse>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
+							<overlaytexture>-</overlaytexture>
+							<visible>Skin.HasSetting(ColourProgressBar)</visible>
 						</control>
 						<control type="progress">
 							<posx>0</posx>
@@ -123,9 +189,9 @@
 							<info>Player.ProgressCache</info>
 							<reveal>true</reveal>
 							<texturebg>osd/fullscreen/progress/back.png</texturebg>
-							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
-							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
-							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
 							<colordiffuse>black</colordiffuse>
 							<overlaytexture>-</overlaytexture>
 							<visible>!VideoPlayer.Content(episodes) + !VideoPlayer.Content(movies) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(musicvideos)</visible>
@@ -152,12 +218,29 @@
 							<info>Player.Progress</info>
 							<reveal>true</reveal>
 							<texturebg>osd/fullscreen/progress/back.png</texturebg>
-							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
-							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
-							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
 							<overlaytexture>-</overlaytexture>
 							<colordiffuse>black</colordiffuse>
 							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd) ]</visible>
+							<visible>!Skin.HasSetting(ColourProgressBar)</visible>
+						</control>
+						<control type="progress" id="23">
+							<posx>70</posx>
+							<posy>-40</posy>
+							<width>1250</width>
+							<height>25</height>
+							<info>Player.Progress</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<colordiffuse>$VAR[ProgressBarColour]</colordiffuse>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd) ]</visible>
+							<visible>Skin.HasSetting(ColourProgressBar)</visible>
 						</control>
 						<control type="progress" id="23">
 							<posx>180</posx>
@@ -167,12 +250,29 @@
 							<info>Player.Progress</info>
 							<reveal>true</reveal>
 							<texturebg>osd/fullscreen/progress/back.png</texturebg>
-							<midtexture>osd/fullscreen/progress/mid-tvshows.png</midtexture>
-							<lefttexture>osd/fullscreen/progress/left-tvshows.png</lefttexture>
-							<righttexture>osd/fullscreen/progress/right-tvshows.png</righttexture>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
 							<overlaytexture>-</overlaytexture>
 							<colordiffuse>black</colordiffuse>
 							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
+							<visible>!Skin.HasSetting(ColourProgressBar)</visible>
+						</control>
+						<control type="progress" id="23">
+							<posx>180</posx>
+							<posy>0</posy>
+							<width>1010</width>
+							<height>25</height>
+							<info>Player.Progress</info>
+							<reveal>true</reveal>
+							<texturebg>osd/fullscreen/progress/back.png</texturebg>
+							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+							<righttexture>osd/fullscreen/progress/right.png</righttexture>
+							<overlaytexture>-</overlaytexture>
+							<colordiffuse>$VAR[ProgressBarColour]</colordiffuse>
+							<visible>[VideoPlayer.Content(episodes) | VideoPlayer.Content(movies) | VideoPlayer.Content(LiveTV) | VideoPlayer.Content(musicvideos)] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
+							<visible>Skin.HasSetting(ColourProgressBar)</visible>
 						</control>
 						<control type="label">
 							<visible>[Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)] + !VideoPlayer.Content(LiveTV)</visible>

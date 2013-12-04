@@ -1776,6 +1776,14 @@
 						<onclick>Skin.ToggleSetting(UseNonColourFlags.Enabled)</onclick>
 						<label>Use black and white flags</label>
 					</control>
+						<control type="radiobutton" id="8010">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
+						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
+						<selected>Skin.HasSetting(ColourProgressBar)</selected>
+						<onclick>Skin.ToggleSetting(ColourProgressBar)</onclick>
+						<label>Use tile colour for progress bar on OSD</label>
+					</control>
 				</control>
 				<!-- Background Settings -->
 				<control type="grouplist" id="5">
