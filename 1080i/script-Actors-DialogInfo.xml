@@ -331,7 +331,7 @@
 							<posy>0</posy>
 							<width>440</width>
 							<height>81</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="0,82" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9000).OnPrevious">Focus</animation>
 							<animation effect="slide" start="0,-82" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9000).OnNext">Focus</animation>
 							<include>visiblehidefadeinfo</include>

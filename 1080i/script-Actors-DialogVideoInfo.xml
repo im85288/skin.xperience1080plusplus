@@ -387,7 +387,7 @@
 							<posy>0</posy>
 							<width>634</width>
 							<height>82</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="0,83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
 							<animation effect="slide" start="0,-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
 							<include>visiblehidefadeinfo</include>
@@ -1216,7 +1216,7 @@
 							<posy>0</posy>
 							<width>634</width>
 							<height>82</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture border="5">views/other/focus-mod.png</texture>
 							<animation effect="slide" start="0,83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnPrevious">Focus</animation>
 							<animation effect="slide" start="0,-83" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(9333).OnNext">Focus</animation>
 							<include>visiblehidefadeinfo</include>
