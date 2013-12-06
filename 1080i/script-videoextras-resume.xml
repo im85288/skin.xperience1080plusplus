@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="buttonMenu">
+	<defaultcontrol>9001</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="button" id="9001">
+			<description>Make sure we hit the first button in the group list and not the close window button</description>
+			<posx>-16</posx>
+			<posy>-16</posy>
+			<width>4</width>
+			<height>4</height>
+			<label>-</label>
+			<font>-</font>
+			<onfocus>down</onfocus>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>2</ondown>
+		</control>
+		<control type="grouplist" id="9000">
+			<posx>1310</posx>
+			<posy>-30</posy>
+			<width>340</width>
+			<height>720</height>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<itemgap>0</itemgap>
+			<align>center</align>
+			<control type="group" id="1">
+				<width>340</width>
+				<height>30</height>
+				<control type="image">
+					<posx>-48</posx>
+					<posy>-34</posy>
+					<width>448</width>
+					<height>227</height>
+					<texture border="39">dialogs/default/bg.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="image">
+					<posx>-20</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>150</height>
+					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>!Skin.HasSetting(DarkerPanels)</visible>
+				</control>
+				<control type="label">
+					<description>Heading</description>
+					<posx>110</posx>
+					<posy>-70</posy>
+					<width>100</width>
+					<font>Font-Condensed-S34</font>
+					<label>Resume</label>
+					<textcolor>mod-infotags</textcolor>
+					<align>center</align>
+				</control>
+				<control type="image">
+					<posx>130</posx>
+					<posy>-55</posy>
+					<width>80</width>
+					<height>60</height>
+					<texture>dialogs/default/arrow.png</texture>
+				</control>
+			</control>
+			<control type="button" id="2">
+				<description>Resume button</description>
+				<width>340</width>
+				<height>40</height>
+				<textcolor>mod-infotags</textcolor>
+				<focusedcolor>eewhite</focusedcolor>
+				<align>center</align>
+				<textwidth>290</textwidth>
+				<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+				<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<font>Font-Condensed-S34</font>
+				<label>$ADDON[script.videoextras 32104]</label>
+			</control>
+			<control type="button" id="40">
+				<description>Start from beginning button</description>
+				<width>340</width>
+				<height>40</height>
+				<textcolor>mod-infotags</textcolor>
+				<focusedcolor>eewhite</focusedcolor>
+				<align>center</align>
+				<textwidth>290</textwidth>
+				<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+				<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+				<pulseonselect>no</pulseonselect>
+				<font>Font-Condensed-S34</font>
+				<label>$ADDON[script.videoextras 32105]</label>
+			</control>
+		</control>
+	</controls>
+</window>
