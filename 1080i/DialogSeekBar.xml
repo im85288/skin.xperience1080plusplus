@@ -105,9 +105,9 @@
 							<visible>Skin.HasSetting(ColourProgressBar)</visible>
 						</control>
 						<control type="progress">
-							<posx>0</posx>
+							<posx>180</posx>
 							<posy>0</posy>
-							<width>1337</width>
+							<width>1010</width>
 							<height>25</height>
 							<info>Player.CacheLevel</info>
 							<texturebg>osd/fullscreen/progress/cache-back.png</texturebg>
@@ -182,9 +182,9 @@
 							<visible>Skin.HasSetting(ColourProgressBar)</visible>
 						</control>
 						<control type="progress">
-							<posx>0</posx>
+							<posx>180</posx>
 							<posy>0</posy>
-							<width>1337</width>
+							<width>1010</width>
 							<height>25</height>
 							<info>Player.ProgressCache</info>
 							<reveal>true</reveal>
@@ -196,20 +196,7 @@
 							<overlaytexture>-</overlaytexture>
 							<visible>!VideoPlayer.Content(episodes) + !VideoPlayer.Content(movies) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(musicvideos)</visible>
 						</control>
-						<control type="progress" id="23">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1337</width>
-							<height>25</height>
-							<info>Player.Progress</info>
-							<reveal>true</reveal>
-							<texturebg>osd/fullscreen/progress/back.png</texturebg>
-							<midtexture>osd/fullscreen/progress/mid.png</midtexture>
-							<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
-							<righttexture>osd/fullscreen/progress/right.png</righttexture>
-							<colordiffuse>black</colordiffuse>
-							<visible>!VideoPlayer.Content(episodes) + !VideoPlayer.Content(movies) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(musicvideos)</visible>
-						</control>
+						
 						<control type="progress" id="23">
 							<posx>70</posx>
 							<posy>-40</posy>
