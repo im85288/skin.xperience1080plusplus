@@ -1,0 +1,4 @@
+[B]2.3.8[/B]
+• Fixed progress bar display problem 
+• change artwork dialog harmonised
+• Bugfixes for change artwork 

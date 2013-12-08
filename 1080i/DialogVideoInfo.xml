@@ -36,7 +36,7 @@
 				<effect type="zoom" start="100" end="75" center="640,540" time="250" tween="sine" easing="inout" />
 				<effect type="slide" start="0" end="-2320" time="500" delay="0" tween="sine" easing="inout" />
 			</animation>
-			<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)]</visible>
+			<visible>!Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos)] + IsEmpty(Window(3004).Property(ChooseArt))</visible>
 			<!-- Fullscreen Fanart -->
 			<control type="group">
 				<visible>Control.HasFocus(9337)</visible>
