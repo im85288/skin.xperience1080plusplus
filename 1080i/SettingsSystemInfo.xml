@@ -78,8 +78,10 @@
 						<label>20037</label>
 						<width>338</width>
 						<height>77</height>
-						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[20037])</onfocus>
 					</control>
 					<control type="button" id="94">
@@ -87,8 +89,10 @@
 						<label>13277</label>
 						<width>338</width>
 						<height>77</height>
-						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[13277])</onfocus>
 					</control>
 					<control type="button" id="96">
@@ -96,8 +100,10 @@
 						<label>13279</label>
 						<width>338</width>
 						<height>77</height>
-						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[13279])</onfocus>
 					</control>
 					<control type="button" id="97">
@@ -105,8 +111,10 @@
 						<label>13280</label>
 						<width>338</width>
 						<height>77</height>
-						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[13280])</onfocus>
 					</control>
 					<control type="button" id="98">
@@ -114,8 +122,10 @@
 						<label>13281</label>
 						<width>338</width>
 						<height>77</height>
-						<include condition="!Skin.HasSetting(DarkerPanels">SettingsCategoryDefaultButtonVars</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[13281])</onfocus>
 					</control>
 					<control type="button" id="99">
@@ -123,8 +133,10 @@
 						<label>19191</label>
 						<width>338</width>
 						<height>77</height>
-						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
 						<onfocus>SetProperty(CurrentButtonLabel,$LOCALIZE[19191])</onfocus>
 					</control>
 				</control>

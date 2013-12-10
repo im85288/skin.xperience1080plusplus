@@ -189,7 +189,7 @@
 						<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
 						<disabledcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</disabledcolor>
 						<shadowcolor>20FFFFFF</shadowcolor>
-						<texturefocus border="2">dialogs/default/highlight-grey.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 						<texturenofocus>dialogs/default/separator.png</texturenofocus>
 					</control>
 				</control>
@@ -231,7 +231,7 @@
 				<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
 				<disabledcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</disabledcolor>
 				<focusedcolor>eewhite</focusedcolor>
-				<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 				<texturenofocus>dialogs/default/separator.png</texturenofocus>
 			</control>
 			<control type="radiobutton" id="4">
@@ -246,7 +246,7 @@
 				<focusedcolor>eewhite</focusedcolor>
 				<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
 				<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-				<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 				<texturenofocus>dialogs/default/separator.png</texturenofocus>
 			</control>
 			<control type="spincontrolex" id="5">
@@ -255,7 +255,7 @@
 				<texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
 				<textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
 				<texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-				<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 				<texturenofocus>dialogs/default/separator.png</texturenofocus>
 				<textcolor>$VAR[DarkerBackgroundDialogsMainTextColourVars]</textcolor>
 				<disabledcolor>$VAR[DarkerBackgroundDialogsDisabledTextColourVars]</disabledcolor>
@@ -278,7 +278,7 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<height>60</height>
-				<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 				<texturenofocus>dialogs/default/separator.png</texturenofocus>
 				<sliderwidth>150</sliderwidth>
 				<sliderheight>28</sliderheight>
@@ -350,7 +350,7 @@
 					<description>Defaults</description>
 					<label>$LOCALIZE[409]</label>
 					<include>DialogButtonDimensions</include>
-					<texturefocus>buttons/options-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/options-fo-colour.png</texturefocus>
 					<texturenofocus>buttons/options-nf.png</texturenofocus>
 					<onleft>11</onleft>
 					<onright>10</onright>
@@ -572,7 +572,7 @@
 					<description>Defaults</description>
 					<label>$LOCALIZE[409]</label>
 					<include>DialogButtonDimensionsRightAlign</include>
-					<texturefocus>buttons/options-right-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/options-right-fo.png</texturefocus>
 					<texturenofocus>buttons/options-right-nf.png</texturenofocus>
 					<onleft>11</onleft>
 					<onright>10</onright>
@@ -873,7 +873,7 @@
 						<control type="image">
 							<width>644</width>
 							<height>60</height>
-							<texture border="2">dialogs/default/highlight.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 						</control>
 						<control type="group">
 							<visible>!ListItem.IsSelected</visible>
@@ -1046,7 +1046,7 @@
 						<control type="image">
 							<width>644</width>
 							<height>60</height>
-							<texture border="2">dialogs/default/highlight.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 						</control>
 						<control type="label">
 							<posx>80</posx>
@@ -2193,7 +2193,8 @@
 					<posx>473</posx>
 					<posy>218</posy>
 					<width>974</width>
-					<include>DialogHeaderMod</include>
+					<font>Font-Condensed-S34</font>
+					<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 					<label>-</label>
 					<align>center</align>
 				</control>
@@ -2313,7 +2314,7 @@
 							<control type="image">
 								<width>644</width>
 								<height>60</height>
-								<texture border="2">dialogs/default/highlight.png</texture>
+								<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							</control>
 							<control type="image">
 								<posx>5</posx>
@@ -2433,7 +2434,7 @@
 							<control type="image">
 								<width>644</width>
 								<height>60</height>
-								<texture border="2">dialogs/default/highlight.png</texture>
+								<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							</control>
 							<control type="image">
 								<posx>5</posx>
@@ -2519,7 +2520,7 @@
 						<posx>700</posx>
 						<description>Create Folder</description>
 						<label>$LOCALIZE[119]</label>
-						<texturefocus>buttons/folder-fo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/folder-fo-colour.png</texturefocus>
 						<texturenofocus>buttons/folder-nf.png</texturenofocus>
 						<include>DialogButtonDimensions</include>
 						<onleft>414</onleft>
@@ -2550,8 +2551,9 @@
 				<posx>88</posx>
 				<posy>144</posy>
 				<height>60</height>
-				<label>$INFO[Control.GetLabel(411),,: ]$INFO[Container(450).ListItem.Label,[COLOR=99FFFFFF],[/COLOR]]</label>
-				<include>DialogHeaderMod</include>
+				<label>$INFO[Control.GetLabel(411),,: ]$INFO[Container(450).ListItem.Label,,]</label>
+				<font>Font-Condensed-S34</font>
+				<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<textoffsetx>30</textoffsetx>
@@ -2567,7 +2569,7 @@
 				<height>60</height>
 				<label>Cover →</label>
 				<font>Font-Condensed-S45</font>
-				<textcolor>eewhite</textcolor>
+				<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<visible>StringCompare(Window(3004).Property(ChooseArt),poster)</visible>
@@ -2992,8 +2994,9 @@
 				<posx>88</posx>
 				<posy>144</posy>
 				<height>60</height>
-				<label>$INFO[Control.GetLabel(1),,: ]$INFO[Container(6).ListItem.Label,[COLOR=99FFFFFF],[/COLOR]]</label>
-				<include>DialogHeaderMod</include>
+				<label>$INFO[Control.GetLabel(1),,: ]$INFO[Container(6).ListItem.Label,,]</label>
+				<font>Font-Condensed-S34</font>
+				<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<textoffsetx>30</textoffsetx>
@@ -3009,7 +3012,7 @@
 				<height>60</height>
 				<label>Cover →</label>
 				<font>Font-Condensed-S45</font>
-				<textcolor>mod-infotags</textcolor>
+				<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
 				<align>left</align>
 				<scroll>false</scroll>
 				<visible>StringCompare(Window(3004).Property(ChooseArt),poster)</visible>

@@ -220,13 +220,17 @@
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
-			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVars</include>
-			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryDefaultButtonVarsDarkerBackground</include>
+			<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+			<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+			<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+			<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default Radio Button</description>
-			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVars</include>
-			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryRadioButtonVarsDarkerBackground</include>
+			<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+			<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+			<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+			<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default Spin Control</description>
@@ -234,7 +238,7 @@
 			<spinposx>20</spinposx>
 			<align>left</align>
 			<aligny>center</aligny>
-			<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="5">views/other/white-focus-mod.png</texturefocus>
 			<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
 			<textcolor>$VAR[DarkerBackgroundMainTextColourVars]</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -249,7 +253,7 @@
 			<spinposx>20</spinposx>
 			<align>left</align>
 			<aligny>center</aligny>
-			<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="5">views/other/white-focus-mod.png</texturefocus>
 			<texturenofocus border="90,3,90,3">views/list/other/separator3.png</texturenofocus>
 			<textcolor>$VAR[DarkerBackgroundMainTextColourVars]</textcolor>
 			<focusedcolor>white</focusedcolor>
@@ -260,8 +264,10 @@
 		</control>
 		<control type="button" id="10">
 			<description>Default Category Button</description>
-			<include condition="!Skin.HasSetting(DarkerPanels)">SettingsCategoryButtonVars</include>
-			<include condition="Skin.HasSetting(DarkerPanels)">SettingsCategoryButtonVarsDarkerBackground</include>
+			<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryButtonVarsNoColourFocus</include>
+			<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryButtonVarsColourFocus</include>
+			<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryButtonVarsDarkerBackgroundNoColourFocus</include>
+			<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryButtonVarsDarkerBackgroundColourFocus</include>
 		</control>
 		<control type="group" id="9000">
 			<posx>100</posx>
@@ -292,7 +298,8 @@
 				<posy>0</posy>
 				<width>394</width>
 				<height>111</height>
-				<texture border="5">views/other/focus-mod.png</texture>
+				<texture border="5">$VAR[FocusModVar]</texture>
+				<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 				<animation effect="slide" end="0,112" time="0" condition="ControlGroup(9000).HasFocus(21)">Conditional</animation>
 				<animation effect="slide" start="0,-112" end="0,0" time="300" tween="back" easing="out" condition="IsEmpty(Window.Property(Movement)) + ControlGroup(9000).HasFocus(20)" reversible="false">Conditional</animation>
 				<animation effect="slide" start="0,112" end="0,0" time="300" tween="back" easing="out" condition="!IsEmpty(Window.Property(Movement)) + ControlGroup(9000).HasFocus(20)" reversible="false">Conditional</animation>
@@ -328,7 +335,7 @@
 				<onleft>SetProperty(BounceLeft,1,Home)</onleft>
 				<onright>3</onright>
 			</control>
-		</control> 
+		</control>
 		<include>FadeBackground</include>
 		<include>Common-Info-NoOptions</include>
 	</controls>

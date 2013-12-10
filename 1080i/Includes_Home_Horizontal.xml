@@ -47,7 +47,7 @@
 					<onleft>21</onleft>
 					<onright>21</onright>
 					<aspect>keep</aspect>
-					<texturefocus>buttons/favourites_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/favourites_fo-colour.png</texturefocus>
 					<texturenofocus>buttons/favourites_nofo.png</texturenofocus>
 					<onclick>CancelAlarm(HomeTileMove,true)</onclick>
 					<onclick>CancelAlarm(HomeTileMoveTwo,true)</onclick>
@@ -116,7 +116,7 @@
 					<onleft>21</onleft>
 					<onright>21</onright>
 					<aspect>keep</aspect>
-					<texturefocus>buttons/favourites_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/favourites_fo-colour.png</texturefocus>
 					<texturenofocus>buttons/favourites_nofo.png</texturenofocus>
 					<onclick>CancelAlarm(HomeTileMove,true)</onclick>
 					<onclick>CancelAlarm(HomeTileMoveTwo,true)</onclick>

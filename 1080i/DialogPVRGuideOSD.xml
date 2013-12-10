@@ -211,7 +211,8 @@
 							<posy>0</posy>
 							<width>564</width>
 							<height>95</height>
-							<texture border="4">views/other/focus-mod.png</texture>
+							<texture border="4">$VAR[FocusModVar]</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<aspectratio>stretch</aspectratio>
 							<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 						</control>

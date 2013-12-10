@@ -202,7 +202,7 @@
 				<control type="button" id="6">
 					<posx>200</posx>
 					<description>Edit</description>
-					<texturefocus>buttons/options-fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/options-fo-colour.png</texturefocus>
 					<texturenofocus>buttons/options-nf.png</texturenofocus>
 					<include>DialogButtonDimensions</include>
 					<onleft>5</onleft>

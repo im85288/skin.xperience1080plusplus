@@ -49,9 +49,9 @@
                     <posy>0</posy>
                     <width>100</width>
                     <height>100</height>
-                    <texturefocus border="0,0,100,0">buttons/up-fo.png</texturefocus>
+                    <texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="0,0,100,0">buttons/up-fo-colour.png</texturefocus>
                     <texturenofocus border="0,0,100,0">buttons/up-nf.png</texturenofocus>
-                    <alttexturefocus border="0,0,100,0">buttons/down-fo.png</alttexturefocus>
+                    <alttexturefocus colordiffuse="$VAR[FocusModColourVar2]" border="0,0,100,0">buttons/down-fo-colour.png</alttexturefocus>
                     <alttexturenofocus border="0,0,100,0">buttons/down-nf.png</alttexturenofocus>
                     <usealttexture>!IsEmpty(Window(seekbar).Property(ExtendPlot))</usealttexture>
                     <onclick condition="IsEmpty(Window(seekbar).Property(ExtendPlot))">SetProperty(ExtendPlot,1,seekbar)</onclick>

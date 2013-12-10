@@ -1,0 +1,84 @@
+<includes>
+	<include name="PvrWidget.1.TrendingShows">
+		<item id="1">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.1.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.1.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.1.Rating)]$INFO[Window(Home).Property(TrendingShows.1.Year), • ,]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.1.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingMovies.1.Art(fanart)))</visible>
+		</item>
+		<item id="2">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.2.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.2.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.2.Rating)]$INFO[Window(Home).Property(TrendingShows.2.Year), • ,]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.2.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.2.Art(fanart)))</visible>
+		</item>
+		<item id="3">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.3.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.3.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.3.Rating)]$INFO[Window(Home).Property(TrendingShows.3.Year), • ,]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.3.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.3.Art(fanart)))</visible>
+		</item>
+		<item id="4">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.4.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.4.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.4.Rating)]$INFO[Window(Home).Property(TrendingShows.4.Year), • ,]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.4.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.4.Art(fanart)))</visible>
+		</item>
+		<item id="5">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.5.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.5.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.5.Rating)]$INFO[Window(Home).Property(TrendingShows.5.Year), • ,]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.5.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.5.Art(fanart)))</visible>
+		</item>
+		<item id="6">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.6.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.6.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.6.Rating)]$INFO[Window(Home).Property(TrendingShows.6.Year), • ,]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.6.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.6.Art(fanart)))</visible>
+		</item>
+		<item id="7">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.7.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.7.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.7.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.7.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.7.Art(fanart)))</visible>
+		</item>
+		<item id="8">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.8.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.8.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.8.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.8.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.8.Art(fanart)))</visible>
+		</item>
+		<item id="9">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.9.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.9.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.9.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.9.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.9.Art(fanart)))</visible>
+		</item>
+		<item id="10">
+			<onclick>noop</onclick>
+			<icon>$INFO[Window(Home).Property(TrendingShows.10.Art(fanart))]</icon>
+			<label>$INFO[Window(Home).Property(TrendingShows.10.Title)]</label>
+			<label2>$INFO[Window(Home).Property(TrendingShows.10.Rating)]</label2>
+			<property name="Play">ActivateWindow(videos,$INFO[Window(Home).Property(TrendingShows.10.Title),plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=, trailer],return)</property>
+			<visible>!IsEmpty(Window(Home).Property(TrendingShows.10.Art(fanart)))</visible>
+		</item>
+	</include>
+</includes>

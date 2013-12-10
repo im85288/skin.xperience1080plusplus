@@ -12,7 +12,8 @@
 					<width>100</width>
 					<height>100</height>
 					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
-					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen) + !Skin.HasSetting(ShowLargerSpotlight)">501</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen) + Skin.HasSetting(ShowLargerSpotlight)">502</onup>
 					<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
 					<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
 					<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
@@ -64,7 +65,8 @@
 					<width>100</width>
 					<height>100</height>
 					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
-					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen) + !Skin.HasSetting(ShowLargerSpotlight)">501</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen) + Skin.HasSetting(ShowLargerSpotlight)">502</onup>
 					<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
 					<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
 					<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
@@ -89,7 +91,7 @@
 					<ondown condition="Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
 					<onleft>21</onleft>
 					<onright>21</onright>
-					<texturefocus>buttons/favourites_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/favourites_fo-colour.png</texturefocus>
 					<texturenofocus>buttons/favourites_nofo.png</texturenofocus>
 					<onclick>CancelAlarm(HomeTileMove,true)</onclick>
 					<onclick>CancelAlarm(HomeTileMoveTwo,true)</onclick>
@@ -123,7 +125,8 @@
 					<width>100</width>
 					<height>100</height>
 					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
-					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen) + !Skin.HasSetting(ShowLargerSpotlight)">501</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen) + Skin.HasSetting(ShowLargerSpotlight)">502</onup>
 					<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
 					<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
 					<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
@@ -175,7 +178,8 @@
 					<width>100</width>
 					<height>100</height>
 					<onup condition="Container(20).HasFocus(1) + !Skin.HasSetting(ModAlternateHomeScreen)">101</onup>
-					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen)">501</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen) + !Skin.HasSetting(ShowLargerSpotlight)">501</onup>
+					<onup condition="Container(20).HasFocus(2) + !Skin.HasSetting(ModAlternateHomeScreen) + Skin.HasSetting(ShowLargerSpotlight)">502</onup>
 					<onup condition="Container(20).HasFocus(3) + !Skin.HasSetting(ModAlternateHomeScreen)">201</onup>
 					<onup condition="Container(20).HasFocus(4) + !Skin.HasSetting(ModAlternateHomeScreen)">301</onup>
 					<onup condition="Container(20).HasFocus(5) + !Skin.HasSetting(ModAlternateHomeScreen)">401</onup>
@@ -200,7 +204,7 @@
 					<ondown condition="Skin.HasSetting(ModAlternateHomeScreen)">525</ondown>
 					<onleft>21</onleft>
 					<onright>21</onright>
-					<texturefocus>buttons/favourites_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/favourites_fo-colour.png</texturefocus>
 					<texturenofocus>buttons/favourites_nofowhite.png</texturenofocus>
 					<onclick>CancelAlarm(HomeTileMove,true)</onclick>
 					<onclick>CancelAlarm(HomeTileMoveTwo,true)</onclick>
@@ -249,8 +253,8 @@
 		<width min="0" max="500">auto</width>
 		<height>100</height>
 		<font>Font-Condensed-S50</font>
-		<textcolor>blue</textcolor>
-		<focusedcolor>blue</focusedcolor>
+		<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
+		<focusedcolor>$VAR[FocusModHomeColourVar]</focusedcolor>
 		<align>left</align>
 		<aligny>top</aligny>
 	</include>
@@ -766,7 +770,7 @@
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(1)">Conditional</animation>
 				<visible>System.HasAddon(script.globalsearch) + !Skin.HasSetting(HomeSearch) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>[Container(20).HasFocus(1) + Control.HasFocus(125)]</visible>
-				<colordiffuse>blue</colordiffuse>
+				<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 			</control>
 			<control type="group">
 				<posx>0</posx>
@@ -827,7 +831,7 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<include>visiblehidefadeinfo</include>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(525) + Container(20).HasFocus(2)]">Conditional</animation>
-					<colordiffuse>blue</colordiffuse>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 					<visible>Skin.HasSetting(UseCurvedTiles) + Container(20).HasFocus(2)</visible>
 				</control>
 			</control>
@@ -918,7 +922,7 @@
 					<texture>windows/home/submenu-arrow.png</texture>
 					<include>visiblehidefadeinfo</include>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(225) + Container(20).HasFocus(3)]">Conditional</animation>
-					<colordiffuse>blue</colordiffuse>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 					<visible>Skin.HasSetting(UseCurvedTiles) + Container(20).HasFocus(3)</visible>
 				</control>
 			</control>
@@ -1004,7 +1008,7 @@
 					<height>38</height>
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(325) + Container(20).HasFocus(4)]">Conditional</animation>
-					<colordiffuse>blue</colordiffuse>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 					<visible>Skin.HasSetting(UseCurvedTiles) + [Control.HasFocus(325) + Container(20).HasFocus(4)]</visible>
 				</control>
 			</control>
@@ -1149,7 +1153,7 @@
 					<height>38</height>
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(1025) + Container(20).HasFocus(10)]">Conditional</animation>
-					<colordiffuse>blue</colordiffuse>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 					<visible>Skin.HasSetting(UseCurvedTiles) + [Control.HasFocus(1025) + Container(20).HasFocus(10)]</visible>
 				</control>
 			</control>
@@ -1265,7 +1269,7 @@
 					<height>38</height>
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(425) + Container(20).HasFocus(5)]">Conditional</animation>
-					<colordiffuse>blue</colordiffuse>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 					<visible>Skin.HasSetting(UseCurvedTiles) + [Control.HasFocus(425) + Container(20).HasFocus(5)]</visible>
 				</control>
 			</control>
@@ -1410,7 +1414,7 @@
 					<height>38</height>
 					<texture>windows/home/submenu-arrow.png</texture>
 					<animation effect="fade" start="100" end="0" time="300" tween="cubic" easing="inout" center="65,50" condition="![Control.HasFocus(825) + Container(20).HasFocus(8)]">Conditional</animation>
-					<colordiffuse>blue</colordiffuse>
+					<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 					<visible>Skin.HasSetting(UseCurvedTiles) + [Control.HasFocus(825) + Container(20).HasFocus(8)]</visible>
 				</control>
 			</control>
@@ -1473,7 +1477,7 @@
 				<texture>windows/home/settings.png</texture>
 				<animation effect="fade" start="100" end="40" time="300" tween="cubic" easing="inout" condition="!Container(20).HasFocus(8) | !Control.HasFocus(825)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="19,50" condition="!Container(20).HasFocus(8)">Conditional</animation>
-				<colordiffuse>blue</colordiffuse>
+				<colordiffuse>$VAR[FocusModHomeColourVar]</colordiffuse>
 				<visible>Skin.HasSetting(UseWhiteText) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>[Container(20).HasFocus(8) + Control.HasFocus(825)]</visible>
 			</control>
@@ -1611,6 +1615,7 @@
 					<onleft condition="!Window.IsVisible(3008)">SetProperty(BounceLeft,1,Home)</onleft>
 					<onright>AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onright>
 					<onright>AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onright>
+					<onright>AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onright>
 					<onright>Control.Move(20,1)</onright>
 					<onright>525</onright>
 					<onclick>SetProperty(HomeSearch,1)</onclick>
@@ -1735,8 +1740,10 @@
 							<onleft condition="!Window.IsVisible(3008)">SetProperty(BounceLeft,1,Home)</onleft>
 							<onright>AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onright>
 							<onright>AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onright>
+							<onright>AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onright>
 							<onright>Control.Move(20,1)</onright>
-							<onright>501</onright>
+							<onright condition="!Skin.HasSetting(ShowLargerSpotlight)">501</onright>
+							<onright condition="Skin.HasSetting(ShowLargerSpotlight)">502</onright>
 							<onup>125</onup>
 							<ondown>80</ondown>
 							<align>left</align>
@@ -1766,7 +1773,7 @@
 					<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)  + Skin.HasSetting(plexbmc)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)  + !Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomePictures)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
-					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
+					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 					<onright>Control.Move(20,1)</onright>
 					<onright condition="!Skin.HasSetting(HomeMovies)">225</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">325</onright>
@@ -1777,7 +1784,8 @@
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">625</onright>
 					<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)">725</onright>
 					<onup>ActivateWindow(3023)</onup>
-					<ondown>501</ondown>
+					<ondown condition="!Skin.HasSetting(ShowLargerSpotlight)">501</ondown>
+					<ondown condition="Skin.HasSetting(ShowLargerSpotlight)">502</ondown>
 					<onclick condition="System.HasMediaDVD">PlayDVD</onclick>
 				</control>
 				<control type="group" id="550">
@@ -1824,6 +1832,7 @@
 						<texture>windows/home/item-shadow.png</texture>
 					</control>
 					<control type="group" id="502">
+						<visible>!Skin.hasSetting(ShowLargerSpotlight)</visible>
 						<description>Spotlight (random items)</description>
 						<posx>289</posx>
 						<posy>0</posy>
@@ -1868,21 +1877,48 @@
 							<visible allowhiddenfocus="true">IntegerGreaterThan(Container(5022).NumItems,0)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
 							<itemlayout width="572" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>572</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>572</width>
+									<height>572</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(plexbmc)</visible>
+								</control>
 							</itemlayout>
 							<focusedlayout width="572" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>572</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>572</width>
+									<height>572</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(plexbmc)</visible>
+								</control>
 							</focusedlayout>
 							<content>
 								<include>HomeWidget.1</include>
 							</content>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>572</width>
-							<height>572</height>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<texture background="true" diffuse="views/newgloss/tile-572.png">$INFO[Container(5022).ListItem.Icon]</texture>
-							<fadetime>800</fadetime>
 						</control>
 						<control type="image">
 							<description>Title overlay</description>
@@ -1891,9 +1927,20 @@
 							<width>572</width>
 							<height>64</height>
 							<texture border="5">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>572</width>
+							<height>64</height>
+							<texture border="5">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="5023">
-							<visible>!Control.IsVisible(5022)</visible>
+							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
+							</visible>
 							<include>visiblehidefadeinfo</include>
 							<control type="image">
 								<description>Loading Back</description>
@@ -1968,7 +2015,7 @@
 							<label>$INFO[Container(5022).ListItem.Label]</label>
 							<label2>$INFO[Container(5022).ListItem.Label2, ★ ,]</label2>
 							<font>Font-Condensed-S29-B</font>
-							<disabledcolor>blue</disabledcolor>
+							<disabledcolor>$VAR[FocusModHomeColourVar]</disabledcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
@@ -2074,6 +2121,301 @@
 							<animation effect="fade" time="300" start="90" end="0" tween="sine" easing="in">Hidden</animation>
 						</control>
 					</control>
+					<control type="group" id="502">
+						<visible>Skin.HasSetting(ShowLargerSpotlight)</visible>
+						<description>Spotlight (random items)</description>
+						<posx>-24</posx>
+						<posy>0</posy>
+						<control type="button" id="5021">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>885</width>
+							<height>572</height>
+							<onfocus>CancelAlarm(HomeTileMove,true)</onfocus>
+							<onfocus>CancelAlarm(HomeTileMoveTwo,true)</onfocus>
+							<onup>AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onup>
+							<onup>525</onup>
+							<ondown>Control.Move(50222,1)</ondown>
+							<onleft>AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
+							<onleft condition="System.HasAddon(script.globalsearch)">CancelAlarm(HomeTileMove,true)</onleft>
+							<onleft condition="System.HasAddon(script.globalsearch)">CancelAlarm(HomeTileMoveTwo,true)</onleft>
+							<onleft condition="System.HasAddon(script.globalsearch)">CancelAlarm(HomeTileMoveThree,true)</onleft>
+							<onleft condition="System.HasAddon(script.globalsearch)">Control.Move(20,-1)</onleft>
+							<onleft condition="System.HasAddon(script.globalsearch)">101</onleft>
+							<onleft condition="!System.HasAddon(script.globalsearch) + !Window.IsVisible(3008)">80</onleft>
+							<onright>AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onright>
+							<onright>503</onright>
+							<onclick condition="System.HasAddon(service.skin.widgets)">$INFO[Container(50222).ListItem.Property(Play)]</onclick>
+							<onback>SetProperty(SingleDialog,widget1,3003)</onback>
+							<onback>SetProperty(Dialog,$LOCALIZE[41168],skinsettings)</onback>
+							<onback>ActivateWindow(3003)</onback>
+						</control>
+						<control type="image">
+							<posx>-5</posx>
+							<posy>-5</posy>
+							<width>895</width>
+							<height>582</height>
+							<texture border="7">windows/home/tile.png</texture>
+						</control>
+						<control type="wraplist" id="50222">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>885</width>
+							<height>572</height>
+							<onup>525</onup>
+							<ondown>80</ondown>
+							<viewtype label="List">List</viewtype>
+							<scrolltime tween="cubic" easing="out">800</scrolltime>
+							<orientation>horizontal</orientation>
+							<preloaditems>2</preloaditems>
+							<pagecontrol>5024</pagecontrol>
+							<visible allowhiddenfocus="true">IntegerGreaterThan(Container(50222).NumItems,0)</visible>
+							<include>visiblehidefadeinfodelayvisible</include>
+							<itemlayout width="885" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>885</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>885</width>
+									<height>572</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(plexbmc)</visible>
+								</control>
+							</itemlayout>
+							<focusedlayout width="885" height="572">
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>885</width>
+									<height>572</height>
+									<aspectratio>scale</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>!Skin.HasSetting(plexbmc)</visible>
+								</control>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>885</width>
+									<height>572</height>
+									<aspectratio scalediffuse="false">stretch</aspectratio>
+									<texture background="true">$INFO[ListItem.Icon]</texture>
+									<visible>Skin.HasSetting(plexbmc)</visible>
+								</control>
+							</focusedlayout>
+							<content>
+								<include>HomeWidget.1</include>
+							</content>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>885</width>
+							<height>64</height>
+							<texture border="5">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>885</width>
+							<height>64</height>
+							<texture border="5">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="group" id="5023">
+							<visible>!Control.IsVisible(5022) + [[stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget1.Loaded))] | [!stringcompare(Skin.String(HomeWidget.1.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.1.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
+							</visible>
+							<include>visiblehidefadeinfo</include>
+							<control type="image">
+								<description>Loading Back</description>
+								<posx>212</posx>
+								<posy>180</posy>
+								<width>148</width>
+								<height>148</height>
+								<texture>windows/home/loading-back.png</texture>
+								<aspectratio align="center">keep</aspectratio>
+							</control>
+							<control type="image">
+								<description>Loading</description>
+								<posx>212</posx>
+								<posy>180</posy>
+								<width>148</width>
+								<height>148</height>
+								<texture>windows/home/loading.png</texture>
+								<animation effect="rotate" center="auto" start="360" end="0" time="1500" loop="true" condition="Control.IsVisible(5023)">Conditional</animation>
+								<aspectratio align="center">keep</aspectratio>
+							</control>
+							<control type="label">
+								<description>Loading label</description>
+								<posx>20</posx>
+								<posy>508</posy>
+								<width>845</width>
+								<height>64</height>
+								<label>$LOCALIZE[41564] "$VAR[SpotlightLabelVAR]"...</label>
+								<font>Font-Condensed-S29-B</font>
+								<textcolor>aawhite</textcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>845</width>
+							<height>64</height>
+							<label>$INFO[Container(50222).ListItem.Label]</label>
+							<label2>$INFO[Container(50222).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>aawhite</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(50222) + !Skin.HasSetting(UseCurvedTiles)</visible>
+							<include>visiblehidefadeinfodelayvisible</include>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>845</width>
+							<height>64</height>
+							<label>$INFO[Container(50222).ListItem.Label]</label>
+							<label2>$INFO[Container(50222).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>aawhite</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(50222) + Skin.HasSetting(UseCurvedTiles) + !ControlGroup(502).HasFocus</visible>
+						</control>
+						<control type="button">
+							<description>Title label</description>
+							<posx>20</posx>
+							<posy>508</posy>
+							<width>845</width>
+							<height>64</height>
+							<label>$INFO[Container(50222).ListItem.Label]</label>
+							<label2>$INFO[Container(50222).ListItem.Label2, ★ ,]</label2>
+							<font>Font-Condensed-S29-B</font>
+							<disabledcolor>$VAR[FocusModHomeColourVar]</disabledcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<enable>false</enable>
+							<visible>Control.IsVisible(50222) + Skin.HasSetting(UseCurvedTiles) + ControlGroup(502).HasFocus</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>576</posy>
+							<width>885</width>
+							<height>25</height>
+							<font>Font-Condensed-S21-B</font>
+							<shadowcolor>mod-shadow</shadowcolor>
+							<textcolor>mod-infotags</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>5</textoffsetx>
+							<label>$VAR[SpotlightLabelVAR]</label>
+							<visible>!Skin.HasSetting(UseWhiteText)</visible>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>576</posy>
+							<width>885</width>
+							<height>25</height>
+							<font>Font-Condensed-S21-B</font>
+							<shadowcolor>mod-shadow</shadowcolor>
+							<textcolor>darkerbackground</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textoffsetx>5</textoffsetx>
+							<label>$VAR[SpotlightLabelVAR]</label>
+							<visible>Skin.HasSetting(UseWhiteText)</visible>
+						</control>
+						<control type="group">
+							<visible>Control.IsVisible(50222)</visible>
+							<include>visiblehidefadeinfodelayvisible</include>
+							<control type="image">
+								<description>Scrollbar background</description>
+								<posx>785</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<texture border="6,0,6,0">views/other/scrollbar-sq.png</texture>
+								<colordiffuse>55FFFFFF</colordiffuse>
+								<visible>!Skin.HasSetting(ColourScrollbar)</visible>
+							</control>
+							<control type="image">
+								<description>Scrollbar background</description>
+								<posx>785</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<texture border="6,0,6,0">views/other/scrollbar-whitesq.png</texture>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(homecolor.name)]</colordiffuse>
+							</control>
+							<control type="scrollbar" id="5024">
+								<description>Scrollbar</description>
+								<posx>785</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<orientation>horizontal</orientation>
+								<texturesliderbar border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbar>
+								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-sq.png</texturesliderbarfocus>
+								<showonepage>false</showonepage>
+								<visible>!Skin.HasSetting(ColourScrollbar) + !Skin.HasSetting(UseWhiteText)</visible>
+							</control>
+							<control type="scrollbar" id="5024">
+								<description>Scrollbar</description>
+								<posx>785</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<orientation>horizontal</orientation>
+								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
+								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
+								<showonepage>false</showonepage>
+								<visible>!Skin.HasSetting(ColourScrollbar) + Skin.HasSetting(UseWhiteText)</visible>
+							</control>
+							<control type="scrollbar" id="5024">
+								<description>Scrollbar</description>
+								<posx>785</posx>
+								<posy>585</posy>
+								<width>96</width>
+								<height>6</height>
+								<orientation>horizontal</orientation>
+								<texturesliderbar border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbar>
+								<texturesliderbarfocus border="6,0,6,0">views/other/scrollbar-whitesq.png</texturesliderbarfocus>
+								<showonepage>false</showonepage>
+								<visible>Skin.HasSetting(ColourScrollbar)</visible>
+								<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
+							</control>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>885</width>
+							<height>572</height>
+							<texture border="1">windows/common/black.png</texture>
+							<visible>Window.IsActive(contextmenu) + Control.HasFocus(5021)</visible>
+							<animation effect="fade" time="300" start="0" end="90" tween="sine" easing="out">Visible</animation>
+							<animation effect="fade" time="300" start="90" end="0" tween="sine" easing="in">Hidden</animation>
+						</control>
+					</control>
 					<control type="group" id="503">
 						<description>Ongoing tv shows</description>
 						<posx>867</posx>
@@ -2094,7 +2436,7 @@
 							<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)  + Skin.HasSetting(plexbmc)">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows)  + !Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomePictures)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
-							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
+							<onright condition="Skin.HasSetting(HomeMovies) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 							<onright condition="!Skin.HasSetting(HomeMovies)">201</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows)">301</onright>
 							<onright condition="Skin.HasSetting(HomeMovies) + !Skin.HasSetting(HomeTVShows) + Skin.HasSetting(plexbmc)">1101</onright>
@@ -2127,6 +2469,7 @@
 							<scrolltime tween="cubic" easing="out">800</scrolltime>
 							<orientation>horizontal</orientation>
 							<preloaditems>2</preloaditems>
+							<pagecontrol>5034</pagecontrol>
 							<visible allowhiddenfocus="true">IntegerGreaterThan(Container(5032).NumItems,0)</visible>
 							<include>visiblehidefadeinfodelayvisible</include>
 							<itemlayout width="382" height="572">
@@ -2160,9 +2503,20 @@
 							<width>382</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>382</width>
+							<height>64</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="5033">
-							<visible>!Control.IsVisible(5032)</visible>
+							<visible>!Control.IsVisible(5032) + [[stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + IsEmpty(Window(Home).Property(SkinWidgets_Running))] | [stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + IsEmpty(Window(Home).Property(HomeWidget2.Loaded))] | [!stringcompare(Skin.String(HomeWidget.2.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.2.Type),script.randomandlastitems) + !IsEmpty(Window(Home).Property(extendedinfo_running))]]
+							</visible>
 							<include>visiblehidefadeinfo</include>
 							<control type="image">
 								<description>Loading Back</description>
@@ -2237,7 +2591,7 @@
 							<label>$INFO[Container(5032).ListItem.Label]</label>
 							<label2>$INFO[Container(5032).ListItem.Label2, ★ ,]</label2>
 							<font>Font-Condensed-S29-B</font>
-							<disabledcolor>blue</disabledcolor>
+							<disabledcolor>$VAR[FocusModHomeColourVar]</disabledcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
@@ -2344,6 +2698,7 @@
 						</control>
 					</control>
 					<control type="panel" id="501">
+						<visible>!Skin.HasSetting(ShowLargerSpotlight)</visible>
 						<posx>-24</posx>
 						<posy>-24</posy>
 						<width>331</width>
@@ -2508,7 +2863,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -2618,7 +2973,22 @@
 						<animation type="Hidden">
 							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
 						</animation>
-						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles)</visible>
+						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(ShowLargerSpotlight)</visible>
+					</control>
+					<control type="image">
+						<posx>-46</posx>
+						<posy>-21</posy>
+						<width>928</width>
+						<height>614</height>
+						<texture border="40">windows/home/tile-fo.png</texture>
+						<colordiffuse>$INFO[Skin.String(homebordercolor.name)]</colordiffuse>
+						<animation type="Visible">
+							<effect type="fade" start="0" end="100" time="200" tween="sine" easing="in" />
+						</animation>
+						<animation type="Hidden">
+							<effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
+						</animation>
+						<visible>ControlGroup(502).HasFocus + !Skin.HasSetting(UseCurvedTiles) + Skin.HasSetting(ShowLargerSpotlight)</visible>
 					</control>
 					<control type="image">
 						<posx>846</posx>
@@ -2649,6 +3019,7 @@
 					<onleft>CancelAlarm(HomeTileMoveThree,true)</onleft>
 					<onleft>AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft>AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft>AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft>525</onleft>
 					<onright>CancelAlarm(HomeTileMove,true)</onright>
@@ -2776,6 +3147,17 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png" diffuse="views/newgloss/tile-382-572.png">$INFO[Container(2022).ListItem.ActualIcon]</texture>
 							<fadetime>800</fadetime>
+							<visible>!Skin.HasSetting(plexbmc)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>382</width>
+							<height>572</height>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<texture background="true" fallback="views/fallbacks/DefaultVideo.png/large.png" diffuse="views/newgloss/tile-382-572.png">$INFO[Container(2022).ListItem.ActualIcon]</texture>
+							<fadetime>800</fadetime>
+							<visible>Skin.HasSetting(plexbmc)</visible>
 						</control>
 						<control type="image">
 							<description>Title overlay</description>
@@ -2784,6 +3166,16 @@
 							<width>382</width>
 							<height>66</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>506</posy>
+							<width>382</width>
+							<height>66</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="2023">
 							<visible>!Control.IsVisible(2022)</visible>
@@ -2860,7 +3252,7 @@
 							<label>$INFO[Container(2022).ListItem.Label]</label>
 							<label2>$INFO[Container(2022).ListItem.Label2, ★ ,]</label2>
 							<font>Font-Condensed-S29-B</font>
-							<disabledcolor>blue</disabledcolor>
+							<disabledcolor>$VAR[FocusModHomeColourVar]</disabledcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
@@ -2973,6 +3365,7 @@
 						<height>620</height>
 						<onleft>CancelAlarm(HomeTileMove,true)</onleft>
 						<onleft>AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft>AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft>503</onleft>
 						<onright>202</onright>
@@ -3142,7 +3535,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -3168,7 +3561,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -3442,7 +3835,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>blue</textcolor>
+											<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -3576,6 +3969,7 @@
 					<onleft condition="!Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="!Skin.HasSetting(HomeMovies)">225</onleft>
 					<onleft condition="Skin.HasSetting(HomeMovies)">525</onleft>
@@ -3693,9 +4087,20 @@
 							<posy>0</posy>
 							<width>671</width>
 							<height>572</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" diffuse="views/newgloss/tile-671-572.png">$INFO[Container(3022).ListItem.ActualIcon]</texture>
+							<fadetime>800</fadetime>
+							<visible>!Skin.HasSetting(plexbmc)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>671</width>
+							<height>572</height>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<texture background="true" diffuse="views/newgloss/tile-671-572.png">$INFO[Container(3022).ListItem.ActualIcon]</texture>
 							<fadetime>800</fadetime>
+							<visible>Skin.HasSetting(plexbmc)</visible>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -3711,6 +4116,16 @@
 							<width>671</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>671</width>
+							<height>64</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="3023">
 							<visible>!Control.IsVisible(3022)</visible>
@@ -3787,7 +4202,7 @@
 							<label>$INFO[Container(3022).ListItem.Label]</label>
 							<label2>$INFO[Container(3022).ListItem.Label2, ★ ,]</label2>
 							<font>Font-Condensed-S29-B</font>
-							<disabledcolor>blue</disabledcolor>
+							<disabledcolor>$VAR[FocusModHomeColourVar]</disabledcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
@@ -3901,6 +4316,7 @@
 						<onleft>CancelAlarm(HomeTileMove,true)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft condition="Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeMovies)">203</onleft>
 						<onleft condition="Skin.HasSetting(HomeMovies)">503</onleft>
@@ -4071,7 +4487,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -4097,7 +4513,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -4408,7 +4824,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>blue</textcolor>
+											<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -4503,6 +4919,7 @@
 					<onleft condition="Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="!Skin.HasSetting(HomeTVShows)">325</onleft>
 					<onleft condition="Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">225</onleft>
@@ -4632,6 +5049,16 @@
 							<width>671</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>671</width>
+							<height>64</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="11023">
 							<visible>!Control.IsVisible(11022)</visible>
@@ -4708,7 +5135,7 @@
 							<label>$INFO[Container(11022).ListItem.Label]</label>
 							<label2>$INFO[Container(11022).ListItem.Label2, ★ ,]</label2>
 							<font>Font-Condensed-S29-B</font>
-							<disabledcolor>blue</disabledcolor>
+							<disabledcolor>$VAR[FocusModHomeColourVar]</disabledcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
@@ -4824,10 +5251,11 @@
 						<onleft condition="Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeTVShows)">303</onleft>
 						<onleft condition="Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">201</onleft>
-						<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">501</onleft>
+						<onleft condition="Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">503</onleft>
 						<onright>1102</onright>
 						<onup>1125</onup>
 						<ondown>80</ondown>
@@ -4995,7 +5423,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5021,7 +5449,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5048,7 +5476,7 @@
 						<content>
 							<item id="0">
 								<label>$LOCALIZE[19019]</label>
-								<icon>windows/home/icons/cloud.png</icon>
+								<icon>windows/home/icons/plexchannel.png</icon>
 								<onclick>ActivateWindow(Videos,"plugin://plugin.video.plexbmc/?mode=22&amp;url=http://online%2fsystem%2fplugins%2fall",return)</onclick>
 								<visible>Skin.HasSetting(plexbmc)</visible>
 							</item>
@@ -5242,7 +5670,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5268,7 +5696,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5340,6 +5768,7 @@
 					<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="Skin.HasSetting(plexbmc)">1125</onleft>
 					<onleft condition="!Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomeTVShows)">325</onleft>
@@ -5409,11 +5838,12 @@
 						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft condition="Skin.HasSetting(plexbmc)">1103</onleft>
 						<onleft condition="!Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomeTVShows)">303</onleft>
 						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">201</onleft>
-						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">501</onleft>
+						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">503</onleft>
 						<onright condition="Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomePictures)">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onright>
 						<onright condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomePictures) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
 						<onright>Control.Move(20,1)</onright>
@@ -5421,7 +5851,6 @@
 						<onright condition="Skin.HasSetting(HomePictures) + !Skin.HasSetting(HomeMusic)">401</onright>
 						<onright condition="Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">601</onright>
 						<onright condition="Skin.HasSetting(HomePictures) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeWeather)">701</onright>
-						<onright>501</onright>
 						<onup>925</onup>
 						<ondown>80</ondown>
 						<scrolltime>0</scrolltime>
@@ -5611,7 +6040,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -5703,6 +6132,7 @@
 					<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="System.GetBool(pvrmanager.enabled)">925</onleft>
 					<onleft condition="!System.GetBool(pvrmanager.enabled) + Skin.HasSetting(plexbmc)">1125</onleft>
@@ -5868,6 +6298,16 @@
 								<width>772</width>
 								<height>64</height>
 								<texture border="7">windows/home/tile-overlay-r.png</texture>
+								<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+							</control>
+							<control type="image">
+								<description>Title overlay</description>
+								<posx>0</posx>
+								<posy>508</posy>
+								<width>772</width>
+								<height>64</height>
+								<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+								<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 							</control>
 							<control type="group" id="10023">
 								<visible>!Control.IsVisible(10022)</visible>
@@ -5944,7 +6384,7 @@
 								<label>$INFO[Container(10022).ListItem.Label]</label>
 								<label2>$INFO[Container(10022).ListItem.Label2, ★ ,]</label2>
 								<font>Font-Condensed-S29-B</font>
-								<disabledcolor>blue</disabledcolor>
+								<disabledcolor>$VAR[FocusModHomeColourVar]</disabledcolor>
 								<align>left</align>
 								<aligny>center</aligny>
 								<enable>false</enable>
@@ -6065,14 +6505,21 @@
 						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft condition="System.GetBool(pvrmanager.enabled)">901</onleft>
 						<onleft condition="!System.GetBool(pvrmanager.enabled) + Skin.HasSetting(plexbmc)">1103</onleft>
 						<onleft condition="!System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomeTVShows)">303</onleft>
 						<onleft condition="!System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">201</onleft>
-						<onleft condition="!System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">501</onleft>
+						<onleft condition="!System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">503</onleft>
 						<onup>1025</onup>
-						<onright>1002</onright>
+						<onright condition="Skin.HasSetting(plexbmc)">1002</onright>
+						<onright condition="!Skin.HasSetting(plexbmc)">CancelAlarm(HomeTileMoveTwo,true)</onright>
+						<onright condition="!Skin.HasSetting(plexbmc)">Control.Move(20,1)</onright>
+						<onright condition="!Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomeMusic)">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onright>
+						<onright condition="!Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomeMusic)">401</onright>
+						<onright condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePrograms)">601</onright>
+						<onright condition="!Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeMusic) + Skin.HasSetting(HomePrograms)">701</onright>
 						<ondown>80</ondown>
 						<scrolltime>0</scrolltime>
 						<itemlayout width="289" height="289">
@@ -6274,7 +6721,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -6300,7 +6747,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -6418,6 +6865,7 @@
 					<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePictures)  + !System.GetBool(pvrmanager.enabled)+ !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomePictures)  + !System.GetBool(pvrmanager.enabled)+ !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="!Skin.HasSetting(HomePictures)">1025</onleft>
 					<onleft condition="Skin.HasSetting(HomePictures) + System.GetBool(pvrmanager.enabled)">925</onleft>
@@ -6432,12 +6880,12 @@
 					<onright condition="!Skin.HasSetting(HomePrograms)">625</onright>
 					<onright condition="Skin.HasSetting(HomePrograms)">725</onright>
 					<onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles)</onclick>
-					<onclick condition="Library.HasContent(music) + IsEmpty(Skin.String(music.path)) + !Skin.HasSetting(plexbmc)">ActivateWindow(musiclibrary)</onclick>
-					<onclick condition="Library.HasContent(music) + !IsEmpty(Skin.String(music.path)) + !Skin.HasSetting(plexbmc)">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
-					<onclick condition="Skin.HasSetting(plexbmc) + substring(Window.Property(plexbmc.0.type),artist)">$INFO[Window.Property(plexbmc.0.path)]</onclick>
-					<onclick condition="Skin.HasSetting(plexbmc) + substring(Window.Property(plexbmc.1.type),artist)">$INFO[Window.Property(plexbmc.1.path)]</onclick>
-					<onclick condition="Skin.HasSetting(plexbmc) + substring(Window.Property(plexbmc.2.type),artist)">$INFO[Window.Property(plexbmc.2.path)]</onclick>
-					<onclick condition="Skin.HasSetting(plexbmc) + substring(Window.Property(plexbmc.3.type),artist)">$INFO[Window.Property(plexbmc.3.path)]</onclick>
+					<onclick condition="Library.HasContent(music) + IsEmpty(Skin.String(music.path)) + [!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]]">ActivateWindow(musiclibrary)</onclick>
+					<onclick condition="Library.HasContent(music) + !IsEmpty(Skin.String(music.path)) + [!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]]">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
+					<onclick condition="Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + substring(Window.Property(plexbmc.0.type),artist)">$INFO[Window.Property(plexbmc.0.path)]</onclick>
+					<onclick condition="Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + substring(Window.Property(plexbmc.1.type),artist)">$INFO[Window.Property(plexbmc.1.path)]</onclick>
+					<onclick condition="Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + substring(Window.Property(plexbmc.2.type),artist)">$INFO[Window.Property(plexbmc.2.path)]</onclick>
+					<onclick condition="Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + substring(Window.Property(plexbmc.3.type),artist)">$INFO[Window.Property(plexbmc.3.path)]</onclick>
 					<onup>ActivateWindow(3022)</onup>
 					<ondown>401</ondown>
 				</control>
@@ -6555,6 +7003,16 @@
 							<width>572</width>
 							<height>64</height>
 							<texture border="7">windows/home/tile-overlay-r.png</texture>
+							<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						</control>
+						<control type="image">
+							<description>Title overlay</description>
+							<posx>0</posx>
+							<posy>508</posy>
+							<width>572</width>
+							<height>64</height>
+							<texture border="7">windows/home/tile-overlay-r-solid.png</texture>
+							<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 						</control>
 						<control type="group" id="4023">
 							<visible>!Control.IsVisible(4022)</visible>
@@ -6631,7 +7089,7 @@
 							<label>[B]$INFO[Container(4022).ListItem.Label][/B]</label>
 							<label2>$INFO[Container(4022).ListItem.Label2]</label2>
 							<font>Font-Condensed-S29-B</font>
-							<disabledcolor>blue</disabledcolor>
+							<disabledcolor>$VAR[FocusModHomeColourVar]</disabledcolor>
 							<align>left</align>
 							<aligny>center</aligny>
 							<enable>false</enable>
@@ -6739,6 +7197,7 @@
 						<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePictures)  + !System.GetBool(pvrmanager.enabled)+ !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft condition="Skin.HasSetting(HomePictures)  + !System.GetBool(pvrmanager.enabled)+ !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft condition="!Skin.HasSetting(HomePictures) + !Skin.HasSetting(plexbmc)">1001</onleft>
 						<onleft condition="!Skin.HasSetting(HomePictures) + Skin.HasSetting(plexbmc)">1002</onleft>
@@ -6746,7 +7205,7 @@
 						<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(plexbmc)">1103</onleft>
 						<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + !Skin.HasSetting(HomeTVShows)">303</onleft>
 						<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">201</onleft>
-						<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">501</onleft>
+						<onleft condition="Skin.HasSetting(HomePictures) + !System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(plexbmc) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">503</onleft>
 						<onright>402</onright>
 						<onup>425</onup>
 						<ondown>80</ondown>
@@ -6914,7 +7373,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -6940,7 +7399,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label2]</label>
 										<font>Font-Condensed-S31-B</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>right</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -6972,14 +7431,14 @@
 								<onclick condition="!Library.HasContent(music)">ActivateWindow(musicfiles)</onclick>
 								<onclick condition="Library.HasContent(music) + IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary)</onclick>
 								<onclick condition="Library.HasContent(music) + !IsEmpty(Skin.String(music.path))">ActivateWindow(musiclibrary,$INFO[Skin.String(music.path)],return)</onclick>
-								<visible>!Skin.HasSetting(plexbmc)</visible>
+								<visible>!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]</visible>
 							</item>
 							<item id="0">
 								<label>$LOCALIZE[2]</label>
 								<label2>$INFO[Window.Property(plexbmc.0.total)]</label2>
 								<icon>windows/home/icons/music.png</icon>
 								<onclick>$INFO[Window.Property(plexbmc.0.path)]</onclick>
-								<visible>Skin.HasSetting(plexbmc)</visible>
+								<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 								<visible>substring(Window.Property(plexbmc.0.type),artist)</visible>
 							</item>
 							<item id="0">
@@ -6987,7 +7446,7 @@
 								<label2>$INFO[Window.Property(plexbmc.1.total)]</label2>
 								<icon>windows/home/icons/music.png</icon>
 								<onclick>$INFO[Window.Property(plexbmc.1.path)]</onclick>
-								<visible>Skin.HasSetting(plexbmc)</visible>
+								<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 								<visible>substring(Window.Property(plexbmc.1.type),artist)</visible>
 							</item>
 							<item id="0">
@@ -6995,7 +7454,7 @@
 								<label2>$INFO[Window.Property(plexbmc.2.total)]</label2>
 								<icon>windows/home/icons/music.png</icon>
 								<onclick>$INFO[Window.Property(plexbmc.2.path)]</onclick>
-								<visible>Skin.HasSetting(plexbmc)</visible>
+								<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 								<visible>substring(Window.Property(plexbmc.2.type),artist)</visible>
 							</item>
 							<item id="0">
@@ -7003,7 +7462,7 @@
 								<label2>$INFO[Window.Property(plexbmc.3.total)]</label2>
 								<icon>windows/home/icons/music.png</icon>
 								<onclick>$INFO[Window.Property(plexbmc.3.path)]</onclick>
-								<visible>Skin.HasSetting(plexbmc)</visible>
+								<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 								<visible>substring(Window.Property(plexbmc.3.type),artist)</visible>
 							</item>
 							<item id="1">
@@ -7216,7 +7675,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>blue</textcolor>
+											<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -7325,6 +7784,7 @@
 					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="!Skin.HasSetting(HomeMusic)">425</onleft>
 					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePictures)">1025</onleft>
@@ -7398,6 +7858,7 @@
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeMusic)">403</onleft>
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePictures)">1001</onleft>
@@ -7696,7 +8157,7 @@
 											<height>66</height>
 											<label>$INFO[ListItem.Label]</label>
 											<font>Font-Condensed-S33</font>
-											<textcolor>blue</textcolor>
+											<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 											<align>left</align>
 											<aligny>center</aligny>
 											<textoffsetx>20</textoffsetx>
@@ -7795,7 +8256,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -7993,6 +8454,7 @@
 					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft>Control.Move(20,-1)</onleft>
 					<onleft condition="!Skin.HasSetting(HomeMusic)">425</onleft>
 					<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePictures)">1025</onleft>
@@ -8066,6 +8528,7 @@
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft>Control.Move(20,-1)</onleft>
 						<onleft condition="!Skin.HasSetting(HomeMusic)">403</onleft>
 						<onleft condition="Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePictures)">1001</onleft>
@@ -8503,6 +8966,7 @@
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 					<onleft condition="!Skin.HasSetting(HomePrograms)">625</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">425</onleft>
 					<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePictures)">1025</onleft>
@@ -9287,6 +9751,7 @@
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + !Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onleft>
+						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(plexbmc) + !System.GetBool(pvrmanager.enabled) + Skin.HasSetting(HomeTVShows) + Skin.HasSetting(HomeMovies)">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onleft>
 						<onleft condition="!Skin.HasSetting(HomePrograms)">601</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + !Skin.HasSetting(HomeMusic)">403</onleft>
 						<onleft condition="Skin.HasSetting(HomePrograms) + Skin.HasSetting(HomeMusic) + !Skin.HasSetting(HomePictures)">1001</onleft>
@@ -9450,7 +9915,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>
@@ -9696,7 +10161,7 @@
 										<height>66</height>
 										<label>$INFO[ListItem.Label]</label>
 										<font>Font-Condensed-S33</font>
-										<textcolor>blue</textcolor>
+										<textcolor>$VAR[FocusModHomeColourVar]</textcolor>
 										<align>left</align>
 										<aligny>center</aligny>
 										<textoffsetx>20</textoffsetx>

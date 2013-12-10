@@ -138,7 +138,8 @@
                 <focusedcolor>eewhite</focusedcolor>
                 <disabledcolor>77585858</disabledcolor>
                 <shadowcolor>20FFFFFF</shadowcolor>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
+				
                 <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
             </control>
             
@@ -156,7 +157,8 @@
                 <shadowcolor>20FFFFFF</shadowcolor>
                 <textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
                 <textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
+				
                 <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
             </control>
             
@@ -166,7 +168,8 @@
                 <texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
                 <textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
                 <texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-                <texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+                <texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
+				
                 <texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
                 <textcolor>FF585858</textcolor>
                 <focusedcolor>eewhite</focusedcolor>

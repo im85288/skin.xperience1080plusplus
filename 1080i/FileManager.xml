@@ -282,7 +282,8 @@
 								<posy>0</posy>
 								<width>752</width>
 								<height>59</height>
-								<texture border="5">views/other/focus-mod.png</texture>
+								<texture border="5">$VAR[FocusModVar]</texture>
+								<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 								<animation type="Focus" condition="Container(20).OnNext" reversible="false">
 									<effect type="slide" start="0,-60" end="0,0" time="300" tween="back" easing="out" />
 								</animation>
@@ -659,7 +660,8 @@
 								<posy>0</posy>
 								<width>752</width>
 								<height>59</height>
-								<texture border="5">views/other/focus-mod.png</texture>
+								<texture border="5">$VAR[FocusModVar]</texture>
+								<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 								<animation type="Focus" condition="Container(21).OnNext" reversible="false">
 									<effect type="slide" start="0,-60" end="0,0" time="300" tween="back" easing="out" />
 								</animation>

@@ -52,7 +52,6 @@
 	<include name="MusicViews">
 		<include>Viewtype-MusicList</include>        	<!-- (50) -->
 		<include>Viewtype-MusicPanel</include>			<!-- (51) -->
-		<include>Viewtype-MusicPanelFanart</include>	<!-- (52) -->
 		<include>Viewtype-MusicWall</include>			<!-- (53) -->
 		<include>Viewtype-MusicLowList</include>		<!-- (54) -->
 		<include>Viewtype-MusicPanelBig</include>		<!-- (55) -->
@@ -63,7 +62,6 @@
 	<include name="MusicFileViews">
 		<include>Viewtype-MusicList</include>        	<!-- (50) -->
 		<include>Viewtype-MusicPanel</include>			<!-- (51) -->
-		<include>Viewtype-MusicPanelFanart</include>	<!-- (52) -->
 		<include>Viewtype-MusicWall</include>			<!-- (53) -->
 		<include>Viewtype-MusicLowList</include>		<!-- (54) -->
 		<include>Viewtype-MusicPanelBig</include>		<!-- (55) -->
@@ -246,6 +244,10 @@
 	<variable name="BackgroundViewsMainListTextColourVars">
 		<value condition="!Skin.HasSetting(UseWhiteText)">mod-infotags</value>
 		<value condition="Skin.HasSetting(UseWhiteText)">darkerbackground</value>
+	</variable>
+	<variable name="BackgroundFocusedViewsMainListTextColourVars">
+		<value condition="!Skin.HasSetting(UseWhiteText)">darkerbackground</value>
+		<value condition="Skin.HasSetting(UseWhiteText)">mod-infotags</value>
 	</variable>
 	<variable name="PVRFocusedTextColourVars">
 		<value condition="!Skin.HasSetting(DarkerPanels)">darkerbackground</value>
@@ -621,7 +623,7 @@
 	<!-- Other -->
 	<variable name="TVTimerRadioButtonTexture">
 		<value condition="!StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-nf.png</value>
-		<value condition="StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-fo.png</value>
+		<value condition="StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)">buttons/radio/radio-button-fo-colour.png</value>
 	</variable>
 	<variable name="TVNumItemsLabel">
 		<value condition="IntegerGreaterThan(Container.NumItems,0) + !IntegerGreaterThan(Container.NumItems,1)">$INFO[Container.NumItems,, $LOCALIZE[41822]]</value>

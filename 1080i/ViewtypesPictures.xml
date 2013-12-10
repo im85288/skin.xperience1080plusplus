@@ -144,7 +144,8 @@
 						<posy>0</posy>
 						<width>1397</width>
 						<height>99</height>
-						<texture border="5">views/other/focus-mod.png</texture>
+						<texture border="5">$VAR[FocusModVar]</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 						<visible>Control.HasFocus(50)</visible>
@@ -410,7 +411,8 @@
 							<posy>0</posy>
 							<width>710</width>
 							<height>59</height>
-							<texture border="150,1,150,1">views/other/focus.png</texture>
+							<texture border="5">$VAR[FocusModVar]</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<include>listfocusanim</include>
 							<include>visiblehidefadeinfo</include>
 							<visible>Control.HasFocus(52)</visible>

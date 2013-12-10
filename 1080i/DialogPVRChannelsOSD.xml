@@ -39,10 +39,10 @@
 				<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 			</control>
 			<control type="image">
-				<posx>1038</posx>
+				<posx>1048</posx>
 				<posy>370</posy>
 				<height>420</height>
-				<width>584</width>
+				<width>564</width>
 				<texture border="4">views/list/panel/solidblackpanel.png</texture>
 				<visible>Skin.HasSetting(LiveTVBlack)</visible>
 			</control>
@@ -278,7 +278,7 @@
 							<description>Label</description>
 							<posx>730</posx>
 							<posy>0</posy>
-							<width>539</width>
+							<width>587</width>
 							<height>95</height>
 							<font>Font-Condensed-S50</font>
 							<align>right</align>
@@ -286,13 +286,13 @@
 							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
 							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
 							<scroll>false</scroll>
-							<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+							<visible>ListItem.HasTimer | ListItem.IsRecording  + !ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
 							<description>Label</description>
 							<posx>730</posx>
 							<posy>0</posy>
-							<width>539</width>
+							<width>587</width>
 							<height>95</height>
 							<font>Font-Condensed-S50-B</font>
 							<align>right</align>
@@ -351,7 +351,8 @@
 							<posy>0</posy>
 							<width>740</width>
 							<height>96</height>
-							<texture border="4">views/other/focus-mod.png</texture>
+							<texture border="4">$VAR[FocusModVar]</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<aspectratio>stretch</aspectratio>
 							<visible>!ListItem.IsPlaying</visible>
 						</control>
@@ -525,7 +526,7 @@
 								<description>Label</description>
 								<posx>730</posx>
 								<posy>0</posy>
-								<width>539</width>
+								<width>587</width>
 								<height>95</height>
 								<font>Font-Condensed-S50</font>
 								<align>right</align>
@@ -533,13 +534,13 @@
 								<textcolor>$VAR[PVRFocusedTextColourVars]</textcolor>
 								<selectedcolor>$VAR[PVRFocusedTextColourVars]</selectedcolor>
 								<scroll>false</scroll>
-								<visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+								<visible>ListItem.HasTimer | ListItem.IsRecording + !ListItem.IsPlaying</visible>
 							</control>
 							<control type="label">
 								<description>Label</description>
 								<posx>730</posx>
 								<posy>0</posy>
-								<width>539</width>
+								<width>587</width>
 								<height>95</height>
 								<font>Font-Condensed-S50-B</font>
 								<align>right</align>

@@ -1,6 +1,7 @@
 <window id="600">
 	<defaultcontrol>32</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=trendingshows)</onload>
 	<controls>
 		<include>CommonPVRItems</include>
 		<include>PVRHeader</include>
@@ -71,13 +72,13 @@
 					<texture border="4">views/list/panel/solidblackpanel.png</texture>
 					<visible>Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
-			
 				<control type="image">
 					<posx>10</posx>
 					<posy>0</posy>
 					<width>394</width>
 					<height>111</height>
-					<texture border="5">views/other/focus-mod.png</texture>
+					<texture border="5">$VAR[FocusModVar]</texture>
+					<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 					<animation effect="slide" end="0,112" time="0" condition="ControlGroup(9001).HasFocus(33)">Conditional</animation>
 					<animation effect="slide" end="0,224" time="0" condition="ControlGroup(9001).HasFocus(31)">Conditional</animation>
 					<animation effect="slide" end="0,336" time="0" condition="ControlGroup(9001).HasFocus(34)">Conditional</animation>
@@ -101,17 +102,9 @@
 					<posy>0</posy>
 					<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/channels-fo.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>Control.HasFocus(32)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/channels-nf.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>!Control.HasFocus(32)</visible>
-						</control>
 						<control type="button" id="32">
+							<texturefocus colordiffuse="mod-infotags">windows/pvr/icons/channels-fo.png</texturefocus>
+							<texturenofocus colordiffuse="mod-infotags">windows/pvr/icons/channels-nf.png</texturenofocus>
 							<description>TV Channels</description>
 							<include>PVRMenuButtonVars</include>
 							<label>$LOCALIZE[19023]</label>
@@ -128,15 +121,9 @@
 					<posy>0</posy>
 					<visible>Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/channels-fo.png</texture>
-							<visible>Control.HasFocus(32)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/channels-nf.png</texture>
-							<visible>!Control.HasFocus(32)</visible>
-						</control>
 						<control type="button" id="32">
+							<texturefocus>windows/pvr/icons/channels-fo.png</texturefocus>
+							<texturenofocus>windows/pvr/icons/channels-nf.png</texturenofocus>
 							<description>TV Channels</description>
 							<include>PVRMenuButtonVarsDarkerPanels</include>
 							<label>$LOCALIZE[19023]</label>
@@ -153,17 +140,9 @@
 					<posy>112</posy>
 					<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/radio-fo.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>Control.HasFocus(33)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/radio-nf.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>!Control.HasFocus(33)</visible>
-						</control>
 						<control type="button" id="33">
+							<texturefocus colordiffuse="mod-infotags">windows/pvr/icons/radio-fo.png</texturefocus>
+							<texturenofocus colordiffuse="mod-infotags">windows/pvr/icons/radio-nf.png</texturenofocus>
 							<description>Radio Channels</description>
 							<include>PVRMenuButtonVars</include>
 							<label>$LOCALIZE[19024]</label>
@@ -180,15 +159,9 @@
 					<posy>112</posy>
 					<visible>Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/radio-fo.png</texture>
-							<visible>Control.HasFocus(33)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/radio-nf.png</texture>
-							<visible>!Control.HasFocus(33)</visible>
-						</control>
 						<control type="button" id="33">
+							<texturefocus>windows/pvr/icons/radio-fo.png</texturefocus>
+							<texturenofocus>windows/pvr/icons/radio-nf.png</texturenofocus>
 							<description>Radio Channels</description>
 							<include>PVRMenuButtonVarsDarkerPanels</include>
 							<label>$LOCALIZE[19024]</label>
@@ -205,17 +178,9 @@
 					<posy>224</posy>
 					<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/epg-fo.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>Control.HasFocus(31)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/epg-nf.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>!Control.HasFocus(31)</visible>
-						</control>
 						<control type="button" id="31">
+							<texturefocus colordiffuse="mod-infotags">windows/pvr/icons/epg-fo.png</texturefocus>
+							<texturenofocus colordiffuse="mod-infotags">windows/pvr/icons/epg-nf.png</texturenofocus>
 							<description>TV Guide</description>
 							<include>PVRMenuButtonVars</include>
 							<label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
@@ -235,15 +200,9 @@
 					<posy>224</posy>
 					<visible>Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/epg-fo.png</texture>
-							<visible>Control.HasFocus(31)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/epg-nf.png</texture>
-							<visible>!Control.HasFocus(31)</visible>
-						</control>
 						<control type="button" id="31">
+							<texturefocus>windows/pvr/icons/epg-fo.png</texturefocus>
+							<texturenofocus>windows/pvr/icons/epg-nf.png</texturenofocus>
 							<description>TV Guide</description>
 							<include>PVRMenuButtonVarsDarkerPanels</include>
 							<label>$LOCALIZE[19222]: $LOCALIZE[19030]</label>
@@ -263,17 +222,9 @@
 					<posy>336</posy>
 					<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/recordings-fo.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>Control.HasFocus(34)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/recordings-nf.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>!Control.HasFocus(34)</visible>
-						</control>
 						<control type="button" id="34">
+							<texturefocus colordiffuse="mod-infotags">windows/pvr/icons/recordings-fo.png</texturefocus>
+							<texturenofocus colordiffuse="mod-infotags">windows/pvr/icons/recordings-nf.png</texturenofocus>
 							<description>Recordings</description>
 							<include>PVRMenuButtonVars</include>
 							<label>$LOCALIZE[19163]</label>
@@ -290,15 +241,9 @@
 					<posy>336</posy>
 					<visible>Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/recordings-fo.png</texture>
-							<visible>Control.HasFocus(34)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/recordings-nf.png</texture>
-							<visible>!Control.HasFocus(34)</visible>
-						</control>
 						<control type="button" id="34">
+							<texturefocus>windows/pvr/icons/recordings-fo.png</texturefocus>
+							<texturenofocus>windows/pvr/icons/recordings-nf.png</texturenofocus>
 							<description>Recordings</description>
 							<include>PVRMenuButtonVarsDarkerPanels</include>
 							<label>$LOCALIZE[19163]</label>
@@ -315,17 +260,9 @@
 					<posy>448</posy>
 					<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/timers-fo.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>Control.HasFocus(35)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/timers-nf.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>!Control.HasFocus(35)</visible>
-						</control>
 						<control type="button" id="35">
+							<texturefocus colordiffuse="mod-infotags">windows/pvr/icons/timers-fo.png</texturefocus>
+							<texturenofocus colordiffuse="mod-infotags">windows/pvr/icons/timers-nf.png</texturenofocus>
 							<description>Timers</description>
 							<include>PVRMenuButtonVars</include>
 							<label>$LOCALIZE[19040]</label>
@@ -342,15 +279,9 @@
 					<posy>448</posy>
 					<visible>Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/timers-fo.png</texture>
-							<visible>Control.HasFocus(35)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/timers-nf.png</texture>
-							<visible>!Control.HasFocus(35)</visible>
-						</control>
 						<control type="button" id="35">
+							<texturefocus>windows/pvr/icons/timers-fo.png</texturefocus>
+							<texturenofocus>windows/pvr/icons/timers-nf.png</texturenofocus>
 							<description>Timers</description>
 							<include>PVRMenuButtonVarsDarkerPanels</include>
 							<label>$LOCALIZE[19040]</label>
@@ -367,17 +298,9 @@
 					<posy>560</posy>
 					<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/search-fo.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>Control.HasFocus(36)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/search-nf.png</texture>
-							<colordiffuse>mod-infotags</colordiffuse>
-							<visible>!Control.HasFocus(36)</visible>
-						</control>
 						<control type="button" id="36">
+							<texturefocus colordiffuse="mod-infotags">windows/pvr/icons/search-fo.png</texturefocus>
+							<texturenofocus colordiffuse="mod-infotags">windows/pvr/icons/search-nf.png</texturenofocus>
 							<description>Search</description>
 							<include>PVRMenuButtonVars</include>
 							<label>$LOCALIZE[137]</label>
@@ -394,15 +317,9 @@
 					<posy>560</posy>
 					<visible>Skin.HasSetting(LiveTVBlack)</visible>
 					<control type="group">
-						<control type="image">
-							<texture>windows/pvr/icons/search-fo.png</texture>
-							<visible>Control.HasFocus(36)</visible>
-						</control>
-						<control type="image">
-							<texture>windows/pvr/icons/search-nf.png</texture>
-							<visible>!Control.HasFocus(36)</visible>
-						</control>
 						<control type="button" id="36">
+							<texturefocus>windows/pvr/icons/search-fo.png</texturefocus>
+							<texturenofocus>windows/pvr/icons/search-nf.png</texturenofocus>
 							<description>Search</description>
 							<include>PVRMenuButtonVarsDarkerPanels</include>
 							<label>$LOCALIZE[137]</label>

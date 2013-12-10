@@ -279,7 +279,7 @@
 							<focusedcolor>eewhite</focusedcolor>
 							<disabledcolor>44FFFFFF</disabledcolor>
 							<shadowcolor>33000000</shadowcolor>
-							<texturefocus border="150,1,150,1">views/other/focus.png</texturefocus>
+							<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="150,1,150,1">$VAR[FocusModVar]</texturefocus>
 						</control>
 						<control type="button" id="20">
 							<visible>!Control.IsEnabled(6) + !Control.IsEnabled(7) + !Control.IsEnabled(8) + !Control.IsEnabled(9) + !Control.IsEnabled(11)</visible>

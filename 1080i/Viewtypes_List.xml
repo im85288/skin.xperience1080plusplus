@@ -514,7 +514,8 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="5">views/other/focus-mod.png</texture>
+						<texture border="5">$VAR[FocusModVar]</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -633,7 +634,8 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="5">views/other/focus-mod.png</texture>
+						<texture border="5">$VAR[FocusModVar]</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -734,7 +736,8 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="5">views/other/focus-mod.png</texture>
+						<texture border="5">$VAR[FocusModVar]</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -834,7 +837,8 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="5">views/other/focus-mod.png</texture>
+						<texture border="5">$VAR[FocusModVar]</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -931,7 +935,8 @@
 						<posy>0</posy>
 						<width>1420</width>
 						<height>99</height>
-						<texture border="5">views/other/focus-mod.png</texture>
+						<texture border="5">$VAR[FocusModVar]</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 						<include>defaultfocusanim</include>
 						<include>visiblehidefadeinfo</include>
 					</control>

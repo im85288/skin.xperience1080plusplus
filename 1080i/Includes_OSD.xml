@@ -1,4 +1,9 @@
 <includes>
+	<variable name="ProgressBarColour">
+		<value condition="VideoPlayer.Content(episodes)">$INFO[Skin.String(tvcolor.name)]</value>
+		<value condition="VideoPlayer.Content(movies)">$INFO[Skin.String(moviecolor.name)]</value>
+		<value condition="VideoPlayer.Content(LiveTV)">$INFO[Skin.String(pvrcolor.name)]</value>
+	</variable> 
 	<include name="OSDVisualisation">
 		<control type="visualisation" id="2">
 			<description>visualisation</description>
@@ -110,7 +115,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
+				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + Skin.HasSetting(ShowClearArt) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek] + !Window.IsActive(videoosd)</visible>
 			</control>
 			<control type="image">
 				<posx>1420</posx>
@@ -132,7 +137,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]]</visible>
+				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]] + !Window.IsActive(videoosd)</visible>
 			</control>
 			<control type="image">
 				<posx>1360</posx>
@@ -377,7 +382,7 @@
 				<aspectratio>stretch</aspectratio>
 				<align>right</align>
 				<aligny>top</aligny>
-				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + [Skin.HasSetting(ShowClearArt)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
+				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + [Skin.HasSetting(ShowClearArt)] + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek] + !Window.IsActive(videoosd)</visible>
 			</control>
 			<control type="image">
 				<posx>1420</posx>
@@ -638,11 +643,28 @@
 						<info>Player.Progress</info>
 						<reveal>true</reveal>
 						<texturebg>osd/fullscreen/progress/back.png</texturebg>
-						<midtexture>osd/fullscreen/progress/mid-music.png</midtexture>
-						<lefttexture>osd/fullscreen/progress/left-music.png</lefttexture>
-						<righttexture>osd/fullscreen/progress/right-music.png</righttexture>
+						<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+						<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+						<righttexture>osd/fullscreen/progress/right.png</righttexture>
 						<overlaytexture>-</overlaytexture>
 						<colordiffuse>black</colordiffuse>
+						<visible>!Skin.HasSetting(ColourProgressBar)</visible>
+					</control>
+					<control type="progress">
+						<visible>!Window.IsActive(musicosd) + [!Window.IsActive(fullscreeninfo) + !Window.IsActive(seekbar)]</visible>
+						<posx>588</posx>
+						<posy>1049</posy>
+						<width>1044</width>
+						<height>25</height>
+						<info>Player.Progress</info>
+						<reveal>true</reveal>
+						<texturebg>osd/fullscreen/progress/back.png</texturebg>
+						<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+						<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+						<righttexture>osd/fullscreen/progress/right.png</righttexture>
+						<overlaytexture>-</overlaytexture>
+						<colordiffuse>$INFO[Skin.String(musiccolor.name)]</colordiffuse>
+						<visible>Skin.HasSetting(ColourProgressBar)</visible>
 					</control>
 					<control type="progress">
 						<visible>Window.IsActive(musicosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
@@ -653,11 +675,28 @@
 						<info>Player.Progress</info>
 						<reveal>true</reveal>
 						<texturebg>osd/fullscreen/progress/back.png</texturebg>
-						<midtexture>osd/fullscreen/progress/mid-music.png</midtexture>
-						<lefttexture>osd/fullscreen/progress/left-music.png</lefttexture>
-						<righttexture>osd/fullscreen/progress/right-music.png</righttexture>
+						<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+						<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+						<righttexture>osd/fullscreen/progress/right.png</righttexture>
 						<overlaytexture>-</overlaytexture>
 						<colordiffuse>black</colordiffuse>
+						<visible>!Skin.HasSetting(ColourProgressBar)</visible>
+					</control>
+					<control type="progress">
+						<visible>Window.IsActive(musicosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+						<posx>590</posx>
+						<posy>1088</posy>
+						<width>800</width>
+						<height>25</height>
+						<info>Player.Progress</info>
+						<reveal>true</reveal>
+						<texturebg>osd/fullscreen/progress/back.png</texturebg>
+						<midtexture>osd/fullscreen/progress/mid.png</midtexture>
+						<lefttexture>osd/fullscreen/progress/left.png</lefttexture>
+						<righttexture>osd/fullscreen/progress/right.png</righttexture>
+						<overlaytexture>-</overlaytexture>
+						<colordiffuse>$INFO[Skin.String(musiccolor.name)]</colordiffuse>
+						<visible>Skin.HasSetting(ColourProgressBar)</visible>
 					</control>
 					<control type="label">
 						<visible>!Window.IsActive(musicosd)</visible>

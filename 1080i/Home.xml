@@ -9,11 +9,13 @@
 	<onload condition="!Skin.HasSetting(Skin.Initialization) | IsEmpty(Window(startup).Property(Started))">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
 	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(3) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(4) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(11) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(10) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onload>	
 	<onload condition="Container(20).HasFocus(5) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onload>
+	<onload>AlarmClock(PvrTileMove,Control.Move(7891,1),00:07,silent,loop)</onload>
 	<onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
 	<onload condition="IsEmpty(Skin.String(musiccolor.name)) | !SubString(Skin.String(musiccolor.name),Tiles)">Skin.SetString(musiccolor.name,Yellow Tiles)</onload>
 	<onload condition="IsEmpty(Skin.String(tvcolor.name)) | !SubString(Skin.String(tvcolor.name),Tiles)">Skin.SetString(tvcolor.name,Magenta Tiles)</onload>
@@ -36,6 +38,7 @@
 	<onload condition="IsEmpty(Skin.String(weatherbordercolor.name)) | !SubString(Skin.String(weatherbordercolor.name),TileBorder)">Skin.SetString(weatherbordercolor.name,Purple TileBorder)</onload>
 	<onload condition="IsEmpty(Skin.String(channelsbordercolor.name)) | !SubString(Skin.String(channelsbordercolor.name),TileBorder)">Skin.SetString(channelsbordercolor.name,Solid Black TileBorder)</onload>
 	<onload condition="IsEmpty(Skin.String(panelcolor.name)) | !SubString(Skin.String(panelcolor.name),Panel)">Skin.SetString(panelcolor.name,Black Panel)</onload>
+	<onload condition="IsEmpty(Skin.String(focuscolor.name)) | !SubString(Skin.String(focuscolor.name),Focus)">Skin.SetString(focuscolor.name,Green Focus)</onload>
 	<onload condition="IsEmpty(Skin.String(backgroundcolor.name)) | !SubString(Skin.String(backgroundcolor.name),Background)">Skin.SetString(backgroundcolor.name,Black Background)</onload>
 	<onunload>CancelAlarm(HomeTileMove,true)</onunload>
 	<onunload>CancelAlarm(HomeTileMoveTwo,true)</onunload>

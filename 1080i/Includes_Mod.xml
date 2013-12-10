@@ -258,6 +258,23 @@
 		<value condition="!IsEmpty(Window.Property(ExtendPlot))">mod-infotags</value>
 		<value condition="IsEmpty(Window.Property(ExtendPlot))">bbwhite</value>
 	</variable>
+	
+	<variable name="FocusModVar">
+		<value condition="Skin.HasSetting(ColourFocus)">views/other/white-focus-mod.png</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">views/other/focus-mod.png</value>
+	</variable>
+	<variable name="FocusModColourVar">
+		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">white</value>
+	</variable>
+	<variable name="FocusModColourVar2">
+		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">modblue</value>
+	</variable>
+	<variable name="FocusModHomeColourVar">
+		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">blue</value>
+	</variable>
 	<include name="DialogHeaderMod">
 		<font>Font-Condensed-S34</font>
 		<textcolor>mod-infotags-d</textcolor>

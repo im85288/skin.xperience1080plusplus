@@ -144,7 +144,7 @@
 		<font>Font-Condensed-S30</font>
 		<textoffsetx>35</textoffsetx>
 	</include>
-	<include name="SettingsCategoryButtonVars">
+	<include name="SettingsCategoryButtonVarsNoColourFocus">
 		<height>77</height>
 		<width>338</width>
 		<align>right</align>
@@ -154,10 +154,23 @@
 		<disabledcolor>mod-infotags-vl</disabledcolor>
 		<font>Font-Condensed-S30-B</font>
 		<textoffsetx>35</textoffsetx>
-		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/focus-mod.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
 	</include>
-	<include name="SettingsCategoryButtonVarsDarkerBackground">
+	<include name="SettingsCategoryButtonVarsColourFocus">
+		<height>77</height>
+		<width>338</width>
+		<align>right</align>
+		<aligny>center</aligny>
+		<textcolor>mod-infotags-l</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>mod-infotags-vl</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/white-focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+	</include>
+	<include name="SettingsCategoryButtonVarsDarkerBackgroundNoColourFocus">
 		<height>77</height>
 		<width>338</width>
 		<align>right</align>
@@ -167,14 +180,27 @@
 		<disabledcolor>darkerbackground</disabledcolor>
 		<font>Font-Condensed-S30-B</font>
 		<textoffsetx>35</textoffsetx>
-		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/focus-mod.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator3.png</texturenofocus>
 	</include>
-	<include name="SettingsCategoryDefaultButtonVars">
+	<include name="SettingsCategoryButtonVarsDarkerBackgroundColourFocus">
+		<height>77</height>
+		<width>338</width>
+		<align>right</align>
+		<aligny>center</aligny>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>darkerbackground</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/white-focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator3.png</texturenofocus>
+	</include>
+	<include name="SettingsCategoryDefaultButtonVarsNoColourFocus">
 		<height>77</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/focus-mod.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
 		<textcolor>mod-infotags-l</textcolor>
 		<focusedcolor>white</focusedcolor>
@@ -183,11 +209,24 @@
 		<font>Font-Condensed-S30-B</font>
 		<textoffsetx>35</textoffsetx>
 	</include>
-	<include name="SettingsCategoryDefaultButtonVarsDarkerBackground">
+	<include name="SettingsCategoryDefaultButtonVarsColourFocus">
 		<height>77</height>
 		<align>left</align>
 		<aligny>center</aligny>
-		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/white-focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+		<textcolor>mod-infotags-l</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<selectedcolor>white</selectedcolor>
+		<disabledcolor>mod-infotags-vl</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+	</include>
+	<include name="SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus">
+		<height>77</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/focus-mod.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator3.png</texturenofocus>
 		<textcolor>darkerbackground</textcolor>
 		<focusedcolor>white</focusedcolor>
@@ -196,12 +235,25 @@
 		<font>Font-Condensed-S30-B</font>
 		<textoffsetx>35</textoffsetx>
 	</include>
-	<include name="SettingsCategoryRadioButtonVars">
+	<include name="SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus">
+		<height>77</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/white-focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator3.png</texturenofocus>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<selectedcolor>white</selectedcolor>
+		<disabledcolor>darkerbackground</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+	</include>
+	<include name="SettingsCategoryRadioButtonVarsNoColourFocus">
 		<height>77</height>
 		<radioposx>1087</radioposx>
 		<align>left</align>
 		<aligny>center</aligny>
-		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/focus-mod.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
 		<textcolor>mod-infotags-l</textcolor>
 		<focusedcolor>eewhite</focusedcolor>
@@ -209,12 +261,38 @@
 		<font>Font-Condensed-S30-B</font>
 		<textoffsetx>35</textoffsetx>
 	</include>
-	<include name="SettingsCategoryRadioButtonVarsDarkerBackground">
+	<include name="SettingsCategoryRadioButtonVarsColourFocus">
 		<height>77</height>
 		<radioposx>1087</radioposx>
 		<align>left</align>
 		<aligny>center</aligny>
-		<texturefocus border="5">views/other/focus-mod.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/white-focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator-l.png</texturenofocus>
+		<textcolor>mod-infotags-l</textcolor>
+		<focusedcolor>eewhite</focusedcolor>
+		<disabledcolor>mod-infotags-vl</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+	</include>
+	<include name="SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus">
+		<height>77</height>
+		<radioposx>1087</radioposx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/focus-mod.png</texturefocus>
+		<texturenofocus border="90,3,90,3">views/list/other/separator3.png</texturenofocus>
+		<textcolor>darkerbackground</textcolor>
+		<focusedcolor>darkerbackground</focusedcolor>
+		<disabledcolor>darkerbackground</disabledcolor>
+		<font>Font-Condensed-S30-B</font>
+		<textoffsetx>35</textoffsetx>
+	</include>
+	<include name="SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus">
+		<height>77</height>
+		<radioposx>1087</radioposx>
+		<align>left</align>
+		<aligny>center</aligny>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar]" border="5">views/other/white-focus-mod.png</texturefocus>
 		<texturenofocus border="90,3,90,3">views/list/other/separator3.png</texturenofocus>
 		<textcolor>darkerbackground</textcolor>
 		<focusedcolor>darkerbackground</focusedcolor>
@@ -249,7 +327,7 @@
 		<shadowcolor>20FFFFFF</shadowcolor>
 		<textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
 		<textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
 	<include name="SettingsDialogRadioButtonVarsDarkerBackground">
@@ -265,7 +343,7 @@
 		<shadowcolor>20FFFFFF</shadowcolor>
 		<textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
 		<textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
 	<include name="SettingsDialogGrouplistVars">
@@ -292,7 +370,7 @@
 		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>77585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
 	<include name="SettingsCustomDialogButtonVarsDarkerBackground">
@@ -305,7 +383,7 @@
 		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>77585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
 	<include name="SettingsCustomDialogRadioButtonVars">
@@ -321,7 +399,7 @@
 		<shadowcolor>20FFFFFF</shadowcolor>
 		<textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
 		<textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
 	<include name="SettingsCustomDialogRadioButtonVarsDarkerBackground">
@@ -337,7 +415,7 @@
 		<shadowcolor>20FFFFFF</shadowcolor>
 		<textureradiofocus>buttons/radio/radio-light-fo.png</textureradiofocus>
 		<textureradionofocus>buttons/radio/radio-light-nf.png</textureradionofocus>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
 	<include name="SettingsBackgroundDialogButtonVars">
@@ -357,7 +435,7 @@
 		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>77585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 	</include>
 	<include name="SettingsBackgroundDialogButtonVarsDarkerBackground">
 		<posx>559</posx>
@@ -376,7 +454,7 @@
 		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>77585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 	</include>
 	<include name="SettingsBackgroundDialogRadioButtonVars">
 		<width>258</width>
@@ -390,9 +468,9 @@
 		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>FF585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
-		<textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+		<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
 		<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
 	<include name="SettingsBackgroundDialogRadioButtonVarsDarkerBackground">
@@ -407,9 +485,9 @@
 		<focusedcolor>eewhite</focusedcolor>
 		<disabledcolor>FF585858</disabledcolor>
 		<shadowcolor>20FFFFFF</shadowcolor>
-		<textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+		<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
 		<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
-		<texturefocus border="2">dialogs/default/highlight.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		<texturenofocus>dialogs/default/separator-btn.png</texturenofocus>
 	</include>
 	<include name="SettingsBackgroundDialogImageVars">
@@ -1286,7 +1364,7 @@
 							<posy>60</posy>
 							<width>532</width>
 							<height>60</height>
-							<texture border="2">dialogs/default/highlight.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(2405).HasFocus</visible>
 						</control>
@@ -1437,7 +1515,7 @@
 							<posy>60</posy>
 							<width>532</width>
 							<height>60</height>
-							<texture border="2">dialogs/default/highlight.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(2405).HasFocus</visible>
 						</control>
@@ -1588,7 +1666,7 @@
 							<posy>60</posy>
 							<width>532</width>
 							<height>60</height>
-							<texture border="2">dialogs/default/highlight.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(2405).HasFocus</visible>
 						</control>
@@ -1739,7 +1817,7 @@
 							<posy>60</posy>
 							<width>532</width>
 							<height>60</height>
-							<texture border="2">dialogs/default/highlight.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(2405).HasFocus</visible>
 						</control>
@@ -1989,7 +2067,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -2162,7 +2240,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -2335,7 +2413,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -2508,7 +2586,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -2681,7 +2759,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -2854,7 +2932,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -3027,7 +3105,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -3200,7 +3278,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -3373,7 +3451,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -3546,7 +3624,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -3719,7 +3797,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -3892,7 +3970,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -4056,7 +4134,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -4220,7 +4298,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -4384,7 +4462,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -4548,7 +4626,7 @@
 				<posy>240</posy>
 				<width>532</width>
 				<height>60</height>
-				<texture border="2">dialogs/default/highlight.png</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>ControlGroup(2405).HasFocus</visible>
 			</control>
@@ -4694,7 +4772,7 @@
 					<posy>0</posy>
 					<width>532</width>
 					<height>60</height>
-					<texture border="2">dialogs/default/highlight.png</texture>
+					<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ControlGroup(2141).HasFocus</visible>
 				</control>
@@ -4822,7 +4900,7 @@
 					<posy>0</posy>
 					<width>532</width>
 					<height>60</height>
-					<texture border="2">dialogs/default/highlight.png</texture>
+					<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ControlGroup(2142).HasFocus</visible>
 				</control>
@@ -4987,7 +5065,7 @@
 					<posy>0</posy>
 					<width>532</width>
 					<height>60</height>
-					<texture border="2">dialogs/default/highlight.png</texture>
+					<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ControlGroup(2141).HasFocus</visible>
 				</control>
@@ -5114,7 +5192,7 @@
 					<posy>0</posy>
 					<width>532</width>
 					<height>60</height>
-					<texture border="2">dialogs/default/highlight.png</texture>
+					<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ControlGroup(2142).HasFocus</visible>
 				</control>
@@ -5274,7 +5352,7 @@
 					<posy>0</posy>
 					<width>532</width>
 					<height>60</height>
-					<texture border="2">dialogs/default/highlight.png</texture>
+					<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ControlGroup(2141).HasFocus</visible>
 				</control>
@@ -5516,7 +5594,7 @@
 					<posy>0</posy>
 					<width>532</width>
 					<height>60</height>
-					<texture border="2">dialogs/default/highlight.png</texture>
+					<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ControlGroup(2141).HasFocus</visible>
 				</control>
@@ -5742,7 +5820,7 @@
 					<posy>0</posy>
 					<width>532</width>
 					<height>60</height>
-					<texture border="2">dialogs/default/highlight.png</texture>
+					<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>ControlGroup(2141).HasFocus</visible>
 				</control>
@@ -6044,7 +6122,7 @@
 							<posy>-8</posy>
 							<width>120</width>
 							<height>76</height>
-							<texture>buttons/radio/options-radio-button-fo.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</texture>
 							<visible>!IsEmpty(ListItem.Property(on))</visible>
 						</control>
 						<control type="image">
@@ -6074,7 +6152,7 @@
 						<control type="image">
 							<width>258</width>
 							<height>60</height>
-							<texture border="2">dialogs/default/highlight.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							<visible>Control.HasFocus(3)</visible>
 						</control>
 						<control type="label">
@@ -6092,7 +6170,7 @@
 							<posy>-8</posy>
 							<width>120</width>
 							<height>76</height>
-							<texture>buttons/radio/options-radio-button-fo.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</texture>
 							<visible>!IsEmpty(ListItem.Property(on))</visible>
 						</control>
 						<control type="image">
@@ -6552,7 +6630,7 @@
 						<control type="image">
 							<width>258</width>
 							<height>60</height>
-							<texture border="2">dialogs/default/highlight.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							<visible>Control.HasFocus(3)</visible>
 						</control>
 						<control type="label">

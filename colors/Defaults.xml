@@ -4,7 +4,8 @@
 	<color name="white">FFFFFFFF</color>
 	<color name="brightred">FFC80000</color>
 	<color name="grey">FFC0C2C2</color>
-	<color name="blue">FF7ACAFE</color>
+	<color name="blue">FF35AEFC</color>
+	<color name="modblue">DD2D97E3</color>
 	<color name="red">FFCE4421</color>
 	<color name="midgrey">FF686868</color>
 	<color name="bluegrey">ffC6C6C8</color>
@@ -117,5 +118,21 @@
 	<color name="Cyan Background">ff008dcc</color>
 	<color name="Magenta Background">ffb41363</color>
 	<color name="Imdb Background">fff3ce13</color>
+	
+	<!-- Focus Colours -->
+	<color name="Blue Focus">ff005180</color>
+	<color name="Green Focus">ff007949</color>
+	<color name="Red Focus">ffd02e49</color>
+	<color name="Pink Focus">ff790059</color>
+	<color name="Purple Focus">ff3a0079</color>
+	<color name="Lime Focus">ff7eb000</color>
+	<color name="Grey Focus">ff404040</color>
+	<color name="Orange Focus">fffdc700</color>
+	<color name="Yellow Focus">fffffe00</color>
+	<color name="Black Focus">ff000000</color>
+	<color name="White Focus">ffffffff</color>
+	<color name="Cyan Focus">ff008dcc</color>
+	<color name="Magenta Focus">ffb41363</color>
+	<color name="Imdb Focus">fff3ce13</color>
 	
 </colors>

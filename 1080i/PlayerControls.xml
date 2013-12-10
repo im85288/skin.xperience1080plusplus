@@ -26,7 +26,7 @@
 						<description>Down</description>
 						<posx>376</posx>
 						<label>-</label>
-						<texturefocus>buttons/down-fo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/down-fo-colour.png</texturefocus>
 						<texturenofocus>buttons/down-nf.png</texturenofocus>
 						<include>DialogButtonDimensionsRightAlign</include>
 						<onleft>SetFocus(91082)</onleft>
@@ -41,7 +41,7 @@
 						<posx>426</posx>
 						<description>Up</description>
 						<label>-</label>
-						<texturefocus>buttons/up-fo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/up-fo-colour.png</texturefocus>
 						<texturenofocus>buttons/up-nf.png</texturenofocus>
 						<include>DialogButtonDimensionsRightAlign</include>
 						<onleft>SetFocus(91081)</onleft>
@@ -59,7 +59,7 @@
 						<description>Down</description>
 						<posx>376</posx>
 						<label>-</label>
-						<texturefocus>buttons/down-fo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/down-fo-colour.png</texturefocus>
 						<texturenofocus>buttons/down-nf.png</texturenofocus>
 						<include>DialogButtonDimensionsRightAlign</include>
 						<onleft>SetFocus(91092)</onleft>
@@ -74,7 +74,7 @@
 						<posx>426</posx>
 						<description>Up</description>
 						<label>-</label>
-						<texturefocus>buttons/up-fo.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/up-fo-colour.png</texturefocus>
 						<texturenofocus>buttons/up-nf.png</texturenofocus>
 						<include>DialogButtonDimensionsRightAlign</include>
 						<onleft>SetFocus(91091)</onleft>

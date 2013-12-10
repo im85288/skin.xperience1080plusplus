@@ -550,7 +550,8 @@
 							<posy>6</posy>
 							<width>1100</width>
 							<height>80</height>
-							<texture border="5">views/other/focus-mod.png</texture>
+							<texture border="5">$VAR[FocusModVar]</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
 							<visible>!ListItem.IsPlaying</visible>
@@ -1233,7 +1234,8 @@
 							<posy>6</posy>
 							<width>1100</width>
 							<height>80</height>
-							<texture border="5">views/other/focus-mod.png</texture>
+							<texture border="5">$VAR[FocusModVar]</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
 							<visible>!ListItem.IsPlaying</visible>
@@ -1645,7 +1647,8 @@
 						<posy>1</posy>
 						<width>500</width>
 						<height>79</height>
-						<texture border="4">views/other/focus-mod.png</texture>
+						<texture border="4">$VAR[FocusModVar]</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 						<visible>!ListItem.IsPlaying</visible>
 					</control>
 					<control type="image">
@@ -1819,8 +1822,8 @@
 						<width>108</width>
 						<height>90</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="12">windows/pvr/epg-fowhite.png</texture>
-						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + !Skin.HasSetting(LiveTVBlack)</visible>
+						<texture border="12">windows/pvr/epg-fo.png</texture>
+						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + !Skin.HasSetting(LiveTVBlack) + !Skin.HasSetting(ColourFocus)</visible>
 					</control>
 					<control type="image" id="2">
 						<posx>-3</posx>
@@ -1828,8 +1831,28 @@
 						<width>108</width>
 						<height>90</height>
 						<aspectratio>stretch</aspectratio>
-						<texture border="12">windows/pvr/epg-fo.png</texture>
-						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + Skin.HasSetting(LiveTVBlack)</visible>
+						<texture border="12">windows/pvr/epg-fo-colour.png</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
+						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + !Skin.HasSetting(LiveTVBlack) + Skin.HasSetting(ColourFocus)</visible>
+					</control>
+					<control type="image" id="2">
+						<posx>-3</posx>
+						<posy>-5</posy>
+						<width>108</width>
+						<height>90</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="12">windows/pvr/epg-fowhite.png</texture>
+						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + Skin.HasSetting(LiveTVBlack) + !Skin.HasSetting(ColourFocus)</visible>
+					</control>
+					<control type="image" id="2">
+						<posx>-3</posx>
+						<posy>-5</posy>
+						<width>108</width>
+						<height>90</height>
+						<aspectratio>stretch</aspectratio>
+						<texture border="12">windows/pvr/epg-fowhite-colour.png</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
+						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + Skin.HasSetting(LiveTVBlack) + Skin.HasSetting(ColourFocus)</visible>
 					</control>
 					<control type="image" id="2">
 						<posx>-3</posx>
@@ -1929,6 +1952,80 @@
 					<width>616</width>
 					<height>290</height>
 					<visible>Player.HasVideo + Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="wraplist" id="7891">
+					<posx>1205</posx>
+					<posy>-20</posy>
+					<width>616</width>
+					<height>290</height>
+					<viewtype label="List">List</viewtype>
+					<scrolltime tween="cubic" easing="out">300</scrolltime>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<visible allowhiddenfocus="true">IntegerGreaterThan(Container(7891).NumItems,0)</visible>
+					<include>visiblehidefadeinfodelayvisible</include>
+					<itemlayout width="616" height="290">
+					</itemlayout>
+					<focusedlayout width="616" height="290">
+					</focusedlayout>
+					<content>
+						<include>PvrWidget.1.TrendingShows</include>
+					</content>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="image">
+					<posx>1205</posx>
+					<posy>-20</posy>
+					<width>616</width>
+					<height>290</height>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<texture background="true">$INFO[Container(7891).ListItem.ActualIcon]</texture>
+					<fadetime>800</fadetime>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="image">
+					<description>Title overlay</description>
+					<posx>1205</posx>
+					<posy>206</posy>
+					<width>616</width>
+					<height>64</height>
+					<texture border="7">windows/home/tile-overlay-r.png</texture>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="button">
+					<description>Title label</description>
+					<posx>1225</posx>
+					<posy>206</posy>
+					<width>596</width>
+					<height>64</height>
+					<label>$INFO[Container(7891).ListItem.Label]</label>
+					<label2>$INFO[Container(7891).ListItem.Label2, ★ ,]</label2>
+					<font>Font-Condensed-S29-B</font>
+					<disabledcolor>aawhite</disabledcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<enable>false</enable>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="image">
+					<posx>1205</posx>
+					<posy>-20</posy>
+					<width>616</width>
+					<height>40</height>
+					<texture border="0">windows/common/black_content2.png</texture>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
+				</control>
+				<control type="label">
+					<posx>1205</posx>
+					<posy>-45</posy>
+					<width>616</width>
+					<height>86</height>
+					<label>Trending Shows</label>
+					<textcolor>eewhite</textcolor>
+					<font>Font-Condensed-S38</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<visible>!Player.HasVideo + !Pvr.IsPlayingTv</visible>
 				</control>
 				<control type="label">
 					<posx>200</posx>
@@ -3038,7 +3135,8 @@
 							<posy>2</posy>
 							<width>1122</width>
 							<height>62</height>
-							<texture border="4">views/other/focus-mod.png</texture>
+							<texture border="4">$VAR[FocusModVar]</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
 						</control>
@@ -3351,7 +3449,16 @@
 							<posy>0</posy>
 							<width>120</width>
 							<height>75</height>
+							<texture colordiffuse="$VAR[FocusModColourVar2]">$VAR[TVTimerRadioButtonTexture]</texture>
+							<visible>StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)</visible>
+						</control>
+						<control type="image">
+							<posx>1614</posx>
+							<posy>0</posy>
+							<width>120</width>
+							<height>75</height>
 							<texture>$VAR[TVTimerRadioButtonTexture]</texture>
+							<visible>!StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)</visible>
 						</control>
 						<control type="image">
 							<posx>1691</posx>
@@ -3384,7 +3491,8 @@
 							<posy>2</posy>
 							<width>1750</width>
 							<height>68</height>
-							<texture border="4">views/other/focus-mod.png</texture>
+							<texture border="4">$VAR[FocusModVar]</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<animation effect="slide" start="6,80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="6,-80" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
 						</control>
@@ -3443,7 +3551,16 @@
 							<posy>0</posy>
 							<width>120</width>
 							<height>75</height>
+							<texture colordiffuse="$VAR[FocusModColourVar2]">$VAR[TVTimerRadioButtonTexture]</texture>
+							<visible>StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)</visible>
+						</control>
+						<control type="image">
+							<posx>1614</posx>
+							<posy>0</posy>
+							<width>120</width>
+							<height>75</height>
 							<texture>$VAR[TVTimerRadioButtonTexture]</texture>
+							<visible>!StringCompare(ListItem.Comment,$LOCALIZE[305]) + !IsEmpty(ListItem.ChannelName)</visible>
 						</control>
 						<control type="image">
 							<posx>1691</posx>
@@ -3691,7 +3808,8 @@
 							<width>1750</width>
 							<height>68</height>
 							<!-- <aspectratio>stretch</aspectratio> -->
-							<texture border="4">views/other/focus-mod.png</texture>
+							<texture border="4">$VAR[FocusModVar]</texture>
+							<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 							<animation effect="slide" start="2,68" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnPrevious">focus</animation>
 							<animation effect="slide" start="2,-68" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(11).OnNext">focus</animation>
 							<visible>Control.HasFocus(17)</visible>

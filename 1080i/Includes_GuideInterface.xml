@@ -200,7 +200,8 @@
 				<posy>0</posy>
 				<width>743</width>
 				<height>66</height>
-				<texture border="5">views/other/focus-mod.png</texture>
+				<texture border="5">$VAR[FocusModVar]</texture>
+				<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 				<include>defaultfocusanim</include>
 			</control>
 			<control type="label">
@@ -518,7 +519,8 @@
 				<posy>0</posy>
 				<width>743</width>
 				<height>66</height>
-				<texture border="5">views/other/focus-mod.png</texture>
+				<texture border="5">$VAR[FocusModVar]</texture>
+				<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 				<include>defaultfocusanim</include>
 			</control>
 			<control type="image">
@@ -693,7 +695,8 @@
 				<posy>0</posy>
 				<width>743</width>
 				<height>133</height>
-				<texture border="5">views/other/focus-mod.png</texture>
+				<texture border="5">$VAR[FocusModVar]</texture>
+				<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 				<include>defaultfocusanim</include>
 				<include>visiblehidefadeinfo</include>
 				<visible>!ControlGroup(9108).HasFocus() + !ControlGroup(9109).HasFocus()</visible>
@@ -1452,7 +1455,8 @@
 				<posy>0</posy>
 				<width>743</width>
 				<height>133</height>
-				<texture border="5">views/other/focus-mod.png</texture>
+				<texture border="5">$VAR[FocusModVar]</texture>
+				<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
 				<include>defaultfocusanim</include>
 				<include>visiblehidefadeinfo</include>
 				<visible>!Control.HasFocus(9110)</visible>
@@ -1651,7 +1655,8 @@
 	</include>
 	<variable name="NowPlayingControlsButton">
 		<value condition="!Control.HasFocus(9110)">$INFO[ListItem.Label,osd/media-guide/buttons/,-nf.png]</value>
-		<value>$INFO[ListItem.Label,osd/media-guide/buttons/,-fo.png]</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">$INFO[ListItem.Label,osd/media-guide/buttons/,-fo.png]</value>
+		<value condition="Skin.HasSetting(ColourFocus)">$INFO[ListItem.Label,osd/media-guide/buttons/,-fo-colour.png]</value>
 	</variable>
 	<include name="NowPlayingControls">
 		<posx>1024</posx>
@@ -1676,7 +1681,7 @@
 				<posy>0</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture>$VAR[NowPlayingControlsButton]</texture>
+				<texture colordiffuse="$VAR[FocusModColourVar2]">$VAR[NowPlayingControlsButton]</texture>
 			</control>
 		</focusedlayout>
 		<content>
