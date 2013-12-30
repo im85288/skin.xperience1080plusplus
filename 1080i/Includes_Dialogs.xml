@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="DialogButtonDimensions">
 		<font>Font-Condensed-S25</font>
-		<textcolor>mod-infotags-d</textcolor>
-		<focusedcolor>mod-infotags-d</focusedcolor>
-		<disabledcolor>mod-infotags-l</disabledcolor>
+		<textcolor>Mod_Tags_Dark</textcolor>
+		<focusedcolor>Mod_Tags_Dark</focusedcolor>
+		<disabledcolor>Mod_Tags_Light</disabledcolor>
 		<shadowcolor>mod-shadow</shadowcolor>
 		<align>left</align>
 		<textoffsetx>85</textoffsetx>
@@ -12,9 +13,9 @@
 	</include>
 	<include name="DialogButtonDimensionsRightAlign">
 		<font>Font-Condensed-S25</font>
-		<textcolor>mod-infotags-d</textcolor>
-		<focusedcolor>mod-infotags-d</focusedcolor>
-		<disabledcolor>mod-infotags-l</disabledcolor>
+		<textcolor>Mod_Tags_Dark</textcolor>
+		<focusedcolor>Mod_Tags_Dark</focusedcolor>
+		<disabledcolor>Mod_Tags_Light</disabledcolor>
 		<shadowcolor>mod-shadow</shadowcolor>
 		<align>right</align>
 		<textoffsetx>85</textoffsetx>
@@ -96,12 +97,10 @@
 		<width>1771</width>
 	</include>
 	<variable name="DarkerBackgroundDialogsMainTextColourVars">
-		<value condition="!Skin.HasSetting(DarkerPanels)">FF585858</value>
-		<value condition="Skin.HasSetting(DarkerPanels)">darkerbackground</value>
+		<value>Mod_Tags_Views</value>
 	</variable>
 	<variable name="DarkerBackgroundDialogsDisabledTextColourVars">
-		<value condition="!Skin.HasSetting(DarkerPanels)">FF585858</value>
-		<value condition="Skin.HasSetting(DarkerPanels)">lightgrey</value>
+		<value>Mod_Tags_Light_Views</value>
 	</variable>
 	<!-- DialogAddonSettings -->
 	<include name="DialogAddonSettings">
@@ -114,7 +113,7 @@
 				<posy>249</posy>
 				<width>80</width>
 				<height>60</height>
-				<texture>dialogs/default/arrow.png</texture>
+				<texture colordiffuse="Mod_Tags_Alt">dialogs/default/arrow.png</texture>
 				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
@@ -131,7 +130,7 @@
 				<posy>269</posy>
 				<width>1352</width>
 				<height>541</height>
-				<texture border="39">dialogs/default/bg.png</texture>
+				<texture colordiffuse="Mod_Tags_Alt" border="39">dialogs/default/bg.png</texture>
 				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
@@ -151,7 +150,7 @@
 				<label>-</label>
 				<font>Font-Condensed-S34</font>
 				<align>center</align>
-				<textcolor>mod-infotags</textcolor>
+				<textcolor>Mod_Tags</textcolor>
 			</control>
 			<control type="group" id="8003">
 				<!-- left group -->
@@ -163,7 +162,7 @@
 						<posy>0</posy>
 						<width>310</width>
 						<height>473</height>
-						<texture border="5">dialogs/default/inner.png</texture>
+						<texture colordiffuse="Mod_Tags_Alt" border="5">dialogs/default/inner.png</texture>
 						<visible>!Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<!-- <control type="image"> <posx>0</posx> <posy>0</posy> <width>310</width> <height>473</height> <texture border="35">views/newgloss/whitepanel-15.png</texture> <colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse> <visible>Skin.HasSetting(DarkerPanels)</visible> </control> -->
@@ -202,7 +201,7 @@
 						<posy>0</posy>
 						<width>960</width>
 						<height>473</height>
-						<texture border="5">dialogs/default/inner.png</texture>
+						<texture colordiffuse="Mod_Tags_Alt" border="5">dialogs/default/inner.png</texture>
 						<visible>!Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<!-- <control type="image"> <posx>0</posx> <posy>0</posy> <width>960</width> <height>473</height> <texture border="35">views/newgloss/whitepanel-15.png</texture> <colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse> <visible>Skin.HasSetting(DarkerPanels)</visible> </control> -->
@@ -429,7 +428,7 @@
 					<height>77</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<texturefocus border="150,1,150,1">windows/settings/images/right-focus.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<textcolor>96FFFFFF</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -472,7 +471,7 @@
 				<height>77</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<texturefocus border="150,1,150,1">windows/settings/images/right-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textcolor>96FFFFFF</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -486,7 +485,7 @@
 				<radioposx>957</radioposx>
 				<align>left</align>
 				<aligny>center</aligny>
-				<texturefocus border="150,1,150,1">windows/settings/images/right-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textcolor>96FFFFFF</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -500,7 +499,7 @@
 				<spinposx>20</spinposx>
 				<align>left</align>
 				<aligny>center</aligny>
-				<texturefocus border="150,1,150,1">windows/settings/images/right-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textcolor>96FFFFFF</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -526,7 +525,7 @@
 				<height>77</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<texturefocus border="150,1,150,1">windows/settings/images/right-focus.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<textcolor>96FFFFFF</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -594,7 +593,7 @@
 				<width>974</width>
 				<font>Font-Condensed-S34</font>
 				<label>-</label>
-				<textcolor>ddwhite</textcolor>
+				<textcolor>Mod_Tags</textcolor>
 				<align>center</align>
 			</control>
 			<control type="image">
@@ -611,7 +610,7 @@
 					<posy>266</posy>
 					<width>712</width>
 					<height>548</height>
-					<texture border="39">dialogs/default/bg.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="39">dialogs/default/bg.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -619,7 +618,7 @@
 					<posy>300</posy>
 					<width>644</width>
 					<height>481</height>
-					<texture border="5">dialogs/default/inner.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="5">dialogs/default/inner.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -639,7 +638,7 @@
 					<posy>266</posy>
 					<width>1146</width>
 					<height>548</height>
-					<texture border="39">dialogs/default/bg.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="39">dialogs/default/bg.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -647,7 +646,7 @@
 					<posy>300</posy>
 					<width>644</width>
 					<height>481</height>
-					<texture border="5">dialogs/default/inner.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="5">dialogs/default/inner.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -1301,7 +1300,7 @@
 						<control type="image">
 							<width>650</width>
 							<height>77</height>
-							<texture border="150,1,150,1">windows/settings/images/right-focus.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 						</control>
 						<control type="label">
 							<posx>25</posx>
@@ -1416,7 +1415,7 @@
 						<control type="image">
 							<width>651</width>
 							<height>77</height>
-							<texture border="150,1,150,1">windows/settings/images/right-focus.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 						</control>
 						<control type="label">
 							<posx>105</posx>
@@ -1647,7 +1646,6 @@
 	</include>
 	<include name="DialogTextViewerAddonInfo">
 		<control type="group">
-			<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			<include>FullscreenDimensions</include>
 			<animation type="WindowOpen">
 				<effect type="slide" start="1920" end="0" time="600" delay="0" tween="sine" easing="inout" />
@@ -1666,50 +1664,8 @@
 				<label>-</label>
 				<font>Font-Condensed-S40</font>
 				<align>left</align>
-				<textcolor>mod-infotags</textcolor>
-				<selectedcolor>mod-infotags</selectedcolor>
-				<pagecontrol>61</pagecontrol>
-			</control>
-			<control type="scrollbar" id="61">
-				<posx>1500</posx>
-				<posy>90</posy>
-				<width>25</width>
-				<height>655</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				<textureslidernib>ScrollBarNib.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-				<onleft>Action(close)</onleft>
-				<onright condition="!Window.IsVisible(3009)">SetProperty(BounceRight,1,Home)</onright>
-				<ondown>61</ondown>
-				<onup>61</onup>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Skin.HasSetting(UseWhiteText)</visible>
-			<include>FullscreenDimensions</include>
-			<animation type="WindowOpen">
-				<effect type="slide" start="1920" end="0" time="600" delay="0" tween="sine" easing="inout" />
-			</animation>
-			<animation type="WindowClose">
-				<effect type="zoom" start="100" end="75" center="640,540" time="300" tween="sine" easing="inout" />
-				<effect type="slide" end="2320" time="600" delay="0" tween="sine" easing="inout" />
-			</animation>
-			<include>listEndAnimation</include>
-			<control type="textbox" id="5">
-				<description>textarea</description>
-				<posx>118</posx>
-				<posy>240</posy>
-				<width>842</width>
-				<height>655</height>
-				<label>-</label>
-				<font>Font-Condensed-S40</font>
-				<align>left</align>
-				<textcolor>darkerbackground</textcolor>
-				<selectedcolor>darkerbackground</selectedcolor>
+				<textcolor>Mod_Tags</textcolor>
+				<selectedcolor>Mod_Tags</selectedcolor>
 				<pagecontrol>61</pagecontrol>
 			</control>
 			<control type="scrollbar" id="61">
@@ -2139,7 +2095,7 @@
 			<control type="group">
 				<include>KeyboardAnimations</include>
 				<include>OptionsShutdownAnimation</include>
-				<visible>!Window.IsVisible(virtualkeyboard) + ![Window.IsVisible(networksetup) + IsEmpty(Window.Property(ShowDialog))]</visible>
+				<visible>!Window.IsVisible(virtualkeyboard) + ![Window.IsVisible(networksetup) + IsEmpty(Window.Property(ShowDialog))] + !Window.IsVisible(locksettings)</visible>
 				<control type="image">
 					<posx>920</posx>
 					<posy>246</posy>
@@ -2152,7 +2108,7 @@
 					<posy>266</posy>
 					<width>1030</width>
 					<height>548</height>
-					<texture border="39">dialogs/default/bg.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="39">dialogs/default/bg.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -2169,7 +2125,7 @@
 					<posy>300</posy>
 					<width>644</width>
 					<height>481</height>
-					<texture border="5">dialogs/default/inner.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="5">dialogs/default/inner.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -2253,27 +2209,16 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FF585858</textcolor>
-							<visible>!Skin.HasSetting(DarkerPanels)</visible>
-							<scroll>false</scroll>
-							<animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
-						</control>
-						<control type="label">
-							<posx>70</posx>
-							<posy>0</posy>
-							<width>574</width>
-							<height>60</height>
-							<info>ListItem.Label</info>
-							<font>Font-Condensed-S32</font>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textcolor>darkerbackground</textcolor>
-							<visible>Skin.HasSetting(DarkerPanels)</visible>
+							<textcolor>Mod_Tags</textcolor>
 							<scroll>false</scroll>
 							<animation effect="slide" end="-50" time="0" condition="IsEmpty(ListItem.Icon)">Conditional</animation>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60">
+						<control type="button">
+							<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$INFO[Container(450).ListItem.Label],selectdialog)</onfocus>
+							<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Icon,$INFO[Container(450).ListItem.Icon],selectdialog)</onfocus>
+						</control>
 						<control type="group">
 							<visible>!Control.HasFocus(450)</visible>
 							<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(450).Scrolling | Container(450).OnScrollNext | Container(450).OnScrollPrevious]">Visible</animation>
@@ -2375,26 +2320,16 @@
 							<font>Font-Condensed-S32</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>FF585858</textcolor>
+							<textcolor>Mod_Tags</textcolor>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="label">
-							<posx>70</posx>
-							<posy>0</posy>
-							<width>574</width>
-							<height>60</height>
-							<info>ListItem.Label</info>
-							<font>Font-Condensed-S32</font>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textcolor>darkerbackground</textcolor>
-							<scroll>false</scroll>
-							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="60">
 						<control type="group">
+							<control type="button">
+								<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$INFO[Container(451).ListItem.Label],selectdialog)</onfocus>
+								<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Icon,$INFO[Container(451).ListItem.Icon],selectdialog)</onfocus>
+							</control>
 							<visible>!Control.HasFocus(451)</visible>
 							<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="inout" condition="![Container(451).Scrolling | Container(451).OnScrollNext | Container(451).OnScrollPrevious]">Visible</animation>
 							<animation effect="fade" start="100" end="0" time="300" tween="sine" easing="inout" condition="![Container(451).Scrolling | Container(451).OnScrollNext | Container(451).OnScrollPrevious]">Hidden</animation>

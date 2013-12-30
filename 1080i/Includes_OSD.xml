@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="ProgressBarColour">
 		<value condition="VideoPlayer.Content(episodes)">$INFO[Skin.String(tvcolor.name)]</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[Skin.String(moviecolor.name)]</value>
 		<value condition="VideoPlayer.Content(LiveTV)">$INFO[Skin.String(pvrcolor.name)]</value>
-	</variable> 
+	</variable>
 	<include name="OSDVisualisation">
 		<control type="visualisation" id="2">
 			<description>visualisation</description>
@@ -14,12 +15,12 @@
 		</control>
 	</include>
 	<include name="OSDFwRwLabel">
-		<posx>1742</posx>
-		<posy>79</posy>
+		<posx>1782</posx>
+		<posy>22</posy>
 		<width>150</width>
 		<height>34</height>
 		<font>Font-Condensed-S34</font>
-		<textcolor>aawhite</textcolor>
+		<textcolor>mod-infotags</textcolor>
 		<align>right</align>
 		<scroll>false</scroll>
 	</include>
@@ -395,28 +396,9 @@
 				<aligny>top</aligny>
 				<visible>!IsEmpty(Player.Art(tvshow.clearart)) + [Skin.HasSetting(ShowClearArt)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek] + Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
 			</control>
-	<!--  		<control type="image">
-				<posx>1420</posx>
-				<posy>470</posy>
-				<width>450</width>
-				<height>270</height>
-				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture>
-				<aspectratio>stretch</aspectratio>
-				<align>right</align>
-				<aligny>top</aligny>
-				<visible>[IsEmpty(Player.Art(tvhsow.clearart)) + IsEmpty(Player.Art(clearart))] + Skin.HasSetting(ShowClearArt) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible>
-			</control>
-			<control type="image">
-				<posx>1360</posx>
-				<posy>710</posy>
-				<width>500</width>
-				<height>300</height>
-				<texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture>
-				<aspectratio>stretch</aspectratio>
-				<align>right</align>
-				<aligny>top</aligny>
-				<visible>[[IsEmpty(Player.Art(tvshow.clearart)) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] + [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible>
-			</control> -->
+			<!-- <control type="image"> <posx>1420</posx> <posy>470</posy> <width>450</width> <height>270</height> <texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture> <aspectratio>stretch</aspectratio> <align>right</align> <aligny>top</aligny> <visible>[IsEmpty(Player.Art(tvhsow.clearart)) + IsEmpty(Player.Art(clearart))] + Skin.HasSetting(ShowClearArt) + [!Player.Paused + !Player.Forwarding + !Player.Rewinding + !Player.Seeking + !Player.DisplayAfterSeek]</visible> 
+				</control> <control type="image"> <posx>1360</posx> <posy>710</posy> <width>500</width> <height>300</height> <texture background="true">$INFO[Player.Art(tvshow.clearlogo)]$INFO[Player.Art(clearlogo)]</texture> <aspectratio>stretch</aspectratio> <align>right</align> <aligny>top</aligny> <visible>[[IsEmpty(Player.Art(tvshow.clearart)) + IsEmpty(Player.Art(clearart)) + Skin.HasSetting(ShowClearArt)] + [Player.Paused | Player.Forwarding | Player.Rewinding | Player.Seeking | Player.DisplayAfterSeek]] 
+				+ [Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]]</visible> </control> -->
 			<control type="image">
 				<posx>1405</posx>
 				<posy>-15</posy>
@@ -846,7 +828,26 @@
 								<posx>1706</posx>
 								<width>196</width>
 								<height>323</height>
-								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
+								<visible>Skin.HasSetting(UseNonColourFlags.Enabled) + !Skin.HasSetting(UseAlternateFlags.Enabled)</visible>
+							</control>
+							<control type="image">
+								<align>left</align>
+								<posy>75</posy>
+								<posx>1706</posx>
+								<width>196</width>
+								<height>323</height>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
+								<visible>!Skin.HasSetting(UseNonColourFlags.Enabled) + Skin.HasSetting(UseAlternateFlags.Enabled)</visible>
+							</control>
+							<control type="image">
+								<align>left</align>
+								<posy>75</posy>
+								<posx>1706</posx>
+								<width>1</width>
+								<height>323</height>
+								<texture border="1">views/list/panel/solidblackpanel.png</texture>
+								<visible>!Skin.HasSetting(UseNonColourFlags.Enabled) + !Skin.HasSetting(UseAlternateFlags.Enabled)</visible>
 							</control>
 							<control type="grouplist">
 								<include>visiblehidefadeinfo</include>
@@ -861,7 +862,10 @@
 								<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 								<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 								<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
-								<include>InfoFlagsAlternateOSD</include>
+								<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled) + Skin.HasSetting(UseAlternateFlags.Enabled)">InfoFlagsAlternateOSD</include>
+								<include condition="Skin.HasSetting(UseNonColourFlags.Enabled) + Skin.HasSetting(UseAlternateFlags.Enabled)">InfoNonColourFlagsAlternateOSD</include>
+								<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled) + !Skin.HasSetting(UseAlternateFlags.Enabled)">InfoFlagsOSD</include>
+								<include condition="Skin.HasSetting(UseNonColourFlags.Enabled) + !Skin.HasSetting(UseAlternateFlags.Enabled)">InfoNonColourFlagsOSD</include>
 							</control>
 							<control type="grouplist">
 								<posx>1810</posx>
@@ -874,7 +878,10 @@
 								<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="300" easing="in">WindowOpen</animation>
 								<animation effect="fade" start="0" end="100" time="300" tween="sine" delay="500" easing="in">Visible</animation>
 								<animation effect="fade" start="100" end="0" time="300" tween="sine" delay="500" easing="out">Hidden</animation>
-								<include>InfoFlagsAlternateOSD2</include>
+								<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled) + Skin.HasSetting(UseAlternateFlags.Enabled)">InfoFlagsAlternateOSD2</include>
+								<include condition="Skin.HasSetting(UseNonColourFlags.Enabled) + Skin.HasSetting(UseAlternateFlags.Enabled)">InfoNonColourFlagsAlternateOSD2</include>
+								<include condition="!Skin.HasSetting(UseNonColourFlags.Enabled) + !Skin.HasSetting(UseAlternateFlags.Enabled)">InfoFlagsOSD2</include>
+								<include condition="Skin.HasSetting(UseNonColourFlags.Enabled) + !Skin.HasSetting(UseAlternateFlags.Enabled)">InfoNonColourFlagsOSD2</include>
 							</control>
 							<control type="label">
 								<posx>590</posx>
@@ -895,7 +902,7 @@
 								<posx>513</posx>
 								<width>1193</width>
 								<height>85</height>
-								<texture border="4">views/list/panel/blackpanel.png</texture>
+								<texture border="4">views/list/panel/solidblackpanel.png</texture>
 							</control>
 							<control type="fadelabel">
 								<posx>590</posx>

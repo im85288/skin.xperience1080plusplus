@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">22</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -17,7 +18,7 @@
 				<posx>445</posx>
 				<posy>178</posy>
 				<width>1030</width>
-				<height>724</height>
+				<height>836</height>
 				<texture border="39">dialogs/default/bg.png</texture>
 			</control>
 			<control type="label" id="2">
@@ -438,7 +439,7 @@
 							<textoffsetx>20</textoffsetx>
 							<spinposx>5</spinposx>
 							<onup>17</onup>
-							<ondown>8000</ondown>
+							<ondown>23</ondown>
 							<onleft>19</onleft>
 							<onright>19</onright>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(18)" reversible="false">Conditional</animation>
@@ -471,15 +472,78 @@
 							<onright>18</onright>
 							<onleft>18</onleft>
 							<onup>17</onup>
-							<ondown>8000</ondown>
+							<ondown>24</ondown>
 							<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(19)" reversible="false">Conditional</animation>
+						</control>
+					</control>
+					<control type="group" id="8004">
+						<posy>239</posy>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>690</width>
+							<height>61</height>
+							<texture border="5">dialogs/default/inner.png</texture>
+						</control>
+						<control type="spincontrolex" id="23">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>690</width>
+							<label>$LOCALIZE[21458]</label>
+							<textureup>buttons/spinctrl/arrow-light-up-nf.png</textureup>
+							<texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
+							<textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
+							<texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
+							<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
+							<textcolor>FF585858</textcolor>
+							<focusedcolor>eewhite</focusedcolor>
+							<disabledcolor>FF585858</disabledcolor>
+							<shadowcolor>20FFFFFF</shadowcolor>
+							<textoffsetx>20</textoffsetx>
+							<spinposx>5</spinposx>
+							<onup>18</onup>
+							<ondown>8000</ondown>
+							<onleft>24</onleft>
+							<onright>24</onright>
+							<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(18)" reversible="false">Conditional</animation>
+						</control>
+						<control type="image">
+							<posx>704</posx>
+							<posy>0</posy>
+							<width>258</width>
+							<height>61</height>
+							<texture border="5">dialogs/default/inner.png</texture>
+						</control>
+						<control type="radiobutton" id="24">
+							<description>mixed</description>
+							<posx>705</posx>
+							<posy>0</posy>
+							<width>258</width>
+							<height>60</height>
+							<align>left</align>
+							<textoffsetx>20</textoffsetx>
+							<textwidth>84</textwidth>
+							<radioposx>145</radioposx>
+							<textcolor>FF585858</textcolor>
+							<focusedcolor>eewhite</focusedcolor>
+							<disabledcolor>77585858</disabledcolor>
+							<shadowcolor>20FFFFFF</shadowcolor>
+							<textureradioon>buttons/radio/radio-light-fo.png</textureradioon>
+							<textureradiooff>buttons/radio/radio-light-nf.png</textureradiooff>
+							<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
+							<texturenofocus>dialogs/default/separator.png</texturenofocus>
+							<label>$LOCALIZE[21459]</label>
+							<onright>23</onright>
+							<onleft>23</onleft>
+							<onup>19</onup>
+							<ondown>8000</ondown>
 						</control>
 					</control>
 				</control>
 			</control>
 			<control type="group" id="8000">
 				<posx>466</posx>
-				<posy>864</posy>
+				<posy>914</posy>
 				<control type="button" id="20">
 					<description>Select</description>
 					<label>$LOCALIZE[42000]</label>

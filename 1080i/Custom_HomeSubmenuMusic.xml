@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="3022">
 	<defaultcontrol always="true">3</defaultcontrol>
 	<onunload>ClearProperty(Close,3022)</onunload>
@@ -27,8 +28,7 @@
 			<itemgap>45</itemgap>
 			<control type="label">
 				<description>Music files</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[744]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
@@ -36,8 +36,7 @@
 			</control>
 			<control type="label">
 				<description>Music files</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[744]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
@@ -56,8 +55,7 @@
 			</control>
 			<control type="label">
 				<description>search</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Search</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
@@ -65,12 +63,11 @@
 			</control>
 			<control type="label">
 				<description>search</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Search</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
-				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)  + Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>!Container(3).HasFocus(1)</visible>
 			</control>
 			<control type="label">
@@ -80,13 +77,12 @@
 				<label>Search</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
-				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)  + Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>Container(3).HasFocus(1)</visible>
 			</control>
 			<control type="label">
 				<description>Genres</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[135]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
@@ -94,8 +90,7 @@
 			</control>
 			<control type="label">
 				<description>Genres</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[135]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
@@ -114,21 +109,19 @@
 			</control>
 			<control type="label">
 				<description>recently added</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Recently Added</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
-				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)  + !Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + !Skin.HasSetting(UseCurvedTiles)</visible>
 			</control>
-				<control type="label">
+			<control type="label">
 				<description>recently added</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Recently Added</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
-				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)  + Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>!Container(3).HasFocus(2)</visible>
 			</control>
 			<control type="label">
@@ -138,13 +131,12 @@
 				<label>Recently Added</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
-				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)  + Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>Container(3).HasFocus(2)</visible>
 			</control>
 			<control type="label">
 				<description>Artists</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[133]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
@@ -152,8 +144,7 @@
 			</control>
 			<control type="label">
 				<description>Artists</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[133]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
@@ -172,21 +163,19 @@
 			</control>
 			<control type="label">
 				<description>albums</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Albums</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)  + !Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + !Skin.HasSetting(UseCurvedTiles)</visible>
 			</control>
-				<control type="label">
+			<control type="label">
 				<description>albums</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Albums</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)  + !Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + !Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>!Container(3).HasFocus(3)</visible>
 			</control>
 			<control type="label">
@@ -196,22 +185,20 @@
 				<label>Albums</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)  + !Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) + !Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>Container(3).HasFocus(3)</visible>
 			</control>
 			<control type="label">
 				<description>Albums</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[132]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
 				<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] + !Skin.HasSetting(UseCurvedTiles)</visible>
 			</control>
-				<control type="label">
+			<control type="label">
 				<description>Albums</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[132]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
@@ -230,8 +217,7 @@
 			</control>
 			<control type="label">
 				<description>Songs</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[134]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
@@ -239,8 +225,7 @@
 			</control>
 			<control type="label">
 				<description>Songs</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[134]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
@@ -259,8 +244,7 @@
 			</control>
 			<control type="label">
 				<description>Years</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[652]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
@@ -268,8 +252,7 @@
 			</control>
 			<control type="label">
 				<description>Years</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[652]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="150" tween="sine" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
@@ -288,8 +271,7 @@
 			</control>
 			<control type="label">
 				<description>Top 100</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[271]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
@@ -297,8 +279,7 @@
 			</control>
 			<control type="label">
 				<description>Top 100</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[271]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(7)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(7)">Conditional</animation>
@@ -317,8 +298,7 @@
 			</control>
 			<control type="label">
 				<description>Playlists</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[136]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
@@ -326,8 +306,7 @@
 			</control>
 			<control type="label">
 				<description>Playlists</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>$LOCALIZE[136]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(8)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(8)">Conditional</animation>
@@ -344,17 +323,32 @@
 				<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] + Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>Container(3).HasFocus(8)</visible>
 			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>12</posy>
-				<width>32</width>
-				<height>38</height>
-				<texture>windows/home/update-library.png</texture>
+			<control type="label">
+				<description>Concerts</description>
+				<include>HomeLabel</include>
+				<label>Concerts</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
-				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="16,50" condition="!Container(3).HasFocus(9)">Conditional</animation>
-				<animation effect="rotate" center="16,34" start="360" end="0" time="1000" loop="true" condition="Library.IsScanningMusic">Conditional</animation>
-				<colordiffuse>mod-infotags</colordiffuse>
-				<visible>!Skin.HasSetting(UseWhiteText) + [!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]]</visible>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] + !Skin.HasSetting(UseCurvedTiles)</visible>
+			</control>
+			<control type="label">
+				<description>Concerts</description>
+				<include>HomeLabel</include>
+				<label>Concerts</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] + Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>!Container(3).HasFocus(9)</visible>
+			</control>
+			<control type="label">
+				<description>Concerts</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<label>Concerts</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]] + Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>Container(3).HasFocus(9)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
@@ -362,11 +356,11 @@
 				<width>32</width>
 				<height>38</height>
 				<texture>windows/home/update-library.png</texture>
-				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(9)">Conditional</animation>
-				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="16,50" condition="!Container(3).HasFocus(9)">Conditional</animation>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(10)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="16,50" condition="!Container(3).HasFocus(10)">Conditional</animation>
 				<animation effect="rotate" center="16,34" start="360" end="0" time="1000" loop="true" condition="Library.IsScanningMusic">Conditional</animation>
-				<colordiffuse>darkerbackground</colordiffuse>
-				<visible>Skin.HasSetting(UseWhiteText) + [!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]]</visible>
+				<colordiffuse>Mod_Tags</colordiffuse>
+				<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]]</visible>
 			</control>
 		</control>
 		<control type="wraplist" id="3">
@@ -396,25 +390,25 @@
 				<item id="1">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.0.search)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.0.type),artist)</visible>
 				</item>
 				<item id="1">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.1.search)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.1.type),artist)</visible>
 				</item>
 				<item id="1">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.2.search)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.2.type),artist)</visible>
 				</item>
 				<item id="1">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.3.search)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.3.type),artist)</visible>
 				</item>
 				<item id="2">
@@ -426,25 +420,25 @@
 				<item id="2">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.0.recent)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.0.type),artist)</visible>
 				</item>
 				<item id="2">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.1.recent)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.1.type),artist)</visible>
 				</item>
 				<item id="2">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.2.recent)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.2.type),artist)</visible>
 				</item>
 				<item id="2">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.3.recent)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.3.type),artist)</visible>
 				</item>
 				<item id="3">
@@ -456,7 +450,7 @@
 				<item id="3">
 					<label>-</label>
 					<onclick>$INFO[Window(home).Property(plexbmc.1.album)]</onclick>
-					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary) </visible>
+					<visible>Skin.HasSetting(plexbmc) + !Skin.HasSetting(plexUseXbmcMusicLibrary)</visible>
 					<visible>substring(Window(home).Property(plexbmc.1.type),artist)</visible>
 				</item>
 				<item id="4">
@@ -490,6 +484,12 @@
 					<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]]</visible>
 				</item>
 				<item id="9">
+					<label>-</label>
+					<onclick>PreviousMenu</onclick>
+					<onclick>ActivateWindow(8888)</onclick>
+					<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]]</visible>
+				</item>
+				<item id="10">
 					<label>-</label>
 					<onclick condition="!Library.IsScanningMusic">UpdateLibrary(music)</onclick>
 					<visible>[!Skin.HasSetting(plexbmc) | [Skin.HasSetting(plexbmc) + Skin.HasSetting(plexUseXbmcMusicLibrary)]]</visible>

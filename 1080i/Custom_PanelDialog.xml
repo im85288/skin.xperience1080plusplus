@@ -1,22 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="3003">
 	<defaultcontrol always="true">3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<onunload condition="Skin.HasSetting(HomeVideoTile1) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeVideoTile1.Path))">Skin.ToggleSetting(HomeVideoTile1)</onunload>
-	<onunload condition="Skin.HasSetting(HomeVideoTile2) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeVideoTile2.Path))">Skin.ToggleSetting(HomeVideoTile2)</onunload>
-	<onunload condition="Skin.HasSetting(HomeVideoTile3) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeVideoTile3.Path))">Skin.ToggleSetting(HomeVideoTile3)</onunload>
-	<onunload condition="Skin.HasSetting(HomeVideoTile4) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeVideoTile4.Path))">Skin.ToggleSetting(HomeVideoTile4)</onunload>
-	<onunload condition="Skin.HasSetting(HomeTVShowTile1) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeTVShowTile1.Path))">Skin.ToggleSetting(HomeTVShowTile1)</onunload>
-	<onunload condition="Skin.HasSetting(HomeTVShowTile2) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeTVShowTile2.Path))">Skin.ToggleSetting(HomeTVShowTile2)</onunload>
-	<onunload condition="Skin.HasSetting(HomeMusicTile1) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeMusicTile1.Path))">Skin.ToggleSetting(HomeMusicTile1)</onunload>
-	<onunload condition="Skin.HasSetting(HomeMusicTile2) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeMusicTile2.Path))">Skin.ToggleSetting(HomeMusicTile2)</onunload>
-	<onunload condition="Skin.HasSetting(HomeProgramTile1) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile1.Path))">Skin.ToggleSetting(HomeProgramTile1)</onunload>
-	<onunload condition="Skin.HasSetting(HomeProgramTile2) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile2.Path))">Skin.ToggleSetting(HomeProgramTile2)</onunload>
-	<onunload condition="Skin.HasSetting(HomeProgramTile3) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile3.Path))">Skin.ToggleSetting(HomeProgramTile3)</onunload>
-	<onunload condition="Skin.HasSetting(HomeProgramTile4) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile4.Path))">Skin.ToggleSetting(HomeProgramTile4)</onunload>
-	<onunload condition="Skin.HasSetting(HomeProgramTile5) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile5.Path))">Skin.ToggleSetting(HomeProgramTile5)</onunload>
-	<onunload condition="Skin.HasSetting(HomeProgramTile6) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile6.Path))">Skin.ToggleSetting(HomeProgramTile6)</onunload>
-	<onunload condition="Skin.HasSetting(HomeProgramTile7) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile7.Path))">Skin.ToggleSetting(HomeProgramTile7)</onunload>
-	<onunload condition="Skin.HasSetting(HomeProgramTile8) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile8.Path))">Skin.ToggleSetting(HomeProgramTile8)</onunload>
+	<!-- <onunload condition="Skin.HasSetting(HomeVideoTile1) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeVideoTile1.Path))">Skin.ToggleSetting(HomeVideoTile1)</onunload> <onunload condition="Skin.HasSetting(HomeVideoTile2) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeVideoTile2.Path))">Skin.ToggleSetting(HomeVideoTile2)</onunload> <onunload condition="Skin.HasSetting(HomeVideoTile3) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeVideoTile3.Path))">Skin.ToggleSetting(HomeVideoTile3)</onunload> 
+		<onunload condition="Skin.HasSetting(HomeVideoTile4) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeVideoTile4.Path))">Skin.ToggleSetting(HomeVideoTile4)</onunload> <onunload condition="Skin.HasSetting(HomeTVShowTile1) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeTVShowTile1.Path))">Skin.ToggleSetting(HomeTVShowTile1)</onunload> <onunload condition="Skin.HasSetting(HomeTVShowTile2) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeTVShowTile2.Path))">Skin.ToggleSetting(HomeTVShowTile2)</onunload> 
+		<onunload condition="Skin.HasSetting(HomeMusicTile1) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeMusicTile1.Path))">Skin.ToggleSetting(HomeMusicTile1)</onunload> <onunload condition="Skin.HasSetting(HomeMusicTile2) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeMusicTile2.Path))">Skin.ToggleSetting(HomeMusicTile2)</onunload> <onunload condition="Skin.HasSetting(HomeProgramTile1) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile1.Path))">Skin.ToggleSetting(HomeProgramTile1)</onunload> 
+		<onunload condition="Skin.HasSetting(HomeProgramTile2) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile2.Path))">Skin.ToggleSetting(HomeProgramTile2)</onunload> <onunload condition="Skin.HasSetting(HomeProgramTile3) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile3.Path))">Skin.ToggleSetting(HomeProgramTile3)</onunload> <onunload condition="Skin.HasSetting(HomeProgramTile4) + !IsEmpty(Window(3003).Property(SingleDialog)) + 
+		IsEmpty(Skin.String(HomeProgramTile4.Path))">Skin.ToggleSetting(HomeProgramTile4)</onunload> <onunload condition="Skin.HasSetting(HomeProgramTile5) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile5.Path))">Skin.ToggleSetting(HomeProgramTile5)</onunload> <onunload condition="Skin.HasSetting(HomeProgramTile6) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile6.Path))">Skin.ToggleSetting(HomeProgramTile6)</onunload> <onunload condition="Skin.HasSetting(HomeProgramTile7) 
+		+ !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile7.Path))">Skin.ToggleSetting(HomeProgramTile7)</onunload> <onunload condition="Skin.HasSetting(HomeProgramTile8) + !IsEmpty(Window(3003).Property(SingleDialog)) + IsEmpty(Skin.String(HomeProgramTile8.Path))">Skin.ToggleSetting(HomeProgramTile8)</onunload> -->
+	<onunload condition="Skin.HasSetting(HomeHomeTile1) + IsEmpty(Skin.String(HomeHomeTile1.Path))">Skin.Reset(HomeHomeTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeHomeTile2) + IsEmpty(Skin.String(HomeHomeTile2.Path))">Skin.Reset(HomeHomeTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeVideoTile1) + IsEmpty(Skin.String(HomeVideoTile1.Path))">Skin.Reset(HomeVideoTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeVideoTile2) + IsEmpty(Skin.String(HomeVideoTile2.Path))">Skin.Reset(HomeVideoTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeVideoTile3) + IsEmpty(Skin.String(HomeVideoTile3.Path))">Skin.Reset(HomeVideoTile3)</onunload>
+	<onunload condition="Skin.HasSetting(HomeVideoTile4) + IsEmpty(Skin.String(HomeVideoTile4.Path))">Skin.Reset(HomeVideoTile4)</onunload>
+	<onunload condition="Skin.HasSetting(HomeVideoTile5) + IsEmpty(Skin.String(HomeVideoTile5.Path))">Skin.Reset(HomeVideoTile5)</onunload>
+	<onunload condition="Skin.HasSetting(HomeVideoTile6) + IsEmpty(Skin.String(HomeVideoTile6.Path))">Skin.Reset(HomeVideoTile6)</onunload>
+	<onunload condition="Skin.HasSetting(HomeTVShowTile1) + IsEmpty(Skin.String(HomeTVShowTile1.Path))">Skin.Reset(HomeTVShowTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeTVShowTile2) + IsEmpty(Skin.String(HomeTVShowTile2.Path))">Skin.Reset(HomeTVShowTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeTVShowTile3) + IsEmpty(Skin.String(HomeTVShowTile3.Path))">Skin.Reset(HomeTVShowTile3)</onunload>
+	<onunload condition="Skin.HasSetting(HomeTVShowTile4) + IsEmpty(Skin.String(HomeTVShowTile4.Path))">Skin.Reset(HomeTVShowTile4)</onunload>
+	<onunload condition="Skin.HasSetting(HomeLiveTvTile1) + IsEmpty(Skin.String(HomeLiveTvTile1.Path))">Skin.Reset(HomeLiveTvTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeLiveTvTile2) + IsEmpty(Skin.String(HomeLiveTvTile2.Path))">Skin.Reset(HomeLiveTvTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeLiveTvTile3) + IsEmpty(Skin.String(HomeLiveTvTile3.Path))">Skin.Reset(HomeLiveTvTile3)</onunload>
+	<onunload condition="Skin.HasSetting(HomeLiveTvTile4) + IsEmpty(Skin.String(HomeLiveTvTile4.Path))">Skin.Reset(HomeLiveTvTile4)</onunload>
+	<onunload condition="Skin.HasSetting(HomeLiveTvTile5) + IsEmpty(Skin.String(HomeLiveTvTile5.Path))">Skin.Reset(HomeLiveTvTile5)</onunload>
+	<onunload condition="Skin.HasSetting(HomeLiveTvTile6) + IsEmpty(Skin.String(HomeLiveTvTile6.Path))">Skin.Reset(HomeLiveTvTile6)</onunload>
+	<onunload condition="Skin.HasSetting(HomePicturesTile1) + IsEmpty(Skin.String(HomePicturesTile1.Path))">Skin.Reset(HomePicturesTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomePicturesTile2) + IsEmpty(Skin.String(HomePicturesTile2.Path))">Skin.Reset(HomePicturesTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeMusicTile1) + IsEmpty(Skin.String(HomeMusicTile1.Path))">Skin.Reset(HomeMusicTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeMusicTile2) + IsEmpty(Skin.String(HomeMusicTile2.Path))">Skin.Reset(HomeMusicTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeMusicTile3) + IsEmpty(Skin.String(HomeMusicTile3.Path))">Skin.Reset(HomeMusicTile3)</onunload>
+	<onunload condition="Skin.HasSetting(HomeMusicTile4) + IsEmpty(Skin.String(HomeMusicTile4.Path))">Skin.Reset(HomeMusicTile4)</onunload>
+	<onunload condition="Skin.HasSetting(HomeProgramTile1) + IsEmpty(Skin.String(HomeProgramTile1.Path))">Skin.Reset(HomeProgramTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeProgramTile2) + IsEmpty(Skin.String(HomeProgramTile2.Path))">Skin.Reset(HomeProgramTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeProgramTile3) + IsEmpty(Skin.String(HomeProgramTile3.Path))">Skin.Reset(HomeProgramTile3)</onunload>
+	<onunload condition="Skin.HasSetting(HomeProgramTile4) + IsEmpty(Skin.String(HomeProgramTile4.Path))">Skin.Reset(HomeProgramTile4)</onunload>
+	<onunload condition="Skin.HasSetting(HomeProgramTile5) + IsEmpty(Skin.String(HomeProgramTile5.Path))">Skin.Reset(HomeProgramTile5)</onunload>
+	<onunload condition="Skin.HasSetting(HomeProgramTile6) + IsEmpty(Skin.String(HomeProgramTile6.Path))">Skin.Reset(HomeProgramTile6)</onunload>
+	<onunload condition="Skin.HasSetting(HomeProgramTile7) + IsEmpty(Skin.String(HomeProgramTile7.Path))">Skin.Reset(HomeProgramTile7)</onunload>
+	<onunload condition="Skin.HasSetting(HomeProgramTile8) + IsEmpty(Skin.String(HomeProgramTile8.Path))">Skin.Reset(HomeProgramTile8)</onunload>
+	<onunload condition="Skin.HasSetting(HomeWeatherTile1) + IsEmpty(Skin.String(HomeWeatherTile1.Path))">Skin.Reset(HomeWeatherTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeWeatherTile2) + IsEmpty(Skin.String(HomeWeatherTile2.Path))">Skin.Reset(HomeWeatherTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeWeatherTile1) + IsEmpty(Skin.String(HomeWeatherTile1.Path))">Skin.Reset(HomeWeatherTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeChannelsTile1) + IsEmpty(Skin.String(HomeChannelsTile1.Path))">Skin.Reset(HomeChannelsTile1)</onunload>
+	<onunload condition="Skin.HasSetting(HomeChannelsTile2) + IsEmpty(Skin.String(HomeChannelsTile2.Path))">Skin.Reset(HomeChannelsTile2)</onunload>
+	<onunload condition="Skin.HasSetting(HomeChannelsTile3) + IsEmpty(Skin.String(HomeChannelsTile3.Path))">Skin.Reset(HomeChannelsTile3)</onunload>
+	<onunload condition="Skin.HasSetting(HomeChannelsTile4) + IsEmpty(Skin.String(HomeChannelsTile4.Path))">Skin.Reset(HomeChannelsTile4)</onunload>
 	<onunload condition="substring(Window(3003).Property(SingleDialog),widget)">ReplaceWindow(startup)</onunload>
 	<onunload condition="!IsEmpty(Window(3003).Property(SingleDialog))">ClearProperty(SingleDialog,3003)</onunload>
 	<onunload condition="!IsEmpty(Window(3003).Property(CustomDialog))">ClearProperty(CustomDialog,3003)</onunload>

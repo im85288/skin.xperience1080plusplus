@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">10</defaultcontrol>
     <zorder>5</zorder>
@@ -84,7 +85,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>mod-infotags</textcolor>
+                    <textcolor>Mod_Tags</textcolor>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>
                 </control>
@@ -96,7 +97,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>mod-infotags</textcolor>
+                    <textcolor>Mod_Tags</textcolor>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(2))">Conditional</animation>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>
                 </control>
@@ -108,7 +109,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>mod-infotags</textcolor>
+                    <textcolor>Mod_Tags</textcolor>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(2))">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
                 </control>

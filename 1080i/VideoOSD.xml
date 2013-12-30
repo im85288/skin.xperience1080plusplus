@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<include condition="!Skin.HasSetting(OSDDefaultSubtitleButton.Enabled) + !VideoPlayer.Content(LiveTV)">OSDDefaultControlPlay</include>
 	<include condition="Skin.HasSetting(OSDDefaultSubtitleButton.Enabled) + !VideoPlayer.Content(LiveTV)">OSDDefaultControlSubtitles</include>
@@ -120,10 +121,8 @@
 					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
 					<alttexturefocus>osd/fullscreen/buttons/subtitles-fo.png</alttexturefocus>
 					<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
-					<onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
-					<altclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</altclick>
-					<altclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</altclick>
-					<usealttexture>IsEmpty(Skin.String(SubtitleScript_Path))</usealttexture>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(SubtitleSearch)</onclick>
 					<onleft>12</onleft>
 					<onright>1</onright>
 					<onup>Close</onup>
@@ -140,10 +139,8 @@
 					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
 					<alttexturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/subtitles-nofo.png</alttexturefocus>
 					<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
-					<onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
-					<altclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</altclick>
-					<altclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</altclick>
-					<usealttexture>IsEmpty(Skin.String(SubtitleScript_Path))</usealttexture>
+					<onclick>Dialog.Close(VideoOSD)</onclick>
+					<onclick>ActivateWindow(SubtitleSearch)</onclick>
 					<onleft>12</onleft>
 					<onright>1</onright>
 					<onup>Close</onup>

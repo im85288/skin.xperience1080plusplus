@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- =============== -->
 	<!-- Big Panel (55) -->
@@ -141,18 +142,7 @@
 					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
-					<visible>Container.Content(Albums) + !Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<posx>24</posx>
-					<posy>30</posy>
-					<width>690</width>
-					<label>$INFO[ListItem.Album]</label>
-					<font>Font-Condensed-S32</font>
-					<textcolor>darkerbackground</textcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-					<visible>Container.Content(Albums) + Skin.HasSetting(UseWhiteText)</visible>
+					<visible>Container.Content(Albums)</visible>
 				</control>
 				<control type="label">
 					<posx>24</posx>
@@ -163,18 +153,7 @@
 					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
-					<visible>!Container.Content(Albums) + !Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<posx>24</posx>
-					<posy>30</posy>
-					<width min="50" max="690">auto</width>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Font-Condensed-S32</font>
-					<textcolor>darkerbackground</textcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-					<visible>!Container.Content(Albums) + Skin.HasSetting(UseWhiteText)</visible>
+					<visible>!Container.Content(Albums)</visible>
 				</control>
 				<control type="group">
 					<visible>![Container(55).OnNext | Container(55).OnPrevious] + Container.Content(Albums)</visible>
@@ -192,22 +171,6 @@
 						<font>Font-Condensed-S25</font>
 						<scroll>false</scroll>
 						<wrapmultiline>false</wrapmultiline>
-						<visible>!Skin.HasSetting(UseWhiteText)</visible>
-					</control>
-					<control type="label">
-						<description>Tracks</description>
-						<posx>24</posx>
-						<posy>74</posy>
-						<width>330</width>
-						<height>125</height>
-						<label>$VAR[MusicTracklistVar]</label>
-						<align>justify</align>
-						<aligny>top</aligny>
-						<textcolor>darkerbackground</textcolor>
-						<font>Font-Condensed-S25</font>
-						<scroll>false</scroll>
-						<wrapmultiline>false</wrapmultiline>
-						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="label">
 						<description>Tracks Right</description>
@@ -222,22 +185,6 @@
 						<font>Font-Condensed-S25</font>
 						<scroll>false</scroll>
 						<wrapmultiline>false</wrapmultiline>
-						<visible>!Skin.HasSetting(UseWhiteText)</visible>
-					</control>
-					<control type="label">
-						<description>Tracks Right</description>
-						<posx>475</posx>
-						<posy>74</posy>
-						<width>330</width>
-						<height>125</height>
-						<label>$VAR[MusicTracklistAltVar]</label>
-						<align>justify</align>
-						<aligny>top</aligny>
-						<textcolor>darkerbackground</textcolor>
-						<font>Font-Condensed-S25</font>
-						<scroll>false</scroll>
-						<wrapmultiline>false</wrapmultiline>
-						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="textbox">
 						<description>Plot</description>
@@ -249,19 +196,6 @@
 						<align>justify</align>
 						<textcolor>mod-infotags-l</textcolor>
 						<font>Font-Condensed-S25</font>
-						<visible>!Skin.HasSetting(UseWhiteText)</visible>
-					</control>
-					<control type="textbox">
-						<description>Plot</description>
-						<posx>24</posx>
-						<posy>74</posy>
-						<width>902</width>
-						<height>147</height>
-						<label>$VAR[MusicTracklistInfoVar]</label>
-						<align>justify</align>
-						<textcolor>darkerbackground</textcolor>
-						<font>Font-Condensed-S25</font>
-						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 				</control>
 				<control type="textbox">
@@ -274,19 +208,7 @@
 					<textcolor>mod-infotags-l</textcolor>
 					<align>justify</align>
 					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>!IsEmpty(ListItem.Property(Artist_Description)) + Container.Content(Artists) + !Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="textbox">
-					<posx>24</posx>
-					<posy>74</posy>
-					<width>902</width>
-					<height>147</height>
-					<label>$INFO[ListItem.Property(Artist_Description)]</label>
-					<font>Font-Condensed-S25</font>
-					<textcolor>darkerbackground</textcolor>
-					<align>justify</align>
-					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>!IsEmpty(ListItem.Property(Artist_Description)) + Container.Content(Artists) + Skin.HasSetting(UseWhiteText)</visible>
+					<visible>!IsEmpty(ListItem.Property(Artist_Description)) + Container.Content(Artists)</visible>
 				</control>
 			</control>
 		</control>

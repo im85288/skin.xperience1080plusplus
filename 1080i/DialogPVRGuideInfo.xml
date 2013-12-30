@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="601">
 	<defaultcontrol always="true">8000</defaultcontrol>
 	<onload condition="Window.IsActive(fullscreenvideo)">SendClick(6)</onload>

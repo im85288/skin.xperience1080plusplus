@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>30</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -40,20 +41,7 @@
 					<align>right</align>
 					<font>Font-Condensed-S25</font>
 					<label>$LOCALIZE[42130]</label>
-					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<description>Category</description>
-					<posx>483</posx>
-					<posy>235</posy>
-					<height>40</height>
-					<width>338</width>
-					<align>right</align>
-					<font>Font-Condensed-S25</font>
-					<label>$LOCALIZE[42130]</label>
-					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<textcolor>Mod_Tags</textcolor>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -61,7 +49,7 @@
 					<posy>265</posy>
 					<height>638</height>
 					<width>370</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -108,23 +96,9 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>mod-infotags-l</textcolor>
+							<textcolor>Mod_Tags_Light</textcolor>
 							<font>Font-Condensed-S30-B</font>
 							<textoffsetx>35</textoffsetx>
-							<visible>!Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="label">
-							<posx>338</posx>
-							<posy>0</posy>
-							<width>338</width>
-							<height>77</height>
-							<align>right</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>darkerbackground</textcolor>
-							<font>Font-Condensed-S30-B</font>
-							<textoffsetx>35</textoffsetx>
-							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="76">
@@ -145,23 +119,9 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>Mod_Tags_Alt</textcolor>
 							<font>Font-Condensed-S30-B</font>
 							<textoffsetx>35</textoffsetx>
-							<visible>!Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="label">
-							<posx>338</posx>
-							<posy>0</posy>
-							<width>338</width>
-							<height>77</height>
-							<align>right</align>
-							<aligny>center</aligny>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>mod-infotags</textcolor>
-							<font>Font-Condensed-S30-B</font>
-							<textoffsetx>35</textoffsetx>
-							<visible>Skin.HasSetting(DarkerPanels)</visible>
 						</control>
 					</focusedlayout>
 					<content>
@@ -250,20 +210,7 @@
 					<align>left</align>
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
-					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<description>Category</description>
-					<posx>390</posx>
-					<posy>235</posy>
-					<height>40</height>
-					<width>450</width>
-					<align>left</align>
-					<font>Font-Condensed-S25</font>
-					<label>[UPPERCASE]$LOCALIZE[5]:[/UPPERCASE]$INFO[Container(30).ListItem.Label, ,]</label>
-					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<textcolor>Mod_Tags</textcolor>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -271,7 +218,7 @@
 					<posy>265</posy>
 					<height>638</height>
 					<width>1243</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -447,24 +394,10 @@
 							<aligny>center</aligny>
 							<textoffsetx>35</textoffsetx>
 							<font>Font-Condensed-S30-B</font>
-							<textcolor>mod-infotags</textcolor>
+							<textcolor>Mod_Tags</textcolor>
 							<label>$LOCALIZE[20304]</label>
 							<label2>$INFO[Skin.String(rss.setting)]</label2>
-							<visible>!ControlGroup(1007).HasFocus + !Skin.HasSetting(DarkerPanels)</visible>
-						</control>
-						<control type="button">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>1120</width>
-							<height>77</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<textoffsetx>35</textoffsetx>
-							<font>Font-Condensed-S30-B</font>
-							<textcolor>darkerbackground</textcolor>
-							<label>$LOCALIZE[20304]</label>
-							<label2>$INFO[Skin.String(rss.setting)]</label2>
-							<visible>!ControlGroup(1007).HasFocus + Skin.HasSetting(DarkerPanels)</visible>
+							<visible>!ControlGroup(1007).HasFocus</visible>
 						</control>
 						<control type="button">
 							<posx>0</posx>
@@ -539,7 +472,7 @@
 							<posy>0</posy>
 							<width>1210</width>
 							<height>77</height>
-							<texture border="150,3,150,3">windows/settings/images/right-focus.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>ControlGroup(2006).HasFocus</visible>
 						</control>
@@ -662,6 +595,48 @@
 						<selected>Skin.HasSetting(ShowLargerSpotlight)</selected>
 						<onclick>Skin.ToggleSetting(ShowLargerSpotlight)</onclick>
 						<label>Show larger spotlight in Home</label>
+					</control>
+					<control type="radiobutton" id="2021">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(HideBannerSpotlight)</selected>
+						<onclick>Skin.ToggleSetting(HideBannerSpotlight)</onclick>
+						<label>Hide Banner for TV Shows</label>
+						<visible>Skin.HasSetting(ShowLargerSpotlight)</visible>
+					</control>
+					<control type="radiobutton" id="2022">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(HideClearLogoSpotlight)</selected>
+						<onclick>Skin.ToggleSetting(HideClearLogoSpotlight)</onclick>
+						<label>Hide ClearLogo for Movies</label>
+						<visible>Skin.HasSetting(ShowLargerSpotlight)</visible>
+					</control>
+					<control type="radiobutton" id="2019">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(ShowLargerMovies)</selected>
+						<onclick>Skin.ToggleSetting(ShowLargerMovies)</onclick>
+						<label>Show larger movies widget in Home</label>
+					</control>
+					<control type="radiobutton" id="2020">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(ShowLargerMusic)</selected>
+						<onclick>Skin.ToggleSetting(ShowLargerMusic)</onclick>
+						<label>Show larger music widget in Home</label>
 					</control>
 					<control type="radiobutton" id="2003">
 						<width>1210</width>
@@ -1794,16 +1769,6 @@
 						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
 						<label>Show less background</label>
 					</control>
-					<control type="radiobutton" id="3092">
-						<width>1210</width>
-						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
-						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
-						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
-						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
-						<selected>Skin.HasSetting(UseWhiteText)</selected>
-						<onclick>Skin.ToggleSetting(UseWhiteText)</onclick>
-						<label>Use white text</label>
-					</control>
 					<control type="radiobutton" id="3023">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
@@ -1823,6 +1788,47 @@
 						<selected>!Skin.HasSetting(HideFanart)</selected>
 						<onclick>Skin.ToggleSetting(HideFanart)</onclick>
 						<label>$LOCALIZE[41191]</label>
+					</control>
+					<control type="radiobutton" id="3014">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(ExtraFanart.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(ExtraFanart.Enabled)</onclick>
+						<label>Show extra fanart</label>
+						<enable>!Skin.HasSetting(HideFanart)</enable>
+					</control>
+					<control type="button" id="3015">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<onclick>Addon.OpenSettings(script.artwork.downloader)</onclick>
+						<label> • Open Artwork downloader</label>
+						<visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="3016">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=movie,extrafanart)</onclick>
+						<label> • Download extra fanarts for Movies</label>
+						<visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="button" id="3017">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<onclick>XBMC.RunScript(script.artwork.downloader,mode=custom,mediatype=tvshow,extrafanart)</onclick>
+						<label> • Download extra fanarts for TV Shows</label>
+						<visible>Skin.HasSetting(ExtraFanart.Enabled) + !Skin.HasSetting(HideFanart) + System.HasAddon(script.artwork.downloader)</visible>
 					</control>
 					<control type="radiobutton" id="3002">
 						<width>1210</width>
@@ -1965,7 +1971,6 @@
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
 						<selected>Skin.HasSetting(OSDDefaultSubtitleButton.Enabled)</selected>
 						<onclick>Skin.ToggleSetting(OSDDefaultSubtitleButton.Enabled)</onclick>
-						<enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
 						<label>$LOCALIZE[41242]</label>
 						<animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8005)">Conditional</animation>
 					</control>
@@ -1978,6 +1983,16 @@
 						<selected>Skin.HasSetting(ShowSmallerOSDHeader.Enabled)</selected>
 						<onclick>Skin.ToggleSetting(ShowSmallerOSDHeader.Enabled)</onclick>
 						<label>Show smaller header osd</label>
+					</control>
+					<control type="radiobutton" id="8011">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(UseAlternateFlags.Enabled)</selected>
+						<onclick>Skin.ToggleSetting(UseAlternateFlags.Enabled)</onclick>
+						<label>Use alternate flags</label>
 					</control>
 					<control type="radiobutton" id="8009">
 						<width>1210</width>
@@ -2285,6 +2300,16 @@
 						<onclick>Skin.ToggleSetting(LiveTVBlack)</onclick>
 						<label>Use dark background</label>
 					</control>
+					<control type="radiobutton" id="10003">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(ShowEpgProgress)</selected>
+						<onclick>Skin.ToggleSetting(ShowEpgProgress)</onclick>
+						<label>Show progress in EPG</label>
+					</control>
 				</control>
 				<!-- =============== -->
 				<!-- Add-on Settings -->
@@ -2293,16 +2318,6 @@
 					<onleft>30</onleft>
 					<include>SettingsCategoryGrouplistVars</include>
 					<visible>Container(30).HasFocus(38)</visible>
-					<control type="button" id="7001">
-						<width>1210</width>
-						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
-						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
-						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
-						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
-						<label>$LOCALIZE[41281]</label>
-						<label2>[COLOR=SettingsBlue]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
-						<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
-					</control>
 					<control type="button" id="7002">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="610">
 	<defaultcontrol always="true">11</defaultcontrol>
 	<zorder>3</zorder>
@@ -57,7 +58,7 @@
 					<align>left</align>
 					<label>$INFO[System.Time]</label>
 					<font>Font-Condensed-S36</font>
-					<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					66000000
 				</control>
 				<control type="label">
@@ -70,7 +71,7 @@
 					<textoffsetx>30</textoffsetx>
 					<label>$LOCALIZE[19222]$INFO[VideoPlayer.ChannelName, • ,]</label>
 					<font>Font-Condensed-S34</font>
-					<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					66000000
 				</control>
 				<control type="image">
@@ -117,8 +118,8 @@
 							<font>Font-Condensed-S34</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+							<textcolor>mod-infotags</textcolor>
+							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 						</control>
@@ -145,7 +146,7 @@
 							<font>Font-Condensed-S31</font>
 							<align>left</align>
 							<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]</label>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<visible>!StringCompare(VideoPlayer.StartTime,ListItem.StartTime)</visible>
 							<scroll>false</scroll>
 						</control>

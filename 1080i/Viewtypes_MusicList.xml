@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- ========= -->
 	<!-- List (50) -->
@@ -12,7 +13,7 @@
 				<posy>175</posy>
 				<height>729</height>
 				<width>1452</width>
-				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
 				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
@@ -90,8 +91,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$VAR[MusicListLabel]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -104,8 +105,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$VAR[MusicListLabel]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -118,8 +119,8 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Artist]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -132,8 +133,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 					</control>
 				</itemlayout>
@@ -163,7 +164,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
 					</control>
@@ -176,7 +177,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Property(Artist_Genre))</visible>
 					</control>
@@ -189,8 +190,8 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
 					</control>
@@ -221,7 +222,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -234,7 +235,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -247,8 +248,8 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Artist]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -260,8 +261,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$INFO[ListItem.Year]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Year)</visible>
 					</control>
@@ -280,9 +281,9 @@
 						<height>100</height>
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
-						<label fallback="[COLOR=$VAR[DarkerBackgroundViewsMainTextColourVars]]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<label fallback="[COLOR=$VAR[Mod_Tags_Views]]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Album)</visible>
 					</control>
@@ -323,8 +324,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$VAR[MusicListSongLabel]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -337,8 +338,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$VAR[MusicListSongLabel]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -351,8 +352,8 @@
 						<font>Font-Condensed-S28</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Artist]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Artist)</visible>
 					</control>
@@ -373,8 +374,8 @@
 							<height>42</height>
 							<label>$INFO[ListItem.PlayCount]</label>
 							<font>Font-Condensed-S30-B</font>
-							<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-							<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+							<textcolor>Mod_Tags_Views</textcolor>
+							<selectedcolor>Mod_Tags_Views</selectedcolor>
 							<scroll>no</scroll>
 							<align>center</align>
 						</control>
@@ -387,8 +388,8 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
 						<label>$VAR[MusicListSongLabel2]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!stringcompare(Container.FolderPath,musicdb://5/1/)</visible>
 					</control>
@@ -407,9 +408,9 @@
 						<height>100</height>
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
-						<label fallback="[COLOR=$VAR[DarkerBackgroundViewsMainTextColourVars]]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
-						<selectedcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</selectedcolor>
+						<label fallback="[COLOR=$VAR[Mod_Tags_Views]]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+						<textcolor>Mod_Tags_Views</textcolor>
+						<selectedcolor>Mod_Tags_Views</selectedcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -474,8 +475,8 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$VAR[MusicListLabel]</label>
-							<textcolor>eewhite</textcolor>
-							<selectedcolor>eewhite</selectedcolor>
+							<textcolor>Mod_Tags_Alt</textcolor>
+							<selectedcolor>Mod_Tags_Alt</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Artist)</visible>
 						</control>
@@ -488,7 +489,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$VAR[MusicListLabel]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>Mod_Tags_Alt</textcolor>
 							<selectedcolor>SelectedGreen</selectedcolor>
 							<scroll>false</scroll>
 							<visible>IsEmpty(ListItem.Artist)</visible>
@@ -502,8 +503,8 @@
 							<font>Font-Condensed-S28</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Artist]</label>
-							<textcolor>D4FFFFFF</textcolor>
-							<selectedcolor>D4FFFFFF</selectedcolor>
+							<textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Artist)</visible>
 						</control>
@@ -516,8 +517,8 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Label2]</label>
-							<textcolor>D4FFFFFF</textcolor>
-							<selectedcolor>D4FFFFFF</selectedcolor>
+						<textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -563,7 +564,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$VAR[MusicListLabel]</label>
-							<textcolor>eewhite</textcolor>
+							 <textcolor>Mod_Tags_Alt</textcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
 						</control>
@@ -576,7 +577,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$VAR[MusicListLabel]</label>
-							<textcolor>eewhite</textcolor>
+							 <textcolor>Mod_Tags_Alt</textcolor>
 							<scroll>false</scroll>
 							<visible>IsEmpty(ListItem.Property(Artist_Genre))</visible>
 						</control>
@@ -589,8 +590,8 @@
 							<font>Font-Condensed-S28</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-							<textcolor>D4FFFFFF</textcolor>
-							<selectedcolor>D4FFFFFF</selectedcolor>
+						<textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
 						</control>
@@ -637,7 +638,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>Mod_Tags_Alt</textcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Artist)</visible>
 						</control>
@@ -650,7 +651,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>Mod_Tags_Alt</textcolor>
 							<scroll>false</scroll>
 							<visible>IsEmpty(ListItem.Artist)</visible>
 						</control>
@@ -663,8 +664,8 @@
 							<font>Font-Condensed-S28</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Artist]</label>
-							<textcolor>D4FFFFFF</textcolor>
-							<selectedcolor>D4FFFFFF</selectedcolor>
+							 <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Artist)</visible>
 						</control>
@@ -676,8 +677,8 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>right</align>
 							<label>$INFO[ListItem.Year]</label>
-							<textcolor>D4FFFFFF</textcolor>
-							<selectedcolor>D4FFFFFF</selectedcolor>
+							 <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Year)</visible>
 						</control>
@@ -697,9 +698,9 @@
 							<height>100</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>right</align>
-							<label fallback="[COLOR=D4FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-							<textcolor>D4FFFFFF</textcolor>
-							<selectedcolor>D4FFFFFF</selectedcolor>
+							<label fallback="[COLOR=Mod_Tags_Alt2]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+							 <textcolor>Mod_Tags_Alt2</textcolor>
+                            <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Album)</visible>
 						</control>
@@ -761,8 +762,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$VAR[MusicListSongLabel]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								 <textcolor>Mod_Tags_Alt</textcolor>
+                                <selectedcolor>Mod_Tags_Alt</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.Artist)</visible>
 							</control>
@@ -775,8 +776,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>left</align>
 								<label>$VAR[MusicListSongLabel]</label>
-								<textcolor>eewhite</textcolor>
-								<selectedcolor>eewhite</selectedcolor>
+								 <textcolor>Mod_Tags_Alt</textcolor>
+                                <selectedcolor>Mod_Tags_Alt</selectedcolor>
 								<scroll>false</scroll>
 								<visible>IsEmpty(ListItem.Artist)</visible>
 							</control>
@@ -789,8 +790,8 @@
 								<font>Font-Condensed-S28</font>
 								<align>left</align>
 								<label>$INFO[ListItem.Artist]</label>
-								<textcolor>D4FFFFFF</textcolor>
-								<selectedcolor>D4FFFFFF</selectedcolor>
+								 <textcolor>Mod_Tags_Alt2</textcolor>
+                                <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.Artist)</visible>
 							</control>
@@ -802,7 +803,7 @@
 									<width>64</width>
 									<height>41</height>
 									<texture>views/list/other/unwatched.png</texture>
-									<colordiffuse>D4FFFFFF</colordiffuse>
+									 <colordiffuse>Mod_Tags_Alt2</colordiffuse>
 								</control>
 								<control type="label">
 									<posx>1244</posx>
@@ -811,7 +812,7 @@
 									<height>42</height>
 									<label>$INFO[ListItem.PlayCount]</label>
 									<font>Font-Condensed-S30-B</font>
-									<textcolor>D4FFFFFF</textcolor>
+									 <colordiffuse>Mod_Tags_Alt2</colordiffuse>
 									<scroll>no</scroll>
 									<align>center</align>
 								</control>
@@ -824,8 +825,8 @@
 								<font>Font-Condensed-S34-B</font>
 								<align>right</align>
 								<label>$VAR[MusicListSongLabel2]</label>
-								<textcolor>D4FFFFFF</textcolor>
-								<selectedcolor>D4FFFFFF</selectedcolor>
+								<textcolor>Mod_Tags_Alt2</textcolor>
+                                <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!stringcompare(Container.FolderPath,musicdb://5/1/)</visible>
 							</control>
@@ -853,9 +854,9 @@
 								<height>100</height>
 								<font>Font-Condensed-S34-B</font>
 								<align>right</align>
-								<label fallback="[COLOR=D4FFFFFF]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
-								<textcolor>D4FFFFFF</textcolor>
-								<selectedcolor>D4FFFFFF</selectedcolor>
+								<label fallback="[COLOR=Mod_Tags_Alt2]0.0[/COLOR]">$INFO[ListItem.Rating,,.0]</label>
+								<textcolor>Mod_Tags_Alt2</textcolor>
+                                <selectedcolor>Mod_Tags_Alt2</selectedcolor>
 								<scroll>false</scroll>
 								<visible>!IsEmpty(ListItem.Title)</visible>
 							</control>

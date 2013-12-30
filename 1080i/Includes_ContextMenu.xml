@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="LibraryEditorLabel">
 		<value condition="Container.Content(movies)">$LOCALIZE[42205]</value>
@@ -139,7 +140,7 @@
 			<description>button template</description>
 			<width>380</width>
 			<textcolor>aawhite</textcolor>
-			<texturefocus border="45,2,45,2">dialogs/context/selection.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="45,2,45,2">dialogs/context/selection-colour.png</texturefocus>
 			<include>ContextMenuButtonVars</include>
 		</control>
 	</include>
@@ -160,7 +161,7 @@
 			<description>button template</description>
 			<width>380</width>
 			<textcolor>FF585858</textcolor>
-			<texturefocus border="45,2,45,2">dialogs/context/selection.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="45,2,45,2">dialogs/context/selection-colour.png</texturefocus>
 			<include>ContextMenuButtonVars</include>
 		</control>
 	</include>
@@ -182,7 +183,7 @@
 			<description>button template</description>
 			<width>380</width>
 			<textcolor>77white</textcolor>
-			<texturefocus border="45,2,45,2">dialogs/context/selection.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="45,2,45,2">dialogs/context/selection-colour.png</texturefocus>
 			<include>ContextMenuButtonVars</include>
 		</control>
 	</include>
@@ -214,7 +215,7 @@
 			<disabledcolor>44FFFFFF</disabledcolor>
 			<shadowcolor>33000000</shadowcolor>
 			<texturenofocus border="90,3,90,3">views/list/other/separator.png</texturenofocus>
-			<texturefocus border="150,3,150,3">windows/settings/images/right-focus.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/default/highlight-colour.png</texturefocus>
 		</control>
 	</include>
 	<include name="ContextMenuFavourites">

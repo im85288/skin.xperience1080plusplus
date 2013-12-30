@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="MovieMPAAVar">
 		<value condition="StringCompare(Skin.String(MovieMPAALang),DE)">$VAR[MovieMPAAVar_DE]</value>
@@ -35,8 +36,68 @@
 		<value condition="SubString(ListItem.MPAA,17) | SubString(Container(100).ListItem.Property(MPAA),17)">us/nc-17</value>
 		<value condition="SubString(ListItem.MPAA,Not Rated) | SubString(ListItem.MPAA,Unrated) | SubString(Container(100).ListItem.Property(MPAA),Not Rated) | SubString(Container(100).ListItem.Property(MPAA),Unrated)">us/nr</value>
 	</variable>
+	<variable name="MovieMPAAVarOSD">
+		<value condition="StringCompare(Skin.String(MovieMPAALang),DE)">$VAR[MovieMPAAVarOSD_DE]</value>
+		<value condition="StringCompare(Skin.String(MovieMPAALang),IT)">$VAR[MovieMPAAVarOSD_IT]</value>
+		<value condition="StringCompare(Skin.String(MovieMPAALang),UK)">$VAR[MovieMPAAVarOSD_UK]</value>
+		<value>$VAR[MovieMPAAVarOSD_US]</value>
+	</variable>
+	<variable name="MovieMPAAVarOSD_DE">
+		<value condition="SubString(VideoPlayer.MPAA,18) | SubString(Container(100).VideoPlayer.Property(MPAA),18)">de/18</value>
+		<value condition="SubString(VideoPlayer.MPAA,16) | SubString(Container(100).VideoPlayer.Property(MPAA),16)">de/16</value>
+		<value condition="SubString(VideoPlayer.MPAA,12) | SubString(Container(100).VideoPlayer.Property(MPAA),12)">de/12</value>
+		<value condition="SubString(VideoPlayer.MPAA,6) | SubString(Container(100).VideoPlayer.Property(MPAA),6)">de/6</value>
+		<value condition="SubString(VideoPlayer.MPAA,0) | SubString(Container(100).VideoPlayer.Property(MPAA),0)">de/0</value>
+	</variable>
+	<variable name="MovieMPAAVarOSD_IT">
+		<value condition="SubString(VideoPlayer.MPAA,T) | SubString(Container(100).VideoPlayer.Property(MPAA),T)">it/t</value>
+		<value condition="SubString(VideoPlayer.MPAA,14) | SubString(Container(100).VideoPlayer.Property(MPAA),14)">it/vm14</value>
+		<value condition="SubString(VideoPlayer.MPAA,18) | SubString(Container(100).VideoPlayer.Property(MPAA),18)">it/vm18</value>
+	</variable>
+	<variable name="MovieMPAAVarOSD_UK">
+		<value condition="SubString(VideoPlayer.MPAA,PG) | SubString(Container(100).VideoPlayer.Property(MPAA),PG)">uk/pg</value>
+		<value condition="SubString(VideoPlayer.MPAA,12A) | SubString(Container(100).VideoPlayer.Property(MPAA),12A)">uk/12a</value>
+		<value condition="SubString(VideoPlayer.MPAA,12) | SubString(Container(100).VideoPlayer.Property(MPAA),12)">uk/12</value>
+		<value condition="SubString(VideoPlayer.MPAA,15) | SubString(Container(100).VideoPlayer.Property(MPAA),15)">uk/15</value>
+		<value condition="SubString(VideoPlayer.MPAA,R18) | SubString(Container(100).VideoPlayer.Property(MPAA),R18)">uk/r18</value>
+		<value condition="SubString(VideoPlayer.MPAA,18) | SubString(Container(100).VideoPlayer.Property(MPAA),18)">uk/18</value>
+		<value condition="SubString(VideoPlayer.MPAA,UC) | SubString(Container(100).VideoPlayer.Property(MPAA),UC)">uk/uc</value>
+		<value condition="SubString(VideoPlayer.MPAA,U) | SubString(Container(100).VideoPlayer.Property(MPAA),U)">uk/u</value>
+	</variable>
+	<variable name="MovieMPAAVarOSD_US">
+		<value condition="SubString(VideoPlayer.MPAA,PG-13) | SubString(Container(100).VideoPlayer.Property(MPAA),PG-13)">us/pg-13</value>
+		<value condition="SubString(VideoPlayer.MPAA,PG) | SubString(VideoPlayer.MPAA,Approved) | SubString(Container(100).VideoPlayer.Property(MPAA),PG) | SubString(Container(100).VideoPlayer.Property(MPAA),Approved)">us/pg</value>
+		<value condition="SubString(VideoPlayer.MPAA,G) | SubString(Container(100).VideoPlayer.Property(MPAA),G)">us/g</value>
+		<value condition="StringCompare(VideoPlayer.MPAA,R) | SubString(VideoPlayer.MPAA,Rated R) | SubString(VideoPlayer.MPAA,USA:R) | StringCompare(Container(100).VideoPlayer.Property(MPAA),R) | SubString(Container(100).VideoPlayer.Property(MPAA),Rated R) | SubString(Container(100).VideoPlayer.Property(MPAA),USA:R)">us/r</value>
+		<value condition="SubString(VideoPlayer.MPAA,17) | SubString(Container(100).VideoPlayer.Property(MPAA),17)">us/nc-17</value>
+		<value condition="SubString(VideoPlayer.MPAA,Not Rated) | SubString(VideoPlayer.MPAA,Unrated) | SubString(Container(100).VideoPlayer.Property(MPAA),Not Rated) | SubString(Container(100).VideoPlayer.Property(MPAA),Unrated)">us/nr</value>
+	</variable>
+	<variable name="FlagHDSD">
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,1079)">whiteflags/res/1080.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,719)">whiteflags/res/720.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,575)">whiteflags/res/576.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,539)">whiteflags/res/540.png</value>
+		<value condition="StringCompare(VideoPlayer.VideoResolution,4k)">whiteflags/res/1080.png</value>
+		<value>whiteflags/res/480.png</value>
+	</variable>
+	<variable name="ColourFlagHDSD">
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,1079)">colourflags/resolution/1080.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,719)">colourflags/resolution/720.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,575)">colourflags/resolution/576.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,539)">colourflags/resolution/540.png</value>
+		<value condition="StringCompare(VideoPlayer.VideoResolution,4k)">colourflags/resolution/1080.png</value>
+		<value>colourflags/resolution/480.png</value>
+	</variable>
+	<variable name="NonColourFlagHDSD">
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,1079)">noncolourflags/resolution/1080.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,719)">noncolourflags/resolution/720.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,575)">noncolourflags/resolution/576.png</value>
+		<value condition="IntegerGreaterThan(VideoPlayer.VideoResolution,539)">noncolourflags/resolution/540.png</value>
+		<value condition="StringCompare(VideoPlayer.VideoResolution,4k)">noncolourflags/resolution/1080.png</value>
+		<value>noncolourflags/resolution/480.png</value>
+	</variable>
 	<include name="AspectDimensionsSmall">
-		<width>122</width>
+		<width>94</width>
 		<height>56</height>
 	</include>
 	<include name="AlternateAspectDimensionsSmall">
@@ -44,7 +105,7 @@
 		<height>68</height>
 	</include>
 	<include name="ResDimensionsSmall">
-		<width>124</width>
+		<width>94</width>
 		<height>56</height>
 	</include>
 	<include name="aCodecDimensionsSmall">
@@ -59,63 +120,44 @@
 		<width>121</width>
 		<height>56</height>
 	</include>
-	<include name="InfoFlags">
-		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>77</width>
-			<height>56</height>
-			<texture>flags/other/3d-info.png</texture>
-			<include>visiblehidefadeflags</include>
-			<visible>substring(ListItem.FileNameAndPath,.3D.) | substring(ListItem.FileNameAndPath,-3D.)</visible>
-		</control>
+	<include name="InfoFlagsOSD">
 		<control type="image">
 			<include>ResDimensionsSmall</include>
-			<texture>$INFO[ListItem.VideoResolution,flags/res/,.png]</texture>
+			<texture colordiffuse="$VAR[FlagsColour]">$VAR[FlagHDSD]</texture>
 			<include>visiblehidefadeflags</include>
-			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+			<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<include>AspectDimensionsSmall</include>
-			<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+			<texture colordiffuse="$VAR[FlagsColour]">$INFO[VideoPlayer.VideoAspect,whiteflags/aspectratio/,.png]</texture>
 			<include>visiblehidefadeflags</include>
-			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
-		</control>
-		<control type="group">
-			<width>121</width>
-			<visible>!IsEmpty(ListItem.VideoCodec)</visible>
-			<control type="image">
-				<include>vCodecDimensionsSmall</include>
-				<texture>$INFO[ListItem.videocodec,flags/video/,.png]</texture>
-				<visible>![substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) | substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)]</visible>
-				<include>visiblehidefadeflags</include>
-			</control>
-			<control type="image">
-				<include>vCodecDimensionsSmall</include>
-				<texture>flags/video/divx.png</texture>
-				<visible>substring(ListItem.VideoCodec,divx) | substring(ListItem.VideoCodec,div3) | substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5) | substring(ListItem.VideoCodec,dx50)</visible>
-				<include>visiblehidefadeflags</include>
-			</control>
+			<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
 		</control>
 		<control type="image">
-			<include>aCodecDimensionsSmall</include>
-			<texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+			<include>AspectDimensionsSmall</include>
+			<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
 			<include>visiblehidefadeflags</include>
-			<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+			<texture colordiffuse="$VAR[FlagsColour]">$INFO[VideoPlayer.AudioChannels,whiteflags/channels/,.png]</texture>
 		</control>
-		<control type="group">
-			<width>121</width>
-			<visible>Container.Content(movies) + !IsEmpty(ListItem.MPAA)</visible>
-			<control type="image">
-				<description>Language independent rating</description>
-				<include>MPAADimensionsSmall</include>
-				<texture>$VAR[MovieMPAAVar,flags/mpaa/movie/,.png]</texture>
-			</control>
+	</include>
+	<include name="InfoNonColourFlagsOSD">
+		<control type="image">
+			<include>ResDimensionsSmall</include>
+			<texture>$VAR[FlagHDSD]</texture>
+			<include>visiblehidefadeflags</include>
+			<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
 		</control>
-		<control type="group">
-			<width>121</width>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !IsEmpty(ListItem.MPAA)</visible>
-			<include>TVRatingFlagsSmall</include>
+		<control type="image">
+			<include>AspectDimensionsSmall</include>
+			<texture>$INFO[VideoPlayer.VideoAspect,whiteflags/aspectratio/,.png]</texture>
+			<include>visiblehidefadeflags</include>
+			<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+		</control>
+		<control type="image">
+			<include>AspectDimensionsSmall</include>
+			<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+			<include>visiblehidefadeflags</include>
+			<texture>$INFO[VideoPlayer.AudioChannels,whiteflags/channels/,.png]</texture>
 		</control>
 	</include>
 	<include name="TVRatingFlagLayout">
@@ -137,7 +179,7 @@
 	<include name="InfoFlagsAlternateOSD">
 		<control type="image">
 			<include>AlternateAspectDimensionsSmall</include>
-			<texture>$INFO[VideoPlayer.VideoResolution,colourflags/resolution/,.png]</texture>
+			<texture>$VAR[ColourFlagHDSD]</texture>
 			<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
 			<aspectratio align="left" aligny="top">keep</aspectratio>
 		</control>
@@ -146,6 +188,43 @@
 			<texture>$INFO[VideoPlayer.VideoAspect,colourflags/aspectratio/,.png]</texture>
 			<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
 			<aspectratio align="left" aligny="top">keep</aspectratio>
+		</control>
+		<control type="image">
+			<include>AlternateAspectDimensionsSmall</include>
+			<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+			<include>visiblehidefadeflags</include>
+			<texture colordiffuse="$VAR[FlagsColour]">$INFO[VideoPlayer.AudioChannels,colourflags/channels/,.png]</texture>
+		</control>
+		<control type="group">
+			<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture>$INFO[VideoPlayer.videocodec,colourflags/source/,.png]</texture>
+				<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]
+				</visible>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture>colourflags/source/divx.png</texture>
+				<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)
+				</visible>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+	<include name="InfoFlagsAlternateOSDLiveTv">
+		<control type="image">
+			<include>AlternateAspectDimensionsSmall</include>
+			<texture>$INFO[VideoPlayer.VideoAspect,colourflags/aspectratio/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.VideoAspect) + !VideoPlayer.Content(livetv)</visible>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		</control>
+		<control type="image">
+			<include>AlternateAspectDimensionsSmall</include>
+			<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+			<include>visiblehidefadeflags</include>
+			<texture>$INFO[VideoPlayer.AudioChannels,colourflags/channels/,.png]</texture>
 		</control>
 		<control type="group">
 			<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
@@ -168,10 +247,35 @@
 	<include name="InfoNonColourFlagsAlternateOSD">
 		<control type="image">
 			<include>AlternateAspectDimensionsSmall</include>
-			<texture>$INFO[VideoPlayer.VideoResolution,noncolourflags/resolution/,.png]</texture>
+			<texture colordiffuse="mod-infotags">$VAR[NonColourFlagHDSD]</texture>
 			<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
 			<aspectratio align="left" aligny="top">keep</aspectratio>
 		</control>
+		<control type="image">
+			<include>AlternateAspectDimensionsSmall</include>
+			<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.VideoAspect,noncolourflags/aspectratio/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		</control>
+		<control type="group">
+			<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.videocodec,noncolourflags/source/,.png]</texture>
+				<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]
+				</visible>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+			<control type="image">
+				<include>AlternateAspectDimensionsSmall</include>
+				<texture colordiffuse="mod-infotags">noncolourflags/source/divx.png</texture>
+				<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)
+				</visible>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+	<include name="InfoNonColourFlagsAlternateOSDLiveTv">
 		<control type="image">
 			<include>AlternateAspectDimensionsSmall</include>
 			<texture>$INFO[VideoPlayer.VideoAspect,noncolourflags/aspectratio/,.png]</texture>
@@ -199,34 +303,83 @@
 	<include name="InfoFlagsOSD2">
 		<control type="image">
 			<include>AspectDimensionsSmall</include>
-			<texture>$INFO[VideoPlayer.AudioCodec,flagsosd/audio/,.png]</texture>
-			<include>visiblehidefadeflags</include>
+			<texture colordiffuse="$VAR[FlagsColour]">$INFO[VideoPlayer.AudioCodec,whiteflags/audio/,.png]</texture>
 			<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
 		</control>
-		<control type="image">
-			<include>AspectDimensionsSmall</include>
-			<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
-			<include>visiblehidefadeflags</include>
-			<texture>$INFO[VideoPlayer.AudioChannels,flagsosd/channels/,.png]</texture>
-		</control>
 		<control type="group">
-			<width>121</width>
-			<visible>VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
+			<visible>!VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
 			<control type="image">
 				<include>AspectDimensionsSmall</include>
-				<texture>$VAR[MovieMPAAVarOSD,flagsosd/mpaa/movie/,.png]</texture>
+				<texture colordiffuse="$VAR[FlagsColour]">$INFO[VideoPlayer.MPAA,whiteflags/mpaa/tv/small/,.png]</texture>
 			</control>
 		</control>
 		<control type="group">
-			<width>121</width>
-			<visible>[VideoPlayer.Content(tvshows) | VideoPlayer.Content(seasons) | VideoPlayer.Content(episodes)] + !IsEmpty(VideoPlayer.MPAA)</visible>
-			<include>TVRatingFlagsSmallOSD</include>
+			<visible>VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
+			<control type="image">
+				<include>AspectDimensionsSmall</include>
+				<texture colordiffuse="$VAR[FlagsColour]">$VAR[MovieMPAAVarOSD,whiteflags/mpaa/movie/,.png]</texture>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+			<control type="image">
+				<include>AspectDimensionsSmall</include>
+				<texture colordiffuse="$VAR[FlagsColour]">$INFO[VideoPlayer.videocodec,whiteflags/video/,.png]</texture>
+				<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]
+				</visible>
+				<include>visiblehidefadeflags</include>
+			</control>
+			<control type="image">
+				<include>AspectDimensionsSmall</include>
+				<texture colordiffuse="$VAR[FlagsColour]">whiteflags/video/divx.png</texture>
+				<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)
+				</visible>
+				<include>visiblehidefadeflags</include>
+			</control>
+		</control>
+	</include>
+	<include name="InfoNonColourFlagsOSD2">
+		<control type="image">
+			<include>AspectDimensionsSmall</include>
+			<texture>$INFO[VideoPlayer.AudioCodec,whiteflags/audio/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+		</control>
+		<control type="group">
+			<visible>!VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
+			<control type="image">
+				<include>AspectDimensionsSmall</include>
+				<texture>$INFO[VideoPlayer.MPAA,whiteflags/mpaa/tv/small/,.png]</texture>
+			</control>
+		</control>
+		<control type="group">
+			<visible>VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
+			<control type="image">
+				<include>AspectDimensionsSmall</include>
+				<texture>$VAR[MovieMPAAVarOSD,whiteflags/mpaa/movie/,.png]</texture>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+			<control type="image">
+				<include>AspectDimensionsSmall</include>
+				<texture>$INFO[VideoPlayer.VideoCodec,whiteflags/video/,.png]</texture>
+				<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]
+				</visible>
+				<include>visiblehidefadeflags</include>
+			</control>
+			<control type="image">
+				<include>AspectDimensionsSmall</include>
+				<texture>whiteflags/video/divx.png</texture>
+				<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)
+				</visible>
+				<include>visiblehidefadeflags</include>
+			</control>
 		</control>
 	</include>
 	<include name="InfoFlagsAlternateOSD2">
 		<control type="image">
 			<include>AlternateAspectDimensionsSmall</include>
-			<texture>$INFO[VideoPlayer.AudioCodec,colourflags/audio/,.png]</texture>
+			<texture colordiffuse="$VAR[FlagsColour]">$INFO[VideoPlayer.AudioCodec,colourflags/audio/,.png]</texture>
 			<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
 			<aspectratio align="left" aligny="top">keep</aspectratio>
 		</control>
@@ -234,7 +387,7 @@
 			<visible>!VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
 			<control type="image">
 				<include>AlternateAspectDimensionsSmall</include>
-				<texture>$INFO[VideoPlayer.Mpaa,colourflags/rating/,.png]</texture>
+				<texture colordiffuse="$VAR[FlagsColour]">$INFO[VideoPlayer.Mpaa,colourflags/rating/,.png]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 			</control>
 		</control>
@@ -252,7 +405,7 @@
 	<include name="InfoNonColourFlagsAlternateOSD2">
 		<control type="image">
 			<include>AlternateAspectDimensionsSmall</include>
-			<texture>$INFO[VideoPlayer.AudioCodec,noncolourflags/audio/,.png]</texture>
+			<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.AudioCodec,noncolourflags/audio/,.png]</texture>
 			<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
 			<aspectratio align="left" aligny="top">keep</aspectratio>
 		</control>
@@ -260,7 +413,7 @@
 			<visible>!VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
 			<control type="image">
 				<include>AlternateAspectDimensionsSmall</include>
-				<texture>$INFO[VideoPlayer.Mpaa,noncolourflags/rating/,.png]</texture>
+				<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.Mpaa,noncolourflags/rating/,.png]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 			</control>
 		</control>
@@ -268,7 +421,7 @@
 			<visible>VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
 			<control type="image">
 				<include>AlternateAspectDimensionsSmall</include>
-				<texture>$VAR[MovieMPAAVarOSD,noncolourflags/mpaa/movie/,.png]</texture>
+				<texture colordiffuse="mod-infotags">$VAR[MovieMPAAVarOSD,noncolourflags/mpaa/movie/,.png]</texture>
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 			</control>
 		</control>

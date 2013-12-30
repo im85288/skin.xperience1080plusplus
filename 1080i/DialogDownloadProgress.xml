@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
 	<controls>
@@ -24,19 +25,8 @@
 				<posy>0</posy>
 				<width>750</width>
 				<height>120</height>
-				<label>font=Font-Condensed-S36,textColor=mod-infotags,alignment=right+centery</label>
+				<label>font=Font-Condensed-S36,textColor=Mod_Tags,alignment=right+centery</label>
 				<scroll>false</scroll>
-				<visible>!Skin.HasSetting(UseWhiteText)</visible>
-			</control>
-			<control type="label" id="2002">
-				<description>Header label</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>750</width>
-				<height>120</height>
-				<label>font=Font-Condensed-S36,textColor=darkerbackground,alignment=right+centery</label>
-				<scroll>false</scroll>
-				<visible>Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="label" id="2003">
 				<description>Title label</description>
@@ -44,19 +34,8 @@
 				<posy>33</posy>
 				<width>750</width>
 				<height>120</height>
-				<label>font=Font-Condensed-S28,textColor=mod-infotags,alignment=right+centery</label>
+				<label>font=Font-Condensed-S28,textColor=Mod_Tags,alignment=right+centery</label>
 				<scroll>false</scroll>
-				<visible>!Skin.HasSetting(UseWhiteText)</visible>
-			</control>
-			<control type="label" id="2003">
-				<description>Title label</description>
-				<posx>0</posx>
-				<posy>33</posy>
-				<width>750</width>
-				<height>120</height>
-				<label>font=Font-Condensed-S28,textColor=darkerbackground,alignment=right+centery</label>
-				<scroll>false</scroll>
-				<visible>Skin.HasSetting(UseWhiteText)</visible>
 			</control>
 			<control type="progress" id="2004">
 				<visible>false</visible>

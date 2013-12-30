@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="WeatherDefault">
 		<include>OptionsShutdownAnimation</include>
@@ -774,7 +775,7 @@
 						<width>85</width>
 						<height>85</height>
 						<texture>$VAR[WeatherMoonPhaseIcon]</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 					<control type="label">
 						<posx>0</posx>
@@ -783,7 +784,7 @@
 						<height>120</height>
 						<label>$LOCALIZE[41693]</label>
 						<font>Font-Condensed-S34</font>
-						<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<scroll>false</scroll>
 						<align>right</align>
 					</control>
@@ -794,7 +795,7 @@
 						<height>120</height>
 						<label>$INFO[Window(Weather).Property(Today.moonphase)]</label>
 						<font>Font-Condensed-S25</font>
-						<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<scroll>false</scroll>
 						<align>right</align>
 					</control>
@@ -854,7 +855,8 @@
 					<height>40</height>
 					<label>$LOCALIZE[41694]</label>
 					<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
-					<focusedcolor>$VAR[BackgroundViewsMainListTextColourVars]</focusedcolor>
+					<include condition="!Skin.HasSetting(UseCurvedTiles)">WeatherFocusedVar</include>
+					<include condition="Skin.HasSetting(UseCurvedTiles)">WeatherFocusedColourVar</include>
 					<font>Font-Condensed-S32</font>
 					<onright>201</onright>
 					<onleft>301</onleft>
@@ -1051,7 +1053,8 @@
 					<height>40</height>
 					<label>$LOCALIZE[41695]</label>
 					<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
-					<focusedcolor>$VAR[BackgroundViewsMainListTextColourVars]</focusedcolor>
+					<include condition="!Skin.HasSetting(UseCurvedTiles)">WeatherFocusedVar</include>
+					<include condition="Skin.HasSetting(UseCurvedTiles)">WeatherFocusedColourVar</include>
 					<font>Font-Condensed-S32</font>
 					<onleft>101</onleft>
 					<onright>301</onright>
@@ -1088,6 +1091,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(211)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(211)</visible>
 						</control>
 						<control type="button" id="211">
 							<posx>-5</posx>
@@ -1239,6 +1252,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(212)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(212)</visible>
 						</control>
 						<control type="button" id="212">
 							<posx>-5</posx>
@@ -1391,6 +1414,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(213)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(213)</visible>
 						</control>
 						<control type="button" id="213">
 							<posx>-5</posx>
@@ -1544,6 +1577,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(214)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(214)</visible>
 						</control>
 						<control type="button" id="214">
 							<posx>-5</posx>
@@ -1697,6 +1740,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(215)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(215)</visible>
 						</control>
 						<control type="button" id="215">
 							<posx>-5</posx>
@@ -1850,6 +1903,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(216)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(216)</visible>
 						</control>
 						<control type="button" id="216">
 							<posx>-5</posx>
@@ -2003,6 +2066,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(217)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(217)</visible>
 						</control>
 						<control type="button" id="217">
 							<posx>-5</posx>
@@ -2156,6 +2229,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(218)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(218)</visible>
 						</control>
 						<control type="button" id="218">
 							<posx>-5</posx>
@@ -2309,6 +2392,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(219)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(219)</visible>
 						</control>
 						<control type="button" id="219">
 							<posx>-5</posx>
@@ -2462,6 +2555,16 @@
 							<height>570</height>
 							<texture border="10">views/newgloss/whitepanel.png</texture>
 							<colordiffuse>mod-infotags</colordiffuse>
+							<visible>!Control.HasFocus(220)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>352</width>
+							<height>570</height>
+							<texture border="10">views/newgloss/whitepanel.png</texture>
+							<colordiffuse>$VAR[FocusModColourVar2]</colordiffuse>
+							<visible>Control.HasFocus(220)</visible>
 						</control>
 						<control type="button" id="220">
 							<posx>-5</posx>
@@ -2666,7 +2769,8 @@
 					<height>40</height>
 					<label>$LOCALIZE[41696]</label>
 					<textcolor>$VAR[BackgroundViewsMainListTextColourVars]</textcolor>
-					<focusedcolor>$VAR[BackgroundViewsMainListTextColourVars]</focusedcolor>
+					<include condition="!Skin.HasSetting(UseCurvedTiles)">WeatherFocusedVar</include>
+					<include condition="Skin.HasSetting(UseCurvedTiles)">WeatherFocusedColourVar</include>
 					<font>Font-Condensed-S32</font>
 					<onleft>201</onleft>
 					<onright>101</onright>

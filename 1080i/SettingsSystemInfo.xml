@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">20</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -26,20 +27,7 @@
 					<align>right</align>
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
-					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<description>Category</description>
-					<posx>483</posx>
-					<posy>230</posy>
-					<height>40</height>
-					<width>338</width>
-					<align>right</align>
-					<font>Font-Condensed-S25</font>
-					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
-					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<textcolor>Mod_Tags</textcolor>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -47,7 +35,7 @@
 					<posy>265</posy>
 					<height>638</height>
 					<width>370</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -157,20 +145,7 @@
 					<align>left</align>
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$INFO[Window.Property(CurrentButtonLabel)][/UPPERCASE]</label>
-					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<description>Settings info</description>
-					<posx>390</posx>
-					<posy>230</posy>
-					<height>40</height>
-					<width>338</width>
-					<align>left</align>
-					<font>Font-Condensed-S25</font>
-					<label>[UPPERCASE]$INFO[Window.Property(CurrentButtonLabel)][/UPPERCASE]</label>
-					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<textcolor>Mod_Tags</textcolor>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -178,7 +153,7 @@
 					<posy>265</posy>
 					<height>638</height>
 					<width>1243</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -259,53 +234,23 @@
 					<width>336</width>
 					<height>100</height>
 					<texture>windows/settings/xbmc-logo.png</texture>
-					<colordiffuse>mod-infotags-l</colordiffuse>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="image">
-					<posx>1220</posx>
-					<posy>767</posy>
-					<width>336</width>
-					<height>100</height>
-					<texture>windows/settings/xbmc-logo.png</texture>
-					<colordiffuse>darkerbackground</colordiffuse>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<colordiffuse>Mod_Tags_Light</colordiffuse>
 				</control>
 				<control type="group">
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
 					<posx>355</posx>
 					<posy>769</posy>
 					<control type="label" id="1">
 						<posy>0</posy>
 						<label>$INFO[System.BuildVersion,$LOCALIZE[144] ,]</label>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsSystemInfoLabel</include>
 						<include condition="Skin.HasSetting(DarkerPanels)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 					<control type="label" id="1">
 						<posy>45</posy>
 						<label>$INFO[System.BuildDate,$LOCALIZE[552]: ,]</label>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsSystemInfoLabel</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsSystemInfoLabelDarkerBackground</include>
-					</control>
-				</control>
-				<control type="group">
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
-					<posx>355</posx>
-					<posy>769</posy>
-					<control type="label" id="1">
-						<posy>0</posy>
-						<label>$INFO[System.BuildVersion,$LOCALIZE[144] ,]</label>
-						<textcolor>darkerbackground</textcolor>
-						<include condition="!Skin.HasSetting(DarkerPanels)">SettingsSystemInfoLabel</include>
-						<include condition="Skin.HasSetting(DarkerPanels)">SettingsSystemInfoLabelDarkerBackground</include>
-					</control>
-					<control type="label" id="1">
-						<posy>45</posy>
-						<label>$INFO[System.BuildDate,$LOCALIZE[552]: ,]</label>
-						<textcolor>darkerbackground</textcolor>
-						<include condition="!Skin.HasSetting(DarkerPanels">SettingsSystemInfoLabel</include>
 						<include condition="Skin.HasSetting(DarkerPanels)">SettingsSystemInfoLabelDarkerBackground</include>
 					</control>
 				</control>

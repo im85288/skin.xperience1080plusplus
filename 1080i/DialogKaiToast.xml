@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>-</defaultcontrol>
 	<zorder>10</zorder>
@@ -100,7 +101,7 @@
 				<posy>50</posy>
 				<height>100</height>
 				<width>640</width>
-				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
 				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">

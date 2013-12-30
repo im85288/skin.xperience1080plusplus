@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -41,20 +42,7 @@
 					<align>right</align>
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
-					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<description>Category</description>
-					<posx>483</posx>
-					<posy>235</posy>
-					<height>40</height>
-					<width>338</width>
-					<align>right</align>
-					<font>Font-Condensed-S25</font>
-					<label>[UPPERCASE]$LOCALIZE[42130][/UPPERCASE]</label>
-					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<textcolor>Mod_Tags</textcolor>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -62,7 +50,7 @@
 					<posy>265</posy>
 					<height>638</height>
 					<width>370</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -106,20 +94,7 @@
 					<align>left</align>
 					<font>Font-Condensed-S25</font>
 					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
-					<textcolor>mod-infotags</textcolor>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<description>Settings info</description>
-					<posx>390</posx>
-					<posy>235</posy>
-					<height>40</height>
-					<width>338</width>
-					<align>left</align>
-					<font>Font-Condensed-S25</font>
-					<label>[UPPERCASE]$LOCALIZE[5][/UPPERCASE]</label>
-					<textcolor>darkerbackground</textcolor>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
+					<textcolor>Mod_Tags</textcolor>
 				</control>
 				<!-- Panel -->
 				<control type="image">
@@ -127,7 +102,7 @@
 					<posy>265</posy>
 					<height>738</height>
 					<width>1243</width>
-					<texture border="35">views/newgloss/whitepanel-15.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
 					<visible>!Skin.HasSetting(DarkerPanels)</visible>
 				</control>
 				<control type="image">
@@ -281,15 +256,15 @@
 				<posx>-12</posx>
 				<posy>-25</posy>
 				<width>440</width>
-				<height>272</height>
-				<texture border="4">views/newgloss/whitepanel-15a.png</texture>
+				<height>162</height>
+				<texture colordiffuse="Mod_Tags_Alt" border="4">views/newgloss/whitepanel-15a.png</texture>
 				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
 				<posx>-2</posx>
-				<posy>-3</posy>
+				<posy>-13</posy>
 				<width>420</width>
-				<height>230</height>
+				<height>140</height>
 				<texture border="4">views/list/panel/solidblackpanel.png</texture>
 				<visible>Skin.HasSetting(DarkerPanels)</visible>
 			</control>
@@ -314,24 +289,6 @@
 				<include condition="Skin.HasSetting(DarkerPanels)">PVRMenuButtonVarsDarkerPanels</include>
 				<label>10037</label>
 				<onclick>SettingsLevelChange</onclick>
-				<onup>SetProperty(Movement,1)</onup>
-				<onup>21</onup>
-				<ondown>ClearProperty(Movement)</ondown>
-				<ondown>21</ondown>
-				<onleft>SetProperty(BounceLeft,1,Home)</onleft>
-				<onright>3</onright>
-			</control>
-			<control type="button" id="21">
-				<posy>112</posy>
-				<description>Reset button</description>
-				<include condition="!Skin.HasSetting(DarkerPanels)">PVRMenuButtonVars</include>
-				<include condition="Skin.HasSetting(DarkerPanels)">PVRMenuButtonVarsDarkerPanels</include>
-				<label>10035</label>
-				<onclick>SettingsReset</onclick>
-				<onup>SetProperty(Movement,1)</onup>
-				<onup>20</onup>
-				<ondown>ClearProperty(Movement)</ondown>
-				<ondown>20</ondown>
 				<onleft>SetProperty(BounceLeft,1,Home)</onleft>
 				<onright>3</onright>
 			</control>

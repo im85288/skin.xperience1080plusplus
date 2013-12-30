@@ -1,11 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<!---------------------------------------------------------- -->
-	<!-- This file contains all my custom variables etc -->
-	<!-- Add it to Includes.xml -->
-	<!-- Add new viewtypes into Includes_Views.xml -->
-	<!-- Includes_WindowContents.xml has shadow overlay changes -->
-	<!-- MyVideoNav.xml has changes to viewtype names etc. -->
-	<!---------------------------------------------------------- -->
 	<variable name="AeonFlagHDSD">
 		<value condition="IntegerGreaterThan(ListItem.VideoResolution,1079)">aeonflags/resolution/1080.png</value>
 		<value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">aeonflags/resolution/720.png</value>
@@ -13,12 +7,60 @@
 		<value condition="IntegerGreaterThan(ListItem.VideoResolution,539)">aeonflags/resolution/540.png</value>
 		<value>aeonflags/resolution/480.png</value>
 	</variable>
-	<variable name="AeonFlagRating">
+	<variable name="AeonFlagMovieMPAAVar">
+		<value condition="StringCompare(Skin.String(MovieMPAALang),DE)">$VAR[AeonFlagRating_DE]</value>
+		<value condition="StringCompare(Skin.String(MovieMPAALang),IT)">$VAR[AeonFlagRating_IT]</value>
+		<value condition="StringCompare(Skin.String(MovieMPAALang),UK)">$VAR[AeonFlagRating_UK]</value>
+		<value>$VAR[AeonFlagRating_US]</value>
+	</variable>
+	<variable name="AeonFlagRating_US">
 		<value condition="substring(ListItem.MPAA,Rated G) | substring(ListItem.MPAA,USA:G)">aeonflags/rating/MPAA_G_Certificate_US.png</value>
 		<value condition="[substring(ListItem.MPAA,Rated PG) + !substring(ListItem.MPAA,13)] | substring(ListItem.MPAA,USA:PG)">aeonflags/rating/MPAA_PG_Certificate_US.png</value>
 		<value condition="[substring(ListItem.MPAA,PG-13) | substring(ListItem.MPAA,USA:PG-13)] + [!substring(ListItem.MPAA,USA:R) + !substring(ListItem.MPAA,rated R)]">aeonflags/rating/MPAA_PG-13_Certificate_US.png</value>
 		<value condition="substring(ListItem.MPAA,Rated R) | substring(ListItem.MPAA,USA:R)">aeonflags/rating/MPAA_R_Certificate_US.png</value>
 		<value condition="substring(ListItem.MPAA, NC-17) | substring(ListItem.MPAA,USA:NC-17)">aeonflags/rating/MPAA_NC-17_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]">aeonflags/rating/tv-y.png</value>
+		<value condition="substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)">aeonflags/rating/tv-y7.png</value>
+		<value condition="substring(listitem.mpaa,TV-G)">aeonflags/rating/TV-G_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-PG)">aeonflags/rating/TV-PG_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-14)">aeonflags/rating/TV-14_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-MA)">aeonflags/rating/TV-MA_Certificate_US.png</value>
+		<value>aeonflags/rating/MPAA_NR_Certificate_US.png</value>
+	</variable>
+	<variable name="AeonFlagRating_UK">
+		<value condition="SubString(ListItem.MPAA,PG)">aeonflags/rating/BBFC_PG_Certificate_UK.png</value>
+		<value condition="SubString(ListItem.MPAA,12A)">aeonflags/rating/BBFC_12A_Certificate_UK.png</value>
+		<value condition="SubString(ListItem.MPAA,12)">aeonflags/rating/BBFC_12_Certificate_UK.png</value>
+		<value condition="SubString(ListItem.MPAA,15)">aeonflags/rating/BBFC_15_Certificate_UK.png</value>
+		<value condition="SubString(ListItem.MPAA,R18)">aeonflags/rating/BBFC_18_Certificate_UK.png</value>
+		<value condition="SubString(ListItem.MPAA,18)">aeonflags/rating/BBFC_18_Certificate_UK.png</value>
+		<value condition="SubString(ListItem.MPAA,U)">aeonflags/rating/BBFC_U_Certificate_UK.png</value>
+		<value condition="substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]">aeonflags/rating/tv-y.png</value>
+		<value condition="substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)">aeonflags/rating/tv-y7.png</value>
+		<value condition="substring(listitem.mpaa,TV-G)">aeonflags/rating/TV-G_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-PG)">aeonflags/rating/TV-PG_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-14)">aeonflags/rating/TV-14_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-MA)">aeonflags/rating/TV-MA_Certificate_US.png</value>
+		<value>aeonflags/rating/MPAA_NR_Certificate_US.png</value>
+	</variable>
+	<variable name="AeonFlagRating_DE">
+		<value condition="SubString(ListItem.MPAA,0)">aeonflags/rating/FSK-0.png</value>
+		<value condition="SubString(ListItem.MPAA,6)">aeonflags/rating/FSK-6.png</value>
+		<value condition="SubString(ListItem.MPAA,12)">aeonflags/rating/FSK-12.png</value>
+		<value condition="SubString(ListItem.MPAA,16)">aeonflags/rating/FSK-16.png</value>
+		<value condition="SubString(ListItem.MPAA,18)">aeonflags/rating/FSK-18.png</value>
+		<value condition="substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]">aeonflags/rating/tv-y.png</value>
+		<value condition="substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)">aeonflags/rating/tv-y7.png</value>
+		<value condition="substring(listitem.mpaa,TV-G)">aeonflags/rating/TV-G_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-PG)">aeonflags/rating/TV-PG_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-14)">aeonflags/rating/TV-14_Certificate_US.png</value>
+		<value condition="substring(listitem.mpaa,TV-MA)">aeonflags/rating/TV-MA_Certificate_US.png</value>
+		<value>aeonflags/rating/MPAA_NR_Certificate_US.png</value>
+	</variable>
+	<variable name="AeonFlagRating_IT">
+		<value condition="SubString(ListItem.MPAA,T)">colourflags/mpaa/movie/it/t.png</value>
+		<value condition="SubString(ListItem.MPAA,14)">colourflags/mpaa/movie/it/vm14.png</value>
+		<value condition="SubString(ListItem.MPAA,18)">colourflags/mpaa/movie/it/vm18.png</value>
 		<value condition="substring(listitem.mpaa,TV-Y) + ![substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)]">aeonflags/rating/tv-y.png</value>
 		<value condition="substring(listitem.mpaa,TV-Y7) | substring(listitem.mpaa,TV-Y7-FV)">aeonflags/rating/tv-y7.png</value>
 		<value condition="substring(listitem.mpaa,TV-G)">aeonflags/rating/TV-G_Certificate_US.png</value>
@@ -54,6 +96,7 @@
 		<value>aeonflags/source/default.png</value>
 	</variable>
 	<variable name="AeonFlagAudioCodec">
+		<value condition="!IsEmpty(ListItem.Property(Album_Label)) + Container.Content(albums)">$INFO[ListItem.Property(Album_Label),aeonflags/music/recordlabel/,.png]</value>
 		<value condition="!IsEmpty(ListItem.AudioCodec) + [Container.Content(episodes) | Container.Content(movies)]">$INFO[ListItem.AudioCodec,aeonflags/audio/,.png]</value>
 		<value condition="!IsEmpty(ListItem.FileExtension) + [Container.Content(songs)]">$INFO[ListItem.FileExtension,aeonflags/audio/,.png]</value>
 		<value>aeonflags/audio/defaultscreen.png</value>
@@ -258,7 +301,6 @@
 		<value condition="!IsEmpty(Window.Property(ExtendPlot))">mod-infotags</value>
 		<value condition="IsEmpty(Window.Property(ExtendPlot))">bbwhite</value>
 	</variable>
-	
 	<variable name="FocusModVar">
 		<value condition="Skin.HasSetting(ColourFocus)">views/other/white-focus-mod.png</value>
 		<value condition="!Skin.HasSetting(ColourFocus)">views/other/focus-mod.png</value>
@@ -275,6 +317,60 @@
 		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
 		<value condition="!Skin.HasSetting(ColourFocus)">blue</value>
 	</variable>
+	<variable name="EpgProgressVar">
+		<value condition="!Skin.HasSetting(LiveTVBlack)">windows/pvr/epg-progress-indicator.png</value>
+		<value condition="Skin.HasSetting(LiveTVBlack)">windows/pvr/epg-progress-indicator-white.png</value>
+	</variable>
+	<variable name="HomeMovieMultiPath">
+		<value condition="!Skin.HasSetting(HomeMovieImageFanart)">$INFO[Skin.String(HomeMoviesMultiImage)]</value>
+		<value condition="Skin.HasSetting(HomeMovieImageFanart)">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</value>
+	</variable>
+	<variable name="HomeTvMultiPath">
+		<value condition="!Skin.HasSetting(HomeTvImageFanart)">$INFO[Skin.String(HomeTvShowsMultiImage)]</value>
+		<value condition="Skin.HasSetting(HomeTvImageFanart)">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</value>
+	</variable>
+	<variable name="HomeMusicMultiPath">
+		<value condition="!Skin.HasSetting(HomeMusicImageFanart)">$INFO[Skin.String(HomeMusicMultiImage)]</value>
+		<value condition="Skin.HasSetting(HomeMusicImageFanart)">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</value>
+	</variable>
+	<variable name="HomeFanartPath">
+		<value>$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
+	</variable>
+	<variable name="HomeWeatherMultiPath">
+		<value condition="!Skin.HasSetting(HomeWeatherImageFanart)">$INFO[Skin.String(HomeWeatherMultiImage)]</value>
+		<value condition="Skin.HasSetting(HomeWeatherImageFanart)">$INFO[Skin.String(WeatherFanartDir)]$INFO[Window(Weather).Property(Current.FanartCode)]</value>
+	</variable>
+	<variable name="HomePicturesMultiPath">
+		<value condition="!Skin.HasSetting(HomePicturesImageFanart)">$INFO[Skin.String(HomePicturesMultiImage)]</value>
+		<value condition="Skin.HasSetting(HomePicturesImageFanart)">$INFO[Skin.String(PicturesDir)]</value>
+	</variable>
+	<variable name="LandscapeColour">
+		<value condition="Container.Content(episodes)">$INFO[Skin.String(tvcolor.name)]</value>
+		<value condition="Container.Content(shows)">$INFO[Skin.String(tvcolor.name)]</value>
+		<value condition="Container.Content(movies)">$INFO[Skin.String(moviecolor.name)]</value>
+		<value condition="Container.Content(music)">$INFO[Skin.String(musiccolor.name)]</value>
+	</variable>
+	<variable name="FlagsColour">
+	<!--  	<value condition="VideoPlayer.Content(episodes)">$INFO[Skin.String(tvcolor.name)]</value>
+		<value condition="VideoPlayer.Content(shows)">$INFO[Skin.String(tvcolor.name)]</value>
+		<value condition="VideoPlayer.Content(movies)">$INFO[Skin.String(moviecolor.name)]</value>
+		<value condition="MusicPlayer.Content(music)">$INFO[Skin.String(musiccolor.name)]</value>
+		<value condition="VideoPlayer.Content(livetv)">$INFO[Skin.String(pvrcolor.name)]</value> -->
+		<value condition="Skin.HasSetting(ColourFocus)">$INFO[Skin.String(focuscolor.name)]</value>
+		<value condition="!Skin.HasSetting(ColourFocus)">modblue</value>
+	</variable>
+	<include name="EpgProgressVar">
+		<progresstexture border="0,48,18,14">windows/pvr/epg-progress-indicator.png</progresstexture>
+	</include>
+	<include name="EpgProgressWhiteVar">
+		<progresstexture border="0,48,18,14">windows/pvr/epg-progress-indicator-white.png</progresstexture>
+	</include>
+	<include name="WeatherFocusedVar">
+		<focusedcolor>$VAR[BackgroundViewsMainListTextColourVars]</focusedcolor>
+	</include>
+	<include name="WeatherFocusedColourVar">
+		<focusedcolor>$VAR[FocusModHomeColourVar]</focusedcolor>
+	</include>
 	<include name="DialogHeaderMod">
 		<font>Font-Condensed-S34</font>
 		<textcolor>mod-infotags-d</textcolor>
@@ -282,7 +378,7 @@
 	<!-- INCLUDES: Common Clearlogo and Ratings etc at bottom of screen -->
 	<include name="CommonClearLogoDetails">
 		<control type="group">
-			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + !Skin.HasSetting(UseWhiteText)</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>
@@ -318,7 +414,7 @@
 					<height>72</height>
 					<label>$VAR[BottomClearLogoText]</label>
 					<font>Font-Condensed-S38</font>
-					<textcolor>mod-infotags</textcolor>
+					<textcolor>Mod_Tags</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -339,7 +435,7 @@
 						<height>52</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>7</posx>
@@ -348,7 +444,7 @@
 						<height>52</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagHDSD]</texture>
-						<colordiffuse>mod-infotags-alt</colordiffuse>
+						<colordiffuse>Mod_Tags_Alt</colordiffuse>
 						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
 					<control type="image">
@@ -358,7 +454,7 @@
 						<height>38</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>flags/other/set-info.png</texture>
-						<colordiffuse>mod-infotags-alt</colordiffuse>
+						<colordiffuse>Mod_Tags_Alt</colordiffuse>
 						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
 					<control type="image">
@@ -368,7 +464,7 @@
 						<height>52</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>128</posx>
@@ -377,7 +473,7 @@
 						<height>52</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$VAR[AeonFlagVideoCodec]</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
 					<control type="image">
@@ -387,7 +483,7 @@
 						<height>52</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$VAR[AeonFlagAudioCodec]</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 					</control>
 					<control type="label">
@@ -397,7 +493,7 @@
 						<height>52</height>
 						<label>$LOCALIZE[20457]</label>
 						<font>Font-Condensed-S25</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<scroll>false</scroll>
 						<align>center</align>
 						<wrapmultiline>false</wrapmultiline>
@@ -413,7 +509,7 @@
 						<height>52</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>7</posx>
@@ -422,7 +518,7 @@
 						<height>52</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagStudio]</texture>
-						<colordiffuse>mod-infotags-alt</colordiffuse>
+						<colordiffuse>Mod_Tags_Alt</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>100</posx>
@@ -431,16 +527,16 @@
 						<height>52</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>100</posx>
-						<posy>22</posy>
+						<posy>16</posy>
 						<width>94</width>
-						<height>52</height>
+						<height>64</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagRating]</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<texture>$VAR[AeonFlagMovieMPAAVar]</texture>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 				</control>
 				<!-- TV GENRES -->
@@ -453,18 +549,15 @@
 						<height>52</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
-					<control type="label">
+					<control type="image">
 						<posx>220</posx>
-						<posy>34</posy>
-						<width>85</width>
-						<label>Genre</label>
-						<font>Font-Condensed-S25</font>
-						<textcolor>mod-infotags-alt</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
+						<posy>27</posy>
+						<width>92</width>
+						<height>44</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
+						<texture colordiffuse="Mod_Tags_Alt">aeonflags/posters/genre.png</texture>
 					</control>
 					<control type="image">
 						<posx>310</posx>
@@ -473,7 +566,7 @@
 						<height>52</height>
 						<aspectratio>stretch</aspectratio>
 						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 					<control type="label">
 						<posx>328</posx>
@@ -481,205 +574,7 @@
 						<width>205</width>
 						<label>$INFO[ListItem.Genre]</label>
 						<font>Font-Condensed-S25</font>
-						<textcolor>mod-infotags</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
-					</control>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(UseWhiteText)</visible>
-			<animation type="Visible" reversible="false">
-				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
-			</animation>
-			<animation type="WindowOpen" reversible="false">
-				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
-			</animation>
-			<control type="group">
-				<posx>760</posx>
-				<control type="image">
-					<posx>1</posx>
-					<posy>171r</posy>
-					<width>400</width>
-					<height>155</height>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<texture>$VAR[ClearLogosVar]</texture>
-					<colordiffuse>cc000000</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>172r</posy>
-					<width>400</width>
-					<height>155</height>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<texture>$VAR[ClearLogosVar]</texture>
-				</control>
-				<control type="label">
-					<posx>45</posx>
-					<posy>115r</posy>
-					<width>280</width>
-					<height>72</height>
-					<label>$VAR[BottomClearLogoText]</label>
-					<font>Font-Condensed-S38</font>
-					<textcolor>darkerbackground</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<wrapmultiline>true</wrapmultiline>
-					<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
-				</control>
-			</control>
-			<control type="group">
-				<posx>100</posx>
-				<posy>950</posy>
-				<control type="group">
-					<visible>[Container.Content(Episodes) | Container.Content(Movies)]</visible>
-					<posx>210</posx>
-					<control type="image">
-						<posx>0</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>7</posx>
-						<posy>22</posy>
-						<width>92</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagHDSD]</texture>
-						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-					<control type="image">
-						<posx>13</posx>
-						<posy>28</posy>
-						<width>82</width>
-						<height>38</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>flags/other/set-info.png</texture>
-						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>22</posy>
-						<width>245</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-					</control>
-					<control type="image">
-						<posx>128</posx>
-						<posy>22</posy>
-						<width>90</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagVideoCodec]</texture>
-						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-					<control type="image">
-						<posx>228</posx>
-						<posy>22</posy>
-						<width>90</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagAudioCodec]</texture>
-						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-					<control type="label">
-						<posx>108</posx>
-						<posy>22</posy>
-						<width>220</width>
-						<height>52</height>
-						<label>$LOCALIZE[20457]</label>
-						<font>Font-Condensed-S25</font>
-						<textcolor>darkerbackground</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
-						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-					</control>
-				</control>
-				<!-- RATING AND STUDIO -->
-				<control type="group">
-					<control type="image">
-						<posx>0</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-						<colordiffuse>mod-infotags</colordiffuse>
-					</control>
-					<control type="image">
-						<posx>7</posx>
-						<posy>22</posy>
-						<width>92</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagStudio]</texture>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-					</control>
-					<control type="image">
-						<posx>100</posx>
-						<posy>22</posy>
-						<width>94</width>
-						<height>52</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[AeonFlagRating]</texture>
-					</control>
-				</control>
-				<!-- TV GENRES -->
-				<control type="group">
-					<visible>![Container.Content(Episodes) | Container.Content(Movies)]</visible>
-					<control type="image">
-						<posx>210</posx>
-						<posy>22</posy>
-						<width>100</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
-					</control>
-					<control type="label">
-						<posx>220</posx>
-						<posy>34</posy>
-						<width>85</width>
-						<label>Genre</label>
-						<font>Font-Condensed-S25</font>
-						<textcolor>mod-infotags</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-						<wrapmultiline>false</wrapmultiline>
-					</control>
-					<control type="image">
-						<posx>310</posx>
-						<posy>22</posy>
-						<width>245</width>
-						<height>52</height>
-						<aspectratio>stretch</aspectratio>
-						<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
-					</control>
-					<control type="label">
-						<posx>328</posx>
-						<posy>34</posy>
-						<width>205</width>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>Font-Condensed-S25</font>
-						<textcolor>darkerbackground</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<scroll>false</scroll>
 						<align>center</align>
 						<wrapmultiline>false</wrapmultiline>
@@ -691,7 +586,6 @@
 	<!-- INCLUDES: MUSIC Common Clearlogo and Ratings etc at bottom of screen -->
 	<include name="MusicCommonClearLogoDetails">
 		<control type="group">
-			<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			<animation type="Visible" reversible="false">
 				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
 			</animation>
@@ -727,7 +621,7 @@
 					<height>72</height>
 					<label>$VAR[MusicBottomClearLogoText]</label>
 					<font>Font-Condensed-S38</font>
-					<textcolor>mod-infotags</textcolor>
+					<textcolor>Mod_Tags</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -745,101 +639,16 @@
 					<height>52</height>
 					<aspectratio>stretch</aspectratio>
 					<texture border="20,5,20,5">aeonflags/posters/left.png</texture>
-					<colordiffuse>mod-infotags</colordiffuse>
+					<colordiffuse>Mod_Tags</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>120</posx>
-					<posy>972</posy>
-					<width>435</width>
-					<height>52</height>
-					<aspectratio>stretch</aspectratio>
-					<texture border="20,5,20,5">aeonflags/posters/right.png</texture>
-					<colordiffuse>mod-infotags</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>10</posx>
-					<posy>975</posy>
-					<width>110</width>
-					<height>48</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
-				</control>
-				<control type="label">
-					<posx>137</posx>
-					<posy>984</posy>
-					<width>400</width>
-					<label>$VAR[MusicBottomGenre]</label>
-					<font>Font-Condensed-S25</font>
-					<textcolor>mod-infotags</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-					<wrapmultiline>false</wrapmultiline>
-				</control>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Skin.HasSetting(UseWhiteText)</visible>
-			<animation type="Visible" reversible="false">
-				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
-			</animation>
-			<animation type="WindowOpen" reversible="false">
-				<effect type="fade" start="0" end="100" time="450" delay="0" tween="sine" easing="in" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="fade" end="0" start="100" time="200" delay="0" tween="sine" easing="in" />
-			</animation>
-			<control type="group">
-				<posx>732</posx>
-				<control type="image" id="89456">
-					<posx>91</posx>
-					<posy>127r</posy>
-					<width>280</width>
-					<height>92</height>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
-					<colordiffuse>ee000000</colordiffuse>
-				</control>
-				<control type="image" id="89456">
-					<posx>90</posx>
-					<posy>128r</posy>
-					<width>280</width>
-					<height>92</height>
-					<aspectratio align="center" aligny="bottom">keep</aspectratio>
-					<texture fallback="blank.png">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,/logo.png]</texture>
-				</control>
-				<control type="label">
-					<posx>-5</posx>
-					<posy>115r</posy>
-					<width>480</width>
-					<height>72</height>
-					<label>$VAR[MusicBottomClearLogoText]</label>
-					<font>Font-Condensed-S38</font>
-					<textcolor>darkerbackground</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<wrapmultiline>true</wrapmultiline>
-					<visible>StringCompare(Control.GetLabel(89456),blank.png)</visible>
-				</control>
-			</control>
-			<!-- LEFT SIDE -->
-			<control type="group">
-				<posx>100</posx>
-				<control type="image">
-					<posx>0</posx>
 					<posy>972</posy>
 					<width>120</width>
 					<height>52</height>
 					<aspectratio>stretch</aspectratio>
-					<texture border="20,5,20,5">aeonflags/posters/left.png</texture>
-				</control>
-				<control type="image">
-					<posx>120</posx>
-					<posy>972</posy>
-					<width>435</width>
-					<height>52</height>
-					<aspectratio>stretch</aspectratio>
 					<texture border="20,5,20,5">aeonflags/posters/right.png</texture>
+					<colordiffuse>Mod_Tags</colordiffuse>
 				</control>
 				<control type="image">
 					<posx>10</posx>
@@ -847,15 +656,41 @@
 					<width>110</width>
 					<height>48</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
+					<texture colordiffuse="Mod_Tags_Alt" fallback="aeonflags/studios/default-studio.png">$VAR[AeonFlagAudioCodec]</texture>
+				</control>
+				<control type="image">
+					<posx>250</posx>
+					<posy>972</posy>
+					<width>100</width>
+					<height>52</height>
+					<aspectratio>stretch</aspectratio>
+					<texture border="20,10,20,10">aeonflags/posters/left.png</texture>
+					<colordiffuse>Mod_Tags</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>260</posx>
+					<posy>977</posy>
+					<width>92</width>
+					<height>44</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<texture colordiffuse="Mod_Tags_Alt">aeonflags/posters/genre.png</texture>
+				</control>
+				<control type="image">
+					<posx>350</posx>
+					<posy>972</posy>
+					<width>245</width>
+					<height>52</height>
+					<aspectratio>stretch</aspectratio>
+					<texture border="20,10,20,10">aeonflags/posters/right.png</texture>
+					<colordiffuse>Mod_Tags</colordiffuse>
 				</control>
 				<control type="label">
-					<posx>137</posx>
+					<posx>368</posx>
 					<posy>984</posy>
-					<width>400</width>
-					<label>$VAR[MusicBottomGenre]</label>
+					<width>205</width>
+					<label>$INFO[ListItem.Property(Artist_Genre)]</label>
 					<font>Font-Condensed-S25</font>
-					<textcolor>darkerbackground</textcolor>
+					<textcolor>Mod_Tags</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<wrapmultiline>false</wrapmultiline>

@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window id="600">
 	<defaultcontrol>32</defaultcontrol>
+	<menucontrol>9001</menucontrol>
 	<allowoverlay>no</allowoverlay>
 	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=trendingshows)</onload>
 	<controls>
@@ -38,23 +40,10 @@
 					<width>200</width>
 					<height>30</height>
 					<font>Font-Condensed-S30-B</font>
-					<textcolor>mod-infotags</textcolor>
+					<textcolor>Mod_Tags</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[33061]</label>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label">
-					<posx>18</posx>
-					<posy>-38</posy>
-					<width>200</width>
-					<height>30</height>
-					<font>Font-Condensed-S30-B</font>
-					<textcolor>darkerbackground</textcolor>
-					<align>left</align>
-					<aligny>center</aligny>
-					<label>$LOCALIZE[33061]</label>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="image">
 					<posx>-12</posx>

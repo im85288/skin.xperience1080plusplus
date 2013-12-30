@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1122">
 	<defaultcontrol always="true">9333</defaultcontrol>
 	<onload>SetProperty(Title,$INFO[ListItem.Title],1122)</onload>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">21</defaultcontrol>
     <zorder>3</zorder>
@@ -45,7 +46,7 @@
                     <align>center</align>
                     <textcolor>mod-infotags</textcolor>
                     <selectedcolor>mod-infotags</selectedcolor>
-                    <disabledcolor>mod-infotags-l</disabledcolor>
+                    <disabledcolor>Mod_Tags_Light</disabledcolor>
                 </control>
             <!-- First Row -->
                 <control type="group">

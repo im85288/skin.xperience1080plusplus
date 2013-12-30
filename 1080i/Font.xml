@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <fonts>
 	<fontset id="Default" unicode="true">
 		<font>
@@ -270,6 +271,12 @@
 			<name>Font-Condensed-S60</name>
 			<filename>OpenSansCond.ttf</filename>
 			<size>60</size>
+		</font>
+		<font>
+			<name>Font-Condensed-S60-B</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>60</size>
+			<style>bold</style>
 		</font>
 		<font>
 			<name>Font-Condensed-S64</name>

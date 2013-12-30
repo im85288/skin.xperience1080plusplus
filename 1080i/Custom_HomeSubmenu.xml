@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="3023">
 	<defaultcontrol always="true">3</defaultcontrol>
 	<onunload>ClearProperty(Close,3023)</onunload>
@@ -27,8 +28,7 @@
 			<itemgap>45</itemgap>
 			<control type="label">
 				<description>Root</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Classic</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
@@ -36,8 +36,7 @@
 			</control>
 			<control type="label">
 				<description>Root</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Classic</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
@@ -56,8 +55,7 @@
 			</control>
 			<control type="label">
 				<description>Root</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Horizontal</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
@@ -65,8 +63,7 @@
 			</control>
 			<control type="label">
 				<description>Root</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<label>Horizontal</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
@@ -85,8 +82,7 @@
 			</control>
 			<control type="label">
 				<description>go PleXBMC</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + !Skin.HasSetting(plexbmc)</visible>
 				<label>go PleXBMC</label>
 				<label>$INFO[Window.Property(plexbmc.0.path)]</label>
@@ -96,8 +92,7 @@
 			</control>
 			<control type="label">
 				<description>go PleXBMC</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + !Skin.HasSetting(plexbmc)</visible>
 				<label>go PleXBMC</label>
 				<label>$INFO[Window.Property(plexbmc.0.path)]</label>
@@ -120,8 +115,7 @@
 			</control>
 			<control type="label">
 				<description>go XBMC</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
 				<label>go XBMC</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
@@ -130,8 +124,7 @@
 			</control>
 			<control type="label">
 				<description>go XBMC</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
 				<label>go XBMC</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
@@ -139,7 +132,7 @@
 				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>!Container(3).HasFocus(3)</visible>
 			</control>
-				<control type="label">
+			<control type="label">
 				<description>go XBMC</description>
 				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
 				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
@@ -152,8 +145,7 @@
 			</control>
 			<control type="label">
 				<description>plexbmc settings</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
 				<label>PleXBMC Settings</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
@@ -162,8 +154,7 @@
 			</control>
 			<control type="label">
 				<description>plexbmc settings</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
 				<label>PleXBMC Settings</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
@@ -184,8 +175,7 @@
 			</control>
 			<control type="label">
 				<description>plexbmc refresh</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
 				<label>Refresh Plex</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
@@ -194,8 +184,7 @@
 			</control>
 			<control type="label">
 				<description>plexbmc refresh</description>
-				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabel</include>
-				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanart</include>
+				<include>HomeLabel</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
 				<label>Refresh Plex</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
@@ -203,7 +192,7 @@
 				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
 				<visible>!Container(3).HasFocus(5)</visible>
 			</control>
-				<control type="label">
+			<control type="label">
 				<description>plexbmc refresh</description>
 				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
 				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- ========= -->
 	<!-- List (50) -->
@@ -12,7 +13,7 @@
 				<posy>176</posy>
 				<height>727</height>
 				<width>1450</width>
-				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<texture colordiffuse="mod-infotags" border="35">views/newgloss/whitepanel-15.png</texture>
 				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
@@ -75,7 +76,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
+						<textcolor>darkerbackground</textcolor>
 						<scroll>false</scroll>
 						<visible>!IsEmpty(ListItem.Icon)</visible>
 					</control>
@@ -88,7 +89,7 @@
 						<font>Font-Condensed-S34-B</font>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
+						<textcolor>darkerbackground</textcolor>
 						<scroll>false</scroll>
 						<visible>IsEmpty(ListItem.Icon)</visible>
 					</control>
@@ -100,8 +101,8 @@
 						<height>100</height>
 						<font>Font-Condensed-S34-B</font>
 						<align>right</align>
-						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>$VAR[DarkerBackgroundViewsMainTextColourVars]</textcolor>
+						<label>$VAR[AddonLabel2]</label>
+						<textcolor>darkerbackground</textcolor>
 						<scroll>false</scroll>
 					</control>
 					<control type="image">
@@ -165,7 +166,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<visible>!IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="label">
@@ -177,7 +178,7 @@
 							<font>Font-Condensed-S34-B</font>
 							<align>left</align>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>eewhite</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<visible>IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="label">
@@ -188,8 +189,8 @@
 							<height>100</height>
 							<font>Font-Condensed-S34-B</font>
 							<align>right</align>
-							<label>$INFO[ListItem.Label2]</label>
-							<textcolor>D4FFFFFF</textcolor>
+							<label>$VAR[AddonLabel2]</label>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
     <defaultcontrol always="true">300</defaultcontrol>
     <onunload condition="IsEmpty(Window(virtualkeyboard).Property(Clear))">ClearProperty(HomeSearch,home)</onunload>
@@ -49,7 +50,7 @@
                     <width>1000</width>
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
-                    <textcolor>mod-infotags</textcolor>
+                    <textcolor>Mod_Tags</textcolor>
                 </control>
             <!-- First Row -->
                 <control type="group" id="320">

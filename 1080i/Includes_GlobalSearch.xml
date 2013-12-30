@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="GlobalSearchInfoVideoArt">
 		<value condition="Control.IsVisible(140) + !IsEmpty(Container(100).ListItem.Thumb)">$INFO[Container(100).ListItem.Thumb]</value>

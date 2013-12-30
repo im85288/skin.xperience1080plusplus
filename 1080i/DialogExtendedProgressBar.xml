@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
 	<onload condition="Library.IsScanningVideo + Skin.HasSetting(UpdateArt.Enabled)">SetProperty(UpdateArt,1)</onload>
@@ -48,24 +49,10 @@
 						<width min="0" max="680">auto</width>
 						<height>120</height>
 						<font>Font-Condensed-S36</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<label>$INFO[Control.GetLabel(30)]</label>
 						<scroll>false</scroll>
 						<align>left</align>
-						<visible>!Skin.HasSetting(UseWhiteText)</visible>
-					</control>
-					<control type="label">
-						<description>Header label</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width min="0" max="680">auto</width>
-						<height>120</height>
-						<font>Font-Condensed-S36</font>
-						<textcolor>darkerbackground</textcolor>
-						<label>$INFO[Control.GetLabel(30)]</label>
-						<scroll>false</scroll>
-						<align>left</align>
-						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 					<control type="label">
 						<description>Header label</description>
@@ -74,24 +61,10 @@
 						<width min="0" max="120">auto</width>
 						<height>120</height>
 						<font>Font-Condensed-S36</font>
-						<textcolor>mod-infotags</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<label>$INFO[Control.GetLabel(32),: ,%]</label>
 						<scroll>false</scroll>
 						<align>left</align>
-						<visible>!Skin.HasSetting(UseWhiteText)</visible>
-					</control>
-					<control type="label">
-						<description>Header label</description>
-						<posx>0</posx>
-						<posy>0</posy>
-						<width min="0" max="120">auto</width>
-						<height>120</height>
-						<font>Font-Condensed-S36</font>
-						<textcolor>darkerbackground</textcolor>
-						<label>$INFO[Control.GetLabel(32),: ,%]</label>
-						<scroll>false</scroll>
-						<align>left</align>
-						<visible>Skin.HasSetting(UseWhiteText)</visible>
 					</control>
 				</control>
 				<control type="label" id="30">
@@ -105,22 +78,9 @@
 					<width>750</width>
 					<height>120</height>
 					<font>Font-Condensed-S28</font>
-					<textcolor>mod-infotags</textcolor>
+					<textcolor>Mod_Tags</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
-					<visible>!Skin.HasSetting(UseWhiteText)</visible>
-				</control>
-				<control type="label" id="31">
-					<description>Title label</description>
-					<posx>0</posx>
-					<posy>33</posy>
-					<width>750</width>
-					<height>120</height>
-					<font>Font-Condensed-S28</font>
-					<textcolor>darkerbackground</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-					<visible>Skin.HasSetting(UseWhiteText)</visible>
 				</control>
 				<control type="progress" id="32">
 					<description>progress control</description>

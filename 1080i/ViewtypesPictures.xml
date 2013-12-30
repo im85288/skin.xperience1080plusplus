@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- ========= -->
 	<!-- List (50) -->
@@ -12,7 +13,7 @@
 				<posy>179</posy>
 				<height>701</height>
 				<width>1464</width>
-				<texture border="5">views/newgloss/whitepanel-15.png</texture>
+				<texture colordiffuse="Mod_Tags_Alt" border="5">views/newgloss/whitepanel-15.png</texture>
 				<visible>!Skin.HasSetting(DarkerPanels)</visible>
 			</control>
 			<control type="image">
@@ -117,17 +118,7 @@
 						<height>85</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<colordiffuse>black</colordiffuse>
-						<visible>!Skin.HasSetting(DarkerPanels)</visible>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>8</posy>
-						<width>85</width>
-						<height>85</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>Skin.HasSetting(DarkerPanels)</visible>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 				</itemlayout>
 				<focusedlayout height="100">
@@ -157,17 +148,7 @@
 						<height>85</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
-						<colordiffuse>black</colordiffuse>
-						<visible>!Skin.HasSetting(DarkerPanels)</visible>
-					</control>
-					<control type="image">
-						<posx>20</posx>
-						<posy>8</posy>
-						<width>85</width>
-						<height>85</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-						<visible>Skin.HasSetting(DarkerPanels)</visible>
+						<colordiffuse>Mod_Tags</colordiffuse>
 					</control>
 					<control type="group">
 						<animation type="Focus" condition="Container(50).OnNext | Container(50).OnPrevious" reversible="false">

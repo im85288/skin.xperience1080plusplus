@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
     <controls>
         <control type="group">
@@ -22,7 +23,7 @@
                     <height>100</height>
                     <texture>overlays/volume/volume-back.png</texture>
                     <aspectratio align="center">keep</aspectratio>
-                    <colordiffuse>mod-infotags</colordiffuse>
+                    <colordiffuse>Mod_Tags</colordiffuse>
                 </control>
                 <control type="group">
                     <visible>!Player.Passthrough</visible>
@@ -46,7 +47,7 @@
                         <height>100</height>
                         <label>$INFO[Player.Volume]</label>
                        <font>Font-Condensed-S32</font>
-                        <textcolor>mod-infotags</textcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                     </control>
@@ -61,7 +62,7 @@
                         <height>100</height>
                         <label>$LOCALIZE[29802]</label>
                         <font>Font-Condensed-S32</font>
-                        <textcolor>mod-infotags</textcolor>
+                        <textcolor>Mod_Tags</textcolor>
                         <scroll>false</scroll>
                         <align>right</align>
                     </control>

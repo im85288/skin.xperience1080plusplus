@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- =============== -->
 	<!-- Guide Interface -->
@@ -1719,8 +1720,10 @@
 			<item id="8">
 				<label>playlist</label>
 				<include>GuideDialogClose</include>
-				<onclick condition="Player.HasVideo">ActivateWindow(videoplaylist)</onclick>
-				<onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
+				<onclick condition="Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</onclick>
+				<onclick condition="[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
+				<visible>[Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)] | [[Window.IsActive(musiclibrary) | Window.IsActive(musicfiles)] + !StringCompare(Playlist.Length(music),0)]</visible>
+				<visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist)</visible>
 			</item>
 		</content>
 	</include>

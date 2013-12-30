@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- =============== -->
 	<!-- Panel (503) -->
@@ -10,7 +11,7 @@
 			<control type="group">
 				<posy>240</posy>
 				<animation effect="fade" start="0" end="100" time="400" delay="600" reversible="false">Visible</animation>
-				<visible>!Container(503).OnNext + !Container(503).OnPrevious + !Container(503).Scrolling + !Skin.HasSetting(UseWhiteText)</visible>
+				<visible>!Container(503).OnNext + !Container(503).OnPrevious + !Container(503).Scrolling</visible>
 				<control type="image">
 					<description>Left Arrow</description>
 					<posx>164</posx>
@@ -20,7 +21,7 @@
 					<texture background="true">dialogs/shutdown/left.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" end="-42, 305" time="400" condition="true">Conditional</animation>
-					<colordiffuse>mod-infotags</colordiffuse>
+					<colordiffuse>Mod_Tags</colordiffuse>
 				</control>
 				<control type="image">
 					<description>Right Arrow</description>
@@ -31,32 +32,7 @@
 					<texture background="true">dialogs/shutdown/right.png</texture>
 					<aspectratio>keep</aspectratio>
 					<animation effect="slide" end="42, 305" time="400" condition="true">Conditional</animation>
-					<colordiffuse>mod-infotags</colordiffuse>
-				</control>
-			</control>
-			<control type="group">
-				<posy>240</posy>
-				<animation effect="fade" start="0" end="100" time="400" delay="600" reversible="false">Visible</animation>
-				<visible>!Container(503).OnNext + !Container(503).OnPrevious + !Container(503).Scrolling + Skin.HasSetting(UseWhiteText)</visible>
-				<control type="image">
-					<description>Left Arrow</description>
-					<posx>164</posx>
-					<posy>0</posy>
-					<width>48</width>
-					<height>48</height>
-					<texture background="true">dialogs/shutdown/left.png</texture>
-					<aspectratio>keep</aspectratio>
-					<animation effect="slide" end="-42, 305" time="400" condition="true">Conditional</animation>
-				</control>
-				<control type="image">
-					<description>Right Arrow</description>
-					<posx>212r</posx>
-					<posy>0</posy>
-					<width>48</width>
-					<height>48</height>
-					<texture background="true">dialogs/shutdown/right.png</texture>
-					<aspectratio>keep</aspectratio>
-					<animation effect="slide" end="42, 305" time="400" condition="true">Conditional</animation>
+					<colordiffuse>Mod_Tags</colordiffuse>
 				</control>
 			</control>
 			<control type="wraplist" id="503">
@@ -118,21 +94,9 @@
 									<width>790</width>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font-Condensed-S32-B</font>
-									<textcolor>mod-infotags</textcolor>
+									<textcolor>Mod_Tags</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
-									<visible>!Skin.HasSetting(UseWhiteText)</visible>
-								</control>
-								<control type="label">
-									<posx>24</posx>
-									<posy>30</posy>
-									<width>790</width>
-									<label>$INFO[ListItem.Label]</label>
-									<font>Font-Condensed-S32-B</font>
-									<textcolor>darkerbackground</textcolor>
-									<scroll>false</scroll>
-									<align>left</align>
-									<visible>Skin.HasSetting(UseWhiteText)</visible>
 								</control>
 								<control type="textbox">
 									<posx>24</posx>
@@ -141,22 +105,10 @@
 									<height>140</height>
 									<label>$INFO[ListItem.Plot]</label>
 									<font>Font-Condensed-S25</font>
-									<textcolor>mod-infotags</textcolor>
+									<textcolor>Mod_Tags</textcolor>
 									<align>justify</align>
 									<autoscroll delay="13000" time="3000" repeat="13000" />
-									<visible>!substring(ListItem.Path,videodb://1/7,left) + !Skin.HasSetting(UseWhiteText)</visible>
-								</control>
-								<control type="textbox">
-									<posx>24</posx>
-									<posy>74</posy>
-									<width>790</width>
-									<height>140</height>
-									<label>$INFO[ListItem.Plot]</label>
-									<font>Font-Condensed-S25</font>
-									<textcolor>darkerbackground</textcolor>
-									<align>justify</align>
-									<autoscroll delay="13000" time="3000" repeat="13000" />
-									<visible>!substring(ListItem.Path,videodb://1/7,left) + Skin.HasSetting(UseWhiteText)</visible>
+									<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 								</control>
 								<control type="textbox">
 									<posx>24</posx>
@@ -165,22 +117,10 @@
 									<height>140</height>
 									<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 									<font>Font-Condensed-S25</font>
-									<textcolor>mod-infotags</textcolor>
+									<textcolor>Mod_Tags</textcolor>
 									<align>justify</align>
 									<autoscroll delay="5000" time="3000" repeat="5000" />
-									<visible>substring(ListItem.Path,videodb://1/7,left) + !Skin.HasSetting(UseWhiteText)</visible>
-								</control>
-								<control type="textbox">
-									<posx>24</posx>
-									<posy>72</posy>
-									<width>790</width>
-									<height>140</height>
-									<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
-									<font>Font-Condensed-S25</font>
-									<textcolor>darkerbackground</textcolor>
-									<align>justify</align>
-									<autoscroll delay="5000" time="3000" repeat="5000" />
-									<visible>substring(ListItem.Path,videodb://1/7,left) + Skin.HasSetting(UseWhiteText)</visible>
+									<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 								</control>
 							</control>
 						</control>
@@ -251,7 +191,6 @@
 								<aspectratio align="left" aligny="top" scalediffuse="false">keep</aspectratio>
 							</control>
 							<control type="group">
-								<visible>!Skin.HasSetting(UseWhiteText)</visible>
 								<posy>472</posy>
 								<control type="label">
 									<posx>24</posx>
@@ -259,7 +198,7 @@
 									<width>790</width>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font-Condensed-S32</font>
-									<textcolor>mod-infotags</textcolor>
+									<textcolor>Mod_Tags</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
 								</control>
@@ -270,32 +209,7 @@
 									<height>147</height>
 									<label>$INFO[ListItem.Plot]</label>
 									<font>Font-Condensed-S25</font>
-									<textcolor>mod-infotags</textcolor>
-									<align>justify</align>
-									<autoscroll delay="13000" time="3000" repeat="13000" />
-								</control>
-							</control>
-							<control type="group">
-								<visible>Skin.HasSetting(UseWhiteText)</visible>
-								<posy>472</posy>
-								<control type="label">
-									<posx>24</posx>
-									<posy>30</posy>
-									<width>790</width>
-									<label>$INFO[ListItem.Label]</label>
-									<font>Font-Condensed-S32</font>
-									<textcolor>darkerbackground</textcolor>
-									<scroll>false</scroll>
-									<align>left</align>
-								</control>
-								<control type="textbox">
-									<posx>24</posx>
-									<posy>72</posy>
-									<width>790</width>
-									<height>147</height>
-									<label>$INFO[ListItem.Plot]</label>
-									<font>Font-Condensed-S25</font>
-									<textcolor>darkerbackground</textcolor>
+									<textcolor>Mod_Tags</textcolor>
 									<align>justify</align>
 									<autoscroll delay="13000" time="3000" repeat="13000" />
 								</control>

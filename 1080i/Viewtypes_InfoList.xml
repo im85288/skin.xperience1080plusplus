@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- ============== -->
 	<!-- Info list (552) -->
@@ -309,7 +310,7 @@
 							<height>275</height>
 							<info>Container(552).ListItem.Plot</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<font>Font-Condensed-S34</font>
 							<autoscroll delay="3000" time="1000" repeat="10000" />
@@ -323,7 +324,7 @@
 							<height>275</height>
 							<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 							<align>justify</align>
-							<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<font>Font-Condensed-S34</font>
 							<autoscroll delay="3000" time="1000" repeat="10000" />
@@ -415,7 +416,7 @@
 					</control>
 					<control type="label">
 						<posx>553</posx>
-						<posy>592</posy>
+						<posy>586</posy>
 						<width>590</width>
 						<height>58</height>
 						<font>Font-Condensed-S32-B</font>
@@ -541,7 +542,7 @@
 						<posy>265</posy>
 						<width>734</width>
 						<height>630</height>
-						<texture background="true">views/newgloss/whitepanel-15.png</texture>
+						<texture colordiffuse="Mod_Tags_Alt" background="true">views/newgloss/whitepanel-15.png</texture>
 						<visible>!Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="image">

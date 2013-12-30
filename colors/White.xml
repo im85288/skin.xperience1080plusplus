@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+	<color name="Mod_Tags">ffffffff</color>
+	<color name="Mod_Tags_Views">ff000000</color>
+	<color name="Mod_Tags_Alt">ffffffff</color>
+	<color name="Mod_Tags_Alt2">dd252525</color>
+	<color name="Mod_Tags_Light_Views">ffaaaaaa</color>
+	<color name="Mod_Tags_Light">ff000000</color>
+	<color name="Mod_Tags_Dark">ffffffff</color>
+	<color name="Mod_Tags_Dark_Views">ff000000</color>
+	<color name="Mod_Tags_Shadow">55ffffff</color>
+	<color name="Mod_Tags_Plex">cc777777</color>
+	<color name="Mod_Tags_Logo_Shadow">dd000000</color>
+	<color name="Mod_Overlay_Floor">daeeeeee</color>
+	<color name="Mod_Overlay_Dimfanart">bbeeeeee</color>
+	<color name="Mod_Overlay_Dimfanart_Extra">22eeeeee</color>
+	<color name="Mod_Border">eeffffff</color>
+	<color name="Mod_Border_Fade">88ffffff</color>
+	<color name="Mod_Cover_Fade">44000000</color>
+	<color name="Mod_Glow_Border">ffffffff</color>
+	<color name="Mod_Panel_Glass">ffffffff</color>
+	<color name="Mod_EmptyBG">ffffffff</color>
+</colors>

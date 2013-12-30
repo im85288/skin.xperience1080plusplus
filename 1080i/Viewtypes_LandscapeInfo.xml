@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- ==================== -->
 	<!-- Landscape Poster (507) -->
@@ -47,7 +48,7 @@
 							<posy>0</posy>
 							<width>374</width>
 							<height>471</height>
-							<texture background="true" diffuse="views/newgloss/landscape.png">windows/home/tile-greyed.png</texture>
+							<texture colordiffuse="mod-infotags" background="true" diffuse="views/newgloss/landscape.png">windows/home/tile-greyed.png</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>55ffffff</colordiffuse>
 						</control>
@@ -106,10 +107,9 @@
 							<height>158</height>
 							<info>ListItem.Plot</info>
 							<align>justify</align>
-							<textcolor>99FFFFFF</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<textcolor>darkerbackground</textcolor>
 							<autoscroll>false</autoscroll>
-							<font>Font-Condensed-S22</font>
+							<font>Font-Condensed-S25</font>
 							<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 						</control>
 						<control type="textbox">
@@ -120,9 +120,8 @@
 							<height>158</height>
 							<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 							<align>justify</align>
-							<font>Font-Condensed-S22</font>
-							<textcolor>99FFFFFF</textcolor>
-							<shadowcolor>99000000</shadowcolor>
+							<font>Font-Condensed-S25</font>
+							<textcolor>darkerbackground</textcolor>
 							<autoscroll delay="13000" time="3000" repeat="13000" />
 							<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 						</control>
@@ -155,7 +154,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="374">
+				<focusedlayout width="474">
 					<control type="group">
 						<animation type="Focus" condition="Container(507).OnNext | Container(507).OnPrevious">
 							<effect type="zoom" start="80" end="100" time="350" tween="sine" easing="out" center="187,250" />
@@ -182,27 +181,25 @@
 							<description>Back bit</description>
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>374</width>
+							<width>474</width>
 							<height>471</height>
-							<texture background="true" diffuse="views/newgloss/landscape.png">windows/common/white.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" background="true" diffuse="views/newgloss/landscape.png">windows/common/white.png</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-							<colordiffuse>ff181818</colordiffuse>
 						</control>
 						<control type="image">
 							<description>Back bit</description>
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>374</width>
+							<width>474</width>
 							<height>471</height>
-							<texture background="true" diffuse="views/newgloss/landscape.png">windows/home/tile-greyed.png</texture>
+							<texture colordiffuse="$VAR[FocusModColourVar2]" background="true" diffuse="views/newgloss/landscape.png">windows/home/tile-greyed.png</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
-							<colordiffuse>55ffffff</colordiffuse>
 						</control>
 						<control type="image">
 							<description>Info Band</description>
 							<posx>0</posx>
 							<posy>210</posy>
-							<width>374</width>
+							<width>474</width>
 							<height>81</height>
 							<texture>windows/common/white.png</texture>
 							<colordiffuse>ff333333</colordiffuse>
@@ -211,7 +208,7 @@
 							<description>Separator</description>
 							<posx>0</posx>
 							<posy>209</posy>
-							<width>374</width>
+							<width>474</width>
 							<height>3</height>
 							<texture border="1">views/list/other/separator2.png</texture>
 						</control>
@@ -219,17 +216,17 @@
 							<description>Separator</description>
 							<posx>0</posx>
 							<posy>290</posy>
-							<width>374</width>
+							<width>474</width>
 							<height>3</height>
 							<texture border="1">views/list/other/separator2.png</texture>
 						</control>
 						<control type="label">
 							<posx>17</posx>
 							<posy>221</posy>
-							<width>350</width>
+							<width>450</width>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font-Condensed-S32</font>
-							<textcolor>ddwhite</textcolor>
+							<textcolor>darkerbackground</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -237,10 +234,10 @@
 						<control type="label">
 							<posx>17</posx>
 							<posy>256</posy>
-							<width>350</width>
+							<width>450</width>
 							<label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.Rating, • ,]</label>
 							<font>Font-Condensed-S26</font>
-							<textcolor>ddwhite</textcolor>
+							<textcolor>darkerbackground</textcolor>
 							<shadowcolor>88000000</shadowcolor>
 							<scroll>false</scroll>
 							<align>left</align>
@@ -249,41 +246,41 @@
 							<description>Plot</description>
 							<posx>12</posx>
 							<posy>298</posy>
-							<width>346</width>
+							<width>446</width>
 							<height>158</height>
 							<info>ListItem.Plot</info>
 							<align>justify</align>
-							<textcolor>99FFFFFF</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<shadowcolor>99000000</shadowcolor>
-							<autoscroll>false</autoscroll>
-							<font>Font-Condensed-S22</font>
+							<autoscroll delay="3000" time="1000" repeat="10000" />
+							<font>Font-Condensed-S28</font>
 							<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
 						</control>
 						<control type="textbox">
 							<description>Plot</description>
 							<posx>12</posx>
 							<posy>298</posy>
-							<width>346</width>
+							<width>446</width>
 							<height>158</height>
 							<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 							<align>justify</align>
-							<textcolor>99FFFFFF</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<shadowcolor>99000000</shadowcolor>
-							<autoscroll>false</autoscroll>
-							<font>Font-Condensed-S22</font>
+							<autoscroll delay="3000" time="1000" repeat="10000" />
+							<font>Font-Condensed-S28</font>
 							<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
 						</control>
 						<control type="image">
 							<description>Landscape</description>
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>374</width>
+							<width>474</width>
 							<height>210</height>
 							<texture background="true" diffuse="views/newgloss/landscape-diffuse.png">$VAR[ListInfoLandscapeVar]</texture>
 							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 						</control>
 						<control type="image">
-							<posx>274</posx>
+							<posx>374</posx>
 							<posy>0</posy>
 							<width>100</width>
 							<height>100</height>
@@ -295,7 +292,7 @@
 							<description>Gloss</description>
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>374</width>
+							<width>474</width>
 							<height>210</height>
 							<texture diffuse="views/newgloss/landscape.png">views/newgloss/info-gloss.png</texture>
 							<aspectratio align="right" aligny="top" scalediffuse="false">keep</aspectratio>

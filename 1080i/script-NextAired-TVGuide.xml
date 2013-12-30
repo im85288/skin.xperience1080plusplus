@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<backgroundcolor>0</backgroundcolor>
 	<controls>
@@ -19,7 +20,6 @@
 		</control>
 		<include>CommonOverlay</include>
 		<control type="group">
-			<visible>!Skin.HasSetting(UseWhiteText)</visible>
 			<posx>75</posx>
 			<posy>26</posy>
 			<include>BannerListInfoAnimation</include>
@@ -29,7 +29,7 @@
 				<width>85</width>
 				<height>85</height>
 				<texture>DefaultTVGuide.png</texture>
-				<colordiffuse>mod-infotags</colordiffuse>
+				<colordiffuse>Mod_Tags</colordiffuse>
 			</control>
 			<control type="label">
 				<posx>110</posx>
@@ -38,7 +38,7 @@
 				<height>120</height>
 				<label>$LOCALIZE[42160]</label>
 				<font>Font-Condensed-S34</font>
-				<textcolor>mod-infotags</textcolor>
+				<textcolor>Mod_Tags</textcolor>
 				<scroll>false</scroll>
 				<align>left</align>
 			</control>
@@ -49,42 +49,7 @@
 				<height>120</height>
 				<label>$INFO[System.Date]</label>
 				<font>Font-Condensed-S28</font>
-				<textcolor>mod-infotags-l</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Skin.HasSetting(UseWhiteText)</visible>
-			<posx>75</posx>
-			<posy>26</posy>
-			<include>BannerListInfoAnimation</include>
-			<control type="image">
-				<posx>17</posx>
-				<posy>32</posy>
-				<width>85</width>
-				<height>85</height>
-				<texture>DefaultTVGuide.png</texture>
-			</control>
-			<control type="label">
-				<posx>110</posx>
-				<posy>0</posy>
-				<width>250</width>
-				<height>120</height>
-				<label>$LOCALIZE[42160]</label>
-				<font>Font-Condensed-S34</font>
-				<textcolor>darkerbackground</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-			</control>
-			<control type="label">
-				<posx>110</posx>
-				<posy>33</posy>
-				<width>250</width>
-				<height>120</height>
-				<label>$INFO[System.Date]</label>
-				<font>Font-Condensed-S28</font>
-				<textcolor>darkerbackground</textcolor>
+				<textcolor>Mod_Tags_Light</textcolor>
 				<scroll>false</scroll>
 				<align>left</align>
 			</control>
@@ -139,22 +104,10 @@
 								<width>440</width>
 								<label>$VAR[TVGuideNextTitle2]</label>
 								<font>Font-Condensed-S34</font>
-								<textcolor>mod-infotags</textcolor>
+								<textcolor>Mod_Tags</textcolor>
 								<shadowcolor>mod-shadow</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
-								<visible>!Skin.HasSetting(UseWhiteText)</visible>
-							</control>
-							<control type="label">
-								<posx>20</posx>
-								<posy>287</posy>
-								<width>440</width>
-								<label>$VAR[TVGuideNextTitle2]</label>
-								<font>Font-Condensed-S34</font>
-								<textcolor>darkerbackground</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="label">
 								<posx>20</posx>
@@ -162,22 +115,10 @@
 								<width>440</width>
 								<label>$VAR[TVGuideShowName2]</label>
 								<font>Font-Condensed-S32</font>
-								<textcolor>mod-infotags</textcolor>
+								<textcolor>Mod_Tags</textcolor>
 								<shadowcolor>mod-shadow</shadowcolor>
 								<scroll>false</scroll>
 								<align>left</align>
-								<visible>!Skin.HasSetting(UseWhiteText)</visible>
-							</control>
-							<control type="label">
-								<posx>20</posx>
-								<posy>327</posy>
-								<width>440</width>
-								<label>$VAR[TVGuideShowName2]</label>
-								<font>Font-Condensed-S32</font>
-								<textcolor>darkerbackground</textcolor>
-								<scroll>false</scroll>
-								<align>left</align>
-								<visible>Skin.HasSetting(UseWhiteText)</visible>
 							</control>
 							<control type="image">
 								<posx>14</posx>
@@ -630,13 +571,14 @@
 					<posy>-3</posy>
 					<width>484</width>
 					<height>592</height>
-					<texture border="3">views/list/panel/panel.png</texture>
+					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
+					
 				</control>
 				<control type="image">
 					<description>Focus image</description>
-					<posx>0</posx>
+					<posx>12</posx>
 					<posy>-1</posy>
-					<width>480</width>
+					<width>456</width>
 					<height>83</height>
 					<texture border="5">$VAR[FocusModVar]</texture>
 					<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>

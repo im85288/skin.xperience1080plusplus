@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- ================ -->
 	<!-- Banner Plex (53) -->
@@ -105,7 +106,7 @@
 							<width>750</width>
 							<font>Font-Condensed-S25</font>
 							<label>$INFO[ListItem.Rating,, • ]$INFO[ListItem.Year]$INFO[ListItem.Studio, • ,]</label>
-							<textcolor>mod-infotags-li</textcolor>
+							<textcolor>Mod_Tags_Light_Views</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
 							<animation effect="slide" end="-27" time="0" condition="IsEmpty(ListItem.Rating)">Conditional</animation>
@@ -116,7 +117,7 @@
 							<width>777</width>
 							<label>$INFO[ListItem.Genre]</label>
 							<font>Font-Condensed-S25</font>
-							<textcolor>mod-infotags-li</textcolor>
+							<textcolor>Mod_Tags_Light_Views</textcolor>
 							<scroll>false</scroll>
 							<align>left</align>
 						</control>
@@ -129,7 +130,7 @@
 						<height>178</height>
 						<info>ListItem.Plot</info>
 						<align>justify</align>
-						<textcolor>mod-infotags-li</textcolor>
+						<textcolor>Mod_Tags_Light_Views</textcolor>
 						<autoscroll delay="13000" time="3000" repeat="13000" />
 						<font>Font-Condensed-S25</font>
 						<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
@@ -142,7 +143,7 @@
 						<height>210</height>
 						<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 						<align>justify</align>
-						<textcolor>mod-infotags-li</textcolor>
+						<textcolor>Mod_Tags_Light_Views</textcolor>
 						<autoscroll delay="8000" time="3000" repeat="13000" />
 						<font>Font-Condensed-S25</font>
 						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
@@ -231,17 +232,7 @@
 							<height>60</height>
 							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
 							<visible>!Container.Content(Seasons)</visible>
-							<colordiffuse>mod-infotags-a</colordiffuse>
-							<visible>!Skin.HasSetting(UseWhiteText)</visible>
-						</control>
-						<control type="image">
-							<posx>1278</posx>
-							<posy>23</posy>
-							<width>280</width>
-							<height>60</height>
-							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
-							<visible>!Container.Content(Seasons)</visible>
-							<visible>Skin.HasSetting(UseWhiteText)</visible>
+							<colordiffuse>Mod_Tags_Light_Views</colordiffuse>
 						</control>
 						<control type="label">
 							<description>Label</description>
@@ -250,22 +241,9 @@
 							<width>750</width>
 							<font>Font-Condensed-S34</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>mod-infotags-a</textcolor>
+							<textcolor>Mod_Tags_Light_Views</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(UseWhiteText)</visible>
-						</control>
-						<control type="label">
-							<description>Label</description>
-							<posx>527</posx>
-							<posy>20</posy>
-							<width>750</width>
-							<font>Font-Condensed-S34</font>
-							<label>$INFO[ListItem.Label]</label>
-							<textcolor>darkerbackground</textcolor>
-							<align>left</align>
-							<scroll>false</scroll>
-							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 						<control type="label">
 							<description>Rating / Year / Runtime Label</description>
@@ -274,22 +252,9 @@
 							<width>750</width>
 							<font>Font-Condensed-S25</font>
 							<label>$INFO[ListItem.Genre,, • ]$INFO[ListItem.Year]$INFO[ListItem.Studio, • ,]</label>
-							<textcolor>mod-infotags-a</textcolor>
+							<textcolor>Mod_Tags_Light_Views</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(UseWhiteText)</visible>
-						</control>
-						<control type="label">
-							<description>Rating / Year / Runtime Label</description>
-							<posx>527</posx>
-							<posy>54</posy>
-							<width>750</width>
-							<font>Font-Condensed-S25</font>
-							<label>$INFO[ListItem.Genre,, • ]$INFO[ListItem.Year]$INFO[ListItem.Studio, • ,]</label>
-							<textcolor>darkerbackground</textcolor>
-							<align>left</align>
-							<scroll>false</scroll>
-							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="118">
@@ -352,17 +317,7 @@
 							<height>60</height>
 							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
 							<visible>!Container.Content(Seasons)</visible>
-							<colordiffuse>mod-infotags-d</colordiffuse>
-							<visible>!Skin.HasSetting(UseWhiteText)</visible>
-						</control>
-						<control type="image">
-							<posx>1278</posx>
-							<posy>23</posy>
-							<width>280</width>
-							<height>60</height>
-							<texture>views/banner/other/$INFO[ListItem.StarRating]</texture>
-							<visible>!Container.Content(Seasons)</visible>
-							<visible>Skin.HasSetting(UseWhiteText)</visible>
+							<colordiffuse>Mod_Tags_Dark</colordiffuse>
 						</control>
 						<control type="label">
 							<description>Item Label</description>
@@ -371,22 +326,9 @@
 							<width>750</width>
 							<font>Font-Condensed-S34</font>
 							<label>$INFO[ListItem.Label]</label>
-							<textcolor>mod-infotags-d</textcolor>
+							<textcolor>Mod_Tags_Dark</textcolor>
 							<align>left</align>
 							<scroll>false</scroll>
-							<visible>!Skin.HasSetting(UseWhiteText)</visible>
-						</control>
-						<control type="label">
-							<description>Rating / Year / Runtime Label</description>
-							<posx>527</posx>
-							<posy>54</posy>
-							<width>750</width>
-							<font>Font-Condensed-S25</font>
-							<label>$INFO[ListItem.Genre,, • ]$INFO[ListItem.Year]$INFO[ListItem.Studio, • ,]</label>
-							<textcolor>darkerbackground</textcolor>
-							<align>left</align>
-							<scroll>false</scroll>
-							<visible>Skin.HasSetting(UseWhiteText)</visible>
 						</control>
 					</focusedlayout>
 				</control>

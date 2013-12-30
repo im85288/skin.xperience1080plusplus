@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>20</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -107,7 +108,7 @@
 						<posy>-3</posy>
 						<width>756</width>
 						<height>604</height>
-						<texture border="5">views/newgloss/whitepanel.png</texture>
+						<texture colordiffuse="Mod_Tags_Alt" border="5">views/newgloss/whitepanel.png</texture>
 						<visible>!Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="image">
@@ -149,7 +150,7 @@
 								<width>752</width>
 								<height>60</height>
 								<texture>selected.png</texture>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>Mod_Tags</colordiffuse>
 								<aspectratio aligny="top">keep</aspectratio>
 								<visible>ListItem.IsSelected + !Skin.HasSetting(DarkerPanels)</visible>
 							</control>
@@ -170,7 +171,7 @@
 								<height>60</height>
 								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
 								<aspectratio>keep</aspectratio>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>Mod_Tags</colordiffuse>
 								<visible>!Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
@@ -191,7 +192,7 @@
 								<font>Font-Condensed-S30</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>mod-infotags</textcolor>
+								<textcolor>Mod_Tags</textcolor>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
@@ -221,7 +222,7 @@
 								<font>Font-Condensed-S27</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>mod-infotags</textcolor>
+								<textcolor>Mod_Tags</textcolor>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
@@ -263,7 +264,7 @@
 								<width>752</width>
 								<height>60</height>
 								<texture>selected.png</texture>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>Mod_Tags</colordiffuse>
 								<aspectratio aligny="top">keep</aspectratio>
 								<visible>ListItem.IsSelected + !Skin.HasSetting(DarkerPanels)</visible>
 							</control>
@@ -300,7 +301,7 @@
 								<height>60</height>
 								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
 								<aspectratio>keep</aspectratio>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>Mod_Tags</colordiffuse>
 								<visible>!Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
@@ -321,7 +322,7 @@
 								<font>Font-Condensed-S30</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>mod-infotags</textcolor>
+								<textcolor>Mod_Tags</textcolor>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
@@ -359,7 +360,7 @@
 								<font>Font-Condensed-S27</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>mod-infotags</textcolor>
+								<textcolor>Mod_Tags</textcolor>
 								<selectedcolor>SelectedGreen</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<visible>!Skin.HasSetting(DarkerPanels)</visible>
@@ -508,7 +509,7 @@
 						<posy>-3</posy>
 						<width>756</width>
 						<height>604</height>
-						<texture border="5">views/newgloss/whitepanel.png</texture>
+						<texture colordiffuse="Mod_Tags_Alt" border="5">views/newgloss/whitepanel.png</texture>
 						<visible>!Skin.HasSetting(DarkerPanels)</visible>
 					</control>
 					<control type="image">
@@ -551,7 +552,7 @@
 								<height>60</height>
 								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
 								<aspectratio>keep</aspectratio>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>Mod_Tags</colordiffuse>
 								<visible>!Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
@@ -569,7 +570,7 @@
 								<width>39</width>
 								<height>39</height>
 								<texture>windows/filemanager/selected.png</texture>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>Mod_Tags</colordiffuse>
 								<visible>ListItem.IsSelected + !Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
@@ -589,7 +590,7 @@
 								<font>Font-Condensed-S30</font>
 								<align>left</align>
 								<aligny>center</aligny>
-								<textcolor>mod-infotags</textcolor>
+								<textcolor>Mod_Tags</textcolor>
 								<selectedcolor>77white</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
@@ -619,7 +620,7 @@
 								<font>Font-Condensed-S27</font>
 								<align>right</align>
 								<aligny>center</aligny>
-								<textcolor>mod-infotags</textcolor>
+								<textcolor>Mod_Tags</textcolor>
 								<selectedcolor>77white</selectedcolor>
 								<shadowcolor>22000000</shadowcolor>
 								<scroll>false</scroll>
@@ -677,7 +678,7 @@
 								<width>39</width>
 								<height>39</height>
 								<texture>windows/filemanager/selected.png</texture>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>Mod_Tags</colordiffuse>
 								<visible>ListItem.IsSelected + !Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
@@ -695,7 +696,7 @@
 								<height>60</height>
 								<texture>$INFO[ListItem.Icon,windows/filemanager/icons/,/fo.png]</texture>
 								<aspectratio>keep</aspectratio>
-								<colordiffuse>mod-infotags</colordiffuse>
+								<colordiffuse>Mod_Tags</colordiffuse>
 								<visible>!Skin.HasSetting(DarkerPanels)</visible>
 							</control>
 							<control type="image">
@@ -721,7 +722,7 @@
 									<font>Font-Condensed-S30</font>
 									<align>left</align>
 									<aligny>center</aligny>
-									<textcolor>mod-infotags</textcolor>
+									<textcolor>Mod_Tags</textcolor>
 									<selectedcolor>eewhite</selectedcolor>
 									<shadowcolor>22000000</shadowcolor>
 									<scroll>false</scroll>
@@ -751,7 +752,7 @@
 									<font>Font-Condensed-S27</font>
 									<align>right</align>
 									<aligny>center</aligny>
-									<textcolor>mod-infotags</textcolor>
+									<textcolor>Mod_Tags</textcolor>
 									<selectedcolor>eewhite</selectedcolor>
 									<shadowcolor>22000000</shadowcolor>
 									<scroll>false</scroll>

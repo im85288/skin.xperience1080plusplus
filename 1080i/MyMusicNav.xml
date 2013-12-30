@@ -1,12 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
+	<menucontrol>9000</menucontrol>
 	<allowoverlay>yes</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
-	<views>50,51,53,54,55,56,57,60,552</views>
+	<views>50,51,53,54,55,56,57,60,552,566,592</views>
 	<onload>Skin.SetBool(MusicWallTitles)</onload>
 	<onload>Runscript(script.extendedinfo, backend="true")</onload>
 	<onload>AlarmClock(cycletracklist,null,0:20,silent,loop)</onload>
-	<!--<onload>Skin.SetString(cdartlocation,/media/MYBOOK/TORRENTS/cdart/)</onload> -->
 	<controls>
 		<include>CommonItems</include>
 		<include>MusicHeader</include>
@@ -60,7 +61,8 @@
 					<include>optionsbuttonsdimensions</include>
 					<label>$INFO[Control.GetLabel(2)]</label>
 					<onclick>setfocus(9223)</onclick>
-					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="70,2,2,2">dialogs/options/buttons/view-fo-colour.png</texturefocus><texturenofocus border="70,2,2,2">dialogs/options/buttons/view-nf.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="70,2,2,2">dialogs/options/buttons/view-fo-colour.png</texturefocus>
+					<texturenofocus border="70,2,2,2">dialogs/options/buttons/view-nf.png</texturenofocus>
 					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(2)">Conditional</animation>
 				</control>
 				<control type="button" id="21">
@@ -328,6 +330,28 @@
 					<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
 					<radioposx>-19</radioposx>
 					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)</visible>
+				</control>
+				<control type="radiobutton" id="211">
+					<include>optionsbuttonsdimensions</include>
+					<label>LoveFilm</label>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+					<onclick>Container.SetViewMode(566)</onclick>
+					<selected>Control.IsVisible(566)</selected>
+					<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
+					<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+					<radioposx>-19</radioposx>
+					<visible>Container.Content(Artists) | Container.Content(Albums)</visible>
+				</control>
+				<control type="radiobutton" id="212">
+					<include>optionsbuttonsdimensions</include>
+					<label>InfoStrip</label>
+					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+					<onclick>Container.SetViewMode(592)</onclick>
+					<selected>Control.IsVisible(592)</selected>
+					<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
+					<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+					<radioposx>-19</radioposx>
+					<visible>Container.Content(Artists) | Container.Content(Albums)</visible>
 				</control>
 			</control>
 			<control type="group">

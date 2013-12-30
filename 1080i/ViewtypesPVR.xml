@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype-TVChannelView">
 		<control type="group" id="110">
@@ -204,7 +205,7 @@
 					<textcolor>mod-infotags</textcolor>
 					<align>right</align>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
-					<visible>!Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(LiveTVBlack)</visible>
+					<visible>!Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="label">
 					<posx>1190</posx>
@@ -215,29 +216,7 @@
 					<textcolor>mod-infotags</textcolor>
 					<align>right</align>
 					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
-					<visible>!Skin.HasSetting(UseWhiteText) + Skin.HasSetting(LiveTVBlack)</visible>
-				</control>
-				<control type="label">
-					<posx>1200</posx>
-					<posy>135</posy>
-					<width>500</width>
-					<height>30</height>
-					<font>Font-Condensed-S29</font>
-					<textcolor>darkerbackground</textcolor>
-					<align>right</align>
-					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
-					<visible>Skin.HasSetting(UseWhiteText) + !Skin.HasSetting(LiveTVBlack)</visible>
-				</control>
-				<control type="label">
-					<posx>1190</posx>
-					<posy>127</posy>
-					<width>500</width>
-					<height>30</height>
-					<font>Font-Condensed-S29</font>
-					<textcolor>darkerbackground</textcolor>
-					<align>right</align>
-					<label>$INFO[System.Date(DDD dd MMM YYYY)]</label>
-					<visible>Skin.HasSetting(UseWhiteText) + Skin.HasSetting(LiveTVBlack)</visible>
+					<visible>Skin.HasSetting(LiveTVBlack)</visible>
 				</control>
 				<control type="image">
 					<posx>8</posx>
@@ -1467,6 +1446,8 @@
 				<scrolltime>250</scrolltime>
 				<timeblocks>40</timeblocks>
 				<rulerunit>12</rulerunit>
+				<include condition="!Skin.HasSetting(LiveTVBlack) + Skin.HasSetting(ShowEpgProgress)">EpgProgressVar</include>
+				<include condition="Skin.HasSetting(LiveTVBlack) + Skin.HasSetting(ShowEpgProgress)">EpgProgressWhiteVar</include>
 				<onleft>9001</onleft>
 				<onright>9001</onright>
 				<onup>10</onup>
@@ -1748,6 +1729,7 @@
 						<texture border="12">windows/pvr/epg-backblack.png</texture>
 						<visible>!Skin.HasSetting(EPGGenreColors.Enabled) + Skin.HasSetting(LiveTVBlack)</visible>
 					</control>
+					<!-- <control type="image" id="2"> <posx>2</posx> <posy>0</posy> <width>98</width> <height>80</height> <aspectratio>stretch</aspectratio> <texture border="12">windows/pvr/epg-fo-colour.png</texture> <colordiffuse>$VAR[FocusModColourVar]</colordiffuse> <visible>!Skin.HasSetting(EPGGenreColors.Enabled) + Skin.HasSetting(LiveTVBlack) + ListItem.IsRunning)</visible> </control> -->
 					<control type="image" id="2">
 						<posx>2</posx>
 						<posy>0</posy>

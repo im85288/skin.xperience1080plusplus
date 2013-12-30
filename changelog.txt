@@ -1,0 +1,13 @@
+[B]3.0.0 - GOTHAM Support[/B]
+• New colour focus option throughout skin 
+• Option for larger movies widget
+• Focus fixed in weather section
+• Gotham changes smartlist playeditor
+• Gotham changes settings dialog 
+• Use weather addon logo in Weather Header and Home screen
+• Gotham - new progress indicator in EPG (configurable in options)
+
+[B]2.3.8[/B]
+• Fixed progress bar display problem 
+• change artwork dialog harmonised
+• Bugfixes for change artwork 

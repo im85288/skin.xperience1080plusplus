@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <colors>
 	<!-- All others -->
 	<color name="black">FF000000</color>
@@ -38,37 +39,40 @@
 	<color name="SettingsBlue">FF55b4e7</color>
 	<color name="DialogSelected">FF4ea1e7</color>
 	<!-- Selected color -->
-	<color name="SelectedGreen">eeeeeeee</color>
+	<color name="SelectedRed">FFE10101</color>
+	<color name="SelectedGreen">FF42EE3A</color>
+	+
+	<color name="SelectedBlue">FF31D0FF</color>
 	<!-- TILES -->
-	<color name="Blue Tiles">aa005180</color>
+	<color name="Blue Tiles">aa0000ff</color>
 	<color name="Green Tiles">aa007949</color>
-	<color name="Red Tiles">aad02e49</color>
-	<color name="Pink Tiles">aa790059</color>
+	<color name="Red Tiles">aaee0000</color>
+	<color name="Pink Tiles">aaffc0cb</color>
 	<color name="Purple Tiles">aa3a0079</color>
-	<color name="Lime Tiles">aa7eb000</color>
+	<color name="Lime Tiles">aa32cd32</color>
 	<color name="Grey Tiles">aa404040</color>
 	<color name="Orange Tiles">aafdc700</color>
-	<color name="Yellow Tiles">aafffe00</color>
+	<color name="Yellow Tiles">aaffff00</color>
 	<color name="Black Tiles">aa000000</color>
 	<color name="Solid Black Tiles">ff000000</color>
 	<color name="White Tiles">aaffffff</color>
-	<color name="Cyan Tiles">aa008dcc</color>
-	<color name="Magenta Tiles">aab41363</color>
+	<color name="Cyan Tiles">aa00ffff</color>
+	<color name="Magenta Tiles">aaff00ff</color>
 	<!-- TILE Borders -->
-	<color name="Blue TileBorder">aa005180</color>
+	<color name="Blue TileBorder">aa0000ff</color>
 	<color name="Green TileBorder">aa007949</color>
-	<color name="Red TileBorder">aad02e49</color>
-	<color name="Pink TileBorder">aa790059</color>
+	<color name="Red TileBorder">aaee0000</color>
+	<color name="Pink TileBorder">aaffc0cb</color>
 	<color name="Purple TileBorder">aa3a0079</color>
-	<color name="Lime TileBorder">aa7eb000</color>
+	<color name="Lime TileBorder">aa32cd32</color>
 	<color name="Grey TileBorder">aa404040</color>
 	<color name="Orange TileBorder">aafdc700</color>
-	<color name="Yellow TileBorder">aafffe00</color>
+	<color name="Yellow TileBorder">aaffff00</color>
 	<color name="Black TileBorder">aa000000</color>
 	<color name="Solid Black TileBorder">ff000000</color>
 	<color name="White TileBorder">aaffffff</color>
-	<color name="Cyan TileBorder">aa008dcc</color>
-	<color name="Magenta TileBorder">aab41363</color>
+	<color name="Cyan TileBorder">aa00ffff</color>
+	<color name="Magenta TileBorder">aaff00ff</color>
 	<!-- WHITES AND BLACKS -->
 	<color name="mod-black">ddeeeeee</color>
 	<color name="mod-dimfanart">aaeeeeee</color>
@@ -84,55 +88,70 @@
 	<color name="mod-shadow">55ffffff</color>
 	<color name="darkerbackground">eeffffff</color>
 	<color name="mod-notsodimfanart">99eeeeee</color>
-	
+	<color name="Mod_Tags">ff000000</color>
+	<color name="Mod_Tags_Views">ff000000</color>
+	<color name="Mod_Tags_Alt">ffeeeeee</color>
+	<color name="Mod_Tags_Alt2">ddeeeeee</color>
+	<color name="Mod_Tags_Light">aa404040</color>
+	<color name="Mod_Tags_Light_Views">aa404040</color>
+	<color name="Mod_Tags_Dark">ff181818</color>
+	<color name="Mod_Tags_Dark_Views">ff181818</color>
+	<color name="Mod_Tags_Shadow">55ffffff</color>
+	<color name="Mod_Tags_Plex">cc777777</color>
+	<color name="Mod_Tags_Logo_Shadow">dd000000</color>
+	<color name="Mod_Overlay_Floor">daeeeeee</color>
+	<color name="Mod_Overlay_Dimfanart">bbeeeeee</color>
+	<color name="Mod_Overlay_Dimfanart_Extra">22eeeeee</color>
+	<color name="Mod_Border">eeffffff</color>
+	<color name="Mod_Border_Fade">88ffffff</color>
+	<color name="Mod_Cover_Fade">44000000</color>
+	<color name="Mod_Glow_Border">ffffffff</color>
+	<color name="Mod_Panel_Glass">ffffffff</color>
+	<color name="Mod_EmptyBG">ffffffff</color>
 	<!-- Panel Colours -->
-	<color name="Blue Panel">aa005180</color>
+	<color name="Blue Panel">aa0000ff</color>
 	<color name="Green Panel">aa007949</color>
-	<color name="Red Panel">aad02e49</color>
-	<color name="Pink Panel">aa790059</color>
+	<color name="Red Panel">aaee0000</color>
+	<color name="Pink Panel">aaffc0cb</color>
 	<color name="Purple Panel">aa3a0079</color>
-	<color name="Lime Panel">aa7eb000</color>
+	<color name="Lime Panel">aa32cd32</color>
 	<color name="Grey Panel">aa404040</color>
 	<color name="Orange Panel">aafdc700</color>
-	<color name="Yellow Panel">aafffe00</color>
+	<color name="Yellow Panel">aaffff00</color>
 	<color name="Black Panel">aa000000</color>
 	<color name="Solid Black Panel">ff000000</color>
-	<color name="White Panel">aaffffff</color>
-	<color name="Cyan Panel">aa008dcc</color>
-	<color name="Magenta Panel">aab41363</color>
-	
+	<color name="White Panel">ffeeeeee</color>
+	<color name="Cyan Panel">aa00ffff</color>
+	<color name="Magenta Panel">aaff00ff</color>
 	<color name="imdb">fff3ce13</color>
-	
 	<!-- Background Colours -->
-	<color name="Blue Background">ff005180</color>
+	<color name="Blue Background">ff0000ff</color>
 	<color name="Green Background">ff007949</color>
-	<color name="Red Background">ffd02e49</color>
-	<color name="Pink Background">ff790059</color>
+	<color name="Red Background">ffee0000</color>
+	<color name="Pink Background">ffffc0cb</color>
 	<color name="Purple Background">ff3a0079</color>
-	<color name="Lime Background">ff7eb000</color>
+	<color name="Lime Background">ff32cd32</color>
 	<color name="Grey Background">ff404040</color>
 	<color name="Orange Background">fffdc700</color>
-	<color name="Yellow Background">fffffe00</color>
+	<color name="Yellow Background">ffffff00</color>
 	<color name="Black Background">ff000000</color>
 	<color name="White Background">ffffffff</color>
-	<color name="Cyan Background">ff008dcc</color>
-	<color name="Magenta Background">ffb41363</color>
+	<color name="Cyan Background">ff00ffff</color>
+	<color name="Magenta Background">ffff00ff</color>
 	<color name="Imdb Background">fff3ce13</color>
-	
 	<!-- Focus Colours -->
-	<color name="Blue Focus">ff005180</color>
+	<color name="Blue Focus">ff0000ff</color>
 	<color name="Green Focus">ff007949</color>
-	<color name="Red Focus">ffd02e49</color>
-	<color name="Pink Focus">ff790059</color>
+	<color name="Red Focus">ffee0000</color>
+	<color name="Pink Focus">ffffc0cb</color>
 	<color name="Purple Focus">ff3a0079</color>
-	<color name="Lime Focus">ff7eb000</color>
+	<color name="Lime Focus">ff32cd32</color>
 	<color name="Grey Focus">ff404040</color>
 	<color name="Orange Focus">fffdc700</color>
-	<color name="Yellow Focus">fffffe00</color>
+	<color name="Yellow Focus">ffffff00</color>
 	<color name="Black Focus">ff000000</color>
 	<color name="White Focus">ffffffff</color>
-	<color name="Cyan Focus">ff008dcc</color>
-	<color name="Magenta Focus">ffb41363</color>
+	<color name="Cyan Focus">ff00ffff</color>
+	<color name="Magenta Focus">ffff00ff</color>
 	<color name="Imdb Focus">fff3ce13</color>
-	
 </colors>
