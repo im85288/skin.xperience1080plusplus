@@ -22,7 +22,7 @@
 					<width>974</width>
 					<font>Font-Condensed-S34</font>
 					<label>$LOCALIZE[13406]</label>
-					<textcolor>ddwhite</textcolor>
+					<textcolor>Mod_Tags</textcolor>
 					<align>center</align>
 				</control>
 				<control type="group">
@@ -37,7 +37,7 @@
 						<width>404</width>
 						<align>left</align>
 						<font>Font-Condensed-S31</font>
-						<textcolor>77white</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<label>$INFO[Container(5).NumItems,, $LOCALIZE[41817]]</label>
 						<visible>IntegerGreaterThan(Container(5).NumItems,0)</visible>
 						<animation type="Visible" reversible="false">
@@ -57,7 +57,7 @@
 						<align>right</align>
 						<font>Font-Condensed-S31</font>
 						<label>$INFO[Container(5).CurrentPage]/$INFO[Container(5).NumPages]</label>
-						<textcolor>77white</textcolor>
+						<textcolor>Mod_Tags</textcolor>
 						<visible>IntegerGreaterThan(Container(5).NumPages,1)</visible>
 						<animation type="Visible" reversible="false">
 							<effect type="fade" start="0" end="85" time="400" tween="sine" easing="inout" />

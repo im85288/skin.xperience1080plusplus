@@ -19,193 +19,162 @@
 			<visible>!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
 		</control>
 		<control type="group" id="9000">
-			<posx>267</posx>
-			<posy>517</posy>
-			<include>OptionsAnimations</include>
-			<animation effect="slide" start="0" end="-204" time="0" condition="Skin.HasSetting(HideShutdownButton)">Conditional</animation>
-			<control type="group">
-				<include>OptionsPanelAnimations</include>
-				<control type="image">
-					<description>shadow image</description>
-					<posx>5</posx>
-					<posy>505</posy>
-					<height>60</height>
-					<width>442</width>
-					<texture>dialogs/shutdown/shadow.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<description>background image</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<height>540</height>
-					<width>442</width>
-					<texture>dialogs/shutdown/shutdown.png</texture>
-					<aspectratio>stretch</aspectratio>
+			<include>ViewOptions.Panel</include>
+			<control type="list" id="9111">
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>400</width>
+				<height>880</height>
+				<itemgap>0</itemgap>
+				<onleft>40</onleft>
+				<onright>40</onright>
+				<include>GeneralOptionsAnimations</include>
+				<itemlayout height="80">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture colordiffuse="eewhite">$INFO[ListItem.Icon]</texture>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<posx>102</posx>
+						<posy>0</posy>
+						<width>260</width>
+						<height>80</height>
+						<font>Font-Condensed-S34</font>
+						<align>left</align>
+						<textcolor>mod-infotags-alt</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="80">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>380</width>
+						<height>80</height>
+						<texture border="5">$VAR[FocusModVar]</texture>
+						<colordiffuse>$VAR[FocusModColourVar]</colordiffuse>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture colordiffuse="mod-infotags">$INFO[ListItem.Icon]</texture>
+						<aspectratio aligny="center">keep</aspectratio>
+					</control>
+					<control type="label">
+						<posx>102</posx>
+						<posy>0</posy>
+						<width>260</width>
+						<height>80</height>
+						<font>Font-Condensed-S34</font>
+						<align>left</align>
+						<textcolor>mod-infotags</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>Location</description>
+						<label>$INFO[Weather.Location]</label>
+						<icon>special://skin/extras/icons/xperience/world.png</icon>
+						<onclick>Weather.LocationNext</onclick>
+						<visible>true</visible>
+					</item>
+					<item id="2">
+						<description>Refresh</description>
+						<label>$LOCALIZE[184]</label>
+						<icon>special://skin/extras/icons/xperience/arrows.png</icon>
+						<onclick>Weather.Refresh</onclick>
+						<visible>true</visible>
+					</item>
+					<item id="3">
+						<description>Settings</description>
+						<label>$LOCALIZE[5]</label>
+						<icon>special://skin/extras/icons/xperience/settings.png</icon>
+						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+						<visible>true</visible>
+					</item>
+					<item id="4">
+						<description>Hide fanart</description>
+						<label>Hide/Show Fanart</label>
+						<icon>special://skin/extras/icons/xperience/config2.png</icon>
+						<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
+						<onclick>setfocus(202)</onclick>
+						<visible>true</visible>
+					</item>
+					<item id="8">
+						<description>Set Fanart</description>
+						<icon>special://skin/extras/icons/xperience/camera2.png</icon>
+						<label>$LOCALIZE[41691]</label>
+						<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="grouplist" id="9222">
+				<description>View Specific Controls</description>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>400</width>
+				<height>720</height>
+				<itemgap>0</itemgap>
+				<onleft>9111</onleft>
+				<onright>9111</onright>
+				<onback>9111</onback>
+				<onup>9222</onup>
+				<ondown>9222</ondown>
+				<include>SpecificOptionsAnimations</include>
+				<control type="button" id="101">
+					<description>Label</description>
+					<posy>330</posy>
+					<include>ViewOptions.Button2</include>
+					<label>$LOCALIZE[42017]</label>
+					<onclick>setfocus(9111)</onclick>
 				</control>
 			</control>
-			<control type="group" id="9111">
-				<posx>19</posx>
-				<posy>47</posy>
-				<width>404</width>
-				<height>399</height>
-				<include>GeneralOptionsAnimations</include>
-				<control type="spincontrolex" id="3">
-					<description>change location</description>
-					<textoffsetx>0</textoffsetx>
-					<textwidth>120</textwidth>
-					<spinposx>5</spinposx>
-					<align>left</align>
-					<include>optionsbuttonsdimensions</include>
-					<textureup>buttons/spinctrl/arrow-light-up-nf.png</textureup>
-					<texturedown>buttons/spinctrl/arrow-light-down-nf.png</texturedown>
-					<textureupfocus>buttons/spinctrl/arrow-light-up-fo.png</textureupfocus>
-					<texturedownfocus>buttons/spinctrl/arrow-light-down-fo.png</texturedownfocus>
-					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="70,2,2,2">dialogs/options/buttons/location-fo-colour.png</texturefocus>
-					<texturenofocus border="70,2,2,2">dialogs/options/buttons/location-nf.png</texturenofocus>
-					<onleft condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onleft>
-					<onleft condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onleft>
-					<onright condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onright>
-					<onright condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onright>
-					<onup>273</onup>
-					<ondown>2</ondown>
-					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(3)">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>change location label</description>
-					<posx>75</posx>
-					<posy>0</posy>
-					<height>57</height>
-					<width>150</width>
-					<font>Font-Condensed-S34</font>
-					<align>left</align>
-					<textcolor>FF484848</textcolor>
-					<label>$LOCALIZE[41689]</label>
-					<visible>!Control.HasFocus(3)</visible>
-					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(3)">Conditional</animation>
-				</control>
-				<control type="label">
-					<description>change location label</description>
-					<posx>75</posx>
-					<posy>0</posy>
-					<height>57</height>
-					<width>150</width>
-					<font>Font-Condensed-S34</font>
-					<align>left</align>
-					<textcolor>DDFFFFFF</textcolor>
-					<label>$LOCALIZE[41689]</label>
-					<visible>Control.HasFocus(3)</visible>
-				</control>
-				<control type="button" id="2">
-					<description>Refresh</description>
-					<posy>57</posy>
-					<include>optionsbuttonsdimensions</include>
-					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="70,2,2,2">dialogs/options/buttons/refresh-fo-colour.png</texturefocus>
-					<texturenofocus border="70,2,2,2">dialogs/options/buttons/refresh-nf.png</texturenofocus>
-					<onleft condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onleft>
-					<onleft condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onleft>
-					<onright condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onright>
-					<onright condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onright>
-					<onup>3</onup>
-					<ondown>4</ondown>
-					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(2)">Conditional</animation>
-				</control>
-				<control type="button" id="4">
-					<description>Settings</description>
-					<posy>114</posy>
-					<include>optionsbuttonsdimensions</include>
-					<label>$LOCALIZE[5]</label>
-					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="70,2,2,2">dialogs/options/buttons/settings-fo-colour.png</texturefocus>
-					<texturenofocus border="70,2,2,2">dialogs/options/buttons/settings-nf.png</texturenofocus>
-					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
-					<onleft condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onleft>
-					<onleft condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onleft>
-					<onright condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onright>
-					<onright condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onright>
-					<onup>2</onup>
-					<ondown>271</ondown>
-					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(4)">Conditional</animation>
-				</control>
-				<control type="radiobutton" id="271">
-					<description>Hide fanart</description>
-					<posy>171</posy>
-					<include>optionsbuttonsdimensions</include>
+			<control type="grouplist" id="9223">
+				<description>View Controls</description>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>400</width>
+				<height>720</height>
+				<itemgap>0</itemgap>
+				<onleft>9111</onleft>
+				<onright>9111</onright>
+				<onback>9111</onback>
+				<onup>9223</onup>
+				<ondown>9223</ondown>
+				<include>ViewOptionsAnimations</include>
+				<control type="radiobutton" id="202">
+					<description>List</description>
+					<include>ViewOptions.Button</include>
 					<label>$LOCALIZE[41690]</label>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+					<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
 					<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
 					<onclick condition="Skin.HasSetting(ShowWeatherFanart)">Skin.SetBool(ShowDailyWeatherFanart)</onclick>
 					<onclick condition="!Skin.HasSetting(ShowWeatherFanart)">Skin.Reset(ShowDailyWeatherFanart)</onclick>
-					<onclick>ReloadSkin</onclick>
-					<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
-					<textureradioon colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradioon>
-					<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+					<visible>true</visible>
+					<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
+					<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
 					<radioposx>-19</radioposx>
-					<onleft condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onleft>
-					<onleft condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onleft>
-					<onright condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onright>
-					<onright condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onright>
-					<onup>4</onup>
-					<ondown>272</ondown>
-					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(271)">Conditional</animation>
 				</control>
-				<control type="radiobutton" id="272">
-					<description>Hide daily fanart</description>
-					<posy>228</posy>
-					<include>optionsbuttonsdimensions</include>
+				<control type="radiobutton" id="203">
+					<description>List</description>
+					<include>ViewOptions.Button</include>
 					<label>$LOCALIZE[41692]</label>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
 					<onclick>Skin.ToggleSetting(ShowDailyWeatherFanart)</onclick>
 					<selected>!Skin.HasSetting(ShowDailyWeatherFanart)</selected>
-					<textureradioon colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradioon>
-					<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
-					<radioposx>-19</radioposx>
-					<onleft condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onleft>
-					<onleft condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onleft>
-					<onright condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onright>
-					<onright condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onright>
-					<onup>271</onup>
-					<ondown>273</ondown>
-					<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
+					<enable>!Skin.HasSetting(ShowWeatherFanart)</enable>
 					<visible>!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]</visible>
-					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(272)">Conditional</animation>
-				</control>
-				<control type="button" id="273">
-					<description>Set fanart path</description>
-					<posy>285</posy>
-					<include>optionsbuttonsdimensions</include>
-					<label>$LOCALIZE[41691]</label>
-					<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="70,2,2,2">dialogs/options/buttons/bullet-fo-colour.png</texturefocus>
-					<texturenofocus border="70,2,2,2">dialogs/options/buttons/bullet-nf.png</texturenofocus>
-					<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
-					<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
-					<onleft condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onleft>
-					<onleft condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onleft>
-					<onright condition="!StringCompare(Weather.Plugin,weather.wunderground) | ![Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))]">101</onright>
-					<onright condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">40</onright>
-					<onup>272</onup>
-					<ondown>3</ondown>
-					<animation effect="slide" end="0,-57" time="0" condition="StringCompare(Weather.Plugin,weather.wunderground) + Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))">Conditional</animation>
-					<animation effect="fade" start="100" end="50" time="0" condition="!Control.IsEnabled(273)">Conditional</animation>
-				</control>
-			</control>
-			<control type="group">
-				<include>GeneralOptionsAnimations</include>
-				<control type="image">
-					<posx>9</posx>
-					<posy>433</posy>
-					<width>100</width>
-					<height>100</height>
-					<texture>buttons/options_nofo.png</texture>
-				</control>
-				<control type="label">
-					<posx>94</posx>
-					<posy>433</posy>
-					<width>300</width>
-					<height>100</height>
-					<label>$LOCALIZE[41600]</label>
-					<font>Font-Condensed-S29</font>
-					<textcolor>eewhite</textcolor>
-					<shadowcolor>22000000</shadowcolor>
+					<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
+					<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+					<radioposx>-19</radioposx>
 				</control>
 			</control>
 		</control>

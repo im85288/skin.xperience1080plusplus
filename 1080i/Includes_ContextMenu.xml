@@ -26,7 +26,7 @@
 		<height>60</height>
 		<align>center</align>
 		<font>Font-Condensed-S32</font>
-		<focusedcolor>eewhite</focusedcolor>
+		<focusedcolor>mod-infotags</focusedcolor>
 		<textoffsetx>20</textoffsetx>
 	</include>
 	<include name="ContextMenuSearchSmallWidth">
@@ -81,7 +81,7 @@
 					<font>Font-Condensed-S34</font>
 					<align>left</align>
 					<textcolor>FF484848</textcolor>
-					<focusedcolor>DDFFFFFF</focusedcolor>
+					<focusedcolor>mod-infotags</focusedcolor>
 					<disabledcolor>FF484848</disabledcolor>
 					<textoffsetx>25</textoffsetx>
 					<label>$VAR[LibraryEditorLabel]</label>
@@ -117,7 +117,7 @@
 			<font>Font-Condensed-S34</font>
 			<align>left</align>
 			<textcolor>FF484848</textcolor>
-			<focusedcolor>DDFFFFFF</focusedcolor>
+			<focusedcolor>mod-infotags</focusedcolor>
 			<disabledcolor>FF484848</disabledcolor>
 			<textoffsetx>25</textoffsetx>
 			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>

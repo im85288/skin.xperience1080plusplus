@@ -1276,7 +1276,7 @@
 							<font>Font-Condensed-S30-B</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>96FFFFFF</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -1288,7 +1288,7 @@
 							<font>Font-Condensed-S29</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>96FFFFFF</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 							<visible>!IsEmpty(ListItem.Label2)</visible>
 						</control>
@@ -1311,7 +1311,7 @@
 							<font>Font-Condensed-S30-B</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -1323,7 +1323,7 @@
 							<font>Font-Condensed-S29</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<visible>!IsEmpty(ListItem.Label2)</visible>
 						</control>
 					</control>
@@ -1391,7 +1391,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<selectedcolor>DialogSelected</selectedcolor>
-							<textcolor>96FFFFFF</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 						<control type="label">
@@ -1404,7 +1404,7 @@
 							<align>right</align>
 							<aligny>center</aligny>
 							<selectedcolor>DialogSelected</selectedcolor>
-							<textcolor>96FFFFFF</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>
@@ -1426,7 +1426,7 @@
 							<font>Font-Condensed-S30-B</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>mod-infotags</textcolor>
 						</control>
 						<control type="label">
 							<posx>625</posx>
@@ -1437,7 +1437,7 @@
 							<font>Font-Condensed-S29</font>
 							<align>right</align>
 							<aligny>center</aligny>
-							<textcolor>eewhite</textcolor>
+							<textcolor>mod-infotags</textcolor>
 							<scroll>false</scroll>
 						</control>
 					</control>

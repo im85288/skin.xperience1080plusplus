@@ -143,13 +143,13 @@
 	<include name="InfoNonColourFlagsOSD">
 		<control type="image">
 			<include>ResDimensionsSmall</include>
-			<texture>$VAR[FlagHDSD]</texture>
+			<texture colordiffuse="mod-infotags">$VAR[FlagHDSD]</texture>
 			<include>visiblehidefadeflags</include>
 			<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
 		</control>
 		<control type="image">
 			<include>AspectDimensionsSmall</include>
-			<texture>$INFO[VideoPlayer.VideoAspect,whiteflags/aspectratio/,.png]</texture>
+			<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.VideoAspect,whiteflags/aspectratio/,.png]</texture>
 			<include>visiblehidefadeflags</include>
 			<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
 		</control>
@@ -157,7 +157,7 @@
 			<include>AspectDimensionsSmall</include>
 			<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
 			<include>visiblehidefadeflags</include>
-			<texture>$INFO[VideoPlayer.AudioChannels,whiteflags/channels/,.png]</texture>
+			<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.AudioChannels,whiteflags/channels/,.png]</texture>
 		</control>
 	</include>
 	<include name="TVRatingFlagLayout">
@@ -341,35 +341,35 @@
 	<include name="InfoNonColourFlagsOSD2">
 		<control type="image">
 			<include>AspectDimensionsSmall</include>
-			<texture>$INFO[VideoPlayer.AudioCodec,whiteflags/audio/,.png]</texture>
+			<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.AudioCodec,whiteflags/audio/,.png]</texture>
 			<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
 		</control>
 		<control type="group">
 			<visible>!VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
 			<control type="image">
 				<include>AspectDimensionsSmall</include>
-				<texture>$INFO[VideoPlayer.MPAA,whiteflags/mpaa/tv/small/,.png]</texture>
+				<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.MPAA,whiteflags/mpaa/tv/small/,.png]</texture>
 			</control>
 		</control>
 		<control type="group">
 			<visible>VideoPlayer.Content(movies) + !IsEmpty(VideoPlayer.MPAA)</visible>
 			<control type="image">
 				<include>AspectDimensionsSmall</include>
-				<texture>$VAR[MovieMPAAVarOSD,whiteflags/mpaa/movie/,.png]</texture>
+				<texture colordiffuse="mod-infotags">$VAR[MovieMPAAVarOSD,whiteflags/mpaa/movie/,.png]</texture>
 			</control>
 		</control>
 		<control type="group">
 			<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
 			<control type="image">
 				<include>AspectDimensionsSmall</include>
-				<texture>$INFO[VideoPlayer.VideoCodec,whiteflags/video/,.png]</texture>
+				<texture colordiffuse="mod-infotags">$INFO[VideoPlayer.VideoCodec,whiteflags/video/,.png]</texture>
 				<visible>![substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)]
 				</visible>
 				<include>visiblehidefadeflags</include>
 			</control>
 			<control type="image">
 				<include>AspectDimensionsSmall</include>
-				<texture>whiteflags/video/divx.png</texture>
+				<texture colordiffuse="mod-infotags">whiteflags/video/divx.png</texture>
 				<visible>substring(VideoPlayer.VideoCodec,divx) | substring(VideoPlayer.VideoCodec,div3) | substring(VideoPlayer.VideoCodec,div4) | substring(VideoPlayer.VideoCodec,div5) | substring(VideoPlayer.VideoCodec,dx50)
 				</visible>
 				<include>visiblehidefadeflags</include>
@@ -399,8 +399,6 @@
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 			</control>
 		</control>
-		<!-- <control type="group"> <visible>!IsEmpty(VideoPlayer.Studio)</visible> <control type="image"> <include>AlternateAspectDimensionsSmall</include> <texture>$INFO[VideoPlayer.Studio,colourflags/studios/,.png]</texture> <aspectratio align="left" aligny="top">keep</aspectratio> </control> </control> <control type="group"> <visible>!IsEmpty(MusicPlayer.Property(Album_Label))</visible> <control type="image"> <include>AlternateAspectDimensionsSmall</include> <texture>$INFO[MusicPlayer.Property(Album_Label),colourflags/music/recordlabel/,.png]</texture> 
-			<aspectratio align="left" aligny="top">keep</aspectratio> </control> </control> -->
 	</include>
 	<include name="InfoNonColourFlagsAlternateOSD2">
 		<control type="image">
@@ -425,7 +423,5 @@
 				<aspectratio align="left" aligny="top">keep</aspectratio>
 			</control>
 		</control>
-		<!-- <control type="group"> <visible>!IsEmpty(VideoPlayer.Studio)</visible> <control type="image"> <include>AlternateAspectDimensionsSmall</include> <texture>$INFO[VideoPlayer.Studio,colourflags/studios/,.png]</texture> <aspectratio align="left" aligny="top">keep</aspectratio> </control> </control> <control type="group"> <visible>!IsEmpty(MusicPlayer.Property(Album_Label))</visible> <control type="image"> <include>AlternateAspectDimensionsSmall</include> <texture>$INFO[MusicPlayer.Property(Album_Label),colourflags/music/recordlabel/,.png]</texture> 
-			<aspectratio align="left" aligny="top">keep</aspectratio> </control> </control> -->
 	</include>
 </includes>

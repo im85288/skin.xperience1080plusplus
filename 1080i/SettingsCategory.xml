@@ -23,15 +23,13 @@
 			</animation>
 			<visible>!Window.IsActive(favourites)</visible>
 			<control type="group">
-				<animation type="WindowOpen" condition="!Control.IsVisible(9000)">
-					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="105" />
-					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-					<effect type="zoom" start="90" end="100" center="576,560" tween="cubic" easing="out" time="400" delay="105" />
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
+					<effect type="zoom" start="76" end="100" center="auto" tween="cubic" easing="out" time="400" delay="75" />
+					<effect type="slide" start="-190" end="-10" tween="cubic" easing="out" time="545" delay="350" />
 				</animation>
-				<animation type="WindowOpen" condition="Control.IsVisible(9000)">
-					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="485" delay="175" />
-					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
-					<effect type="zoom" start="90" end="100" center="576,560" tween="cubic" easing="out" time="400" delay="175" />
+				<animation type="WindowClose">
+					<effect type="slide" end="-190" start="-10" tween="cubic" easing="out" time="545" delay="0" />
 				</animation>
 				<control type="label">
 					<description>Category</description>
@@ -81,9 +79,12 @@
 			<control type="group">
 				<posx>175</posx>
 				<animation type="WindowOpen">
-					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="75" />
+					<effect type="slide" start="800" end="-20" tween="cubic" easing="out" time="545" delay="75" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="75" />
 					<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="800" start="20" tween="cubic" easing="out" time="545" delay="0" />
 				</animation>
 				<control type="label">
 					<description>Settings info</description>

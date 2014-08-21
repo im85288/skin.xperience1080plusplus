@@ -8,7 +8,7 @@
 			<visible>!Window.IsVisible(addonsettings) + !Window.IsVisible(selectdialog)</visible>
 			<control type="group">
 				<include>FullscreenDimensions</include>
-				<animation type="Conditional" condition="Control.HasFocus(150) | Window.IsVisible(addonsettings)">
+				<animation type="Conditional" condition="Control.HasFocus(150) | Control.HasFocus(160)">
 					<effect type="rotatey" start="0" end="-180" center="960,0" time="300" tween="sine" easing="inout" />
 					<effect type="zoom" start="0,0,1920,1080" end="576,0,768,1080" center="960,640" time="150" tween="sine" easing="inout" />
 					<effect type="fade" start="100" end="0" time="0" delay="150" />
@@ -512,8 +512,8 @@
 					<height>532</height>
 					<onleft>120</onleft>
 					<onright>120</onright>
-					<onup>150</onup>
-					<ondown>150</ondown>
+					<onup>160</onup>
+					<ondown>160</ondown>
 					<scrolltime>0</scrolltime>
 					<itemlayout width="378" height="76">
 						<control type="label">
@@ -579,6 +579,22 @@
 							<visible>ListItem.Property(man)</visible>
 						</control>
 					</focusedlayout>
+				</control>
+				<control type="button" id="160">
+					<description>Manual search button</description>
+					<posx>796</posx>
+					<posy>840</posy>
+					<width>200</width>
+					<height>40</height>
+					<onleft>120</onleft>
+					<onright>120</onright>
+					<onup>150</onup>
+					<ondown>150</ondown>
+					<label>$LOCALIZE[24120]</label>
+					<font>Font-Condensed-S25-B</font>
+					<textcolor>eewhite</textcolor>
+					<focusedcolor>eewhite</focusedcolor>
+					<align>center</align>
 				</control>
 			</control>
 		</control>

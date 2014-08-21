@@ -62,7 +62,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus>osd/fullscreen/buttons/audio-settings-fo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
 					<onclick>activatewindow(124)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -76,7 +76,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/audio-settings-nofo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/audio-settings-nofo.png</texturenofocus>
 					<onclick>activatewindow(124)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -90,7 +90,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus>osd/fullscreen/buttons/video-settings-fo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
 					<onclick>activatewindow(123)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -104,7 +104,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/video-settings-nofo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/video-settings-nofo.png</texturenofocus>
 					<onclick>activatewindow(123)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -118,9 +118,9 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus>osd/fullscreen/buttons/subtitles-fo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
 					<alttexturefocus>osd/fullscreen/buttons/subtitles-fo.png</alttexturefocus>
-					<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
+					<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(SubtitleSearch)</onclick>
 					<onleft>12</onleft>
@@ -136,9 +136,9 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/subtitles-nofo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/subtitles-nofo.png</texturenofocus>
 					<alttexturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/subtitles-nofo.png</alttexturefocus>
-					<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
+					<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/subtitles-nofo.png</alttexturenofocus>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(SubtitleSearch)</onclick>
 					<onleft>12</onleft>
@@ -153,9 +153,9 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus>osd/fullscreen/buttons/record-off-fo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
 					<alttexturefocus>osd/fullscreen/buttons/record-fo.png</alttexturefocus>
-					<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
+					<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
 					<usealttexture>Player.Recording</usealttexture>
 					<onleft>12</onleft>
 					<onright>1</onright>
@@ -172,9 +172,9 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/record-off-nofo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/record-off-nofo.png</texturenofocus>
 					<alttexturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/record-nofo.png</alttexturefocus>
-					<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
+					<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/record-nofo.png</alttexturenofocus>
 					<usealttexture>Player.Recording</usealttexture>
 					<onleft>12</onleft>
 					<onright>1</onright>
@@ -192,7 +192,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus>osd/fullscreen/buttons/previous-fo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/previous-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/previous-nofo.png</texturenofocus>
 					<onclick>playercontrol(previous)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -207,7 +207,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/previous-nofo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/previous-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/previous-nofo.png</texturenofocus>
 					<onclick>playercontrol(previous)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -222,7 +222,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus>osd/fullscreen/buttons/up-fo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/up-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/up-nofo.png</texturenofocus>
 					<onclick>playercontrol(previous)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -237,7 +237,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/up-nofo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/up-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/up-nofo.png</texturenofocus>
 					<onclick>playercontrol(previous)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -252,7 +252,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus>osd/fullscreen/buttons/down-fo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/down-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/down-nofo.png</texturenofocus>
 					<onclick>playercontrol(next)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -267,7 +267,7 @@
 					<height>100</height>
 					<width>100</width>
 					<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/down-nofo.png</texturefocus>
-					<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/down-nofo.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/down-nofo.png</texturenofocus>
 					<onclick>playercontrol(next)</onclick>
 					<onup>Close</onup>
 					<ondown>Close</ondown>
@@ -284,10 +284,10 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/rewind-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/rewind-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/rewind-nofo.png</texturenofocus>
 						<usealttexture>Player.Rewinding</usealttexture>
 						<alttexturefocus>osd/fullscreen/buttons/rewind-on-fo.png</alttexturefocus>
-						<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/rewind-on-nofo.png</alttexturenofocus>
+						<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/rewind-on-nofo.png</alttexturenofocus>
 						<onclick>playercontrol(rewind)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -304,10 +304,10 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/rewind-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/rewind-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/rewind-nofo.png</texturenofocus>
 						<usealttexture>Player.Rewinding</usealttexture>
 						<alttexturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/rewind-on-nofo.png</alttexturefocus>
-						<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/rewind-on-nofo.png</alttexturenofocus>
+						<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/rewind-on-nofo.png</alttexturenofocus>
 						<onclick>playercontrol(rewind)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -324,10 +324,10 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/pause-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/pause-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/pause-nofo.png</texturenofocus>
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 						<alttexturefocus>osd/fullscreen/buttons/play-fo.png</alttexturefocus>
-						<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/play-nofo.png</alttexturenofocus>
+						<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/play-nofo.png</alttexturenofocus>
 						<onclick>playercontrol(play)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -343,10 +343,10 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/pause-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/pause-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/pause-nofo.png</texturenofocus>
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 						<alttexturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/play-nofo.png</alttexturefocus>
-						<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/play-nofo.png</alttexturenofocus>
+						<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/play-nofo.png</alttexturenofocus>
 						<onclick>playercontrol(play)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -362,7 +362,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/stop-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/stop-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/stop-nofo.png</texturenofocus>
 						<onclick>playercontrol(stop)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -376,7 +376,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/stop-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/stop-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/stop-nofo.png</texturenofocus>
 						<onclick>playercontrol(stop)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -390,10 +390,10 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/fast-forward-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/fast-forward-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/fast-forward-nofo.png</texturenofocus>
 						<usealttexture>Player.Forwarding</usealttexture>
 						<alttexturefocus>osd/fullscreen/buttons/fast-forward-on-fo.png</alttexturefocus>
-						<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/fast-forward-on-nofo.png</alttexturenofocus>
+						<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/fast-forward-on-nofo.png</alttexturenofocus>
 						<onclick>playercontrol(forward)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -409,10 +409,10 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/fast-forward-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/fast-forward-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/fast-forward-nofo.png</texturenofocus>
 						<usealttexture>Player.Forwarding</usealttexture>
 						<alttexturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/fast-forward-on-fo.png</alttexturefocus>
-						<alttexturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/fast-forward-on-nofo.png</alttexturenofocus>
+						<alttexturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/fast-forward-on-nofo.png</alttexturenofocus>
 						<onclick>playercontrol(forward)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -428,7 +428,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/next-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/next-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/next-nofo.png</texturenofocus>
 						<onclick>playercontrol(next)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -443,7 +443,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/next-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/next-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/next-nofo.png</texturenofocus>
 						<onclick>playercontrol(next)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -461,7 +461,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/dvd-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/dvd-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/dvd-nofo.png</texturenofocus>
 						<onclick>PlayerControl(ShowVideoMenu)</onclick>
 						<enable>VideoPlayer.HasMenu</enable>
 						<onleft>6</onleft>
@@ -477,7 +477,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/dvd-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/dvd-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/dvd-nofo.png</texturenofocus>
 						<onclick>PlayerControl(ShowVideoMenu)</onclick>
 						<enable>VideoPlayer.HasMenu</enable>
 						<onleft>6</onleft>
@@ -493,7 +493,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/info-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/info-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/info-nofo.png</texturenofocus>
 						<onclick>Action(Info)</onclick>
 						<onclick>PreviousMenu</onclick>
 						<onleft>10</onleft>
@@ -510,7 +510,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/info-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/info-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/info-nofo.png</texturenofocus>
 						<onclick>Action(Info)</onclick>
 						<onclick>PreviousMenu</onclick>
 						<onleft>10</onleft>
@@ -527,7 +527,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/bookmarks-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/bookmarks-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/bookmarks-nofo.png</texturenofocus>
 						<onclick>ActivateWindow(125)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -541,7 +541,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/bookmarks-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/bookmarks-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/bookmarks-nofo.png</texturenofocus>
 						<onclick>ActivateWindow(125)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -558,7 +558,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/channel-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/channel-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/channel-nofo.png</texturenofocus>
 						<onclick>ActivateWindow(PVROSDChannels)</onclick>
 						<onleft>6</onleft>
 						<onright>8</onright>
@@ -572,7 +572,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/channel-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/channel-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/channel-nofo.png</texturenofocus>
 						<onclick>ActivateWindow(PVROSDChannels)</onclick>
 						<onleft>6</onleft>
 						<onright>8</onright>
@@ -586,7 +586,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/epg-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/epg-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/epg-nofo.png</texturenofocus>
 						<onclick>ActivateWindow(PVROSDGuide)</onclick>
 						<onleft>10</onleft>
 						<onright>9</onright>
@@ -600,7 +600,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/epg-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/epg-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/epg-nofo.png</texturenofocus>
 						<onclick>ActivateWindow(PVROSDGuide)</onclick>
 						<onleft>10</onleft>
 						<onright>9</onright>
@@ -614,7 +614,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus>osd/fullscreen/buttons/text-fo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/text-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/text-nofo.png</texturenofocus>
 						<onclick>ActivateWindow(Teletext)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>
@@ -628,7 +628,7 @@
 						<height>100</height>
 						<width>100</width>
 						<texturefocus colordiffuse="$VAR[FocusModColourVar2]">osd/fullscreen/buttons/text-nofo.png</texturefocus>
-						<texturenofocus colordiffuse="mod-infotags">osd/fullscreen/buttons/text-nofo.png</texturenofocus>
+						<texturenofocus colordiffuse="$VAR[OSDColour]">osd/fullscreen/buttons/text-nofo.png</texturenofocus>
 						<onclick>ActivateWindow(Teletext)</onclick>
 						<onup>Close</onup>
 						<ondown>Close</ondown>

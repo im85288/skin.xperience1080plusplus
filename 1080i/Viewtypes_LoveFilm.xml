@@ -141,7 +141,7 @@
 				<height>800</height>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>horizontal</orientation>
-				<viewtype label="LoveFilm">list</viewtype>
+				<viewtype label="42306">list</viewtype>
 				<ondown>70</ondown>
 				<pagecontrol>70</pagecontrol>
 				<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>

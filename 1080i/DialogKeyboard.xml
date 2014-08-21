@@ -50,7 +50,7 @@
                     <width>1000</width>
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
-                    <textcolor>Mod_Tags</textcolor>
+                    <textcolor>mod-infotags</textcolor>
                 </control>
             <!-- First Row -->
                 <control type="group" id="320">

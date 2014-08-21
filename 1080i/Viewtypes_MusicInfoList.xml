@@ -208,7 +208,7 @@
 					<onright>70</onright>
 					<onup>552</onup>
 					<ondown>552</ondown>
-					<viewtype label="Info list">list</viewtype>
+					<viewtype label="42319">list</viewtype>
 					<preloaditems>2</preloaditems>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<itemlayout height="60" condition="Container.Content(Artists)">

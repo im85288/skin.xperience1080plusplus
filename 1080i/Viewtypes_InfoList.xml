@@ -79,7 +79,7 @@
 						<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>[!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) + SubString(ListItem.Path,videodb://1/7,left)] + Skin.HasSetting(ShowClearArt)</visible>
+					<visible>[!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) + SubString(ListItem.Path,videodb://movies/sets,left)] + Skin.HasSetting(ShowClearArt)</visible>
 					<control type="image">
 						<width>400</width>
 						<height>400</height>
@@ -226,7 +226,7 @@
 						<posy>-8</posy>
 						<width>580</width>
 						<height>609</height>
-						<texture background="true">views/newgloss/whitepanel-15.png</texture>
+						<texture colordiffuse="mod-infotags" background="true">views/newgloss/whitepanel-15.png</texture>
 						<visible>IsEmpty(Container(552).ListItem.Art(fanart)) + IsEmpty(Container(552).ListItem.Art(season.fanart))</visible>
 						<include>visiblehidefadeinfo</include>
 					</control>
@@ -281,54 +281,45 @@
 						<visible>Container.Content(Episodes)</visible>
 					</control>
 					<control type="group">
-						<visible>[!IsEmpty(Container(552).ListItem.Plot)] | substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>[!IsEmpty(Container(552).ListItem.Plot)] | substring(ListItem.Path,videodb://movies/sets,left)</visible>
 						<include>visiblehidefadeinfo</include>
 						<control type="image">
 							<posx>-18</posx>
 							<posy>0</posy>
 							<width>608</width>
-							<height>300</height>
-							<texture>views/newgloss/whitepanel-15.png</texture>
-							<visible>[!IsEmpty(Container(552).ListItem.Art(fanart)) | !IsEmpty(Container(552).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://1/7,left)] + !Skin.HasSetting(DarkerPanels)</visible>
+							<height>310</height>
+							<texture colordiffuse="mod-infotags">views/newgloss/whitepanel-15.png</texture>
+							<visible>[!IsEmpty(Container(552).ListItem.Art(fanart)) | !IsEmpty(Container(552).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 							<include>visiblehidefadeinfo</include>
 						</control>
-						<control type="image">
-							<posx>-18</posx>
-							<posy>-5</posy>
-							<width>608</width>
-							<height>305</height>
-							<texture>views/newgloss/whitepanel-15.png</texture>
-							<colordiffuse>$INFO[Skin.String(panelcolor.name)]</colordiffuse>
-							<visible>[!IsEmpty(Container(552).ListItem.Art(fanart)) | !IsEmpty(Container(552).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://1/7,left)] + Skin.HasSetting(DarkerPanels)</visible>
-							<include>visiblehidefadeinfo</include>
-						</control>
+					
 						<control type="textbox">
 							<description>Plot</description>
 							<posx>20</posx>
 							<posy>5</posy>
 							<width>526</width>
-							<height>275</height>
+							<height>280</height>
 							<info>Container(552).ListItem.Plot</info>
 							<align>justify</align>
-							<textcolor>mod-infotags</textcolor>
+							<textcolor>eewhite</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<font>Font-Condensed-S34</font>
-							<autoscroll delay="3000" time="1000" repeat="10000" />
-							<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+							<autoscroll delay="5000" time="3000" repeat="10000" />
+							<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
 						</control>
 						<control type="textbox">
 							<description>Plot</description>
 							<posx>20</posx>
 							<posy>5</posy>
 							<width>526</width>
-							<height>275</height>
+							<height>280</height>
 							<info>Window(home).Property(Set.Movies.ExtendedPlot)</info>
 							<align>justify</align>
-							<textcolor>mod-infotags</textcolor>
+							<textcolor>eewhite</textcolor>
 							<pagecontrol>71</pagecontrol>
 							<font>Font-Condensed-S34</font>
-							<autoscroll delay="3000" time="1000" repeat="10000" />
-							<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+							<autoscroll delay="5000" time="3000" repeat="10000" />
+							<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -338,7 +329,7 @@
 						<height>60</height>
 						<texture>windows/common/black.png</texture>
 						<aspectratio>scale</aspectratio>
-						<visible>Container.Content(Movies) | substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>Container.Content(Movies) | substring(ListItem.Path,videodb://movies/sets,left)</visible>
 					</control>
 					<control type="label">
 						<posx>30</posx>
@@ -358,7 +349,7 @@
 						<label>$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
 						<textcolor>eewhite</textcolor>
 						<scroll>false</scroll>
-						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 					</control>
 					<control type="image">
 						<posx>165</posx>
@@ -395,6 +386,25 @@
 						<aspect>keepaspect</aspect>
 						<texture>$VAR[AudioFlagVar,noncolourflags/audio/,.png]</texture>
 						<visible>!IsEmpty(ListItem.AudioCodec) + Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
+					</control>
+					<control type="image">
+						<posx>295</posx>
+						<posy>590</posy>
+						<width>50</width>
+						<height>50</height>
+						<aspect>keepaspect</aspect>
+						<texture>$VAR[RottenTomatoesListItem]</texture>
+						<visible>!IsEmpty(ListItem.Property(CriticRating)) + !substring(ListItem.Property(CriticRating),None) + Container.Content(movies)</visible>
+					</control>
+					<control type="label">
+						<posx>357</posx>
+						<posy>603</posy>
+						<width>90</width>
+						<font>Font-Condensed-S32</font>
+						<label>$INFO[ListItem.Property(CriticRating),,%]</label>
+						<textcolor>eewhite</textcolor>
+						<scroll>false</scroll>
+						<visible>!IsEmpty(ListItem.Property(CriticRating)) + !substring(ListItem.Property(CriticRating),None) + Container.Content(movies)</visible>
 					</control>
 					<control type="image">
 						<posx>465</posx>
@@ -441,7 +451,7 @@
 						<include>visiblehidefadeinfo</include>
 						<width>97</width>
 						<height>62</height>
-						<texture>$INFO[ListItem.Studio,colourflags/studios/,.png]</texture>
+						<texture>$INFO[ListItem.Studio,aeonflags/studios/,.png]</texture>
 						<visible>!IsEmpty(ListItem.Studio) + !Container.Content(movies) + !Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="image">
@@ -450,7 +460,7 @@
 						<include>visiblehidefadeinfo</include>
 						<width>97</width>
 						<height>62</height>
-						<texture>$INFO[ListItem.Studio,noncolourflags/studios/,.png]</texture>
+						<texture>$INFO[ListItem.Studio,aeonflags/studios/,.png]</texture>
 						<visible>!IsEmpty(ListItem.Studio) + !Container.Content(movies) + Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 					</control>
 					<control type="image">
@@ -577,7 +587,7 @@
 						<onright condition="!Control.IsVisible(70)">71</onright>
 						<onup>552</onup>
 						<ondown>552</ondown>
-						<viewtype label="Info List">list</viewtype>
+						<viewtype label="42319">list</viewtype>
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<itemlayout height="60" condition="!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(Sets) + Container.HasFiles">
@@ -669,7 +679,7 @@
 								<label fallback="••••">$INFO[ListItem.Year]</label>
 								<align>center</align>
 								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-								<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -680,7 +690,7 @@
 								<label fallback="••••">$INFO[Window(home).Property(Set.Movie.1.Year)]</label>
 								<align>center</align>
 								<textcolor>$VAR[DarkerBackgroundViewsMainListTextColourVars]</textcolor>
-								<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -710,7 +720,7 @@
 								<aspect>keepaspect</aspect>
 								<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars]</colordiffuse>
 								<texture>$VAR[ListHDSDFlagSmall]</texture>
-								<visible>!IsEmpty(ListItem.VideoResolution) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>!IsEmpty(ListItem.VideoResolution) + !substring(ListItem.Path,videodb://movies/sets,left)</visible>
 							</control>
 							<control type="image">
 								<posx>536</posx>
@@ -719,7 +729,7 @@
 								<height>60</height>
 								<aspect>keepaspect</aspect>
 								<texture>flags/other/set-list.png</texture>
-								<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>substring(ListItem.Path,videodb://movies/sets,left) | ListItem.IsFolder</visible>
 								<colordiffuse>$VAR[DarkerBackgroundViewsMainListTextColourVars]</colordiffuse>
 							</control>
 							<control type="group">
@@ -981,7 +991,7 @@
 									<width>590</width>
 									<font>Font-Condensed-S29</font>
 									<label>$INFO[ListItem.Label]</label>
-									<textcolor>eewhite</textcolor>
+									<textcolor>mod-infotags</textcolor>
 									<visible>Container.Content(Movies) | !Skin.HasSetting(ShowBanner)</visible>
 								</control>
 								<control type="label">
@@ -991,9 +1001,9 @@
 									<font>Font-Condensed-S31</font>
 									<label fallback="••••">$INFO[ListItem.Year]</label>
 									<align>center</align>
-									<textcolor>eewhite</textcolor>
+									<textcolor>mod-infotags</textcolor>
 									<scroll>false</scroll>
-									<visible>!Skin.HasSetting(ShowBanner) | [Container.Content(Movies) + !substring(ListItem.Path,videodb://1/7,left)]</visible>
+									<visible>!Skin.HasSetting(ShowBanner) | [Container.Content(Movies) + !substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 								</control>
 								<control type="label">
 									<posx>46</posx>
@@ -1002,8 +1012,8 @@
 									<font>Font-Condensed-S31</font>
 									<label fallback="••••">$INFO[Window(home).Property(Set.Movie.1.Year)]</label>
 									<align>center</align>
-									<textcolor>eewhite</textcolor>
-									<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+									<textcolor>mod-infotags</textcolor>
+									<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 									<scroll>false</scroll>
 								</control>
 								<control type="label">
@@ -1012,7 +1022,7 @@
 									<height>58</height>
 									<font>Font-Condensed-S31</font>
 									<label fallback="                 •••">$INFO[ListItem.Rating, ,]</label>
-									<textcolor>eewhite</textcolor>
+									<textcolor>mod-infotags</textcolor>
 									<scroll>false</scroll>
 									<align>right</align>
 									<visible>[Container.Content(Movies) | !Skin.HasSetting(ShowBanner)]</visible>
@@ -1033,8 +1043,8 @@
 									<height>60</height>
 									<aspect>keepaspect</aspect>
 									<texture>$VAR[ListHDSDFlagSmall]</texture>
-									<colordiffuse>eewhite</colordiffuse>
-									<visible>[!IsEmpty(ListItem.VideoResolution) + !Skin.HasSetting(ShowBanner)] | [Container.Content(Movies) + !substring(ListItem.Path,videodb://1/7,left)]</visible>
+									<colordiffuse>mod-infotags</colordiffuse>
+									<visible>[!IsEmpty(ListItem.VideoResolution) + !Skin.HasSetting(ShowBanner)] | [Container.Content(Movies) + !substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 								</control>
 								<control type="image">
 									<posx>536</posx>
@@ -1043,8 +1053,8 @@
 									<height>60</height>
 									<aspect>keepaspect</aspect>
 									<texture>flags/other/set-list.png</texture>
-									<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
-									<colordiffuse>eewhite</colordiffuse>
+									<visible>substring(ListItem.Path,videodb://movies/sets,left) | [ListItem.IsFolder + Container.Content(Movies)]</visible>
+									<colordiffuse>mod-infotags</colordiffuse>
 								</control>
 								<control type="group">
 									<visible>!Skin.HasSetting(ShowBanner) + IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
@@ -1063,7 +1073,7 @@
 										<height>60</height>
 										<font>Font-Condensed-S26</font>
 										<label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
-										<textcolor>eewhite</textcolor>
+										<textcolor>mod-infotags</textcolor>
 										<align>center</align>
 										<scroll>false</scroll>
 									</control>

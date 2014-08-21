@@ -11,6 +11,7 @@
 		<control type="button" id="10">
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization)">Skin.SetBool(Skin.Initialization)</onfocus>
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization)">Skin.SetBool(ShowEpgProgress)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization)">Skin.SetBool(xbmb3c)</onfocus>
 			<onfocus condition="IsEmpty(Skin.String(GlobalBackdropSingle))">Skin.SetString(GlobalBackdropSingle,special://skin/extras/backgrounds/summerbreeze.jpg)</onfocus>
 			<onfocus condition="IsEmpty(Window(startup).Property(Started)) + Skin.HasSetting(NextAired.Update) + Library.HasContent(tvshows)">RunScript(script.tv.show.next.aired,silent=True)</onfocus>
 			<onfocus condition="IsEmpty(Window(startup).Property(Started)) + Skin.HasSetting(StartupPlaylist)">PlayMedia($ESCINFO[Skin.String(StartupPlaylist.Path)])</onfocus>
@@ -30,6 +31,7 @@
 			<onfocus condition="!stringcompare(Skin.String(HomeWidget.7.Type),service.skin.widgets) + !stringcompare(Skin.String(HomeWidget.7.Type),script.randomandlastitems)">RunScript(script.extendedinfo,info=$INFO[Skin.String(HomeWidget.7.Type)],prefix=HomeWidget7)</onfocus>
 			<onfocus condition="IsEmpty(Window(startup).Property(Started)) + IsEmpty(Window(startup).Property(Skin.Initialization))">ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<onfocus condition="!IsEmpty(Window(startup).Property(Skin.Initialization))">SetFocus(11)</onfocus>
+			<onfocus>RunScript(script.extendedinfo,info=trendingmovies)</onfocus>
 		</control>
 		<control type="button" id="11">
 			<onfocus>ClearProperty(Skin.Initialization)</onfocus>

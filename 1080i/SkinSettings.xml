@@ -28,9 +28,12 @@
 			<visible>!Window.IsActive(favourites)</visible>
 			<control type="group">
 				<animation type="WindowOpen">
-					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="650" />
-					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
-					<effect type="zoom" start="88" end="100" center="576,560" tween="cubic" easing="out" time="400" />
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="350" delay="0" />
+					<effect type="zoom" start="76" end="100" center="auto" tween="cubic" easing="out" time="400" delay="75" />
+					<effect type="slide" start="-190" end="-10" tween="cubic" easing="out" time="545" delay="350" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="-190" start="-10" tween="cubic" easing="out" time="545" delay="0" />
 				</animation>
 				<control type="label">
 					<description>Category</description>
@@ -186,6 +189,12 @@
 							<onclick>noop</onclick>
 							<visible>System.GetBool(pvrmanager.enabled)</visible>
 						</item>
+						<item id="57">
+							<description>Alternate Library Settings</description>
+							<label>Change Mode</label>
+							<onclick>noop</onclick>
+							<visible>System.HasAddon(plugin.video.xbmb3c) | System.HasAddon(plugin.video.plexbmc)</visible>
+						</item>
 						<item id="38">
 							<description>Add-on Settings</description>
 							<label>$LOCALIZE[41280]</label>
@@ -197,9 +206,12 @@
 			<control type="group">
 				<posx>175</posx>
 				<animation type="WindowOpen">
-					<effect type="slide" start="200" end="0" tween="cubic" easing="out" time="545" delay="75" />
+					<effect type="slide" start="800" end="-20" tween="cubic" easing="out" time="545" delay="75" />
 					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="75" />
 					<effect type="zoom" start="76" end="100" center="1344,560" tween="cubic" easing="out" time="400" delay="75" />
+				</animation>
+				<animation type="WindowClose">
+					<effect type="slide" end="800" start="20" tween="cubic" easing="out" time="545" delay="0" />
 				</animation>
 				<control type="label">
 					<description>Category</description>
@@ -484,7 +496,7 @@
 							<onleft>20062</onleft>
 							<onright>20062</onright>
 							<onup>1001</onup>
-							<ondown>2000</ondown>
+							<ondown>2096</ondown>
 							<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/spinctrl/arrow-down-fo-colour.png</texturefocus>
 							<texturenofocus>buttons/spinctrl/arrow-down-nf.png</texturenofocus>
 							<onclick condition="stringcompare(Skin.String(HomeScreen),metro)">Skin.SetString(HomeScreen,classic)</onclick>
@@ -500,7 +512,7 @@
 							<onleft>20061</onleft>
 							<onright>20061</onright>
 							<onup>1001</onup>
-							<ondown>2000</ondown>
+							<ondown>2096</ondown>
 							<texturefocus colordiffuse="$VAR[FocusModColourVar2]">buttons/spinctrl/arrow-up-fo-colour.png</texturefocus>
 							<texturenofocus>buttons/spinctrl/arrow-up-nf.png</texturenofocus>
 							<onclick condition="stringcompare(Skin.String(HomeScreen),horizontal)">Skin.SetString(HomeScreen,classic)</onclick>
@@ -529,6 +541,18 @@
 							<visible>ControlGroup(2006).HasFocus</visible>
 						</control>
 					</control>
+					<control type="radiobutton" id="2096">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(UseAlternativeMetro)</selected>
+						<onclick>Skin.ToggleSetting(UseAlternativeMetro)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<label>Use alternative metro layout</label>
+						<visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
+					</control>
 					<control type="button" id="2000">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
@@ -537,7 +561,7 @@
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
 						<onclick>SetProperty(Dialog,$LOCALIZE[41131])</onclick>
 						<onclick>ActivateWindow(3001)</onclick>
-						<onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ReloadSkin</onfocus>
+						<onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ReloadSkin()</onfocus>
 						<onfocus condition="!IsEmpty(Window(Home).Property(ReloadSkin))">ClearProperty(ReloadSkin,Home)</onfocus>
 						<label>$LOCALIZE[41131]</label>
 						<visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
@@ -575,16 +599,27 @@
 						<onclick>ReloadSkin()</onclick>
 						<label>Use curved tiles</label>
 					</control>
+					<control type="radiobutton" id="2056">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+						<selected>Skin.HasSetting(HomeUseColourFocus)</selected>
+						<onclick>Skin.ToggleSetting(HomeUseColourFocus)</onclick>
+						<label>Use colour focus on labels on home screen</label>
+					</control>
 					<control type="radiobutton" id="2017">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
 						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
 						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
-						<selected>Skin.HasSetting(plexUseXbmcMusicLibrary)</selected>
-						<onclick>Skin.ToggleSetting(plexUseXbmcMusicLibrary)</onclick>
-						<label>Plex - Use Xbmc Music Library</label>
-						<visibile>Skin.HasSetting(plexbmc)</visibile>
+						<selected>Skin.HasSetting(UseXbmcMusicLibrary)</selected>
+						<onclick>Skin.ToggleSetting(UseXbmcMusicLibrary)</onclick>
+						<label>Plex/XBMB3C - Use Xbmc Music Library</label>
+						<visibile>Skin.HasSetting(plexbmc) | Skin.HasSetting(xbmb3c)</visibile>
 					</control>
 					<control type="radiobutton" id="2018">
 						<width>1210</width>
@@ -594,6 +629,7 @@
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
 						<selected>Skin.HasSetting(ShowLargerSpotlight)</selected>
 						<onclick>Skin.ToggleSetting(ShowLargerSpotlight)</onclick>
+						<visible>!Skin.HasSetting(UseAlternativeMetro)</visible>
 						<label>Show larger spotlight in Home</label>
 					</control>
 					<control type="radiobutton" id="2021">
@@ -606,6 +642,7 @@
 						<onclick>Skin.ToggleSetting(HideBannerSpotlight)</onclick>
 						<label>Hide Banner for TV Shows</label>
 						<visible>Skin.HasSetting(ShowLargerSpotlight)</visible>
+						<visible>!Skin.HasSetting(UseAlternativeMetro)</visible>
 					</control>
 					<control type="radiobutton" id="2022">
 						<width>1210</width>
@@ -617,6 +654,7 @@
 						<onclick>Skin.ToggleSetting(HideClearLogoSpotlight)</onclick>
 						<label>Hide ClearLogo for Movies</label>
 						<visible>Skin.HasSetting(ShowLargerSpotlight)</visible>
+						<visible>!Skin.HasSetting(UseAlternativeMetro)</visible>
 					</control>
 					<control type="radiobutton" id="2019">
 						<width>1210</width>
@@ -627,6 +665,7 @@
 						<selected>Skin.HasSetting(ShowLargerMovies)</selected>
 						<onclick>Skin.ToggleSetting(ShowLargerMovies)</onclick>
 						<label>Show larger movies widget in Home</label>
+						<visible>!Skin.HasSetting(UseAlternativeMetro)</visible>
 					</control>
 					<control type="radiobutton" id="2020">
 						<width>1210</width>
@@ -637,6 +676,7 @@
 						<selected>Skin.HasSetting(ShowLargerMusic)</selected>
 						<onclick>Skin.ToggleSetting(ShowLargerMusic)</onclick>
 						<label>Show larger music widget in Home</label>
+						<visible>!Skin.HasSetting(UseAlternativeMetro)</visible>
 					</control>
 					<control type="radiobutton" id="2003">
 						<width>1210</width>
@@ -1769,6 +1809,16 @@
 						<onclick>Skin.Reset(MoreBackgroundOpacity)</onclick>
 						<label>Show less background</label>
 					</control>
+					<control type="radiobutton" id="3051">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(ShowHeaderInfo)</selected>
+						<onclick>Skin.ToggleSetting(ShowHeaderInfo)</onclick>
+						<label>Show No Header Details</label>
+					</control>
 					<control type="radiobutton" id="3023">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
@@ -1914,7 +1964,7 @@
 						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
 						<selected>Skin.HasSetting(OSDVisualisation.Enabled)</selected>
-						<onclick condition="!Skin.HasSetting(OSDVisualisation.Enabled)">Skin.Reset(ArtistSlideShow.Enabled)</onclick>
+						<onclick condition="!Skin.HasSetting(OSDVisualisation.Enabled)">Skin.Reset(ArtistSlideShow.Enabled)</onclick> 
 						<onclick>Skin.ToggleSetting(OSDVisualisation.Enabled)</onclick>
 						<label>$LOCALIZE[41240]</label>
 					</control>
@@ -1926,7 +1976,7 @@
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
 						<selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
 						<onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
-						<visible>Skin.HasSetting(OSDVisualisation.Enabled)</visible>
+						<visible>Skin.HasSetting(OSDVisualisation.Enabled) + !Skin.HasSetting(ArtistSlideShow.Enabled)</visible>
 						<label> • $LOCALIZE[41106]</label>
 					</control>
 					<control type="radiobutton" id="8003">
@@ -1936,7 +1986,7 @@
 						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
 						<selected>Skin.HasSetting(ArtistSlideShow.Enabled)</selected>
-						<onclick condition="!Skin.HasSetting(ArtistSlideShow.Enabled)">Skin.Reset(OSDVisualisation.Enabled)</onclick>
+						<onclick condition="!Skin.HasSetting(ArtistSlideShow.Enabled)">Skin.Reset(OSDVisualisation.Enabled)</onclick> 
 						<onclick>Skin.ToggleSetting(ArtistSlideShow.Enabled)</onclick>
 						<enable>System.HasAddon(script.artistslideshow)</enable>
 						<label>$LOCALIZE[41103]</label>
@@ -1984,12 +2034,92 @@
 						<onclick>Skin.ToggleSetting(ShowSmallerOSDHeader.Enabled)</onclick>
 						<label>Show smaller header osd</label>
 					</control>
+					<control type="radiobutton" id="8018">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(osdheader.dark)</selected>
+						<onclick>Skin.ToggleSetting(osdheader.dark)</onclick>
+						<label>Use darker background on header</label>
+					</control>
+					<control type="radiobutton" id="8012">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(videoosd.xperience1080)</selected>
+						<onclick>Skin.Reset(videoosd.alaska)</onclick>
+						<onclick>Skin.Reset(videoosd.arctic)</onclick>
+						<onclick>Skin.ToggleSetting(videoosd.xperience1080)</onclick>
+						<label>Use Xperience1080 OSD</label>
+					</control>
+					<control type="radiobutton" id="8013">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(videoosd.alaska)</selected>
+						<onclick>Skin.Reset(videoosd.xperience1080)</onclick>
+						<onclick>Skin.Reset(videoosd.arctic)</onclick>
+						<onclick>Skin.ToggleSetting(videoosd.alaska)</onclick>
+						<label>Use Alaska OSD</label>
+					</control>
+					<control type="radiobutton" id="8014">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(videoosd.arctic)</selected>
+						<onclick>Skin.Reset(videoosd.xperience1080)</onclick>
+						<onclick>Skin.Reset(videoosd.alaska)</onclick>
+						<onclick>Skin.ToggleSetting(videoosd.arctic)</onclick>
+						<label>Use Arctic OSD</label>
+					</control>
+					<control type="radiobutton" id="8016">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<visible>Skin.HasSetting(videoosd.arctic)</visible>
+						<selected>Skin.HasSetting(osd.darkpanel)</selected>
+						<onclick>Skin.ToggleSetting(osd.darkpanel)</onclick>
+						<label> - use dark background</label>
+					</control>
+					<control type="radiobutton" id="8015">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<visible>Skin.HasSetting(videoosd.arctic)</visible>
+						<selected>Skin.HasSetting(osd.fullwidth)</selected>
+						<onclick>Skin.ToggleSetting(osd.fullwidth)</onclick>
+						<label> - use full width</label>
+					</control>
+					<control type="radiobutton" id="8026">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<visible>Skin.HasSetting(videoosd.arctic)</visible>
+						<selected>Skin.HasSetting(musicvis.hidetext)</selected>
+						<onclick>Skin.ToggleSetting(musicvis.hidetext)</onclick>
+						<label> - hide visual text music osd</label>
+					</control>
 					<control type="radiobutton" id="8011">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
 						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
 						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<visible>!Skin.HasSetting(videoosd.arctic) + !Skin.HasSetting(videoosd.alaska) + !Skin.HasSetting(videoosd.xperience1080)</visible>
 						<selected>Skin.HasSetting(UseAlternateFlags.Enabled)</selected>
 						<onclick>Skin.ToggleSetting(UseAlternateFlags.Enabled)</onclick>
 						<label>Use alternate flags</label>
@@ -2000,6 +2130,7 @@
 						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
 						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
 						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<visible>!Skin.HasSetting(videoosd.arctic) + !Skin.HasSetting(videoosd.alaska) + !Skin.HasSetting(videoosd.xperience1080)</visible>
 						<selected>Skin.HasSetting(UseNonColourFlags.Enabled)</selected>
 						<onclick>Skin.ToggleSetting(UseNonColourFlags.Enabled)</onclick>
 						<label>Use black and white flags</label>
@@ -2020,6 +2151,16 @@
 					<onleft>30</onleft>
 					<include>SettingsCategoryGrouplistVars</include>
 					<visible>Container(30).HasFocus(35)</visible>
+					<control type="radiobutton" id="5016">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryRadioButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(RainDrops)</selected>
+						<onclick>Skin.ToggleSetting(RainDrops)</onclick>
+						<label>Raindrops effect</label>
+					</control>
 					<control type="button" id="5000">
 						<width>1210</width>
 						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
@@ -2310,7 +2451,65 @@
 						<onclick>Skin.ToggleSetting(ShowEpgProgress)</onclick>
 						<label>Show progress in EPG</label>
 					</control>
+					<control type="radiobutton" id="10004">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(UseAlternateEPG)</selected>
+						<onclick>Skin.ToggleSetting(UseAlternateEPG)</onclick>
+						<label>Use Eminence EPG</label>
+					</control>
 				</control>
+				
+				<!-- ================ -->
+				<!-- Alternate librarys -->
+				<!-- ================ -->
+				<control type="grouplist" id="5">
+					<onleft>30</onleft>
+					<include>SettingsCategoryGrouplistVars</include>
+					<visible>Container(30).HasFocus(57)</visible>
+					<control type="radiobutton" id="11001">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(xbmb3c)</selected>
+						<onclick>Skin.ToggleSetting(xbmb3c)</onclick>
+						<onclick>Skin.Reset(plexbmc)</onclick>
+					    <onclick>XBMC.ReloadSkin()</onclick>
+						<label>go XBMB3C</label>
+					</control>
+					<control type="radiobutton" id="11002">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(plexbmc)</selected>
+						<onclick>Skin.Reset(plexbmc)</onclick>
+						<onclick>Skin.Reset(xbmb3c)</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<visible>Skin.HasSetting(xbmb3c) | Skin.HasSetting(plexbmc)</visible>
+						<label>go XBMC</label>
+					</control>
+					<control type="radiobutton" id="11003">
+						<width>1210</width>
+						<include condition="!Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsNoColourFocus</include>
+						<include condition="!Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + !Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundNoColourFocus</include>
+						<include condition="Skin.HasSetting(DarkerPanels) + Skin.HasSetting(ColourFocus)">SettingsCategoryDefaultButtonVarsDarkerBackgroundColourFocus</include>
+						<selected>Skin.HasSetting(plexbmc)</selected>
+						<onclick>Skin.ToggleSetting(plexbmc)</onclick>
+						<onclick>Skin.Reset(xbmb3c)</onclick>
+					    <onclick>XBMC.ReloadSkin()</onclick>
+						<label>go PleXBMC</label>
+					</control>
+				</control>	
+			
+				
 				<!-- =============== -->
 				<!-- Add-on Settings -->
 				<!-- =============== -->

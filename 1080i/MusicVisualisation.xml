@@ -6,6 +6,9 @@
 	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=artistevents,artistname=$ESCINFO[MusicPlayer.offset(0).Artist])</onload>
 	<controls>
 		<include>CommonItemsMusicOSD</include>
-		<include>OSDMusic</include>
+		<include condition="!Skin.HasSetting(videoosd.xperience1080) + !Skin.HasSetting(videoosd.alaska) + !Skin.HasSetting(videoosd.arctic)">OSDMusic</include>
+		<include condition="Skin.HasSetting(videoosd.xperience1080)">OSDMusicXperience1080</include>
+		<include condition="Skin.HasSetting(videoosd.alaska)">OSDMusicAlaska</include>
+		<include condition="Skin.HasSetting(videoosd.arctic)">OSDMusicArctic</include>
 	</controls>
 </window>

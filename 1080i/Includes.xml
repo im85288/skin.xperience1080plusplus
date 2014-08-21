@@ -5,6 +5,8 @@
 	<include file="Includes_ContextMenu.xml" />
 	<include file="Includes_HomeWidgets.xml" />
 	<include file="Includes_PvrWidgets.xml" />
+	<include file="Includes_Home_Items.xml" />
+	<include file="Includes_Home_Items_Alternatives.xml" />
 	<include file="Includes_Home.xml" />
 	<include file="Includes_Home_Classic.xml" />
 	<include file="Includes_HomeSubmenu_Classic.xml" />

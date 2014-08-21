@@ -17,7 +17,7 @@
 				<include>FullscreenDimensions</include>
 				<scrolltime tween="sine" easing="out">400</scrolltime>
 				<orientation>horizontal</orientation>
-				<viewtype label="Reel">list</viewtype>
+				<viewtype label="42307">list</viewtype>
 				<ondown>70</ondown>
 				<pagecontrol>70</pagecontrol>
 				<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>

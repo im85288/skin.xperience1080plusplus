@@ -44,7 +44,7 @@
 				<onright>70</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
-				<viewtype label="List (Default)">list</viewtype>
+				<viewtype label="42303">list</viewtype>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<preloaditems>2</preloaditems>
 				<itemlayout height="100" condition="!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)">
@@ -138,7 +138,7 @@
 						<posy>8</posy>
 						<width>85</width>
 						<height>85</height>
-						<texture colordiffuse="Mod_Tags_Views" background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(genres)</visible>
 					</control>
@@ -222,7 +222,7 @@
 						<width>140</width>
 						<height>100</height>
 						<texture>flags/other/set-default.png</texture>
-						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>substring(ListItem.Path,videodb://movies/sets,left) | [ListItem.IsFolder + Container.Content(Movies)]</visible>
 						<colordiffuse>Mod_Tags_Views</colordiffuse>
 					</control>
 					<control type="image">
@@ -525,7 +525,7 @@
 						<posy>8</posy>
 						<width>85</width>
 						<height>85</height>
-						<texture colordiffuse="Mod_Tags_Views" background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<visible>!Container.Content(genres)</visible>
 					</control>
@@ -612,6 +612,7 @@
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(movies)">
+				   
 					<control type="image">
 						<description>List separator</description>
 						<posx>0</posx>
@@ -696,7 +697,7 @@
 							<width>140</width>
 							<height>100</height>
 							<texture>flags/other/set-default.png</texture>
-							<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+							<visible>substring(ListItem.Path,videodb://movies/sets,left) | [ListItem.IsFolder + Container.Content(Movies)]</visible>
 							<colordiffuse>Mod_Tags_Alt2</colordiffuse>
 						</control>
 						<control type="image">
@@ -724,6 +725,7 @@
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(tvshows)">
+				   
 					<control type="image">
 						<description>List separator</description>
 						<posx>0</posx>
@@ -825,6 +827,7 @@
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(seasons)">
+				    
 					<control type="image">
 						<description>List separator</description>
 						<posx>0</posx>
@@ -913,6 +916,7 @@
 					</control>
 				</focusedlayout>
 				<focusedlayout height="100" condition="Container.Content(episodes)">
+				    
 					<control type="image">
 						<description>List separator</description>
 						<posx>0</posx>

@@ -79,7 +79,7 @@
 						<effect type="slide" start="0,0" end="-100,0" time="300" tween="cubic" easing="out" />
 						<effect type="fade" start="100" end="0" time="200" />
 					</animation>
-					<visible>[!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) + SubString(ListItem.Path,videodb://1/7,left)] + Skin.HasSetting(ShowClearArt)</visible>
+					<visible>[!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) + SubString(ListItem.Path,videodb://movies/sets,left)] + Skin.HasSetting(ShowClearArt)</visible>
 					<control type="image">
 						<width>400</width>
 						<height>400</height>
@@ -182,7 +182,7 @@
 					<texture>windows/common/black.png</texture>
 					<fadetime>500</fadetime>
 					<aspectratio>scale</aspectratio>
-					<visible>!substring(ListItem.Path,videodb://1/7,left) + [!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart))]</visible>
+					<visible>!substring(ListItem.Path,videodb://movies/sets,left) + [!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart))]</visible>
 				</control>
 				<control type="image">
 					<posx>345</posx>
@@ -191,7 +191,7 @@
 					<height>52</height>
 					<texture>views/other/top250.png</texture>
 					<colordiffuse>imdb</colordiffuse>
-					<visible>!substring(ListItem.Path,videodb://1/7,left) + [!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart))]</visible>
+					<visible>!substring(ListItem.Path,videodb://movies/sets,left) + [!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart))]</visible>
 					<include>visiblehidefadeinfo</include>
 				</control>
 				<control type="label">
@@ -204,7 +204,7 @@
 					<align>center</align>
 					<textcolor>imdb</textcolor>
 					<scroll>false</scroll>
-					<visible>!substring(ListItem.Path,videodb://1/7,left) + [!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart))]</visible>
+					<visible>!substring(ListItem.Path,videodb://movies/sets,left) + [!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart))]</visible>
 				</control>
 				<control type="group">
 					<visible>!Container.Content(Movies) + !Container.Content(TVShows) + !Container.Content(Seasons) + !Container.Content(Sets)</visible>
@@ -268,7 +268,7 @@
 						<width>508</width>
 						<height>100</height>
 						<texture>views/other/IMDb.png</texture>
-						<visible>!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://movies/sets,left)</visible>
 						<include>visiblehidefadeinfo</include>
 					</control>
 					<control type="image">
@@ -312,7 +312,7 @@
 						<visible>!Container.Content(Movies) + !Container.Content(Sets)</visible>
 					</control>
 					<control type="group">
-						<visible>[!IsEmpty(Container(652).ListItem.Plot)] | substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>[!IsEmpty(Container(652).ListItem.Plot)] | substring(ListItem.Path,videodb://movies/sets,left)</visible>
 						<include>visiblehidefadeinfo</include>
 						<control type="image">
 							<posx>-18</posx>
@@ -321,7 +321,7 @@
 							<height>440</height>
 							<texture>views/newgloss/whitepanel-15.png</texture>
 							<colordiffuse>black</colordiffuse>
-							<visible>[!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://1/7,left)]</visible>
+							<visible>[!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://movies/sets,left)]</visible>
 							<include>visiblehidefadeinfo</include>
 						</control>
 						<control type="image">
@@ -331,7 +331,7 @@
 							<height>100</height>
 							<texture>views/other/IMDb.png</texture>
 							<!-- <colordiffuse>DF222222</colordiffuse> -->
-							<visible>!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://1/7,left)</visible>
+							<visible>!IsEmpty(Container(652).ListItem.Art(fanart)) | !IsEmpty(Container(652).ListItem.Art(season.fanart)) | substring(ListItem.Path,videodb://movies/sets,left)</visible>
 							<include>visiblehidefadeinfo</include>
 						</control>
 						<control type="textbox">
@@ -346,7 +346,7 @@
 							<pagecontrol>71</pagecontrol>
 							<font>Font-Condensed-S34</font>
 							<autoscroll delay="3000" time="1000" repeat="10000" />
-							<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+							<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
 						</control>
 						<control type="textbox">
 							<description>Plot</description>
@@ -360,7 +360,7 @@
 							<pagecontrol>71</pagecontrol>
 							<font>Font-Condensed-S34</font>
 							<autoscroll delay="3000" time="1000" repeat="10000" />
-							<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+							<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -370,7 +370,7 @@
 						<height>60</height>
 						<texture>windows/common/black.png</texture>
 						<aspectratio>scale</aspectratio>
-						<visible>Container.Content(Movies) | substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>Container.Content(Movies) | substring(ListItem.Path,videodb://movies/sets,left)</visible>
 					</control>
 					<control type="label">
 						<posx>30</posx>
@@ -390,7 +390,7 @@
 						<label>$INFO[Window(home).Property(Set.Movies.Runtime),, $LOCALIZE[12391]]</label>
 						<textcolor>imdb</textcolor>
 						<scroll>false</scroll>
-						<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+						<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 					</control>
 					<control type="image">
 						<posx>465</posx>

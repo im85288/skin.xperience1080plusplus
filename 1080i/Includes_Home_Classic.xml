@@ -674,7 +674,7 @@
 					<icon>windows/home/panel_icons/panel_menu_movies.png</icon>
 					<visible>!Skin.HasSetting(HomeMovies)</visible>
 					<property name="single">$INFO[Skin.String(HomeMoviesSingleImage)]</property>
-					<property name="multi">$INFO[Skin.String(HomeMoviesMultiImage)]</property>
+					<property name="multi">$VAR[HomeMovieMultiPath]</property>
 					<property name="movies">1</property>
 				</item>
 				<item id="3">
@@ -684,7 +684,7 @@
 					<icon>windows/home/panel_icons/panel_menu_tvshows.png</icon>
 					<visible>!Skin.HasSetting(HomeTVShows)</visible>
 					<property name="single">$INFO[Skin.String(HomeTVShowsSingleImage)]</property>
-					<property name="multi">$INFO[Skin.String(HomeTVShowsMultiImage)]</property>
+					<property name="multi">$VAR[HomeTvMultiPath]</property>
 					<property name="tvshows">1</property>
 				</item>
 				<item id="4">
@@ -695,13 +695,15 @@
 					<icon>windows/home/panel_icons/panel_menu_music.png</icon>
 					<visible>!Skin.HasSetting(HomeMusic)</visible>
 					<property name="single">$INFO[Skin.String(HomeMusicSingleImage)]</property>
-					<property name="multi">$INFO[Skin.String(HomeMusicMultiImage)]</property>
+					<property name="multi">$VAR[HomeMusicMultiPath]</property>
 					<property name="music">1</property>
 				</item>
 				<item id="5">
 					<label>$LOCALIZE[41220]</label>
 					<onclick>ActivateWindow(pvr)</onclick>
 					<icon>windows/home/panel_icons/panel_menu_tvguide.png</icon>
+					<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
+					<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
 					<visible>System.GetBool(pvrmanager.enabled)</visible>
 				</item>
 				<item id="6">
@@ -710,7 +712,7 @@
 					<icon>windows/home/panel_icons/panel_menu_pictures.png</icon>
 					<visible>!Skin.HasSetting(HomePictures)</visible>
 					<property name="single">$INFO[Skin.String(HomePicturesSingleImage)]</property>
-					<property name="multi">$INFO[Skin.String(HomePicturesMultiImage)]</property>
+					<property name="multi">$VAR[HomePicturesMultiPath]</property>
 				</item>
 				<item id="10">
 					<label>Trailers</label>
@@ -759,7 +761,7 @@
 					<icon>windows/home/panel_icons/panel_menu_weather.png</icon>
 					<visible>!Skin.HasSetting(HomeWeather)</visible>
 					<property name="single">$INFO[Skin.String(HomeWeatherSingleImage)]</property>
-					<property name="multi">$INFO[Skin.String(HomeWeatherMultiImage)]</property>
+					<property name="multi">$VAR[HomeWeatherMultiPath]</property>
 				</item>
 			</content>
 		</control>

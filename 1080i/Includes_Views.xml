@@ -21,6 +21,7 @@
 	<include file="Viewtypes_BannerCarousel.xml" />
 	<include file="Viewtypes_BannerPlex.xml" />
 	<include file="Viewtypes_PosterWall.xml" />
+	<include file="Viewtypes_VideoWall.xml" />
 	<include file="Viewtypes_PosterClassic.xml" />
 	<include file="Viewtypes_PosterInfo.xml" />
 	<include file="Viewtypes_MusicList.xml" />
@@ -42,6 +43,7 @@
 		<include>Viewtype-PosterInfo</include>          <!--id(56) -->
 		<include>Viewtype-LowInfoList</include>         <!--id(57) -->
 		<include>Viewtype-WallVideo</include>           <!--id(502) -->
+		<include>Viewtype-VideoWall</include>           <!--id(582) -->
 		<include>Viewtype-PanelCarousel</include>       <!--id(503) -->
 		<include>Viewtype-BannerCarousel</include>      <!--id(504) -->
 		<include>Viewtype-ClassicPoster</include>       <!--id(506) -->
@@ -52,6 +54,7 @@
 		<include>Viewtype-LowList</include>             <!--id(511) -->
 		<include>Viewtype-LandscapeCarousel</include>   <!--id(513) -->
 		<include>Viewtype-Banner</include>              <!--id(60) -->
+		<include>Viewtype-BannerOriginal</include>   <!-- id(600) -->
 		<include>Viewtype-InfoList</include>            <!--id(552) -->
 		<include>Viewtype-Top250InfoList</include>            <!--id(652) -->
 		<include condition="Skin.HasSetting(NextAired.Enabled)">NextAiredInfo</include>
@@ -86,8 +89,19 @@
 	</include>
 	<include name="ProgramViews">
 		<include>Viewtype-ProgramList</include>
-		<include>Viewtype-ProgramInfo</include>
 		<include>Viewtype-AddonThumbnail</include>
+		<!-- Advanced Launcher specific views -->
+		<include>Viewtype-ProgramInfoList</include>
+		<include>Viewtype-ProgramInfoListSquare</include>
+		<include>Viewtype-ProgramPanel</include>
+		<include>Viewtype-ProgramPanelSquare</include>
+		<include>Viewtype-ProgramLandscape</include>
+		<include>Viewtype-ProgramPoster</include>
+		<include>Viewtype-ProgramPosterSquare</include>
+		<include>Viewtype-ProgramThumbnail</include>
+		<include>Viewtype-ProgramThumbnailSquare</include>
+		<include>Viewtype-ProgramBanner</include>
+		<include>Viewtype-ProgramBannerSquare</include>
 	</include>
 	<include name="AddonViews">
 		<include>Viewtype-AddonThumbnail</include>
@@ -97,10 +111,9 @@
 		<include>Viewtype-List</include>
 	</include>
 	<include name="MusicPlaylistViews">
-		<include>Viewtype-MusicList</include>
-		<include>Viewtype-MusicInfoList</include>
-		<include>Viewtype-CoverList</include>
-		<include>Viewtype-CoverView</include>
+		<include>Viewtype-MusicLowList</include>		<!-- (54) -->
+		<include>Viewtype-CoverList</include>			<!-- (60) -->
+		<include>Viewtype-MusicInfoList</include>       <!-- (552) -->
 	</include>
 	<include name="PVRViews">
 		<control type="group" id="50">
@@ -116,6 +129,78 @@
 	</include>
 	<include name="ConcertViews">
 		<include>Viewtype-Concert2</include>
+	</include>
+	<include name="MyNavViewOptions">
+		<control type="radiobutton" id="102">
+			<include>ViewOptions.Button</include>
+			<label>Show Discart</label>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+			<onclick>Skin.ToggleSetting(CDArt.Enabled)</onclick>
+			<selected>Skin.HasSetting(CDArt.Enabled)</selected>
+			<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
+			<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+			<radioposx>-19</radioposx>
+			<visible>[Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(56)]</visible>
+		</control>
+		<control type="radiobutton" id="103">
+			<include>ViewOptions.Button</include>
+			<label>Use Logos</label>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+			<onclick>Skin.ToggleSetting(BannerPlexLogos)</onclick>
+			<selected>Skin.HasSetting(BannerPlexLogos)</selected>
+			<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
+			<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+			<radioposx>-19</radioposx>
+			<visible>Control.IsVisible(53)</visible>
+		</control>
+		<control type="radiobutton" id="104">
+			<description>Use banner in info list (tvshows)</description>
+			<include>ViewOptions.Button</include>
+			<label>Show banner</label>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+			<onclick>Skin.ToggleSetting(ShowBanner)</onclick>
+			<selected>Skin.HasSetting(ShowBanner)</selected>
+			<textureradiofocus colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradiofocus>
+			<textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+			<radioposx>-19</radioposx>
+			<visible>Control.IsVisible(552)</visible>
+		</control>
+		<control type="radiobutton" id="105">
+			<description>Show review in Info Panel</description>
+			<include>ViewOptions.Button</include>
+			<label>$LOCALIZE[42018]</label>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+			<onclick>Skin.ToggleSetting(MusicPanelReview)</onclick>
+			<selected>Skin.HasSetting(MusicPanelReview)</selected>
+			<visible>Container.Content(Albums) + Control.IsVisible(53)</visible>
+			<textureradioon colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradioon>
+			<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+			<radioposx>-19</radioposx>
+		</control>
+		<control type="radiobutton" id="106">
+			<description>Show biography in Info List / Panel</description>
+			<include>ViewOptions.Button</include>
+			<label>$LOCALIZE[42018]</label>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+			<onclick>Skin.ToggleSetting(MusicPanelBiography)</onclick>
+			<selected>Skin.HasSetting(MusicPanelBiography)</selected>
+			<visible>Container.Content(Artists) + Control.IsVisible(53)</visible>
+			<textureradioon colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradioon>
+			<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+			<radioposx>-19</radioposx>
+		</control>
+		<control type="radiobutton" id="107">
+			<description>Use small thumbs in thumbnail view</description>
+			<include>ViewOptions.Button</include>
+			<label>$LOCALIZE[42022]</label>
+			<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+			<onclick>Skin.ToggleSetting(ThumbnailSmall)</onclick>
+			<selected>Skin.HasSetting(ThumbnailSmall)</selected>
+			<visible>Control.IsVisible(500)</visible>
+			<textureradioon colordiffuse="$VAR[FocusModColourVar2]">buttons/radio/options-radio-button-fo-colour.png</textureradioon>
+			<textureradiooff>buttons/radio/options-radio-button-nf.png</textureradiooff>
+			<radioposx>-19</radioposx>
+		</control>
 	</include>
 	<!-- ========= -->
 	<!-- Variables -->
@@ -651,8 +736,12 @@
 		<value condition="IntegerGreaterThan(Container.NumItems,0)">$INFO[Container.NumItems,, $LOCALIZE[41817]]</value>
 	</variable>
 	<variable name="MovieRuntime">
-		<value condition="SubString(ListItem.Path,videodb://1/7/,left)">$INFO[Window(home).Property(Set.Movies.Runtime)]</value>
-		<value condition="!SubString(ListItem.Path,videodb://1/7/,left)">$INFO[ListItem.Duration]</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.Runtime)]</value>
+		<value condition="!SubString(ListItem.Path,videodb://movies/sets/,left) | ListItem.IsFolder">$INFO[ListItem.Duration]</value>
+	</variable>
+	<variable name="Metadata.Actors.InLibrary">
+		<value condition="Container(150).ListItem.Property(LibraryHasMovie)">  †</value>
+		<value></value>
 	</variable>
 	<variable name="GlobalCaseVar">
 		<value condition="SubString(ListItem.Filename,.3D.)">3d.png</value>
@@ -666,6 +755,7 @@
 	<variable name="TVShowClearArtVar">
 		<value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Art(tvshow.clearart)]</value>
 		<value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+		<value condition="[Container.Content(episodes) | Container.Content(seasons)] + !IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
 		<value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
 	</variable>
 	<variable name="Top250InfoListOverlay">
@@ -691,7 +781,7 @@
 	<variable name="UnderTitle">
 		<value condition="Container.Content(seasons) | Container.Content(tvshows)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), • , $LOCALIZE[16101]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
-		<value condition="Container.Content(movies) + [substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)]">$LOCALIZE[20457]</value>
+		<value condition="Container.Content(movies) + substring(ListItem.Path,videodb://movies/sets,left)">$LOCALIZE[20457]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Genre]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]</value>
 	</variable>
 	<variable name="MainTitle">
@@ -704,12 +794,12 @@
 	</variable>
 	<variable name="MusicPlotBox">
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre,[CR][B]$LOCALIZE[515]:[/B] ,]$INFO[ListItem.Year,[CR][B]$LOCALIZE[562]:[/B] ,]$INFO[ListItem.Duration,[CR][B]$LOCALIZE[180]:[/B] ,]</value>
-		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[183][/B][CR],]$INFO[Window(home).Property(Album.Song.1.Title),[CR][CR][B]$LOCALIZE[182][/B][CR][B]1. [/B],] $INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],] $INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],] $INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],] $INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],]
-			$INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],] $INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],] $INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],] $INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],] $INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],] $INFO[Window(home).Property(Album.Song.14.Title), [B]14.
-			[/B],] $INFO[Window(home).Property(Album.Song.15.Title), [B]15. [/B],] $INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]</value>
-		<value condition="Container.Content(albums) + IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(home).Property(Album.Song.1.Title),[B]$LOCALIZE[182][/B][CR][B]1. [/B],] $INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],] $INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],] $INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],] $INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],] $INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],]
-			$INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],] $INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],] $INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],] $INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],] $INFO[Window(home).Property(Album.Song.14.Title), [B]14. [/B],] $INFO[Window(home).Property(Album.Song.15.Title),
-			[B]15. [/B],] $INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]</value>
+		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description),[B]$LOCALIZE[183][/B][CR],]$INFO[Window(home).Property(Album.Song.1.Title),[CR][CR][B]$LOCALIZE[182][/B][CR][B]1. [/B],] $INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],] $INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],] $INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],] $INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],] $INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],] $INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],] $INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],] $INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],] $INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],] $INFO[Window(home).Property(Album.Song.14.Title), [B]14.
+			[/B],] $INFO[Window(home).Property(Album.Song.15.Title), [B]15. [/B],] $INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]
+		</value>
+		<value condition="Container.Content(albums) + IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(home).Property(Album.Song.1.Title),[B]$LOCALIZE[182][/B][CR][B]1. [/B],] $INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],] $INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],] $INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],] $INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],] $INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],] $INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],] $INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],] $INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],] $INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],] $INFO[Window(home).Property(Album.Song.14.Title), [B]14. [/B],] $INFO[Window(home).Property(Album.Song.15.Title), [B]15. [/B],]
+			$INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]
+		</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),[B]$LOCALIZE[21887][/B][CR],]$INFO[Window(home).Property(Artist.Album.1.Title),[CR][CR][B]$LOCALIZE[21888][/B][CR],]$INFO[Window(home).Property(Artist.Album.2.Title),[CR],]$INFO[Window(home).Property(Artist.Album.3.Title),[CR],]$INFO[Window(home).Property(Artist.Album.4.Title),[CR],]$INFO[Window(home).Property(Artist.Album.5.Title),[CR],]$INFO[Window(home).Property(Artist.Album.6.Title),[CR],]$INFO[Window(home).Property(Artist.Album.7.Title),[CR],]$INFO[Window(home).Property(Artist.Album.8.Title),[CR],]$INFO[Window(home).Property(Artist.Album.9.Title),[CR],]$INFO[Window(home).Property(Artist.Album.10.Title),[CR],]
 		</value>
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Property(Artist_Description))">$INFO[Window(home).Property(Artist.Album.1.Title),[B]$LOCALIZE[21888][/B][CR],]$INFO[Window(home).Property(Artist.Album.2.Title),[CR],]$INFO[Window(home).Property(Artist.Album.3.Title),[CR],]$INFO[Window(home).Property(Artist.Album.4.Title),[CR],]$INFO[Window(home).Property(Artist.Album.5.Title),[CR],]$INFO[Window(home).Property(Artist.Album.6.Title),[CR],]$INFO[Window(home).Property(Artist.Album.7.Title),[CR],]$INFO[Window(home).Property(Artist.Album.8.Title),[CR],]$INFO[Window(home).Property(Artist.Album.9.Title),[CR],]$INFO[Window(home).Property(Artist.Album.10.Title),[CR],]
@@ -760,15 +850,13 @@
 		<value condition="IsEmpty(ListItem.Property(Album_Description))">$INFO[Window(home).Property(Album.Song.1.Title), [B]1. [/B],][CR]$INFO[Window(home).Property(Album.Song.2.Title), [B]2. [/B],][CR]$INFO[Window(home).Property(Album.Song.3.Title), [B]3. [/B],][CR]$INFO[Window(home).Property(Album.Song.4.Title), [B]4. [/B],]</value>
 	</variable>
 	<variable name="MusicTracklistInfoVar">
-		<value
-			condition="![[!IsEmpty(Window(home).Property(Album.Song.13.Title)) + System.AlarmLessOrEqual(cycletracklist,3) + !System.AlarmLessOrEqual(cycletracklist,0)] | [!IsEmpty(Window(home).Property(Album.Song.9.Title)) + System.AlarmLessOrEqual(cycletracklist,6) + !System.AlarmLessOrEqual(cycletracklist,3)] | [!IsEmpty(Window(home).Property(Album.Song.5.Title)) + System.AlarmLessOrEqual(cycletracklist,9) + !System.AlarmLessOrEqual(cycletracklist,6)] | [!IsEmpty(Window(home).Property(Album.Song.1.Title)) + System.AlarmLessOrEqual(cycletracklist,12) + !System.AlarmLessOrEqual(cycletracklist,9)]]">$INFO[ListItem.Property(Album_Description)]</value>
+		<value condition="![[!IsEmpty(Window(home).Property(Album.Song.13.Title)) + System.AlarmLessOrEqual(cycletracklist,3) + !System.AlarmLessOrEqual(cycletracklist,0)] | [!IsEmpty(Window(home).Property(Album.Song.9.Title)) + System.AlarmLessOrEqual(cycletracklist,6) + !System.AlarmLessOrEqual(cycletracklist,3)] | [!IsEmpty(Window(home).Property(Album.Song.5.Title)) + System.AlarmLessOrEqual(cycletracklist,9) + !System.AlarmLessOrEqual(cycletracklist,6)] | [!IsEmpty(Window(home).Property(Album.Song.1.Title)) + System.AlarmLessOrEqual(cycletracklist,12) + !System.AlarmLessOrEqual(cycletracklist,9)]]">$INFO[ListItem.Property(Album_Description)]</value>
 	</variable>
 	<variable name="MusicTracklistAltVar">
 		<value condition="!IsEmpty(Window(home).Property(Album.Song.13.Title)) + System.AlarmLessOrEqual(cycletracklist,6) + !System.AlarmLessOrEqual(cycletracklist,3)">$INFO[Window(home).Property(Album.Song.13.Title), [B]13. [/B],][CR]$INFO[Window(home).Property(Album.Song.14.Title), [B]14. [/B],][CR]$INFO[Window(home).Property(Album.Song.15.Title), [B]15. [/B],][CR]$INFO[Window(home).Property(Album.Song.16.Title), [B]16. [/B],]</value>
 		<value condition="!IsEmpty(Window(home).Property(Album.Song.9.Title)) + System.AlarmLessOrEqual(cycletracklist,9) + !System.AlarmLessOrEqual(cycletracklist,6)">$INFO[Window(home).Property(Album.Song.9.Title), [B]9. [/B],][CR]$INFO[Window(home).Property(Album.Song.10.Title), [B]10. [/B],][CR]$INFO[Window(home).Property(Album.Song.11.Title), [B]11. [/B],][CR]$INFO[Window(home).Property(Album.Song.12.Title), [B]12. [/B],]</value>
 		<value condition="!IsEmpty(Window(home).Property(Album.Song.5.Title)) + System.AlarmLessOrEqual(cycletracklist,12) + !System.AlarmLessOrEqual(cycletracklist,9)">$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],][CR]$INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],][CR]$INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],][CR]$INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]</value>
-		<value
-			condition="IsEmpty(ListItem.Property(Album_Description)) + ![!IsEmpty(Window(home).Property(Album.Song.13.Title)) + System.AlarmLessOrEqual(cycletracklist,3) + !System.AlarmLessOrEqual(cycletracklist,0)] + ![!IsEmpty(Window(home).Property(Album.Song.9.Title)) + System.AlarmLessOrEqual(cycletracklist,6) + !System.AlarmLessOrEqual(cycletracklist,3)] + ![!IsEmpty(Window(home).Property(Album.Song.5.Title)) + System.AlarmLessOrEqual(cycletracklist,9) + !System.AlarmLessOrEqual(cycletracklist,6)] + ![!IsEmpty(Window(home).Property(Album.Song.1.Title)) + System.AlarmLessOrEqual(cycletracklist,12) + !System.AlarmLessOrEqual(cycletracklist,9)]">$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],][CR]$INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],][CR]$INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],][CR]$INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]</value>
+		<value condition="IsEmpty(ListItem.Property(Album_Description)) + ![!IsEmpty(Window(home).Property(Album.Song.13.Title)) + System.AlarmLessOrEqual(cycletracklist,3) + !System.AlarmLessOrEqual(cycletracklist,0)] + ![!IsEmpty(Window(home).Property(Album.Song.9.Title)) + System.AlarmLessOrEqual(cycletracklist,6) + !System.AlarmLessOrEqual(cycletracklist,3)] + ![!IsEmpty(Window(home).Property(Album.Song.5.Title)) + System.AlarmLessOrEqual(cycletracklist,9) + !System.AlarmLessOrEqual(cycletracklist,6)] + ![!IsEmpty(Window(home).Property(Album.Song.1.Title)) + System.AlarmLessOrEqual(cycletracklist,12) + !System.AlarmLessOrEqual(cycletracklist,9)]">$INFO[Window(home).Property(Album.Song.5.Title), [B]5. [/B],][CR]$INFO[Window(home).Property(Album.Song.6.Title), [B]6. [/B],][CR]$INFO[Window(home).Property(Album.Song.7.Title), [B]7. [/B],][CR]$INFO[Window(home).Property(Album.Song.8.Title), [B]8. [/B],]</value>
 	</variable>
 	<!-- Banner Stars -->
 	<variable name="Mod_Banner_Stars_1">

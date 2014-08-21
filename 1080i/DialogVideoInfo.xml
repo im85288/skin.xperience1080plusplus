@@ -5,9 +5,7 @@
 	<onload>SetProperty(fanart_image,$INFO[ListItem.Art(fanart)],home)</onload>
 	<onload condition="Skin.HasSetting(MovieInformation.PlayTrailer)">AlarmClock(PlayTrailer,PlayMedia($INFO[ListItem.Trailer],false,1),00:01,silent)</onload>
 	<onload>SendClick(2003,5)</onload>
-	<onload condition="System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
-	<onload condition="System.HasAddon(script.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
-	<onload condition="System.HasAddon(script.videoextras)"> XBMC.RunScript(script.videoextras,hasExtras,flag,"$INFO[ListItem.FilenameAndPath]")</onload>
+	<onload condition="System.HasAddon(script.tvtunes) + Skin.HasSetting(TVTunes.Enabled)">XBMC.RunScript(script.tvtunes,backend=True)</onload> 
 	<onunload>ClearProperty(fanart_image,home)</onunload>
 	<onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanart,.)</onload>
 	<onload condition="Skin.HasSetting(ExtraFanart.Enabled)">SetProperty(extrafanartshows,.)</onload>
@@ -72,22 +70,14 @@
 					<width>1251</width>
 					<height>805</height>
 					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
-					<visible>Container.Content(movies)</visible>
 				</control>
-				<control type="image">
-					<posx>656</posx>
-					<posy>272</posy>
-					<width>1251</width>
-					<height>653</height>
-					<texture colordiffuse="Mod_Tags_Alt" border="35">views/newgloss/whitepanel-15.png</texture>
-					<visible>!Container.Content(movies)</visible>
-				</control>
+			
 				<control type="group">
 					<!-- Mpaa reasons -->
 					<control type="group">
 						<posy>135</posy>
 						<posx>680</posx>
-						<visible>!IsEmpty(ListItem.MPAA) + Container.Content(movies)</visible>
+						<visible>!IsEmpty(ListItem.MPAA)</visible>
 						<control type="label">
 							<posx>0</posx>
 							<posy>0</posy>
@@ -162,13 +152,11 @@
 							</control>
 						</control>
 					</control>
-					
 					<control type="group">
 						<posx>1080</posx>
 						<posy>290</posy>
-					
 						<control type="group">
-							<visible>!Container.Content(movies)] + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+							<visible>!Container.Content(movies) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 							<control type="label">
 								<posx>0</posx>
 								<posy>0</posy>
@@ -191,13 +179,11 @@
 							</control>
 						</control>
 					</control>
-					
 					<control type="group">
 						<posx>1480</posx>
 						<posy>290</posy>
-					
 						<control type="group">
-							<visible>!Container.Content(movies)] + !IsEmpty(Window(Home).Property(NextAired.LatestDate))</visible>
+							<visible>!Container.Content(movies) + !IsEmpty(Window(Home).Property(NextAired.LatestDate))</visible>
 							<control type="label">
 								<posx>0</posx>
 								<posy>0</posy>
@@ -220,8 +206,6 @@
 							</control>
 						</control>
 					</control>
-					
-					
 					<!-- WRITER -->
 					<control type="group">
 						<posx>680</posx>
@@ -566,18 +550,17 @@
 									<onclick>SendClick(2003,8)</onclick>
 									<icon>aeonflags/addition/OSDPlayNF.png</icon>
 									<thumb>aeonflags/addition/OSDPlayFO.png</thumb>
-									<visible>[[System.HasAddon(script.cinema.experience) + IsEmpty(Window(movieinformation).Property(videoinfo.cinemaexperience)) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | !System.HasAddon(script.cinema.experience) | !Container.Content(movies) | SubString(Container.FolderPath,plugin)]</visible>
 								</item>
-								<item id="1">
+								<item id="2">
 									<description>Cinema Experience</description>
 									<label>Cinema Ex</label>
 									<onclick>XBMC.RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
 									<onclick>Dialog.Close(MovieInformation)</onclick>
-									<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies) + !SubString(Container.FolderPath,plugin) + !IsEmpty(Window(movieinformation).Property(videoinfo.cinemaexperience))</visible>
+									<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
 									<icon>aeonflags/addition/OSDBookMarksNF.png</icon>
 									<thumb>aeonflags/addition/OSDBookMarksFO.png</thumb>
 								</item>
-								<item id="2">
+								<item id="3">
 									<label>$LOCALIZE[20410]</label>
 									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PreviousMenu</onclick>
 									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer])</onclick>
@@ -587,14 +570,8 @@
 									<icon>aeonflags/addition/OSDVideoNF.png</icon>
 									<thumb>aeonflags/addition/OSDVideoFO.png</thumb>
 								</item>
-								<item id="6">
-									<label>Extras</label>
-									<onclick>XBMC.RunScript(script.videoextras,display,"$INFO[ListItem.FilenameAndPath]")</onclick>
-									<visible>System.HasAddon(script.videoextras) + [Container.Content(movies) | Container.Content(episodes) | Container.Content(TVShows)] + !IsEmpty(Window.Property(flag))</visible>
-									<icon>aeonflags/addition/OSDVizNF.png</icon>
-									<thumb>aeonflags/addition/OSDVizFO.png</thumb>
-								</item>
-								<item id="3">
+							
+								<item id="4">
 									<description>Get Artwork</description>
 									<label>$LOCALIZE[13511]</label>
 									<onclick>ActivateWindow(3004)</onclick>
@@ -602,7 +579,7 @@
 									<thumb>aeonflags/addition/OSDInfoFO.png</thumb>
 									<visible>!Skin.HasSetting(KioskMode) + [Container.Content(movies) | Container.Content(tvshows)] + !Container.Content(musicvideos)</visible>
 								</item>
-								<item id="3">
+								<item id="4">
 									<description>Get Artwork</description>
 									<label>$LOCALIZE[13511]</label>
 									<onclick>SetProperty(ChooseArt,1,3004)</onclick>
@@ -611,37 +588,29 @@
 									<thumb>aeonflags/addition/OSDInfoFO.png</thumb>
 									<visible>[Container.Content(musicvideos) | Container.Content(episodes)] + !Skin.HasSetting(KioskMode)</visible>
 								</item>
-								<item id="4">
+								<item id="5">
 									<description>Get theme</description>
 									<label>$LOCALIZE[41333]</label>
 									<icon>aeonflags/addition/OSDAudioNF.png</icon>
 									<thumb>aeonflags/addition/OSDAudioFO.png</thumb>
-									<onclick>RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
-									<visible>!Skin.HasSetting(KioskMode) + [Container.Content(TVShows) | Container.Content(Seasons)] + System.HasAddon(script.tvtunes)</visible>
+									<onclick>RunScript(script.tvtunes,mode=solo)</onclick>
+									<visible>!Skin.HasSetting(KioskMode) + [Container.Content(TVShows) | Container.Content(movies)] + System.HasAddon(script.tvtunes) + Skin.HasSetting(TVTunes.Enabled) + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>
 								</item>
-								<item id="4">
-									<description>Get theme</description>
-									<label>$LOCALIZE[41333]</label>
-									<icon>aeonflags/addition/OSDAudioNF.png</icon>
-									<thumb>aeonflags/addition/OSDAudioFO.png</thumb>
-									<onclick>XBMC.RunScript(script.tvtunes, mode=solo&amp;path=$INFO[ListItem.FilenameAndPath]&amp;name=$INFO[ListItem.TVShowTitle])</onclick>
-									<visible>Container.Content(movies) + System.HasAddon(script.tvtunes) + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>
-								</item>
-								<item id="7">
+								<item id="8">
 									<label>Update Ratings</label>
 									<icon>aeonflags/addition/OSDRatingsNF.png</icon>
 									<thumb>aeonflags/addition/OSDRatingsFO.png</thumb>
 									<onclick>RunScript(script.ratingupdate,Single=TVShow)</onclick>
 									<visible>System.HasAddon(script.ratingupdate) + Container.Content(TVShows)</visible>
 								</item>
-								<item id="7">
+								<item id="8">
 									<label>Update Ratings</label>
 									<icon>aeonflags/addition/OSDRatingsNF.png</icon>
 									<thumb>aeonflags/addition/OSDRatingsFO.png</thumb>
 									<onclick>RunScript(script.ratingupdate,Single=Movie)</onclick>
 									<visible>System.HasAddon(script.ratingupdate) + Container.Content(Movies)</visible>
 								</item>
-								<item id="5">
+								<item id="6">
 									<label>$LOCALIZE[41307]</label>
 									<onclick>SendClick(2003,6)</onclick>
 									<icon>aeonflags/addition/OSDSkinNF.png</icon>
@@ -782,6 +751,20 @@
 							<align>justify</align>
 							<autoscroll delay="13000" time="3000" repeat="13000" />
 							<pagecontrol>70</pagecontrol>
+							<visible>!IsEmpty(ListItem.Plot)</visible>
+						</control>
+						<control type="textbox">
+							<posx>0</posx>
+							<posy>40</posy>
+							<width>1200</width>
+							<height>200</height>
+							<label>$INFO[ListItem.PlotOutline]</label>
+							<font>Font-Condensed-S38-B</font>
+							<textcolor>Mod_Tags_Views</textcolor>
+							<align>justify</align>
+							<autoscroll delay="13000" time="3000" repeat="13000" />
+							<pagecontrol>70</pagecontrol>
+							<visible>IsEmpty(ListItem.Plot)</visible>
 						</control>
 						<control type="scrollbar" id="70">
 							<description>Scrollbar</description>

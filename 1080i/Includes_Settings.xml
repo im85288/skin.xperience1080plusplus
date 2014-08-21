@@ -571,7 +571,7 @@
 				<onclick>Skin.ToggleSetting(GlobalImageFanart)</onclick>
 				<label>Use Fanart</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
-				<visible>System.HasAddon(script.grab.fanart)</visible>
+				<visible>System.HasAddon(script.grab.fanart) | [!System.HasAddon(script.grab.fanart) + Skin.HasSetting(xbmb3c)]</visible>
 			</control>
 		</control>
 		<control type="button" id="4">
@@ -731,7 +731,16 @@
 				<onclick>Skin.ToggleSetting(HomeMovieImageFanart)</onclick>
 				<label>Use Fanart</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
-				<visible>System.HasAddon(script.grab.fanart)</visible>
+				<visible>System.HasAddon(script.grab.fanart) | [!System.HasAddon(script.grab.fanart) + Skin.HasSetting(xbmb3c)]</visible>
+			</control>
+			<control type="radiobutton" id="2105">
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
+				<selected>Skin.HasSetting(HomeMovieImageCDs)</selected>
+				<onclick>Skin.ToggleSetting(HomeMovieImageCDs)</onclick>
+				<label>Use Live CDs</label>
+				<visible>Skin.HasSetting(HomeMovieImageFanart) | !IsEmpty(Skin.String(HomeMoviesMultiImage)) | !IsEmpty(Skin.String(HomeMoviesSingleImage))</visible>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2105)">Conditional</animation>
 			</control>
 		</control>
 		<control type="button" id="4">
@@ -823,7 +832,16 @@
 				<onclick>Skin.ToggleSetting(HomeTvImageFanart)</onclick>
 				<label>Use Fanart</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
-				<visible>System.HasAddon(script.grab.fanart)</visible>
+				<visible>System.HasAddon(script.grab.fanart) | [!System.HasAddon(script.grab.fanart) + Skin.HasSetting(xbmb3c)]</visible>
+			</control>
+			<control type="radiobutton" id="2105">
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
+				<selected>Skin.HasSetting(HomeTVImageCDs)</selected>
+				<onclick>Skin.ToggleSetting(HomeTVImageCDs)</onclick>
+				<label>Use Live CDs</label>
+				<visible>Skin.HasSetting(HomeTVImageFanart) | !IsEmpty(Skin.String(HomeTVMultiImage)) | !IsEmpty(Skin.String(HomeTVSingleImage))</visible>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2105)">Conditional</animation>
 			</control>
 		</control>
 		<control type="button" id="4">
@@ -1137,7 +1155,16 @@
 				<onclick>Skin.ToggleSetting(HomeMusicImageFanart)</onclick>
 				<label>Use Fanart</label>
 				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2104)">Conditional</animation>
-				<visible>System.HasAddon(script.grab.fanart)</visible>
+				<visible>System.HasAddon(script.grab.fanart) | [!System.HasAddon(script.grab.fanart) + Skin.HasSetting(xbmb3c)]</visible>
+			</control>
+			<control type="radiobutton" id="2105">
+				<include condition="!Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVars</include>
+				<include condition="Skin.HasSetting(DarkerPanels)">SettingsBackgroundDialogRadioButtonVarsDarkerBackground</include>
+				<selected>Skin.HasSetting(HomeMusicImageCDs)</selected>
+				<onclick>Skin.ToggleSetting(HomeMusicImageCDs)</onclick>
+				<label>Use Live CDs</label>
+				<visible>Skin.HasSetting(HomeMusicImageFanart) | !IsEmpty(Skin.String(HomeMusicMultiImage)) | !IsEmpty(Skin.String(HomeMusicSingleImage))</visible>
+				<animation effect="fade" end="47" time="0" condition="!Control.IsEnabled(2105)">Conditional</animation>
 			</control>
 		</control>
 		<control type="button" id="4">

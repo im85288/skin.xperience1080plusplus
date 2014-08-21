@@ -3,22 +3,36 @@
 	<defaultcontrol>525</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<backgroundcolor>0</backgroundcolor>
+	<onload condition="System.HasAddon(plugin.video.xbmb3c)">RunScript(plugin.video.xbmb3c,skin)</onload>
 	<onload condition="System.HasAddon(script.grab.fanart)">RunScript(script.grab.fanart,mode=random,refresh=10)</onload>
 	<onload condition="System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,skin)</onload>
 	<onload condition="System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,shelf)</onload>
 	<onload condition="System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)">RunScript(plugin.video.plexbmc,channelShelf)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=trendingmovies)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=toprated)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=trendingshows)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=incinemaRT)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=popular)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=cyanide)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=xkcd)</onload>
 	<onload condition="!Skin.HasSetting(Skin.Initialization)">SetProperty(Skin.Initialization,1,startup)</onload>
 	<onload condition="!Skin.HasSetting(Skin.Initialization) | IsEmpty(Window(startup).Property(Started))">AlarmClock(Skin.Initialization,ReplaceWindow(startup),00:01,silent)</onload>
 	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveThree,Control.Move(5032,1),00:04,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveThree,Control.Move(50322,1),00:04,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveTwo,Control.Move(5022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveTwo,Control.Move(50222,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(2) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMoveTwo,Control.Move(502222,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(3) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(2022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(3) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(20222,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(3) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(202222,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(4) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(3022,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(4) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(30222,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(11) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(11022,1),00:07,silent,loop)</onload>
-	<onload condition="Container(20).HasFocus(10) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(10022,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(10) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(100222,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(10) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(334455,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(5) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(4022,1),00:07,silent,loop)</onload>
 	<onload condition="Container(20).HasFocus(5) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(40222,1),00:07,silent,loop)</onload>
+	<onload condition="Container(20).HasFocus(5) + [stringcompare(Skin.String(HomeScreen),metro) | IsEmpty(Skin.String(HomeScreen))]">AlarmClock(HomeTileMove,Control.Move(402222,1),00:07,silent,loop)</onload>
 	<onload>AlarmClock(PvrTileMove,Control.Move(7891,1),00:07,silent,loop)</onload>
 	<onload condition="!Skin.HasSetting(HideHomeProfileInfo)">AlarmClock(ProfileMove,Control.Move(30,1),00:10,silent,loop)</onload>
 	<onload condition="IsEmpty(Skin.String(musiccolor.name)) | !SubString(Skin.String(musiccolor.name),Tiles)">Skin.SetString(musiccolor.name,Yellow Tiles)</onload>

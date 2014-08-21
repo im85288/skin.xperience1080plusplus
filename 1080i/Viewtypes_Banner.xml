@@ -92,7 +92,7 @@
 				<pagecontrol>70</pagecontrol>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
-				<viewtype label="List (Banners)">list</viewtype>
+				<viewtype label="42304">list</viewtype>
 				<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 				<onleft condition="Skin.HasSetting(KioskMode)">60</onleft>
 				<onright>70</onright>
@@ -431,7 +431,7 @@
 								<textcolor>FF484848</textcolor>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
 								<font>Font-Condensed-S25</font>
-								<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
 							</control>
 							<control type="textbox">
 								<description>Plot</description>
@@ -444,7 +444,7 @@
 								<textcolor>FF484848</textcolor>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
 								<font>Font-Condensed-S25</font>
-								<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 							</control>
 						</control>
 					</control>
@@ -452,4 +452,644 @@
 			</control>
 		</control>
 	</include>
+	
+	
+	<!-- =========== -->
+<!-- Banner (600) -->
+<!-- =========== -->
+    <include name="Viewtype-BannerOriginal">        
+        <control type="group">
+            <include>FullscreenDimensions</include>
+            <include>OptionsShutdownAnimation</include>
+            <include>BannerListAnimations</include>
+            <visible>Control.IsVisible(600)</visible>        
+            <control type="fixedlist" id="600">
+                <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Sets)</visible>
+                <posx>0</posx>
+                <posy>134</posy>
+                <width>1920</width>
+                <height>812</height>
+                <pagecontrol>70</pagecontrol>
+                <scrolltime tween="cubic" easing="out">500</scrolltime>
+                <orientation>vertical</orientation>
+                <viewtype label="Banner Original">list</viewtype>
+                <onright condition="!Skin.HasSetting(KioskMode)">9010</onright>
+                <onright condition="Skin.HasSetting(KioskMode)">600</onright>
+                <onleft>70</onleft>
+                <onup>600</onup>
+                <ondown>600</ondown>
+                <movement>3</movement>
+                <focusposition>3</focusposition>
+                <preloaditems>2</preloaditems>
+                <itemlayout height="64" condition="!Container.Content(Episodes)">
+                    <control type="group">
+                        <posx>630</posx>
+                        <animation effect="slide" end="-34" time="0" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">Conditional</animation>
+                        <animation effect="slide" end="165" time="0" condition="Container.Content(Seasons)">Conditional</animation>
+                        <control type="image">
+                            <posx>-212</posx>
+                            <posy>18</posy>
+                            <width>157</width>
+                            <height>27</height>
+                            <texture>$INFO[ListItem.StarRating,views/banner/other/,]</texture>
+                            <colordiffuse>77white</colordiffuse>
+                            <visible>!Container.Content(Seasons)</visible>
+                            <animation effect="slide" end="34" time="0" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">Conditional</animation>
+                        </control>
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>62</height>
+                            <label fallback="[COLOR=33FFFFFF]0000[/COLOR]">$INFO[ListItem.Year]</label>
+                            <font>Font-Condensed-S36</font>
+                            <selectedcolor>SelectedGreen</selectedcolor>
+                            <textcolor>77white</textcolor>
+                            <scroll>false</scroll>
+                            <align>left</align>
+                            <visible>!IsEmpty(ListItem.Title) + !Container.Content(Seasons)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>30</posx>
+                            <posy>0</posy>
+                            <width>175</width>
+                            <height>62</height>
+                            <label>$INFO[ListItem.Property(NumEpisodes)]</label>
+                            <font>Font-Condensed-S36</font>
+                            <textcolor>44FFFFFF</textcolor>
+                            <scroll>false</scroll>
+                            <align>right</align>
+                            <visible>Container.Content(Seasons)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>85</posx>
+                            <posy>0</posy>
+                            <width>730</width>
+                            <height>64</height>
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>Font-Condensed-S34-B</font>
+                            <selectedcolor>SelectedGreen</selectedcolor>
+                            <textcolor>C0FFFFFF</textcolor>
+                            <scroll>false</scroll>
+                            <align>left</align>
+                        </control>
+                        <control type="image">
+                            <posx>888</posx>
+                            <posy>17</posy>
+                            <width>28</width>
+                            <height>28</height>
+                            <texture>$VAR[BannerOverlayNF]</texture>
+                            <colordiffuse>99FFFFFF</colordiffuse>
+                            <visible>!Container.Content(TVShows) + !Container.Content(Seasons)</visible>
+                        </control>
+                        <control type="group">
+                            <visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+                            <animation effect="slide" end="6" time="0" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">Conditional</animation>
+                            <animation effect="slide" end="-416" time="0" condition="Container.Content(Seasons)">Conditional</animation>
+                            <posx>835</posx>
+                            <posy>10</posy>
+                            <control type="image">
+                                <posx>0</posx>
+                                <posy>1</posy>
+                                <width>64</width>
+                                <height>40</height>
+                                <texture>views/banner/other/unwatched-nf.png</texture>
+                                <colordiffuse>99FFFFFF</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <posx>32</posx>
+                                <posy>0</posy>
+                                <width>64</width>
+                                <height>42</height>
+                                <label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
+                                <font>Font-Condensed-S30-B</font>
+                                <textcolor>aawhite</textcolor>
+                                <scroll>no</scroll>
+                                <align>center</align>
+                            </control>
+                        </control>
+                    </control>
+                </itemlayout>
+                <itemlayout height="64" condition="Container.Content(Episodes)">
+                    <control type="group">
+                        <posx>762</posx>
+                        <control type="image">
+                            <posx>743</posx>
+                            <posy>17</posy>
+                            <width>28</width>
+                            <height>28</height>
+                            <texture>$VAR[BannerOverlayNF]</texture>
+                            <colordiffuse>99FFFFFF</colordiffuse>
+                        </control>
+                        <control type="image">
+                            <posx>-207</posx>
+                            <posy>18</posy>
+                            <width>157</width>
+                            <height>27</height>
+                            <texture>$INFO[ListItem.StarRating,views/banner/other/,]</texture>
+                            <colordiffuse>77white</colordiffuse>
+                            <visible>!Container.Content(Seasons)</visible>
+                            <animation effect="slide" end="34" time="0" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">Conditional</animation>
+                        </control>
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>100</width>
+                            <height>62</height>
+                            <label>$INFO[ListItem.Season]$INFO[ListItem.Episode]</label>
+                            <font>Font-Condensed-S36</font>
+                            <selectedcolor>SelectedGreen</selectedcolor>
+                            <textcolor>77white</textcolor>
+                            <scroll>false</scroll>
+                            <align>left</align>
+                            <visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
+                        </control>
+                        <control type="label">
+                            <posx>100</posx>
+                            <posy>0</posy>
+                            <width>650</width>
+                            <height>64</height>
+                            <label>$INFO[ListItem.Title]</label>
+                            <font>Font-Condensed-S34-B</font>
+                            <textcolor>C0FFFFFF</textcolor>
+                            <scroll>false</scroll>
+                            <align>left</align>
+                        </control>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="428" condition="Container.Content(Movies) | [Container.Content(TVShows) + Skin.HasSetting(posterstv)] | Container.Content(Sets)">
+                    <control type="group">
+                        <posx>330</posx>
+                        <animation effect="slide" start="0,64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(600).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(600).OnNext">Focus</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1262</width>
+                            <height>428</height>
+                            <texture border="60">views/banner/other/panel.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>33</posx>
+                            <posy>35</posy>
+                            <width>239</width>
+                            <height>358</height>
+                            <fadetime>300</fadetime>
+                            <texture diffuse="views/banner/diffuse/poster.png" background="true">$VAR[WallPoster]</texture>
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="group">
+                            <posx>300</posx>
+                            <control type="image">
+                                <posx>839</posx>
+                                <posy>35</posy>
+                                <width>88</width>
+                                <height>88</height>
+                                <texture>$VAR[BannerOverlayFo]</texture>
+                                <visible>!Container.Content(TVShows)</visible>
+                            </control>
+                            <control type="image">
+                                <posx>3</posx>
+                                <posy>108</posy>
+                                <width>60</width>
+                                <height>57</height>
+                                <aspectratio align="center" aligny="center">keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Studio,aeonflags/studios/,.png]</texture>
+                                <colordiffuse>FF383838</colordiffuse>
+                                <visible>Container.Content(TVShows) + !IsEmpty(ListItem.Studio)</visible>
+                            </control>
+                            <control type="group">
+                                <visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+                                <posx>835</posx>
+                                <posy>53</posy>
+                                <control type="image">
+                                    <posx>0</posx>
+                                    <posy>1</posy>
+                                    <width>64</width>
+                                    <height>40</height>
+                                    <texture>views/banner/other/unwatched.png</texture>
+                                </control>
+                                <control type="label">
+                                    <posx>32</posx>
+                                    <posy>0</posy>
+                                    <width>64</width>
+                                    <height>42</height>
+                                    <label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
+                                    <font>Font-Condensed-S30-B</font>
+                                    <textcolor>FF27D0FA</textcolor>
+                                    <scroll>no</scroll>
+                                    <align>center</align>
+                                </control>
+                            </control>
+                            <control type="image">
+                                <posx>10</posx>
+                                <posy>123</posy>
+                                <width>43</width>
+                                <height>28</height>
+                                <texture>$VAR[BannerListHDSDFlag]</texture>
+                                <colordiffuse>eewhite</colordiffuse>
+                                <visible>!IsEmpty(ListItem.VideoResolution)</visible>
+                            </control>
+                            <control type="image">
+                                <description>Set icon</description>
+                                <posx>10</posx>
+                                <posy>104</posy>
+                                <width>44</width>
+                                <height>28</height>
+                                <texture>flags/other/set-banner.png</texture>
+                                <visible>substring(ListItem.Path,videodb://movies/sets,left) | ListItem.IsFolder</visible>
+                            </control>
+                            <control type="label">
+                                <posx>0</posx>
+                                <posy>59</posy>
+                                <width>100</width>
+                                <label>$INFO[ListItem.Year]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>FF484848</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>85</posx>
+                                <posy>60</posy>
+                                <width>710</width>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S34-B</font>
+                                <textcolor>FF333333</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <description>Rating / Duration Label</description>
+                                <posx>85</posx>
+                                <posy>103</posy>
+                                <width>815</width>
+                                <font>Font-Condensed-S28</font>
+                                <label>$INFO[ListItem.Rating,★ ,]$INFO[ListItem.Duration, [COLOR=77484848]/[/COLOR] , $LOCALIZE[12391]]</label>
+                                <textcolor>FF484848</textcolor>
+                                <align>left</align>
+                                <scroll>false</scroll>
+                            </control>
+                            <control type="label">
+                                <posx>85</posx>
+                                <posy>140</posy>
+                                <width>815</width>
+                                <label>$INFO[ListItem.Genre]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>FF484848</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="textbox">
+                                <description>Plot</description>
+                                <posx>0</posx>
+                                <posy>177</posy>
+                                <width>900</width>
+                                <height>200</height>
+                                <info>ListItem.Plot</info>
+                                <align>justify</align>
+                                <textcolor>FF484848</textcolor>
+                                <autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+                                <font>Font-Condensed-S29</font>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <description>Scrollbar underlay</description>
+                            <posx>269</posx>
+                            <posy>35</posy>
+                            <width>6</width>
+                            <height>358</height>
+                            <texture border="1">windows/common/darkgrey.png</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <focusedlayout height="428" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">
+                    <control type="group">
+                        <posx>330</posx>
+                        <animation effect="slide" start="0,64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(600).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(600).OnNext">Focus</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1260</width>
+                            <height>428</height>
+                            <texture border="60">views/banner/other/panel.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>35</posx>
+                            <posy>33</posy>
+                            <width>1190</width>
+                            <height>220</height>
+                            <texture diffuse="views/banner/diffuse/banner.png" background="true">$VAR[DefaultBanner]</texture>
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="image">
+                            <posx>35</posx>
+                            <posy>71</posy>
+                            <width>1190</width>
+                            <height>183</height>
+                            <texture>views/banner/other/banner-overlay.png</texture>
+                        </control>
+                        <control type="group">
+                            <posx>266</posx>
+                            <posy>219</posy>
+                            <control type="image">
+                                <posx>-180</posx>
+                                <posy>44</posy>
+                                <width>161</width>
+                                <aspectratio align="center" aligny="center">center</aspectratio>
+                                <height>120</height>
+                                <texture background="true">$INFO[ListItem.Studio,aeonflags/studios/,.png]</texture>
+                                <colordiffuse>FF383838</colordiffuse>
+                                <visible>!IsEmpty(ListItem.Studio)</visible>
+                            </control>
+                            <control type="group">
+                                <visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+                                <posx>841</posx>
+                                <posy>84</posy>
+                                <control type="image">
+                                    <posx>0</posx>
+                                    <posy>1</posy>
+                                    <width>64</width>
+                                    <height>40</height>
+                                    <texture>views/banner/other/unwatched.png</texture>
+                                </control>
+                                <control type="label">
+                                    <posx>32</posx>
+                                    <posy>0</posy>
+                                    <width>64</width>
+                                    <height>42</height>
+                                    <label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
+                                    <font>Font-Condensed-S30-B</font>
+                                    <textcolor>FF27D0FA</textcolor>
+                                    <scroll>no</scroll>
+                                    <align>center</align>
+                                </control>
+                            </control>
+                            <control type="label">
+                                <posx>0</posx>
+                                <posy>69</posy>
+                                <width>100</width>
+                                <label>$INFO[ListItem.Year]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>FF484848</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>85</posx>
+                                <posy>70</posy>
+                                <width>710</width>
+                                <label>$INFO[ListItem.Label]</label>
+                                <font>Font-Condensed-S34-B</font>
+                                <textcolor>FF333333</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>4</posx>
+                                <posy>112</posy>
+                                <width>100</width>
+                                <label>$INFO[ListItem.Rating,★ ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>FF484848</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>85</posx>
+                                <posy>112</posy>
+                                <width>775</width>
+                                <label>$INFO[ListItem.Genre]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>FF484848</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <focusedlayout height="428" condition="Container.Content(Seasons)">
+                    <control type="group">
+                        <posx>580</posx>
+                        <animation effect="slide" start="0,64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(600).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(600).OnNext">Focus</animation>                      
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>762</width>
+                            <height>428</height>
+                            <texture border="60">views/banner/other/panel.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>33</posx>
+                            <posy>35</posy>
+                            <width>239</width>
+                            <height>358</height>
+                            <fadetime>300</fadetime>
+                            <texture diffuse="views/banner/diffuse/poster.png" background="true">$VAR[WallPoster]</texture>
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="label">
+                            <posx>300</posx>
+                            <posy>73</posy>
+                            <width>520</width>
+                            <label>$INFO[ListItem.Label]</label>
+                            <font>Font-Condensed-S34-B</font>
+                            <textcolor>FF333333</textcolor>
+                            <scroll>false</scroll>
+                            <align>left</align>
+                        </control>
+                        <control type="label">
+                            <description>Episodes</description>
+                            <posx>300</posx>
+                            <posy>114</posy>
+                            <width>587</width>
+                            <font>Font-Condensed-S28</font>
+                            <label>$VAR[ListItem.Property(NumEpisodes)]</label>
+                            <textcolor>FF484848</textcolor>
+                            <align>left</align>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="image">
+                            <posx>536</posx>
+                            <posy>233</posy>
+                            <width>161</width>
+                            <aspectratio align="right" aligny="bottom">center</aspectratio>
+                            <height>120</height>
+                            <texture background="true">$INFO[ListItem.Studio,aeonflags/studios/,.png]</texture>
+                            <colordiffuse>FF383838</colordiffuse>
+                            <visible>!IsEmpty(ListItem.Studio)</visible>
+                        </control>
+                        <control type="group">
+                            <visible>IntegerGreaterThan(ListItem.Property(unWatchedEpisodes),0)</visible>
+                            <posx>634</posx>
+                            <posy>67</posy>
+                            <control type="image">
+                                <posx>0</posx>
+                                <posy>1</posy>
+                                <width>64</width>
+                                <height>40</height>
+                                <texture>views/banner/other/unwatched.png</texture>
+                            </control>
+                            <control type="label">
+                                <posx>32</posx>
+                                <posy>0</posy>
+                                <width>64</width>
+                                <height>42</height>
+                                <label>$INFO[ListItem.Property(unWatchedEpisodes)]</label>
+                                <font>Font-Condensed-S30-B</font>
+                                <textcolor>FF27D0FA</textcolor>
+                                <scroll>no</scroll>
+                                <align>center</align>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <description>Scrollbar underlay</description>
+                            <posx>269</posx>
+                            <posy>35</posy>
+                            <width>6</width>
+                            <height>358</height>
+                            <texture border="1">windows/common/darkgrey.png</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+                <focusedlayout height="428" condition="Container.Content(Episodes)">
+                    <control type="group">
+                        <posx>68</posx>
+                        <animation effect="slide" start="0,64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(600).OnPrevious">Focus</animation>
+                        <animation effect="slide" start="0,-64" end="0,0" time="300" reversible="false" tween="back" easing="out" condition="Container(600).OnNext">Focus</animation>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1512</width>
+                            <height>428</height>
+                            <texture border="60">views/banner/other/panel.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>33</posx>
+                            <posy>35</posy>
+                            <width>636</width>
+                            <height>358</height>
+                            <texture diffuse="views/banner/diffuse/episode.png" background="true">$VAR[BannerLandscape]</texture>
+                            <aspectratio scalediffuse="false">scale</aspectratio>
+                        </control>
+                        <control type="group">
+                            <posy>55</posy>
+                            <posx>694</posx>
+                            <control type="label">
+                                <posx>0</posx>
+                                <posy>4</posy>
+                                <width>100</width>
+                                <label>$VAR[ListItem.Season]$VAR[ListItem.Episode]</label>
+                                <font>Font-Condensed-S36</font>
+                                <textcolor>FF484848</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                                <visible>!IsEmpty(ListItem.Season) + !IsEmpty(ListItem.Episode)</visible>
+                            </control>
+                            <control type="label">
+                                <posx>100</posx>
+                                <posy>5</posy>
+                                <width>610</width>
+                                <label>$VAR[ListItem.Title]</label>
+                                <font>Font-Condensed-S34-B</font>
+                                <textcolor>FF333333</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="image">
+                                <posx>695</posx>
+                                <posy>-20</posy>
+                                <width>88</width>
+                                <height>88</height>
+                                <texture>$VAR[BannerOverlayFo]</texture>
+                            </control>
+                            <control type="image">
+                                <posx>18</posx>
+                                <posy>68</posy>
+                                <width>43</width>
+                                <height>28</height>
+                                <texture>$VAR[BannerListHDSDFlag]</texture>
+                                <colordiffuse>eewhite</colordiffuse>
+                                <visible>!IsEmpty(ListItem.VideoResolution)</visible>
+                            </control>
+                            <control type="label">
+                                <posx>100</posx>
+                                <posy>48</posy>
+                                <width>660</width>
+                                <label>$INFO[ListItem.Rating,★ ,]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>FF484848</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="label">
+                                <posx>100</posx>
+                                <posy>85</posy>
+                                <width>660</width>
+                                <label>$INFO[ListItem.Date]</label>
+                                <font>Font-Condensed-S28</font>
+                                <textcolor>FF484848</textcolor>
+                                <scroll>false</scroll>
+                                <align>left</align>
+                            </control>
+                            <control type="textbox">
+                                <description>Plot</description>
+                                <posx>0</posx>
+                                <posy>122</posy>
+                                <width>760</width>
+                                <height>200</height>
+                                <info>ListItem.Plot</info>
+                                <align>justify</align>
+                                <textcolor>FF484848</textcolor>
+                                <autoscroll delay="13000" time="3000" repeat="13000">!Skin.HasSetting(AutoScroll.Disable)</autoscroll>
+                                <font>Font-Condensed-S29</font>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <description>Scrollbar underlay</description>
+                            <posx>666</posx>
+                            <posy>35</posy>
+                            <width>6</width>
+                            <height>358</height>
+                            <texture border="1">windows/common/darkgrey.png</texture>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="group">
+                <animation effect="slide" start="0" end="-265" time="0" condition="Container.Content(TVShows) + !Skin.HasSetting(posterstv)">Conditional</animation>
+                <animation effect="slide" start="0" end="135" time="0" condition="Container.Content(Episodes)">Conditional</animation>
+                <animation effect="slide" start="0" end="250" time="0" condition="Container.Content(Seasons)">Conditional</animation>
+                <control type="image">
+                    <description>Scrollbar background (visible on focus)</description>
+                    <posx>599</posx>
+                    <posy>169</posy>
+                    <width>6</width>
+                    <height>742</height>
+                    <texture border="1">views/other/scrollbar-sq.png</texture>
+                    <visible>Control.IsVisible(600) + Control.HasFocus(70)</visible>
+                    <animation effect="fade" start="0" end="25" time="300" tween="sine" easing="inout">Visible</animation>
+                    <animation effect="fade" start="25" end="0" time="300" tween="sine" easing="inout">Hidden</animation>
+                </control>
+                <control type="scrollbar" id="70">
+                    <description>Scrollbar</description>
+                    <posx>599</posx>
+                    <posy>169</posy>
+                    <width>6</width>
+                    <height>742</height>
+                    <texturesliderbar border="1">views/other/scrollbar-sq.png</texturesliderbar>
+                    <texturesliderbarfocus border="1">views/other/scrollbar-sq.png</texturesliderbarfocus>
+                    <orientation>vertical</orientation>
+                    <showonepage>false</showonepage>
+                    <onright>600</onright>
+                    <onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
+                    <onleft condition="Skin.HasSetting(KioskMode)">600</onleft>
+                    <animation effect="fade" start="75" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(9772)">Conditional</animation>
+                    <visible>Control.IsVisible(600)</visible>
+                </control>
+            </control>
+        </control>
+    </include>
 </includes>

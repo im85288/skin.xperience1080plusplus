@@ -85,7 +85,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>Mod_Tags</textcolor>
+                    <textcolor>mod-infotags</textcolor>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>
                 </control>
@@ -97,7 +97,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>Mod_Tags</textcolor>
+                    <textcolor>mod-infotags</textcolor>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(2))">Conditional</animation>
                     <animation effect="slide" end="0,25" time="0" condition="IsEmpty(Control.GetLabel(4))">Conditional</animation>
                 </control>
@@ -109,7 +109,7 @@
                     <font>Font-Condensed-S45</font>
                     <align>center</align>
                     <label>-</label>
-                    <textcolor>Mod_Tags</textcolor>
+                    <textcolor>mod-infotags</textcolor>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(2))">Conditional</animation>
                     <animation effect="slide" end="0,-25" time="0" condition="IsEmpty(Control.GetLabel(3))">Conditional</animation>
                 </control>

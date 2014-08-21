@@ -6,6 +6,7 @@
 	<controls>
 		<control type="GroupList">
 			<description>Button labels</description>
+			<visible>!Skin.HasSetting(UseAlternativeMetro)</visible>
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
 				<effect type="zoom" start="0,229,1920,1" end="0,170,1920,70" tween="sine" easing="out" time="200" />
@@ -32,7 +33,7 @@
 				<label>Classic</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
-				<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
 			</control>
 			<control type="label">
 				<description>Root</description>
@@ -40,7 +41,7 @@
 				<label>Classic</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>!Container(3).HasFocus(1)</visible>
 			</control>
 			<control type="label">
@@ -50,7 +51,7 @@
 				<label>Classic</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>Container(3).HasFocus(1)</visible>
 			</control>
 			<control type="label">
@@ -59,7 +60,7 @@
 				<label>Horizontal</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
-				<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
 			</control>
 			<control type="label">
 				<description>Root</description>
@@ -67,7 +68,7 @@
 				<label>Horizontal</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>!Container(3).HasFocus(2)</visible>
 			</control>
 			<control type="label">
@@ -77,7 +78,7 @@
 				<label>Horizontal</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>Container(3).HasFocus(2)</visible>
 			</control>
 			<control type="label">
@@ -88,7 +89,7 @@
 				<label>$INFO[Window.Property(plexbmc.0.path)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
 			</control>
 			<control type="label">
 				<description>go PleXBMC</description>
@@ -98,7 +99,7 @@
 				<label>$INFO[Window.Property(plexbmc.0.path)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>!Container(3).HasFocus(3)</visible>
 			</control>
 			<control type="label">
@@ -110,7 +111,7 @@
 				<label>$INFO[Window.Property(plexbmc.0.path)]</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>Container(3).HasFocus(3)</visible>
 			</control>
 			<control type="label">
@@ -120,7 +121,7 @@
 				<label>go XBMC</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
 			</control>
 			<control type="label">
 				<description>go XBMC</description>
@@ -129,7 +130,7 @@
 				<label>go XBMC</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>!Container(3).HasFocus(3)</visible>
 			</control>
 			<control type="label">
@@ -140,57 +141,147 @@
 				<label>go XBMC</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>Container(3).HasFocus(3)</visible>
 			</control>
 			<control type="label">
-				<description>plexbmc settings</description>
+				<description>go XBMB3C</description>
 				<include>HomeLabel</include>
-				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
-				<label>PleXBMC Settings</label>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + !Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMB3C</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
-				<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
 			</control>
 			<control type="label">
-				<description>plexbmc settings</description>
+				<description>go XBMB3C</description>
 				<include>HomeLabel</include>
-				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
-				<label>PleXBMC Settings</label>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + !Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMB3C</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>!Container(3).HasFocus(4)</visible>
 			</control>
 			<control type="label">
+				<description>go XBMB3C</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + !Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMB3C</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc settings</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>PleXBMC Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc settings</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>PleXBMC Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
 				<description>plexbmc settings</description>
 				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
 				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
 				<label>PleXBMC Settings</label>
-				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
-				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
-				<visible>Container(3).HasFocus(4)</visible>
-			</control>
-			<control type="label">
-				<description>plexbmc refresh</description>
-				<include>HomeLabel</include>
-				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
-				<label>Refresh Plex</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
-				<visible>!Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(5)</visible>
 			</control>
 			<control type="label">
-				<description>plexbmc refresh</description>
+				<description>xbmb3c settings</description>
 				<include>HomeLabel</include>
-				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
-				<label>Refresh Plex</label>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>XBMB3C Settings</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>xbmb3c settings</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>XBMB3C Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>!Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
+				<description>xbmb3c settings</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>XBMB3C Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc refresh</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>Refresh Plex</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc refresh</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>Refresh Plex</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(6)</visible>
 			</control>
 			<control type="label">
 				<description>plexbmc refresh</description>
@@ -198,10 +289,299 @@
 				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
 				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
 				<label>Refresh Plex</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(6)</visible>
+			</control>
+		</control>
+		<control type="GroupList">
+			<description>Button labels</description>
+			<visible>Skin.HasSetting(UseAlternativeMetro)</visible>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="200" />
+			</animation>
+			<animation type="WindowClose" condition="!IsEmpty(Window(3023).Property(Close))">
+				<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="200" />
+			</animation>
+			<animation type="WindowClose" condition="IsEmpty(Window(3023).Property(Close))">
+				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-75" time="300" tween="sine" easing="out" />
+			</animation>
+			<posx>395</posx>
+			<posy>10</posy>
+			<width>1920</width>
+			<height>70</height>
+			<align>left</align>
+			<orientation>horizontal</orientation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<itemgap>45</itemgap>
+			<control type="label">
+				<description>Root</description>
+				<include>HomeLabel</include>
+				<label>Classic</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>Root</description>
+				<include>HomeLabel</include>
+				<label>Classic</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(1)</visible>
+			</control>
+			<control type="label">
+				<description>Root</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<label>Classic</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(1)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(1)</visible>
+			</control>
+			<control type="label">
+				<description>Root</description>
+				<include>HomeLabel</include>
+				<label>Horizontal</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>Root</description>
+				<include>HomeLabel</include>
+				<label>Horizontal</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				<description>Root</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<label>Horizontal</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(2)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				<description>go PleXBMC</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + !Skin.HasSetting(plexbmc)</visible>
+				<label>go PleXBMC</label>
+				<label>$INFO[Window.Property(plexbmc.0.path)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>go PleXBMC</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + !Skin.HasSetting(plexbmc)</visible>
+				<label>go PleXBMC</label>
+				<label>$INFO[Window.Property(plexbmc.0.path)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<description>go PleXBMC</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + !Skin.HasSetting(plexbmc)</visible>
+				<label>go PleXBMC</label>
+				<label>$INFO[Window.Property(plexbmc.0.path)]</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(3)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(3)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMB3C</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + !Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMB3C</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMB3C</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + !Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMB3C</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMB3C</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + !Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMB3C</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>go XBMC</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>go XBMC</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(4)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(4)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc settings</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>PleXBMC Settings</label>
 				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
 				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
-				<visible>Skin.HasSetting(UseCurvedTiles)</visible>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc settings</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>PleXBMC Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc settings</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>PleXBMC Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
 				<visible>Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
+				<description>xbmb3c settings</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>XBMB3C Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>xbmb3c settings</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>XBMB3C Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
+				<description>xbmb3c settings</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				<label>XBMB3C Settings</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(5)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(5)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc refresh</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>Refresh Plex</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>!Skin.HasSetting(UseCurvedTiles) + !Skin.HasSetting(HomeUseColourFocus)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc refresh</description>
+				<include>HomeLabel</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>Refresh Plex</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>!Container(3).HasFocus(6)</visible>
+			</control>
+			<control type="label">
+				<description>plexbmc refresh</description>
+				<include condition="!Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<include condition="Skin.HasSetting(UseWhiteText)">HomeLabelExtraFanartBlue</include>
+				<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				<label>Refresh Plex</label>
+				<animation effect="fade" start="100" end="30" time="300" tween="cubic" easing="inout" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<animation effect="zoom" start="100" end="80" time="300" tween="cubic" easing="inout" center="auto" condition="!Container(3).HasFocus(6)">Conditional</animation>
+				<visible>[Skin.HasSetting(UseCurvedTiles) | Skin.HasSetting(HomeUseColourFocus)]</visible>
+				<visible>Container(3).HasFocus(6)</visible>
 			</control>
 		</control>
 		<control type="wraplist" id="3">
@@ -237,13 +617,28 @@
 				<item id="3">
 					<label>-</label>
 					<onclick>Skin.ToggleSetting(plexbmc)</onclick>
+					<onclick>Skin.Reset(xbmb3c)</onclick>
 					<onclick>XBMC.ReloadSkin()</onclick>
+					<visible>System.HasAddon(plugin.video.plexbmc)</visible>
 				</item>
 				<item id="4">
 					<label>-</label>
-					<onclick>XBMC.RunScript(plugin.video.plexbmc,setting)</onclick>
+					<onclick>Skin.ToggleSetting(xbmb3c)</onclick>
+					<onclick>Skin.Reset(plexbmc)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
 				</item>
 				<item id="5">
+					<label>-</label>
+					<onclick>XBMC.RunScript(plugin.video.plexbmc,setting)</onclick>
+					<visible>System.HasAddon(plugin.video.plexbmc) + Skin.HasSetting(plexbmc)</visible>
+				</item>
+				<item id="5">
+					<label>-</label>
+					<onclick>XBMC.RunScript(plugin.video.xbmb3c,setting)</onclick>
+					<visible>System.HasAddon(plugin.video.xbmb3c) + Skin.HasSetting(xbmb3c)</visible>
+				</item>
+				<item id="6">
 					<label>-</label>
 					<onclick>XBMC.RunScript(plugin.video.plexbmc,cacherefresh)</onclick>
 				</item>

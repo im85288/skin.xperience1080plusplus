@@ -4,6 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<onunload condition="!IsEmpty(Window(skinsettings).property(Guide.Custom))">ClearProperty(Guide.Custom,skinsettings)</onunload>
 	<onunload condition="!IsEmpty(Window(Home).Property(ReloadSkin))">SetFocus(2000)</onunload>
+	<onunload>ReloadSkin()</onunload>
 	<controls>
 		<control type="group">
 			<include>KeyboardAnimations</include>
@@ -198,7 +199,7 @@
 					<onup>3</onup>
 					<ondown>3</ondown>
 					<label>$LOCALIZE[42002]</label>
-					<onclick>PreviousMenu</onclick>
+					<onclick>Action(close)</onclick>
 				</control>
 				<control type="button" id="6">
 					<posx>200</posx>

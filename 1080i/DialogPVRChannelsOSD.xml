@@ -7,11 +7,11 @@
 			<include>FullscreenDimensions</include>
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="105" />
-				<effect type="zoom" start="90" end="100" center="1462,438" tween="cubic" easing="out" time="400" delay="105" />
+				<effect type="zoom" start="30" end="100" center="auto" tween="cubic" easing="out" time="1000" delay="105" />
 			</animation>
 			<animation type="WindowClose">
 				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-				<effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
+				<effect type="zoom" start="100" end="30" time="400" center="auto" tween="sine" easing="out" />
 			</animation>
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" easing="out">Hidden</animation>
 			<animation effect="fade" start="0" end="100" time="300" tween="sine" easing="in">Visible</animation>
@@ -86,7 +86,7 @@
 					<width>740</width>
 					<height>570</height>
 					<onleft>PreviousChannelGroup</onleft>
-					<onright>60</onright>
+					<onright>NextChannelGroup</onright>
 					<onup>11</onup>
 					<ondown>11</ondown>
 					<pagecontrol>60</pagecontrol>
@@ -287,7 +287,7 @@
 							<textcolor>mod-infotags</textcolor>
 							<selectedcolor>mod-infotags</selectedcolor>
 							<scroll>false</scroll>
-							<visible>ListItem.HasTimer | ListItem.IsRecording  + !ListItem.IsPlaying</visible>
+							<visible>ListItem.HasTimer | ListItem.IsRecording + !ListItem.IsPlaying</visible>
 						</control>
 						<control type="label">
 							<description>Label</description>
@@ -667,20 +667,6 @@
 					<animation effect="fade" start="0" end="100" time="0">Visible</animation>
 					<animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
 					<visible>!Control.HasFocus(60) + [Container(11).Scrolling | Container(11).OnScrollNext | Container(11).OnScrollPrevious]</visible>
-				</control>
-				<control type="scrollbar" id="60">
-					<description>Scrollbar</description>
-					<posx>656</posx>
-					<posy>178</posy>
-					<width>11</width>
-					<height>741</height>
-					<onleft>11</onleft>
-					<onright>NextChannelGroup</onright>
-					<texturesliderbar border="0,6,0,6">views/other/scrollbar.png</texturesliderbar>
-					<texturesliderbarfocus border="0,6,0,6">views/other/scrollbar.png</texturesliderbarfocus>
-					<orientation>vertical</orientation>
-					<showonepage>false</showonepage>
-					<animation effect="fade" start="35" end="0" time="300" tween="sine" easing="inout" condition="!Control.IsVisible(61)">Conditional</animation>
 				</control>
 			</control>
 		</control>

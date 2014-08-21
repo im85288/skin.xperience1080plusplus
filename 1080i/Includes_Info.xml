@@ -13,7 +13,7 @@
 				<animation effect="slide" end="-60" time="300" tween="sine" easing="inout" condition="PVR.IsRecording | PVR.HasTimer">Conditional</animation>
 				<control type="image">
 					<description>Small weather</description>
-					<posx>174r</posx>
+					<posx>124r</posx>
 					<posy>970</posy>
 					<width>100</width>
 					<height>100</height>
@@ -24,12 +24,11 @@
 				</control>
 				<control type="label">
 					<description>Clock label</description>
-					<posx>165r</posx>
+					<posx>115r</posx>
 					<posy>963</posy>
 					<width>180</width>
 					<height>100</height>
-					 <label>$INFO[System.Time(hh:mm:xx)]</label>
-                                               
+					<label>$INFO[System.Time(hh:mm:xx)]</label>
 					<font>Font-Condensed-S32</font>
 					<textcolor>Mod_Tags</textcolor>
 					<align>right</align>
@@ -37,12 +36,12 @@
 					<animation effect="slide" end="60" time="300" tween="sine" easing="inout" condition="!Weather.IsFetched | [stringcompare(Weather.FanartCode,na) + substring(Weather.Conditions,/)]">Conditional</animation>
 				</control>
 				<control type="label">
-					<description>Clock label</description>
-					<posx>165r</posx>
+					<description>Date label</description>
+					<posx>115r</posx>
 					<posy>996</posy>
 					<width>280</width>
 					<height>100</height>
-					  <label>$INFO[System.Date(ddd)], $INFO[System.Date(dd MMM yyyy)]</label>                          
+					<label>$INFO[System.Date(ddd)], $INFO[System.Date(dd MMM yyyy)]</label>
 					<font>Font-Condensed-S26</font>
 					<textcolor>Mod_Tags</textcolor>
 					<align>right</align>
@@ -210,6 +209,7 @@
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<visible>Player.HasMedia + IsEmpty(Window(videos).property(TvTunesIsAlive)) + !Window.IsActive(visualisation)</visible>
+				<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 				<animation effect="slide" end="-76" time="300" tween="sine" easing="inout" condition="Window.IsActive(busydialog)">Conditional</animation>
 				<animation type="Conditional" condition="Window.IsActive(infodialog) | Window.IsActive(extendedprogressdialog) | Window.IsActive(volumebar)">
 					<effect type="fade" start="100" end="8" tween="sine" easing="out" time="300" />
@@ -237,7 +237,7 @@
 						<height>120</height>
 						<label>$VAR[NowPlayingSubTitle]</label>
 						<font>Font-Condensed-S28</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>Mod_Tags_Light_Views</textcolor>
 						<scroll>false</scroll>
 						<align>right</align>
 					</control>

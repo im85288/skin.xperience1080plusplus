@@ -169,7 +169,7 @@
 					<height>120</height>
 					<label>$INFO[Container.NumItems,, $LOCALIZE[41822]]</label>
 					<font>Font-Condensed-S28</font>
-					<textcolor>Mod_Tags</textcolor>
+					<textcolor>Mod_Tags_Light_Views</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 					<visible>IntegerGreaterThan(Container.NumItems,0) + !IntegerGreaterThan(Container.NumItems,1)</visible>
@@ -179,7 +179,7 @@
 					<height>120</height>
 					<label>$INFO[Container.NumItems,, $LOCALIZE[41817]]</label>
 					<font>Font-Condensed-S28</font>
-					<textcolor>Mod_Tags</textcolor>
+					<textcolor>Mod_Tags_Light_Views</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 					<visible>!IntegerGreaterThan(Container.NumItems,0) | IntegerGreaterThan(Container.NumItems,1)</visible>
@@ -189,7 +189,7 @@
 					<height>120</height>
 					<label>$INFO[Container.CurrentPage, [COLOR=44FFFFFF]/[/COLOR] $LOCALIZE[41819] ,]$INFO[Container.NumPages,/,]</label>
 					<font>Font-Condensed-S28</font>
-					<textcolor>Mod_Tags</textcolor>
+					<textcolor>Mod_Tags_Light_Views</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 					<visible>IntegerGreaterThan(Container.NumPages,1)</visible>
@@ -251,6 +251,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -269,7 +270,7 @@
 						<height>120</height>
 						<label>$VAR[VideoHeaderLabel]</label>
 						<font>Font-Condensed-S36</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>blue</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -320,7 +321,7 @@
 					<height>120</height>
 					<label>$VAR[MusicHeaderLabel]</label>
 					<font>Font-Condensed-S36</font>
-					<textcolor>Mod_Tags</textcolor>
+					<textcolor>blue</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 				</control>
@@ -355,6 +356,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(addoninformation) + !Window.IsActive(1122) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -373,7 +375,7 @@
 						<height>120</height>
 						<label>$LOCALIZE[41504]</label>
 						<font>Font-Condensed-S36</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>blue</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -397,6 +399,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -415,7 +418,7 @@
 						<height>120</height>
 						<label>$LOCALIZE[1]</label>
 						<font>Font-Condensed-S36</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>blue</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -439,6 +442,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -457,7 +461,7 @@
 						<height>120</height>
 						<label>$VAR[AddonHeaderLabel]</label>
 						<font>Font-Condensed-S36</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>blue</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -481,6 +485,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -539,7 +544,7 @@
 					<height>120</height>
 					<label>$LOCALIZE[7]</label>
 					<font>Font-Condensed-S36</font>
-					<textcolor>Mod_Tags</textcolor>
+					<textcolor>blue</textcolor>
 					<scroll>false</scroll>
 					<align>left</align>
 				</control>
@@ -551,6 +556,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(musicinformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -580,6 +586,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -600,7 +607,7 @@
 						<height>120</height>
 						<label>$LOCALIZE[5]</label>
 						<font>Font-Condensed-S36</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>blue</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -634,6 +641,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(addoninformation) + !Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -652,7 +660,7 @@
 						<height>120</height>
 						<label>$LOCALIZE[19020]</label>
 						<font>Font-Condensed-S36</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>blue</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
@@ -684,6 +692,7 @@
 			<posx>75</posx>
 			<posy>26</posy>
 			<visible>!Window.IsActive(favourites)</visible>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 			<include>BannerListInfoAnimation</include>
 			<control type="group">
 				<control type="image">
@@ -721,23 +730,23 @@
 					<include>visiblehidefadeinfo</include>
 					<control type="label">
 						<posx>20</posx>
-						<posy>60</posy>
+						<posy>41</posy>
 						<width>770</width>
 						<height>120</height>
 						<label fallback="41563">$INFO[Window.Property(Location)]</label>
 						<font>Font-Condensed-S36</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>blue</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>
 					<control type="label">
 						<posx>20</posx>
-						<posy>92</posy>
+						<posy>72</posy>
 						<width>770</width>
 						<height>120</height>
 						<label>$INFO[Window.Property(WeatherProvider)]</label>
 						<font>Font-Condensed-S28</font>
-						<textcolor>Mod_Tags</textcolor>
+						<textcolor>Mod_Tags_Light_Views</textcolor>
 						<scroll>false</scroll>
 						<align>left</align>
 					</control>

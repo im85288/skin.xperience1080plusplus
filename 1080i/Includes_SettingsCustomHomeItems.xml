@@ -272,9 +272,12 @@
 				<height>60</height>
 				<texturefocus>buttons/spinctrl/arrow-light-down-fo.png</texturefocus>
 				<texturenofocus>buttons/spinctrl/arrow-light-down-nf.png</texturenofocus>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,0)</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41145])</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">SetProperty(HomeTileEdit.Type,0)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,0)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41145])</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">SetProperty(HomeTileEdit.Type,0)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,8)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,Video Node)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">SetProperty(HomeTileEdit.Type,8)</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),6)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,7)</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),6)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41151])</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),6)">SetProperty(HomeTileEdit.Type,7)</onclick>
@@ -296,18 +299,18 @@
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,1)</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41146])</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">SetProperty(HomeTileEdit.Type,1)</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,0)</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41145])</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">SetProperty(HomeTileEdit.Type,0)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,0)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41145])</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">SetProperty(HomeTileEdit.Type,0)</onclick>
 			</control>
 			<control type="button" id="24052">
 				<width>32</width>
 				<height>60</height>
 				<texturefocus>buttons/spinctrl/arrow-light-up-fo.png</texturefocus>
 				<texturenofocus>buttons/spinctrl/arrow-light-up-nf.png</texturenofocus>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,7)</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41151])</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">SetProperty(HomeTileEdit.Type,7)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,8)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,Video Node)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">SetProperty(HomeTileEdit.Type,8)</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),1)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,0)</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),1)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41145])</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),1)">SetProperty(HomeTileEdit.Type,0)</onclick>
@@ -329,9 +332,12 @@
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,6)</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41153])</onclick>
 				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">SetProperty(HomeTileEdit.Type,6)</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,7)</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41151])</onclick>
-				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">SetProperty(HomeTileEdit.Type,7)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,7)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,$LOCALIZE[41151])</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">SetProperty(HomeTileEdit.Type,7)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Type,8)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].TypeName,Vide Node)</onclick>
+				<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),0)">SetProperty(HomeTileEdit.Type,8)</onclick>
 			</control>
 		</control>
 		<control type="button" id="2406">
@@ -355,6 +361,7 @@
 			<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),5)">Skin.SetFile($INFO[Window.Property(HomeTileEdit)].Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
 			<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),6)">RunScript(script.favourites,property=$INFO[Window.Property(HomeTileEdit)])</onclick>
 			<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),7)">Skin.SetString($INFO[Window.Property(HomeTileEdit)].Path)</onclick>
+			<onclick condition="stringcompare(Window.Property(HomeTileEdit.Type),8)">Skin.SetPath($INFO[Window.Property(HomeTileEdit)].Path,library://video/)</onclick>
 		</control>
 	</include>
 	<include name="PanelDialogHome">

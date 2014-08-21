@@ -26,20 +26,20 @@
 		</control>
 		<control type="image">
 			<posx>0</posx>
-			<posy>175r</posy>
+			<posy>0</posy>
 			<width>1920</width>
 			<height>175</height>
-			<texture border="10">osd/fullscreen/bar.png</texture>
-			<visible>Control.IsVisible(505)</visible>
+			<texture colordiffuse="Mod_Tags_Alt2" border="10">osd/fullscreen/bar.png</texture>
+			<visible>!Skin.HasSetting(ShowHeaderInfo)</visible>
 		</control>
-		<control type="image">   
-            <include>FullscreenDimensions</include>
-            <aspectratio>stretch</aspectratio>
-            <texture diffuse="arctic/common/floor.png">arctic/common/nofanart.png</texture>
-            <include>visiblehidefadeinfo</include>
-            <colordiffuse>Mod_Overlay_Floor</colordiffuse>
-            <visible>![[Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation)]] | Window.IsVisible(home)] + !Skin.HasSetting(NoDimFade)</visible>
-        </control>
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<aspectratio>stretch</aspectratio>
+			<texture diffuse="arctic/common/floor.png">arctic/common/nofanart.png</texture>
+			<include>visiblehidefadeinfo</include>
+			<colordiffuse>Mod_Overlay_Floor</colordiffuse>
+			<visible>![[Skin.HasSetting(disable.dimfanart) + ![Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation)]] | Window.IsVisible(home)] + !Skin.HasSetting(NoDimFade)</visible>
+		</control>
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>arctic/common/nofanart.png</texture>
@@ -47,10 +47,8 @@
 			<animation effect="fade" start="0" end="100" time="350">WindowClose</animation>
 			<colordiffuse>Mod_Tags_Alt</colordiffuse>
 		</control>
-		<!-- <control type="image"> <include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(ColourBackground)</visible> </control> <control type="image"> <include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> 
-			<colordiffuse>$INFO[Skin.String(backgroundcolor.name)]</colordiffuse> <visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + Skin.HasSetting(ColourBackground)</visible> </control> <control type="image"> <include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <visible>Skin.HasSetting(MoreBackgroundOpacity)</visible> </control> <control type="image"> <include>FullscreenDimensions</include> 
-			<animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <visible>Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(ColourBackground)</visible> </control> <control type="image"> <include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <visible>Skin.HasSetting(LessBackgroundOpacity) + Skin.HasSetting(ColourBackground)</visible> <colordiffuse>$INFO[Skin.String(backgroundcolor.name)]</colordiffuse> 
-			</control> -->
+		<!-- <control type="image"> <include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(ColourBackground)</visible> </control> <control type="image"> <include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <colordiffuse>$INFO[Skin.String(backgroundcolor.name)]</colordiffuse> <visible>!Skin.HasSetting(MoreBackgroundOpacity) + !Skin.HasSetting(LessBackgroundOpacity) + Skin.HasSetting(ColourBackground)</visible> </control> <control type="image"> <include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <visible>Skin.HasSetting(MoreBackgroundOpacity)</visible> </control> <control type="image"> 
+			<include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <visible>Skin.HasSetting(LessBackgroundOpacity) + !Skin.HasSetting(ColourBackground)</visible> </control> <control type="image"> <include>FullscreenDimensions</include> <animation effect="fade" start="0" time="400">VisibleChange</animation> <texture>$VAR[FullscreenOverlay]</texture> <visible>Skin.HasSetting(LessBackgroundOpacity) + Skin.HasSetting(ColourBackground)</visible> <colordiffuse>$INFO[Skin.String(backgroundcolor.name)]</colordiffuse> </control> -->
 	</include>
 	<include name="CommonOverlayHome">
 		<control type="videowindow">
@@ -238,6 +236,8 @@
 			<include>Animation_FanartFade</include>
 			<visible>!IsEmpty(Window(Home).property(fanart_image)) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Window.IsActive(favourites)</visible>
 		</control>
+		<include>LiveContentBackgrounds</include>
+		<include>BackgroundRainDropEffect</include>
 	</include>
 	<!-- ============== -->
 	<!-- Skin Backdrops -->
@@ -264,7 +264,7 @@
 				<visible>!IsEmpty(Skin.String(GlobalBackdropMulti)) + !Skin.HasSetting(GlobalImageFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
 			</control>
 			<control type="multiimage">
-				<description>Custom Wallpaper Image</description>
+				<description>Fanart wallpaper Image</description>
 				<include>FullscreenDimensions</include>
 				<timeperimage>10000</timeperimage>
 				<randomize>true</randomize>
@@ -274,8 +274,1103 @@
 				<include>visiblehidefadeinfo</include>
 				<visible>Skin.HasSetting(GlobalImageFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo]</visible>
 			</control>
+			<!-- <include>LiveContentBackgrounds</include> -->
 		</control>
 	</include>
+	<!-- Live backgrounds -->
+    <include name="LiveContentBackgrounds">
+        <control type="group">
+            <animation effect="fade" time="600">VisibleChange</animation>
+            <control type="group">
+                <posx>-200</posx>
+                <control type="group">
+                    <description>Case 1</description>
+                    <posx>1120</posx>
+                    <posy>700</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="9" end="9" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.5.Art(thumb))]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 2</description>
+                    <posx>700</posx>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="65" end="65" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.9.Art(thumb))]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 3</description>
+                    <posx>430</posx>
+                    <posy>150</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.8.Art(thumb))]</texture>
+                        <fadetime>600</fadetime>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 4</description>
+                    <posx>1600</posx>
+                    <posy>200</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.7.Art(thumb))]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 5</description>
+                    <posx>1000</posx>
+                    <posy>100</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.4.Art(thumb))]</texture>
+                        <fadetime>600</fadetime>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 6</description>
+                    <posx>1950</posx>
+                    <posy>-100</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.6.Art(thumb))]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 7</description>
+                    <posx>1700</posx>
+                    <posy>800</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="45" end="45" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.10.Art(thumb))]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 8</description>
+                    <posx>1470</posx>
+                    <posy>510</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-15" end="-15" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <height>201</height>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.3.Art(thumb))]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 9</description>
+                    <posx>1050</posx>
+                    <posy>400</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <fadetime>600</fadetime>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.2.Art(thumb))]</texture>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 10</description>
+                    <posx>600</posx>
+                    <posy>400</posy>
+                    <animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="3" end="3" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>54</posx>
+                        <posy>17</posy>
+                        <width>302</width>
+                        <height>302</height>
+                        <texture background="true" diffuse="boxes/cdcover_mask.png" fallback="DefaultAlbumCover.png">$INFO[Window(home).Property(RandomAlbum.1.Art(thumb))]</texture>
+                        <fadetime>600</fadetime>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <width>375</width>
+                        <height>342</height>
+                        <bordertexture>boxes/cd_shadow_light.png</bordertexture>
+                        <texture background="true">boxes/cd_glass.png</texture>
+                    </control>
+                </control>
+                <visible>Skin.HasSetting(HomeMusicImageCDs) + [[Container(20).HasFocus(4) + stringcompare(Skin.String(HomeScreen),horizontal)] | [Container(20).HasFocus(5) + stringcompare(Skin.String(HomeScreen),metro)]]</visible>
+            </control>
+            <control type="group">
+                <posx>-200</posx>
+                <control type="group">
+                    <description>Case 1</description>
+                    <posx>1020</posx>
+                    <posy>800</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.5.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 2</description>
+                    <posx>800</posx>
+                    <posy>650</posy> 
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation> <!-- -64 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.9.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 3</description>
+                    <posx>1900</posx>
+                    <posy>400</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation> <!-- 10  -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.8.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 4</description>
+                    <posx>1550</posx>
+                    <posy>950</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-40" end="-40" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.7.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 5</description> 
+                    <posx>950</posx>
+                    <posy>200</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.4.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 6</description>
+                    <posx>1710</posx>
+                    <posy>-65</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.6.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 7</description>
+                    <posx>1750</posx>
+                    <posy>760</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="0" end="0" time="0" condition="true">Conditional</animation> <!-- 45 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.10.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 8</description>
+                    <posx>850</posx>
+                    <posy>700</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-35" end="-35" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.3.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 9</description>
+                    <posx>1050</posx>
+                    <posy>850</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation> <!-- -10 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.2.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 10</description>
+                    <posx>1320</posx>
+                    <posy>600</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation> <!-- 3 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.1.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control> 
+                <control type="group">
+                    <description>Case 11</description>
+                    <posx>1510</posx>
+                    <posy>550</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation> <!-- 3 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMovie.11.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control> 
+                <visible>Skin.HasSetting(HomeMovieImageCDs) + [[Container(20).HasFocus(2) + stringcompare(Skin.String(HomeScreen),horizontal)] | [Container(20).HasFocus(3) + stringcompare(Skin.String(HomeScreen),metro)]]</visible>
+            </control>
+            <control type="group">
+                <posx>-200</posx>
+                <control type="group">
+                    <description>Case 1</description>
+                    <posx>1020</posx>
+                    <posy>800</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.5.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 2</description>
+                    <posx>800</posx>
+                    <posy>650</posy> 
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation> <!-- -64 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.9.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 3</description>
+                    <posx>1900</posx>
+                    <posy>400</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation> <!-- 10  -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.8.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 4</description>
+                    <posx>1550</posx>
+                    <posy>950</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-40" end="-40" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.7.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 5</description> 
+                    <posx>950</posx>
+                    <posy>200</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.4.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 6</description>
+                    <posx>1710</posx>
+                    <posy>-65</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.6.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 7</description>
+                    <posx>1750</posx>
+                    <posy>760</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="0" end="0" time="0" condition="true">Conditional</animation> <!-- 45 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.10.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 8</description>
+                    <posx>850</posx>
+                    <posy>700</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-35" end="-35" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.3.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 9</description>
+                    <posx>1050</posx>
+                    <posy>850</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation> <!-- -10 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.2.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 10</description>
+                    <posx>1320</posx>
+                    <posy>600</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation> <!-- 3 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.1.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control> 
+                <control type="group">
+                    <description>Case 11</description>
+                    <posx>1510</posx>
+                    <posy>550</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation> <!-- 3 -->
+                    <control type="image">
+                        <posx>29</posx>
+                        <posy>6</posy>
+                        <width>162</width>
+                        <height>243</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomEpisode.11.Art(tvshow.poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <width>200</width>
+                        <height>260</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control> 
+            <visible>Skin.HasSetting(HomeTVImageCDs) + [[Container(20).HasFocus(3) + stringcompare(Skin.String(HomeScreen),horizontal)] | [Container(20).HasFocus(4) + stringcompare(Skin.String(HomeScreen),metro)]]</visible>
+            </control>
+            <control type="group">
+                <posx>-133</posx>
+                <control type="group">
+                    <description>Case 1</description>
+                    <posx>747</posx>
+                    <posy>422</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-65" end="-65" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <width>149</width>
+                        <fadetime>600</fadetime>
+                        <height>223</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.5.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 2</description>
+                    <posx>623</posx>
+                    <posy>0</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="65" end="65" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <width>149</width>
+                        <fadetime>600</fadetime>
+                        <height>223</height>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.9.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 3</description>
+                    <posx>453</posx>
+                    <posy>150</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <fadetime>600</fadetime>
+                        <width>149</width>
+                        <height>223</height>
+                        <align>center</align>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.8.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 4</description>
+                    <posx>1033</posx>
+                    <posy>250</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <fadetime>600</fadetime>
+                        <width>149</width>
+                        <height>223</height>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.7.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 5</description>
+                    <posx>667</posx>
+                    <posy>113</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <width>149</width>
+                        <height>223</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.4.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 6</description>
+                    <posx>870</posx>
+                    <posy>65</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <width>149</width>
+                        <height>223</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.6.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 7</description>
+                    <posx>1000</posx>
+                    <posy>293</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="45" end="45" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <width>149</width>
+                        <height>223</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.10.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 8</description>
+                    <posx>1137</posx>
+                    <posy>373</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-35" end="-35" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <width>149</width>
+                        <height>223</height>
+                        <fadetime>600</fadetime>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.3.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 9</description>
+                    <posx>733</posx>
+                    <posy>262</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <width>149</width>
+                        <fadetime>600</fadetime>
+                        <height>223</height>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.2.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <description>Case 10</description>
+                    <posx>407</posx>
+                    <posy>297</posy>
+                    <animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
+                    <animation effect="rotate" center="auto" start="3" end="3" time="0" condition="true">Conditional</animation>
+                    <control type="image">
+                        <posx>26</posx>
+                        <posy>6</posy>
+                        <width>149</width>
+                        <fadetime>600</fadetime>
+                        <height>223</height>
+                        <align>center</align>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="boxes/movieposter_mask.png">$INFO[Window(home).Property(RandomMusicVideo.1.Art(poster))]</texture>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>184</width>
+                        <height>240</height>
+                        <texture background="true">boxes/poster_glass.png.png</texture>
+                    </control>
+                </control>
+                <visible>false</visible>
+            </control>
+        </control>
+    </include>
+    <!-- End of live backgrounds -->
+    <!-- Raindrops effect -->
+    <include name="BackgroundRainDropEffect">
+        <control type="group">
+            <visible>Skin.HasSetting(RainDrops) + !Player.HasVideo</visible>
+            <include>VisibleFadeEffect</include>
+            <control type="image">
+                <description>Raindrop 5 animation</description>
+                <posx>200</posx>
+                <posy>150</posy>
+                <width>128</width>
+                <height>128</height>
+                <texture background="true">rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>BBFFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="2000" start="0" end="100" time="200" />
+                    <effect type="fade" delay="2500" start="100" end="0" time="500" />
+                    <effect type="zoom" delay="2000" start="30" end="500" time="1000" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 6 animation</description>
+                <posx>1200</posx>
+                <posy>950</posy>
+                <width>128</width>
+                <height>128</height>
+                <texture background="true">rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>CCFFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="2500" start="0" end="100" time="200" />
+                    <effect type="fade" delay="2900" start="100" end="0" time="500" />
+                    <effect type="zoom" delay="2500" start="30" end="500" time="1000" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 7 animation</description>
+                <posx>1400</posx>
+                <posy>350</posy>
+                <width>128</width>
+                <height>128</height>
+                <texture background="true">rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>DDFFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="3000" start="0" end="100" time="200" />
+                    <effect type="fade" delay="3300" start="100" end="0" time="500" />
+                    <effect type="zoom" delay="3000" start="30" end="500" time="1000" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 8 animation</description>
+                <posx>1600</posx>
+                <posy>150</posy>
+                <width>128</width>
+                <height>128</height>
+                <texture background="true">rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>EEFFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="3500" start="0" end="100" time="200" />
+                    <effect type="fade" delay="3800" start="100" end="0" time="500" />
+                    <effect type="zoom" delay="3500" start="30" end="500" time="1000" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 1 animation</description>
+                <posx>550</posx>
+                <posy>200</posy>
+                <width>128</width>
+                <height>128</height>
+                <texture background="true">rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>55FFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" start="0" end="100" time="200" />
+                    <effect type="fade" start="100" end="0" delay="2500" time="1000" />
+                    <effect type="zoom" center="auto" start="30" end="1500" delay="0" time="3500" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 2 animation</description>
+                <posx>900</posx>
+                <posy>130</posy>
+                <width>128</width>
+                <height>128</height>
+                <texture background="true">rain-drop.png</texture>
+                <visible>true</visible>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="400" start="0" end="100" time="200" />
+                    <effect type="fade" delay="1000" start="100" end="0" time="1600" />
+                    <effect type="zoom" delay="400" start="30" end="700" time="3000" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 3 animation</description>
+                <posx>800</posx>
+                <posy>500</posy>
+                <width>128</width>
+                <height>128</height>
+                <texture background="true">rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>88FFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="800" start="0" end="100" time="200" />
+                    <effect type="fade" delay="2400" start="100" end="0" time="2000" />
+                    <effect type="zoom" delay="800" start="30" end="1000" time="2500" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+            <control type="image">
+                <description>Raindrop 4 animation</description>
+                <posx>200</posx>
+                <posy>450</posy>
+                <width>128</width>
+                <height>128</height>
+                <texture background="true">rain-drop.png</texture>
+                <visible>true</visible>
+                <colordiffuse>66FFFFFF</colordiffuse>
+                <animation type="conditional" reversible="false" loop="true" condition="true">
+                    <effect type="fade" delay="1500" start="0" end="100" time="200" />
+                    <effect type="fade" delay="2100" start="100" end="0" time="400" />
+                    <effect type="zoom" delay="1500" start="30" end="1200" time="2000" center="auto" tween="quadratic" />
+                </animation>
+            </control>
+        </control>
+    </include>
+    <!-- End of raindrops -->
 	<!-- ====== -->
 	<!-- Fanart -->
 	<!-- ====== -->
@@ -385,8 +1480,7 @@
 			<animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out" condition="!Window.IsActive(mediafilter) + !Window.IsVisible(contextmenu) + IsEmpty(Window(Home).Property(metadata.actors))">Visible</animation>
 			<animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out" delay="550" condition="Window.IsActive(mediafilter) | Window.IsVisible(contextmenu) | !IsEmpty(Window(Home).Property(metadata.actors))">Visible</animation>
 			<animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
-			<visible>[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) |
-				Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) |
+			<visible>[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) |
 				Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)
 			</visible>
 		</control>
@@ -397,8 +1491,7 @@
 			<animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
 			<texture>windows/common/white.png</texture>
 			<colordiffuse>mod-dimfanart</colordiffuse>
-			<visible>[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) |
-				Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) |
+			<visible>[Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser) | [Window.IsActive(virtualkeyboard) + IsEmpty(Window(Home).Property(HomeSearch))] | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(mediasource) | Window.IsActive(screencalibration) | Window.IsActive(numericinput) | Window.IsActive(filestackingdialog) | Window.IsActive(LockSettings) | Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(pictureinfo) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(3001) | Window.IsActive(3002) | Window.IsActive(3003) | Window.IsActive(3006) | Window.IsActive(peripherals) | Window.IsActive(peripheralsettings) | Window.IsActive(mediafilter) | Window.IsActive(mediafilter) | Window.IsActive(pvrgroupmanager) |
 				Window.IsActive(pvrtimersetting) | Window.IsActive(pvrguidesearch) | Window.IsActive(pvrchannelmanager) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo) | Window.IsActive(DialogSelect.xml)] + !Window.IsActive(movieinformation) + !Window.IsActive(1122) + !Window.IsActive(addoninformation) + !Window.IsActive(musicinformation) + !Window.IsActive(script-globalsearch-infodialog.xml)
 			</visible>
 		</control>
@@ -409,8 +1502,7 @@
 			<texture background="true">special://skin/extras/fade/black_content.png</texture>
 			<animation effect="fade" time="300" start="0" end="95" tween="sine" easing="out">Visible</animation>
 			<animation effect="fade" time="300" start="95" end="0" tween="sine" easing="in">Hidden</animation>
-			<visible>[[IsEmpty(Window(3004).Property(ChooseArt)) | ![Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml) | Window.IsActive(progressdialog)]] + [Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml) | Window.IsActive(progressdialog)]] | Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(virtualkeyboard) | Window.IsActive(playercontrols) | Window.IsActive(profilesettings)
-				| Window.IsActive(numericinput)
+			<visible>[[IsEmpty(Window(3004).Property(ChooseArt)) | ![Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml) | Window.IsActive(progressdialog)]] + [Window.IsActive(filebrowser) | Window.IsActive(selectdialog) | Window.IsActive(DialogSelect.xml) | Window.IsActive(progressdialog)]] | Window.IsActive(contentsettings) | Window.IsActive(addonsettings) | Window.IsActive(virtualkeyboard) | Window.IsActive(playercontrols) | Window.IsActive(profilesettings) | Window.IsActive(numericinput)
 			</visible>
 		</control>
 	</include>
@@ -514,7 +1606,7 @@
 		<font>Font-Condensed-S34</font>
 		<align>left</align>
 		<textcolor>FF484848</textcolor>
-		<focusedcolor>DDFFFFFF</focusedcolor>
+		<focusedcolor>mod-infotags</focusedcolor>
 		<disabledcolor>FF484848</disabledcolor>
 		<textoffsetx>75</textoffsetx>
 		<textwidth>300</textwidth>
@@ -533,6 +1625,76 @@
 		<textoffsetx>75</textoffsetx>
 		<textwidth>300</textwidth>
 		<scroll>false</scroll>
+	</include>
+	<include name="ViewOptions.Button">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>380</width>
+		<height>60</height>
+		<font>Font-Condensed-S34</font>
+		<align>left</align>
+		<textcolor>mod-infotags-alt</textcolor>
+		<focusedcolor>mod-infotags</focusedcolor>
+		<disabledcolor>FF484848</disabledcolor>
+		<textoffsetx>75</textoffsetx>
+		<textwidth>300</textwidth>
+		<scroll>false</scroll>
+	</include>
+	<include name="ViewOptions.Button2">
+		<posx>0</posx>
+		<width>380</width>
+		<height>60</height>
+		<font>Font-Condensed-S34</font>
+		<align>left</align>
+		<textcolor>mod-infotags-alt</textcolor>
+		<focusedcolor>mod-infotags</focusedcolor>
+		<disabledcolor>FF484848</disabledcolor>
+		<textoffsetx>75</textoffsetx>
+		<textwidth>300</textwidth>
+		<scroll>false</scroll>
+		<texturefocus colordiffuse="$VAR[FocusModColourVar2]" border="2">dialogs/options/buttons/default-fo-colour.png</texturefocus>
+	</include>
+	<include name="ViewOptions.Panel">
+		<include>OptionsAnimations</include>
+		<posy>20</posy>
+		<control type="group">
+			<control type="image">
+				<posx>-40</posx>
+				<posy>-10</posy>
+				<width>452</width>
+				<height>1060</height>
+				<texture border="40">arctic/common/border-20.png</texture>
+			</control>
+			<control type="image">
+				<posx>-20</posx>
+				<posy>10</posy>
+				<width>412</width>
+				<height>1020</height>
+				<texture border="15">arctic/common/panel.png</texture>
+			</control>
+			<control type="group">
+				<posx>-5</posx>
+				<posy>930</posy>
+				<visible>!Window.IsVisible(shutdownmenu)</visible>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>350</width>
+					<height>100</height>
+					<texture>buttons/options-fo.png</texture>
+				</control>
+				<control type="label">
+					<posx>98</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>100</height>
+					<label>$LOCALIZE[41600]</label>
+					<font>Font-Condensed-S29</font>
+					<textcolor>eewhite</textcolor>
+					<shadowcolor>22000000</shadowcolor>
+				</control>
+			</control>
+		</control>
 	</include>
 	<include name="PVRMenuButtonVars">
 		<posx>0</posx>

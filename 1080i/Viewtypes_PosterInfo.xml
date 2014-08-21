@@ -86,7 +86,7 @@
 								<textcolor>mod-infotags-li</textcolor>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
 								<font>Font-Condensed-S25</font>
-								<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
 							</control>
 							<control type="textbox">
 								<posx>190</posx>
@@ -98,7 +98,7 @@
 								<textcolor>mod-infotags</textcolor>
 								<align>justify</align>
 								<autoscroll delay="5000" time="3000" repeat="5000" />
-								<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 							</control>
 						</control>
 					</control>
@@ -107,7 +107,7 @@
 				<control type="group">
 					<visible>!Window.IsActive(movieinformation) + !Window.IsActive(script-Actors-DialogInfo.xml) + !Window.IsActive(script-Actors-DialogVideoInfo.xml) + IsEmpty(Window(Home).Property(script.metadata.actors.hasparent)) + Control.IsVisible(56)</visible>
 					<control type="wraplist" id="56">
-						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(episodes) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
+						<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(episodes) | Container.Content(Actors) | Container.Content(Sets) | Container.HasFolders</visible>
 						<posx>-178</posx>
 						<posy>350</posy>
 						<width>2200</width>
@@ -115,7 +115,7 @@
 						<pagecontrol>70</pagecontrol>
 						<scrolltime tween="cubic" easing="out">500</scrolltime>
 						<orientation>horizontal</orientation>
-						<viewtype label="Poster (Info)">list</viewtype>
+						<viewtype label="42310">list</viewtype>
 						<onleft>56</onleft>
 						<onright>56</onright>
 						<onup condition="!Skin.HasSetting(KioskMode)">9010</onup>
@@ -180,6 +180,9 @@
 							</control>
 						</itemlayout>
 						<focusedlayout width="224">
+						    <control type="button">
+                    		
+                   			 </control>
 							<control type="group">
 								<animation type="Focus" condition="[Container(56).OnNext | Container(56).OnPrevious]">
 									<effect type="zoom" start="75" end="100" time="350" tween="sine" easing="out" center="190,340" />
@@ -222,7 +225,7 @@
 									<height>247</height>
 									<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 									<aspectratio align="center">keep</aspectratio>
-									<visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
+									<visible>Container.Content(movies) + Skin.HasSetting(CDArt.Enabled)</visible>
 									<animation effect="slide" start="0" end="0,-250" time="600" delay="450">Focus</animation>
 									<animation effect="slide" end="0" start="0,-250" time="600" delay="0">UnFocus</animation>
 								</control>

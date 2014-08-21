@@ -51,7 +51,7 @@
 				<include>visiblehidefadeinfo</include>
 			</control>
 			<control type="group">
-				<visible>!IsEmpty(VideoPlayer.Rating) + Skin.HasSetting(UseAlternateFlags.Enabled)</visible>
+				<visible>!IsEmpty(VideoPlayer.Rating) + Skin.HasSetting(UseAlternateFlags.Enabled) + !Skin.HasSetting(videoosd.xperience1080) + !Skin.HasSetting(videoosd.alaska) + !Skin.HasSetting(videoosd.arctic)</visible>
 				<include>visiblehidefadeinfo</include>
 				<posx>1710</posx>
 				<posy>865</posy>
@@ -99,7 +99,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!IsEmpty(VideoPlayer.Rating) + !Skin.HasSetting(UseAlternateFlags.Enabled)</visible>
+				<visible>!IsEmpty(VideoPlayer.Rating) + !Skin.HasSetting(UseAlternateFlags.Enabled) + !Skin.HasSetting(videoosd.xperience1080) + !Skin.HasSetting(videoosd.alaska) +!Skin.HasSetting(videoosd.arctic)</visible>
 				<include>visiblehidefadeinfo</include>
 				<posx>1710</posx>
 				<posy>865</posy>
@@ -118,7 +118,7 @@
 					<width>108</width>
 					<height>49</height>
 					<aspect>keepaspect</aspect>
-					<texture>aeonflags/posters/imdb.png</texture>
+					<texture colordiffuse="mod-infotags">aeonflags/posters/imdb.png</texture>
 					<visible>Skin.HasSetting(UseNonColourFlags.Enabled)</visible>
 				</control>
 				<control type="label">
@@ -140,7 +140,7 @@
 					<height>58</height>
 					<font>Font-Condensed-S36</font>
 					<label fallback="                 •••">$INFO[VideoPlayer.Rating, ,]</label>
-					<textcolor>eewhite</textcolor>
+					<textcolor>mod-infotags</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
 					<visible>Skin.HasSetting(UseNonColourFlags.Enabled)</visible>

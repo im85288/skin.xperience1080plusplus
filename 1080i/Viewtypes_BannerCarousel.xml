@@ -128,7 +128,7 @@
 									<width>42</width>
 									<height>28</height>
 									<texture>flags/other/set-banner.png</texture>
-									<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+									<visible>substring(ListItem.Path,videodb://movies/sets,left) | [ListItem.IsFolder + Container.Content(Movies)]</visible>
 								</control>
 								<control type="label">
 									<posx>53</posx>
@@ -139,7 +139,7 @@
 									<textcolor>FF333333</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
-									<visible>!IsEmpty(ListItem.VideoResolution) | substring(ListItem.Path,videodb://1/7,left)</visible>
+									<visible>!IsEmpty(ListItem.VideoResolution) | [substring(ListItem.Path,videodb://movies/sets,left) | [ListItem.IsFolder + Container.Content(Movies)]]</visible>
 								</control>
 								<control type="label">
 									<posx>0</posx>
@@ -150,7 +150,7 @@
 									<textcolor>FF333333</textcolor>
 									<scroll>false</scroll>
 									<align>left</align>
-									<visible>IsEmpty(ListItem.VideoResolution) + !substring(ListItem.Path,videodb://1/7,left)</visible>
+									<visible>IsEmpty(ListItem.VideoResolution) + !substring(ListItem.Path,videodb://movies/sets,left) + !ListItem.IsFolder</visible>
 								</control>
 								<control type="image">
 									<description>Rating star</description>
@@ -216,7 +216,7 @@
 								<textcolor>FF484848</textcolor>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
 								<font>Font-Condensed-S25</font>
-								<visible>!substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
 							</control>
 							<control type="textbox">
 								<description>Plot</description>
@@ -229,7 +229,7 @@
 								<textcolor>FF484848</textcolor>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
 								<font>Font-Condensed-S25</font>
-								<visible>substring(ListItem.Path,videodb://1/7,left)</visible>
+								<visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
 							</control>
 							<control type="image">
 								<description>Gloss</description>

@@ -8,7 +8,7 @@
 			<include>FullscreenDimensions</include>
 			<include>OptionsShutdownAnimation</include>
 			<control type="group">
-				<visible>Control.IsVisible(54) + !Window.IsActive(movieinformation)</visible>
+				<visible>Control.IsVisible(54) + !Window.IsActive(musicinformation)</visible>
 				<posy>480</posy>
 				<posx>10</posx>
 				<include>BannerListAnimations</include>
@@ -61,7 +61,7 @@
 					<posy>145</posy>
 					<scrolltime tween="cubic" easing="out">350</scrolltime>
 					<orientation>vertical</orientation>
-					<viewtype label="List (Low)">list</viewtype>
+					<viewtype label="42302">list</viewtype>
 					<onleft condition="!Skin.HasSetting(KioskMode)">9010</onleft>
 					<onleft condition="Skin.HasSetting(KioskMode)">54</onleft>
 					<onright>54</onright>
